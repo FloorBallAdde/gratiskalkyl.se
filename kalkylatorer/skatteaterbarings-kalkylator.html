@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skatteåterbäringskalkylator 2026 – Räkna ut din skatteåterbäring | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut din förväntade skatteåterbäring för 2026. Ange lön, räntekostnader och avdrag — se direkt hur mycket du kan få tillbaka på skatten. Uppdaterad med 2026 års regler.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/skatteaterbarings-kalkylator.html">
+    <meta property="og:title" content="Skatteåterbäringskalkylator 2026 – Räkna ut din skatteåterbäring">
+    <meta property="og:description" content="Räkna ut din förväntade skatteåterbäring. Ange lön, räntekostnader och ROT/RUT-avdrag — se direkt vad du kan få tillbaka.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/skatteaterbarings-kalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Skatteåterbäringskalkylator 2026 – Räkna ut din skatteåterbäring">
+    <meta name="twitter:description" content="Räkna ut din förväntade skatteåterbäring för 2026. Ange lön, räntekostnader och avdrag.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+            --positive: #16a34a;
+            --negative: #dc2626;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+            .data-table th {
+                color: #34d399 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Page */
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        /* Calculator */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"],
+        .input-group select {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group select {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+            background: var(--white);
+        }
+        .input-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group select:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box.highlight.negative-result {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Additional result row */
+        .results-extra {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        /* Chart separator */
+        .chart-separator {
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        /* Chart */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        /* Table */
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+        .data-table tr.total-row td {
+            font-weight: 700;
+            border-top: 2px solid var(--border);
+        }
+
+        /* Info section */
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+        }
+        .info-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .info-section ul {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            margin-left: 24px;
+        }
+        .info-section li { margin-bottom: 8px; }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box {
+                background: rgba(26, 107, 74, 0.1);
+                border-color: var(--border);
+            }
+        }
+
+        /* FAQ */
+        details { margin-bottom: 16px; }
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 12px 0;
+            transition: color 0.2s ease;
+        }
+        summary:hover { text-decoration: underline; }
+        summary:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Cross-links */
+        .cross-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0 48px;
+        }
+        .cross-link {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+        }
+        .cross-link:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+        .cross-link:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .cross-link .cl-icon { font-size: 1.4rem; margin-bottom: 8px; }
+        .cross-link .cl-title { font-weight: 600; font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            body { font-size: 16px; }
+            .page-header h1 { font-size: 1.5rem; }
+            .input-grid { grid-template-columns: 1fr; }
+            .results { grid-template-columns: 1fr 1fr; }
+            .results-extra { grid-template-columns: 1fr; }
+            .result-box .value { font-size: 1.2rem; }
+            .calc-wrapper { padding: 20px; }
+            nav { display: none; }
+            .cross-links { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "När betalas skatteåterbäringen ut 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Skatteåterbäringen för inkomståret 2025 betalas ut i april–juni 2026. Om du har e-legitimation och godkänner din deklaration digitalt tidigt, kan du få pengarna redan i april. Den som deklarerar på papper eller behöver komplettera får normalt utbetalning i juni–augusti."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad påverkar storleken på skatteåterbäringen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De vanligaste faktorerna som ger skatteåterbäring är: ränteavdrag på bolån (30% av räntekostnaderna), ROT- och RUT-avdrag, resor till och från arbetet (över 11 000 kr per år), kapitalförluster och om du har betalat för mycket preliminärskatt under året."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur beräknas ränteavdraget?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Du får dra av 30% av dina räntekostnader som en skattereduktion. Om ditt underskott av kapital överstiger 100 000 kr per år är avdraget 21% på den överskjutande delen. Ränteavdraget gäller bolåneränta, studielånsränta och andra lån."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är skillnaden mellan skatteåterbäring och restskatt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Skatteåterbäring innebär att du har betalat mer preliminärskatt än din slutliga skatt — du får pengar tillbaka. Restskatt innebär det motsatta, att du har betalat för lite preliminärskatt och måste betala in mellanskillnaden. Restskatt kan uppstå om du t.ex. har haft kapitalvinster eller sidoinkomster."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket ROT-avdrag kan jag få?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ROT-avdrag ger 30% skattereduktion på arbetskostnaden för renovering och reparation av din bostad. Maxbeloppet per person och år är 50 000 kr. ROT- och RUT-avdrag delar på ett gemensamt tak om 75 000 kr per person."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Räknas jobbskatteavdraget in automatiskt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, jobbskatteavdraget är redan inräknat i Skatteverkets skattetabeller som din arbetsgivare använder. Du behöver inte ansöka om det separat. Kalkylatorn tar hänsyn till jobbskatteavdraget i beräkningen av både din preliminärskatt och din slutliga skatt."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är skiktgränsen för statlig skatt 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Skiktgränsen för statlig inkomstskatt 2026 är 643 000 kr. Det innebär att du betalar 20% statlig skatt på den del av din beskattningsbara inkomst som överstiger detta belopp. Med hänsyn till grundavdraget motsvarar detta en årsinkomst (brytpunkt) på cirka 660 400 kr, eller en månadslön på cirka 55 000 kr."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> › Skatteåterbäringskalkylator</div>
+            <h1>Skatteåterbäringskalkylator 2026</h1>
+            <p>Räkna ut din förväntade skatteåterbäring (eller restskatt) baserat på din lön, räntekostnader och avdrag. Uppdaterad med 2026 års regler.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <!-- Inputs -->
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="salary">Månadslön brutto</label>
+                    <input type="number" id="salary" value="35000" min="0" max="200000" step="500">
+                    <input type="range" id="salaryRange" min="10000" max="100000" step="500" value="35000">
+                    <div class="range-labels"><span>10 000 kr</span><span>100 000 kr</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="taxRate">Kommunalskatt</label>
+                    <div class="sublabel">Total kommunal + landstingsskatt</div>
+                    <input type="number" id="taxRate" value="32.37" min="28" max="36" step="0.01">
+                    <input type="range" id="taxRateRange" min="28" max="36" step="0.01" value="32.37">
+                    <div class="range-labels"><span>28 %</span><span>36 %</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="interest">Räntekostnader per år</label>
+                    <div class="sublabel">Bolåneränta, studielånsränta m.m.</div>
+                    <input type="number" id="interest" value="0" min="0" max="500000" step="1000">
+                    <input type="range" id="interestRange" min="0" max="300000" step="1000" value="0">
+                    <div class="range-labels"><span>0 kr</span><span>300 000 kr</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="capitalGain">Kapitalvinst / -förlust</label>
+                    <div class="sublabel">Positivt = vinst, negativt = förlust</div>
+                    <input type="number" id="capitalGain" value="0" min="-500000" max="500000" step="1000">
+                    <input type="range" id="capitalGainRange" min="-200000" max="200000" step="1000" value="0">
+                    <div class="range-labels"><span>-200 000 kr</span><span>+200 000 kr</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="rot">ROT-avdrag utnyttjat</label>
+                    <div class="sublabel">Max 50 000 kr/person/år</div>
+                    <input type="number" id="rot" value="0" min="0" max="50000" step="1000">
+                    <input type="range" id="rotRange" min="0" max="50000" step="1000" value="0">
+                    <div class="range-labels"><span>0 kr</span><span>50 000 kr</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="rut">RUT-avdrag utnyttjat</label>
+                    <div class="sublabel">Max 75 000 kr/person/år</div>
+                    <input type="number" id="rut" value="0" min="0" max="75000" step="1000">
+                    <input type="range" id="rutRange" min="0" max="75000" step="1000" value="0">
+                    <div class="range-labels"><span>0 kr</span><span>75 000 kr</span></div>
+                </div>
+            </div>
+
+            <!-- Primary result -->
+            <div class="results">
+                <div class="result-box highlight" id="mainResult">
+                    <div class="label">Beräknad skatteåterbäring</div>
+                    <div class="value" id="refundValue">0 kr</div>
+                    <div class="sub" id="refundSub">Tillbaka på skatten</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Slutlig skatt</div>
+                    <div class="value" id="finalTaxValue">0 kr</div>
+                    <div class="sub">Per år</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Preliminärskatt betald</div>
+                    <div class="value" id="prelimTaxValue">0 kr</div>
+                    <div class="sub">Inbetald under året</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Ränteavdrag</div>
+                    <div class="value" id="interestDeductionValue">0 kr</div>
+                    <div class="sub">30 % skattereduktion</div>
+                </div>
+            </div>
+
+            <div class="results-extra">
+                <div class="result-box">
+                    <div class="label">Jobbskatteavdrag</div>
+                    <div class="value" id="jsaValue">0 kr</div>
+                    <div class="sub">Skattereduktion</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Effektiv skattesats</div>
+                    <div class="value" id="effectiveTaxValue">0 %</div>
+                    <div class="sub">Av bruttoinkomst</div>
+                </div>
+            </div>
+
+            <div class="chart-separator"></div>
+
+            <!-- Chart -->
+            <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;">Skattefördelning</h3>
+            <div class="chart-container">
+                <canvas id="taxChart"></canvas>
+            </div>
+
+            <!-- Expandable table -->
+            <button class="table-toggle" onclick="toggleTable()" aria-expanded="false" aria-controls="detailTable">
+                ▶ Visa detaljerad skatteberäkning
+            </button>
+            <table class="data-table" id="detailTable" role="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Post</th>
+                        <th scope="col">Belopp</th>
+                    </tr>
+                </thead>
+                <tbody id="detailBody"></tbody>
+            </table>
+        </div>
+
+        <!-- SEO content -->
+        <div class="info-section">
+            <h2>Hur fungerar skatteåterbäringen?</h2>
+            <p>Varje månad drar din arbetsgivare preliminärskatt från din lön baserat på Skatteverkets skattetabeller. När du deklarerar året efter jämförs den inbetalda preliminärskatten med din faktiska skatt. Om du betalat för mycket får du tillbaka mellanskillnaden som skatteåterbäring. Har du däremot betalat för lite måste du betala restskatt.</p>
+
+            <p>Den vanligaste orsaken till skatteåterbäring är ränteavdrag på bolån. Du får dra av 30 procent av dina räntekostnader, och eftersom detta avdrag oftast inte är inräknat i din preliminärskatt uppstår en mellanskillnad. Andra vanliga orsaker är ROT- och RUT-avdrag som du utnyttjat under året.</p>
+
+            <h3>Så beräknas din skatt 2026</h3>
+            <p>Din totala inkomstskatt beräknas i flera steg. Först dras grundavdraget från din årsinkomst — detta varierar med din inkomstnivå och är som störst (45 600 kr) för inkomster runt 161 000–184 900 kr per år. Den återstående beskattningsbara inkomsten beskattas med din kommunalskatt (i genomsnitt 32,37 procent). Tjänar du mer än skiktgränsen på 643 000 kr tillkommer 20 procent statlig skatt på överskjutande belopp.</p>
+
+            <p>Därefter reduceras skatten med jobbskatteavdraget, som är en skattereduktion för alla med arbetsinkomst. Jobbskatteavdraget 2026 har förstärkts och ger en sänkning på upp till 4 366 kr per månad för heltidsarbetande.</p>
+
+            <h3>Ränteavdrag — den största faktorn</h3>
+            <p>Ränteavdraget ger dig 30 procent av dina räntekostnader tillbaka i form av lägre skatt. Har du t.ex. betalat 60 000 kr i bolåneränta under året innebär det 18 000 kr i skattereduktion. Om ditt underskott av kapital (räntekostnader minus kapitalinkomster) överstiger 100 000 kr per år är avdraget 21 procent på den överskjutande delen.</p>
+
+            <div class="formula-box">
+Ränteavdrag = räntekostnad × 30 %<br>
+(Om underskott &gt; 100 000 kr: 21 % på överskjutande del)
+            </div>
+
+            <h3>ROT och RUT minskar skatten direkt</h3>
+            <p>ROT-avdraget ger 30 procent skattereduktion på arbetskostnaden för renovering, reparation och ombyggnad av din bostad, med ett maxbelopp på 50 000 kr per person och år. RUT-avdraget ger 50 procent skattereduktion på hushållstjänster som städning, barnpassning och trädgårdsarbete, med ett maxbelopp på 75 000 kr. ROT och RUT delar på ett gemensamt tak om 75 000 kr.</p>
+
+            <h3>Tips för att maximera din återbäring</h3>
+            <p>Se till att alla räntekostnader är korrekt rapporterade — banken skickar kontrolluppgifter men det kan vara värt att dubbelkolla. Glöm inte att deklarera resor till och från arbetet om du har längre avstånd. Om du gjort kapitalförluster under året, t.ex. sålt aktier med förlust, kan dessa kvitta mot vinster och minska din skatt.</p>
+
+            <h2>Vanliga frågor om skatteåterbäring</h2>
+
+            <details>
+                <summary>När betalas skatteåterbäringen ut 2026?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Skatteåterbäringen för inkomståret 2025 betalas ut i april–juni 2026. Om du godkänner din deklaration digitalt tidigt kan du få pengarna redan i april. Den som deklarerar på papper eller behöver komplettera får normalt utbetalning i juni–augusti.</p>
+            </details>
+
+            <details>
+                <summary>Vad påverkar storleken på skatteåterbäringen?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">De vanligaste faktorerna är ränteavdrag på bolån, ROT/RUT-avdrag, arbetsresor och kapitalförluster. Om du har haft en ojämn inkomst under året (t.ex. börjat nytt jobb) kan den preliminärskatten ha blivit för hög eller för låg.</p>
+            </details>
+
+            <details>
+                <summary>Hur beräknas ränteavdraget?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Du får 30 procent av dina räntekostnader som skattereduktion. Om ditt underskott av kapital överstiger 100 000 kr per år är reduktionen 21 procent på den överskjutande delen. Avdraget gäller bolåneränta, studielånsränta och andra lån.</p>
+            </details>
+
+            <details>
+                <summary>Vad är skillnaden mellan skatteåterbäring och restskatt?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Skatteåterbäring innebär att du betalat mer preliminärskatt än din slutliga skatt — du får pengar tillbaka. Restskatt innebär att du betalat för lite och måste betala in mellanskillnaden. Restskatt kan uppstå vid kapitalvinster, sidoinkomster eller om du jämkat skatten för mycket.</p>
+            </details>
+
+            <details>
+                <summary>Hur mycket ROT-avdrag kan jag få?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">ROT-avdrag ger 30 procent skattereduktion på arbetskostnaden för renovering med ett max på 50 000 kr per person och år. ROT och RUT delar på ett gemensamt tak om 75 000 kr per person.</p>
+            </details>
+
+            <details>
+                <summary>Räknas jobbskatteavdraget in automatiskt?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Ja, jobbskatteavdraget är redan inräknat i Skatteverkets skattetabeller som din arbetsgivare använder. Du behöver inte ansöka om det. Kalkylatorn tar hänsyn till detta i beräkningen av både preliminärskatt och slutlig skatt.</p>
+            </details>
+
+            <details>
+                <summary>Vad är skiktgränsen för statlig skatt 2026?</summary>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Skiktgränsen för 2026 är 643 000 kr. Du betalar 20 procent statlig skatt på inkomst som överstiger detta belopp. Med hänsyn till grundavdraget motsvarar det en månadslön på cirka 55 000 kr (brytpunkt 660 400 kr).</p>
+            </details>
+
+            <h2>Relaterade kalkylatorer</h2>
+            <div class="cross-links">
+                <a href="/kalkylatorer/loneraknare.html" class="cross-link">
+                    <div class="cl-icon">💰</div>
+                    <div class="cl-title">Löneräknare 2026</div>
+                </a>
+                <a href="/kalkylatorer/bolanekalkylator.html" class="cross-link">
+                    <div class="cl-icon">🏦</div>
+                    <div class="cl-title">Bolånekalkylator</div>
+                </a>
+                <a href="/kalkylatorer/rot-rut.html" class="cross-link">
+                    <div class="cl-icon">🏠</div>
+                    <div class="cl-title">ROT & RUT-kalkylator</div>
+                </a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html" class="cross-link">
+                    <div class="cl-icon">📊</div>
+                    <div class="cl-title">ISK-skatteberäknare</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter. Kontakta alltid Skatteverket för exakta belopp.</p>
+        </div>
+    </footer>
+
+    <script>
+    // === 2026 Swedish Tax Constants ===
+    const PBB = 59200;          // Prisbasbelopp 2026
+    const SKIKTGRANS = 643000;  // Skiktgräns statlig skatt
+    const STATLIG_SKATT = 0.20; // Statlig skattesats
+    const BEGRAVNINGSAVGIFT = 0.00258; // Genomsnitt
+
+    // === Grundavdrag calculation (under 66) ===
+    function calcGrundavdrag(income) {
+        if (income <= 0) return 0;
+        const pbb = PBB;
+        if (income <= 0.423 * pbb) {
+            return Math.round(0.423 * pbb / 100) * 100;
+        } else if (income <= 0.995 * pbb) {
+            return Math.round(0.423 * pbb / 100) * 100;
+        } else if (income <= 2.72 * pbb) {
+            const base = 0.423 * pbb;
+            const extra = 0.2 * (income - 0.995 * pbb);
+            return Math.min(Math.round((base + extra) / 100) * 100, 45600);
+        } else if (income <= 3.11 * pbb) {
+            return 45600;
+        } else if (income <= 7.88 * pbb) {
+            const ga = 45600 - 0.1 * (income - 3.11 * pbb);
+            return Math.max(Math.round(ga / 100) * 100, 17400);
+        } else {
+            return 17400;
+        }
+    }
+
+    // === Jobbskatteavdrag (under 66, 2026) ===
+    function calcJobbskatteavdrag(earnedIncome, grundavdrag, kommunalskatt) {
+        const w = earnedIncome;
+        const ga = grundavdrag;
+        const k = kommunalskatt;
+        const pbb = PBB;
+
+        if (w <= 0) return 0;
+
+        let jsa;
+        if (w <= 0.91 * pbb) {
+            jsa = (w - ga) * k;
+        } else if (w <= 3.24 * pbb) {
+            jsa = (0.91 * pbb - ga) * k + 0.3405 * (w - 0.91 * pbb);
+        } else if (w <= 8.08 * pbb) {
+            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (w - 3.24 * pbb);
+        } else if (w <= 13.54 * pbb) {
+            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (8.08 - 3.24) * pbb + 0.030 * (w - 8.08 * pbb);
+        } else {
+            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (8.08 - 3.24) * pbb + 0.030 * (13.54 - 8.08) * pbb;
+        }
+
+        return Math.max(0, Math.round(jsa));
+    }
+
+    // === Ränteavdrag ===
+    function calcRanteavdrag(interestCost, capitalGain) {
+        const deficit = interestCost - Math.max(0, capitalGain);
+        if (deficit <= 0) return 0;
+        if (deficit <= 100000) {
+            return Math.round(deficit * 0.30);
+        } else {
+            return Math.round(100000 * 0.30 + (deficit - 100000) * 0.21);
+        }
+    }
+
+    // === Kapitalskatt ===
+    function calcKapitalskatt(capitalGain) {
+        if (capitalGain <= 0) return 0;
+        return Math.round(capitalGain * 0.30);
+    }
+
+    // === Main calculation ===
+    function calculate() {
+        const monthlySalary = parseFloat(document.getElementById('salary').value) || 0;
+        const taxRatePercent = parseFloat(document.getElementById('taxRate').value) || 32.37;
+        const interestCost = parseFloat(document.getElementById('interest').value) || 0;
+        const capitalGain = parseFloat(document.getElementById('capitalGain').value) || 0;
+        const rotAmount = parseFloat(document.getElementById('rot').value) || 0;
+        const rutAmount = parseFloat(document.getElementById('rut').value) || 0;
+
+        const annualIncome = monthlySalary * 12;
+        const kommunalskatt = taxRatePercent / 100;
+
+        // Step 1: Grundavdrag
+        const grundavdrag = calcGrundavdrag(annualIncome);
+        const taxableIncome = Math.max(0, annualIncome - grundavdrag);
+
+        // Step 2: Kommunalskatt
+        const kommunalSkattBelopp = Math.round(taxableIncome * kommunalskatt);
+
+        // Step 3: Statlig skatt
+        const statligSkattBelopp = Math.round(Math.max(0, taxableIncome - SKIKTGRANS) * STATLIG_SKATT);
+
+        // Step 4: Begravningsavgift
+        const begravning = Math.round(taxableIncome * BEGRAVNINGSAVGIFT);
+
+        // Step 5: Jobbskatteavdrag
+        const jsa = calcJobbskatteavdrag(annualIncome, grundavdrag, kommunalskatt);
+
+        // Step 6: Ränteavdrag
+        const ranteavdrag = calcRanteavdrag(interestCost, capitalGain);
+
+        // Step 7: Kapitalskatt (on gains)
+        const kapitalskatt = calcKapitalskatt(capitalGain);
+
+        // Step 8: ROT/RUT (capped at combined 75000)
+        const rotRutTotal = Math.min(rotAmount + rutAmount, 75000);
+
+        // Step 9: Final tax
+        const bruttoSkatt = kommunalSkattBelopp + statligSkattBelopp + begravning + kapitalskatt;
+        const reductions = jsa + ranteavdrag + rotRutTotal;
+        const finalTax = Math.max(0, Math.round(bruttoSkatt - reductions));
+
+        // Step 10: Preliminary tax (what employer withheld)
+        // Preliminary tax tables include: kommunalskatt on taxable income + statlig skatt - jobbskatteavdrag
+        // They do NOT include: ränteavdrag, ROT/RUT, kapitalskatt
+        const preliminaryTax = Math.max(0, Math.round(kommunalSkattBelopp + statligSkattBelopp + begravning - jsa));
+
+        // Actual final tax includes capital gains tax but minus additional reductions
+        const actualFinalTax = Math.max(0, Math.round(preliminaryTax + kapitalskatt - ranteavdrag - rotRutTotal));
+
+        // Skatteåterbäring = preliminary - actual final
+        const refund = preliminaryTax - actualFinalTax;
+
+        // Effective tax rate
+        const effectiveTaxRate = annualIncome > 0 ? (actualFinalTax / annualIncome * 100) : 0;
+
+        // Update UI
+        const fmt = v => v.toLocaleString('sv-SE') + ' kr';
+        const mainBox = document.getElementById('mainResult');
+        const refundEl = document.getElementById('refundValue');
+        const refundSub = document.getElementById('refundSub');
+
+        if (refund >= 0) {
+            refundEl.textContent = '+' + fmt(refund);
+            refundSub.textContent = 'Tillbaka på skatten';
+            mainBox.classList.remove('negative-result');
+        } else {
+            refundEl.textContent = fmt(refund);
+            refundSub.textContent = 'Restskatt att betala';
+            mainBox.classList.add('negative-result');
+        }
+
+        document.getElementById('finalTaxValue').textContent = fmt(actualFinalTax);
+        document.getElementById('prelimTaxValue').textContent = fmt(preliminaryTax);
+        document.getElementById('interestDeductionValue').textContent = fmt(ranteavdrag);
+        document.getElementById('jsaValue').textContent = fmt(jsa);
+        document.getElementById('effectiveTaxValue').textContent = effectiveTaxRate.toFixed(1) + ' %';
+
+        // Update detail table
+        updateDetailTable({
+            annualIncome, grundavdrag, taxableIncome,
+            kommunalSkattBelopp, statligSkattBelopp, begravning,
+            jsa, ranteavdrag, kapitalskatt, rotRutTotal,
+            preliminaryTax, actualFinalTax, refund
+        });
+
+        // Update chart
+        drawChart({
+            kommunalSkattBelopp, statligSkattBelopp, begravning,
+            jsa, ranteavdrag, rotRutTotal, kapitalskatt,
+            preliminaryTax, actualFinalTax, refund
+        });
+    }
+
+    // === Detail table ===
+    function updateDetailTable(d) {
+        const fmt = v => v.toLocaleString('sv-SE') + ' kr';
+        const rows = [
+            ['Årsinkomst brutto', fmt(d.annualIncome)],
+            ['Grundavdrag', '−' + fmt(d.grundavdrag)],
+            ['Beskattningsbar inkomst', fmt(d.taxableIncome)],
+            ['', ''],
+            ['Kommunalskatt', fmt(d.kommunalSkattBelopp)],
+            ['Statlig inkomstskatt', fmt(d.statligSkattBelopp)],
+            ['Begravningsavgift', fmt(d.begravning)],
+            ['Kapitalskatt', fmt(d.kapitalskatt)],
+            ['', ''],
+            ['Jobbskatteavdrag', '−' + fmt(d.jsa)],
+            ['Ränteavdrag', '−' + fmt(d.ranteavdrag)],
+            ['ROT/RUT-avdrag', '−' + fmt(d.rotRutTotal)],
+            ['', ''],
+            ['Preliminärskatt betald', fmt(d.preliminaryTax)],
+            ['Slutlig skatt', fmt(d.actualFinalTax)],
+        ];
+
+        const tbody = document.getElementById('detailBody');
+        tbody.innerHTML = '';
+
+        rows.forEach(([label, value]) => {
+            if (label === '' && value === '') {
+                const tr = document.createElement('tr');
+                tr.innerHTML = '<td colspan="2" style="padding:4px;border:none;"></td>';
+                tbody.appendChild(tr);
+                return;
+            }
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${label}</td><td>${value}</td>`;
+            tbody.appendChild(tr);
+        });
+
+        // Total row
+        const totalTr = document.createElement('tr');
+        totalTr.className = 'total-row';
+        const refundText = d.refund >= 0
+            ? '+' + d.refund.toLocaleString('sv-SE') + ' kr'
+            : d.refund.toLocaleString('sv-SE') + ' kr';
+        const refundLabel = d.refund >= 0 ? 'Skatteåterbäring' : 'Restskatt';
+        totalTr.innerHTML = `<td>${refundLabel}</td><td style="color:${d.refund >= 0 ? 'var(--positive)' : 'var(--negative)'}; font-weight:800;">${refundText}</td>`;
+        tbody.appendChild(totalTr);
+    }
+
+    // === Canvas chart ===
+    function drawChart(d) {
+        const canvas = document.getElementById('taxChart');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.parentElement.getBoundingClientRect();
+
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = rect.height;
+
+        // Detect dark mode
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const textColor = isDark ? '#d1d5db' : '#555';
+        const gridColor = isDark ? '#374151' : '#e2e8f0';
+        const bgColor = isDark ? '#1f2937' : '#ffffff';
+
+        ctx.clearRect(0, 0, W, H);
+
+        // Data for stacked bar chart
+        const bars = [
+            {
+                label: 'Preliminärskatt',
+                segments: [
+                    { value: d.kommunalSkattBelopp - d.jsa, color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
+                    { value: d.statligSkattBelopp, color: isDark ? '#8b5cf6' : '#8b5cf6', label: 'Statlig skatt' },
+                    { value: d.begravning, color: isDark ? '#6b7280' : '#9ca3af', label: 'Begravningsavg.' },
+                ]
+            },
+            {
+                label: 'Slutlig skatt',
+                segments: [
+                    { value: Math.max(0, d.kommunalSkattBelopp - d.jsa - d.ranteavdrag - d.rotRutTotal), color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
+                    { value: d.statligSkattBelopp, color: isDark ? '#8b5cf6' : '#8b5cf6', label: 'Statlig skatt' },
+                    { value: d.begravning, color: isDark ? '#6b7280' : '#9ca3af', label: 'Begravningsavg.' },
+                    { value: d.kapitalskatt, color: isDark ? '#f59e0b' : '#f59e0b', label: 'Kapitalskatt' },
+                ]
+            }
+        ];
+
+        // Chart dimensions
+        const padding = { top: 20, right: 30, bottom: 50, left: 80 };
+        const chartW = W - padding.left - padding.right;
+        const chartH = H - padding.top - padding.bottom;
+        const barWidth = Math.min(chartW / 4, 120);
+        const gap = chartW / 3;
+
+        // Max value
+        const maxVal = Math.max(
+            bars[0].segments.reduce((s, seg) => s + Math.max(0, seg.value), 0),
+            bars[1].segments.reduce((s, seg) => s + Math.max(0, seg.value), 0),
+            1
+        );
+
+        // Y-axis
+        const yScale = v => padding.top + chartH - (v / maxVal * chartH);
+
+        // Grid lines
+        ctx.strokeStyle = gridColor;
+        ctx.lineWidth = 0.5;
+        const gridSteps = 5;
+        for (let i = 0; i <= gridSteps; i++) {
+            const val = (maxVal / gridSteps) * i;
+            const y = yScale(val);
+            ctx.beginPath();
+            ctx.moveTo(padding.left, y);
+            ctx.lineTo(W - padding.right, y);
+            ctx.stroke();
+
+            ctx.fillStyle = textColor;
+            ctx.font = '12px Inter, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText(Math.round(val).toLocaleString('sv-SE'), padding.left - 8, y + 4);
+        }
+
+        // Draw bars
+        bars.forEach((bar, i) => {
+            const x = padding.left + (i + 0.5) * gap - barWidth / 2;
+            let yOffset = 0;
+
+            bar.segments.forEach(seg => {
+                const val = Math.max(0, seg.value);
+                const segH = (val / maxVal) * chartH;
+                const y = yScale(yOffset + val);
+
+                ctx.fillStyle = seg.color;
+                ctx.beginPath();
+                ctx.roundRect(x, y, barWidth, segH, [4, 4, 0, 0]);
+                ctx.fill();
+
+                yOffset += val;
+            });
+
+            // Bar label
+            ctx.fillStyle = textColor;
+            ctx.font = '13px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(bar.label, x + barWidth / 2, H - padding.bottom + 20);
+
+            // Total value on top
+            const total = bar.segments.reduce((s, seg) => s + Math.max(0, seg.value), 0);
+            ctx.font = '600 13px Inter, sans-serif';
+            ctx.fillText(Math.round(total).toLocaleString('sv-SE') + ' kr', x + barWidth / 2, yScale(total) - 8);
+        });
+
+        // Difference arrow/label
+        if (d.refund !== 0) {
+            const x1 = padding.left + 0.5 * gap + barWidth / 2 + 10;
+            const x2 = padding.left + 1.5 * gap - barWidth / 2 - 10;
+            const midX = (x1 + x2) / 2;
+            const midY = H / 2 - 10;
+
+            ctx.fillStyle = d.refund >= 0 ? (isDark ? '#34d399' : '#16a34a') : (isDark ? '#f87171' : '#dc2626');
+            ctx.font = '700 14px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            const refundText = d.refund >= 0
+                ? '+' + Math.round(d.refund).toLocaleString('sv-SE') + ' kr'
+                : Math.round(d.refund).toLocaleString('sv-SE') + ' kr';
+            ctx.fillText(refundText, midX, midY);
+            ctx.font = '12px Inter, sans-serif';
+            ctx.fillText(d.refund >= 0 ? 'Skatteåterbäring' : 'Restskatt', midX, midY + 18);
+        }
+    }
+
+    // === Table toggle ===
+    function toggleTable() {
+        const table = document.getElementById('detailTable');
+        const btn = document.querySelector('.table-toggle');
+        const visible = table.classList.toggle('visible');
+        btn.textContent = visible ? '▼ Dölj detaljerad skatteberäkning' : '▶ Visa detaljerad skatteberäkning';
+        btn.setAttribute('aria-expanded', visible);
+    }
+
+    // === Sync sliders/inputs ===
+    function syncInputs(inputId, rangeId) {
+        const input = document.getElementById(inputId);
+        const range = document.getElementById(rangeId);
+
+        input.addEventListener('input', () => {
+            const val = parseFloat(input.value);
+            if (!isNaN(val)) {
+                range.value = Math.max(parseFloat(range.min), Math.min(parseFloat(range.max), val));
+            }
+            calculate();
+        });
+
+        range.addEventListener('input', () => {
+            input.value = range.value;
+            calculate();
+        });
+    }
+
+    // Initialize
+    syncInputs('salary', 'salaryRange');
+    syncInputs('taxRate', 'taxRateRange');
+    syncInputs('interest', 'interestRange');
+    syncInputs('capitalGain', 'capitalGainRange');
+    syncInputs('rot', 'rotRange');
+    syncInputs('rut', 'rutRange');
+
+    // Recalculate on resize
+    window.addEventListener('resize', calculate);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', calculate);
+
+    // Initial calculation
+    calculate();
+    </script>
+</body>
+</html>
