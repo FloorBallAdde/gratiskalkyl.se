@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolånekalkylator 2026 – Räkna ut din månadskostnad | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna din månadskostnad för bolån med vår kostnadsfria bolånekalkylator. Se ränta, amortering och ränteavdrag. Uppdaterad för 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator.html">
+    <meta property="og:title" content="Bolånekalkylator 2026 – Räkna ut din bolånekostnad">
+    <meta property="og:description" content="Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag. Uppdaterad för 2026.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bolånekalkylator 2026 – Räkna ut din bolånekostnad">
+    <meta name="twitter:description" content="Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag. Uppdaterad för 2026.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"],
+        .input-group select {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group select {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+            background: var(--white);
+        }
+        .input-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        .chart-separator { height: 1px; background: var(--border); margin: 24px 0; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        @media (prefers-color-scheme: dark) {
+            .data-table th { color: var(--primary); }
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+        }
+        .info-section p { color: var(--text-light); margin-bottom: 16px; }
+        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
+        .info-section li { margin-bottom: 8px; }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box { background: rgba(26, 107, 74, 0.1); border-color: var(--border); }
+        }
+
+        .faq { margin-bottom: 48px; }
+        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+        .faq-item { margin-bottom: 8px; }
+        .faq-item summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 12px 0;
+            transition: color 0.2s ease;
+        }
+        .faq-item summary:hover { text-decoration: underline; }
+        .faq-item summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+        .faq-item p { margin-left: 20px; margin-top: 8px; color: var(--text-light); }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+
+        @media (max-width: 900px) { .results { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .input-grid { grid-template-columns: 1fr; gap: 16px; }
+            .results { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.5rem; }
+            .calc-wrapper { padding: 16px; }
+            nav { display: none; }
+            .result-box .value { font-size: 1.3rem; }
+            .input-group input[type="number"],
+            .input-group select { min-height: 44px; padding: 12px; }
+            .table-toggle { min-height: 44px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Bolånekalkylator 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator.html",
+        "description": "Gratis bolånekalkylator för att beräkna din månadskostnad. Se ränta, amortering och ränteavdrag för 2026.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "Bolånekalkylator 2026", "item": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur mycket behöver jag amortera på mitt bolån?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Dessutom krävs ytterligare 1% om skulden överstiger 4,5 gånger din bruttoinkomst."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är ränteavdrag och hur mycket får jag tillbaka?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Du får dra av 30% av räntekostnader upp till 100 000 kr per år i din deklaration. På räntekostnader över 100 000 kr är avdraget 21%. Detta innebär att din faktiska räntekostnad blir lägre än den nominella räntan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är skillnaden mellan rörlig och bunden ränta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Rörlig ränta (3 månader) följer marknadsräntan och kan ändras kvartalsvis. Bunden ränta är fast under en vald period (1–10 år). Historiskt har rörlig ränta ofta varit billigare totalt sett, men bunden ger trygghet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket kan jag låna för att köpa bostad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Banker tillämpar ett bolånetak på 85% av bostadens marknadsvärde. Du behöver alltså minst 15% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad innebär kalkylräntan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kalkylräntan är den ränta banken använder för att bedöma om du klarar av lånet även vid högre räntor. Den ligger vanligtvis på 6–8%, alltså högre än den faktiska räntan. Syftet är att säkerställa att du har marginal."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur påverkar amortering min totala kostnad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Amortering minskar din skuld och därmed din räntekostnad över tid. Ju mer du amorterar, desto mindre betalar du i ränta totalt. Amortering är i praktiken ett sparande — du bygger upp eget kapital i din bostad."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan jag få amorteringsfrihet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, under särskilda omständigheter kan banken bevilja tillfällig amorteringsfrihet, exempelvis vid sjukdom, arbetslöshet eller kraftigt höjda räntor. Det är dock bankens beslut och inget du har automatisk rätt till."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> → Bolånekalkylator</div>
+            <h1>Bolånekalkylator 2026</h1>
+            <p>Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag — och följ hur skulden minskar år för år.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="bostadenVarde">Bostadens värde (kr)</label>
+                    <input type="number" id="bostadenVarde" value="3500000" min="100000" max="20000000" step="50000">
+                    <input type="range" id="bostadenVardeSlider" min="100000" max="20000000" step="50000" value="3500000">
+                    <div class="range-labels"><span>100 000</span><span>20 000 000</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="kontantinsats">Kontantinsats (%)</label>
+                    <input type="number" id="kontantinsats" value="15" min="0" max="90" step="1">
+                    <input type="range" id="kontantinsatsSlider" min="0" max="90" step="1" value="15">
+                    <div class="range-labels"><span>0%</span><span>90%</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="ranta">Årsränta (%)</label>
+                    <input type="number" id="ranta" value="3.5" min="0" max="15" step="0.1">
+                    <input type="range" id="rantaSlider" min="0" max="15" step="0.1" value="3.5">
+                    <div class="range-labels"><span>0%</span><span>15%</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="amortering">Amortering (% av lån/år)</label>
+                    <input type="number" id="amortering" value="2" min="0" max="10" step="0.5">
+                    <input type="range" id="amorteringSlider" min="0" max="10" step="0.5" value="2">
+                    <div class="range-labels"><span>0%</span><span>10%</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="lopttid">Visningsperiod (år)</label>
+                    <select id="lopttid">
+                        <option value="10">10 år</option>
+                        <option value="20">20 år</option>
+                        <option value="30" selected>30 år</option>
+                        <option value="40">40 år</option>
+                        <option value="50">50 år</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="bruttoinkomst">Hushållets bruttoinkomst (kr/mån)</label>
+                    <div class="sublabel">Används för skuldkvotskravet</div>
+                    <input type="number" id="bruttoinkomst" value="50000" min="0" max="500000" step="1000">
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-box highlight">
+                    <div class="label">Månadskostnad</div>
+                    <div class="value" id="resManad">—</div>
+                    <div class="sub">Ränta + amortering</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Efter ränteavdrag</div>
+                    <div class="value" id="resEfterAvdrag">—</div>
+                    <div class="sub">Din faktiska kostnad</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Lånebelopp</div>
+                    <div class="value" id="resLan">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Belåningsgrad</div>
+                    <div class="value" id="resBelaning">—</div>
+                </div>
+            </div>
+
+            <div class="chart-separator"></div>
+
+            <div class="chart-container">
+                <canvas id="chart" height="320"></canvas>
+            </div>
+
+            <button class="table-toggle" id="tableToggle">Visa amorteringsplan ▼</button>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>År</th>
+                        <th>Skuld</th>
+                        <th>Ränta/mån</th>
+                        <th>Amort./mån</th>
+                        <th>Kostnad/mån</th>
+                        <th>Efter avdrag</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Info section -->
+        <div class="info-section">
+            <h2>Så fungerar bolånekalkylatorn</h2>
+            <p>Kalkylatorn beräknar din månadskostnad för bolån baserat på bostadens pris, kontantinsats, ränta och amorteringstakt. Ränteavdraget (30% på de första 100 000 kr/år, 21% därutöver) räknas in automatiskt.</p>
+
+            <h3>Amorteringskrav i Sverige</h3>
+            <p>Sedan 2016 gäller amorteringskrav för nya bolån. Om belåningsgraden överstiger 70% måste du amortera minst 2% per år. Vid 50–70% krävs minst 1%. Om skulden dessutom överstiger 4,5 gånger din bruttoinkomst tillkommer ytterligare 1% amortering.</p>
+
+            <h3>Ränteavdrag 2026</h3>
+            <p>Du får dra av 30% av dina ränteutgifter upp till 100 000 kr per år. För den del som överstiger 100 000 kr är avdraget 21%. Avdraget gäller automatiskt i din deklaration.</p>
+
+            <div class="formula-box">
+Månadskostnad = (Lån × Ränta / 12) + (Lån × Amortering / 12)
+Ränteavdrag = Ränta × 30% (upp till 100 000 kr/år)
+Belåningsgrad = Lån / Bostadens värde × 100
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <h2>Vanliga frågor om bolån 2026</h2>
+            <details class="faq-item">
+                <summary>Hur mycket behöver jag amortera på mitt bolån?</summary>
+                <p>Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Dessutom krävs ytterligare 1% om skulden överstiger 4,5 gånger din bruttoinkomst.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad är ränteavdrag och hur mycket får jag tillbaka?</summary>
+                <p>Du får dra av 30% av räntekostnader upp till 100 000 kr per år i din deklaration. På räntekostnader över 100 000 kr är avdraget 21%. Detta innebär att din faktiska räntekostnad blir lägre än den nominella räntan.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad är skillnaden mellan rörlig och bunden ränta?</summary>
+                <p>Rörlig ränta (3 månader) följer marknadsräntan och kan ändras kvartalsvis. Bunden ränta är fast under en vald period (1–10 år). Historiskt har rörlig ränta ofta varit billigare totalt sett, men bunden ger trygghet.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur mycket kan jag låna för att köpa bostad?</summary>
+                <p>Banker tillämpar ett bolånetak på 85% av bostadens marknadsvärde. Du behöver alltså minst 15% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%).</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad innebär kalkylräntan?</summary>
+                <p>Kalkylräntan är den ränta banken använder för att bedöma om du klarar av lånet även vid högre räntor. Den ligger vanligtvis på 6–8%, alltså högre än den faktiska räntan. Syftet är att säkerställa att du har marginal.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur påverkar amortering min totala kostnad?</summary>
+                <p>Amortering minskar din skuld och därmed din räntekostnad över tid. Ju mer du amorterar, desto mindre betalar du i ränta totalt. Amortering är i praktiken ett sparande — du bygger upp eget kapital i din bostad.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Kan jag få amorteringsfrihet?</summary>
+                <p>Ja, under särskilda omständigheter kan banken bevilja tillfällig amorteringsfrihet, exempelvis vid sjukdom, arbetslöshet eller kraftigt höjda räntor. Det är dock bankens beslut och inget du har automatisk rätt till.</p>
+            </details>
+        </div>
+    </main>
+
+    <!-- Cross-linking -->
+    <div class="container" style="padding:48px 20px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            <a href="/kalkylatorer/loneraknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
+                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
+            </a>
+            <a href="/kalkylatorer/ranta-pa-ranta.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
+                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta</div>
+            </a>
+            <a href="/kalkylatorer/rot-rut.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
+                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT 2026</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
+                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        function fmt(n) {
+            return Math.round(n).toLocaleString('sv-SE') + ' kr';
+        }
+        function fmtPct(n) {
+            return n.toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+        }
+
+        // Sync sliders
+        function syncInputs(sliderId, inputId) {
+            const slider = document.getElementById(sliderId);
+            const input = document.getElementById(inputId);
+            slider.addEventListener('input', () => { input.value = slider.value; calculate(); });
+            input.addEventListener('input', () => { slider.value = input.value; calculate(); });
+        }
+        syncInputs('bostadenVardeSlider', 'bostadenVarde');
+        syncInputs('kontantinsatsSlider', 'kontantinsats');
+        syncInputs('rantaSlider', 'ranta');
+        syncInputs('amorteringSlider', 'amortering');
+
+        document.getElementById('lopttid').addEventListener('change', calculate);
+        document.getElementById('bruttoinkomst').addEventListener('input', calculate);
+
+        // Table toggle
+        document.getElementById('tableToggle').addEventListener('click', () => {
+            const t = document.getElementById('dataTable');
+            const btn = document.getElementById('tableToggle');
+            t.classList.toggle('visible');
+            btn.textContent = t.classList.contains('visible') ? 'Dölj amorteringsplan ▲' : 'Visa amorteringsplan ▼';
+        });
+
+        function calculateRanteavdrag(arligRanta) {
+            // 30% on first 100k, 21% on rest
+            if (arligRanta <= 100000) {
+                return arligRanta * 0.30;
+            }
+            return 100000 * 0.30 + (arligRanta - 100000) * 0.21;
+        }
+
+        function calculate() {
+            const bostadVarde = Math.max(0, parseFloat(document.getElementById('bostadenVarde').value) || 0);
+            const kontantPct = Math.max(0, Math.min(90, parseFloat(document.getElementById('kontantinsats').value) || 0));
+            const rantaPct = Math.max(0, parseFloat(document.getElementById('ranta').value) || 0);
+            const amortPct = Math.max(0, parseFloat(document.getElementById('amortering').value) || 0);
+            const ar = parseInt(document.getElementById('lopttid').value) || 30;
+            const brutto = Math.max(0, parseFloat(document.getElementById('bruttoinkomst').value) || 0);
+
+            const kontantinsats = bostadVarde * kontantPct / 100;
+            const lan = bostadVarde - kontantinsats;
+            const belaningsgrad = bostadVarde > 0 ? (lan / bostadVarde) * 100 : 0;
+
+            // Calculate first year costs
+            const manadRanta = lan * (rantaPct / 100) / 12;
+            const manadAmort = lan * (amortPct / 100) / 12;
+            const manadKostnad = manadRanta + manadAmort;
+
+            const arligRanta = manadRanta * 12;
+            const ranteavdrag = calculateRanteavdrag(arligRanta);
+            const manadEfterAvdrag = manadKostnad - (ranteavdrag / 12);
+
+            // Update result boxes
+            document.getElementById('resManad').textContent = fmt(manadKostnad);
+            document.getElementById('resEfterAvdrag').textContent = fmt(manadEfterAvdrag);
+            document.getElementById('resLan').textContent = fmt(lan);
+            document.getElementById('resBelaning').textContent = fmtPct(belaningsgrad);
+
+            // Generate amortization schedule
+            const schedule = [];
+            let skuld = lan;
+            for (let y = 1; y <= ar; y++) {
+                if (skuld <= 0) break;
+                const rantaAr = skuld * (rantaPct / 100);
+                const amortAr = Math.min(skuld, skuld * (amortPct / 100));
+                const avdrag = calculateRanteavdrag(rantaAr);
+                const kostnadMån = (rantaAr + amortAr) / 12;
+                const efterAvdragMån = kostnadMån - (avdrag / 12);
+
+                schedule.push({
+                    year: y,
+                    skuld: skuld,
+                    rantaMån: rantaAr / 12,
+                    amortMån: amortAr / 12,
+                    kostnadMån: kostnadMån,
+                    efterAvdragMån: efterAvdragMån
+                });
+
+                skuld = Math.max(0, skuld - amortAr);
+            }
+
+            drawChart(schedule, lan);
+            buildTable(schedule);
+        }
+
+        function drawChart(schedule, originalLan) {
+            const canvas = document.getElementById('chart');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            const W = rect.width;
+            const H = 320;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            ctx.fillStyle = isDark ? '#1f2937' : '#ffffff';
+            ctx.fillRect(0, 0, W, H);
+
+            if (schedule.length === 0) return;
+
+            const pad = { top: 30, bottom: 50, left: 70, right: 30 };
+            const cW = W - pad.left - pad.right;
+            const cH = H - pad.top - pad.bottom;
+
+            const maxSkuld = originalLan || 1;
+            const n = schedule.length;
+
+            // Grid lines
+            ctx.strokeStyle = isDark ? '#374151' : '#e2e8f0';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = pad.top + (cH / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(pad.left, y);
+                ctx.lineTo(W - pad.right, y);
+                ctx.stroke();
+
+                // Y-axis labels
+                const val = maxSkuld - (maxSkuld / 4) * i;
+                ctx.fillStyle = isDark ? '#9ca3af' : '#555';
+                ctx.font = '500 11px Inter, sans-serif';
+                ctx.textAlign = 'right';
+                ctx.fillText((val / 1000000).toFixed(1) + ' mkr', pad.left - 10, y + 4);
+            }
+
+            // Area fill — remaining debt
+            const getX = (i) => pad.left + (i / Math.max(n - 1, 1)) * cW;
+            const getY = (skuld) => pad.top + cH - (skuld / maxSkuld) * cH;
+
+            ctx.beginPath();
+            ctx.moveTo(getX(0), getY(schedule[0].skuld));
+            for (let i = 1; i < n; i++) {
+                ctx.lineTo(getX(i), getY(schedule[i].skuld));
+            }
+            ctx.lineTo(getX(n - 1), pad.top + cH);
+            ctx.lineTo(getX(0), pad.top + cH);
+            ctx.closePath();
+            const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + cH);
+            if (isDark) {
+                grad.addColorStop(0, 'rgba(52, 211, 153, 0.3)');
+                grad.addColorStop(1, 'rgba(52, 211, 153, 0.02)');
+            } else {
+                grad.addColorStop(0, 'rgba(26, 107, 74, 0.2)');
+                grad.addColorStop(1, 'rgba(26, 107, 74, 0.02)');
+            }
+            ctx.fillStyle = grad;
+            ctx.fill();
+
+            // Line — debt curve
+            ctx.beginPath();
+            ctx.moveTo(getX(0), getY(schedule[0].skuld));
+            for (let i = 1; i < n; i++) {
+                ctx.lineTo(getX(i), getY(schedule[i].skuld));
+            }
+            ctx.strokeStyle = isDark ? '#34d399' : '#1a6b4a';
+            ctx.lineWidth = 3;
+            ctx.lineJoin = 'round';
+            ctx.stroke();
+
+            // Line — monthly cost after deduction
+            const maxCost = Math.max(...schedule.map(s => s.kostnadMån), 1);
+            const getYCost = (c) => pad.top + cH - (c / maxCost) * cH * 0.4; // Scale to 40% of chart height
+
+            ctx.beginPath();
+            ctx.moveTo(getX(0), getYCost(schedule[0].efterAvdragMån));
+            for (let i = 1; i < n; i++) {
+                ctx.lineTo(getX(i), getYCost(schedule[i].efterAvdragMån));
+            }
+            ctx.strokeStyle = isDark ? '#f59e0b' : '#d97706';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // X-axis labels
+            ctx.fillStyle = isDark ? '#9ca3af' : '#555';
+            ctx.font = '500 11px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            const stepX = Math.max(1, Math.floor(n / 6));
+            for (let i = 0; i < n; i += stepX) {
+                ctx.fillText('År ' + schedule[i].year, getX(i), H - pad.bottom + 20);
+            }
+            if (n > 1) {
+                ctx.fillText('År ' + schedule[n - 1].year, getX(n - 1), H - pad.bottom + 20);
+            }
+
+            // Legend
+            const legY = 14;
+            ctx.font = '600 12px Inter, sans-serif';
+            ctx.textAlign = 'left';
+
+            // Debt legend
+            ctx.fillStyle = isDark ? '#34d399' : '#1a6b4a';
+            ctx.fillRect(pad.left, legY - 8, 16, 3);
+            ctx.fillText('Kvarvarande skuld', pad.left + 22, legY);
+
+            // Cost legend
+            const costLegX = pad.left + 170;
+            ctx.fillStyle = isDark ? '#f59e0b' : '#d97706';
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(costLegX, legY - 6);
+            ctx.lineTo(costLegX + 16, legY - 6);
+            ctx.strokeStyle = isDark ? '#f59e0b' : '#d97706';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.fillText('Månadskostnad (efter avdrag)', costLegX + 22, legY);
+        }
+
+        function buildTable(schedule) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            for (const row of schedule) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.year}</td>
+                    <td>${fmt(row.skuld)}</td>
+                    <td>${fmt(row.rantaMån)}</td>
+                    <td>${fmt(row.amortMån)}</td>
+                    <td>${fmt(row.kostnadMån)}</td>
+                    <td>${fmt(row.efterAvdragMån)}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(calculate, 100);
+        });
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>

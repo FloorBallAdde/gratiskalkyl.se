@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROT & RUT-kalkylator 2026 – Räkna ut ditt avdrag | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna ditt ROT- eller RUT-avdrag för 2026. Se exakt hur mycket du sparar på renovering, städning och hushållstjänster. Alltid uppdaterad med Skatteverkets regler.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/rot-rut.html">
+    <meta property="og:title" content="ROT & RUT-kalkylator 2026 – Räkna ut ditt avdrag">
+    <meta property="og:description" content="Beräkna ditt ROT- eller RUT-avdrag för 2026. Se exakt hur mycket du sparar på renovering och hushållstjänster.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/rot-rut.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ROT & RUT-kalkylator 2026 – Räkna ut ditt avdrag">
+    <meta name="twitter:description" content="Beräkna ditt ROT- eller RUT-avdrag för 2026. Se hur mycket du sparar på renovering och hushållstjänster.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; max-width: 640px; }
+
+        .calc-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .input-group { margin-bottom: 24px; }
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .input-group .help { font-size: 0.85rem; color: var(--text-light); margin-bottom: 8px; }
+
+        .toggle-group {
+            display: flex;
+            gap: 0;
+            margin-bottom: 24px;
+        }
+        .toggle-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .toggle-btn:first-child { border-radius: 8px 0 0 8px; }
+        .toggle-btn:last-child { border-radius: 0 8px 8px 0; }
+        .toggle-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .toggle-btn:hover:not(.active) { border-color: var(--primary); }
+
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        input[type="range"] {
+            flex: 1;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--border);
+            border-radius: 3px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="number"] {
+            width: 140px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            text-align: right;
+            background: var(--white);
+            color: var(--text);
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+
+        .persons-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .person-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .person-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .person-btn:hover:not(.active) { border-color: var(--primary); }
+
+        /* Results */
+        .results { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
+        .result-box {
+            background: var(--bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .result-box.highlight {
+            background: var(--primary-light);
+            border-color: var(--primary);
+        }
+        .result-box .label { font-size: 0.85rem; color: var(--text-light); margin-bottom: 4px; }
+        .result-box .value { font-size: 1.6rem; font-weight: 800; color: var(--text); }
+        .result-box.highlight .value { color: var(--primary); }
+
+        /* Canvas */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin: 16px 0;
+        }
+        canvas { width: 100%; display: block; }
+
+        /* Table */
+        .table-toggle {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 12px 0;
+            font-family: inherit;
+        }
+        .data-table {
+            display: none;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+        .data-table.visible { display: table; }
+        .data-table th, .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .data-table th { font-weight: 600; color: var(--text-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Info box */
+        .info-box {
+            background: var(--primary-light);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .info-box strong { color: var(--primary); }
+
+        /* FAQ */
+        .faq { margin-top: 40px; }
+        .faq h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 24px; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--primary); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-top: 12px; color: var(--text-light); font-size: 0.95rem; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .page-header h1 { font-size: 1.5rem; }
+            .results { grid-template-columns: 1fr; }
+            nav { display: none; }
+            .calc-section { padding: 20px; }
+            input[type="number"] { width: 110px; }
+            .toggle-btn { padding: 12px 8px; font-size: 0.9rem; }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ROT & RUT-kalkylator 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/rot-rut.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "description": "Beräkna ditt ROT- eller RUT-avdrag för 2026. Se hur mycket du sparar på renovering och hushållstjänster.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "ROT & RUT-kalkylator 2026", "item": "https://gratiskalkyl.se/kalkylatorer/rot-rut.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur mycket är ROT-avdraget 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ROT-avdraget är 30% av arbetskostnaden 2026. Maxbeloppet är 50 000 kr per person och år. Det sammanlagda taket för ROT och RUT tillsammans är 75 000 kr per person."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket är RUT-avdraget 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RUT-avdraget är 50% av arbetskostnaden 2026. Det kombinerade taket för ROT och RUT är 75 000 kr per person och år."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad räknas som ROT-arbete?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ROT-avdrag gäller renovering, ombyggnad, tillbyggnad och reparation av bostad. Det inkluderar arbeten som badrumsrenovering, köksbyte, målning, el- och VVS-arbeten, fasadrenovering och golvläggning. Avdraget gäller enbart arbetskostnaden, inte material."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad räknas som RUT-arbete?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RUT-avdrag gäller hushållsnära tjänster som städning, fönsterputsning, trädgårdsarbete, barnpassning, flytthjälp, IT-tjänster i hemmet, reparation av vitvaror och tvättjänster."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan jag få både ROT och RUT samma år?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, du kan använda både ROT och RUT samma år. Det sammanlagda avdraget för ROT och RUT får dock inte överstiga 75 000 kr per person och år."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Får jag ROT-avdrag på materialkostnader?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nej, ROT-avdraget gäller enbart arbetskostnaden. Materialkostnader, resekostnader och maskinhyra ger inget avdrag. Se till att fakturan tydligt specificerar arbete och material separat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur fungerar ROT-avdrag för par som bor ihop?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Varje person har sitt eget tak på 50 000 kr för ROT (75 000 kr kombinerat ROT+RUT). Ett par som bor ihop kan alltså få maximalt 100 000 kr i ROT-avdrag (eller 150 000 kr i kombinerat ROT+RUT) på samma bostad."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html" style="color:var(--primary);">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / ROT & RUT-kalkylator</div>
+            <h1>ROT & RUT-kalkylator 2026</h1>
+            <p>Räkna ut hur mycket du sparar med ROT- eller RUT-avdrag. Uppdaterad med Skatteverkets regler för 2026.</p>
+        </div>
+
+        <div class="info-box">
+            <strong>ROT-avdrag:</strong> 30 % av arbetskostnaden, max 50 000 kr/person/år.
+            <strong>RUT-avdrag:</strong> 50 % av arbetskostnaden.
+            Gemensamt tak ROT+RUT: <strong>75 000 kr/person/år</strong>.
+        </div>
+
+        <div class="calc-section">
+            <div class="input-group">
+                <label>Typ av avdrag</label>
+                <div class="toggle-group">
+                    <button class="toggle-btn active" data-type="rot" onclick="setType('rot')">🏠 ROT (30 %)</button>
+                    <button class="toggle-btn" data-type="rut" onclick="setType('rut')">🧹 RUT (50 %)</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="totalCost">Total kostnad (inkl. material &amp; moms)</label>
+                <div class="help">Hela beloppet på fakturan, inklusive material och arbete.</div>
+                <div class="slider-row">
+                    <input type="range" id="totalCostSlider" min="5000" max="500000" step="1000" value="100000">
+                    <input type="number" id="totalCost" min="0" max="10000000" step="1000" value="100000">
+                    <span>kr</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="materialCost">Materialkostnad</label>
+                <div class="help">Material ger inget avdrag — ange hur mycket av totalen som är material.</div>
+                <div class="slider-row">
+                    <input type="range" id="materialCostSlider" min="0" max="400000" step="1000" value="40000">
+                    <input type="number" id="materialCost" min="0" max="10000000" step="1000" value="40000">
+                    <span>kr</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Antal personer i hushållet som delar avdraget</label>
+                <div class="persons-row">
+                    <button class="person-btn active" data-persons="1" onclick="setPersons(1)">1 person</button>
+                    <button class="person-btn" data-persons="2" onclick="setPersons(2)">2 personer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="calc-section">
+            <div class="results">
+                <div class="result-box highlight">
+                    <div class="label">Ditt avdrag</div>
+                    <div class="value" id="resAvdrag">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Du betalar</div>
+                    <div class="value" id="resBetalar">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Arbetskostnad</div>
+                    <div class="value" id="resArbete">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Avdrag i % av totalen</div>
+                    <div class="value" id="resProcent">—</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="chart" height="280"></canvas>
+            </div>
+
+            <button class="table-toggle" id="tableToggle">Visa detaljerad uppdelning ▼</button>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Post</th>
+                        <th>Belopp</th>
+                        <th>Kommentar</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <h2>Vanliga frågor om ROT &amp; RUT 2026</h2>
+            <details class="faq-item">
+                <summary>Hur mycket är ROT-avdraget 2026?</summary>
+                <p>ROT-avdraget är 30 % av arbetskostnaden under 2026. Maxbeloppet per person och år är 50 000 kr. Det sammanlagda taket för ROT och RUT tillsammans är 75 000 kr per person.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur mycket är RUT-avdraget 2026?</summary>
+                <p>RUT-avdraget är 50 % av arbetskostnaden under 2026. Det kombinerade taket för ROT och RUT är 75 000 kr per person och år.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad räknas som ROT-arbete?</summary>
+                <p>ROT-avdrag gäller renovering, ombyggnad, tillbyggnad och reparation av bostad. Det inkluderar badrumsrenovering, köksbyte, målning, el- och VVS-arbeten, fasadrenovering och golvläggning. Avdraget gäller enbart arbetskostnaden, inte material.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad räknas som RUT-arbete?</summary>
+                <p>RUT-avdrag gäller hushållsnära tjänster som städning, fönsterputsning, trädgårdsarbete, barnpassning, flytthjälp, IT-tjänster i hemmet, reparation av vitvaror och tvättjänster.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Kan jag få både ROT och RUT samma år?</summary>
+                <p>Ja, du kan använda både ROT och RUT samma år. Det sammanlagda avdraget får dock inte överstiga 75 000 kr per person och år.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Får jag ROT-avdrag på materialkostnader?</summary>
+                <p>Nej, ROT-avdraget gäller enbart arbetskostnaden. Materialkostnader, resekostnader och maskinhyra ger inget avdrag. Se till att fakturan tydligt specificerar arbete och material separat.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur fungerar avdraget för par som bor ihop?</summary>
+                <p>Varje person har sitt eget tak. Ett par kan alltså få maximalt 100 000 kr i ROT-avdrag (eller 150 000 kr i kombinerat ROT+RUT) på samma bostad.</p>
+            </details>
+        </div>
+    </main>
+
+    <!-- Cross-linking -->
+    <div class="container" style="padding:48px 20px;">
+        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Fler kalkylatorer</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            <a href="/kalkylatorer/loneraknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
+                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
+            </a>
+            <a href="/kalkylatorer/ranta-pa-ranta.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
+                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta</div>
+            </a>
+            <a href="/kalkylatorer/bolanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
+                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
+                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
+            </a>
+        </div>
+    </div>
+
+    <footer style="background:var(--white);border-top:1px solid var(--border);padding:32px 0;text-align:center;color:var(--text-light);font-size:0.9rem;">
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/" style="color:var(--primary);text-decoration:none;">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        // State
+        let type = 'rot'; // rot or rut
+        let persons = 1;
+
+        const ROT_RATE = 0.30;
+        const RUT_RATE = 0.50;
+        const ROT_MAX_PER_PERSON = 50000;
+        const COMBINED_MAX_PER_PERSON = 75000;
+
+        function fmt(n) {
+            return Math.round(n).toLocaleString('sv-SE') + ' kr';
+        }
+        function fmtPct(n) {
+            return n.toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+        }
+
+        // Sync sliders
+        function syncInputs(sliderId, inputId) {
+            const slider = document.getElementById(sliderId);
+            const input = document.getElementById(inputId);
+            slider.addEventListener('input', () => { input.value = slider.value; calculate(); });
+            input.addEventListener('input', () => { slider.value = input.value; calculate(); });
+        }
+        syncInputs('totalCostSlider', 'totalCost');
+        syncInputs('materialCostSlider', 'materialCost');
+
+        function setType(t) {
+            type = t;
+            document.querySelectorAll('.toggle-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.type === t);
+            });
+            calculate();
+        }
+
+        function setPersons(p) {
+            persons = p;
+            document.querySelectorAll('.person-btn').forEach(b => {
+                b.classList.toggle('active', parseInt(b.dataset.persons) === p);
+            });
+            calculate();
+        }
+
+        function calculate() {
+            const totalCost = Math.max(0, parseFloat(document.getElementById('totalCost').value) || 0);
+            const materialCost = Math.max(0, parseFloat(document.getElementById('materialCost').value) || 0);
+            const arbetskostnad = Math.max(0, totalCost - materialCost);
+
+            const rate = type === 'rot' ? ROT_RATE : RUT_RATE;
+            const maxPerPerson = type === 'rot' ? ROT_MAX_PER_PERSON : COMBINED_MAX_PER_PERSON;
+            const maxTotal = maxPerPerson * persons;
+
+            const rawDeduction = arbetskostnad * rate;
+            const avdrag = Math.min(rawDeduction, maxTotal);
+            const betalar = totalCost - avdrag;
+            const pctOfTotal = totalCost > 0 ? (avdrag / totalCost) * 100 : 0;
+
+            document.getElementById('resAvdrag').textContent = fmt(avdrag);
+            document.getElementById('resBetalar').textContent = fmt(betalar);
+            document.getElementById('resArbete').textContent = fmt(arbetskostnad);
+            document.getElementById('resProcent').textContent = fmtPct(pctOfTotal);
+
+            drawChart(totalCost, materialCost, arbetskostnad, avdrag, betalar);
+            buildTable(totalCost, materialCost, arbetskostnad, avdrag, betalar, rate, maxTotal, rawDeduction);
+        }
+
+        function drawChart(totalCost, materialCost, arbetskostnad, avdrag, betalar) {
+            const canvas = document.getElementById('chart');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            const W = rect.width;
+            const H = 280;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            // Clear
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            ctx.fillStyle = isDark ? '#1f2937' : '#ffffff';
+            ctx.fillRect(0, 0, W, H);
+
+            const pad = { top: 24, bottom: 50, left: 60, right: 30 };
+            const cW = W - pad.left - pad.right;
+            const cH = H - pad.top - pad.bottom;
+
+            const maxVal = Math.max(totalCost, 1);
+            const barW = Math.min(100, cW * 0.22);
+            const gap = cW * 0.2;
+
+            const colors = {
+                material: isDark ? '#6b7280' : '#94a3b8',
+                arbete: isDark ? '#60a5fa' : '#3b82f6',
+                avdrag: isDark ? '#34d399' : '#1a6b4a',
+                betalar: isDark ? '#f59e0b' : '#d97706'
+            };
+
+            // Bar 1: Before (material + arbete)
+            const x1 = pad.left + cW / 2 - barW - gap / 2;
+            const hMaterial = (materialCost / maxVal) * cH;
+            const hArbete = (arbetskostnad / maxVal) * cH;
+
+            ctx.fillStyle = colors.material;
+            ctx.fillRect(x1, pad.top + cH - hMaterial, barW, hMaterial);
+            ctx.fillStyle = colors.arbete;
+            ctx.fillRect(x1, pad.top + cH - hMaterial - hArbete, barW, hArbete);
+
+            // Bar 2: After (betalar + avdrag)
+            const x2 = pad.left + cW / 2 + gap / 2;
+            const hBetalar = (betalar / maxVal) * cH;
+            const hAvdrag = (avdrag / maxVal) * cH;
+
+            ctx.fillStyle = colors.betalar;
+            ctx.fillRect(x2, pad.top + cH - hBetalar, barW, hBetalar);
+            ctx.fillStyle = colors.avdrag;
+            ctx.fillRect(x2, pad.top + cH - hBetalar - hAvdrag, barW, hAvdrag);
+
+            // Labels
+            ctx.font = '600 13px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = isDark ? '#d1d5db' : '#555';
+            ctx.fillText('Total kostnad', x1 + barW / 2, pad.top + cH + 20);
+            ctx.fillText('Din kostnad', x2 + barW / 2, pad.top + cH + 20);
+
+            // Value labels on top of bars
+            ctx.font = '700 13px Inter, sans-serif';
+            ctx.fillStyle = isDark ? '#f3f4f6' : '#1a1a2e';
+            ctx.fillText(Math.round(totalCost).toLocaleString('sv-SE') + ' kr', x1 + barW / 2, pad.top + cH - hMaterial - hArbete - 8);
+            ctx.fillText(Math.round(betalar).toLocaleString('sv-SE') + ' kr', x2 + barW / 2, pad.top + cH - hBetalar - hAvdrag - 8);
+
+            // Legend
+            const legY = H - 6;
+            ctx.font = '12px Inter, sans-serif';
+            ctx.textAlign = 'left';
+            const items = [
+                { color: colors.material, label: 'Material' },
+                { color: colors.arbete, label: 'Arbete' },
+                { color: colors.avdrag, label: 'Avdrag' },
+                { color: colors.betalar, label: 'Du betalar' }
+            ];
+            let lx = pad.left;
+            items.forEach(item => {
+                ctx.fillStyle = item.color;
+                ctx.fillRect(lx, legY - 10, 12, 12);
+                ctx.fillStyle = isDark ? '#d1d5db' : '#888';
+                ctx.fillText(item.label, lx + 16, legY);
+                lx += ctx.measureText(item.label).width + 40;
+            });
+        }
+
+        function buildTable(totalCost, materialCost, arbetskostnad, avdrag, betalar, rate, maxTotal, rawDeduction) {
+            const hitMax = rawDeduction > avdrag;
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = `
+                <tr><td>Total kostnad</td><td>${fmt(totalCost)}</td><td>Hel faktura inkl. moms</td></tr>
+                <tr><td>Materialkostnad</td><td>−${fmt(materialCost)}</td><td>Ej avdragsgillt</td></tr>
+                <tr><td>Arbetskostnad</td><td>${fmt(arbetskostnad)}</td><td>Underlag för avdrag</td></tr>
+                <tr><td>${type === 'rot' ? 'ROT' : 'RUT'}-avdrag (${Math.round(rate * 100)} %)</td><td style="color:var(--primary);font-weight:700;">−${fmt(avdrag)}</td><td>${hitMax ? 'Begränsat av maxtak ' + fmt(maxTotal) : fmt(arbetskostnad) + ' × ' + Math.round(rate * 100) + ' %'}</td></tr>
+                <tr style="font-weight:700;"><td>Du betalar</td><td>${fmt(betalar)}</td><td>Din faktiska kostnad</td></tr>
+                <tr><td>Kvar av maxavdrag</td><td>${fmt(Math.max(0, maxTotal - avdrag))}</td><td>${persons} person${persons > 1 ? 'er' : ''} × ${fmt(type === 'rot' ? ROT_MAX_PER_PERSON : COMBINED_MAX_PER_PERSON)}</td></tr>
+            `;
+        }
+
+        // Table toggle
+        document.getElementById('tableToggle').addEventListener('click', function() {
+            const table = document.getElementById('dataTable');
+            const visible = table.classList.toggle('visible');
+            this.textContent = visible ? 'Dölj detaljerad uppdelning ▲' : 'Visa detaljerad uppdelning ▼';
+        });
+
+        // Responsive
+        window.addEventListener('resize', calculate);
+
+        // Init
+        calculate();
+    </script>
+</body>
+</html>

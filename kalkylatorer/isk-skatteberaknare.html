@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISK-skatteberäknare 2026 – Räkna ut skatten på ISK | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna skatten på ditt investeringssparkonto (ISK) för 2026. Nytt skattefritt grundavdrag på 300 000 kr. Se schablonintäkt, skatt och effektiv skattesats.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/isk-skatteberaknare.html">
+    <meta property="og:title" content="ISK-skatteberäknare 2026 – Räkna ut skatten på ditt ISK">
+    <meta property="og:description" content="Beräkna skatten på ditt investeringssparkonto för 2026. Skattefritt upp till 300 000 kr. Uppdaterad med statslåneränta 2,55%.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/isk-skatteberaknare.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ISK-skatteberäknare 2026 – Räkna ut skatten på ditt ISK">
+    <meta name="twitter:description" content="Beräkna skatten på ditt ISK för 2026. Skattefritt upp till 300 000 kr.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"],
+        .input-group select {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .tax-params {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .tax-params .param {
+            display: flex;
+            flex-direction: column;
+        }
+        .tax-params .param-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+        .tax-params .param-value {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        .chart-separator { height: 1px; background: var(--border); margin: 24px 0; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        @media (prefers-color-scheme: dark) {
+            .data-table th { color: var(--primary); }
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+        .data-table tr.highlight-row td {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+        }
+        .info-section p { color: var(--text-light); margin-bottom: 16px; }
+        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
+        .info-section li { margin-bottom: 8px; }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box { background: rgba(26, 107, 74, 0.1); border-color: var(--border); }
+        }
+
+        .faq { margin-bottom: 48px; }
+        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+        .faq-item { margin-bottom: 8px; }
+        .faq-item summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 12px 0;
+            transition: color 0.2s ease;
+        }
+        .faq-item summary:hover { text-decoration: underline; }
+        .faq-item summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+        .faq-item p { margin-left: 20px; margin-top: 8px; color: var(--text-light); }
+
+        .cross-links {
+            margin-bottom: 48px;
+        }
+        .cross-links h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .cross-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .cross-link {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+        }
+        .cross-link:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+        .cross-link:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        .cross-link .cl-icon { font-size: 1.3rem; margin-bottom: 4px; }
+        .cross-link .cl-title { font-weight: 600; font-size: 0.9rem; }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+
+        @media (max-width: 900px) { .results { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .input-grid { grid-template-columns: 1fr; gap: 16px; }
+            .results { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.5rem; }
+            .calc-wrapper { padding: 16px; }
+            nav { display: none; }
+            .result-box .value { font-size: 1.3rem; }
+            .input-group input[type="number"] { min-height: 44px; padding: 12px; }
+            .table-toggle { min-height: 44px; }
+            .tax-params { flex-direction: column; gap: 8px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ISK-skatteberäknare 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/isk-skatteberaknare.html",
+        "description": "Gratis ISK-skatteberäknare för att beräkna schablonskatt på investeringssparkonto 2026. Skattefritt upp till 300 000 kr.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "ISK-skatteberäknare 2026", "item": "https://gratiskalkyl.se/kalkylatorer/isk-skatteberaknare.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur beräknas skatten på ISK 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Skatten baseras på en schablonintäkt som beräknas som kapitalunderlaget multiplicerat med statslåneräntan (2,55%) plus 1 procentenhet, alltså 3,55%. Schablonintäkten beskattas sedan med 30% kapitalskatt. Effektiv skattesats blir 1,065% av kapitalunderlaget. Från 2026 är de första 300 000 kr skattefria."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket är skattefritt på ISK 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Från och med 2026 är kapitalunderlag upp till 300 000 kr skattefritt per person och år. Det innebär att du inte behöver betala någon ISK-skatt alls om ditt genomsnittliga kontovärde under året understiger 300 000 kr. Beloppet höjdes från 150 000 kr som gällde 2025."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är kapitalunderlaget och hur beräknas det?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kapitalunderlaget är genomsnittet av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året. Formeln: (Värde Q1 + Q2 + Q3 + Q4) / 4 + Insättningar. Observera att insättningar som redan är medräknade i kvartalsvärden inte dubbelräknas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är statslåneräntan 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Statslåneräntan som används för ISK-skatt 2026 fastställdes den 30 november 2025 till 2,55%. Denna ränta plus 1 procentenhet (totalt 3,55%) utgör grunden för schablonintäkten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Är ISK fortfarande värt det jämfört med vanligt aktiekonto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ISK är fördelaktigt om din faktiska avkastning överstiger schablonräntan (3,55% för 2026). Med det skattefria grundavdraget på 300 000 kr är ISK extra fördelaktigt för mindre sparare. På ett vanligt aktiekonto beskattas vinster med 30% vid försäljning, medan ISK-skatten betalas oavsett om du gjort vinst eller förlust."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Betalar jag ISK-skatt även om mina aktier gått ner?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, ISK-skatten baseras på kapitalunderlaget, inte på faktisk vinst eller förlust. Du betalar schablonskatt oavsett om portföljen gått upp eller ner. Däremot är de första 300 000 kr skattefria 2026, vilket ger en buffert för mindre sparare."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur fungerar ISK-skatten om jag gör insättningar under året?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Insättningar under året läggs till kapitalunderlaget. Om du till exempel sätter in 50 000 kr under året räknas hela beloppet med, oavsett när under året insättningen gjordes. Uttag påverkar däremot inte kapitalunderlaget direkt, men de sänker kvartalsvärdet vid nästa mätpunkt."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> → ISK-skatteberäknare 2026</div>
+            <h1>ISK-skatteberäknare 2026</h1>
+            <p>Beräkna schablonskatt på ditt investeringssparkonto. Uppdaterad med 2026 års regler — skattefritt upp till 300 000 kr.</p>
+        </div>
+
+        <div class="tax-params">
+            <div class="param">
+                <span class="param-label">Statslåneränta</span>
+                <span class="param-value">2,55 %</span>
+            </div>
+            <div class="param">
+                <span class="param-label">Schablonränta</span>
+                <span class="param-value">3,55 %</span>
+            </div>
+            <div class="param">
+                <span class="param-label">Effektiv skattesats</span>
+                <span class="param-value">1,065 %</span>
+            </div>
+            <div class="param">
+                <span class="param-label">Skattefritt</span>
+                <span class="param-value">300 000 kr</span>
+            </div>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="iskValue">ISK-värde (kapitalunderlag)
+                        <div class="sublabel">Genomsnittligt värde under året</div>
+                    </label>
+                    <input type="number" id="iskValue" value="500000" min="0" max="100000000" step="10000" aria-label="ISK-värde i kronor">
+                    <input type="range" id="iskSlider" min="0" max="5000000" step="10000" value="500000" aria-label="Justera ISK-värde">
+                    <div class="range-labels"><span>0 kr</span><span>5 000 000 kr</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="deposits">Insättningar under året
+                        <div class="sublabel">Tillskott utöver kvartalsvärden</div>
+                    </label>
+                    <input type="number" id="deposits" value="0" min="0" max="10000000" step="10000" aria-label="Insättningar under året">
+                    <input type="range" id="depositsSlider" min="0" max="1000000" step="10000" value="0" aria-label="Justera insättningar">
+                    <div class="range-labels"><span>0 kr</span><span>1 000 000 kr</span></div>
+                </div>
+            </div>
+
+            <div class="results" id="results">
+                <div class="result-box highlight">
+                    <div class="label">Skatt att betala</div>
+                    <div class="value" id="resTax">—</div>
+                    <div class="sub" id="resTaxSub"></div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Kapitalunderlag</div>
+                    <div class="value" id="resBase">—</div>
+                    <div class="sub">Totalt underlag</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Schablonintäkt</div>
+                    <div class="value" id="resIncome">—</div>
+                    <div class="sub">3,55 % av underlaget</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Skattefri del</div>
+                    <div class="value" id="resFree">—</div>
+                    <div class="sub">Max 300 000 kr</div>
+                </div>
+            </div>
+
+            <div class="chart-separator"></div>
+
+            <h3 style="margin-bottom: 8px; font-size: 1rem;">ISK-skatt vid olika kapitalunderlag</h3>
+            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 16px;">Grafen visar hur skatten ökar med kapitalunderlaget. Första 300 000 kr är skattefria.</p>
+            <div class="chart-container">
+                <canvas id="taxChart"></canvas>
+            </div>
+
+            <button class="table-toggle" id="tableToggle" aria-expanded="false" aria-controls="detailTable">▶ Visa jämförelsetabell</button>
+            <table class="data-table" id="detailTable" aria-label="Jämförelsetabell ISK-skatt vid olika kapitalunderlag">
+                <thead>
+                    <tr>
+                        <th>Kapitalunderlag</th>
+                        <th>Schablonintäkt</th>
+                        <th>Skattefritt</th>
+                        <th>Skatt / år</th>
+                        <th>Skatt / mån</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="info-section">
+            <h2>Så fungerar ISK-skatten 2026</h2>
+            <p>Investeringssparkontot (ISK) beskattas med en schablonskatt — du betalar skatt baserat på kontots värde, inte på din faktiska vinst eller förlust. Det gör skatteberäkningen enkel och förutsägbar.</p>
+
+            <h3>Beräkningsformel</h3>
+            <div class="formula-box">
+Kapitalunderlag = (Värde 1 jan + Värde 1 apr + Värde 1 jul + Värde 1 okt) / 4 + Insättningar<br><br>
+Schablonintäkt = Kapitalunderlag × 3,55 %<br><br>
+Skattepliktig del = Schablonintäkt − (300 000 × 3,55 %)<br><br>
+Skatt = Skattepliktig del × 30 %
+            </div>
+
+            <h3>Nytt för 2026 — Höjt skattefritt grundavdrag</h3>
+            <p>Från och med 2026 är kapitalunderlag upp till 300 000 kr skattefritt per person. Det innebär att du slipper ISK-skatt helt om ditt genomsnittliga kontovärde understiger 300 000 kr. Beloppet höjdes från 150 000 kr som gällde 2025.</p>
+
+            <h3>ISK vs vanligt aktiekonto</h3>
+            <p>Med ISK betalar du en fast procent av kontovärdet varje år — oavsett vinst eller förlust. Med ett vanligt aktiekonto betalar du 30 % kapitalvinstskatt vid försäljning. ISK lönar sig generellt om din avkastning överstiger schablonräntan (3,55 % för 2026).</p>
+        </div>
+
+        <div class="faq">
+            <h2>Vanliga frågor om ISK-skatt</h2>
+            <details class="faq-item">
+                <summary>Hur beräknas skatten på ISK 2026?</summary>
+                <p>Skatten baseras på en schablonintäkt: kapitalunderlaget × 3,55 % (statslåneräntan 2,55 % + 1 %). Schablonintäkten beskattas med 30 % kapitalskatt. Effektiv skattesats: 1,065 %. De första 300 000 kr i kapitalunderlag är skattefria.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur mycket är skattefritt på ISK 2026?</summary>
+                <p>Kapitalunderlag upp till 300 000 kr per person är skattefritt 2026. Det innebär att om ditt genomsnittliga ISK-värde är under 300 000 kr betalar du ingen schablonskatt alls. Beloppet höjdes från 150 000 kr (2025).</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad är kapitalunderlaget och hur räknas det?</summary>
+                <p>Kapitalunderlaget är genomsnittet av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året. Uttag minskar inte kapitalunderlaget direkt, men påverkar kvartalsvärdet vid nästa mätpunkt.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Betalar jag skatt på ISK även om portföljen gått ner?</summary>
+                <p>Ja, schablonskatt betalas oavsett faktisk avkastning. Dock gör det skattefria grundavdraget på 300 000 kr att mindre sparare slipper skatt helt. Vid förlust kan ISK vara sämre än vanligt aktiekonto där du kan kvitta förluster.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Är ISK fortfarande värt det?</summary>
+                <p>ISK lönar sig om din förväntade avkastning överstiger schablonräntan (3,55 % 2026). Historiskt har aktiemarknaden avkastat 7–10 % per år, så för långsiktiga sparare är ISK nästan alltid fördelaktigt. Det skattefria grundavdraget gör ISK extra attraktivt för sparande under 300 000 kr.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Hur påverkar insättningar mitt kapitalunderlag?</summary>
+                <p>Insättningar under året läggs till kapitalunderlaget i sin helhet. Om du sätter in 100 000 kr under året ökar ditt kapitalunderlag med hela beloppet, oavsett när under året insättningen gjordes.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vad är skillnaden mellan ISK och kapitalförsäkring (KF)?</summary>
+                <p>Båda beskattas med schablonskatt, men det skattefria grundavdraget på 300 000 kr gäller bara ISK, inte KF. KF kan ha fördelar vid flytt mellan banker och vid arv, men ISK är generellt billigare för de flesta sparare 2026.</p>
+            </details>
+        </div>
+
+        <div class="cross-links">
+            <h2>Fler kalkylatorer</h2>
+            <div class="cross-links-grid">
+                <a href="/kalkylatorer/ranta-pa-ranta.html" class="cross-link">
+                    <div class="cl-icon">📈</div>
+                    <div class="cl-title">Ränta på ränta-kalkylator</div>
+                </a>
+                <a href="/kalkylatorer/loneraknare.html" class="cross-link">
+                    <div class="cl-icon">💰</div>
+                    <div class="cl-title">Löneräknare 2026</div>
+                </a>
+                <a href="/kalkylatorer/rot-rut.html" class="cross-link">
+                    <div class="cl-icon">🏠</div>
+                    <div class="cl-title">ROT & RUT-kalkylator</div>
+                </a>
+                <a href="/kalkylatorer/bolanekalkylator.html" class="cross-link">
+                    <div class="cl-icon">🏦</div>
+                    <div class="cl-title">Bolånekalkylator</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        const SLR = 0.0255;
+        const SCHABLON_RATE = SLR + 0.01; // 3.55%
+        const TAX_RATE = 0.30;
+        const EFFECTIVE_RATE = SCHABLON_RATE * TAX_RATE; // 1.065%
+        const FREE_LIMIT = 300000;
+        const FREE_SCHABLON = FREE_LIMIT * SCHABLON_RATE; // 10 650
+
+        const fmt = (n) => n.toLocaleString('sv-SE', { maximumFractionDigits: 0 }) + ' kr';
+        const fmtPct = (n) => (n * 100).toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+
+        const iskValue = document.getElementById('iskValue');
+        const iskSlider = document.getElementById('iskSlider');
+        const deposits = document.getElementById('deposits');
+        const depositsSlider = document.getElementById('depositsSlider');
+
+        function syncInputs(input, slider) {
+            input.addEventListener('input', () => {
+                let v = parseFloat(input.value) || 0;
+                if (v > parseFloat(slider.max)) slider.max = v;
+                slider.value = v;
+                calculate();
+            });
+            slider.addEventListener('input', () => {
+                input.value = slider.value;
+                calculate();
+            });
+        }
+        syncInputs(iskValue, iskSlider);
+        syncInputs(deposits, depositsSlider);
+
+        function calculateTax(base) {
+            const schablon = base * SCHABLON_RATE;
+            const taxableSchablon = Math.max(0, schablon - FREE_SCHABLON);
+            const tax = taxableSchablon * TAX_RATE;
+            return { schablon, taxableSchablon, tax, freeAmount: Math.min(base, FREE_LIMIT) };
+        }
+
+        function calculate() {
+            const val = parseFloat(iskValue.value) || 0;
+            const dep = parseFloat(deposits.value) || 0;
+            const base = val + dep;
+
+            const { schablon, tax, freeAmount } = calculateTax(base);
+
+            document.getElementById('resTax').textContent = fmt(tax);
+            document.getElementById('resTaxSub').textContent = tax > 0 ? fmt(Math.round(tax / 12)) + '/mån' : 'Skattefritt!';
+            document.getElementById('resBase').textContent = fmt(base);
+            document.getElementById('resIncome').textContent = fmt(Math.round(schablon));
+            document.getElementById('resFree').textContent = fmt(freeAmount);
+
+            drawChart(base);
+            buildTable(base);
+        }
+
+        function drawChart(currentBase) {
+            const canvas = document.getElementById('taxChart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+            const W = rect.width;
+            const H = rect.height;
+
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const bgColor = isDark ? '#1f2937' : '#ffffff';
+            const textColor = isDark ? '#d1d5db' : '#555';
+            const gridColor = isDark ? '#374151' : '#e2e8f0';
+            const lineColor = isDark ? '#34d399' : '#1a6b4a';
+            const fillColor = isDark ? 'rgba(52, 211, 153, 0.15)' : 'rgba(26, 107, 74, 0.1)';
+            const markerColor = isDark ? '#f59e0b' : '#d97706';
+
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, W, H);
+
+            const pad = { top: 20, right: 20, bottom: 50, left: 80 };
+            const cW = W - pad.left - pad.right;
+            const cH = H - pad.top - pad.bottom;
+
+            // Data: 0 to 5M in 100 steps
+            const maxBase = 5000000;
+            const steps = 100;
+            const points = [];
+            let maxTax = 0;
+            for (let i = 0; i <= steps; i++) {
+                const b = (i / steps) * maxBase;
+                const t = calculateTax(b).tax;
+                points.push({ base: b, tax: t });
+                if (t > maxTax) maxTax = t;
+            }
+            maxTax = Math.max(maxTax, 1000); // minimum for axis
+
+            const x = (base) => pad.left + (base / maxBase) * cW;
+            const y = (tax) => pad.top + cH - (tax / maxTax) * cH;
+
+            // Grid lines
+            ctx.strokeStyle = gridColor;
+            ctx.lineWidth = 0.5;
+            for (let i = 0; i <= 5; i++) {
+                const gy = pad.top + (i / 5) * cH;
+                ctx.beginPath();
+                ctx.moveTo(pad.left, gy);
+                ctx.lineTo(W - pad.right, gy);
+                ctx.stroke();
+            }
+
+            // Y-axis labels
+            ctx.fillStyle = textColor;
+            ctx.font = '11px Inter, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let i = 0; i <= 5; i++) {
+                const v = maxTax * (1 - i / 5);
+                const gy = pad.top + (i / 5) * cH;
+                ctx.fillText(fmt(Math.round(v)), pad.left - 8, gy);
+            }
+
+            // X-axis labels
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            const xLabels = [0, 1000000, 2000000, 3000000, 4000000, 5000000];
+            xLabels.forEach(v => {
+                const xp = x(v);
+                ctx.fillText((v / 1000000).toLocaleString('sv-SE') + ' mkr', xp, pad.top + cH + 8);
+            });
+
+            // Axis labels
+            ctx.save();
+            ctx.fillStyle = textColor;
+            ctx.font = '12px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Kapitalunderlag', pad.left + cW / 2, H - 6);
+            ctx.restore();
+
+            // Free zone highlight
+            const freeX = x(FREE_LIMIT);
+            ctx.fillStyle = isDark ? 'rgba(52, 211, 153, 0.08)' : 'rgba(26, 107, 74, 0.05)';
+            ctx.fillRect(pad.left, pad.top, freeX - pad.left, cH);
+            ctx.fillStyle = textColor;
+            ctx.font = '10px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Skattefritt', pad.left + (freeX - pad.left) / 2, pad.top + 12);
+
+            // Draw line with fill
+            ctx.beginPath();
+            ctx.moveTo(x(points[0].base), y(points[0].tax));
+            points.forEach(p => ctx.lineTo(x(p.base), y(p.tax)));
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // Fill area
+            ctx.lineTo(x(points[points.length - 1].base), y(0));
+            ctx.lineTo(x(0), y(0));
+            ctx.closePath();
+            ctx.fillStyle = fillColor;
+            ctx.fill();
+
+            // Current value marker
+            if (currentBase >= 0 && currentBase <= maxBase) {
+                const ct = calculateTax(currentBase).tax;
+                const cx = x(currentBase);
+                const cy = y(ct);
+
+                // Vertical dashed line
+                ctx.setLineDash([4, 4]);
+                ctx.strokeStyle = markerColor;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(cx, pad.top);
+                ctx.lineTo(cx, pad.top + cH);
+                ctx.stroke();
+                ctx.setLineDash([]);
+
+                // Dot
+                ctx.beginPath();
+                ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+                ctx.fillStyle = markerColor;
+                ctx.fill();
+                ctx.strokeStyle = bgColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Label
+                ctx.fillStyle = markerColor;
+                ctx.font = 'bold 12px Inter, sans-serif';
+                ctx.textAlign = cx > W / 2 ? 'right' : 'left';
+                const labelX = cx > W / 2 ? cx - 10 : cx + 10;
+                ctx.fillText(fmt(Math.round(ct)) + '/år', labelX, cy - 14);
+            }
+        }
+
+        function buildTable(currentBase) {
+            const tbody = document.getElementById('tableBody');
+            const amounts = [100000, 200000, 300000, 500000, 750000, 1000000, 1500000, 2000000, 3000000, 5000000];
+            let html = '';
+            amounts.forEach(b => {
+                const { schablon, tax } = calculateTax(b);
+                const isHL = Math.abs(b - currentBase) < 50000;
+                html += `<tr${isHL ? ' class="highlight-row"' : ''}>
+                    <td>${fmt(b)}</td>
+                    <td>${fmt(Math.round(schablon))}</td>
+                    <td>${b <= FREE_LIMIT ? fmt(b) : fmt(FREE_LIMIT)}</td>
+                    <td>${fmt(Math.round(tax))}</td>
+                    <td>${fmt(Math.round(tax / 12))}</td>
+                </tr>`;
+            });
+            tbody.innerHTML = html;
+        }
+
+        // Table toggle
+        const toggle = document.getElementById('tableToggle');
+        const table = document.getElementById('detailTable');
+        toggle.addEventListener('click', () => {
+            const visible = table.classList.toggle('visible');
+            toggle.textContent = visible ? '▼ Dölj jämförelsetabell' : '▶ Visa jämförelsetabell';
+            toggle.setAttribute('aria-expanded', visible);
+        });
+
+        // Responsive chart redraw
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(calculate, 150);
+        });
+
+        // Dark mode change listener
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', calculate);
+
+        // Initial calc
+        calculate();
+    })();
+    </script>
+</body>
+</html>

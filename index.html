@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GratisKalkyl.se — Gratis kalkylatorer och räknare online</title>
+    <meta name="description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt, ROT-avdrag och mycket mer. Snabba, enkla och alltid uppdaterade verktyg.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/">
+    <meta property="og:title" content="GratisKalkyl.se — Gratis kalkylatorer och räknare online">
+    <meta property="og:description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt, ROT-avdrag och mycket mer.">
+    <meta property="og:url" content="https://gratiskalkyl.se/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="GratisKalkyl.se — Gratis kalkylatorer online">
+    <meta name="twitter:description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt och mycket mer.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 48px 20px 32px;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Calculator Grid */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            padding: 20px 0 48px;
+        }
+        .calc-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+        }
+        .calc-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+        .calc-card:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .calc-card .icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .calc-card h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .calc-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        .calc-card .tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 16px;
+        }
+
+        /* Coming soon cards */
+        .calc-card.coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .calc-card.coming-soon .tag {
+            background: #f0f0f0;
+            color: #999;
+        }
+        @media (prefers-color-scheme: dark) {
+            .calc-card.coming-soon .tag {
+                background: #374151;
+                color: #9ca3af;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 1rem; }
+            .calc-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+            .calc-card {
+                padding: 16px;
+                min-height: 44px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "GratisKalkyl.se",
+        "url": "https://gratiskalkyl.se",
+        "description": "Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön, ROT-avdrag och mer.",
+        "inLanguage": "sv"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h1>Gratis kalkylatorer online</h1>
+            <p>Räkna ut ränta, lön efter skatt, avdrag och mer. Snabba verktyg som alltid är uppdaterade.</p>
+        </div>
+
+        <div class="calc-grid">
+            <a href="/kalkylatorer/ranta-pa-ranta.html" class="calc-card">
+                <div class="icon">📈</div>
+                <h2>Ränta på ränta-kalkylator</h2>
+                <p>Se hur ditt sparande växer över tid med ränta-på-ränta-effekten. Interaktiv graf visar utvecklingen år för år.</p>
+                <span class="tag">Populär</span>
+            </a>
+
+            <a href="/kalkylatorer/loneraknare.html" class="calc-card">
+                <div class="icon">💰</div>
+                <h2>Löneräknare 2026</h2>
+                <p>Räkna ut din nettolön efter skatt. Välj kommun och månadslön — se exakt vad du får ut.</p>
+                <span class="tag">Ny</span>
+            </a>
+
+            <a href="/kalkylatorer/rot-rut.html" class="calc-card">
+                <div class="icon">🏠</div>
+                <h2>ROT & RUT-kalkylator 2026</h2>
+                <p>Räkna ut ditt ROT- eller RUT-avdrag. Se exakt hur mycket du sparar på renovering och hushållstjänster.</p>
+                <span class="tag">Ny</span>
+            </a>
+
+            <a href="/kalkylatorer/bolanekalkylator.html" class="calc-card">
+                <div class="icon">🏦</div>
+                <h2>Bolånekalkylator 2026</h2>
+                <p>Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag — och följ skulden år för år.</p>
+                <span class="tag">Ny</span>
+            </a>
+
+            <a href="/kalkylatorer/elkostnadskalkylator.html" class="calc-card">
+                <div class="icon">⚡</div>
+                <h2>Elkostnadskalkylator 2026</h2>
+                <p>Beräkna din elkostnad per månad baserat på förbrukning, elområde och avtal. Se fördelning mellan el, elnät och skatt.</p>
+                <span class="tag">Ny</span>
+            </a>
+
+            <a href="#" class="calc-card coming-soon">
+                <div class="icon">🚗</div>
+                <h2>Bilkostnadsräknare</h2>
+                <p>Räkna ut den verkliga månadskostnaden för din bil — drivmedel, försäkring, värdeminskning och service.</p>
+                <span class="tag">Kommer snart</span>
+            </a>
+
+            <a href="/kalkylatorer/isk-skatteberaknare.html" class="calc-card">
+                <div class="icon">📊</div>
+                <h2>ISK-skatteberäknare 2026</h2>
+                <p>Beräkna schablonskatten på ditt investeringssparkonto. Skattefritt upp till 300 000 kr med nya reglerna.</p>
+                <span class="tag">Ny</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+</body>
+</html>

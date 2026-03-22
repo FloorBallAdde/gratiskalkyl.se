@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ränta på ränta-kalkylator 2026 — Räkna ut ränta på ränta | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut ränta på ränta med vår gratis kalkylator. Se hur ditt sparande växer med interaktiv graf. Ange startbelopp, månadssparande, ränta och tid.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/ranta-pa-ranta.html">
+    <meta property="og:title" content="Ränta på ränta-kalkylator 2026 — Räkna ut ränta på ränta">
+    <meta property="og:description" content="Räkna ut ränta på ränta med vår gratis kalkylator. Se hur ditt sparande växer med interaktiv graf.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/ranta-pa-ranta.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ränta på ränta-kalkylator 2026">
+    <meta name="twitter:description" content="Räkna ut ränta på ränta med vår gratis kalkylator. Se hur ditt sparande växer med interaktiv graf.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Page */
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        /* Calculator */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"] {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Separator */
+        .chart-separator {
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        /* Chart */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        /* Table */
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+
+        /* Info section */
+        .info-section {
+            margin-bottom: 48px;
+        }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+        }
+        .info-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box {
+                background: rgba(26, 107, 74, 0.1);
+                border-color: var(--border);
+            }
+        }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .results { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .input-grid { grid-template-columns: 1fr; gap: 16px; }
+            .results { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.5rem; }
+            .calc-wrapper { padding: 16px; }
+            nav { display: none; }
+            .result-box .value { font-size: 1.3rem; }
+            .input-group input[type="number"] {
+                min-height: 44px;
+                padding: 12px;
+            }
+            .table-toggle {
+                min-height: 44px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Ränta på ränta-kalkylator",
+        "url": "https://gratiskalkyl.se/kalkylatorer/ranta-pa-ranta.html",
+        "description": "Gratis kalkylator för att räkna ut ränta på ränta. Ange startbelopp, månadssparande, ränta och tidsperiod.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "Ränta på ränta-kalkylator", "item": "https://gratiskalkyl.se/kalkylatorer/ranta-pa-ranta.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Vilken avkastning kan jag förvänta mig?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Historisk genomsnittlig avkastning för en bred aktieindexfond har varit cirka 7–8% per år före inflation. Sparkonto ger 2–4%, obligationer 3–5%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Räknar kalkylatorn med skatt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK betalar du en årlig schablonsskatt. I en vanlig depå beskattas vinsten med 30% kapitalvinstskatt."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad händer om räntan varierar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I verkligheten varierar avkastningen år för år. Kalkylatorn använder ett genomsnitt för att ge en ungefärlig bild."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Ränta på ränta-kalkylator</div>
+            <h1>Ränta på ränta-kalkylator</h1>
+            <p>Se hur ditt sparande växer över tid med ränta-på-ränta-effekten.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="startkapital">Startkapital (kr)</label>
+                    <input type="number" id="startkapital" value="10000" min="0" step="1000">
+                    <input type="range" id="startkapitalRange" min="0" max="1000000" step="5000" value="10000">
+                    <div class="range-labels"><span>0 kr</span><span>1 000 000 kr</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="manadsspar">Månadssparande (kr)</label>
+                    <input type="number" id="manadsspar" value="2000" min="0" step="100">
+                    <input type="range" id="manadssparRange" min="0" max="20000" step="100" value="2000">
+                    <div class="range-labels"><span>0 kr</span><span>20 000 kr</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="arligRanta">Årlig avkastning (%)</label>
+                    <div class="sublabel">Genomsnittlig börsutveckling: ca 7–8%</div>
+                    <input type="number" id="arligRanta" value="7" min="0" max="30" step="0.1">
+                    <input type="range" id="arligRantaRange" min="0" max="15" step="0.1" value="7">
+                    <div class="range-labels"><span>0%</span><span>15%</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="tid">Spartid (år)</label>
+                    <input type="number" id="tid" value="20" min="1" max="50" step="1">
+                    <input type="range" id="tidRange" min="1" max="50" step="1" value="20">
+                    <div class="range-labels"><span>1 år</span><span>50 år</span></div>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-box highlight">
+                    <div class="label">Totalt värde</div>
+                    <div class="value" id="totalValue">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Totalt insatt</div>
+                    <div class="value" id="totalInsatt">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Ränta (avkastning)</div>
+                    <div class="value" id="totalRanta">—</div>
+                    <div class="sub" id="rantaProcent"></div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+            <div class="chart-separator"></div>
+
+            <button class="table-toggle" id="tableToggle">Visa årlig utveckling ▼</button>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>År</th>
+                        <th>Insatt</th>
+                        <th>Ränta</th>
+                        <th>Totalt</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="info-section">
+            <h2>Vad är ränta på ränta?</h2>
+            <p>Ränta på ränta (även kallat kompound-ränta) innebär att du får avkastning inte bara på ditt ursprungliga kapital, utan även på den ränta du redan har tjänat. Det skapar en exponentiell tillväxteffekt som blir kraftfullare ju längre du sparar.</p>
+
+            <h3>Formeln för ränta på ränta</h3>
+            <p>Slutvärdet beräknas med denna formel:</p>
+            <div class="formula-box">
+                Slutvärde = Startkapital × (1 + r)^n + Månadssparande × ((1 + r)^n − 1) / r
+                <br><br>
+                r = årlig ränta / 12 (månadsränta)
+                <br>
+                n = antal månader
+            </div>
+
+            <h3>Exempel: 2 000 kr i månaden i 20 år</h3>
+            <p>Om du sparar 2 000 kr i månaden med 7% årlig avkastning i 20 år, har du totalt satt in 480 000 kr. Men tack vare ränta på ränta-effekten växer ditt kapital till över 1 000 000 kr. Mer än hälften av slutvärdet kommer från avkastningen — inte från dina egna insättningar.</p>
+
+            <h3>Tips för att maximera ränta på ränta</h3>
+            <p>Börja tidigt — tid är den viktigaste faktorn. Spara regelbundet, även små belopp. Återinvestera alltid avkastningen. Undvik att ta ut pengar i förtid. Och var tålmodig — effekten accelererar med tiden.</p>
+
+            <h2>Vanliga frågor</h2>
+
+            <h3>Vilken avkastning kan jag förvänta mig?</h3>
+            <p>Historisk genomsnittlig avkastning för en bred aktieindexfond (som en global indexfond) har varit cirka 7–8% per år före inflation. Sparkonto ger 2–4%, obligationer 3–5%. Välj den siffra som bäst motsvarar din sparform.</p>
+
+            <h3>Räknar kalkylatorn med skatt?</h3>
+            <p>Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK (investeringssparkonto) betalar du en årlig schablonsskatt baserad på statslåneräntan. I en vanlig depå beskattas vinsten med 30% kapitalvinstskatt.</p>
+
+            <h3>Vad händer om räntan varierar?</h3>
+            <p>I verkligheten varierar avkastningen år för år. Kalkylatorn använder ett genomsnitt för att ge en ungefärlig bild. Det faktiska utfallet kan bli högre eller lägre beroende på marknadsutvecklingen.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Elements
+        const inputs = {
+            startkapital: { num: document.getElementById('startkapital'), range: document.getElementById('startkapitalRange') },
+            manadsspar: { num: document.getElementById('manadsspar'), range: document.getElementById('manadssparRange') },
+            arligRanta: { num: document.getElementById('arligRanta'), range: document.getElementById('arligRantaRange') },
+            tid: { num: document.getElementById('tid'), range: document.getElementById('tidRange') }
+        };
+
+        // Sync number <-> range
+        Object.keys(inputs).forEach(key => {
+            const { num, range } = inputs[key];
+            num.addEventListener('input', () => { range.value = num.value; calculate(); });
+            range.addEventListener('input', () => { num.value = range.value; calculate(); });
+        });
+
+        // Format number
+        function fmt(n) {
+            return Math.round(n).toLocaleString('sv-SE') + ' kr';
+        }
+
+        // Calculate
+        function calculate() {
+            const P = parseFloat(inputs.startkapital.num.value) || 0;
+            const M = parseFloat(inputs.manadsspar.num.value) || 0;
+            const r = (parseFloat(inputs.arligRanta.num.value) || 0) / 100;
+            const years = parseInt(inputs.tid.num.value) || 1;
+
+            const monthlyRate = r / 12;
+            const yearlyData = [];
+            let balance = P;
+
+            for (let y = 1; y <= years; y++) {
+                for (let m = 0; m < 12; m++) {
+                    balance = balance * (1 + monthlyRate) + M;
+                }
+                const totalInsatt = P + M * 12 * y;
+                yearlyData.push({
+                    year: y,
+                    total: balance,
+                    insatt: totalInsatt,
+                    ranta: balance - totalInsatt
+                });
+            }
+
+            const last = yearlyData[yearlyData.length - 1];
+            document.getElementById('totalValue').textContent = fmt(last.total);
+            document.getElementById('totalInsatt').textContent = fmt(last.insatt);
+            document.getElementById('totalRanta').textContent = fmt(last.ranta);
+
+            const pct = last.insatt > 0 ? ((last.ranta / last.insatt) * 100).toFixed(0) : 0;
+            document.getElementById('rantaProcent').textContent = pct + '% av insatt belopp';
+
+            drawChart(yearlyData);
+            buildTable(yearlyData);
+        }
+
+        // Simple canvas chart
+        function drawChart(data) {
+            const canvas = document.getElementById('chart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
+            ctx.scale(dpr, dpr);
+
+            const W = rect.width;
+            const H = rect.height;
+            const pad = { top: 20, right: 20, bottom: 40, left: 70 };
+            const cW = W - pad.left - pad.right;
+            const cH = H - pad.top - pad.bottom;
+
+            ctx.clearRect(0, 0, W, H);
+
+            if (data.length === 0) return;
+
+            const maxVal = Math.max(...data.map(d => d.total)) * 1.1;
+            const xStep = cW / (data.length);
+
+            // Y-axis labels
+            ctx.fillStyle = '#888';
+            ctx.font = '11px -apple-system, sans-serif';
+            ctx.textAlign = 'right';
+            for (let i = 0; i <= 4; i++) {
+                const val = (maxVal / 4) * i;
+                const y = pad.top + cH - (val / maxVal) * cH;
+                ctx.fillText(Math.round(val).toLocaleString('sv-SE') + ' kr', pad.left - 8, y + 4);
+                ctx.strokeStyle = '#f0f0f0';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(pad.left, y);
+                ctx.lineTo(W - pad.right, y);
+                ctx.stroke();
+            }
+
+            // Bars — insatt (light) + ränta (green)
+            const barW = Math.max(xStep * 0.6, 4);
+            data.forEach((d, i) => {
+                const x = pad.left + i * xStep + xStep / 2 - barW / 2;
+                const hInsatt = (d.insatt / maxVal) * cH;
+                const hTotal = (d.total / maxVal) * cH;
+
+                // Insatt bar
+                ctx.fillStyle = '#e2e8f0';
+                ctx.fillRect(x, pad.top + cH - hTotal, barW, hTotal - hInsatt > 0 ? hTotal - hInsatt : 0);
+
+                // Ränta bar (stacked on top visually, but drawn from bottom up to insatt height)
+                ctx.fillStyle = '#e2e8f0';
+                ctx.fillRect(x, pad.top + cH - hInsatt, barW, hInsatt);
+
+                // Override: insatt = light gray from bottom, ränta = green on top
+                ctx.fillStyle = '#cbd5e1';
+                ctx.fillRect(x, pad.top + cH - hInsatt, barW, hInsatt);
+                ctx.fillStyle = '#1a6b4a';
+                ctx.fillRect(x, pad.top + cH - hTotal, barW, hTotal - hInsatt > 0 ? hTotal - hInsatt : 0);
+            });
+
+            // X-axis labels (show every Nth year)
+            ctx.fillStyle = '#888';
+            ctx.textAlign = 'center';
+            ctx.font = '11px -apple-system, sans-serif';
+            const step = data.length <= 15 ? 1 : data.length <= 30 ? 5 : 10;
+            data.forEach((d, i) => {
+                if ((d.year % step === 0) || d.year === 1) {
+                    const x = pad.left + i * xStep + xStep / 2;
+                    ctx.fillText('År ' + d.year, x, H - pad.bottom + 20);
+                }
+            });
+
+            // Legend
+            const legY = H - 8;
+            ctx.font = '11px -apple-system, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillStyle = '#cbd5e1';
+            ctx.fillRect(pad.left, legY - 8, 12, 12);
+            ctx.fillStyle = '#888';
+            ctx.fillText('Insatt', pad.left + 16, legY + 2);
+            ctx.fillStyle = '#1a6b4a';
+            ctx.fillRect(pad.left + 80, legY - 8, 12, 12);
+            ctx.fillStyle = '#888';
+            ctx.fillText('Avkastning', pad.left + 96, legY + 2);
+        }
+
+        // Table
+        function buildTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = data.map(d => `
+                <tr>
+                    <td>År ${d.year}</td>
+                    <td>${fmt(d.insatt)}</td>
+                    <td>${fmt(d.ranta)}</td>
+                    <td><strong>${fmt(d.total)}</strong></td>
+                </tr>
+            `).join('');
+        }
+
+        // Table toggle
+        document.getElementById('tableToggle').addEventListener('click', function() {
+            const table = document.getElementById('dataTable');
+            const visible = table.classList.toggle('visible');
+            this.textContent = visible ? 'Dölj årlig utveckling ▲' : 'Visa årlig utveckling ▼';
+        });
+
+        // Resize handler
+        window.addEventListener('resize', calculate);
+
+        // Init
+        calculate();
+    </script>
+
+    <!-- Cross-linking -->
+    <div class="container" style="padding-bottom:48px;">
+        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Fler kalkylatorer</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            <a href="/kalkylatorer/loneraknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
+                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
+            </a>
+            <a href="/kalkylatorer/rot-rut.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
+                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/bolanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
+                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
+                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

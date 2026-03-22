@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Löneräknare 2026 – Räkna ut din nettolön | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna din nettolön efter skatt med vår löneräknare. Välj kommun och månadslön för att se exakt vad du får ut. Uppdaterad för 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/loneraknare.html">
+    <meta property="og:title" content="Löneräknare 2026 – Räkna ut din nettolön efter skatt">
+    <meta property="og:description" content="Beräkna din nettolön efter skatt med vår löneräknare. Välj kommun och månadslön för att se exakt vad du får ut.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/loneraknare.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Löneräknare 2026 – Räkna ut din nettolön">
+    <meta name="twitter:description" content="Beräkna din nettolön efter skatt. Välj kommun och månadslön för att se exakt vad du får ut. Uppdaterad för 2026.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Page */
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        /* Calculator */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"],
+        .input-group select {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group select {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+            background: var(--white);
+        }
+        .input-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group select:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Separator */
+        .chart-separator {
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        /* Chart */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        /* Table */
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+
+        /* Info section */
+        .info-section {
+            margin-bottom: 48px;
+        }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+        }
+        .info-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .info-section ul {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            margin-left: 24px;
+        }
+        .info-section li {
+            margin-bottom: 8px;
+        }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box {
+                background: rgba(26, 107, 74, 0.1);
+                border-color: var(--border);
+            }
+        }
+        details {
+            margin-bottom: 16px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 12px 0;
+            transition: color 0.2s ease;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        summary:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        details p {
+            margin-left: 20px;
+            margin-top: 8px;
+            color: var(--text-light);
+        }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .results { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .input-grid { grid-template-columns: 1fr; gap: 16px; }
+            .results { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.5rem; }
+            .calc-wrapper { padding: 16px; }
+            nav { display: none; }
+            .result-box .value { font-size: 1.3rem; }
+            .input-group input[type="number"],
+            .input-group select {
+                min-height: 44px;
+                padding: 12px;
+            }
+            .table-toggle {
+                min-height: 44px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Löneräknare 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/loneraknare.html",
+        "description": "Gratis löneräknare för att beräkna din nettolön efter skatt. Välj kommun och månadslön för att se exakt vad du får ut.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "Löneräknare 2026", "item": "https://gratiskalkyl.se/kalkylatorer/loneraknare.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Vad är skillnaden mellan brutto och netto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bruttolön är din samlade inkomst innan skatter dras. Nettolön är det belopp du faktiskt får på kontot efter att kommunalskatt, landstingsskatt och eventuell statlig inkomstskatt har dragits."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Räknar kalkylatorn med arbetsgivaravgifter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nej, kalkylatorn fokuserar på din personliga nettolön. Arbetsgivaravgifter (31,42%) är en kostnad för arbetsgivaren, inte för dig."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan min nettolön variera från månad till månad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "För de flesta anställda med fast månadslön är nettolönen relativt stabil. Men om du har variabel inkomst kan din skattsats ändras."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Är det möjligt att minska sin skatt genom avdrag?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, det finns flera sätt att minska skatten: jobbskatteavdrag, försäkringskostnader, gåvor till ideell verksamhet, och vissa hemarbetskostnader."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är jobbskatteavdraget?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jobbskatteavdraget är ett statligt bidrag för anställda personer som sänker skatten. Avdraget är redan inräknat i din slutlönesedel."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Löneräknare</div>
+            <h1>Löneräknare 2026</h1>
+            <p>Beräkna din nettolön efter skatt. Ange din månadslön och kommun för att se exakt vad du får ut.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="manadslonBrutto">Månadslön brutto (kr)</label>
+                    <input type="number" id="manadslonBrutto" value="35000" min="0" step="100">
+                    <input type="range" id="manadslonRange" min="0" max="150000" step="1000" value="35000">
+                    <div class="range-labels"><span>0 kr</span><span>150 000 kr</span></div>
+                </div>
+                <div class="input-group">
+                    <label for="kommun">Kommun</label>
+                    <select id="kommun">
+                        <option value="stockholm-20.89-11.51">Stockholm (20,89% + 11,51%)</option>
+                        <option value="goteborg-19.88-10.34">Göteborg (19,88% + 10,34%)</option>
+                        <option value="malmo-20.36-10.15">Malmö (20,36% + 10,15%)</option>
+                        <option value="uppsala-20.39-11.49">Uppsala (20,39% + 11,49%)</option>
+                        <option value="linkoping-20.29-11.64">Linköping (20,29% + 11,64%)</option>
+                        <option value="orebro-20.46-11.29">Örebro (20,46% + 11,29%)</option>
+                        <option value="vasteras-20.18-11.30">Västerås (20,18% + 11,30%)</option>
+                        <option value="norrkoping-20.24-11.43">Norrköping (20,24% + 11,43%)</option>
+                        <option value="helsingborg-20.60-10.19">Helsingborg (20,60% + 10,19%)</option>
+                        <option value="jonkoping-20.62-11.38">Jönköping (20,62% + 11,38%)</option>
+                        <option value="umea-20.11-12.40">Umeå (20,11% + 12,40%)</option>
+                        <option value="lund-20.36-10.05">Lund (20,36% + 10,05%)</option>
+                        <option value="boras-20.35-11.08">Borås (20,35% + 11,08%)</option>
+                        <option value="sundsvall-20.07-12.12">Sundsvall (20,07% + 12,12%)</option>
+                        <option value="gavle-20.39-11.46">Gävle (20,39% + 11,46%)</option>
+                        <option value="eskilstuna-20.32-11.56">Eskilstuna (20,32% + 11,56%)</option>
+                        <option value="karlstad-20.54-11.41">Karlstad (20,54% + 11,41%)</option>
+                        <option value="vaxjo-20.76-11.24">Växjö (20,76% + 11,24%)</option>
+                        <option value="halmstad-20.33-10.72">Halmstad (20,33% + 10,72%)</option>
+                        <option value="trollhattan-20.49-11.02">Trollhättan (20,49% + 11,02%)</option>
+                        <option value="sundbyberg-20.89-11.51">Sundbyberg (20,89% + 11,51%)</option>
+                        <option value="västerort-20.89-11.51">Västerort (20,89% + 11,51%)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-box highlight">
+                    <div class="label">Nettolön/mån</div>
+                    <div class="value" id="nettoMånad">—</div>
+                    <div class="sub" id="nettoÅr"></div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Total skatt/mån</div>
+                    <div class="value" id="totalSkattMånad">—</div>
+                    <div class="sub" id="skattProcent"></div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Kommunalskatt</div>
+                    <div class="value" id="kommunalskat">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Effektiv skattesats</div>
+                    <div class="value" id="effektivSkatt">—</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+            <div class="chart-separator"></div>
+
+            <button class="table-toggle" id="tableToggle">Visa månad/år jämförelse ▼</button>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Brutto</th>
+                        <th>Kommunalskatt</th>
+                        <th>Statlig skatt</th>
+                        <th>Total skatt</th>
+                        <th>Netto</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="info-section">
+            <h2>Så räknar du ut din nettolön</h2>
+            <p>Din nettolön är det belopp du får ut på kontot efter att all skatt har dragits från din bruttolön. I Sverige utgår skatt på två nivåer:</p>
+            <ul>
+                <li><strong>Kommunalskatt:</strong> Varierar mellan 18–22% beroende på vilken kommun du bor och arbetar i</li>
+                <li><strong>Statlig inkomstskatt:</strong> Dras endast på inkomst över ett visst gränsvärde (615 700 kr/år för 2026, ca 51 308 kr/månad)</li>
+            </ul>
+            <p>Din arbetsgivare betalar också arbetsgivaravgifter (31,42% för 2026), men det är ingen kostnad för dig som anställd.</p>
+
+            <h2>Kommunalskatt i Sverige 2026</h2>
+            <p>Kommunalskatten är en lokal inkomstskatt som finansierar kommunal verksamhet som skola, vård och infrastruktur. Procentsatsen varierar mellan kommuner:</p>
+            <ul>
+                <li><strong>Högsta kommunalskatt:</strong> Växjö kommun (~20,76%)</li>
+                <li><strong>Lägsta kommunalskatt:</strong> Lund kommun (~20,05%)</li>
+                <li><strong>Stockholm:</strong> 20,89% (stad) + 11,51% (landsting) = 32,40% totalt</li>
+            </ul>
+            <p>Dessutom tillkommer landstingsskatt (regionskatt) som finansierar sjukvård och tandvård. Denna ligger mellan 10–12% beroende på region. Tillsammans utgör kommunal- och landstingsskatt ofta 30–33% av din bruttoinkomst.</p>
+
+            <h2>Statlig inkomstskatt</h2>
+            <p>Den statliga inkomstskatten är en progressiv skatt som endast dras på högre inkomster. För 2026 gäller följande:</p>
+            <ul>
+                <li><strong>Ingen statlig inkomstskatt under:</strong> 615 700 kr/år (ca 51 308 kr/månad)</li>
+                <li><strong>Statlig inkomstskatt:</strong> 20% på inkomst över gränsen</li>
+            </ul>
+            <p>En person som tjänar 45 000 kr i månaden betalar alltså ingen statlig inkomstskatt, men vid 55 000 kr/månad betalas 20% skatt på beloppet över 51 308 kr/månad.</p>
+
+            <h2>Vanliga frågor</h2>
+
+            <details>
+                <summary>Vad är skillnaden mellan brutto och netto?</summary>
+                <p>Bruttolön är din samlade inkomst innan skatter dras. Nettolön är det belopp du faktiskt får på kontot efter att kommunalskatt, landstingsskatt och eventuell statlig inkomstskatt har dragits.</p>
+            </details>
+
+            <details>
+                <summary>Räknar kalkylatorn med arbetsgivaravgifter?</summary>
+                <p>Nej, kalkylatorn fokuserar på din personliga nettolön. Arbetsgivaravgifter (31,42%) är en kostnad för arbetsgivaren, inte för dig. Din arbetsgivares totala lönekostnad är alltid högre än din bruttolön, men detta påverkar inte vad du får ut.</p>
+            </details>
+
+            <details>
+                <summary>Kan min nettolön variera från månad till månad?</summary>
+                <p>För de flesta anställda med fast månadslön är nettolönen relativt stabil. Men om du har variabel inkomst (bonus, provision), visstidsanställning eller överstid kan din skattsats ändras. Dessutom kan större inkomstförändringar påverka hur mycket statlig inkomstskatt du betalar.</p>
+            </details>
+
+            <details>
+                <summary>Är det möjligt att minska sin skatt genom avdrag?</summary>
+                <p>Ja, det finns flera sätt att minska skatten: jobbskatteavdrag för anställda, försäkringskostnader, gåvor till idéell verksamhet, och vissa hemarbetskostnader. Du kan även spara i ISK (investeringssparkonto) för lägre skatt på kapitaltillväxt. Konsultera en skatterådgivare eller besök Skatteverkets hemsida för personlig vägledning.</p>
+            </details>
+
+            <details>
+                <summary>Vad är jobbskatteavdraget?</summary>
+                <p>Jobbskatteavdraget är ett statligt bidrag för anställda personer. Det är ett av regeringens sätt att uppmuntra arbete genom att lägre inkomsterna effektivt sänks. Avdraget är redan inräknat i din slutlönesedel och påverkar inte denna kalkylators beräkning, då den visar nominell skattesats.</p>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tax data for 2026 (komunalskatt + landstingsskatt)
+        const taxData = {
+            'stockholm-20.89-11.51': { kommun: 'Stockholm', lokal: 32.40 },
+            'goteborg-19.88-10.34': { kommun: 'Göteborg', lokal: 30.22 },
+            'malmo-20.36-10.15': { kommun: 'Malmö', lokal: 30.51 },
+            'uppsala-20.39-11.49': { kommun: 'Uppsala', lokal: 31.88 },
+            'linkoping-20.29-11.64': { kommun: 'Linköping', lokal: 31.93 },
+            'orebro-20.46-11.29': { kommun: 'Örebro', lokal: 31.75 },
+            'vasteras-20.18-11.30': { kommun: 'Västerås', lokal: 31.48 },
+            'norrkoping-20.24-11.43': { kommun: 'Norrköping', lokal: 31.67 },
+            'helsingborg-20.60-10.19': { kommun: 'Helsingborg', lokal: 30.79 },
+            'jonkoping-20.62-11.38': { kommun: 'Jönköping', lokal: 32.00 },
+            'umea-20.11-12.40': { kommun: 'Umeå', lokal: 32.51 },
+            'lund-20.36-10.05': { kommun: 'Lund', lokal: 30.41 },
+            'boras-20.35-11.08': { kommun: 'Borås', lokal: 31.43 },
+            'sundsvall-20.07-12.12': { kommun: 'Sundsvall', lokal: 32.19 },
+            'gavle-20.39-11.46': { kommun: 'Gävle', lokal: 31.85 },
+            'eskilstuna-20.32-11.56': { kommun: 'Eskilstuna', lokal: 31.88 },
+            'karlstad-20.54-11.41': { kommun: 'Karlstad', lokal: 31.95 },
+            'vaxjo-20.76-11.24': { kommun: 'Växjö', lokal: 32.00 },
+            'halmstad-20.33-10.72': { kommun: 'Halmstad', lokal: 31.05 },
+            'trollhattan-20.49-11.02': { kommun: 'Trollhättan', lokal: 31.51 },
+            'sundbyberg-20.89-11.51': { kommun: 'Sundbyberg', lokal: 32.40 },
+            'västerort-20.89-11.51': { kommun: 'Västerort', lokal: 32.40 }
+        };
+
+        // Elements
+        const inputs = {
+            manadslonBrutto: { num: document.getElementById('manadslonBrutto'), range: document.getElementById('manadslonRange') },
+            kommun: document.getElementById('kommun')
+        };
+
+        // Sync number <-> range
+        inputs.manadslonBrutto.num.addEventListener('input', () => {
+            inputs.manadslonBrutto.range.value = inputs.manadslonBrutto.num.value;
+            calculate();
+        });
+        inputs.manadslonBrutto.range.addEventListener('input', () => {
+            inputs.manadslonBrutto.num.value = inputs.manadslonBrutto.range.value;
+            calculate();
+        });
+        inputs.kommun.addEventListener('change', calculate);
+
+        // Format number Swedish style
+        function fmt(n) {
+            return Math.round(n).toLocaleString('sv-SE') + ' kr';
+        }
+
+        function fmtPct(n) {
+            return (Math.round(n * 100) / 100).toLocaleString('sv-SE') + '%';
+        }
+
+        // Calculate
+        function calculate() {
+            const manadslonBrutto = parseFloat(inputs.manadslonBrutto.num.value) || 0;
+            const kommun = inputs.kommun.value;
+            const taxInfo = taxData[kommun];
+            const lokalSkatt = taxInfo.lokal / 100;
+
+            // Årslön brutto
+            const arslonBrutto = manadslonBrutto * 12;
+
+            // Statlig skatt (20% på inkomst över 615 700 kr)
+            const statligGrans = 615700;
+            let statligSkatt = 0;
+            if (arslonBrutto > statligGrans) {
+                statligSkatt = (arslonBrutto - statligGrans) * 0.20;
+            }
+
+            // Kommunalskatt
+            const kommunalskat = arslonBrutto * lokalSkatt;
+
+            // Total skatt
+            const totalSkattAr = kommunalskat + statligSkatt;
+            const totalSkattMånad = totalSkattAr / 12;
+
+            // Netto
+            const nettoAr = arslonBrutto - totalSkattAr;
+            const nettoMånad = nettoAr / 12;
+
+            // Effektiv skattesats
+            const effektivSkattesats = (totalSkattAr / arslonBrutto) * 100;
+
+            // Arbetsgivaravgift för information
+            const arbetsgivaravgift = arslonBrutto * 0.3142;
+            const arbetsgiversKostnad = arslonBrutto + arbetsgivaravgift;
+
+            // Update display
+            document.getElementById('nettoMånad').textContent = fmt(nettoMånad);
+            document.getElementById('nettoÅr').textContent = fmt(nettoAr) + ' per år';
+            document.getElementById('totalSkattMånad').textContent = fmt(totalSkattMånad);
+            document.getElementById('skattProcent').textContent = fmtPct(totalSkattAr / arslonBrutto * 100);
+            document.getElementById('kommunalskat').textContent = fmt(kommunalskat / 12);
+            document.getElementById('effektivSkatt').textContent = fmtPct(effektivSkattesats);
+
+            drawChart(manadslonBrutto, totalSkattMånad, nettoMånad, kommunalskat / 12, statligSkatt / 12);
+            buildTable(manadslonBrutto, kommunalskat / 12, statligSkatt / 12, totalSkattMånad, nettoMånad);
+        }
+
+        // Canvas chart
+        function drawChart(brutto, totalSkatt, netto, kommunalskatt, statligSkatt) {
+            const canvas = document.getElementById('chart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
+            ctx.scale(dpr, dpr);
+
+            const W = rect.width;
+            const H = rect.height;
+            const pad = { top: 20, right: 20, bottom: 40, left: 70 };
+            const cW = W - pad.left - pad.right;
+            const cH = H - pad.top - pad.bottom;
+
+            ctx.clearRect(0, 0, W, H);
+
+            // Simple stacked bar: brutto split into kommunalskatt, statligskatt, netto
+            const colors = {
+                netto: '#1a6b4a',
+                kommun: '#cbd5e1',
+                statlig: '#e2e8f0'
+            };
+
+            // Y-axis
+            ctx.fillStyle = '#888';
+            ctx.font = '11px -apple-system, sans-serif';
+            ctx.textAlign = 'right';
+            const maxVal = brutto * 1.1;
+            for (let i = 0; i <= 4; i++) {
+                const val = (maxVal / 4) * i;
+                const y = pad.top + cH - (val / maxVal) * cH;
+                ctx.fillText(Math.round(val).toLocaleString('sv-SE') + ' kr', pad.left - 8, y + 4);
+                ctx.strokeStyle = '#f0f0f0';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(pad.left, y);
+                ctx.lineTo(W - pad.right, y);
+                ctx.stroke();
+            }
+
+            // Stacked bar
+            const barW = Math.min(120, cW * 0.4);
+            const x = pad.left + cW / 2 - barW / 2;
+
+            // Netto (bottom, green)
+            const hNetto = (netto / maxVal) * cH;
+            ctx.fillStyle = colors.netto;
+            ctx.fillRect(x, pad.top + cH - hNetto, barW, hNetto);
+
+            // Kommunalskatt (on top of netto)
+            const hKommunal = (kommunalskatt / maxVal) * cH;
+            ctx.fillStyle = colors.kommun;
+            ctx.fillRect(x, pad.top + cH - hNetto - hKommunal, barW, hKommunal);
+
+            // Statlig skatt (on top of kommunalskatt)
+            const hStatlig = (statligSkatt / maxVal) * cH;
+            ctx.fillStyle = colors.statlig;
+            ctx.fillRect(x, pad.top + cH - hNetto - hKommunal - hStatlig, barW, hStatlig);
+
+            // Labels on bar
+            ctx.font = '12px bold -apple-system, sans-serif';
+            ctx.fillStyle = '#000';
+            ctx.textAlign = 'center';
+            ctx.fillText('Brutto', x + barW / 2, pad.top + cH + 20);
+            ctx.font = '10px -apple-system, sans-serif';
+            ctx.fillStyle = '#fff';
+            ctx.fillText('Netto', x + barW / 2, pad.top + cH - hNetto / 2);
+
+            // Legend
+            const legY = H - 8;
+            ctx.font = '11px -apple-system, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillStyle = colors.netto;
+            ctx.fillRect(pad.left, legY - 8, 12, 12);
+            ctx.fillStyle = '#888';
+            ctx.fillText('Nettolön', pad.left + 16, legY + 2);
+
+            ctx.fillStyle = colors.kommun;
+            ctx.fillRect(pad.left + 140, legY - 8, 12, 12);
+            ctx.fillStyle = '#888';
+            ctx.fillText('Kommunalskatt', pad.left + 156, legY + 2);
+
+            ctx.fillStyle = colors.statlig;
+            ctx.fillRect(pad.left + 310, legY - 8, 12, 12);
+            ctx.fillStyle = '#888';
+            ctx.fillText('Statlig skatt', pad.left + 326, legY + 2);
+        }
+
+        // Table
+        function buildTable(brutto, kommunalskatt, statligSkatt, totalSkatt, netto) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td>Per månad</td>
+                    <td>${fmt(brutto)}</td>
+                    <td>${fmt(kommunalskatt)}</td>
+                    <td>${fmt(statligSkatt)}</td>
+                    <td>${fmt(totalSkatt)}</td>
+                    <td><strong>${fmt(netto)}</strong></td>
+                </tr>
+                <tr>
+                    <td>Per år (×12)</td>
+                    <td>${fmt(brutto * 12)}</td>
+                    <td>${fmt(kommunalskatt * 12)}</td>
+                    <td>${fmt(statligSkatt * 12)}</td>
+                    <td>${fmt(totalSkatt * 12)}</td>
+                    <td><strong>${fmt(netto * 12)}</strong></td>
+                </tr>
+            `;
+        }
+
+        // Table toggle
+        document.getElementById('tableToggle').addEventListener('click', function() {
+            const table = document.getElementById('dataTable');
+            const visible = table.classList.toggle('visible');
+            this.textContent = visible ? 'Dölj månad/år jämförelse ▲' : 'Visa månad/år jämförelse ▼';
+        });
+
+        // Resize handler
+        window.addEventListener('resize', calculate);
+
+        // Init
+        calculate();
+    </script>
+
+    <!-- Cross-linking -->
+    <div class="container" style="padding-bottom:48px;">
+        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Fler kalkylatorer</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            <a href="/kalkylatorer/ranta-pa-ranta.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
+                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/rot-rut.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
+                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/bolanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
+                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
+                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
