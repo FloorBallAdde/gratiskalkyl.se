@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilkostnadsräknare 2026 — Räkna ut din verkliga bilkostnad | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut din verkliga månadskostnad för bilen. Beräkna drivmedel, försäkring, skatt, service, värdeminskning och lånekostnader med vår gratis bilkostnadsräknare.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare.html">
+    <meta property="og:title" content="Bilkostnadsräknare 2026 — Räkna ut din verkliga bilkostnad">
+    <meta property="og:description" content="Räkna ut din verkliga månadskostnad för bilen. Beräkna drivmedel, försäkring, skatt, service, värdeminskning och lånekostnader.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bilkostnadsräknare 2026">
+    <meta name="twitter:description" content="Räkna ut din verkliga månadskostnad för bilen med denna gratis kalkylator.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Page */
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        /* Calculator */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"] {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group input[type="range"] {
+            margin-top: 8px;
+            accent-color: var(--primary);
+            height: 6px;
+            transition: box-shadow 0.2s ease;
+        }
+        .input-group input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Separator */
+        .chart-separator {
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        /* Chart */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            margin-bottom: 16px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        /* Table */
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .table-toggle:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+
+        /* Info section */
+        .info-section {
+            margin-bottom: 48px;
+        }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+        }
+        .info-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            .formula-box {
+                background: rgba(26, 107, 74, 0.1);
+                border-color: var(--border);
+            }
+        }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .results { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .input-grid { grid-template-columns: 1fr; gap: 16px; }
+            .results { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.5rem; }
+            .calc-wrapper { padding: 16px; }
+            nav { display: none; }
+            .result-box .value { font-size: 1.3rem; }
+            .input-group input[type="number"] {
+                min-height: 44px;
+                padding: 12px;
+            }
+            .table-toggle {
+                min-height: 44px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Bilkostnadsräknare",
+        "url": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare.html",
+        "description": "Gratis kalkylator för att räkna ut din verkliga bilkostnad. Beräkna månadskostnad, drivmedel, försäkring, skatt, service och värdeminskning.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "Bilkostnadsräknare", "item": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Vad ingår i en bils totala kostnad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En bils totala kostnad består av flera delar: drivmedel (bensin/diesel), försäkring, fordonsskatt, service och underhåll, värdeminskning (depreciering), parkering, och eventuella lånekostnader. Många glömmer räkna in värdeminskningen, som ofta är den största kostnaden."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur beräknas värdeminskningen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Värdeminskning beräknas som en procent av inköpspriset per år. En vanlig bil minskar ca 15-20% i värde första året, sedan 10-15% per år. En tre år gammal bil är ofta värd omkring 50-60% av ursprungspriset. Vi räknar här med en genomsnittlig årlig procentsats."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ska jag köpa eller leasa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Det beror på dina behov. En köpt bil är bättre på sikt om du kör mycket, medan leasing kan vara bättre för kortare perioder. Med denna kalkylator kan du räkna ut din totala kostnad för en köpt bil, vilket gör det lättare att jämföra med leasingkostnader."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Bilkostnadsräknare</div>
+            <h1>Bilkostnadsräknare</h1>
+            <p>Räkna ut din verkliga månadskostnad för bilen. Inkluderar drivmedel, försäkring, skatt, service, värdeminskning och lånekostnader.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="korstrack">Körsträcka (km/månad)</label>
+                    <input type="number" id="korstrack" value="1500" min="0" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="bransleforbr">Bränsleförbrukning (l/100km)</label>
+                    <input type="number" id="bransleforbr" value="7" min="0.1" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="bralsepris">Bränslepris (kr/liter)</label>
+                    <input type="number" id="bralsepris" value="18.50" min="0" step="0.5">
+                </div>
+                <div class="input-group">
+                    <label for="forsäkring">Försäkring (kr/månad)</label>
+                    <input type="number" id="forsäkring" value="800" min="0" step="50">
+                </div>
+                <div class="input-group">
+                    <label for="fordonsskatt">Fordonsskatt (kr/år)</label>
+                    <input type="number" id="fordonsskatt" value="3600" min="0" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="service">Service & underhåll (kr/år)</label>
+                    <input type="number" id="service" value="8000" min="0" step="500">
+                </div>
+                <div class="input-group">
+                    <label for="inkopspris">Inköpspris (kr)</label>
+                    <input type="number" id="inkopspris" value="250000" min="0" step="10000">
+                </div>
+                <div class="input-group">
+                    <label for="värdeminsk">Värdeminskning (%/år)</label>
+                    <input type="number" id="värdeminsk" value="15" min="0" max="100" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="parkering">Parkering (kr/månad)</label>
+                    <input type="number" id="parkering" value="0" min="0" step="50">
+                </div>
+                <div class="input-group">
+                    <label for="lanekostnad">Lånekostnad/ränta (kr/månad)</label>
+                    <input type="number" id="lanekostnad" value="0" min="0" step="100">
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-box highlight">
+                    <div class="label">Total månadskostnad</div>
+                    <div class="value" id="totalMonthly">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Kostnad per km</div>
+                    <div class="value" id="costPerKm">—</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Kostnad per år</div>
+                    <div class="value" id="costPerYear">—</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-separator"></div>
+
+            <button class="table-toggle" id="tableToggle">Visa kostnadssummering ▼</button>
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Kostnadskategori</th>
+                        <th>Per månad</th>
+                        <th>Per år</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="info-section">
+            <h2>Vad är bilkostnader?</h2>
+            <p>Bilkostnad är summan av alla utgifter du har för att ägna och köra en bil. De kan delas in i fasta kostnader (som försäkring och skatt) och rörliga kostnader (som drivmedel). Många människor underskattar sin totala bilkostnad eftersom de glömmer att räkna in värdeminskningen.</p>
+
+            <h3>Komponenterna i bilkostnaden</h3>
+            <p><strong>Drivmedel:</strong> Beräknas utifrån din körsträcka och bränsleförbrukning. En bil som förbrukar 7 l/100 km kör ca 14,3 km per liter.</p>
+            <p><strong>Försäkring:</strong> Obligatorisk trafikskadeförsäkring plus eventuell kaskoförsäkring. Priset beror på bilens värde, ålder och din körhistorik.</p>
+            <p><strong>Fordonsskatt:</strong> En årlig skatt som varierar beroende på bilens utsläpp. Elbilar är ofta skattebefriade.</p>
+            <p><strong>Service och underhåll:</strong> Periodiska oljebytningar, däckbyte, reparationer. Äldre bilar kostar ofta mer i underhåll.</p>
+            <p><strong>Värdeminskning:</strong> Bilen blir mindre värd för varje år. Detta är ofta den största utgiften men är lätt att glömma.</p>
+            <p><strong>Parkering:</strong> Om du betalar för parkeringsplats hemma eller på jobbet.</p>
+            <p><strong>Lånekostnad:</strong> Om du finansierar bilen med ett billån, läggs räntekostnaden här.</p>
+
+            <h2>Vanliga frågor</h2>
+
+            <h3>Vad är en rimlig bilkostnad?</h3>
+            <p>Det beror på vilken bil du har och hur mycket du kör. En genomsnittlig bilist i Sverige kör ca 12 000-15 000 km per år. För en bel i mellanklassen (250 000 kr) kan du förvänta dig en total månadskostnad på 4 000-6 000 kr. En billigare begagnad bil kan kosta 2 000-3 000 kr per månad, medan en dyrare bil lätt kan kosta 8 000-12 000 kr per månad.</p>
+
+            <h3>Hur kan jag spara på bilkostnaderna?</h3>
+            <p>Du kan spara pengar genom att välja en billigare eller mer bränslesnål bil, köra mindre, sköta serviceintervallen noggrant, jämföra försäkringspriser, och betala kontant istället för att ta billån (vilket sparar räntekostnader). En elbit kan också ge låga drivkostnader om du har tillgång till hemmaladdning.</p>
+
+            <h3>Varför är värdeminskningen så stor?</h3>
+            <p>Nya bilar deprecierar snabbast första året (ofta 15-20%), sedan långsammare. Det beror på att slitage och ålder påverkar bilens funktionalitet och utseende. Ur denna anledning är det ofta en dålig ekonomisk investering att köpa en helt ny bil — en två-tre år gammal begagnad bil kan vara mycket bättre värdebesparing.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <!-- Cross-linking -->
+    <div class="container" style="padding-bottom:48px;">
+        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Relaterade kalkylatorer</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+            <a href="/kalkylatorer/loneraknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
+                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
+            </a>
+            <a href="/kalkylatorer/ranta-pa-ranta.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
+                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/rot-rut.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
+                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/bolanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
+                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
+                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Elements
+        const inputs = {
+            korstrack: document.getElementById('korstrack'),
+            bransleforbr: document.getElementById('bransleforbr'),
+            bralsepris: document.getElementById('bralsepris'),
+            forsäkring: document.getElementById('forsäkring'),
+            fordonsskatt: document.getElementById('fordonsskatt'),
+            service: document.getElementById('service'),
+            inkopspris: document.getElementById('inkopspris'),
+            värdeminsk: document.getElementById('värdeminsk'),
+            parkering: document.getElementById('parkering'),
+            lanekostnad: document.getElementById('lanekostnad')
+        };
+
+        // Sync input changes
+        Object.keys(inputs).forEach(key => {
+            inputs[key].addEventListener('input', calculate);
+        });
+
+        // Format number
+        function fmt(n) {
+            return Math.round(n).toLocaleString('sv-SE') + ' kr';
+        }
+
+        // Format decimal
+        function fmtDecimal(n, decimals = 2) {
+            return n.toFixed(decimals).replace('.', ',');
+        }
+
+        // Calculate
+        function calculate() {
+            const korstrack = parseFloat(inputs.korstrack.value) || 0;
+            const bransleforbr = parseFloat(inputs.bransleforbr.value) || 0;
+            const bralsepris = parseFloat(inputs.bralsepris.value) || 0;
+            const forsäkring = parseFloat(inputs.forsäkring.value) || 0;
+            const fordonsskatt = parseFloat(inputs.fordonsskatt.value) || 0;
+            const service = parseFloat(inputs.service.value) || 0;
+            const inkopspris = parseFloat(inputs.inkopspris.value) || 0;
+            const värdeminsk = parseFloat(inputs.värdeminsk.value) || 0;
+            const parkering = parseFloat(inputs.parkering.value) || 0;
+            const lanekostnad = parseFloat(inputs.lanekostnad.value) || 0;
+
+            // Monthly costs
+            const monthlyDrivmedel = (korstrack * bransleforbr / 100) * bralsepris;
+            const monthlyFörsäkring = forsäkring;
+            const monthlyFordonsskatt = fordonsskatt / 12;
+            const monthlyService = service / 12;
+            const monthlyVärdeminsk = (inkopspris * värdeminsk / 100) / 12;
+            const monthlyParkering = parkering;
+            const monthlyLanekostnad = lanekostnad;
+
+            const totalMonthly = monthlyDrivmedel + monthlyFörsäkring + monthlyFordonsskatt + monthlyService + monthlyVärdeminsk + monthlyParkering + monthlyLanekostnad;
+            const costPerKm = korstrack > 0 ? totalMonthly / korstrack : 0;
+            const costPerYear = totalMonthly * 12;
+
+            // Update results
+            document.getElementById('totalMonthly').textContent = fmt(totalMonthly);
+            document.getElementById('costPerKm').textContent = fmtDecimal(costPerKm) + ' kr';
+            document.getElementById('costPerYear').textContent = fmt(costPerYear);
+
+            // Draw pie chart
+            drawPieChart({
+                drivmedel: monthlyDrivmedel,
+                försäkring: monthlyFörsäkring,
+                skatt: monthlyFordonsskatt,
+                service: monthlyService,
+                värdeminsk: monthlyVärdeminsk,
+                parkering: monthlyParkering,
+                lån: monthlyLanekostnad
+            });
+
+            // Build table
+            buildTable({
+                drivmedel: monthlyDrivmedel,
+                försäkring: monthlyFörsäkring,
+                skatt: monthlyFordonsskatt,
+                service: monthlyService,
+                värdeminsk: monthlyVärdeminsk,
+                parkering: monthlyParkering,
+                lån: monthlyLanekostnad
+            });
+        }
+
+        // Draw pie chart
+        function drawPieChart(data) {
+            const canvas = document.getElementById('pieChart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
+            ctx.scale(dpr, dpr);
+
+            const W = rect.width;
+            const H = rect.height;
+            const centerX = W / 2;
+            const centerY = H / 2;
+            const radius = Math.min(W, H) / 2 - 60;
+
+            ctx.clearRect(0, 0, W, H);
+
+            // Colors (adapted for dark mode)
+            const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const colors = {
+                drivmedel: isDarkMode ? '#f59e0b' : '#f59e0b',
+                försäkring: isDarkMode ? '#3b82f6' : '#3b82f6',
+                skatt: isDarkMode ? '#ef4444' : '#ef4444',
+                service: isDarkMode ? '#10b981' : '#10b981',
+                värdeminsk: isDarkMode ? '#8b5cf6' : '#8b5cf6',
+                parkering: isDarkMode ? '#ec4899' : '#ec4899',
+                lån: isDarkMode ? '#f97316' : '#f97316'
+            };
+
+            const labels = {
+                drivmedel: 'Drivmedel',
+                försäkring: 'Försäkring',
+                skatt: 'Fordonsskatt',
+                service: 'Service',
+                värdeminsk: 'Värdeminskning',
+                parkering: 'Parkering',
+                lån: 'Lånekostnad'
+            };
+
+            const values = Object.values(data);
+            const total = values.reduce((a, b) => a + b, 0);
+
+            if (total === 0) return;
+
+            let currentAngle = -Math.PI / 2;
+
+            // Draw pie slices
+            const keys = Object.keys(data);
+            keys.forEach((key, idx) => {
+                const value = data[key];
+                if (value === 0) return;
+
+                const sliceAngle = (value / total) * 2 * Math.PI;
+                const nextAngle = currentAngle + sliceAngle;
+
+                // Draw slice
+                ctx.fillStyle = colors[key];
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, currentAngle, nextAngle);
+                ctx.closePath();
+                ctx.fill();
+
+                // Draw label (only if slice is significant)
+                const percent = (value / total) * 100;
+                if (percent > 5) {
+                    const labelAngle = currentAngle + sliceAngle / 2;
+                    const labelX = centerX + Math.cos(labelAngle) * (radius * 0.65);
+                    const labelY = centerY + Math.sin(labelAngle) * (radius * 0.65);
+
+                    ctx.fillStyle = isDarkMode ? '#f3f4f6' : '#1a1a2e';
+                    ctx.font = 'bold 12px -apple-system, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(Math.round(percent) + '%', labelX, labelY);
+                }
+
+                currentAngle = nextAngle;
+            });
+
+            // Draw legend
+            const legendX = 20;
+            let legendY = H - 120;
+            const legendItemHeight = 20;
+
+            ctx.font = '12px -apple-system, sans-serif';
+            ctx.textAlign = 'left';
+
+            keys.forEach((key, idx) => {
+                const value = data[key];
+                const percent = total > 0 ? (value / total) * 100 : 0;
+
+                // Color box
+                ctx.fillStyle = colors[key];
+                ctx.fillRect(legendX, legendY - 8, 12, 12);
+
+                // Label
+                ctx.fillStyle = isDarkMode ? '#d1d5db' : '#555';
+                ctx.fillText(labels[key] + ' (' + Math.round(percent) + '%)', legendX + 20, legendY);
+
+                legendY += legendItemHeight;
+            });
+        }
+
+        // Build table
+        function buildTable(data) {
+            const tbody = document.getElementById('tableBody');
+            const keys = Object.keys(data);
+            const labels = {
+                drivmedel: 'Drivmedel',
+                försäkring: 'Försäkring',
+                skatt: 'Fordonsskatt',
+                service: 'Service & underhåll',
+                värdeminsk: 'Värdeminskning',
+                parkering: 'Parkering',
+                lån: 'Lånekostnad'
+            };
+
+            let total = 0;
+            const rows = keys.map(key => {
+                const monthlyValue = data[key];
+                const yearlyValue = monthlyValue * 12;
+                total += monthlyValue;
+
+                return `
+                    <tr>
+                        <td>${labels[key]}</td>
+                        <td>${fmt(monthlyValue)}</td>
+                        <td>${fmt(yearlyValue)}</td>
+                    </tr>
+                `;
+            });
+
+            rows.push(`
+                <tr style="border-top: 2px solid var(--border); font-weight: 700;">
+                    <td>Totalt</td>
+                    <td>${fmt(total)}</td>
+                    <td>${fmt(total * 12)}</td>
+                </tr>
+            `);
+
+            tbody.innerHTML = rows.join('');
+        }
+
+        // Table toggle
+        document.getElementById('tableToggle').addEventListener('click', function() {
+            const table = document.getElementById('dataTable');
+            const visible = table.classList.toggle('visible');
+            this.textContent = visible ? 'Dölj kostnadssummering ▲' : 'Visa kostnadssummering ▼';
+        });
+
+        // Resize handler
+        window.addEventListener('resize', calculate);
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', calculate);
+
+        // Init
+        calculate();
+    </script>
+</body>
+</html>
