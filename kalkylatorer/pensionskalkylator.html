@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensionskalkylator 2026 – Räkna ut din framtida pension | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna din framtida pension gratis. Se allmän pension, tjänstepension och eget sparande. Interaktiv graf visar pensionsutvecklingen. Uppdaterad för 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/pensionskalkylator.html">
+    <meta property="og:title" content="Pensionskalkylator 2026 – Räkna ut din framtida pension">
+    <meta property="og:description" content="Beräkna din framtida pension. Se allmän pension, tjänstepension och eget sparande. Uppdaterad för 2026.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/pensionskalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pensionskalkylator 2026 – Räkna ut din framtida pension">
+    <meta name="twitter:description" content="Beräkna din framtida pension. Se allmän pension, tjänstepension och eget sparande. Uppdaterad för 2026.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .input-group input[type="number"],
+        .input-group input[type="range"],
+        .input-group select {
+            width: 100%;
+        }
+        .input-group input[type="number"] {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="number"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .input-group select {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+            background: var(--white);
+        }
+        .input-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .slider-row input[type="range"] { flex: 1; }
+        .slider-row input[type="number"] {
+            width: 110px;
+            flex-shrink: 0;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border);
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            border: 2px solid var(--white);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+        }
+        input[type="range"]:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+            border-radius: 3px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        .result-box.highlight {
+            background: var(--primary-light);
+            border-color: var(--primary);
+        }
+        .result-box .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .result-box .label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .chart-container {
+            margin: 32px 0;
+            position: relative;
+        }
+        .chart-container canvas {
+            width: 100%;
+            height: 350px;
+            display: block;
+        }
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .chart-legend .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .chart-legend .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        .details-section {
+            margin-top: 32px;
+        }
+        .detail-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 18px;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+        .detail-toggle:hover { background: var(--bg); }
+        .detail-toggle:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        .detail-toggle .arrow { transition: transform 0.3s; }
+        .detail-toggle.open .arrow { transform: rotate(90deg); }
+        .detail-content {
+            display: none;
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+        .detail-content.open { display: block; }
+        .detail-content table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .detail-content th,
+        .detail-content td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+        }
+        .detail-content th {
+            background: var(--bg);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text-light);
+        }
+        .detail-content td:first-child,
+        .detail-content th:first-child { text-align: left; }
+        @media (prefers-color-scheme: dark) {
+            .detail-content th {
+                background: #111827;
+                color: #d1d5db;
+            }
+        }
+
+        .info-box {
+            background: var(--primary-light);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        .info-box strong { color: var(--primary); }
+
+        /* FAQ */
+        .faq-section { margin-bottom: 48px; }
+        .faq-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.95rem;
+            background: var(--white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            color: var(--text);
+            font-family: inherit;
+        }
+        .faq-q:hover { background: var(--bg); }
+        .faq-q:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px; border-radius: 8px; }
+        .faq-q .arrow { transition: transform 0.3s; font-size: 0.8rem; color: var(--text-light); }
+        .faq-q.open .arrow { transform: rotate(90deg); }
+        .faq-a {
+            display: none;
+            padding: 0 20px 16px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            background: var(--white);
+        }
+        .faq-a.open { display: block; }
+
+        /* Cross-links */
+        .cross-links {
+            margin-bottom: 48px;
+        }
+        .cross-links h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .cross-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+        .cross-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: box-shadow 0.2s;
+        }
+        .cross-link:hover { box-shadow: var(--shadow); }
+        .cross-link:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        .cross-link .icon { font-size: 1.3rem; }
+        .cross-link .link-text { font-weight: 500; font-size: 0.9rem; }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        @media (max-width: 768px) {
+            .input-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr 1fr; }
+            .result-box .value { font-size: 1.2rem; }
+        }
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .page-header h1 { font-size: 1.5rem; }
+            nav { display: none; }
+            .calc-wrapper { padding: 20px; }
+            .results-grid { grid-template-columns: 1fr; }
+            .chart-container canvas { height: 280px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur beräknas allmän pension i Sverige?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Allmän pension består av inkomstpension (16% av din pensionsgrundande inkomst) och premiepension (2,5%). Den pensionsgrundande inkomsten har ett tak på 8,07 inkomstbasbelopp, vilket 2026 motsvarar ca 625 500 kr/år. Pensionen bestäms sedan av hur länge du arbetat och hur mycket du tjänat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är riktåldern för pension 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Från 2026 införs riktålder för pension i Sverige. Riktåldern för 2026–2031 är 67 år. Du kan dock ta ut inkomstpension och premiepension från 63 års ålder, men ju längre du väntar desto högre blir pensionen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är tjänstepension och hur mycket får jag?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tjänstepension betalas av din arbetsgivare. Vanligast är att arbetsgivaren betalar 4,5% av din lön upp till taket i allmän pension (ca 52 100 kr/mån) och 30% på lönen över taket. Nio av tio anställda har tjänstepension."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket bör jag spara själv till pensionen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En tumregel är att du bör ha 70–80% av din slutlön i pension. Om allmän pension och tjänstepension inte räcker till det, bör du komplettera med eget sparande. Ju tidigare du börjar, desto mer hinner pengarna växa genom ränta-på-ränta-effekten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är inkomstbasbeloppet 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Inkomstbasbeloppet 2026 är 83 400 kronor. Det används för att beräkna taket för pensionsgrundande inkomst och påverkar hur mycket du som mest kan tjäna in till din allmänna pension."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan jag ta ut pension från 63 år?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, du kan ta ut allmän pension (inkomstpension och premiepension) från 63 års ålder. Men pensionen blir lägre om du tar ut den tidigt – dels för att du har färre sparår, dels för att pengarna ska räcka längre. Garantipension kan du ta ut från den månad du fyller 66 år."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur påverkar löneökning min framtida pension?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Högre lön innebär högre pensionsgrundande inkomst (upp till taket) och därmed mer inbetalningar till din pension. Löneökningar ökar också din tjänstepension. Kalkylatorn tar hänsyn till förväntad löneökning per år för att ge en realistisk bild av din framtida pension."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/sparkalkylator.html">Sparande</a>
+                <a href="/kalkylatorer/bmi-kalkylator.html">BMI</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> → Pensionskalkylator</div>
+            <h1>👴 Pensionskalkylator 2026</h1>
+            <p>Beräkna din framtida pension — se allmän pension, tjänstepension och hur eget sparande påverkar din pensionsinkomst. Uppdaterad med 2026 års regler och riktålder.</p>
+        </div>
+
+        <div class="calc-wrapper">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="age">Din ålder idag</label>
+                    <div class="slider-row">
+                        <input type="range" id="ageSlider" min="20" max="66" value="35" aria-label="Din ålder">
+                        <input type="number" id="age" value="35" min="20" max="66">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="retireAge">Önskad pensionsålder</label>
+                    <div class="slider-row">
+                        <input type="range" id="retireAgeSlider" min="63" max="72" value="67" aria-label="Pensionsålder">
+                        <input type="number" id="retireAge" value="67" min="63" max="72">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="salary">Månadslön före skatt (kr)</label>
+                    <div class="slider-row">
+                        <input type="range" id="salarySlider" min="15000" max="120000" step="1000" value="40000" aria-label="Månadslön">
+                        <input type="number" id="salary" value="40000" min="15000" max="200000">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="salaryGrowth">Förväntad löneökning per år (%)</label>
+                    <div class="slider-row">
+                        <input type="range" id="salaryGrowthSlider" min="0" max="5" step="0.5" value="2" aria-label="Löneökning">
+                        <input type="number" id="salaryGrowth" value="2" min="0" max="10" step="0.5">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="privateSavings">Eget pensionssparande (kr/mån)</label>
+                    <div class="sublabel">T.ex. ISK, privat pensionsförsäkring</div>
+                    <div class="slider-row">
+                        <input type="range" id="privateSavingsSlider" min="0" max="15000" step="500" value="1000" aria-label="Eget sparande per månad">
+                        <input type="number" id="privateSavings" value="1000" min="0" max="50000">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="returnRate">Förväntad avkastning (%)</label>
+                    <div class="sublabel">Genomsnittlig årlig avkastning på sparande</div>
+                    <div class="slider-row">
+                        <input type="range" id="returnRateSlider" min="0" max="10" step="0.5" value="6" aria-label="Avkastning">
+                        <input type="number" id="returnRate" value="6" min="0" max="15" step="0.5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>ℹ️ Riktålder 2026:</strong> Från 2026 är riktåldern för pension 67 år. Du kan ta ut allmän pension från 63 års ålder, men pensionen blir högre ju längre du väntar.
+            </div>
+
+            <div class="results-grid" id="results">
+                <div class="result-box highlight">
+                    <div class="value" id="totalPension">–</div>
+                    <div class="label">Total pension/mån</div>
+                </div>
+                <div class="result-box">
+                    <div class="value" id="allmanPension">–</div>
+                    <div class="label">Allmän pension/mån</div>
+                </div>
+                <div class="result-box">
+                    <div class="value" id="tjanstePension">–</div>
+                    <div class="label">Tjänstepension/mån</div>
+                </div>
+                <div class="result-box">
+                    <div class="value" id="privatPension">–</div>
+                    <div class="label">Eget sparande/mån</div>
+                </div>
+            </div>
+
+            <div class="results-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="result-box">
+                    <div class="value" id="replacementRate">–</div>
+                    <div class="label">Ersättningsgrad</div>
+                </div>
+                <div class="result-box">
+                    <div class="value" id="yearsToRetire">–</div>
+                    <div class="label">År till pension</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="pensionChart"></canvas>
+                <div class="chart-legend">
+                    <div class="legend-item"><div class="legend-dot" style="background:#1a6b4a;"></div> Allmän pension</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> Tjänstepension</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Eget sparande</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:rgba(0,0,0,0.15);"></div> Sista lön (före skatt)</div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <button class="detail-toggle" onclick="toggleDetail()" id="detailBtn" aria-expanded="false">
+                    <span>📊 Detaljerad pensionsuppbyggnad per 5 år</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="detail-content" id="detailContent" role="region" aria-label="Detaljerad pensionsuppbyggnad">
+                    <table id="detailTable">
+                        <thead>
+                            <tr>
+                                <th>Ålder</th>
+                                <th>Lön/mån</th>
+                                <th>Allmän (ack.)</th>
+                                <th>Tjänste (ack.)</th>
+                                <th>Eget (ack.)</th>
+                                <th>Totalt kapital</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor om pension</h2>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Hur beräknas allmän pension i Sverige?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Allmän pension består av inkomstpension (16 % av din pensionsgrundande inkomst) och premiepension (2,5 %). Den pensionsgrundande inkomsten har ett tak på 8,07 inkomstbasbelopp — 2026 motsvarar det ca 625 500 kr/år eller 52 125 kr/mån. Pensionen bestäms av hur länge du arbetat och hur mycket du tjänat under hela yrkeslivet.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Vad är riktåldern för pension 2026?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Från 2026 införs riktålder för pension. Riktåldern 2026–2031 är 67 år. Du kan ta ut inkomst- och premiepension från 63 års ålder, men pensionen blir högre ju längre du väntar. Garantipension kan tas ut från 66 år.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Vad är tjänstepension och hur mycket får jag?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Tjänstepension betalas av din arbetsgivare. Vanligast är 4,5 % av lönen upp till ca 52 100 kr/mån (taket i allmän pension) och 30 % på lönen över taket. Nio av tio anställda i Sverige har tjänstepension. Den exakta procenten varierar beroende på kollektivavtal.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Hur mycket bör jag spara själv till pensionen?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">En tumregel är att sikta på 70–80 % av din slutlön som pension. Om allmän pension och tjänstepension inte räcker till det, bör du komplettera med eget sparande — t.ex. på ett ISK-konto. Ju tidigare du börjar, desto mer hinner pengarna växa tack vare ränta-på-ränta-effekten.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Vad är inkomstbasbeloppet 2026?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Inkomstbasbeloppet 2026 är 83 400 kronor. Det används för att beräkna taket i den allmänna pensionen. Pensionsgrundande inkomst beskattas upp till 8,07 × inkomstbasbeloppet, vilket ger ett tak på ca 625 500 kr/år.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Kan jag ta ut pension från 63 år?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Ja, du kan ta ut allmän pension (inkomst- och premiepension) från 63 års ålder. Men pensionen blir lägre vid tidigt uttag — dels för att du har färre sparår, dels för att pengarna ska räcka längre. Garantipension kan tas ut från den månad du fyller 66.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span>Hur påverkar löneökning min framtida pension?</span>
+                    <span class="arrow">▶</span>
+                </button>
+                <div class="faq-a">Högre lön innebär högre inbetalningar till både allmän pension och tjänstepension, upp till respektive tak. Löneökningar under karriären kan ge väsentligt högre pension. Kalkylatorn tar hänsyn till förväntad löneökning för att ge en realistisk prognos.</div>
+            </div>
+        </section>
+
+        <div class="cross-links">
+            <h3>Fler kalkylatorer</h3>
+            <div class="cross-links-grid">
+                <a href="/kalkylatorer/sparkalkylator.html" class="cross-link">
+                    <span class="icon">🎯</span>
+                    <span class="link-text">Sparkalkylator 2026</span>
+                </a>
+                <a href="/kalkylatorer/ranta-pa-ranta.html" class="cross-link">
+                    <span class="icon">📈</span>
+                    <span class="link-text">Ränta på ränta-kalkylator</span>
+                </a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html" class="cross-link">
+                    <span class="icon">📊</span>
+                    <span class="link-text">ISK-skatteberäknare</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Pensionsprognoser baseras på förenklade modeller och ska inte användas som underlag för ekonomiska beslut. Kontakta Pensionsmyndigheten eller minpension.se för exakt beräkning. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+    // === PENSION CALCULATOR 2026 ===
+    // Key constants for 2026
+    const INKOMSTBASBELOPP = 83400;
+    const PGI_TAK = Math.round(8.07 * INKOMSTBASBELOPP); // ~673 038, but capped per Pensionsmyndigheten at 625 500
+    const PGI_MAX_YEAR = 625500;
+    const PGI_MAX_MONTH = Math.round(PGI_MAX_YEAR / 12);
+    const INKOMSTPENSION_RATE = 0.16;
+    const PREMIEPENSION_RATE = 0.025;
+    // Tjänstepension: 4.5% under tak, 30% over tak
+    const TJANSTE_UNDER_TAK = 0.045;
+    const TJANSTE_OVER_TAK = 0.30;
+    const TJANSTE_TAK_MONTH = PGI_MAX_MONTH; // ~52 125
+    // Average life expectancy for pension payout: ~20 years from 67
+    const PAYOUT_YEARS = 20;
+    const INFLATION = 0.02; // for nominal → real
+
+    // Slider sync
+    const pairs = [
+        ['ageSlider', 'age'],
+        ['retireAgeSlider', 'retireAge'],
+        ['salarySlider', 'salary'],
+        ['salaryGrowthSlider', 'salaryGrowth'],
+        ['privateSavingsSlider', 'privateSavings'],
+        ['returnRateSlider', 'returnRate'],
+    ];
+    pairs.forEach(([slider, num]) => {
+        const s = document.getElementById(slider);
+        const n = document.getElementById(num);
+        s.addEventListener('input', () => { n.value = s.value; calculate(); });
+        n.addEventListener('input', () => { s.value = n.value; calculate(); });
+    });
+
+    function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+    function fmt(n) { return Math.round(n).toLocaleString('sv-SE'); }
+
+    let detailData = [];
+
+    function calculate() {
+        const age = getVal('age');
+        const retireAge = getVal('retireAge');
+        const salary = getVal('salary');
+        const salaryGrowth = getVal('salaryGrowth') / 100;
+        const privateMonthlySave = getVal('privateSavings');
+        const returnRate = getVal('returnRate') / 100;
+
+        const yearsToRetire = Math.max(0, retireAge - age);
+
+        // Accumulate pension capital year by year
+        let allmanCapital = 0;  // Inkomstpension + premiepension capital
+        let tjansteCapital = 0;
+        let privateCapital = 0;
+        let currentSalary = salary;
+
+        detailData = [];
+
+        for (let y = 0; y < yearsToRetire; y++) {
+            const yearSalary = currentSalary * 12;
+            const pgi = Math.min(yearSalary, PGI_MAX_YEAR);
+
+            // Allmän pension contribution
+            const allmanContrib = pgi * (INKOMSTPENSION_RATE + PREMIEPENSION_RATE);
+
+            // Tjänstepension contribution
+            const monthlyForTjanste = currentSalary;
+            let tjansteContrib;
+            if (monthlyForTjanste <= TJANSTE_TAK_MONTH) {
+                tjansteContrib = monthlyForTjanste * 12 * TJANSTE_UNDER_TAK;
+            } else {
+                tjansteContrib = TJANSTE_TAK_MONTH * 12 * TJANSTE_UNDER_TAK +
+                    (monthlyForTjanste - TJANSTE_TAK_MONTH) * 12 * TJANSTE_OVER_TAK;
+            }
+
+            // Private savings contribution
+            const privateContrib = privateMonthlySave * 12;
+
+            // Growth on existing capital + half-year growth on new contributions
+            allmanCapital = allmanCapital * (1 + returnRate * 0.5) + allmanContrib;
+            allmanCapital *= (1 + returnRate * 0.5);
+
+            tjansteCapital = tjansteCapital * (1 + returnRate * 0.5) + tjansteContrib;
+            tjansteCapital *= (1 + returnRate * 0.5);
+
+            privateCapital = privateCapital * (1 + returnRate * 0.5) + privateContrib;
+            privateCapital *= (1 + returnRate * 0.5);
+
+            // Store detail data every 5 years and at retirement
+            const currentAge = age + y + 1;
+            if ((y + 1) % 5 === 0 || y === yearsToRetire - 1) {
+                detailData.push({
+                    age: currentAge,
+                    salary: currentSalary,
+                    allman: allmanCapital,
+                    tjanste: tjansteCapital,
+                    privat: privateCapital,
+                    total: allmanCapital + tjansteCapital + privateCapital
+                });
+            }
+
+            currentSalary *= (1 + salaryGrowth);
+        }
+
+        // Calculate monthly payout
+        const payoutMonths = PAYOUT_YEARS * 12;
+        const allmanMonthly = payoutMonths > 0 ? allmanCapital / payoutMonths : 0;
+        const tjansteMonthly = payoutMonths > 0 ? tjansteCapital / payoutMonths : 0;
+        const privateMonthly = payoutMonths > 0 ? privateCapital / payoutMonths : 0;
+        const totalMonthly = allmanMonthly + tjansteMonthly + privateMonthly;
+
+        const lastSalary = salary * Math.pow(1 + salaryGrowth, yearsToRetire);
+        const replacementRate = lastSalary > 0 ? (totalMonthly / lastSalary * 100) : 0;
+
+        // Update DOM
+        document.getElementById('totalPension').textContent = fmt(totalMonthly) + ' kr';
+        document.getElementById('allmanPension').textContent = fmt(allmanMonthly) + ' kr';
+        document.getElementById('tjanstePension').textContent = fmt(tjansteMonthly) + ' kr';
+        document.getElementById('privatPension').textContent = fmt(privateMonthly) + ' kr';
+        document.getElementById('replacementRate').textContent = Math.round(replacementRate) + ' %';
+        document.getElementById('yearsToRetire').textContent = yearsToRetire + ' år';
+
+        drawChart(age, retireAge, salary, salaryGrowth, returnRate, privateMonthlySave, allmanMonthly, tjansteMonthly, privateMonthly, lastSalary);
+        updateDetailTable();
+    }
+
+    function drawChart(age, retireAge, salary, salaryGrowth, returnRate, privateMonthlySave, allmanMonthly, tjansteMonthly, privateMonthly, lastSalary) {
+        const canvas = document.getElementById('pensionChart');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+        const W = rect.width;
+        const H = rect.height;
+
+        // Colors
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const textColor = isDark ? '#d1d5db' : '#555';
+        const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+        const colAllman = isDark ? '#34d399' : '#1a6b4a';
+        const colTjanste = '#2563eb';
+        const colPrivat = '#f59e0b';
+        const colSalary = isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.12)';
+
+        ctx.clearRect(0, 0, W, H);
+
+        // Chart area
+        const pad = { top: 30, right: 30, bottom: 50, left: 70 };
+        const cW = W - pad.left - pad.right;
+        const cH = H - pad.top - pad.bottom;
+
+        // Simulate year-by-year for chart (accumulated capital → monthly payout)
+        const years = Math.max(1, retireAge - age);
+        const payoutMonths = PAYOUT_YEARS * 12;
+        let dataPoints = [];
+        let aCapital = 0, tCapital = 0, pCapital = 0;
+        let curSalary = salary;
+
+        for (let y = 0; y <= years; y++) {
+            if (y > 0) {
+                const yearSalary = curSalary * 12;
+                const pgi = Math.min(yearSalary, PGI_MAX_YEAR);
+                const aC = pgi * (INKOMSTPENSION_RATE + PREMIEPENSION_RATE);
+                let tC;
+                if (curSalary <= TJANSTE_TAK_MONTH) {
+                    tC = curSalary * 12 * TJANSTE_UNDER_TAK;
+                } else {
+                    tC = TJANSTE_TAK_MONTH * 12 * TJANSTE_UNDER_TAK + (curSalary - TJANSTE_TAK_MONTH) * 12 * TJANSTE_OVER_TAK;
+                }
+                const pC = privateMonthlySave * 12;
+                aCapital = aCapital * (1 + returnRate * 0.5) + aC;
+                aCapital *= (1 + returnRate * 0.5);
+                tCapital = tCapital * (1 + returnRate * 0.5) + tC;
+                tCapital *= (1 + returnRate * 0.5);
+                pCapital = pCapital * (1 + returnRate * 0.5) + pC;
+                pCapital *= (1 + returnRate * 0.5);
+                curSalary *= (1 + salaryGrowth);
+            }
+            dataPoints.push({
+                age: age + y,
+                allman: payoutMonths > 0 ? aCapital / payoutMonths : 0,
+                tjanste: payoutMonths > 0 ? tCapital / payoutMonths : 0,
+                privat: payoutMonths > 0 ? pCapital / payoutMonths : 0,
+                salary: y === 0 ? salary : curSalary / (1 + salaryGrowth)
+            });
+        }
+
+        // Max value for Y axis
+        const maxVal = Math.max(
+            ...dataPoints.map(d => d.allman + d.tjanste + d.privat),
+            ...dataPoints.map(d => d.salary)
+        ) * 1.15;
+
+        const xStep = cW / Math.max(1, dataPoints.length - 1);
+
+        function toX(i) { return pad.left + i * xStep; }
+        function toY(v) { return pad.top + cH - (v / maxVal) * cH; }
+
+        // Grid lines
+        ctx.strokeStyle = gridColor;
+        ctx.lineWidth = 1;
+        const gridSteps = 5;
+        for (let i = 0; i <= gridSteps; i++) {
+            const v = (maxVal / gridSteps) * i;
+            const y = toY(v);
+            ctx.beginPath();
+            ctx.moveTo(pad.left, y);
+            ctx.lineTo(W - pad.right, y);
+            ctx.stroke();
+
+            ctx.fillStyle = textColor;
+            ctx.font = '11px Inter, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText(fmt(Math.round(v)) + ' kr', pad.left - 8, y + 4);
+        }
+
+        // Draw stacked area chart
+        // Layer 1: Allman (bottom)
+        ctx.beginPath();
+        ctx.moveTo(toX(0), toY(0));
+        for (let i = 0; i < dataPoints.length; i++) {
+            ctx.lineTo(toX(i), toY(dataPoints[i].allman));
+        }
+        ctx.lineTo(toX(dataPoints.length - 1), toY(0));
+        ctx.closePath();
+        ctx.fillStyle = isDark ? 'rgba(52, 211, 153, 0.35)' : 'rgba(26, 107, 74, 0.25)';
+        ctx.fill();
+
+        // Layer 2: Tjänste (stacked on top of allman)
+        ctx.beginPath();
+        ctx.moveTo(toX(0), toY(dataPoints[0].allman));
+        for (let i = 0; i < dataPoints.length; i++) {
+            ctx.lineTo(toX(i), toY(dataPoints[i].allman + dataPoints[i].tjanste));
+        }
+        for (let i = dataPoints.length - 1; i >= 0; i--) {
+            ctx.lineTo(toX(i), toY(dataPoints[i].allman));
+        }
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(37, 99, 235, 0.25)';
+        ctx.fill();
+
+        // Layer 3: Privat (stacked on top of allman + tjänste)
+        ctx.beginPath();
+        ctx.moveTo(toX(0), toY(dataPoints[0].allman + dataPoints[0].tjanste));
+        for (let i = 0; i < dataPoints.length; i++) {
+            ctx.lineTo(toX(i), toY(dataPoints[i].allman + dataPoints[i].tjanste + dataPoints[i].privat));
+        }
+        for (let i = dataPoints.length - 1; i >= 0; i--) {
+            ctx.lineTo(toX(i), toY(dataPoints[i].allman + dataPoints[i].tjanste));
+        }
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(245, 158, 11, 0.25)';
+        ctx.fill();
+
+        // Salary reference line (dashed)
+        ctx.beginPath();
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = colSalary;
+        ctx.lineWidth = 2;
+        for (let i = 0; i < dataPoints.length; i++) {
+            const x = toX(i);
+            const y = toY(dataPoints[i].salary);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Top line of total stacked
+        ctx.beginPath();
+        ctx.strokeStyle = colPrivat;
+        ctx.lineWidth = 2;
+        for (let i = 0; i < dataPoints.length; i++) {
+            const x = toX(i);
+            const y = toY(dataPoints[i].allman + dataPoints[i].tjanste + dataPoints[i].privat);
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        // X axis labels
+        ctx.fillStyle = textColor;
+        ctx.font = '11px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        const labelEvery = dataPoints.length > 20 ? 5 : dataPoints.length > 10 ? 2 : 1;
+        for (let i = 0; i < dataPoints.length; i += labelEvery) {
+            ctx.fillText(dataPoints[i].age + ' år', toX(i), H - pad.bottom + 20);
+        }
+        // Always show last
+        if ((dataPoints.length - 1) % labelEvery !== 0) {
+            ctx.fillText(dataPoints[dataPoints.length - 1].age + ' år', toX(dataPoints.length - 1), H - pad.bottom + 20);
+        }
+
+        // X axis title
+        ctx.font = '12px Inter, sans-serif';
+        ctx.fillText('Ålder', W / 2, H - 6);
+    }
+
+    function updateDetailTable() {
+        const tbody = document.querySelector('#detailTable tbody');
+        tbody.innerHTML = '';
+        detailData.forEach(d => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${d.age} år</td>
+                <td>${fmt(d.salary)} kr</td>
+                <td>${fmt(d.allman)} kr</td>
+                <td>${fmt(d.tjanste)} kr</td>
+                <td>${fmt(d.privat)} kr</td>
+                <td><strong>${fmt(d.total)} kr</strong></td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+
+    function toggleDetail() {
+        const btn = document.getElementById('detailBtn');
+        const content = document.getElementById('detailContent');
+        const isOpen = content.classList.contains('open');
+        btn.classList.toggle('open');
+        content.classList.toggle('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    function toggleFaq(btn) {
+        const a = btn.nextElementSibling;
+        const isOpen = a.classList.contains('open');
+        btn.classList.toggle('open');
+        a.classList.toggle('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    // Recalc on resize for chart
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(calculate, 150);
+    });
+
+    // Dark mode change
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        setTimeout(calculate, 50);
+    });
+
+    // Initial calculation
+    calculate();
+    </script>
+</body>
+</html>
