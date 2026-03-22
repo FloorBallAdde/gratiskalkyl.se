@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Föräldrapenningkalkylator 2026 – Räkna ut din föräldrapenning | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut din föräldrapenning 2026. Se sjukpenningnivå, lägstanivå och grundnivå baserat på din SGI. Gratis kalkylator uppdaterad för 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/foraldrapenning.html">
+    <meta property="og:title" content="Föräldrapenningkalkylator 2026 – Räkna ut din föräldrapenning">
+    <meta property="og:description" content="Räkna ut din föräldrapenning baserat på din SGI. Se alla tre nivåer och jämför mot ordinarie lön. Gratis kalkylator 2026.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/foraldrapenning.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Föräldrapenningkalkylator 2026">
+    <meta name="twitter:description" content="Räkna ut din föräldrapenning för 2026. SGI-baserad beräkning med alla nivåer.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --accent: #2563eb; --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827; --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2); --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3); }
+            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 16px 20px; }
+        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        header a:hover { color: white; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: clamp(1.6rem,4vw,2.2rem); font-weight: 800; margin: 32px 0 8px; }
+        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
+        .card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px; border: 1px solid var(--border); }
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media(max-width:600px) { .input-grid { grid-template-columns: 1fr; } }
+        label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+        .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        input[type="number"], select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--text); transition: border-color 0.2s; }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .btn { display: block; width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
+        .btn:hover { background: var(--primary-dark); }
+        .results { display: none; }
+        .results.visible { display: block; }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
+        .result-box .value { font-size: 1.45rem; font-weight: 800; color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .result-box .value { color: var(--primary); } }
+        .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        .levels-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .levels-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
+        .levels-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        .levels-table tr:nth-child(even) td { background: var(--primary-light); }
+        .levels-table .active-row td { font-weight: 700; border-left: 3px solid var(--primary); }
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 0.9rem; }
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
+        .info-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; margin-top: 24px; }
+        .info-section p { color: var(--text-light); margin-bottom: 16px; }
+        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
+        .info-section li { margin-bottom: 8px; }
+        .formula-box { background: var(--primary-light); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; font-family: monospace; font-size: 0.9rem; margin: 16px 0; color: var(--text); white-space: pre-line; }
+        .faq { margin-bottom: 48px; }
+        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+        .faq-item summary { padding: 16px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding: 0 20px 16px; color: var(--text-light); }
+        footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.85rem; margin-top: 48px; }
+        footer a { color: rgba(255,255,255,0.9); }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Hur beräknas föräldrapenning 2026?","acceptedAnswer":{"@type":"Answer","text":"Föräldrapenning på sjukpenningnivå är 77,6% av din SGI (sjukpenninggrundande inkomst) per dag, max 1 116 kr/dag 2026. SGI baseras på din förväntade inkomst under de närmaste 12 månaderna."}},
+        {"@type":"Question","name":"Vad är SGI?","acceptedAnswer":{"@type":"Answer","text":"SGI (sjukpenninggrundande inkomst) är den inkomst Försäkringskassan använder för att beräkna din föräldrapenning. Den baseras på din förväntade årsinkomst. Max SGI 2026 är 573 000 kr, vilket ger max dagersättning på 1 116 kr."}},
+        {"@type":"Question","name":"Hur länge kan jag ta ut föräldrapenning?","acceptedAnswer":{"@type":"Answer","text":"Totalt har ett par 480 dagar att dela på per barn. 390 dagar är på sjukpenningnivå, 90 dagar på lägstanivå (180 kr/dag). 90 av dagarna är reserverade för respektive förälder (kan ej överlåtas)."}}
+    ]}</script>
+</head>
+<body>
+<header>
+    <div class="container"><a href="/">← Alla kalkylatorer</a></div>
+</header>
+
+<main class="container">
+    <h1>👶 Föräldrapenningkalkylator 2026</h1>
+    <p class="subtitle">Räkna ut din föräldrapenning baserat på din lön och SGI. Se alla tre ersättningsnivåer och hur mycket du tappar mot ordinarie lön.</p>
+
+    <div class="card">
+        <div class="input-grid">
+            <div>
+                <label for="manadslon">Månadslön (kr)</label>
+                <input type="number" id="manadslon" value="40000" min="0" max="500000" step="500">
+                <div class="hint">Din bruttomånadslön</div>
+            </div>
+            <div>
+                <label for="sgi">SGI (kr/år) — valfritt</label>
+                <input type="number" id="sgi" value="0" min="0" max="600000" step="1000">
+                <div class="hint">Lämna 0 om vi ska räkna ut från lönen</div>
+            </div>
+            <div>
+                <label for="dagar">Antal dagar att ta ut</label>
+                <input type="number" id="dagar" value="30" min="1" max="480" step="1">
+                <div class="hint">Antal kalenderdagar (inkl. helger)</div>
+            </div>
+            <div>
+                <label for="uttag">Uttag per vecka</label>
+                <select id="uttag">
+                    <option value="7">Heltid (7 dagar/vecka)</option>
+                    <option value="5" selected>5 dagar/vecka</option>
+                    <option value="4">4 dagar/vecka</option>
+                    <option value="3">3 dagar/vecka</option>
+                    <option value="2">2 dagar/vecka</option>
+                    <option value="1">1 dag/vecka</option>
+                </select>
+                <div class="hint">Hur många dagar per vecka du tar ut</div>
+            </div>
+            <div>
+                <label for="foralder">Förälderns andel av dagarna</label>
+                <select id="foralder">
+                    <option value="sjukpennning">Sjukpenningnivå (vanligast)</option>
+                    <option value="lagsta">Lägstanivå (180 kr/dag)</option>
+                    <option value="grund">Grundnivå (250 kr/dag)</option>
+                </select>
+            </div>
+            <div>
+                <label for="kommunalskatt">Kommunalskatt (%)</label>
+                <input type="number" id="kommunalskatt" value="32.0" min="28" max="36" step="0.1">
+                <div class="hint">Din kommunalskatt (snitt Sverige 32,37%)</div>
+            </div>
+        </div>
+        <button class="btn" onclick="berakna()">Beräkna föräldrapenning</button>
+    </div>
+
+    <div class="results" id="results">
+        <div class="card">
+            <div class="info-box" id="sgiInfo"></div>
+            <div class="result-grid" id="resultGrid"></div>
+        </div>
+        <div class="card">
+            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">Alla ersättningsnivåer</h2>
+            <table class="levels-table" id="levelsTable"></table>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>Föräldrapenning 2026 – hur fungerar systemet?</h2>
+        <p>Sverige har ett av världens mest generösa föräldraledighetssystem. Föräldrapenning betalas ut av Försäkringskassan och ersätter en del av din inkomst när du är hemma med barn. Totalt har ett par <strong>480 dagar</strong> att dela på per barn – de flesta dagar på sjukpenningnivå.</p>
+
+        <h3>SGI – grunden för din ersättning</h3>
+        <p>SGI (sjukpenninggrundande inkomst) är den inkomst Försäkringskassan bedömer att du kommer ha under de närmaste 12 månaderna. Det är SGI:n som avgör hur hög din föräldrapenning blir – inte din faktiska senaste lön eller din anställningsform.</p>
+        <div class="formula-box">SGI = Förväntad årsinkomst (upp till taket)
+Max SGI 2026 = 573 000 kr/år
+
+Föräldrapenning per dag (sjukpenningnivå):
+= SGI × 77,6% / 365
+
+Max dagersättning 2026:
+= 573 000 × 77,6% / 365 = 1 116 kr/dag (brutto)</div>
+
+        <h3>Tre nivåer av föräldrapenning</h3>
+        <p><strong>Sjukpenningnivå</strong> är den vanligaste och högsta nivån: 77,6 % av din SGI per dag, max 1 116 kr/dag (2026). Du har rätt till sjukpenningnivå om du haft SGI i minst 240 dagar i rad precis före barnets beräknade födelsedag.</p>
+        <p><strong>Lägstanivå</strong> ger 180 kr/dag (2026) och gäller för de 90 dagarna som inte är på sjukpenningnivå (av totalt 480 dagar).</p>
+        <p><strong>Grundnivå</strong> ger 250 kr/dag (2026) om du saknar SGI eller nyligen börjat jobba. Det är golvet för alla – även studenter och nyanlända.</p>
+
+        <h3>480 dagar – hur fördelas de?</h3>
+        <p>Per barn har föräldrarna totalt 480 dagar att dela:</p>
+        <ul>
+            <li><strong>390 dagar</strong> på sjukpenningnivå (77,6 % av SGI)</li>
+            <li><strong>90 dagar</strong> på lägstanivå (180 kr/dag)</li>
+            <li><strong>90 dagar är reserverade</strong> per förälder och kan inte överlåtas till den andre</li>
+            <li>Ensamstående förälder får alla 480 dagarna</li>
+        </ul>
+        <p>Föräldrapenning kan tas ut fram tills barnet fyller 12 år (men de flesta dagar bör tas ut innan 8 år för att undvika att de "föråldras" under rätt förutsättningar).</p>
+
+        <h3>Föräldrapenning är skattepliktig</h3>
+        <p>Föräldrapenning beskattas som inkomst. Du betalar kommunalskatt (ca 30–33 %) på beloppet. Det innebär att nettot av maxersättning (1 116 kr/dag brutto) är ca 750–780 kr/dag netto – det vill säga ca 22 500–23 400 kr/netto per 30 dagar.</p>
+        <p>Observera att arbetsgivare inte betalar arbetsgivaravgifter på föräldrapenningen och att du inte tjänar in semesterdagar under hela föräldraledigheten (bara för de första 180 dagarna med hel föräldrapenning).</p>
+
+        <h3>Föräldrapenningtillägg från arbetsgivaren</h3>
+        <p>Många arbetsgivare och kollektivavtal ger ett <strong>föräldrapenningtillägg</strong> (FPT) under en del av föräldraledigheten – vanligtvis 90–180 dagar. Tillägget täcker skillnaden mellan föräldrapenningen och ordinarie lön, ofta upp till 90–100 % av lönen under den perioden. Kontrollera alltid ditt kollektivavtal eller anställningsavtal.</p>
+        <p>Exempelavtal: Teknikföretagen ger tillägg i 180 dagar (ca 10 % av lönen per dag utöver föräldrapenning). Kommunal sektor ger tillägg i 90 dagar med 10 % av lönen.</p>
+
+        <h3>Tips: Tjäna mer under föräldraledigheten</h3>
+        <p>Du kan jobba deltid och ta ut föräldrapenning på resterande del (1/4, 1/2, 3/4 eller heltid). Det maximerar din totala inkomst och gör att dagarna varar längre. Du kan också spara dagar och ta ut dem sporadiskt under barnets uppväxt – t.ex. för VAB-dagar.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+        <h2>Vanliga frågor om föräldrapenning 2026</h2>
+        <details class="faq-item">
+            <summary>Vad är maxersättning för föräldrapenning 2026?</summary>
+            <p>Max föräldrapenning 2026 är 1 116 kr/dag brutto på sjukpenningnivå. Det kräver en SGI på minst 573 000 kr/år (ca 47 750 kr/mån). Netto efter kommunalskatt ca 32 % blir det ungefär 759 kr/dag, eller ca 22 800 kr/mån (30 dagar).</p>
+        </details>
+        <details class="faq-item">
+            <summary>Kan jag jobba under föräldraledigheten?</summary>
+            <p>Ja, du kan jobba deltid och ta ut föräldrapenning på resterande tid. Om du arbetar 50 % tar du ut 50 % föräldrapenning – du förbrukar då en halv dag per kalenderdag. Du måste anmäla till Försäkringskassan om du återgår i arbete.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Vad händer med SGI om jag slutar jobba?</summary>
+            <p>Din SGI skyddas automatiskt om du slutar jobba för att ta hand om barn under 3 år, studerar, är sjuk eller söker arbete. Under föräldraledighet skyddas SGI:n och du behåller samma ersättningsnivå för kommande barn.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Hur anmäler jag föräldrapenning?</summary>
+            <p>Ansökan görs via Försäkringskassans app eller webbplats. Anmäl minst 2 månader i förväg om möjligt. Du kan justera uttag och ändra dagar löpande. Utbetalning sker normalt månadsvis i efterskott.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Räknas semesterlön in i SGI?</summary>
+            <p>Nej, semesterlön och semesterersättning räknas normalt inte in i SGI. SGI baseras på den ordinarie lönen. Bonus och provision som ingår i din regelbundna ersättning kan räknas in, men engångsbelopp gör det vanligtvis inte.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Vad gäller för egenföretagare?</summary>
+            <p>Egenföretagare har rätt till föräldrapenning baserat på SGI precis som anställda. SGI för egenföretagare baseras på inkomst av tjänst och inkomst av aktiv näringsverksamhet. Det kan vara mer komplext att fastställa – kontakta Försäkringskassan för en bedömning.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Kan vi dela dagarna fritt mellan oss?</summary>
+            <p>Ni kan dela 300 av de 480 dagarna fritt (överlåta till den andra föräldern). 90 dagar per förälder är reserverade och kan inte överlåtas. Ensamstående får alla 480 dagarna. Trillingar och fler barn ger ytterligare dagar.</p>
+        </details>
+    </div>
+</main>
+
+<!-- Cross-linking -->
+<div class="container" style="padding-bottom:48px;">
+    <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Relaterade kalkylatorer</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+        <a href="/kalkylatorer/loneraknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+            <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
+            <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
+        </a>
+        <a href="/kalkylatorer/semesterlonekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+            <div style="font-size:1.3rem;margin-bottom:4px;">🏖️</div>
+            <div style="font-weight:600;font-size:0.9rem;">Semesterlönekalkylator</div>
+        </a>
+        <a href="/kalkylatorer/sparkalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+            <div style="font-size:1.3rem;margin-bottom:4px;">🐖</div>
+            <div style="font-weight:600;font-size:0.9rem;">Sparkalkylator</div>
+        </a>
+        <a href="/kalkylatorer/lanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+            <div style="font-size:1.3rem;margin-bottom:4px;">💳</div>
+            <div style="font-weight:600;font-size:0.9rem;">Lånekalkylator</div>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+        Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+        <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">Beräkningarna är ungefärliga. Använd som vägledning. Kontakta Försäkringskassan för exakta belopp.</p>
+    </div>
+</footer>
+
+<script>
+// 2026 constants
+const MAX_SGI = 573000;
+const DAGERSATTNING_PROCENT = 0.776;
+const LAGSTA_NIVA = 180;
+const GRUND_NIVA = 250;
+
+function fmt(n) { return Math.round(n).toLocaleString('sv-SE'); }
+function fmtDec(n, d=1) { return n.toFixed(d).replace('.', ','); }
+
+function berakna() {
+    const manadslon = parseFloat(document.getElementById('manadslon').value) || 0;
+    let sgiInput = parseFloat(document.getElementById('sgi').value) || 0;
+    const dagar = parseInt(document.getElementById('dagar').value) || 30;
+    const uttag = parseFloat(document.getElementById('uttag').value);
+    const nivaVal = document.getElementById('foralder').value;
+    const kommunalskatt = parseFloat(document.getElementById('kommunalskatt').value) / 100 || 0.32;
+
+    // Calculate SGI
+    const sgi = sgiInput > 0 ? Math.min(sgiInput, MAX_SGI) : Math.min(manadslon * 12, MAX_SGI);
+    const effektivSGI = Math.min(sgi, MAX_SGI);
+
+    // Days and amounts
+    const dagersattningBrutto = nivaVal === 'sjukpennning'
+        ? Math.min(effektivSGI * DAGERSATTNING_PROCENT / 365, 1116)
+        : nivaVal === 'lagsta' ? LAGSTA_NIVA : GRUND_NIVA;
+
+    const kalDagarPerUttagsdag = 7 / uttag;
+    const kalDagarTotalt = dagar;
+    const uttagnaDagar = Math.ceil(kalDagarTotalt / kalDagarPerUttagsdag);
+
+    const totalBrutto = dagersattningBrutto * uttagnaDagar;
+    const skattenivå = kommunalskatt;
+    const totalNetto = totalBrutto * (1 - skattenivå);
+    const dagNetto = dagersattningBrutto * (1 - skattenivå);
+
+    // Compare to salary
+    const manadsLonNetto = manadslon * (1 - 0.2) * (1 - kommunalskatt); // rough net
+    const fpManNetto = dagersattningBrutto * (uttag / 7 * 30) * (1 - skattenivå);
+    const inkomstTapp = manadsLonNetto - fpManNetto;
+
+    document.getElementById('sgiInfo').innerHTML =
+        `SGI: <strong>${fmt(effektivSGI)} kr/år</strong>${sgiInput > 0 ? ' (angiven)' : ` (beräknad från ${fmt(manadslon)} kr/mån)`}${effektivSGI < manadslon * 12 ? ` — <em>OBS: taket på ${fmt(MAX_SGI)} kr/år gäller</em>` : ''}`;
+
+    const grid = document.getElementById('resultGrid');
+    grid.innerHTML = `
+        <div class="result-box"><div class="label">Ersättning per dag</div><div class="value">${fmt(dagersattningBrutto)} kr</div><div class="sub">brutto</div></div>
+        <div class="result-box"><div class="label">Netto per dag</div><div class="value">${fmt(dagNetto)} kr</div><div class="sub">efter ${fmtDec(kommunalskatt*100)}% skatt</div></div>
+        <div class="result-box"><div class="label">Total ersättning</div><div class="value">${fmt(totalBrutto)} kr</div><div class="sub">${uttagnaDagar} uttagna dagar</div></div>
+        <div class="result-box"><div class="label">Inkomstskillnad/mån</div><div class="value">${fmt(Math.max(0,inkomstTapp))} kr</div><div class="sub">mindre netto vs ordinarie lön</div></div>
+    `;
+
+    // Levels table
+    const dagarSjukp = Math.min(effektivSGI * DAGERSATTNING_PROCENT / 365, 1116);
+    const table = document.getElementById('levelsTable');
+    const rows = [
+        { niva: 'Sjukpenningnivå (77,6%)', dag: dagarSjukp, info: `Kräver SGI i 240 dagar, max 1 116 kr/dag` },
+        { niva: 'Lägstanivå', dag: LAGSTA_NIVA, info: '90 av 480 dagar (fast belopp)' },
+        { niva: 'Grundnivå', dag: GRUND_NIVA, info: 'Om ingen SGI finns' },
+    ];
+    table.innerHTML = `<thead><tr><th>Nivå</th><th>Kr/dag (brutto)</th><th>Kr/mån (30 dgr)</th><th>Info</th></tr></thead>
+    <tbody>${rows.map((r, i) => `<tr ${nivaVal === ['sjukpennning','lagsta','grund'][i] ? 'class="active-row"' : ''}>
+        <td>${r.niva}${nivaVal === ['sjukpennning','lagsta','grund'][i] ? ' ✓' : ''}</td>
+        <td>${fmt(r.dag)} kr</td>
+        <td>${fmt(r.dag * 30)} kr</td>
+        <td style="color:var(--text-light);font-size:0.82rem;">${r.info}</td>
+    </tr>`).join('')}</tbody>`;
+
+    document.getElementById('results').classList.add('visible');
+}
+
+window.addEventListener('load', berakna);
+document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', berakna));
+</script>
+</body>
+</html>
