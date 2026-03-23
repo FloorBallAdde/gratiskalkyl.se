@@ -41,12 +41,14 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
-        header { background: var(--primary); color: white; padding: 16px 20px; }
-        header a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; }
-        header a:hover { color: white; }
-        .header-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.2rem; font-weight: 700; color: white; text-decoration: none; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 
         /* Breadcrumb */
         .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
@@ -174,10 +176,15 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="header-inner">
-            <a href="/" class="logo">GratisKalkyl.se</a>
-            <a href="/kalkylatorer/pensionskalkylator.html">→ Räkna ut din pension</a>
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/pensionskalkylator.html">Pension</a>
+                <a href="/kalkylatorer/sparkalkylator.html">Sparkalkylator</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+            </nav>
         </div>
     </header>
 
@@ -190,12 +197,12 @@
             <span aria-current="page">Hur beräknas pension?</span>
         </nav>
 
-        <header class="article-header">
+        <div class="article-header">
             <span class="article-tag">Guide</span>
             <h1>Hur beräknas pension i Sverige? – Guide 2026</h1>
             <p class="article-meta">Uppdaterad mars 2026 · 6 min läsning</p>
             <p class="article-intro">Det svenska pensionssystemet vilar på tre pelare: <strong>allmän pension</strong>, <strong>tjänstepension</strong> och <strong>privat pensionssparande</strong>. Hur stor din pension blir beror på hur länge du arbetat, hur hög din lön har varit och hur dina sparade pengar förvaltas. Här reder vi ut hur beräkningen fungerar.</p>
-        </header>
+        </div>
 
         <article class="article-body">
             <h2>De tre pelarna</h2>
