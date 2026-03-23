@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direktavkastningskalkylator 2026 — Räkna ut utdelning och yield on cost | GratisKalkyl.se</title>
+    <meta name="description" content="Gratis direktavkastningskalkylator — beräkna direktavkastning, yield on cost och utdelningsutveckling för dina aktier. Se 10-årig prognos med interaktiv graf.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/direktavkastningskalkylator.html">
+    <meta property="og:title" content="Direktavkastningskalkylator 2026 — Räkna ut utdelning och yield on cost">
+    <meta property="og:description" content="Gratis direktavkastningskalkylator — beräkna direktavkastning, yield on cost och utdelningsutveckling för dina aktier.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/direktavkastningskalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Direktavkastningskalkylator 2026 — Räkna ut utdelning">
+    <meta name="twitter:description" content="Beräkna direktavkastning, yield on cost och utdelningsutveckling för dina aktier.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vad är direktavkastning på aktier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direktavkastning är den procentuella avkastning du får i form av utdelning i förhållande till aktiens kurs. Om en aktie kostar 100 kr och ger 5 kr i utdelning är direktavkastningen 5%. Det är ett viktigt nyckeltal för utdelningsinvesterare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad är yield on cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yield on cost (YOC) är avkastningen i förhållande till ditt ursprungliga inköpspris, inte dagens kurs. Om du köpte en aktie för 100 kr och utdelningen nu är 10 kr per år är din YOC 10%, även om dagens kurs är 200 kr. YOC visar hur bra en investering har blivit över tid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur räknar man ut direktavkastning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direktavkastning = (Utdelning per aktie / Aktiepris) × 100. Exempel: Aktie till 120 kr med 6 kr i utdelning ger direktavkastning på 5%. Kalkylatorn beräknar detta automatiskt baserat på dina uppgifter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad anses vara bra direktavkastning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En direktavkastning på 3–6% anses generellt vara bra för stabila utdelningsaktier på Stockholmsbörsen. Under 2% kan vara lågt, medan över 8% kan signalera en utdelning som är svår att upprätthålla. Viktigt är att titta på utdelningens hållbarhet, inte bara nivån."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur fungerar utdelningstillväxt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utdelningstillväxt innebär att bolaget höjer sin utdelning år för år. Många stabila bolag som Investor, Castellum och Swedbank har lång historik av utdelningshöjningar. Ränta-på-ränta-effekten gör att en aktie med 5% direktavkastning och 7% utdelningstillväxt ger dubbelt så hög utdelning efter tio år."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ska jag placera utdelningsaktier i ISK eller kapitalförsäkring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISK (investeringssparkonto) är ofta fördelaktigt för utdelningsaktier eftersom skatten är schablonbaserad och du inte betalar kapitalvinstskatt på varje utdelning. Vid låg schablonränta är ISK extremt skatteeffektivt. Använd vår ISK-skatteberäknare för att se din exakta skatt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Var kan jag köpa utdelningsaktier i Sverige?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De vanligaste nätmäklarna för aktier i Sverige är Avanza och Nordnet. Båda erbjuder ISK-konton, handel med svenska och utländska aktier, courtagefria fonder och bra analysverktyg. Jämför courtage och tjänster innan du väljer."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --primary-dark: #10b981;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+            input[type="range"] { accent-color: #34d399; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 48px 0 40px;
+            text-align: center;
+        }
+        @media (prefers-color-scheme: dark) {
+            .hero { background: linear-gradient(135deg, #064e3b 0%, #111827 100%); }
+        }
+        .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* Main layout */
+        main { padding: 40px 0; }
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        /* Input groups */
+        .input-group { margin-bottom: 16px; }
+        .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        input[type="range"] {
+            flex: 1;
+            accent-color: var(--primary);
+            height: 6px;
+            cursor: pointer;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text);
+            background: var(--bg);
+            text-align: right;
+        }
+        input[type="number"]:focus { outline: 2px solid var(--primary); border-color: transparent; }
+        .unit {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            white-space: nowrap;
+            min-width: 24px;
+        }
+
+        /* Results */
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 500px) { .results-grid { grid-template-columns: 1fr; } }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+        .result-box .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+        .result-box .value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+        .result-box .sub {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+        .result-box.highlight { background: var(--primary); }
+        .result-box.highlight .value, .result-box.highlight .label, .result-box.highlight .sub {
+            color: #fff;
+        }
+
+        /* Chart */
+        .chart-card { margin-bottom: 24px; }
+        .chart-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+        canvas { width: 100% !important; border-radius: 8px; }
+
+        /* Projection table */
+        .table-section { margin-bottom: 24px; }
+        .table-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: inherit;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        .table-toggle:hover { border-color: var(--primary); color: var(--primary); }
+        .table-toggle .arrow { transition: transform 0.2s; }
+        .table-toggle.open .arrow { transform: rotate(180deg); }
+        .table-wrap { display: none; margin-top: 12px; overflow-x: auto; }
+        .table-wrap.open { display: block; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        th {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 10px 12px;
+            text-align: right;
+        }
+        th:first-child { text-align: left; }
+        td { padding: 9px 12px; border-bottom: 1px solid var(--border); text-align: right; }
+        td:first-child { text-align: left; font-weight: 600; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: var(--primary-light); }
+
+        /* Affiliate */
+        .affiliate-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .affiliate-section h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .affiliate-section p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px; }
+        .broker-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .broker-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .broker-btn:hover { opacity: 0.85; }
+        .broker-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .broker-btn.secondary:hover { background: var(--primary-light); }
+
+        /* SEO text */
+        .seo-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .seo-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+        .seo-section h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 8px; }
+        .seo-section p { color: var(--text-light); margin-bottom: 12px; line-height: 1.7; }
+
+        /* FAQ */
+        .faq-section { margin-bottom: 24px; }
+        .faq-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 16px 20px;
+            text-align: left;
+            font-family: inherit;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-q:hover { color: var(--primary); }
+        .faq-q .faq-icon { font-size: 1.2rem; transition: transform 0.2s; flex-shrink: 0; }
+        .faq-q.open .faq-icon { transform: rotate(45deg); }
+        .faq-a {
+            display: none;
+            padding: 0 20px 16px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        .faq-a.open { display: block; }
+
+        /* Cross-links */
+        .cross-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .cross-link {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cross-link:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+        .footer-links { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-light); text-decoration: none; margin: 0 12px; }
+        .footer-links a:hover { color: var(--primary); }
+        .disclaimer {
+            max-width: 700px;
+            margin: 12px auto 0;
+            font-size: 0.8rem;
+            opacity: 0.75;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-inner">
+            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
+            <nav>
+                <a href="/">Alla kalkylatorer</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+                <a href="/kalkylatorer/sparkalkylator.html">Sparkalkylator</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>📈 Direktavkastningskalkylator 2026</h1>
+        <p>Beräkna direktavkastning, yield on cost och utdelningsutveckling för dina aktier — se 10-årig prognos med interaktiv graf</p>
+    </div>
+</section>
+
+<main>
+    <div class="container">
+
+        <!-- Inputs + Results -->
+        <div class="calc-grid">
+            <!-- Inputs -->
+            <div class="card">
+                <h2>📊 Din aktieposition</h2>
+
+                <div class="input-group">
+                    <label>Aktiepris (köpkurs)</label>
+                    <div class="input-row">
+                        <input type="range" id="priceSlider" min="1" max="2000" value="120" step="1">
+                        <input type="number" id="priceInput" value="120" min="1" max="99999">
+                        <span class="unit">kr</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Utdelning per aktie (per år)</label>
+                    <div class="input-row">
+                        <input type="range" id="divSlider" min="0" max="100" value="6" step="0.5">
+                        <input type="number" id="divInput" value="6" min="0" max="9999" step="0.5">
+                        <span class="unit">kr</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Antal aktier</label>
+                    <div class="input-row">
+                        <input type="range" id="sharesSlider" min="1" max="5000" value="100" step="1">
+                        <input type="number" id="sharesInput" value="100" min="1" max="999999">
+                        <span class="unit">st</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Utdelningstillväxt per år</label>
+                    <div class="input-row">
+                        <input type="range" id="growthSlider" min="0" max="20" value="5" step="0.5">
+                        <input type="number" id="growthInput" value="5" min="0" max="50" step="0.5">
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="card">
+                <h2>💡 Resultat</h2>
+                <div class="results-grid">
+                    <div class="result-box highlight">
+                        <div class="label">Direktavkastning</div>
+                        <div class="value" id="resDA">5,00%</div>
+                        <div class="sub">idag</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Utdelning / år</div>
+                        <div class="value" id="resAnnual">600 kr</div>
+                        <div class="sub">totalt</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Totalinvestering</div>
+                        <div class="value" id="resInvest">12 000 kr</div>
+                        <div class="sub">köpkurs × antal</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Yield on cost år 10</div>
+                        <div class="value" id="resYOC">8,14%</div>
+                        <div class="sub">mot inköpspris</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Utdelning år 10</div>
+                        <div class="value" id="resDiv10">977 kr</div>
+                        <div class="sub">per år totalt</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Total utdelning 10 år</div>
+                        <div class="value" id="resTotal10">7 547 kr</div>
+                        <div class="sub">utan återinvestering</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="card chart-card">
+            <h2>Utdelningsutveckling under 10 år</h2>
+            <canvas id="divChart" height="280"></canvas>
+        </div>
+
+        <!-- Table -->
+        <div class="table-section">
+            <button class="table-toggle" id="tableToggle" onclick="toggleTable()">
+                <span>Visa detaljerad 10-årsöversikt</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="table-wrap" id="tableWrap">
+                <table id="projTable">
+                    <thead>
+                        <tr>
+                            <th>År</th>
+                            <th>Utd/aktie (kr)</th>
+                            <th>Total utdelning (kr)</th>
+                            <th>Yield on cost (%)</th>
+                            <th>Ackum. utdelning (kr)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Affiliate -->
+        <div class="affiliate-section">
+            <h3>🏦 Öppna ett ISK och börja investera</h3>
+            <p>Köp utdelningsaktier på ISK (investeringssparkonto) — schablonbeskattning utan kapitalvinstskatt på varje utdelning.</p>
+            <div class="broker-links">
+                <a href="https://www.avanza.se" class="broker-btn" target="_blank" rel="noopener sponsored">Avanza — Öppna ISK</a>
+                <a href="https://www.nordnet.se" class="broker-btn secondary" target="_blank" rel="noopener sponsored">Nordnet — Öppna ISK</a>
+            </div>
+        </div>
+
+        <!-- SEO text -->
+        <div class="seo-section">
+            <h2>Direktavkastning och utdelningsinvestering — så fungerar det</h2>
+            <p>Direktavkastning är ett av de viktigaste nyckeltalen för den som investerar i utdelningsaktier. Det mäter hur stor procentuell avkastning du får i form av utdelning i förhållande till aktiens aktuella kurs. En aktie som kostar 150 kr och delar ut 7,50 kr per år har en direktavkastning på 5,0 %.</p>
+
+            <h3>Vad är yield on cost?</h3>
+            <p>Yield on cost (YOC) är ett kompletterande nyckeltal som beräknar utdelningens storlek i förhållande till ditt ursprungliga inköpspris — inte dagens kurs. Om du köpte aktier för 100 kr och bolaget höjer utdelningen med 7 % per år varje år, är din YOC efter tio år över 14 %. Det är kraften i utdelningstillväxt kombinerad med ränta-på-ränta.</p>
+
+            <h3>Utdelningstillväxt — ränta-på-ränta för utdelningsinvesterare</h3>
+            <p>Bolag som konsekvent höjer sin utdelning år efter år kallas "dividend growers". På Stockholmsbörsen finns exempel som Investor, Castellum, Holmen och Swedbank. En initial direktavkastning på 4 % med 7 % utdelningstillväxt per år ger en YOC på drygt 7,8 % efter tio år — och det utan att aktiekursen rört sig. Kalkylatorn ovan visar exakt hur din position utvecklas.</p>
+
+            <h3>ISK eller kapitalförsäkring för utdelningsaktier?</h3>
+            <p>Utdelning på aktier i ett vanligt VP-konto beskattas som kapitalinkomst (30 %). På ett ISK betalar du istället en låg schablonintäkt baserad på kontots värde, oavsett om du fått utdelning eller gjort vinst. Vid låg ränta är ISK det klart skatteeffektivaste alternativet för utdelningsinvesterare. Från 2025 är de första 300 000 kr på ett ISK skattefria. Se vår <a href="/kalkylatorer/isk-skatteberaknare.html" style="color:var(--primary)">ISK-skatteberäknare</a> för din exakta skatt.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2>Vanliga frågor om direktavkastning</h2>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Vad är direktavkastning på aktier?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">Direktavkastning är den procentuella avkastning du får i form av utdelning i förhållande till aktiens kurs. Om en aktie kostar 100 kr och ger 5 kr i utdelning är direktavkastningen 5 %. Det är ett viktigt nyckeltal för utdelningsinvesterare.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Vad är yield on cost?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">Yield on cost (YOC) är avkastningen i förhållande till ditt ursprungliga inköpspris, inte dagens kurs. Om du köpte en aktie för 100 kr och utdelningen nu är 10 kr per år är din YOC 10 %, även om dagens kurs är 200 kr. YOC visar hur bra en investering har blivit över tid.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Hur räknar man ut direktavkastning?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">Direktavkastning = (Utdelning per aktie / Aktiepris) × 100. Exempel: Aktie till 120 kr med 6 kr i utdelning ger direktavkastning på 5 %. Kalkylatorn beräknar detta automatiskt baserat på dina uppgifter.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Vad anses vara bra direktavkastning?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">En direktavkastning på 3–6 % anses generellt vara bra för stabila utdelningsaktier på Stockholmsbörsen. Under 2 % kan vara lågt, medan över 8 % kan signalera en utdelning som är svår att upprätthålla. Viktigt är att titta på utdelningens hållbarhet, inte bara nivån.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Hur fungerar utdelningstillväxt?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">Utdelningstillväxt innebär att bolaget höjer sin utdelning år för år. Ränta-på-ränta-effekten gör att en aktie med 5 % direktavkastning och 7 % utdelningstillväxt ger dubbelt så hög utdelning efter tio år.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Ska jag placera utdelningsaktier i ISK?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">ISK (investeringssparkonto) är ofta fördelaktigt för utdelningsaktier eftersom skatten är schablonbaserad och du inte betalar kapitalvinstskatt på varje utdelning. Från 2025 är de första 300 000 kr på ett ISK skattefria. Använd vår ISK-skatteberäknare för att se din exakta skatt.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Var kan jag köpa utdelningsaktier i Sverige?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">De vanligaste nätmäklarna för aktier i Sverige är Avanza och Nordnet. Båda erbjuder ISK-konton, handel med svenska och utländska aktier samt bra analysverktyg. Jämför courtage och tjänster innan du väljer.</div>
+            </div>
+        </div>
+
+        <!-- Cross-links -->
+        <div class="cross-links">
+            <a href="/kalkylatorer/isk-skatteberaknare.html" class="cross-link">📊 ISK-skatteberäknare</a>
+            <a href="/kalkylatorer/sparkalkylator.html" class="cross-link">🎯 Sparkalkylator</a>
+            <a href="/kalkylatorer/ranta-pa-ranta.html" class="cross-link">📈 Ränta-på-ränta</a>
+            <a href="/kalkylatorer/pensionskalkylator.html" class="cross-link">👴 Pensionskalkylator</a>
+            <a href="/" class="cross-link">🏠 Alla kalkylatorer</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="/">Hem</a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            <a href="/kalkylatorer/sparkalkylator.html">Sparkalkylator</a>
+            <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+        </div>
+        <div>© 2026 GratisKalkyl.se — Gratis kalkylatorer online</div>
+        <div class="disclaimer">Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn tar inte hänsyn till skatt, courtage, valutaeffekter eller framtida kursförändringar. Använd resultaten som vägledning, inte som finansiell rådgivning. Konsultera en rådgivare innan du fattar investeringsbeslut.</div>
+    </div>
+</footer>
+
+<script>
+    // ── Helpers ──────────────────────────────────────────────────────
+    function fmt(n, dec = 0) {
+        return n.toLocaleString('sv-SE', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+    function fmtPct(n) {
+        return n.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+    }
+
+    // ── State ─────────────────────────────────────────────────────────
+    let price  = 120;
+    let div    = 6;
+    let shares = 100;
+    let growth = 5;
+
+    // ── Sync sliders ↔ inputs ─────────────────────────────────────────
+    function syncPair(sliderId, inputId, varName, min, max) {
+        const slider = document.getElementById(sliderId);
+        const input  = document.getElementById(inputId);
+        slider.addEventListener('input', () => {
+            input.value = slider.value;
+            update();
+        });
+        input.addEventListener('input', () => {
+            let v = parseFloat(input.value) || 0;
+            v = Math.min(Math.max(v, min), max);
+            slider.value = v;
+            update();
+        });
+    }
+    syncPair('priceSlider',  'priceInput',  'price',  1,    2000);
+    syncPair('divSlider',    'divInput',    'div',    0,    100);
+    syncPair('sharesSlider', 'sharesInput', 'shares', 1,    5000);
+    syncPair('growthSlider', 'growthInput', 'growth', 0,    20);
+
+    // ── Calculate ─────────────────────────────────────────────────────
+    function getValues() {
+        return {
+            price:  parseFloat(document.getElementById('priceInput').value)  || 0,
+            div:    parseFloat(document.getElementById('divInput').value)     || 0,
+            shares: parseInt(document.getElementById('sharesInput').value)    || 0,
+            growth: parseFloat(document.getElementById('growthInput').value)  || 0
+        };
+    }
+
+    function buildProjection(p) {
+        const rows = [];
+        let cumulative = 0;
+        for (let y = 1; y <= 10; y++) {
+            const divPerShare = p.div * Math.pow(1 + p.growth / 100, y - 1);
+            const totalDiv    = divPerShare * p.shares;
+            const yoc         = p.price > 0 ? (divPerShare / p.price) * 100 : 0;
+            cumulative       += totalDiv;
+            rows.push({ year: y, divPerShare, totalDiv, yoc, cumulative });
+        }
+        return rows;
+    }
+
+    function update() {
+        const p   = getValues();
+        const inv = p.price * p.shares;
+        const da  = p.price > 0 ? (p.div / p.price) * 100 : 0;
+        const ann = p.div * p.shares;
+
+        const proj = buildProjection(p);
+        const yr10 = proj[9];
+
+        // Results
+        document.getElementById('resDA').textContent      = fmtPct(da);
+        document.getElementById('resAnnual').textContent  = fmt(ann) + ' kr';
+        document.getElementById('resInvest').textContent  = fmt(inv) + ' kr';
+        document.getElementById('resYOC').textContent     = fmtPct(yr10 ? yr10.yoc : 0);
+        document.getElementById('resDiv10').textContent   = fmt(yr10 ? yr10.totalDiv : 0) + ' kr';
+        document.getElementById('resTotal10').textContent = fmt(yr10 ? yr10.cumulative : 0) + ' kr';
+
+        // Table
+        const tbody = document.getElementById('projBody');
+        tbody.innerHTML = proj.map(r => `
+            <tr>
+                <td>År ${r.year}</td>
+                <td>${fmt(r.divPerShare, 2)}</td>
+                <td>${fmt(r.totalDiv, 0)}</td>
+                <td>${fmtPct(r.yoc)}</td>
+                <td>${fmt(r.cumulative, 0)}</td>
+            </tr>
+        `).join('');
+
+        drawChart(proj);
+    }
+
+    // ── Canvas chart ──────────────────────────────────────────────────
+    function drawChart(proj) {
+        const canvas = document.getElementById('divChart');
+        const ctx    = canvas.getContext('2d');
+        const dpr    = window.devicePixelRatio || 1;
+        const W      = canvas.parentElement.clientWidth;
+        const H      = 280;
+
+        canvas.width  = W * dpr;
+        canvas.height = H * dpr;
+        canvas.style.width  = W + 'px';
+        canvas.style.height = H + 'px';
+        ctx.scale(dpr, dpr);
+        ctx.clearRect(0, 0, W, H);
+
+        const dark     = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const primary  = dark ? '#34d399' : '#1a6b4a';
+        const barColor = dark ? 'rgba(52,211,153,0.75)' : 'rgba(26,107,74,0.75)';
+        const barHigh  = dark ? '#34d399' : '#1a6b4a';
+        const gridCol  = dark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)';
+        const textCol  = dark ? '#d1d5db' : '#555';
+
+        const pad  = { top: 24, right: 16, bottom: 48, left: 64 };
+        const cW   = W - pad.left - pad.right;
+        const cH   = H - pad.top - pad.bottom;
+
+        const values = proj.map(r => r.totalDiv);
+        const maxVal = Math.max(...values, 1);
+        const nBars  = proj.length;
+        const barW   = (cW / nBars) * 0.65;
+        const gap    = cW / nBars;
+
+        // Grid lines
+        const gridLines = 5;
+        for (let i = 0; i <= gridLines; i++) {
+            const y = pad.top + cH - (i / gridLines) * cH;
+            ctx.beginPath();
+            ctx.moveTo(pad.left, y);
+            ctx.lineTo(pad.left + cW, y);
+            ctx.strokeStyle = gridCol;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Y labels
+            const val = (maxVal * i / gridLines);
+            ctx.fillStyle = textCol;
+            ctx.font = `11px Inter, sans-serif`;
+            ctx.textAlign = 'right';
+            ctx.fillText(fmt(val) + ' kr', pad.left - 8, y + 4);
+        }
+
+        // Bars
+        proj.forEach((r, i) => {
+            const x  = pad.left + i * gap + (gap - barW) / 2;
+            const bH = (r.totalDiv / maxVal) * cH;
+            const y  = pad.top + cH - bH;
+
+            // Gradient
+            const grad = ctx.createLinearGradient(x, y, x, pad.top + cH);
+            grad.addColorStop(0, barHigh);
+            grad.addColorStop(1, barColor);
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.roundRect(x, y, barW, bH, [4, 4, 0, 0]);
+            ctx.fill();
+
+            // X label
+            ctx.fillStyle = textCol;
+            ctx.font = `11px Inter, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText('År ' + r.year, pad.left + i * gap + gap / 2, pad.top + cH + 20);
+        });
+
+        // Line for YOC (secondary axis label)
+        ctx.beginPath();
+        proj.forEach((r, i) => {
+            const x = pad.left + i * gap + gap / 2;
+            const y = pad.top + cH - (r.totalDiv / maxVal) * cH;
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.strokeStyle = primary;
+        ctx.lineWidth = 2.5;
+        ctx.lineJoin = 'round';
+        ctx.stroke();
+
+        // Dots on line
+        proj.forEach((r, i) => {
+            const x = pad.left + i * gap + gap / 2;
+            const y = pad.top + cH - (r.totalDiv / maxVal) * cH;
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, Math.PI * 2);
+            ctx.fillStyle = primary;
+            ctx.fill();
+            ctx.strokeStyle = dark ? '#111827' : '#fff';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        });
+    }
+
+    // ── Table toggle ──────────────────────────────────────────────────
+    function toggleTable() {
+        const btn  = document.getElementById('tableToggle');
+        const wrap = document.getElementById('tableWrap');
+        btn.classList.toggle('open');
+        wrap.classList.toggle('open');
+    }
+
+    // ── FAQ toggle ────────────────────────────────────────────────────
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        document.querySelectorAll('.faq-q.open').forEach(b => {
+            b.classList.remove('open');
+            b.nextElementSibling.classList.remove('open');
+        });
+        if (!isOpen) {
+            btn.classList.add('open');
+            answer.classList.add('open');
+        }
+    }
+
+    // ── Init ──────────────────────────────────────────────────────────
+    update();
+    window.addEventListener('resize', () => {
+        const p = getValues();
+        drawChart(buildProjection(p));
+    });
+</script>
+</body>
+</html>
