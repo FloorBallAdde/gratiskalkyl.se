@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hur beräknas pension i Sverige? – Guide 2026 | GratisKalkyl.se</title>
+    <meta name="description" content="Lär dig hur pension beräknas i Sverige 2026. Vi förklarar allmän pension (inkomstpension + premiepension), tjänstepension och eget sparande — och hur mycket du kan förvänta dig att få.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/hur-beraknas-pension.html">
+    <meta property="og:title" content="Hur beräknas pension i Sverige? – Guide 2026">
+    <meta property="og:description" content="Fullständig guide om pension i Sverige 2026. Inkomstpension, premiepension, tjänstepension och hur du räknar ut din framtida pension.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/hur-beraknas-pension.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hur beräknas pension? Guide 2026">
+    <meta name="twitter:description" content="Allt om pensionsberäkning i Sverige — inkomstpension, premiepension, tjänstepension och eget sparande.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        header { background: var(--primary); color: white; padding: 16px 20px; }
+        header a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; }
+        header a:hover { color: white; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: white; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+        /* Breadcrumb */
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        /* Article */
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        /* Content */
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        /* Pillar table */
+        .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+        @media (max-width: 600px) { .pillar-grid { grid-template-columns: 1fr; } }
+        .pillar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+        .pillar-card .pillar-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .pillar-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+        .pillar-card p { font-size: 0.85rem; color: var(--text-light); margin: 0; }
+        .pillar-pct { font-size: 1.3rem; font-weight: 800; color: var(--primary); margin: 8px 0 4px; }
+
+        /* Info box */
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        /* CTA Card */
+        .cta-card { background: var(--primary); border-radius: var(--radius); padding: 28px 32px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+        @media (prefers-color-scheme: dark) {
+            .cta-card { background: #065f46; }
+            .cta-btn { color: #065f46; }
+        }
+
+        /* FAQ */
+        .faq-section { padding: 0 0 40px; }
+        .faq-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; background: var(--white); border: none; padding: 20px 24px; text-align: left; font-size: 1rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        .faq-question:hover { background: var(--primary-light); }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); font-weight: 400; flex-shrink: 0; margin-left: 16px; }
+        .faq-question.open::after { content: '−'; }
+        .faq-answer { display: none; padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-light); line-height: 1.7; background: var(--white); }
+        .faq-answer.open { display: block; }
+
+        /* Footer */
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 40px; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 20px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur beräknas allmän pension i Sverige?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Allmän pension består av inkomstpension och premiepension. Du avsätter totalt 18,5% av din pensionsgrundande inkomst (PGI) per år — 16% till inkomstpension och 2,5% till premiepension. Pensionen beräknas sedan utifrån din totala behållning i systemet och den förväntade återstående livslängden vid pensionsuttag."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är pensionsgrundande inkomst (PGI)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra inkomster upp till 8,07 inkomstbasbelopp (ca 578 000 kr för 2026). Inkomster över taket ger ingen ytterligare pensionsrätt i det allmänna systemet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur stor är tjänstepensionen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tjänstepensionens storlek beror på vilket kollektivavtal du omfattas av och din lön. Vanligtvis avsätter arbetsgivaren 4,5% av lönen under taket och 30% på den del av lönen som överstiger ca 44 000 kr/mån (7,5 inkomstbasbelopp)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan jag påverka min pension?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja — du kan placera dina premiepensionspengar (2,5% av PGI) i valfria fonder via Pensionsmyndigheten. Du kan också börja spara privat via IPS (individuellt pensionssparande) eller ISK. Att jobba längre har stor effekt: varje extra år du arbetar ökar din pension markant."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Från vilken ålder kan jag ta ut pension?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Du kan ta ut allmän pension från 63 år (från och med 2026). Garantipension kan du ta ut från 66 år. Det finns ingen övre åldersgräns — ju längre du väntar med att ta ut pension, desto högre månadsbelopp får du."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur mycket pension kan jag förvänta mig?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Som tumregel brukar man räkna med att pensionen motsvarar 50–70% av din sista lön, beroende på hur länge du arbetat och vilken tjänstepension du har. Med en månadslön på 40 000 kr kan du förvänta dig ca 20 000–28 000 kr i pension vid 65 år, före skatt."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">GratisKalkyl.se</a>
+            <a href="/kalkylatorer/pensionskalkylator.html">→ Räkna ut din pension</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Hur beräknas pension?</span>
+        </nav>
+
+        <header class="article-header">
+            <span class="article-tag">Guide</span>
+            <h1>Hur beräknas pension i Sverige? – Guide 2026</h1>
+            <p class="article-meta">Uppdaterad mars 2026 · 6 min läsning</p>
+            <p class="article-intro">Det svenska pensionssystemet vilar på tre pelare: <strong>allmän pension</strong>, <strong>tjänstepension</strong> och <strong>privat pensionssparande</strong>. Hur stor din pension blir beror på hur länge du arbetat, hur hög din lön har varit och hur dina sparade pengar förvaltas. Här reder vi ut hur beräkningen fungerar.</p>
+        </header>
+
+        <article class="article-body">
+            <h2>De tre pelarna</h2>
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🏛️</div>
+                    <h4>Allmän pension</h4>
+                    <div class="pillar-pct">18,5 %</div>
+                    <p>Statlig. Inkomstpension + premiepension. Obligatorisk för alla.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🏢</div>
+                    <h4>Tjänstepension</h4>
+                    <div class="pillar-pct">4–30 %</div>
+                    <p>Från arbetsgivaren via kollektivavtal. Täcker ca 90 % av arbetstagare.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">💰</div>
+                    <h4>Privat sparande</h4>
+                    <div class="pillar-pct">Valfritt</div>
+                    <p>IPS, ISK eller kapitalförsäkring. Du styr belopp och placeringar.</p>
+                </div>
+            </div>
+
+            <h2>Allmän pension — så fungerar beräkningen</h2>
+            <p>Den allmänna pensionen finansieras av dina och din arbetsgivares avgifter. Totalt avsätts <strong>18,5 %</strong> av din pensionsgrundande inkomst (PGI) varje år:</p>
+            <ul>
+                <li><strong>16 %</strong> till inkomstpension — fördelas till ett fiktivt konto och räknas upp med inkomstindexet</li>
+                <li><strong>2,5 %</strong> till premiepension — placeras i fonder du väljer via Pensionsmyndigheten</li>
+            </ul>
+            <div class="info-box">
+                <p><strong>Tak för PGI 2026:</strong> Pensionsavgiften beräknas bara på inkomst upp till <strong>8,07 inkomstbasbelopp</strong>, vilket motsvarar ca 578 000 kr per år (ca 48 000 kr/mån). Inkomster över taket genererar ingen ytterligare statlig pensionsrätt.</p>
+            </div>
+
+            <h3>Hur räknas pensionen ut när det är dags?</h3>
+            <p>När du börjar ta ut pension delas din totala behållning med ett <em>delningstal</em> som baseras på genomsnittlig återstående livslängd för ditt födelseår. Tar du ut pension tidigt delas behållningen på fler år — pengarna räcker längre men månadsbeloppet blir lägre.</p>
+            <p>Garantipension tillkommer för den som haft låga eller inga inkomster, och den kan tas ut från 66 år (höjs successivt).</p>
+
+            <h2>Tjänstepension — arbetsgivarens bidrag</h2>
+            <p>Tjänstepensionen betalas av din arbetsgivare och styrs av kollektivavtal. De vanligaste avtalen i privat sektor (ITP, SAF-LO) innebär:</p>
+            <ul>
+                <li>Lön <strong>under</strong> ca 44 000 kr/mån: arbetsgivaren avsätter 4,5 %</li>
+                <li>Lön <strong>över</strong> ca 44 000 kr/mån: arbetsgivaren avsätter 30 % på den överskjutande delen</li>
+            </ul>
+            <p>Tjänstepensionen ger ofta ett viktigt komplement — särskilt för den som har lön över intjänandetaket för allmän pension.</p>
+
+            <h2>Privat pensionssparande</h2>
+            <p>Det finns inget avdragsgillt individuellt pensionssparande (IPS) längre för anställda i Sverige (avdraget togs bort 2016). Istället sparar många i <a href="/kalkylatorer/isk-skatteberaknare.html">ISK (investeringssparkonto)</a> som har låg schablonbeskattning och full flexibilitet. En annan möjlighet är kapitalförsäkring.</p>
+
+            <h2>Så höjer du din pension</h2>
+            <ol>
+                <li><strong>Jobba längre</strong> — varje extra år höjer din pension markant tack vare högre behållning och lägre delningstal</li>
+                <li><strong>Välj rätt fonder</strong> i premiepensionen — byt till passande fondportfölj via minPension.se</li>
+                <li><strong>Spara i ISK</strong> — ränta-på-ränta-effekten gör stor skillnad över tid</li>
+                <li><strong>Kontrollera din tjänstepension</strong> — se att arbetsgivaren avsätter rätt belopp</li>
+            </ol>
+
+            <h2>Tumregel: hur mycket kan jag förvänta mig?</h2>
+            <p>Som tumregel brukar pensionen motsvara ungefär <strong>50–70 % av din sista lön</strong> vid pension vid 65 år, förutsatt 40 år i arbetslivet och normal tjänstepension. Har du arbetat kortare tid eller haft luckor (studier, vård av barn) kan det bli lägre.</p>
+            <div class="info-box">
+                <p><strong>Exempel:</strong> Månadslön 40 000 kr → trolig pension ca 20 000–28 000 kr/mån (brutto). Skatt på pension är lägre än på lön, men du bör räkna med lägre disponibel inkomst som pensionär.</p>
+            </div>
+        </article>
+
+        <div class="cta-card">
+            <h3>Räkna ut din framtida pension direkt</h3>
+            <p>Ange din lön, ålder och pensionsålder — se hur allmän pension, tjänstepension och eget sparande summeras.</p>
+            <a href="/kalkylatorer/pensionskalkylator.html" class="cta-btn">Öppna pensionskalkylatorn →</a>
+        </div>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor om pension</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Hur beräknas allmän pension i Sverige?</button>
+                <div class="faq-answer">
+                    <p>Allmän pension består av inkomstpension och premiepension. Du avsätter totalt 18,5 % av din pensionsgrundande inkomst (PGI) per år — 16 % till inkomstpension och 2,5 % till premiepension. Pensionen beräknas sedan utifrån din totala behållning och den förväntade livslängden vid pensionsuttag.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Vad är pensionsgrundande inkomst (PGI)?</button>
+                <div class="faq-answer">
+                    <p>PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra inkomster upp till 8,07 inkomstbasbelopp (ca 578 000 kr för 2026). Inkomster över taket ger ingen ytterligare pensionsrätt i det allmänna systemet.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Hur stor är tjänstepensionen?</button>
+                <div class="faq-answer">
+                    <p>Tjänstepensionens storlek beror på kollektivavtal och lön. Vanligtvis avsätter arbetsgivaren 4,5 % på lön under ca 44 000 kr/mån och 30 % på den del som överstiger det beloppet.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Kan jag påverka min pension?</button>
+                <div class="faq-answer">
+                    <p>Ja — du kan välja fonder för dina premiepensionspengar via Pensionsmyndigheten. Du kan också spara i ISK eller kapitalförsäkring. Att arbeta längre har stor effekt: varje extra år höjer din pension märkbart.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Från vilken ålder kan jag ta ut pension?</button>
+                <div class="faq-answer">
+                    <p>Du kan ta ut allmän pension från 63 år (från 2026). Garantipension kan tas ut från 66 år. Det finns ingen övre åldersgräns — ju längre du väntar, desto högre månadsbelopp.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Hur mycket pension kan jag förvänta mig?</button>
+                <div class="faq-answer">
+                    <p>Som tumregel räknar man med att pensionen motsvarar 50–70 % av din sista lön. Med en månadslön på 40 000 kr kan du förvänta dig ca 20 000–28 000 kr i pension vid 65 år, före skatt. Använd vår pensionskalkylator för en mer exakt beräkning.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('open');
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('open');
+                q.setAttribute('aria-expanded', 'false');
+                q.nextElementSibling.classList.remove('open');
+            });
+            if (!isOpen) {
+                btn.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                answer.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
