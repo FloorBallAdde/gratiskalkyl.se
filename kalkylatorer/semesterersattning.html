@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semesterersättningskalkylator 2026 – Räkna ut semesterersättning timanställd | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut din semesterersättning 2026 som timanställd eller vikarie. Procentregeln 12% på total intjänad lön. Se ersättning totalt och per dag. Gratis kalkylator.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/semesterersattning.html">
+    <meta property="og:title" content="Semesterersättningskalkylator 2026 – Timanställd & vikarie">
+    <meta property="og:description" content="Räkna ut din semesterersättning med procentregeln. Gratis kalkylator för timanställda och vikarier 2026.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/semesterersattning.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Semesterersättningskalkylator 2026 – Timanställd">
+    <meta name="twitter:description" content="Räkna ut semesterersättning med procentregeln 12%. Gratis kalkylator för timanställda 2026.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --accent: #2563eb; --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827; --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2); --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3); }
+            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 16px 20px; }
+        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        header a:hover { color: white; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: clamp(1.6rem,4vw,2.2rem); font-weight: 800; margin: 32px 0 8px; }
+        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
+        .card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px; border: 1px solid var(--border); }
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media(max-width:600px) { .input-grid { grid-template-columns: 1fr; } }
+        label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+        .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        input[type="number"], select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--text); transition: border-color 0.2s; }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .btn { display: block; width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
+        .btn:hover { background: var(--primary-dark); }
+        .results { display: none; }
+        .results.visible { display: block; }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
+        .result-box .value { font-size: 1.5rem; font-weight: 800; color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .result-box .value { color: var(--primary); } }
+        .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        .result-box.highlight { background: var(--primary); }
+        .result-box.highlight .label,
+        .result-box.highlight .value,
+        .result-box.highlight .sub { color: white; }
+        canvas { width: 100%; height: 220px; display: block; margin-top: 16px; }
+        .breakdown-toggle { margin-top: 16px; }
+        .breakdown-toggle summary { font-weight: 600; cursor: pointer; color: var(--primary); font-size: 0.95rem; padding: 10px 0; list-style: none; display: flex; align-items: center; gap: 8px; }
+        .breakdown-toggle summary::-webkit-details-marker { display: none; }
+        .breakdown-toggle summary::before { content: '▶'; font-size: 0.7rem; transition: transform 0.2s; }
+        .breakdown-toggle[open] summary::before { transform: rotate(90deg); }
+        .breakdown-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 12px; }
+        .breakdown-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
+        .breakdown-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        .breakdown-table tr:nth-child(even) td { background: var(--primary-light); }
+        .breakdown-table .total-row td { font-weight: 700; color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .breakdown-table .total-row td { color: var(--primary); } }
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
+        .info-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; margin-top: 24px; }
+        .info-section p { color: var(--text-light); margin-bottom: 16px; }
+        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
+        .info-section li { margin-bottom: 8px; }
+        .formula-box { background: var(--primary-light); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; font-family: monospace; font-size: 0.9rem; margin: 16px 0; color: var(--text); white-space: pre-line; }
+        .faq { margin-bottom: 48px; }
+        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+        .faq-item summary { padding: 16px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding: 0 20px 16px; color: var(--text-light); }
+        .link-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+        .link-pill { display: inline-block; padding: 8px 16px; background: var(--primary-light); border-radius: 20px; color: var(--primary-dark); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+        @media(prefers-color-scheme:dark) { .link-pill { color: var(--primary); } }
+        .link-pill:hover { background: var(--primary); color: white; }
+        footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.85rem; margin-top: 48px; }
+        footer a { color: rgba(255,255,255,0.9); }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Vad är semesterersättning?","acceptedAnswer":{"@type":"Answer","text":"Semesterersättning är den utbetalning du som timanställd, vikarie eller avgångande anställd har rätt till istället för betald semesterlön. Den beräknas med procentregeln och uppgår till 12% av den totala intjänade bruttolönen under intjänandeåret."}},
+        {"@type":"Question","name":"Hur beräknas semesterersättning för timanställda?","acceptedAnswer":{"@type":"Answer","text":"Semesterersättning för timanställda beräknas med procentregeln: Totalt intjänad bruttolön (inklusive OB-tillägg, övertid och andra rörliga ersättningar) multiplicerat med 12%. Resultatet är din totala semesterersättning. Antalet semesterdagar du tjänat in påverkar inte beloppet — det är alltid 12% av lönen."}},
+        {"@type":"Question","name":"Vad räknas in i den totala lönen vid beräkning av semesterersättning?","acceptedAnswer":{"@type":"Answer","text":"I den totala lönen räknas in: grundlön (timlön × timmar), OB-tillägg, övertidsersättning, provision och andra rörliga ersättningar. Sjukersättning och föräldrapenning räknas normalt inte in. Vid tveksamhet, kontrollera ditt kollektivavtal eller fråga din arbetsgivare."}},
+        {"@type":"Question","name":"Skiljer sig semesterersättning från semesterlön?","acceptedAnswer":{"@type":"Answer","text":"Ja. Semesterlön betalas ut medan du är anställd och tar semester. Semesterersättning betalas istället för semesterlön, typiskt till timanställda (vars schema varierar) och till anställda som slutar utan att ha tagit ut sin intjänade semester. Semesterersättningen är alltid 12% av bruttolönen."}},
+        {"@type":"Question","name":"När betalas semesterersättning ut?","acceptedAnswer":{"@type":"Answer","text":"Semesterersättning betalas normalt ut löpande varje lön (för timanställda) eller vid anställningens slut. Arbetsgivaren ska specificera semesterersättningen separat på lönebeskedet. Utbetalning vid anställningens slut ska ske med sista lönen eller senast en månad efter att anställningen avslutades."}},
+        {"@type":"Question","name":"Hur många semesterdagar tjänar en timanställd in?","acceptedAnswer":{"@type":"Answer","text":"Timanställda tjänar in semesterdagar på samma sätt som månadsanställda: 25 dagar per år enligt semesterlagen. Antal intjänade dagar baseras på hur stor del av semesterintjänandeåret (1 april–31 mars) du arbetat. Har du arbetat hela året tjänar du in 25 dagar. Kollektivavtal kan ge fler dagar."}},
+        {"@type":"Question","name":"Ska jag betala skatt på semesterersättning?","acceptedAnswer":{"@type":"Answer","text":"Ja, semesterersättning är skattepliktig inkomst precis som ordinarie lön. Din arbetsgivare drar preliminärskatt baserat på din kommunalskattesats och eventuell statlig skatt. I vår kalkylator kan du ange din skattesats för att se en uppskattning av nettoutbetalningen."}}
+    ]}</script>
+</head>
+<body>
+<header>
+    <div class="container"><a href="/">← Alla kalkylatorer</a></div>
+</header>
+
+<main class="container">
+    <h1>📅 Semesterersättningskalkylator 2026</h1>
+    <p class="subtitle">Räkna ut din semesterersättning som timanställd eller vikarie — procentregeln 12% på total intjänad lön.</p>
+
+    <div class="card">
+        <div class="input-grid">
+            <div>
+                <label for="totalLon">Total intjänad bruttolön (kr/år)</label>
+                <input type="number" id="totalLon" value="180000" min="1000" max="2000000" step="1000">
+                <div class="hint">Summa av alla intjänade bruttolöner under intjänandeåret</div>
+            </div>
+            <div>
+                <label for="antalDagar">Intjänade semesterdagar</label>
+                <input type="number" id="antalDagar" value="25" min="1" max="50" step="1">
+                <div class="hint">Antal semesterdagar du tjänat in (normalt 25 per år)</div>
+            </div>
+            <div>
+                <label for="obTillagg">OB-tillägg & övertid (kr/år)</label>
+                <input type="number" id="obTillagg" value="0" min="0" max="500000" step="500">
+                <div class="hint">Ingår i totallönen ovan om du redan summerat allt</div>
+            </div>
+            <div>
+                <label for="skattesats">Kommunalskatt (%)</label>
+                <input type="number" id="skattesats" value="32" min="20" max="40" step="0.1">
+                <div class="hint">Din kommunalskattesats (rikssnitt 32,4%)</div>
+            </div>
+        </div>
+        <button class="btn" onclick="berakna()">Beräkna semesterersättning</button>
+    </div>
+
+    <div class="results" id="results">
+        <div class="card">
+            <div class="result-grid" id="resultGrid"></div>
+            <canvas id="chart"></canvas>
+            <details class="breakdown-toggle" id="breakdownToggle">
+                <summary>Visa detaljerad beräkning</summary>
+                <table class="breakdown-table" id="breakdownTable"></table>
+            </details>
+        </div>
+    </div>
+
+    <!-- SEO-text -->
+    <div class="info-section">
+        <h2>Semesterersättning 2026 – regler för timanställda och vikarier</h2>
+        <p>Semesterersättning är det belopp du som timanställd, vikarie eller behovsanställd har rätt att få istället för betald ledighet under semestern. Eftersom din arbetstid varierar – du kanske inte arbetar alls under sommaren – betalas semesterersättningen normalt ut löpande med varje lön, eller som en klumpsumma när anställningen upphör.</p>
+        <p>Reglerna styrs av <strong>semesterlagen (SemL 1977:480)</strong>. Lagen gäller alla arbetstagare i Sverige, oavsett om du jobbar heltid, deltid eller enbart vid behov.</p>
+
+        <h3>Procentregeln – grunden för semesterersättning</h3>
+        <p>Semesterersättning för timanställda beräknas alltid med <strong>procentregeln</strong>. Det är den enda tillämpliga metoden när lönen varierar beroende på antalet arbetade timmar.</p>
+        <div class="formula-box">Semesterersättning (brutto) = Total intjänad bruttolön × 12%
+
+Ersättning per dag = Semesterersättning totalt ÷ Antal intjänade dagar
+
+Exempel: 180 000 kr × 12% = 21 600 kr totalt
+Med 25 dagar = 864 kr per dag</div>
+
+        <h3>Vad räknas in i den totala intjänade lönen?</h3>
+        <p>Det är viktigt att ta med all ersättning för utfört arbete:</p>
+        <ul>
+            <li>Grundlön (timlön × arbetade timmar)</li>
+            <li>OB-tillägg (natt, helg, kväll)</li>
+            <li>Övertidsersättning</li>
+            <li>Provision och resultatbaserad ersättning</li>
+            <li>Skiftillägg och andra rörliga tillägg</li>
+        </ul>
+        <p>Observera att sjukersättning, föräldrapenning och liknande transfereringar <em>inte</em> räknas in i underlaget.</p>
+
+        <h3>Hur betalas semesterersättning ut?</h3>
+        <p>Det finns tre vanliga modeller:</p>
+        <ul>
+            <li><strong>Löpande utbetalning:</strong> 12% läggs på varje lönebesked. Vanligast för timanställda och behovsanställda.</li>
+            <li><strong>Vid semester:</strong> Ersättningen sparas och betalas ut när du tar ledigt. Ovanligare för timanställda.</li>
+            <li><strong>Vid avslut:</strong> Intjänad men ej uttagen semesterersättning betalas med sista lönen. Gäller alla anställningsformer.</li>
+        </ul>
+        <p>Arbetsgivaren är skyldig att specificera semesterersättningens storlek på ditt lönebesked. Om semesterersättningen inte är utmärkt separat bör du begära en specifikation.</p>
+
+        <h3>Timanställd vs månadsanställd – viktiga skillnader</h3>
+        <p>En månadsanställd tjänar in semesterlön och tar sedan betald semester — de jobbar inte under semestern. En timanställd kan ibland välja att ta obetald ledighet (om ingen ersättning betalas löpande) eller så sker ingen semester alls om arbetsgivaren inte erbjuder pass under sommarperioden. Semesterersättningen fungerar som kompensation för att du inte kan ta "traditionell" betald semester.</p>
+
+        <h3>Semesterersättning vid avslut</h3>
+        <p>Oavsett anställningsform har du rätt till semesterersättning för <em>alla</em> intjänade men ej uttagna semesterdagar när anställningen upphör. Arbetsgivaren ska betala ut detta med sista lönen. Glöm inte att kontrollera detta — det är en av de vanligaste bristerna vid slutavräkning.</p>
+
+        <div class="link-row">
+            <a href="/kalkylatorer/semesterlonekalkylator.html" class="link-pill">🏖️ Semesterlönekalkylator</a>
+            <a href="/kalkylatorer/loneraknare.html" class="link-pill">💰 Löneräknare 2026</a>
+            <a href="/kalkylatorer/rot-rut.html" class="link-pill">🏠 ROT & RUT-kalkylator</a>
+            <a href="/kalkylatorer/sparkalkylator.html" class="link-pill">🎯 Sparkalkylator</a>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+        <h2>Vanliga frågor om semesterersättning 2026</h2>
+
+        <details class="faq-item">
+            <summary>Vad är semesterersättning?</summary>
+            <p>Semesterersättning är den utbetalning du som timanställd, vikarie eller avgångande anställd har rätt till istället för betald semesterlön. Den beräknas med procentregeln och uppgår till 12% av den totala intjänade bruttolönen under intjänandeåret.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Hur beräknas semesterersättning för timanställda?</summary>
+            <p>Semesterersättning för timanställda beräknas med procentregeln: Totalt intjänad bruttolön (inklusive OB-tillägg, övertid och andra rörliga ersättningar) multiplicerat med 12%. Resultatet är din totala semesterersättning. Antalet semesterdagar du tjänat in påverkar inte beloppet — det är alltid 12% av lönen.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Vad räknas in i den totala lönen vid beräkning av semesterersättning?</summary>
+            <p>I den totala lönen räknas in: grundlön (timlön × timmar), OB-tillägg, övertidsersättning, provision och andra rörliga ersättningar. Sjukersättning och föräldrapenning räknas normalt inte in. Vid tveksamhet, kontrollera ditt kollektivavtal eller fråga din arbetsgivare.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Skiljer sig semesterersättning från semesterlön?</summary>
+            <p>Ja. Semesterlön betalas ut medan du är anställd och tar semester. Semesterersättning betalas istället för semesterlön, typiskt till timanställda (vars schema varierar) och till anställda som slutar utan att ha tagit ut sin intjänade semester. Semesterersättningen är alltid 12% av bruttolönen.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>När betalas semesterersättning ut?</summary>
+            <p>Semesterersättning betalas normalt ut löpande varje lön (för timanställda) eller vid anställningens slut. Arbetsgivaren ska specificera semesterersättningen separat på lönebeskedet. Utbetalning vid anställningens slut ska ske med sista lönen eller senast en månad efter att anställningen avslutades.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Hur många semesterdagar tjänar en timanställd in?</summary>
+            <p>Timanställda tjänar in semesterdagar på samma sätt som månadsanställda: 25 dagar per år enligt semesterlagen. Antal intjänade dagar baseras på hur stor del av semesterintjänandeåret (1 april–31 mars) du arbetat. Har du arbetat hela året tjänar du in 25 dagar. Kollektivavtal kan ge fler dagar.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Ska jag betala skatt på semesterersättning?</summary>
+            <p>Ja, semesterersättning är skattepliktig inkomst precis som ordinarie lön. Din arbetsgivare drar preliminärskatt baserat på din kommunalskattesats och eventuell statlig skatt. I vår kalkylator kan du ange din skattesats för att se en uppskattning av nettoutbetalningen.</p>
+        </details>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+        <a href="/">Tillbaka till alla kalkylatorer</a></p>
+        <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+    </div>
+</footer>
+
+<script>
+function fmt(n) {
+    return Math.round(n).toLocaleString('sv-SE') + ' kr';
+}
+
+function berakna() {
+    const totalLon = parseFloat(document.getElementById('totalLon').value) || 0;
+    const obTillagg = parseFloat(document.getElementById('obTillagg').value) || 0;
+    const antalDagar = parseInt(document.getElementById('antalDagar').value) || 25;
+    const skattesats = parseFloat(document.getElementById('skattesats').value) || 32;
+
+    // Total löneunderlag (OB ingår i totalLon om redan summerat, annars adderas separat)
+    const underlag = totalLon + obTillagg;
+
+    // Semesterersättning = 12% av underlag
+    const semErsattning = underlag * 0.12;
+
+    // Per dag
+    const perDag = semErsattning / antalDagar;
+
+    // Netto (schablonmässig — kommunalskatt + begränsad statlig skatt)
+    const skatt = semErsattning * (skattesats / 100);
+    const netto = semErsattning - skatt;
+
+    // Månadsuppdelning (om löpande utbetalning över 12 månader)
+    const perManad = semErsattning / 12;
+
+    // Render result boxes
+    const grid = document.getElementById('resultGrid');
+    grid.innerHTML = `
+        <div class="result-box highlight">
+            <div class="label">Semesterersättning brutto</div>
+            <div class="value">${fmt(semErsattning)}</div>
+            <div class="sub">12% av ${fmt(underlag)}</div>
+        </div>
+        <div class="result-box">
+            <div class="label">Netto (efter skatt)</div>
+            <div class="value">${fmt(netto)}</div>
+            <div class="sub">Skatt: ${fmt(skatt)}</div>
+        </div>
+        <div class="result-box">
+            <div class="label">Per semesterdag</div>
+            <div class="value">${fmt(perDag)}</div>
+            <div class="sub">${antalDagar} intjänade dagar</div>
+        </div>
+        <div class="result-box">
+            <div class="label">Per månad (löpande)</div>
+            <div class="value">${fmt(perManad)}</div>
+            <div class="sub">om utbetalas månadsvis</div>
+        </div>
+    `;
+
+    // Render breakdown table
+    const table = document.getElementById('breakdownTable');
+    table.innerHTML = `
+        <tr><th>Post</th><th>Belopp</th><th>Andel</th></tr>
+        <tr><td>Total löneunderlag</td><td>${fmt(underlag)}</td><td>100%</td></tr>
+        <tr><td>Semesterersättning (12%)</td><td>${fmt(semErsattning)}</td><td>12%</td></tr>
+        <tr><td>Preliminärskatt (${skattesats}%)</td><td>−${fmt(skatt)}</td><td>${skattesats.toFixed(1)}%</td></tr>
+        <tr class="total-row"><td>Nettoutbetalning</td><td>${fmt(netto)}</td><td>${(100 - skattesats).toFixed(1)}%</td></tr>
+    `;
+
+    // Canvas chart – stacked bar: brutto vs skatt vs netto
+    drawChart(semErsattning, skatt, netto, underlag);
+
+    document.getElementById('results').classList.add('visible');
+}
+
+function drawChart(brutto, skatt, netto, underlag) {
+    const canvas = document.getElementById('chart');
+    const dpr = window.devicePixelRatio || 1;
+    const W = canvas.offsetWidth || 700;
+    const H = 220;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const textColor = isDark ? '#d1d5db' : '#555';
+    const gridColor = isDark ? '#374151' : '#e2e8f0';
+    const primaryColor = isDark ? '#34d399' : '#1a6b4a';
+    const secondaryColor = isDark ? '#6b7280' : '#9ca3af';
+
+    ctx.clearRect(0, 0, W, H);
+
+    const pad = { top: 32, right: 24, bottom: 48, left: 72 };
+    const chartW = W - pad.left - pad.right;
+    const chartH = H - pad.top - pad.bottom;
+
+    // Data: 3 bars — Löneunderlag, Brutto ersättning, Netto ersättning
+    const labels = ['Löneunderlag', 'Brutto ersättning', 'Netto ersättning'];
+    const values = [underlag, brutto, netto];
+    const colors = [secondaryColor, primaryColor, isDark ? '#059669' : '#065f46'];
+
+    const maxVal = Math.max(...values) * 1.15;
+    const barW = Math.min(chartW / values.length * 0.55, 80);
+    const gap = chartW / values.length;
+
+    // Grid lines
+    ctx.strokeStyle = gridColor;
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+        const y = pad.top + chartH - (i / 4) * chartH;
+        ctx.beginPath();
+        ctx.moveTo(pad.left, y);
+        ctx.lineTo(pad.left + chartW, y);
+        ctx.stroke();
+        // Y-axis labels
+        ctx.fillStyle = textColor;
+        ctx.font = '11px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        const val = Math.round((maxVal * i) / 4);
+        ctx.fillText(val >= 1000 ? (val / 1000).toFixed(0) + 'k' : val, pad.left - 8, y + 4);
+    }
+
+    // Y axis label
+    ctx.fillStyle = textColor;
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'right';
+    ctx.fillText('kr', pad.left - 8, pad.top - 8);
+
+    // Bars
+    values.forEach((val, i) => {
+        const barH = (val / maxVal) * chartH;
+        const x = pad.left + gap * i + gap / 2 - barW / 2;
+        const y = pad.top + chartH - barH;
+
+        ctx.fillStyle = colors[i];
+        ctx.beginPath();
+        ctx.roundRect ? ctx.roundRect(x, y, barW, barH, [4, 4, 0, 0]) : ctx.rect(x, y, barW, barH);
+        ctx.fill();
+
+        // Value label on top
+        ctx.fillStyle = textColor;
+        ctx.font = 'bold 12px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        const dispVal = val >= 1000 ? (val / 1000).toFixed(1) + 'k' : Math.round(val);
+        ctx.fillText(dispVal + ' kr', x + barW / 2, y - 6);
+
+        // X-axis label
+        ctx.font = '11px Inter, sans-serif';
+        ctx.fillStyle = textColor;
+        ctx.fillText(labels[i], x + barW / 2, H - pad.bottom + 18);
+    });
+}
+
+// Auto-calculate on load
+window.addEventListener('load', berakna);
+
+// Live update
+['totalLon', 'obTillagg', 'antalDagar', 'skattesats'].forEach(id => {
+    document.getElementById(id).addEventListener('input', berakna);
+});
+</script>
+</body>
+</html>
