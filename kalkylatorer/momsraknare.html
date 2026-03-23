@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momsräknare 2026 – Räkna ut moms snabbt och enkelt | GratisKalkyl.se</title>
+    <meta name="description" content="Räkna ut moms för 2026. Lägg till eller dra av moms (25%, 12%, 6%). Se pris inkl. moms, exkl. moms och momsbelopp. Gratis momsräknare online.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/momsraknare.html">
+    <meta property="og:title" content="Momsräknare 2026 – Lägg till eller dra av moms">
+    <meta property="og:description" content="Räkna ut moms enkelt. Ange belopp och välj momssats 25%, 12% eller 6%. Se pris inkl. och exkl. moms direkt.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/momsraknare.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Momsräknare 2026 – Räkna ut moms">
+    <meta name="twitter:description" content="Lägg till eller dra av moms 25%, 12% eller 6%. Gratis momsräknare för 2026.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --accent: #2563eb; --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827; --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2); --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3); }
+            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 16px 20px; }
+        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        header a:hover { color: white; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: clamp(1.6rem,4vw,2.2rem); font-weight: 800; margin: 32px 0 8px; }
+        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
+        .card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px; border: 1px solid var(--border); }
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media(max-width:600px) { .input-grid { grid-template-columns: 1fr; } }
+        label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+        .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        input[type="number"], select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--text); transition: border-color 0.2s; }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .mode-toggle { display: flex; gap: 0; margin-bottom: 20px; border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+        .mode-toggle button { flex: 1; padding: 12px 8px; border: none; background: var(--white); color: var(--text-light); font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s; }
+        .mode-toggle button.active { background: var(--primary); color: white; }
+        .mode-toggle button:not(.active):hover { background: var(--primary-light); color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .mode-toggle button:not(.active):hover { color: var(--primary); } }
+        .btn { display: block; width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
+        .btn:hover { background: var(--primary-dark); }
+        .results { display: none; }
+        .results.visible { display: block; }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
+        .result-box .value { font-size: 1.45rem; font-weight: 800; color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .result-box .value { color: var(--primary); } }
+        .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+        .result-box.highlight { background: var(--primary); }
+        .result-box.highlight .label,
+        .result-box.highlight .value,
+        .result-box.highlight .sub { color: white; }
+        canvas { width: 100%; height: 200px; display: block; margin-top: 16px; }
+        .breakdown-toggle { margin-top: 16px; }
+        .breakdown-toggle summary { font-weight: 600; cursor: pointer; color: var(--primary); font-size: 0.95rem; padding: 10px 0; list-style: none; display: flex; align-items: center; gap: 8px; }
+        .breakdown-toggle summary::-webkit-details-marker { display: none; }
+        .breakdown-toggle summary::before { content: '▶'; font-size: 0.7rem; transition: transform 0.2s; }
+        .breakdown-toggle[open] summary::before { transform: rotate(90deg); }
+        .breakdown-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 12px; }
+        .breakdown-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
+        .breakdown-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        .breakdown-table tr:nth-child(even) td { background: var(--primary-light); }
+        .breakdown-table .total-row td { font-weight: 700; color: var(--primary-dark); }
+        @media(prefers-color-scheme:dark) { .breakdown-table .total-row td { color: var(--primary); } }
+        .rate-badges { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+        .rate-badge { padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid var(--border); color: var(--text-light); background: var(--white); cursor: pointer; transition: all 0.15s; }
+        .rate-badge.active, .rate-badge:hover { background: var(--primary); color: white; border-color: var(--primary); }
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
+        .info-section p, .info-section li { color: var(--text-light); line-height: 1.8; margin-bottom: 12px; }
+        .info-section ul { padding-left: 20px; }
+        .rate-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 16px 0; }
+        .rate-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
+        .rate-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        .rate-table tr:nth-child(even) td { background: var(--primary-light); }
+        .faq-section { margin-bottom: 48px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+        .faq-item summary { padding: 16px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item .faq-body { padding: 0 20px 16px; color: var(--text-light); line-height: 1.8; }
+        .cross-links { margin: 32px 0; }
+        .cross-links h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+        .link-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .link-chip { padding: 8px 16px; border: 1.5px solid var(--border); border-radius: 20px; text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500; transition: all 0.15s; }
+        .link-chip:hover { border-color: var(--primary); color: var(--primary); }
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; margin-top: 48px; }
+        footer p { color: var(--text-light); font-size: 0.88rem; text-align: center; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur räknar man ut moms i Sverige?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "För att lägga till moms multiplicerar du priset exkl. moms med (1 + momssatsen). Exempel: 1 000 kr × 1,25 = 1 250 kr inkl. 25% moms. För att dra av moms delar du priset inkl. moms med (1 + momssatsen). Exempel: 1 250 kr ÷ 1,25 = 1 000 kr exkl. moms."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vilka momssatser finns i Sverige 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sverige har tre momssatser: 25% (standardsats för de flesta varor och tjänster), 12% (livsmedel, restaurang, hotell, camping, konstverk, cyklar) och 6% (böcker, tidningar, kollektivtrafik, bio, teater, sport, viss musik)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad gäller för livsmedel och moms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Livsmedel och matdrycker beskattas med 12% moms i Sverige. Det gäller mat i butik, take away och restaurangmat. Alkoholhaltiga drycker beskattas däremot med 25% moms, oavsett om de säljs i butik eller på restaurang."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur fungerar momsbefrielse för småföretag?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger 80 000 kr per år. Dessa företag behöver inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är skillnaden mellan pris inkl. moms och exkl. moms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pris exkl. moms (exklusive mervärdesskatt) är nettobeloppet före moms — det belopp som ett momsregistrerat företag fakturerar utan moms. Pris inkl. moms är det totala beloppet inklusive moms — det belopp som slutkunden betalar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur redovisar man moms till Skatteverket?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Momsregistrerade företag redovisar utgående moms (moms på försäljning) minus ingående moms (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod är vanligtvis månadsvis (stora företag), kvartalsvis eller årsvis beroende på omsättning."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Gäller 12% moms på alla restaurangtjänster?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Servering av mat på restaurang, caféer och take away-ställen beskattas med 12% moms. Alkohol på restaurang har dock 25% moms. Notera att catering vid exempelvis konferenser också normalt räknas som restaurangtjänst med 12% moms."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Momsräknare 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/momsraknare.html",
+        "description": "Räkna ut moms för 2026. Lägg till eller dra av moms med momssatserna 25%, 12% och 6%.",
+        "applicationCategory": "FinanceApplication",
+        "inLanguage": "sv",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/">← GratisKalkyl.se</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Momsräknare 2026</h1>
+        <p class="subtitle">Lägg till eller dra av moms (25%, 12%, 6%). Ange beloppet och välj vad du vill räkna ut.</p>
+
+        <div class="card">
+            <!-- Mode toggle -->
+            <div class="mode-toggle" id="modeToggle">
+                <button class="active" onclick="setMode('add')" id="btnAdd">➕ Lägg till moms</button>
+                <button onclick="setMode('remove')" id="btnRemove">➖ Dra av moms</button>
+            </div>
+
+            <p id="modeDesc" style="font-size:0.88rem; color:var(--text-light); margin-bottom:20px;">
+                Du anger pris <strong>exkl. moms</strong> — vi beräknar pris inkl. moms och momsbeloppet.
+            </p>
+
+            <div class="input-grid">
+                <div>
+                    <label for="amount">Belopp (kr)</label>
+                    <input type="number" id="amount" value="1000" min="0" step="1" placeholder="Ange belopp">
+                    <p class="hint" id="amountHint">Pris exklusive moms</p>
+                </div>
+                <div>
+                    <label>Momssats</label>
+                    <div class="rate-badges">
+                        <span class="rate-badge active" onclick="setRate(25)" id="badge25">25%</span>
+                        <span class="rate-badge" onclick="setRate(12)" id="badge12">12%</span>
+                        <span class="rate-badge" onclick="setRate(6)" id="badge6">6%</span>
+                    </div>
+                    <p class="hint" id="rateHint">Standard (de flesta varor &amp; tjänster)</p>
+                </div>
+            </div>
+
+            <button class="btn" onclick="calculate()">Beräkna moms</button>
+        </div>
+
+        <div class="results card" id="results">
+            <div class="result-grid" id="resultGrid">
+                <!-- filled by JS -->
+            </div>
+
+            <canvas id="momsChart"></canvas>
+
+            <details class="breakdown-toggle" id="breakdownDetails">
+                <summary>Visa snabbregister för vanliga belopp</summary>
+                <table class="breakdown-table" id="breakdownTable">
+                    <thead>
+                        <tr>
+                            <th id="colHeader">Belopp exkl. moms</th>
+                            <th>Moms (<span id="colRate">25%</span>)</th>
+                            <th id="colResult">Belopp inkl. moms</th>
+                        </tr>
+                    </thead>
+                    <tbody id="breakdownBody"></tbody>
+                </table>
+            </details>
+        </div>
+
+        <div class="info-section">
+            <h2>Momssatser i Sverige 2026</h2>
+            <p>Sverige tillämpar tre momssatser (mervärdesskatt, moms) som regleras av mervärdesskattelagen (ML). Nedan är en översikt:</p>
+            <table class="rate-table">
+                <thead>
+                    <tr><th>Momssats</th><th>Kategori</th><th>Exempel</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>25%</strong></td><td>Standardsats</td><td>Kläder, elektronik, tjänster, alkohol, tobak</td></tr>
+                    <tr><td><strong>12%</strong></td><td>Reducerad sats</td><td>Livsmedel, restaurang, hotell, camping, konstverk, cyklar</td></tr>
+                    <tr><td><strong>6%</strong></td><td>Reducerad sats</td><td>Böcker, tidningar, kollektivtrafik, bio, teater, idrott</td></tr>
+                    <tr><td><strong>0%</strong></td><td>Momsfritt</td><td>Sjukvård, tandvård, utbildning, finansiella tjänster</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Hur man räknar ut moms</h2>
+            <p><strong>Lägga till moms (exkl. → inkl.):</strong><br>
+            Pris inkl. moms = Pris exkl. moms × (1 + momssats)<br>
+            Exempel med 25%: 800 kr × 1,25 = <strong>1 000 kr</strong></p>
+
+            <p><strong>Dra av moms (inkl. → exkl.):</strong><br>
+            Pris exkl. moms = Pris inkl. moms ÷ (1 + momssats)<br>
+            Exempel med 25%: 1 000 kr ÷ 1,25 = <strong>800 kr</strong></p>
+
+            <p><strong>Beräkna momsbeloppet ur ett inkl-pris:</strong><br>
+            Momsbelopp = Pris inkl. moms × (momssats ÷ (1 + momssats))<br>
+            Exempel: 1 000 kr × (0,25 ÷ 1,25) = <strong>200 kr</strong></p>
+
+            <h2>Momsbefrielseregeln 2026 (SMF-undantaget)</h2>
+            <p>Från 1 januari 2025 gäller en höjd omsättningsgräns för momsbefrielseregeln. Företag med en omsättning under <strong>80 000 kr per år</strong> kan ansöka om befrielse från moms och behöver då inte ta ut eller redovisa moms. Gränsen gäller för företag inom Sverige och kan även gälla för utländska företag under EU:s SMF-undantag.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Vanliga frågor om moms</h2>
+
+            <details class="faq-item">
+                <summary>Hur räknar man ut moms i Sverige?</summary>
+                <div class="faq-body">
+                    <p>För att <strong>lägga till moms</strong> multiplicerar du priset exkl. moms med (1 + momssatsen). Exempel: 1 000 kr × 1,25 = 1 250 kr inkl. 25% moms.</p>
+                    <p>För att <strong>dra av moms</strong> delar du priset inkl. moms med (1 + momssatsen). Exempel: 1 250 kr ÷ 1,25 = 1 000 kr exkl. moms.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vilka momssatser finns i Sverige 2026?</summary>
+                <div class="faq-body">
+                    <p>Sverige har tre aktiva momssatser:</p>
+                    <ul>
+                        <li><strong>25%</strong> – Standardsats för de flesta varor och tjänster, elektronik, kläder, alkohol</li>
+                        <li><strong>12%</strong> – Livsmedel, restaurang och caféer, hotell, camping, konstverk, cyklar</li>
+                        <li><strong>6%</strong> – Böcker, tidningar, kollektivtrafik, bio, teater, sportevenemang</li>
+                    </ul>
+                    <p>Därtill finns 0% moms (momsfritt) för exempelvis sjukvård, tandvård och utbildning.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vad gäller för livsmedel och moms?</summary>
+                <div class="faq-body">
+                    <p>Livsmedel och matdrycker beskattas med <strong>12% moms</strong> i Sverige. Det gäller mat i butik, take away och restaurangmat. Alkoholhaltiga drycker beskattas däremot med <strong>25% moms</strong>, oavsett om de säljs i butik eller på restaurang.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Hur fungerar momsbefrielse för småföretag?</summary>
+                <div class="faq-body">
+                    <p>Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger <strong>80 000 kr per år</strong>. Dessa företag behöver inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr. Ansökan görs hos Skatteverket.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vad är skillnaden mellan pris inkl. moms och exkl. moms?</summary>
+                <div class="faq-body">
+                    <p><strong>Pris exkl. moms</strong> (exklusive mervärdesskatt) är nettobeloppet — det belopp ett momsregistrerat företag fakturerar ett annat momsregistrerat företag (B2B). <strong>Pris inkl. moms</strong> är det totala beloppet inklusive moms — det som slutkunden (konsumenten) betalar.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Hur redovisar man moms till Skatteverket?</summary>
+                <div class="faq-body">
+                    <p>Momsregistrerade företag redovisar <strong>utgående moms</strong> (moms på försäljning) minus <strong>ingående moms</strong> (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod beror på omsättning: månadsvis för stora företag, kvartalsvis eller årsvis för mindre.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Gäller 12% moms på alla restaurangtjänster?</summary>
+                <div class="faq-body">
+                    <p>Servering av mat på restauranger, caféer och take away-ställen beskattas med <strong>12% moms</strong>. Alkohol på restaurang har dock <strong>25% moms</strong>. Catering vid konferenser räknas också normalt som restaurangtjänst med 12% moms.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="cross-links">
+            <h3>Relaterade kalkylatorer</h3>
+            <div class="link-chips">
+                <a href="/kalkylatorer/loneraknare.html" class="link-chip">💰 Löneräknare</a>
+                <a href="/kalkylatorer/skatteaterbarings-kalkylator.html" class="link-chip">🔄 Skatteåterbäring</a>
+                <a href="/kalkylatorer/rot-rut.html" class="link-chip">🏠 ROT &amp; RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html" class="link-chip">🏦 Bolånekalkylator</a>
+                <a href="/kalkylatorer/lanekalkylator.html" class="link-chip">💳 Lånekalkylator</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html" class="link-chip">📊 ISK-skatt</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Fler kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentMode = 'add'; // 'add' = excl→incl, 'remove' = incl→excl
+        let currentRate = 25;
+
+        const rateHints = {
+            25: 'Standard (de flesta varor &amp; tjänster)',
+            12: 'Reducerad (livsmedel, restaurang, hotell)',
+            6: 'Reducerad (böcker, kollektivtrafik, bio)'
+        };
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.getElementById('btnAdd').classList.toggle('active', mode === 'add');
+            document.getElementById('btnRemove').classList.toggle('active', mode === 'remove');
+            const desc = document.getElementById('modeDesc');
+            const hint = document.getElementById('amountHint');
+            if (mode === 'add') {
+                desc.innerHTML = 'Du anger pris <strong>exkl. moms</strong> — vi beräknar pris inkl. moms och momsbeloppet.';
+                hint.textContent = 'Pris exklusive moms';
+            } else {
+                desc.innerHTML = 'Du anger pris <strong>inkl. moms</strong> — vi beräknar pris exkl. moms och momsbeloppet.';
+                hint.textContent = 'Pris inklusive moms';
+            }
+            if (document.getElementById('results').classList.contains('visible')) {
+                calculate();
+            }
+        }
+
+        function setRate(rate) {
+            currentRate = rate;
+            ['25','12','6'].forEach(r => {
+                document.getElementById('badge' + r).classList.toggle('active', parseInt(r) === rate);
+            });
+            document.getElementById('rateHint').innerHTML = rateHints[rate];
+            if (document.getElementById('results').classList.contains('visible')) {
+                calculate();
+            }
+        }
+
+        function fmt(n) {
+            return n.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' kr';
+        }
+
+        function calculate() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            if (isNaN(amount) || amount < 0) return;
+
+            const rate = currentRate / 100;
+            let exclMoms, inclMoms, momsAmount;
+
+            if (currentMode === 'add') {
+                exclMoms = amount;
+                momsAmount = exclMoms * rate;
+                inclMoms = exclMoms + momsAmount;
+            } else {
+                inclMoms = amount;
+                exclMoms = inclMoms / (1 + rate);
+                momsAmount = inclMoms - exclMoms;
+            }
+
+            const momsAndel = ((momsAmount / inclMoms) * 100).toFixed(1);
+
+            // Result boxes
+            const grid = document.getElementById('resultGrid');
+            grid.innerHTML = `
+                <div class="result-box highlight">
+                    <div class="label">${currentMode === 'add' ? 'Pris inkl. moms' : 'Pris exkl. moms'}</div>
+                    <div class="value">${fmt(currentMode === 'add' ? inclMoms : exclMoms)}</div>
+                    <div class="sub">${currentMode === 'add' ? 'Totalpris' : 'Nettopris'}</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Momsbelopp</div>
+                    <div class="value">${fmt(momsAmount)}</div>
+                    <div class="sub">${currentRate}% moms</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">${currentMode === 'add' ? 'Pris exkl. moms' : 'Pris inkl. moms'}</div>
+                    <div class="value">${fmt(currentMode === 'add' ? exclMoms : inclMoms)}</div>
+                    <div class="sub">${currentMode === 'add' ? 'Nettopris' : 'Totalpris'}</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Momsandel av totalt</div>
+                    <div class="value">${momsAndel}%</div>
+                    <div class="sub">av inkl-priset</div>
+                </div>
+            `;
+
+            // Canvas chart
+            drawChart(exclMoms, momsAmount);
+
+            // Breakdown table
+            updateBreakdown(exclMoms, inclMoms);
+
+            document.getElementById('results').classList.add('visible');
+        }
+
+        function drawChart(exclMoms, momsAmount) {
+            const canvas = document.getElementById('momsChart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const W = canvas.parentElement.clientWidth - 56;
+            const H = 200;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+            ctx.scale(dpr, dpr);
+            ctx.clearRect(0, 0, W, H);
+
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const primaryColor = isDark ? '#34d399' : '#1a6b4a';
+            const accentColor = isDark ? '#60a5fa' : '#2563eb';
+            const textColor = isDark ? '#d1d5db' : '#555';
+            const bgColor = isDark ? '#374151' : '#e2e8f0';
+
+            const inclMoms = exclMoms + momsAmount;
+            const barW = Math.min(W * 0.35, 160);
+            const barX = W * 0.15;
+            const maxH = H - 60;
+            const totalH = maxH;
+            const exclH = (exclMoms / inclMoms) * totalH;
+            const momsH = totalH - exclH;
+            const barY = 20;
+
+            // Bar 1: exkl. moms portion
+            ctx.fillStyle = primaryColor;
+            ctx.beginPath();
+            if (momsH < 1) {
+                ctx.roundRect(barX, barY, barW, exclH, [8, 8, 8, 8]);
+            } else {
+                ctx.roundRect(barX, barY + momsH, barW, exclH, [0, 0, 8, 8]);
+            }
+            ctx.fill();
+
+            // Bar 1: moms portion (on top)
+            if (momsH > 0) {
+                ctx.fillStyle = accentColor;
+                ctx.beginPath();
+                ctx.roundRect(barX, barY, barW, momsH, [8, 8, 0, 0]);
+                ctx.fill();
+            }
+
+            // Legend
+            const legendX = barX + barW + 24;
+            const legendY = barY + 20;
+
+            ctx.fillStyle = accentColor;
+            ctx.fillRect(legendX, legendY, 16, 16);
+            ctx.fillStyle = textColor;
+            ctx.font = '600 13px Inter, sans-serif';
+            ctx.fillText('Moms (' + currentRate + '%)', legendX + 24, legendY + 12);
+
+            ctx.fillStyle = primaryColor;
+            ctx.fillRect(legendX, legendY + 28, 16, 16);
+            ctx.fillStyle = textColor;
+            ctx.fillText('Exkl. moms', legendX + 24, legendY + 40);
+
+            // Labels below bar
+            ctx.fillStyle = textColor;
+            ctx.font = '500 11px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Inkl. moms', barX + barW / 2, barY + totalH + 18);
+
+            // Value labels inside bars
+            ctx.textAlign = 'center';
+            ctx.font = '700 12px Inter, sans-serif';
+            if (momsH > 22) {
+                ctx.fillStyle = 'white';
+                ctx.fillText((currentRate + '%'), barX + barW / 2, barY + momsH / 2 + 5);
+            }
+            if (exclH > 22) {
+                ctx.fillStyle = 'white';
+                ctx.fillText('Netto', barX + barW / 2, barY + momsH + exclH / 2 + 5);
+            }
+        }
+
+        function updateBreakdown(baseExcl, baseIncl) {
+            const multiples = [0.25, 0.5, 1, 2, 5, 10, 25, 50, 100];
+            const rate = currentRate / 100;
+            const body = document.getElementById('breakdownBody');
+            const colHeader = document.getElementById('colHeader');
+            const colResult = document.getElementById('colResult');
+            document.getElementById('colRate').textContent = currentRate + '%';
+
+            if (currentMode === 'add') {
+                colHeader.textContent = 'Belopp exkl. moms';
+                colResult.textContent = 'Belopp inkl. moms';
+                body.innerHTML = multiples.map(m => {
+                    const excl = Math.round(baseExcl * m);
+                    const moms = excl * rate;
+                    const incl = excl + moms;
+                    return `<tr><td>${fmt(excl)}</td><td>${fmt(moms)}</td><td><strong>${fmt(incl)}</strong></td></tr>`;
+                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseExcl)}</td><td>${fmt(baseExcl * rate)}</td><td>${fmt(baseIncl)}</td></tr>`;
+            } else {
+                colHeader.textContent = 'Belopp inkl. moms';
+                colResult.textContent = 'Belopp exkl. moms';
+                body.innerHTML = multiples.map(m => {
+                    const incl = Math.round(baseIncl * m);
+                    const excl = incl / (1 + rate);
+                    const moms = incl - excl;
+                    return `<tr><td>${fmt(incl)}</td><td>${fmt(moms)}</td><td><strong>${fmt(excl)}</strong></td></tr>`;
+                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseIncl)}</td><td>${fmt(baseIncl - baseExcl)}</td><td>${fmt(baseExcl)}</td></tr>`;
+            }
+        }
+
+        // Auto-calculate on input change
+        document.getElementById('amount').addEventListener('input', () => {
+            if (document.getElementById('results').classList.contains('visible')) {
+                calculate();
+            }
+        });
+
+        // Initial calculation on load
+        window.addEventListener('load', () => calculate());
+        window.addEventListener('resize', () => {
+            if (document.getElementById('results').classList.contains('visible')) drawChart(
+                parseFloat(document.getElementById('amount').value) * (currentMode === 'add' ? 1 : 1/(1+currentRate/100)),
+                parseFloat(document.getElementById('amount').value) * (currentMode === 'add' ? currentRate/100 : (currentRate/100)/(1+currentRate/100))
+            );
+        });
+    </script>
+</body>
+</html>
