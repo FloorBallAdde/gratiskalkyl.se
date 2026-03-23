@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorikalkylator 2026 – Räkna ut ditt kaloribehov gratis | GratisKalkyl.se</title>
+    <meta name="description" content="Beräkna ditt dagliga kaloribehov med Mifflin-St Jeor-formeln. Se BMR, TDEE och kalorimål för viktminskning, bibehållning eller ökning. Gratis kalorikalkylator.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/kalorikalkylator.html">
+    <meta property="og:title" content="Kalorikalkylator 2026 – Räkna ut ditt kaloribehov gratis">
+    <meta property="og:description" content="Beräkna ditt kaloribehov med vetenskaplig formel. Se BMR, TDEE och personliga kalorimål.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/kalorikalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kalorikalkylator 2026 – Räkna ut ditt kaloribehov gratis">
+    <meta name="twitter:description" content="Beräkna ditt dagliga kaloribehov. Se BMR, TDEE och kalorimål.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; max-width: 640px; }
+
+        .calc-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .input-group { margin-bottom: 24px; }
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .input-group .help { font-size: 0.85rem; color: var(--text-light); margin-bottom: 8px; }
+
+        .toggle-group {
+            display: flex;
+            gap: 0;
+            margin-bottom: 24px;
+        }
+        .toggle-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .toggle-btn:first-child { border-radius: 8px 0 0 8px; }
+        .toggle-btn:last-child { border-radius: 0 8px 8px 0; }
+        .toggle-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .toggle-btn:hover:not(.active) { border-color: var(--primary); }
+
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        input[type="range"] {
+            flex: 1;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--border);
+            border-radius: 3px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            text-align: right;
+            background: var(--white);
+            color: var(--text);
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+
+        /* Activity selector */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        .activity-btn {
+            padding: 12px 8px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .activity-btn .emoji { font-size: 1.3rem; display: block; margin-bottom: 4px; }
+        .activity-btn .factor { font-size: 0.7rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 2px; }
+        .activity-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .activity-btn.active .factor { color: rgba(255,255,255,0.8); }
+        .activity-btn:hover:not(.active) { border-color: var(--primary); }
+
+        /* Results */
+        .results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+        .result-box {
+            background: var(--bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .result-box.highlight {
+            background: var(--primary-light);
+            border-color: var(--primary);
+        }
+        .result-box .label { font-size: 0.85rem; color: var(--text-light); margin-bottom: 4px; }
+        .result-box .value { font-size: 1.6rem; font-weight: 800; color: var(--text); }
+        .result-box.highlight .value { color: var(--primary); }
+        .result-box .sub { font-size: 0.75rem; color: var(--text-light); margin-top: 4px; }
+
+        /* Canvas visualization */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin: 24px 0;
+        }
+        canvas { width: 100%; display: block; }
+
+        /* Goal section */
+        .goal-section {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 24px;
+        }
+        .goal-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .goal-card {
+            padding: 16px;
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .goal-card.active {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+        .goal-card:hover:not(.active) { border-color: var(--primary); }
+        .goal-card .goal-emoji { font-size: 1.5rem; margin-bottom: 8px; }
+        .goal-card .goal-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+        .goal-card .goal-kcal { font-size: 1.3rem; font-weight: 800; color: var(--primary); }
+        .goal-card .goal-desc { font-size: 0.75rem; color: var(--text-light); margin-top: 4px; }
+
+        /* Macro section */
+        .macro-section {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 16px;
+        }
+        .macro-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .macro-item {
+            text-align: center;
+            padding: 16px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .macro-item .macro-name { font-size: 0.85rem; color: var(--text-light); margin-bottom: 4px; }
+        .macro-item .macro-value { font-size: 1.4rem; font-weight: 800; }
+        .macro-item .macro-pct { font-size: 0.75rem; color: var(--text-light); margin-top: 2px; }
+        .macro-protein .macro-value { color: #ef4444; }
+        .macro-carbs .macro-value { color: #3b82f6; }
+        .macro-fat .macro-value { color: #f59e0b; }
+
+        /* Info box */
+        .info-box {
+            background: var(--primary-light);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .info-box strong { color: var(--primary); }
+
+        /* Cross-link */
+        .cross-link {
+            display: block;
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 24px 0;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .cross-link:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .cross-link .cl-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        .cross-link .cl-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Table */
+        .table-toggle {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 12px 0;
+            font-family: inherit;
+        }
+        .data-table {
+            display: none;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+        .data-table.visible { display: table; }
+        .data-table th, .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .data-table th { font-weight: 600; color: var(--text-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* FAQ */
+        .faq { margin-top: 40px; }
+        .faq h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 24px; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--primary); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-top: 12px; color: var(--text-light); font-size: 0.95rem; }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .page-header h1 { font-size: 1.5rem; }
+            .results { grid-template-columns: 1fr; }
+            .goal-grid { grid-template-columns: 1fr; }
+            .macro-grid { grid-template-columns: 1fr; }
+            .activity-grid { grid-template-columns: repeat(3, 1fr); }
+            nav { display: none; }
+            .calc-section { padding: 20px; }
+            input[type="number"] { width: 90px; }
+            .toggle-btn { padding: 12px 8px; font-size: 0.9rem; }
+        }
+    </style>
+
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Kalorikalkylator 2026",
+        "url": "https://gratiskalkyl.se/kalkylatorer/kalorikalkylator.html",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "description": "Beräkna ditt dagliga kaloribehov med Mifflin-St Jeor-formeln. Se BMR, TDEE och kalorimål.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+        "inLanguage": "sv"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
+            { "@type": "ListItem", "position": 2, "name": "Kalorikalkylator 2026", "item": "https://gratiskalkyl.se/kalkylatorer/kalorikalkylator.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Vad är BMR (basalmetabolism)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BMR (Basal Metabolic Rate) är den mängd kalorier din kropp förbränner i total vila — bara för att hålla igång andning, blodcirkulation och cellförnyelse. Det är den lägsta mängd energi du behöver per dygn."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är TDEE?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TDEE (Total Daily Energy Expenditure) är ditt totala dagliga energibehov, inklusive all fysisk aktivitet. Det beräknas genom att multiplicera din BMR med en aktivitetsfaktor (PAL-värde)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur beräknas kaloribehovet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kaloribehovet beräknas med Mifflin-St Jeor-formeln: För män: BMR = 10 × vikt(kg) + 6.25 × längd(cm) − 5 × ålder − 5. För kvinnor: BMR = 10 × vikt(kg) + 6.25 × längd(cm) − 5 × ålder − 161. BMR multipliceras sedan med aktivitetsfaktorn (1.2–1.9) för att ge TDEE."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur många kalorier ska jag äta för att gå ner i vikt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "För en hälsosam viktminskning på ca 0.5 kg per vecka behöver du äta cirka 500 kcal mindre per dag än ditt TDEE. Ät aldrig under din BMR utan medicinsk rådgivning — kroppen behöver sin basalenergi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är en aktivitetsfaktor (PAL)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PAL (Physical Activity Level) är en multiplikator som anpassar ditt kaloribehov till din livsstil. Stillasittande = 1.2, lätt aktiv = 1.375, måttligt aktiv = 1.55, mycket aktiv = 1.725, extremt aktiv = 1.9."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur exakt är Mifflin-St Jeor-formeln?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mifflin-St Jeor anses vara den mest tillförlitliga formeln för att uppskatta BMR och rekommenderas av American Dietetic Association. Den har dock en felmarginal på ca 10% och tar inte hänsyn till muskelmassa eller individuell ämnesomsättning."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är makronutrienter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Makronutrienter är de tre huvudsakliga energikällorna i mat: protein (4 kcal/g), kolhydrater (4 kcal/g) och fett (9 kcal/g). En balanserad fördelning är ungefär 30% protein, 40% kolhydrater och 30% fett, men behovet varierar beroende på mål och aktivitetsnivå."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/bmi-kalkylator.html">BMI</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/kalorikalkylator.html" style="color:var(--primary);font-weight:600;">Kalorier</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>🥗 Kalorikalkylator 2026</h1>
+            <p>Beräkna ditt dagliga kaloribehov med Mifflin-St Jeor-formeln. Se BMR, TDEE och personliga kalorimål för viktminskning, bibehållning eller ökning.</p>
+        </div>
+
+        <div class="calc-section">
+            <!-- Gender toggle -->
+            <div class="input-group">
+                <label>Kön</label>
+                <div class="toggle-group" id="genderToggle">
+                    <button class="toggle-btn active" data-value="man" onclick="setGender('man')">👨 Man</button>
+                    <button class="toggle-btn" data-value="kvinna" onclick="setGender('kvinna')">👩 Kvinna</button>
+                </div>
+            </div>
+
+            <!-- Age -->
+            <div class="input-group">
+                <label for="ageSlider">Ålder</label>
+                <div class="slider-row">
+                    <input type="range" id="ageSlider" min="15" max="100" value="30" oninput="syncInput('age')">
+                    <input type="number" id="ageInput" min="15" max="100" value="30" oninput="syncSlider('age')"> <span>år</span>
+                </div>
+            </div>
+
+            <!-- Height -->
+            <div class="input-group">
+                <label for="heightSlider">Längd</label>
+                <div class="slider-row">
+                    <input type="range" id="heightSlider" min="120" max="220" value="175" oninput="syncInput('height')">
+                    <input type="number" id="heightInput" min="120" max="220" value="175" oninput="syncSlider('height')"> <span>cm</span>
+                </div>
+            </div>
+
+            <!-- Weight -->
+            <div class="input-group">
+                <label for="weightSlider">Vikt</label>
+                <div class="slider-row">
+                    <input type="range" id="weightSlider" min="30" max="250" value="75" step="0.5" oninput="syncInput('weight')">
+                    <input type="number" id="weightInput" min="30" max="250" value="75" step="0.5" oninput="syncSlider('weight')"> <span>kg</span>
+                </div>
+            </div>
+
+            <!-- Activity level -->
+            <div class="input-group">
+                <label>Aktivitetsnivå</label>
+                <p class="help">Välj den nivå som bäst matchar din vardag</p>
+                <div class="activity-grid" id="activityGrid">
+                    <button class="activity-btn" data-pal="1.2" onclick="setActivity(this)">
+                        <span class="emoji">🪑</span>
+                        Stillasittande
+                        <span class="factor">PAL 1.2</span>
+                    </button>
+                    <button class="activity-btn" data-pal="1.375" onclick="setActivity(this)">
+                        <span class="emoji">🚶</span>
+                        Lätt aktiv
+                        <span class="factor">PAL 1.375</span>
+                    </button>
+                    <button class="activity-btn active" data-pal="1.55" onclick="setActivity(this)">
+                        <span class="emoji">🏃</span>
+                        Måttligt aktiv
+                        <span class="factor">PAL 1.55</span>
+                    </button>
+                    <button class="activity-btn" data-pal="1.725" onclick="setActivity(this)">
+                        <span class="emoji">🏋️</span>
+                        Mycket aktiv
+                        <span class="factor">PAL 1.725</span>
+                    </button>
+                    <button class="activity-btn" data-pal="1.9" onclick="setActivity(this)">
+                        <span class="emoji">⚡</span>
+                        Extremt aktiv
+                        <span class="factor">PAL 1.9</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="calc-section" id="resultsSection">
+            <div class="results">
+                <div class="result-box">
+                    <div class="label">BMR (basalmetabolism)</div>
+                    <div class="value" id="bmrValue">—</div>
+                    <div class="sub">Kalorier i vila</div>
+                </div>
+                <div class="result-box highlight">
+                    <div class="label">TDEE (dagligt behov)</div>
+                    <div class="value" id="tdeeValue">—</div>
+                    <div class="sub">Med din aktivitetsnivå</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">BMI</div>
+                    <div class="value" id="bmiValue">—</div>
+                    <div class="sub" id="bmiCategory">—</div>
+                </div>
+            </div>
+
+            <!-- Canvas bar chart -->
+            <div class="chart-container">
+                <canvas id="calorieChart" height="200"></canvas>
+            </div>
+
+            <!-- Goal cards -->
+            <div class="goal-section">
+                <h3>🎯 Välj ditt mål</h3>
+                <div class="goal-grid">
+                    <div class="goal-card" data-goal="lose" onclick="setGoal('lose')">
+                        <div class="goal-emoji">📉</div>
+                        <div class="goal-title">Gå ner</div>
+                        <div class="goal-kcal" id="goal-lose">—</div>
+                        <div class="goal-desc">−500 kcal/dag ≈ 0.5 kg/vecka</div>
+                    </div>
+                    <div class="goal-card active" data-goal="maintain" onclick="setGoal('maintain')">
+                        <div class="goal-emoji">⚖️</div>
+                        <div class="goal-title">Behålla vikt</div>
+                        <div class="goal-kcal" id="goal-maintain">—</div>
+                        <div class="goal-desc">TDEE = ditt underhåll</div>
+                    </div>
+                    <div class="goal-card" data-goal="gain" onclick="setGoal('gain')">
+                        <div class="goal-emoji">📈</div>
+                        <div class="goal-title">Gå upp</div>
+                        <div class="goal-kcal" id="goal-gain">—</div>
+                        <div class="goal-desc">+500 kcal/dag ≈ 0.5 kg/vecka</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Macros -->
+            <div class="macro-section">
+                <h3>🍽️ Makrofördelning <span style="font-size:0.8rem;font-weight:400;color:var(--text-light);">(för valt mål)</span></h3>
+                <div class="macro-grid">
+                    <div class="macro-item macro-protein">
+                        <div class="macro-name">Protein</div>
+                        <div class="macro-value" id="macro-protein">—</div>
+                        <div class="macro-pct">30% · 4 kcal/g</div>
+                    </div>
+                    <div class="macro-item macro-carbs">
+                        <div class="macro-name">Kolhydrater</div>
+                        <div class="macro-value" id="macro-carbs">—</div>
+                        <div class="macro-pct">40% · 4 kcal/g</div>
+                    </div>
+                    <div class="macro-item macro-fat">
+                        <div class="macro-name">Fett</div>
+                        <div class="macro-value" id="macro-fat">—</div>
+                        <div class="macro-pct">30% · 9 kcal/g</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity table -->
+            <button class="table-toggle" onclick="toggleTable()">▼ Visa alla aktivitetsnivåer</button>
+            <table class="data-table" id="activityTable">
+                <thead>
+                    <tr>
+                        <th>Aktivitetsnivå</th>
+                        <th>PAL-faktor</th>
+                        <th>Beskrivning</th>
+                        <th>Kalorier/dag</th>
+                    </tr>
+                </thead>
+                <tbody id="activityTableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Info box -->
+        <div class="info-box">
+            <strong>Så tolkar du resultatet:</strong> TDEE är en uppskattning baserad på Mifflin-St Jeor-formeln, som rekommenderas av American Dietetic Association. Formeln har en felmarginal på ca 10%. Ditt verkliga behov påverkas av faktorer som muskelmassa, genetik och hormoner. Börja med det beräknade värdet och justera efter 2–3 veckor baserat på hur din vikt utvecklas.
+        </div>
+
+        <!-- Cross-links -->
+        <a href="/kalkylatorer/bmi-kalkylator.html" class="cross-link">
+            <div class="cl-title">⚖️ BMI-kalkylator →</div>
+            <div class="cl-desc">Räkna ut ditt BMI och se din viktkategori, idealviktsintervall och basalmetabolism.</div>
+        </a>
+
+        <a href="/kalkylatorer/sparkalkylator.html" class="cross-link">
+            <div class="cl-title">🎯 Sparkalkylator →</div>
+            <div class="cl-desc">Sätt upp ett sparmål och se hur snabbt du når det med ränta-på-ränta-effekten.</div>
+        </a>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <h2>Vanliga frågor om kaloribehov</h2>
+
+            <details class="faq-item">
+                <summary>Vad är BMR (basalmetabolism)?</summary>
+                <p>BMR (Basal Metabolic Rate) är den mängd kalorier din kropp förbränner i total vila — bara för att hålla igång andning, blodcirkulation och cellförnyelse. Det är den lägsta mängd energi du behöver per dygn.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vad är TDEE?</summary>
+                <p>TDEE (Total Daily Energy Expenditure) är ditt totala dagliga energibehov, inklusive all fysisk aktivitet. Det beräknas genom att multiplicera din BMR med en aktivitetsfaktor (PAL-värde).</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Hur beräknas kaloribehovet?</summary>
+                <p>Kaloribehovet beräknas med Mifflin-St Jeor-formeln. För män: BMR = 10 × vikt(kg) + 6.25 × längd(cm) − 5 × ålder + 5. För kvinnor: BMR = 10 × vikt(kg) + 6.25 × längd(cm) − 5 × ålder − 161. BMR multipliceras sedan med aktivitetsfaktorn (1.2–1.9) för att ge TDEE.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Hur många kalorier ska jag äta för att gå ner i vikt?</summary>
+                <p>För en hälsosam viktminskning på ca 0.5 kg per vecka behöver du äta cirka 500 kcal mindre per dag än ditt TDEE. Ät aldrig under din BMR utan medicinsk rådgivning — kroppen behöver sin basalenergi.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vad är en aktivitetsfaktor (PAL)?</summary>
+                <p>PAL (Physical Activity Level) är en multiplikator som anpassar ditt kaloribehov till din livsstil. Stillasittande = 1.2, lätt aktiv = 1.375, måttligt aktiv = 1.55, mycket aktiv = 1.725, extremt aktiv = 1.9.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Hur exakt är Mifflin-St Jeor-formeln?</summary>
+                <p>Mifflin-St Jeor anses vara den mest tillförlitliga formeln för att uppskatta BMR och rekommenderas av American Dietetic Association. Den har dock en felmarginal på ca 10% och tar inte hänsyn till muskelmassa eller individuell ämnesomsättning.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vad är makronutrienter?</summary>
+                <p>Makronutrienter är de tre huvudsakliga energikällorna i mat: protein (4 kcal/g), kolhydrater (4 kcal/g) och fett (9 kcal/g). En balanserad fördelning är ungefär 30% protein, 40% kolhydrater och 30% fett, men behovet varierar beroende på mål och aktivitetsnivå.</p>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för medicinska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+        </div>
+    </footer>
+
+    <script>
+        let gender = 'man';
+        let pal = 1.55;
+        let currentGoal = 'maintain';
+
+        const activityLevels = [
+            { name: 'Stillasittande', pal: 1.2, desc: 'Kontorsjobb, ingen träning' },
+            { name: 'Lätt aktiv', pal: 1.375, desc: 'Lätt träning 1–3 ggr/vecka' },
+            { name: 'Måttligt aktiv', pal: 1.55, desc: 'Träning 3–5 ggr/vecka' },
+            { name: 'Mycket aktiv', pal: 1.725, desc: 'Hård träning 6–7 ggr/vecka' },
+            { name: 'Extremt aktiv', pal: 1.9, desc: 'Fysiskt jobb + daglig träning' }
+        ];
+
+        function setGender(g) {
+            gender = g;
+            document.querySelectorAll('#genderToggle .toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.value === g);
+            });
+            calculate();
+        }
+
+        function setActivity(btn) {
+            pal = parseFloat(btn.dataset.pal);
+            document.querySelectorAll('#activityGrid .activity-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            calculate();
+        }
+
+        function setGoal(goal) {
+            currentGoal = goal;
+            document.querySelectorAll('.goal-card').forEach(c => c.classList.toggle('active', c.dataset.goal === goal));
+            calculate();
+        }
+
+        function syncInput(field) {
+            const slider = document.getElementById(field + 'Slider');
+            const input = document.getElementById(field + 'Input');
+            input.value = slider.value;
+            calculate();
+        }
+
+        function syncSlider(field) {
+            const slider = document.getElementById(field + 'Slider');
+            const input = document.getElementById(field + 'Input');
+            let val = parseFloat(input.value);
+            if (isNaN(val)) return;
+            val = Math.max(parseFloat(slider.min), Math.min(parseFloat(slider.max), val));
+            slider.value = val;
+            calculate();
+        }
+
+        function calculate() {
+            const weight = parseFloat(document.getElementById('weightInput').value) || 75;
+            const height = parseFloat(document.getElementById('heightInput').value) || 175;
+            const age = parseInt(document.getElementById('ageInput').value) || 30;
+            const heightM = height / 100;
+
+            // BMR (Mifflin-St Jeor)
+            let bmr;
+            if (gender === 'man') {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            // TDEE
+            const tdee = bmr * pal;
+
+            // BMI
+            const bmi = weight / (heightM * heightM);
+
+            // Display results
+            document.getElementById('bmrValue').textContent = Math.round(bmr) + ' kcal';
+            document.getElementById('tdeeValue').textContent = Math.round(tdee) + ' kcal';
+            document.getElementById('bmiValue').textContent = bmi.toFixed(1);
+
+            // BMI category
+            let bmiCat = 'Normalvikt';
+            if (bmi < 18.5) bmiCat = 'Undervikt';
+            else if (bmi < 25) bmiCat = 'Normalvikt';
+            else if (bmi < 30) bmiCat = 'Övervikt';
+            else bmiCat = 'Fetma';
+            document.getElementById('bmiCategory').textContent = bmiCat;
+
+            // Goal calories
+            const goalLose = Math.round(tdee - 500);
+            const goalMaintain = Math.round(tdee);
+            const goalGain = Math.round(tdee + 500);
+
+            document.getElementById('goal-lose').textContent = goalLose + ' kcal';
+            document.getElementById('goal-maintain').textContent = goalMaintain + ' kcal';
+            document.getElementById('goal-gain').textContent = goalGain + ' kcal';
+
+            // Calculate macros for selected goal
+            let goalKcal = goalMaintain;
+            if (currentGoal === 'lose') goalKcal = goalLose;
+            else if (currentGoal === 'gain') goalKcal = goalGain;
+
+            const proteinG = Math.round((goalKcal * 0.30) / 4);
+            const carbsG = Math.round((goalKcal * 0.40) / 4);
+            const fatG = Math.round((goalKcal * 0.30) / 9);
+
+            document.getElementById('macro-protein').textContent = proteinG + ' g';
+            document.getElementById('macro-carbs').textContent = carbsG + ' g';
+            document.getElementById('macro-fat').textContent = fatG + ' g';
+
+            // Build activity table
+            buildActivityTable(bmr);
+
+            // Draw chart
+            drawChart(bmr, tdee, goalLose, goalGain);
+        }
+
+        function buildActivityTable(bmr) {
+            const tbody = document.getElementById('activityTableBody');
+            tbody.innerHTML = '';
+            activityLevels.forEach(level => {
+                const tr = document.createElement('tr');
+                const kcal = Math.round(bmr * level.pal);
+                const isActive = Math.abs(level.pal - pal) < 0.01;
+                tr.innerHTML = '<td>' + (isActive ? '<strong>' + level.name + '</strong>' : level.name) + '</td>' +
+                    '<td>' + level.pal + '</td>' +
+                    '<td>' + level.desc + '</td>' +
+                    '<td>' + (isActive ? '<strong>' + kcal + ' kcal</strong>' : kcal + ' kcal') + '</td>';
+                tbody.appendChild(tr);
+            });
+        }
+
+        function toggleTable() {
+            const table = document.getElementById('activityTable');
+            const btn = table.previousElementSibling;
+            table.classList.toggle('visible');
+            btn.textContent = table.classList.contains('visible') ? '▲ Dölj aktivitetsnivåer' : '▼ Visa alla aktivitetsnivåer';
+        }
+
+        function drawChart(bmr, tdee, lose, gain) {
+            const canvas = document.getElementById('calorieChart');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = 200 * dpr;
+            canvas.style.height = '200px';
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+            const w = rect.width;
+            const h = 200;
+
+            ctx.clearRect(0, 0, w, h);
+
+            const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const textColor = isDark ? '#f3f4f6' : '#1a1a2e';
+            const lightText = isDark ? '#9ca3af' : '#555';
+            const gridColor = isDark ? '#374151' : '#e2e8f0';
+
+            const bars = [
+                { label: 'BMR', value: bmr, color: '#6b7280' },
+                { label: 'Gå ner', value: lose, color: '#3b82f6' },
+                { label: 'TDEE', value: tdee, color: '#10b981' },
+                { label: 'Gå upp', value: gain, color: '#f59e0b' }
+            ];
+
+            const maxVal = Math.max(...bars.map(b => b.value)) * 1.15;
+            const barWidth = Math.min(80, (w - 100) / bars.length - 20);
+            const pad = { left: 60, right: 20, top: 30, bottom: 40 };
+            const chartW = w - pad.left - pad.right;
+            const chartH = h - pad.top - pad.bottom;
+            const gap = chartW / bars.length;
+
+            // Grid lines
+            ctx.strokeStyle = gridColor;
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = pad.top + (chartH / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(pad.left, y);
+                ctx.lineTo(w - pad.right, y);
+                ctx.stroke();
+
+                const val = Math.round(maxVal - (maxVal / 4) * i);
+                ctx.fillStyle = lightText;
+                ctx.font = '11px Inter, sans-serif';
+                ctx.textAlign = 'right';
+                ctx.fillText(val, pad.left - 10, y + 4);
+            }
+
+            // Bars
+            bars.forEach((bar, i) => {
+                const x = pad.left + gap * i + (gap - barWidth) / 2;
+                const barH = (bar.value / maxVal) * chartH;
+                const y = pad.top + chartH - barH;
+
+                // Bar with rounded top
+                ctx.fillStyle = bar.color;
+                const r = 6;
+                ctx.beginPath();
+                ctx.moveTo(x, y + r);
+                ctx.quadraticCurveTo(x, y, x + r, y);
+                ctx.lineTo(x + barWidth - r, y);
+                ctx.quadraticCurveTo(x + barWidth, y, x + barWidth, y + r);
+                ctx.lineTo(x + barWidth, pad.top + chartH);
+                ctx.lineTo(x, pad.top + chartH);
+                ctx.closePath();
+                ctx.fill();
+
+                // Value on top
+                ctx.fillStyle = textColor;
+                ctx.font = 'bold 13px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(Math.round(bar.value), x + barWidth / 2, y - 8);
+
+                // Label below
+                ctx.fillStyle = lightText;
+                ctx.font = '12px Inter, sans-serif';
+                ctx.fillText(bar.label, x + barWidth / 2, pad.top + chartH + 20);
+            });
+
+            // Y-axis label
+            ctx.save();
+            ctx.translate(14, h / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillStyle = lightText;
+            ctx.font = '11px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('kcal/dag', 0, 0);
+            ctx.restore();
+        }
+
+        // Init
+        calculate();
+
+        // Redraw on resize
+        window.addEventListener('resize', calculate);
+    </script>
+</body>
+</html>
