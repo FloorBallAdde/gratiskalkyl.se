@@ -177,53 +177,12 @@
             margin: 8px 0 32px;
         }
 
-        /* Guide cards */
+        /* Guide cards — same grid as calc-cards */
         .guide-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
             padding: 0 0 48px;
-        }
-        .guide-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.3s ease, transform 0.2s ease;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-        .guide-card:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-            transform: translateY(-2px);
-        }
-        .guide-card .icon {
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-        .guide-card h2 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--text);
-        }
-        .guide-card p {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            margin: 0;
-        }
-        .guide-card .tag {
-            display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
-            font-size: 0.72rem;
-            font-weight: 500;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-top: 10px;
         }
 
         /* Coming soon cards */
@@ -434,23 +393,19 @@
         </div>
 
         <hr class="section-divider">
-        <h2 class="section-heading">📚 Guider &amp; Artiklar</h2>
+        <h2 class="section-heading">Guider &amp; Artiklar</h2>
         <div class="guide-grid">
-            <a href="/artiklar/vad-ar-semesterlon.html" class="guide-card">
+            <a href="/artiklar/vad-ar-semesterlon.html" class="calc-card">
                 <div class="icon">🏖️</div>
-                <div>
-                    <h2>Vad är semesterlön?</h2>
-                    <p>Sammalöneregeln, procentregeln och vad som ingår i löneunderlaget — förklarat enkelt.</p>
-                    <span class="tag">Guide</span>
-                </div>
+                <h2>Vad är semesterlön?</h2>
+                <p>Sammalöneregeln, procentregeln och vad som ingår i löneunderlaget — förklarat enkelt.</p>
+                <span class="tag">Guide</span>
             </a>
-            <a href="/artiklar/hur-beraknas-pension.html" class="guide-card">
+            <a href="/artiklar/hur-beraknas-pension.html" class="calc-card">
                 <div class="icon">👴</div>
-                <div>
-                    <h2>Hur beräknas pension i Sverige?</h2>
-                    <p>Inkomstpension, premiepension, tjänstepension och hur du påverkar din pension.</p>
-                    <span class="tag">Guide</span>
-                </div>
+                <h2>Hur beräknas pension i Sverige?</h2>
+                <p>Inkomstpension, premiepension, tjänstepension och hur du påverkar din pension.</p>
+                <span class="tag">Guide</span>
             </a>
         </div>
     </main>

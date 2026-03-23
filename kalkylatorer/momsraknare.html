@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momsräknare 2026 – Räkna ut moms snabbt och enkelt | GratisKalkyl.se</title>
-    <meta name="description" content="Räkna ut moms för 2026. Lägg till eller dra av moms (25%, 12%, 6%). Se pris inkl. moms, exkl. moms och momsbelopp. Gratis momsräknare online.">
+    <meta name="description" content="Räkna ut moms för 2026. Lägg till eller dra av moms (25%, 12%, 6%). Se pris inkl. moms, exkl. moms och momsbeloppet direkt. Gratis momsräknare online.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/momsraknare.html">
     <meta property="og:title" content="Momsräknare 2026 – Lägg till eller dra av moms">
@@ -23,91 +23,6 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Momsräknare 2026 – Räkna ut moms">
     <meta name="twitter:description" content="Lägg till eller dra av moms 25%, 12% eller 6%. Gratis momsräknare för 2026.">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        :root {
-            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
-            --accent: #2563eb; --text: #1a1a2e; --text-light: #555;
-            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root { --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827; --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2); --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3); }
-            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background: var(--primary); color: white; padding: 16px 20px; }
-        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
-        header a:hover { color: white; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: clamp(1.6rem,4vw,2.2rem); font-weight: 800; margin: 32px 0 8px; }
-        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
-        .card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px; border: 1px solid var(--border); }
-        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media(max-width:600px) { .input-grid { grid-template-columns: 1fr; } }
-        label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
-        .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
-        input[type="number"], select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--text); transition: border-color 0.2s; }
-        input:focus, select:focus { outline: none; border-color: var(--primary); }
-        .mode-toggle { display: flex; gap: 0; margin-bottom: 20px; border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
-        .mode-toggle button { flex: 1; padding: 12px 8px; border: none; background: var(--white); color: var(--text-light); font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s; }
-        .mode-toggle button.active { background: var(--primary); color: white; }
-        .mode-toggle button:not(.active):hover { background: var(--primary-light); color: var(--primary-dark); }
-        @media(prefers-color-scheme:dark) { .mode-toggle button:not(.active):hover { color: var(--primary); } }
-        .btn { display: block; width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
-        .btn:hover { background: var(--primary-dark); }
-        .results { display: none; }
-        .results.visible { display: block; }
-        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 20px; }
-        .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
-        .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
-        .result-box .value { font-size: 1.45rem; font-weight: 800; color: var(--primary-dark); }
-        @media(prefers-color-scheme:dark) { .result-box .value { color: var(--primary); } }
-        .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
-        .result-box.highlight { background: var(--primary); }
-        .result-box.highlight .label,
-        .result-box.highlight .value,
-        .result-box.highlight .sub { color: white; }
-        canvas { width: 100%; height: 200px; display: block; margin-top: 16px; }
-        .breakdown-toggle { margin-top: 16px; }
-        .breakdown-toggle summary { font-weight: 600; cursor: pointer; color: var(--primary); font-size: 0.95rem; padding: 10px 0; list-style: none; display: flex; align-items: center; gap: 8px; }
-        .breakdown-toggle summary::-webkit-details-marker { display: none; }
-        .breakdown-toggle summary::before { content: '▶'; font-size: 0.7rem; transition: transform 0.2s; }
-        .breakdown-toggle[open] summary::before { transform: rotate(90deg); }
-        .breakdown-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 12px; }
-        .breakdown-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
-        .breakdown-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
-        .breakdown-table tr:nth-child(even) td { background: var(--primary-light); }
-        .breakdown-table .total-row td { font-weight: 700; color: var(--primary-dark); }
-        @media(prefers-color-scheme:dark) { .breakdown-table .total-row td { color: var(--primary); } }
-        .rate-badges { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
-        .rate-badge { padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid var(--border); color: var(--text-light); background: var(--white); cursor: pointer; transition: all 0.15s; }
-        .rate-badge.active, .rate-badge:hover { background: var(--primary); color: white; border-color: var(--primary); }
-        .info-section { margin-bottom: 48px; }
-        .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
-        .info-section p, .info-section li { color: var(--text-light); line-height: 1.8; margin-bottom: 12px; }
-        .info-section ul { padding-left: 20px; }
-        .rate-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 16px 0; }
-        .rate-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
-        .rate-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
-        .rate-table tr:nth-child(even) td { background: var(--primary-light); }
-        .faq-section { margin-bottom: 48px; }
-        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
-        .faq-item summary { padding: 16px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
-        .faq-item[open] summary::after { content: '−'; }
-        .faq-item .faq-body { padding: 0 20px 16px; color: var(--text-light); line-height: 1.8; }
-        .cross-links { margin: 32px 0; }
-        .cross-links h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-        .link-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-        .link-chip { padding: 8px 16px; border: 1.5px solid var(--border); border-radius: 20px; text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500; transition: all 0.15s; }
-        .link-chip:hover { border-color: var(--primary); color: var(--primary); }
-        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; margin-top: 48px; }
-        footer p { color: var(--text-light); font-size: 0.88rem; text-align: center; }
-        footer a { color: var(--primary); text-decoration: none; }
-    </style>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -126,7 +41,7 @@
                 "name": "Vilka momssatser finns i Sverige 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sverige har tre momssatser: 25% (standardsats för de flesta varor och tjänster), 12% (livsmedel, restaurang, hotell, camping, konstverk, cyklar) och 6% (böcker, tidningar, kollektivtrafik, bio, teater, sport, viss musik)."
+                    "text": "Sverige har tre momssatser: 25% (standardsats för de flesta varor och tjänster), 12% (livsmedel, restaurang, hotell, camping, konstverk, cyklar) och 6% (böcker, tidningar, kollektivtrafik, bio, teater, sport)."
                 }
             },
             {
@@ -142,7 +57,7 @@
                 "name": "Hur fungerar momsbefrielse för småföretag?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger 80 000 kr per år. Dessa företag behöver inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr."
+                    "text": "Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger 80 000 kr per år. Dessa företag behöver inte ta ut eller redovisa moms. Ansökan görs hos Skatteverket."
                 }
             },
             {
@@ -150,7 +65,7 @@
                 "name": "Vad är skillnaden mellan pris inkl. moms och exkl. moms?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Pris exkl. moms (exklusive mervärdesskatt) är nettobeloppet före moms — det belopp som ett momsregistrerat företag fakturerar utan moms. Pris inkl. moms är det totala beloppet inklusive moms — det belopp som slutkunden betalar."
+                    "text": "Pris exkl. moms är nettobeloppet — det belopp ett momsregistrerat företag fakturerar ett annat momsregistrerat företag (B2B). Pris inkl. moms är det totala beloppet inklusive moms — det som slutkunden (konsumenten) betalar."
                 }
             },
             {
@@ -158,7 +73,7 @@
                 "name": "Hur redovisar man moms till Skatteverket?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Momsregistrerade företag redovisar utgående moms (moms på försäljning) minus ingående moms (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod är vanligtvis månadsvis (stora företag), kvartalsvis eller årsvis beroende på omsättning."
+                    "text": "Momsregistrerade företag redovisar utgående moms (moms på försäljning) minus ingående moms (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod beror på omsättning: månadsvis för stora företag, kvartalsvis eller årsvis för mindre."
                 }
             },
             {
@@ -166,126 +81,553 @@
                 "name": "Gäller 12% moms på alla restaurangtjänster?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Servering av mat på restaurang, caféer och take away-ställen beskattas med 12% moms. Alkohol på restaurang har dock 25% moms. Notera att catering vid exempelvis konferenser också normalt räknas som restaurangtjänst med 12% moms."
+                    "text": "Servering av mat på restauranger, caféer och take away-ställen beskattas med 12% moms. Alkohol på restaurang har dock 25% moms. Catering vid konferenser räknas normalt som restaurangtjänst med 12% moms."
                 }
             }
         ]
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Momsräknare 2026",
-        "url": "https://gratiskalkyl.se/kalkylatorer/momsraknare.html",
-        "description": "Räkna ut moms för 2026. Lägg till eller dra av moms med momssatserna 25%, 12% och 6%.",
-        "applicationCategory": "FinanceApplication",
-        "inLanguage": "sv",
-        "isAccessibleForFree": true,
-        "offers": { "@type": "Offer", "price": "0" }
-    }
-    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --primary-dark: #10b981;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+            input[type="range"] { accent-color: #34d399; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Page header */
+        .page-header { padding: 40px 0 24px; }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .page-header p { color: var(--text-light); font-size: 1.05rem; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+
+        /* Calc wrapper */
+        .calc-wrapper {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Mode toggle */
+        .mode-toggle {
+            display: flex;
+            gap: 0;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .mode-btn {
+            flex: 1;
+            padding: 13px 16px;
+            border: none;
+            background: var(--bg);
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .mode-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        .mode-btn:not(.active):hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        @media (prefers-color-scheme: dark) {
+            .mode-btn:not(.active):hover { color: var(--primary); }
+        }
+
+        /* Input grid */
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .input-group { display: flex; flex-direction: column; }
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .input-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+        .input-group input[type="number"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.3s ease;
+        }
+        .input-group input[type="number"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
+        }
+        .input-group input[type="range"] {
+            width: 100%;
+            margin-top: 10px;
+            accent-color: var(--primary);
+            height: 6px;
+        }
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* Rate selector */
+        .rate-group { display: flex; flex-direction: column; }
+        .rate-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .rate-group .sublabel {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .rate-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .rate-btn {
+            flex: 1;
+            padding: 12px 8px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-align: center;
+        }
+        .rate-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .rate-btn:not(.active):hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 24px 16px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .result-box.highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        .result-box .label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .result-box .value {
+            font-size: 1.35rem;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+        .result-box .sub {
+            font-size: 0.78rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Chart */
+        .chart-separator {
+            height: 1px;
+            background: var(--border);
+            margin: 8px 0 24px;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            margin-bottom: 8px;
+        }
+        canvas { width: 100% !important; height: 100% !important; }
+
+        /* Table */
+        .table-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 0;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+        .table-toggle:hover { text-decoration: underline; }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .data-table.visible { display: table; }
+        .data-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: right;
+            font-weight: 500;
+        }
+        .data-table th:first-child { text-align: left; }
+        .data-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .data-table td:first-child { text-align: left; }
+        .data-table tr.total-row td {
+            font-weight: 700;
+            border-top: 2px solid var(--border);
+        }
+        @media (prefers-color-scheme: dark) {
+            .data-table th { color: var(--primary); }
+        }
+
+        /* Info section */
+        .info-section { margin-bottom: 48px; }
+        .info-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            letter-spacing: -0.01em;
+        }
+        .info-section p { color: var(--text-light); margin-bottom: 16px; }
+        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
+        .info-section li { margin-bottom: 8px; }
+
+        /* Rate table */
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin: 16px 0 24px;
+        }
+        .rate-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 12px;
+            text-align: left;
+            font-weight: 500;
+        }
+        .rate-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .rate-table tr:nth-child(even) td { background: var(--primary-light); }
+        @media (prefers-color-scheme: dark) { .rate-table th { color: var(--primary); } }
+
+        /* FAQ */
+        details { margin-bottom: 16px; }
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 12px 0;
+            transition: color 0.2s ease;
+        }
+        summary:hover { text-decoration: underline; }
+        summary:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .faq-body { color: var(--text-light); padding-bottom: 8px; line-height: 1.8; }
+        .faq-body ul { margin-left: 20px; margin-top: 8px; }
+        .faq-body li { margin-bottom: 6px; }
+
+        /* Cross-links */
+        .cross-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0 48px;
+        }
+        .cross-link {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+        }
+        .cross-link:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+        .cross-link:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        .cross-link .cl-icon { font-size: 1.4rem; margin-bottom: 8px; }
+        .cross-link .cl-title { font-weight: 600; font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            body { font-size: 16px; }
+            .page-header h1 { font-size: 1.5rem; }
+            .input-grid { grid-template-columns: 1fr; }
+            .results { grid-template-columns: 1fr 1fr; }
+            .result-box .value { font-size: 1.15rem; }
+            .calc-wrapper { padding: 20px; }
+            nav { display: none; }
+            .cross-links { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 420px) {
+            .results { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="/">← GratisKalkyl.se</a>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-        <h1>Momsräknare 2026</h1>
-        <p class="subtitle">Lägg till eller dra av moms (25%, 12%, 6%). Ange beloppet och välj vad du vill räkna ut.</p>
-
-        <div class="card">
-            <!-- Mode toggle -->
-            <div class="mode-toggle" id="modeToggle">
-                <button class="active" onclick="setMode('add')" id="btnAdd">➕ Lägg till moms</button>
-                <button onclick="setMode('remove')" id="btnRemove">➖ Dra av moms</button>
-            </div>
-
-            <p id="modeDesc" style="font-size:0.88rem; color:var(--text-light); margin-bottom:20px;">
-                Du anger pris <strong>exkl. moms</strong> — vi beräknar pris inkl. moms och momsbeloppet.
-            </p>
-
-            <div class="input-grid">
-                <div>
-                    <label for="amount">Belopp (kr)</label>
-                    <input type="number" id="amount" value="1000" min="0" step="1" placeholder="Ange belopp">
-                    <p class="hint" id="amountHint">Pris exklusive moms</p>
-                </div>
-                <div>
-                    <label>Momssats</label>
-                    <div class="rate-badges">
-                        <span class="rate-badge active" onclick="setRate(25)" id="badge25">25%</span>
-                        <span class="rate-badge" onclick="setRate(12)" id="badge12">12%</span>
-                        <span class="rate-badge" onclick="setRate(6)" id="badge6">6%</span>
-                    </div>
-                    <p class="hint" id="rateHint">Standard (de flesta varor &amp; tjänster)</p>
-                </div>
-            </div>
-
-            <button class="btn" onclick="calculate()">Beräkna moms</button>
+        <div class="page-header">
+            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> › Momsräknare</div>
+            <h1>Momsräknare 2026</h1>
+            <p>Lägg till eller dra av moms (25%, 12%, 6%) på valfritt belopp. Uppdaterad med 2026 års regler.</p>
         </div>
 
-        <div class="results card" id="results">
-            <div class="result-grid" id="resultGrid">
-                <!-- filled by JS -->
+        <div class="calc-wrapper">
+            <!-- Mode toggle -->
+            <div class="mode-toggle">
+                <button class="mode-btn active" onclick="setMode('add')" id="btnAdd">➕ Lägg till moms</button>
+                <button class="mode-btn" onclick="setMode('remove')" id="btnRemove">➖ Dra av moms</button>
             </div>
 
-            <canvas id="momsChart"></canvas>
+            <div class="input-grid">
+                <!-- Amount -->
+                <div class="input-group">
+                    <label for="amount" id="amountLabel">Belopp exkl. moms (kr)</label>
+                    <div class="sublabel" id="amountSublabel">Ange priset före moms</div>
+                    <input type="number" id="amount" value="1000" min="0" step="1">
+                    <input type="range" id="amountRange" min="0" max="100000" step="100" value="1000">
+                    <div class="range-labels"><span>0 kr</span><span>100 000 kr</span></div>
+                </div>
 
-            <details class="breakdown-toggle" id="breakdownDetails">
-                <summary>Visa snabbregister för vanliga belopp</summary>
-                <table class="breakdown-table" id="breakdownTable">
-                    <thead>
-                        <tr>
-                            <th id="colHeader">Belopp exkl. moms</th>
-                            <th>Moms (<span id="colRate">25%</span>)</th>
-                            <th id="colResult">Belopp inkl. moms</th>
-                        </tr>
-                    </thead>
-                    <tbody id="breakdownBody"></tbody>
-                </table>
-            </details>
+                <!-- Rate selector -->
+                <div class="rate-group">
+                    <label>Momssats</label>
+                    <div class="sublabel" id="rateSublabel">Standard — de flesta varor &amp; tjänster</div>
+                    <div class="rate-buttons">
+                        <button class="rate-btn active" onclick="setRate(25)" id="btn25">25%</button>
+                        <button class="rate-btn" onclick="setRate(12)" id="btn12">12%</button>
+                        <button class="rate-btn" onclick="setRate(6)" id="btn6">6%</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="results" id="results">
+                <div class="result-box highlight">
+                    <div class="label" id="mainLabel">Pris inkl. moms</div>
+                    <div class="value" id="mainValue">1 250,00 kr</div>
+                    <div class="sub">Totalpris</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Momsbelopp</div>
+                    <div class="value" id="momsValue">250,00 kr</div>
+                    <div class="sub" id="momsSub">25% moms</div>
+                </div>
+                <div class="result-box">
+                    <div class="label" id="secondLabel">Pris exkl. moms</div>
+                    <div class="value" id="secondValue">1 000,00 kr</div>
+                    <div class="sub">Nettopris</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Momsandel</div>
+                    <div class="value" id="shareValue">20,0%</div>
+                    <div class="sub">av inkl-priset</div>
+                </div>
+            </div>
+
+            <div class="chart-separator"></div>
+
+            <!-- Canvas chart -->
+            <div class="chart-container">
+                <canvas id="momsChart"></canvas>
+            </div>
+
+            <!-- Breakdown table -->
+            <button class="table-toggle" onclick="toggleTable()" id="tableToggleBtn">▶ Visa snabbregister för vanliga belopp</button>
+            <table class="data-table" id="breakdownTable">
+                <thead>
+                    <tr>
+                        <th id="colA" style="text-align:left">Belopp exkl. moms</th>
+                        <th>Moms (<span id="colRate">25%</span>)</th>
+                        <th id="colB">Belopp inkl. moms</th>
+                    </tr>
+                </thead>
+                <tbody id="breakdownBody"></tbody>
+            </table>
         </div>
 
         <div class="info-section">
             <h2>Momssatser i Sverige 2026</h2>
-            <p>Sverige tillämpar tre momssatser (mervärdesskatt, moms) som regleras av mervärdesskattelagen (ML). Nedan är en översikt:</p>
+            <p>Sverige tillämpar tre momssatser (mervärdesskatt) som regleras av mervärdesskattelagen (ML):</p>
             <table class="rate-table">
                 <thead>
                     <tr><th>Momssats</th><th>Kategori</th><th>Exempel</th></tr>
                 </thead>
                 <tbody>
                     <tr><td><strong>25%</strong></td><td>Standardsats</td><td>Kläder, elektronik, tjänster, alkohol, tobak</td></tr>
-                    <tr><td><strong>12%</strong></td><td>Reducerad sats</td><td>Livsmedel, restaurang, hotell, camping, konstverk, cyklar</td></tr>
-                    <tr><td><strong>6%</strong></td><td>Reducerad sats</td><td>Böcker, tidningar, kollektivtrafik, bio, teater, idrott</td></tr>
+                    <tr><td><strong>12%</strong></td><td>Reducerad sats</td><td>Livsmedel, restaurang, hotell, camping, cyklar</td></tr>
+                    <tr><td><strong>6%</strong></td><td>Reducerad sats</td><td>Böcker, tidningar, kollektivtrafik, bio, teater</td></tr>
                     <tr><td><strong>0%</strong></td><td>Momsfritt</td><td>Sjukvård, tandvård, utbildning, finansiella tjänster</td></tr>
                 </tbody>
             </table>
 
-            <h2>Hur man räknar ut moms</h2>
+            <h2>Formlerna för momsberäkning</h2>
             <p><strong>Lägga till moms (exkl. → inkl.):</strong><br>
             Pris inkl. moms = Pris exkl. moms × (1 + momssats)<br>
-            Exempel med 25%: 800 kr × 1,25 = <strong>1 000 kr</strong></p>
+            Exempel: 800 kr × 1,25 = <strong>1 000 kr</strong></p>
 
             <p><strong>Dra av moms (inkl. → exkl.):</strong><br>
             Pris exkl. moms = Pris inkl. moms ÷ (1 + momssats)<br>
-            Exempel med 25%: 1 000 kr ÷ 1,25 = <strong>800 kr</strong></p>
+            Exempel: 1 000 kr ÷ 1,25 = <strong>800 kr</strong></p>
 
             <p><strong>Beräkna momsbeloppet ur ett inkl-pris:</strong><br>
-            Momsbelopp = Pris inkl. moms × (momssats ÷ (1 + momssats))<br>
-            Exempel: 1 000 kr × (0,25 ÷ 1,25) = <strong>200 kr</strong></p>
+            Momsbelopp = Pris inkl. moms × momssats ÷ (1 + momssats)<br>
+            Exempel: 1 000 kr × 0,25 ÷ 1,25 = <strong>200 kr</strong></p>
 
-            <h2>Momsbefrielseregeln 2026 (SMF-undantaget)</h2>
-            <p>Från 1 januari 2025 gäller en höjd omsättningsgräns för momsbefrielseregeln. Företag med en omsättning under <strong>80 000 kr per år</strong> kan ansöka om befrielse från moms och behöver då inte ta ut eller redovisa moms. Gränsen gäller för företag inom Sverige och kan även gälla för utländska företag under EU:s SMF-undantag.</p>
-        </div>
+            <h2>Momsbefrielseregeln 2026</h2>
+            <p>Från 1 januari 2025 gäller en höjd omsättningsgräns för SMF-undantaget. Företag med en omsättning under <strong>80 000 kr per år</strong> kan ansöka om befrielse från moms hos Skatteverket och behöver då inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr.</p>
 
-        <div class="faq-section">
             <h2>Vanliga frågor om moms</h2>
 
-            <details class="faq-item">
+            <details>
                 <summary>Hur räknar man ut moms i Sverige?</summary>
                 <div class="faq-body">
                     <p>För att <strong>lägga till moms</strong> multiplicerar du priset exkl. moms med (1 + momssatsen). Exempel: 1 000 kr × 1,25 = 1 250 kr inkl. 25% moms.</p>
@@ -293,7 +635,7 @@
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Vilka momssatser finns i Sverige 2026?</summary>
                 <div class="faq-body">
                     <p>Sverige har tre aktiva momssatser:</p>
@@ -302,104 +644,111 @@
                         <li><strong>12%</strong> – Livsmedel, restaurang och caféer, hotell, camping, konstverk, cyklar</li>
                         <li><strong>6%</strong> – Böcker, tidningar, kollektivtrafik, bio, teater, sportevenemang</li>
                     </ul>
-                    <p>Därtill finns 0% moms (momsfritt) för exempelvis sjukvård, tandvård och utbildning.</p>
+                    <p>Därtill finns 0% moms (momsfritt) för sjukvård, tandvård och utbildning.</p>
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Vad gäller för livsmedel och moms?</summary>
                 <div class="faq-body">
-                    <p>Livsmedel och matdrycker beskattas med <strong>12% moms</strong> i Sverige. Det gäller mat i butik, take away och restaurangmat. Alkoholhaltiga drycker beskattas däremot med <strong>25% moms</strong>, oavsett om de säljs i butik eller på restaurang.</p>
+                    <p>Livsmedel och matdrycker beskattas med <strong>12% moms</strong> i Sverige — mat i butik, take away och restaurangmat. Alkoholhaltiga drycker beskattas däremot med <strong>25% moms</strong>, oavsett om de säljs i butik eller på restaurang.</p>
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Hur fungerar momsbefrielse för småföretag?</summary>
                 <div class="faq-body">
-                    <p>Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger <strong>80 000 kr per år</strong>. Dessa företag behöver inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr. Ansökan görs hos Skatteverket.</p>
+                    <p>Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger <strong>80 000 kr per år</strong>. Dessa företag behöver inte ta ut eller redovisa moms. Ansökan görs hos Skatteverket.</p>
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Vad är skillnaden mellan pris inkl. moms och exkl. moms?</summary>
                 <div class="faq-body">
-                    <p><strong>Pris exkl. moms</strong> (exklusive mervärdesskatt) är nettobeloppet — det belopp ett momsregistrerat företag fakturerar ett annat momsregistrerat företag (B2B). <strong>Pris inkl. moms</strong> är det totala beloppet inklusive moms — det som slutkunden (konsumenten) betalar.</p>
+                    <p><strong>Pris exkl. moms</strong> är nettobeloppet — det belopp ett momsregistrerat företag fakturerar ett annat momsregistrerat företag (B2B). <strong>Pris inkl. moms</strong> är det totala beloppet inklusive moms — det som slutkunden (konsumenten) betalar.</p>
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Hur redovisar man moms till Skatteverket?</summary>
                 <div class="faq-body">
-                    <p>Momsregistrerade företag redovisar <strong>utgående moms</strong> (moms på försäljning) minus <strong>ingående moms</strong> (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod beror på omsättning: månadsvis för stora företag, kvartalsvis eller årsvis för mindre.</p>
+                    <p>Momsregistrerade företag redovisar <strong>utgående moms</strong> (moms på försäljning) minus <strong>ingående moms</strong> (moms på inköp) till Skatteverket via momsdeklaration. Redovisningsperiod beror på omsättning: månadsvis, kvartalsvis eller årsvis.</p>
                 </div>
             </details>
 
-            <details class="faq-item">
+            <details>
                 <summary>Gäller 12% moms på alla restaurangtjänster?</summary>
                 <div class="faq-body">
-                    <p>Servering av mat på restauranger, caféer och take away-ställen beskattas med <strong>12% moms</strong>. Alkohol på restaurang har dock <strong>25% moms</strong>. Catering vid konferenser räknas också normalt som restaurangtjänst med 12% moms.</p>
+                    <p>Servering av mat på restauranger, caféer och take away-ställen beskattas med <strong>12% moms</strong>. Alkohol på restaurang har dock <strong>25% moms</strong>. Catering vid konferenser räknas normalt som restaurangtjänst med 12% moms.</p>
                 </div>
             </details>
         </div>
 
+        <h2 style="font-size:1.2rem; font-weight:700; margin-bottom:16px;">Relaterade kalkylatorer</h2>
         <div class="cross-links">
-            <h3>Relaterade kalkylatorer</h3>
-            <div class="link-chips">
-                <a href="/kalkylatorer/loneraknare.html" class="link-chip">💰 Löneräknare</a>
-                <a href="/kalkylatorer/skatteaterbarings-kalkylator.html" class="link-chip">🔄 Skatteåterbäring</a>
-                <a href="/kalkylatorer/rot-rut.html" class="link-chip">🏠 ROT &amp; RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator.html" class="link-chip">🏦 Bolånekalkylator</a>
-                <a href="/kalkylatorer/lanekalkylator.html" class="link-chip">💳 Lånekalkylator</a>
-                <a href="/kalkylatorer/isk-skatteberaknare.html" class="link-chip">📊 ISK-skatt</a>
-            </div>
+            <a href="/kalkylatorer/loneraknare.html" class="cross-link">
+                <div class="cl-icon">💰</div>
+                <div class="cl-title">Löneräknare</div>
+            </a>
+            <a href="/kalkylatorer/skatteaterbarings-kalkylator.html" class="cross-link">
+                <div class="cl-icon">🔄</div>
+                <div class="cl-title">Skatteåterbäring</div>
+            </a>
+            <a href="/kalkylatorer/rot-rut.html" class="cross-link">
+                <div class="cl-icon">🏠</div>
+                <div class="cl-title">ROT &amp; RUT-kalkylator</div>
+            </a>
+            <a href="/kalkylatorer/bolanekalkylator.html" class="cross-link">
+                <div class="cl-icon">🏦</div>
+                <div class="cl-title">Bolånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/lanekalkylator.html" class="cross-link">
+                <div class="cl-icon">💳</div>
+                <div class="cl-title">Lånekalkylator</div>
+            </a>
+            <a href="/kalkylatorer/isk-skatteberaknare.html" class="cross-link">
+                <div class="cl-icon">📊</div>
+                <div class="cl-title">ISK-skatteberäknare</div>
+            </a>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Fler kalkylatorer</a></p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online &nbsp;|&nbsp; <a href="/">Fler kalkylatorer</a></p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
         </div>
     </footer>
 
     <script>
-        let currentMode = 'add'; // 'add' = excl→incl, 'remove' = incl→excl
-        let currentRate = 25;
+        let mode = 'add';
+        let rate = 25;
+        let tableVisible = false;
 
-        const rateHints = {
-            25: 'Standard (de flesta varor &amp; tjänster)',
-            12: 'Reducerad (livsmedel, restaurang, hotell)',
-            6: 'Reducerad (böcker, kollektivtrafik, bio)'
+        const rateSublabels = {
+            25: 'Standard — de flesta varor &amp; tjänster',
+            12: 'Reducerad — livsmedel, restaurang, hotell',
+            6:  'Reducerad — böcker, kollektivtrafik, bio'
         };
 
-        function setMode(mode) {
-            currentMode = mode;
-            document.getElementById('btnAdd').classList.toggle('active', mode === 'add');
-            document.getElementById('btnRemove').classList.toggle('active', mode === 'remove');
-            const desc = document.getElementById('modeDesc');
-            const hint = document.getElementById('amountHint');
-            if (mode === 'add') {
-                desc.innerHTML = 'Du anger pris <strong>exkl. moms</strong> — vi beräknar pris inkl. moms och momsbeloppet.';
-                hint.textContent = 'Pris exklusive moms';
-            } else {
-                desc.innerHTML = 'Du anger pris <strong>inkl. moms</strong> — vi beräknar pris exkl. moms och momsbeloppet.';
-                hint.textContent = 'Pris inklusive moms';
-            }
-            if (document.getElementById('results').classList.contains('visible')) {
-                calculate();
-            }
+        function setMode(m) {
+            mode = m;
+            document.getElementById('btnAdd').classList.toggle('active', m === 'add');
+            document.getElementById('btnRemove').classList.toggle('active', m === 'remove');
+            document.getElementById('amountLabel').textContent = m === 'add'
+                ? 'Belopp exkl. moms (kr)' : 'Belopp inkl. moms (kr)';
+            document.getElementById('amountSublabel').textContent = m === 'add'
+                ? 'Ange priset före moms' : 'Ange priset inklusive moms';
+            calculate();
         }
 
-        function setRate(rate) {
-            currentRate = rate;
-            ['25','12','6'].forEach(r => {
-                document.getElementById('badge' + r).classList.toggle('active', parseInt(r) === rate);
+        function setRate(r) {
+            rate = r;
+            [25,12,6].forEach(v => {
+                document.getElementById('btn' + v).classList.toggle('active', v === r);
             });
-            document.getElementById('rateHint').innerHTML = rateHints[rate];
-            if (document.getElementById('results').classList.contains('visible')) {
-                calculate();
-            }
+            document.getElementById('rateSublabel').innerHTML = rateSublabels[r];
+            calculate();
         }
 
         function fmt(n) {
@@ -407,182 +756,159 @@
         }
 
         function calculate() {
-            const amount = parseFloat(document.getElementById('amount').value);
-            if (isNaN(amount) || amount < 0) return;
+            const amount = parseFloat(document.getElementById('amount').value) || 0;
+            const r = rate / 100;
+            let exkl, inkl, moms;
 
-            const rate = currentRate / 100;
-            let exclMoms, inclMoms, momsAmount;
-
-            if (currentMode === 'add') {
-                exclMoms = amount;
-                momsAmount = exclMoms * rate;
-                inclMoms = exclMoms + momsAmount;
+            if (mode === 'add') {
+                exkl = amount;
+                moms = exkl * r;
+                inkl = exkl + moms;
             } else {
-                inclMoms = amount;
-                exclMoms = inclMoms / (1 + rate);
-                momsAmount = inclMoms - exclMoms;
+                inkl = amount;
+                exkl = inkl / (1 + r);
+                moms = inkl - exkl;
             }
 
-            const momsAndel = ((momsAmount / inclMoms) * 100).toFixed(1);
+            const share = inkl > 0 ? ((moms / inkl) * 100).toFixed(1) + '%' : '0%';
 
-            // Result boxes
-            const grid = document.getElementById('resultGrid');
-            grid.innerHTML = `
-                <div class="result-box highlight">
-                    <div class="label">${currentMode === 'add' ? 'Pris inkl. moms' : 'Pris exkl. moms'}</div>
-                    <div class="value">${fmt(currentMode === 'add' ? inclMoms : exclMoms)}</div>
-                    <div class="sub">${currentMode === 'add' ? 'Totalpris' : 'Nettopris'}</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Momsbelopp</div>
-                    <div class="value">${fmt(momsAmount)}</div>
-                    <div class="sub">${currentRate}% moms</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">${currentMode === 'add' ? 'Pris exkl. moms' : 'Pris inkl. moms'}</div>
-                    <div class="value">${fmt(currentMode === 'add' ? exclMoms : inclMoms)}</div>
-                    <div class="sub">${currentMode === 'add' ? 'Nettopris' : 'Totalpris'}</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Momsandel av totalt</div>
-                    <div class="value">${momsAndel}%</div>
-                    <div class="sub">av inkl-priset</div>
-                </div>
-            `;
+            document.getElementById('mainLabel').textContent  = mode === 'add' ? 'Pris inkl. moms' : 'Pris exkl. moms';
+            document.getElementById('mainValue').textContent  = fmt(mode === 'add' ? inkl : exkl);
+            document.getElementById('momsValue').textContent  = fmt(moms);
+            document.getElementById('momsSub').textContent    = rate + '% moms';
+            document.getElementById('secondLabel').textContent = mode === 'add' ? 'Pris exkl. moms' : 'Pris inkl. moms';
+            document.getElementById('secondValue').textContent = fmt(mode === 'add' ? exkl : inkl);
+            document.getElementById('shareValue').textContent = share;
 
-            // Canvas chart
-            drawChart(exclMoms, momsAmount);
-
-            // Breakdown table
-            updateBreakdown(exclMoms, inclMoms);
-
-            document.getElementById('results').classList.add('visible');
+            drawChart(exkl, moms);
+            if (tableVisible) buildTable(exkl, inkl);
         }
 
-        function drawChart(exclMoms, momsAmount) {
+        function drawChart(exkl, moms) {
             const canvas = document.getElementById('momsChart');
-            const ctx = canvas.getContext('2d');
+            const container = canvas.parentElement;
             const dpr = window.devicePixelRatio || 1;
-            const W = canvas.parentElement.clientWidth - 56;
-            const H = 200;
-            canvas.width = W * dpr;
+            const W = container.clientWidth;
+            const H = container.clientHeight;
+            if (!W || !H) return;
+            canvas.width  = W * dpr;
             canvas.height = H * dpr;
-            canvas.style.width = W + 'px';
+            canvas.style.width  = W + 'px';
             canvas.style.height = H + 'px';
+            const ctx = canvas.getContext('2d');
             ctx.scale(dpr, dpr);
             ctx.clearRect(0, 0, W, H);
 
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const primaryColor = isDark ? '#34d399' : '#1a6b4a';
-            const accentColor = isDark ? '#60a5fa' : '#2563eb';
-            const textColor = isDark ? '#d1d5db' : '#555';
-            const bgColor = isDark ? '#374151' : '#e2e8f0';
+            const dark    = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const pColor  = dark ? '#34d399' : '#1a6b4a';
+            const aColor  = dark ? '#60a5fa' : '#2563eb';
+            const tColor  = dark ? '#d1d5db' : '#555555';
 
-            const inclMoms = exclMoms + momsAmount;
-            const barW = Math.min(W * 0.35, 160);
-            const barX = W * 0.15;
-            const maxH = H - 60;
-            const totalH = maxH;
-            const exclH = (exclMoms / inclMoms) * totalH;
-            const momsH = totalH - exclH;
-            const barY = 20;
+            const inkl  = exkl + moms;
+            const barW  = Math.min(W * 0.28, 140);
+            const barX  = W * 0.12;
+            const maxH  = H - 70;
+            const exklH = inkl > 0 ? (exkl / inkl) * maxH : maxH;
+            const momsH = maxH - exklH;
+            const barY  = 24;
 
-            // Bar 1: exkl. moms portion
-            ctx.fillStyle = primaryColor;
+            // Draw exkl portion (bottom)
+            ctx.fillStyle = pColor;
             ctx.beginPath();
-            if (momsH < 1) {
-                ctx.roundRect(barX, barY, barW, exclH, [8, 8, 8, 8]);
+            if (momsH < 2) {
+                ctx.roundRect(barX, barY, barW, exklH, 8);
             } else {
-                ctx.roundRect(barX, barY + momsH, barW, exclH, [0, 0, 8, 8]);
+                ctx.roundRect(barX, barY + momsH, barW, exklH, [0, 0, 8, 8]);
             }
             ctx.fill();
 
-            // Bar 1: moms portion (on top)
-            if (momsH > 0) {
-                ctx.fillStyle = accentColor;
+            // Draw moms portion (top)
+            if (momsH >= 2) {
+                ctx.fillStyle = aColor;
                 ctx.beginPath();
                 ctx.roundRect(barX, barY, barW, momsH, [8, 8, 0, 0]);
                 ctx.fill();
             }
 
+            // Labels inside bars
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 12px Inter, sans-serif';
+            ctx.fillStyle = 'white';
+            if (momsH > 22) ctx.fillText(rate + '%', barX + barW / 2, barY + momsH / 2 + 5);
+            if (exklH > 22) ctx.fillText('exkl.', barX + barW / 2, barY + momsH + exklH / 2 + 5);
+
+            // x-axis label
+            ctx.fillStyle = tColor;
+            ctx.font = '500 12px Inter, sans-serif';
+            ctx.fillText('Totalpris', barX + barW / 2, barY + maxH + 18);
+
             // Legend
-            const legendX = barX + barW + 24;
-            const legendY = barY + 20;
+            const lx = barX + barW + 28;
+            const ly = barY + 16;
+            ctx.textAlign = 'left';
 
-            ctx.fillStyle = accentColor;
-            ctx.fillRect(legendX, legendY, 16, 16);
-            ctx.fillStyle = textColor;
-            ctx.font = '600 13px Inter, sans-serif';
-            ctx.fillText('Moms (' + currentRate + '%)', legendX + 24, legendY + 12);
+            ctx.fillStyle = aColor;
+            ctx.fillRect(lx, ly, 14, 14);
+            ctx.fillStyle = tColor;
+            ctx.font = '500 13px Inter, sans-serif';
+            ctx.fillText('Moms (' + rate + '%)', lx + 20, ly + 11);
 
-            ctx.fillStyle = primaryColor;
-            ctx.fillRect(legendX, legendY + 28, 16, 16);
-            ctx.fillStyle = textColor;
-            ctx.fillText('Exkl. moms', legendX + 24, legendY + 40);
+            ctx.fillStyle = pColor;
+            ctx.fillRect(lx, ly + 26, 14, 14);
+            ctx.fillStyle = tColor;
+            ctx.fillText('Exkl. moms', lx + 20, ly + 37);
+        }
 
-            // Labels below bar
-            ctx.fillStyle = textColor;
-            ctx.font = '500 11px Inter, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText('Inkl. moms', barX + barW / 2, barY + totalH + 18);
-
-            // Value labels inside bars
-            ctx.textAlign = 'center';
-            ctx.font = '700 12px Inter, sans-serif';
-            if (momsH > 22) {
-                ctx.fillStyle = 'white';
-                ctx.fillText((currentRate + '%'), barX + barW / 2, barY + momsH / 2 + 5);
-            }
-            if (exclH > 22) {
-                ctx.fillStyle = 'white';
-                ctx.fillText('Netto', barX + barW / 2, barY + momsH + exclH / 2 + 5);
+        function toggleTable() {
+            tableVisible = !tableVisible;
+            const tbl = document.getElementById('breakdownTable');
+            const btn = document.getElementById('tableToggleBtn');
+            tbl.classList.toggle('visible', tableVisible);
+            btn.textContent = (tableVisible ? '▼' : '▶') + ' Visa snabbregister för vanliga belopp';
+            if (tableVisible) {
+                const amount = parseFloat(document.getElementById('amount').value) || 0;
+                const r = rate / 100;
+                const exkl = mode === 'add' ? amount : amount / (1 + r);
+                const inkl = exkl + exkl * r;
+                buildTable(exkl, inkl);
             }
         }
 
-        function updateBreakdown(baseExcl, baseIncl) {
+        function buildTable(baseExkl, baseInkl) {
+            const r   = rate / 100;
+            const col = document.getElementById('colA');
+            const colB = document.getElementById('colB');
+            document.getElementById('colRate').textContent = rate + '%';
             const multiples = [0.25, 0.5, 1, 2, 5, 10, 25, 50, 100];
-            const rate = currentRate / 100;
-            const body = document.getElementById('breakdownBody');
-            const colHeader = document.getElementById('colHeader');
-            const colResult = document.getElementById('colResult');
-            document.getElementById('colRate').textContent = currentRate + '%';
 
-            if (currentMode === 'add') {
-                colHeader.textContent = 'Belopp exkl. moms';
-                colResult.textContent = 'Belopp inkl. moms';
-                body.innerHTML = multiples.map(m => {
-                    const excl = Math.round(baseExcl * m);
-                    const moms = excl * rate;
-                    const incl = excl + moms;
-                    return `<tr><td>${fmt(excl)}</td><td>${fmt(moms)}</td><td><strong>${fmt(incl)}</strong></td></tr>`;
-                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseExcl)}</td><td>${fmt(baseExcl * rate)}</td><td>${fmt(baseIncl)}</td></tr>`;
+            if (mode === 'add') {
+                col.textContent = 'Belopp exkl. moms';
+                colB.textContent = 'Belopp inkl. moms';
+                document.getElementById('breakdownBody').innerHTML = multiples.map(m => {
+                    const e = Math.round(baseExkl * m);
+                    const mo = e * r;
+                    return `<tr><td>${fmt(e)}</td><td>${fmt(mo)}</td><td><strong>${fmt(e + mo)}</strong></td></tr>`;
+                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseExkl)}</td><td>${fmt(baseExkl * r)}</td><td>${fmt(baseInkl)}</td></tr>`;
             } else {
-                colHeader.textContent = 'Belopp inkl. moms';
-                colResult.textContent = 'Belopp exkl. moms';
-                body.innerHTML = multiples.map(m => {
-                    const incl = Math.round(baseIncl * m);
-                    const excl = incl / (1 + rate);
-                    const moms = incl - excl;
-                    return `<tr><td>${fmt(incl)}</td><td>${fmt(moms)}</td><td><strong>${fmt(excl)}</strong></td></tr>`;
-                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseIncl)}</td><td>${fmt(baseIncl - baseExcl)}</td><td>${fmt(baseExcl)}</td></tr>`;
+                col.textContent = 'Belopp inkl. moms';
+                colB.textContent = 'Belopp exkl. moms';
+                document.getElementById('breakdownBody').innerHTML = multiples.map(m => {
+                    const i = Math.round(baseInkl * m);
+                    const e = i / (1 + r);
+                    return `<tr><td>${fmt(i)}</td><td>${fmt(i - e)}</td><td><strong>${fmt(e)}</strong></td></tr>`;
+                }).join('') + `<tr class="total-row"><td>Ditt belopp: ${fmt(baseInkl)}</td><td>${fmt(baseInkl - baseExkl)}</td><td>${fmt(baseExkl)}</td></tr>`;
             }
         }
 
-        // Auto-calculate on input change
-        document.getElementById('amount').addEventListener('input', () => {
-            if (document.getElementById('results').classList.contains('visible')) {
-                calculate();
-            }
-        });
+        // Sync range ↔ number input
+        const amtInput = document.getElementById('amount');
+        const amtRange = document.getElementById('amountRange');
+        amtInput.addEventListener('input', () => { amtRange.value = amtInput.value; calculate(); });
+        amtRange.addEventListener('input', () => { amtInput.value = amtRange.value; calculate(); });
 
-        // Initial calculation on load
+        // Initial render
         window.addEventListener('load', () => calculate());
-        window.addEventListener('resize', () => {
-            if (document.getElementById('results').classList.contains('visible')) drawChart(
-                parseFloat(document.getElementById('amount').value) * (currentMode === 'add' ? 1 : 1/(1+currentRate/100)),
-                parseFloat(document.getElementById('amount').value) * (currentMode === 'add' ? currentRate/100 : (currentRate/100)/(1+currentRate/100))
-            );
-        });
+        window.addEventListener('resize', () => calculate());
     </script>
 </body>
 </html>
