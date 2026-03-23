@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solcellskalkylator 2026 — Räkna ut besparing, återbetalningstid och ROI | GratisKalkyl.se</title>
+    <meta name="description" content="Gratis solcellskalkylator — beräkna produktion, elpris-besparing, återbetalningstid och ROI för din solcellsanläggning. Välj elområde SE1-SE4 och se effekten av ROT-avdrag.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/solcellskalkylator.html">
+    <meta property="og:title" content="Solcellskalkylator 2026 — Beräkna besparing och återbetalningstid">
+    <meta property="og:description" content="Beräkna solcellsproduktion, elpris-besparing och återbetalningstid för din anläggning. Inkluderar ROT-avdrag och elområde SE1-SE4.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/solcellskalkylator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Solcellskalkylator 2026 — Besparing och återbetalningstid">
+    <meta name="twitter:description" content="Beräkna solcellsproduktion, besparing och ROI för din anläggning i Sverige.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hur mycket producerar solceller i Sverige per år?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En solcellspanel i Sverige producerar ungefär 120–160 kWh per kvadratmeter och år, beroende på var i landet du bor. I Skåne (SE4) produceras mer än i Norrland (SE1) på grund av mer soltimmar. En typisk villa med 30 m² solceller (5–6 kWp) producerar 4 000–5 000 kWh per år."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad kostar en solcellsanläggning att installera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En typisk solcellsanläggning för en villa kostar 100 000–250 000 kr före ROT-avdrag, beroende på storlek och tak. Med ROT-avdrag (30% på arbetskostnaden, upp till 100 000 kr per hushåll) kan nettokostnaden sjunka avsevärt. Priset per installerad kWp har sjunkit kraftigt de senaste åren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur beräknas återbetalningstiden för solceller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Återbetalningstiden beräknas som nettoinvesteringskostnad dividerat med den årliga elbesparingen. Elbesparingen är solcellsproduktionen (kWh/år) multiplicerad med det totala elpriset du betalar (inkl. elnät, skatter och avgifter). Typisk återbetalningstid i Sverige är 8–15 år, beroende på elområde och anläggningsstorlek."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilket ROT-avdrag kan man få för solceller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du kan få ROT-avdrag på 30% av arbetskostnaden vid installation av solceller. Avdraget är begränsat till 50 000 kr per person och år. För ett hushåll med två vuxna är taket 100 000 kr. Observera att bara arbetskostnaden (inte materialkostnaden) berättigar till ROT. Arbetet ska utföras av ett godkänt företag och faktureras med ROT-avdrag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan man sälja el tillbaka till nätet med solceller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, överskottsel kan säljas till ditt elbolag. Priset du får är vanligtvis spotpriset minus en liten avgift, vilket är lägre än vad du betalar per kWh. Egenanvändning av solcellsel (direkt konsumtion) är ekonomiskt mer fördelaktigt än att sälja tillbaka. Kalkylatorn fokuserar på egenanvändning, men vid bra täckningsgrad säljer många även en del till nätet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur länge håller solceller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moderna solcellspaneler har en livslängd på 25–30 år och levereras ofta med 25 års effektgaranti. Effekten sjunker normalt med 0,3–0,5% per år, vilket innebär att panelerna producerar ca 88–92% av ursprungseffekten efter 25 år. Växelriktaren (invertern) behöver vanligtvis bytas efter 10–15 år, vilket bör inkluderas i totalkalkylen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilket elområde bor jag i och varför spelar det roll?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sverige är indelat i fyra elområden: SE1 (Luleå), SE2 (Sundsvall), SE3 (Stockholm/Mellansverige) och SE4 (Malmö/Skåne). Elområdet påverkar spotpriset — SE4 är historiskt dyrast och SE1 billigast. Det påverkar också solproduktionen, då södra Sverige har fler soltimmar. Bor du i SE4 är solceller som regel mer lönsamma: högt elpris kombinerat med mer sol."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --primary-dark: #10b981;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            font-size: 17px;
+        }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--primary); }
+
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; line-height: 1.2; }
+        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
+
+        .calc-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .calc-box h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; color: var(--primary); }
+
+        .input-group { margin-bottom: 24px; }
+        .input-group label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .input-group label .val {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--primary);
+            height: 6px;
+            cursor: pointer;
+        }
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: var(--bg);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 0;
+        }
+        .toggle-row label { font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+        .toggle-row .desc { color: var(--text-light); font-size: 0.85rem; }
+        input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--primary); cursor: pointer; }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        .result-card {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 18px 16px;
+            text-align: center;
+        }
+        .result-card .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.03em; }
+        .result-card .value { font-size: 1.5rem; font-weight: 800; color: var(--primary); line-height: 1.1; }
+        .result-card .unit { font-size: 0.8rem; color: var(--text-light); margin-top: 2px; }
+        .result-card.highlight { background: var(--primary); }
+        .result-card.highlight .label, .result-card.highlight .value, .result-card.highlight .unit { color: white; }
+
+        canvas { width: 100%; border-radius: 8px; display: block; }
+
+        .affiliate-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        .affiliate-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+        .affiliate-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .affiliate-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.15s;
+        }
+        .affiliate-btn:hover { opacity: 0.85; }
+
+        .seo-text { margin-bottom: 32px; }
+        .seo-text h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+        .seo-text p { color: var(--text-light); line-height: 1.7; margin-bottom: 12px; }
+
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
+        .faq-item {
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .faq-q {
+            padding: 16px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            font-size: 0.95rem;
+        }
+        .faq-q:hover { background: var(--primary-light); }
+        .faq-q .arrow { color: var(--primary); font-size: 1.1rem; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-a {
+            display: none;
+            padding: 0 20px 16px;
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            background: var(--white);
+        }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .arrow { transform: rotate(180deg); }
+
+        .cross-links { margin: 32px 0; }
+        .cross-links h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+        .cross-links-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+        .cross-links-grid a {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .cross-links-grid a:hover { opacity: 0.75; }
+
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 48px;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            .calc-box { padding: 20px 16px; }
+            .results-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo">GratisKalkyl.se ☀️</a>
+            <div class="nav-links">
+                <a href="/">Alla kalkylatorer</a>
+                <a href="/kalkylatorer/elkostnadskalkylator.html">Elkostnad</a>
+                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <h1>☀️ Solcellskalkylator 2026</h1>
+    <p class="subtitle">Räkna ut solcellsproduktion, elpris-besparing, återbetalningstid och ROI för din anläggning — med ROT-avdrag och elområde SE1–SE4.</p>
+
+    <div class="calc-box">
+        <h2>Ange din anläggning</h2>
+
+        <div class="input-group">
+            <label>
+                Årsförbrukning el
+                <span class="val" id="val-forbrukning">9 000 kWh/år</span>
+            </label>
+            <input type="range" id="sl-forbrukning" min="2000" max="30000" step="500" value="9000" oninput="syncSlider(this,'val-forbrukning',formatKwh)">
+        </div>
+
+        <div class="input-group">
+            <label>
+                Takyta för solceller
+                <span class="val" id="val-takyta">30 m²</span>
+            </label>
+            <input type="range" id="sl-takyta" min="5" max="120" step="5" value="30" oninput="syncSlider(this,'val-takyta',formatM2)">
+        </div>
+
+        <div class="input-group">
+            <label for="sel-elomrade">Elområde</label>
+            <select id="sel-elomrade" onchange="berakna()">
+                <option value="SE1">SE1 — Norrland (Luleå)</option>
+                <option value="SE2">SE2 — Norrland/Norrland (Sundsvall)</option>
+                <option value="SE3" selected>SE3 — Mellansverige (Stockholm)</option>
+                <option value="SE4">SE4 — Södra Sverige (Malmö)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>
+                Installationskostnad (brutto)
+                <span class="val" id="val-kostnad">150 000 kr</span>
+            </label>
+            <input type="range" id="sl-kostnad" min="30000" max="500000" step="5000" value="150000" oninput="syncSlider(this,'val-kostnad',formatKr)">
+        </div>
+
+        <div class="toggle-row">
+            <input type="checkbox" id="chk-rot" checked onchange="berakna()">
+            <div>
+                <label for="chk-rot">Inkludera ROT-avdrag (30% på arbete)</label>
+                <div class="desc">Ca 40% av installationskostnaden är arbete, max 50 000 kr/person</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calc-box">
+        <h2>Resultat</h2>
+        <div class="results-grid" id="results-grid">
+            <div class="result-card">
+                <div class="label">Produktion</div>
+                <div class="value" id="res-produktion">—</div>
+                <div class="unit">kWh/år</div>
+            </div>
+            <div class="result-card">
+                <div class="label">Täckningsgrad</div>
+                <div class="value" id="res-tackningsgrad">—</div>
+                <div class="unit">% av förbrukning</div>
+            </div>
+            <div class="result-card highlight">
+                <div class="label">Årsbesparing</div>
+                <div class="value" id="res-arsbesparing">—</div>
+                <div class="unit">kr/år</div>
+            </div>
+            <div class="result-card">
+                <div class="label">Nettokostnad</div>
+                <div class="value" id="res-nettokostnad">—</div>
+                <div class="unit">kr efter ROT</div>
+            </div>
+            <div class="result-card">
+                <div class="label">Återbetalningstid</div>
+                <div class="value" id="res-aterbet">—</div>
+                <div class="unit">år</div>
+            </div>
+            <div class="result-card">
+                <div class="label">ROI (25 år)</div>
+                <div class="value" id="res-roi">—</div>
+                <div class="unit">% totalavkastning</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calc-box">
+        <h2>Kumulativ besparing vs investering (25 år)</h2>
+        <canvas id="chart" height="280"></canvas>
+    </div>
+
+    <div class="affiliate-box">
+        <h3>Jämför offerter från solcellsinstallatörer</h3>
+        <p style="font-size:0.9rem; color: var(--text-light); margin-bottom: 12px;">Hämta kostnadsfria offerter och hitta bästa pris på din anläggning.</p>
+        <div class="affiliate-links">
+            <a href="https://www.eneo.se/?utm_source=gratiskalkyl" class="affiliate-btn" rel="noopener noreferrer" target="_blank">Hämta offert — Eneo</a>
+            <a href="https://www.sveasolar.com/?utm_source=gratiskalkyl" class="affiliate-btn" rel="noopener noreferrer" target="_blank">Hämta offert — Svea Solar</a>
+        </div>
+    </div>
+
+    <div class="seo-text">
+        <h2>Lönar sig solceller i Sverige 2026?</h2>
+        <p>Solceller har blivit ett av de mest populära hemmaenergiprojekten i Sverige. Med höga elpriser, generösa ROT-avdrag och kraftigt sjunkande installationskostnader är 2026 ett av de bästa åren någonsin att investera i solceller. Men lönsamheten varierar kraftigt beroende på var i Sverige du bor, hur stor anläggning du väljer och hur du använder elen.</p>
+        <p>En villa med 30 m² solceller i elområde SE3 kan producera runt 4 000–4 500 kWh per år. Det motsvarar ungefär 40–50% av en normalhushålls årsförbrukning. I Skåne och södra Sverige (SE4) är produktionen ännu högre tack vare fler soltimmar, och elprisen är historiskt sett höga — en dubbel fördel för solcellsägare.</p>
+        <p>Återbetalningstiden för en solcellsanläggning i Sverige ligger typiskt på 8–14 år. Med ROT-avdrag kan du sänka nettokostnaden med upp till 100 000 kr för ett hushåll (50 000 kr per person). Det innebär att en anläggning som kostar 150 000 kr i brutto kan hamna på 90 000–110 000 kr netto efter avdraget.</p>
+        <p>Solceller håller i 25–30 år och effekten minskar bara med 0,3–0,5% per år. Det innebär att en bra investering idag ger avkastning långt in på 2040- och 2050-talet. Många husägare ser en totalavkastning på 200–400% över anläggningens livslängd.</p>
+        <p>Välj rätt installationskostnad i kalkylatorn ovan och se exakt hur din anläggning kan prestera. Kom ihåg att jämföra flera offerter — prisskillnaden mellan installatörer kan vara 20–40%.</p>
+    </div>
+
+    <div class="faq-section">
+        <h2>Vanliga frågor om solceller</h2>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Hur mycket producerar solceller i Sverige per år? <span class="arrow">▼</span></div>
+            <div class="faq-a">En solcellspanel i Sverige producerar ungefär 120–160 kWh per kvadratmeter och år, beroende på var i landet du bor. I Skåne (SE4) produceras mer än i Norrland (SE1) på grund av mer soltimmar. En typisk villa med 30 m² solceller (5–6 kWp) producerar 4 000–5 000 kWh per år.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Vad kostar en solcellsanläggning att installera? <span class="arrow">▼</span></div>
+            <div class="faq-a">En typisk solcellsanläggning för en villa kostar 100 000–250 000 kr före ROT-avdrag, beroende på storlek och tak. Med ROT-avdrag (30% på arbetskostnaden, upp till 100 000 kr per hushåll) kan nettokostnaden sjunka avsevärt. Priset per installerad kWp har sjunkit kraftigt de senaste åren.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Hur beräknas återbetalningstiden för solceller? <span class="arrow">▼</span></div>
+            <div class="faq-a">Återbetalningstiden beräknas som nettoinvesteringskostnad dividerat med den årliga elbesparingen. Elbesparingen är solcellsproduktionen (kWh/år) multiplicerad med det totala elpriset du betalar (inkl. elnät, skatter och avgifter). Typisk återbetalningstid i Sverige är 8–15 år, beroende på elområde och anläggningsstorlek.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Vilket ROT-avdrag kan man få för solceller? <span class="arrow">▼</span></div>
+            <div class="faq-a">Du kan få ROT-avdrag på 30% av arbetskostnaden vid installation av solceller. Avdraget är begränsat till 50 000 kr per person och år. För ett hushåll med två vuxna är taket 100 000 kr. Observera att bara arbetskostnaden (inte materialkostnaden) berättigar till ROT. Arbetet ska utföras av ett godkänt företag och faktureras med ROT-avdrag.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Kan man sälja el tillbaka till nätet med solceller? <span class="arrow">▼</span></div>
+            <div class="faq-a">Ja, överskottsel kan säljas till ditt elbolag. Priset du får är vanligtvis spotpriset minus en liten avgift, vilket är lägre än vad du betalar per kWh. Egenanvändning av solcellsel (direkt konsumtion) är ekonomiskt mer fördelaktigt än att sälja tillbaka. Kalkylatorn fokuserar på egenanvändning, men vid bra täckningsgrad säljer många även en del till nätet.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Hur länge håller solceller? <span class="arrow">▼</span></div>
+            <div class="faq-a">Moderna solcellspaneler har en livslängd på 25–30 år och levereras ofta med 25 års effektgaranti. Effekten sjunker normalt med 0,3–0,5% per år, vilket innebär att panelerna producerar ca 88–92% av ursprungseffekten efter 25 år. Växelriktaren (invertern) behöver vanligtvis bytas efter 10–15 år, vilket bör inkluderas i totalkalkylen.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Vilket elområde bor jag i och varför spelar det roll? <span class="arrow">▼</span></div>
+            <div class="faq-a">Sverige är indelat i fyra elområden: SE1 (Luleå), SE2 (Sundsvall), SE3 (Stockholm/Mellansverige) och SE4 (Malmö/Skåne). Elområdet påverkar spotpriset — SE4 är historiskt dyrast och SE1 billigast. Det påverkar också solproduktionen, då södra Sverige har fler soltimmar. Bor du i SE4 är solceller som regel mer lönsamma: högt elpris kombinerat med mer sol.</div>
+        </div>
+    </div>
+
+    <div class="cross-links">
+        <h3>Relaterade kalkylatorer</h3>
+        <div class="cross-links-grid">
+            <a href="/kalkylatorer/elkostnadskalkylator.html">⚡ Elkostnadskalkylator</a>
+            <a href="/kalkylatorer/rot-rut.html">🔨 ROT & RUT-kalkylator</a>
+            <a href="/kalkylatorer/loneraknare.html">💼 Löneräknare</a>
+            <a href="/kalkylatorer/sparkalkylator.html">💰 Sparkalkylator</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
+        Senast uppdaterad: mars 2026 | <a href="/">Tillbaka till startsidan</a></p>
+        <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
+    </div>
+</footer>
+
+<script>
+// --- Elområde data: [kWh/m²/år, kr/kWh total inkl. nät+skatt]
+const ELOMRADE = {
+    SE1: { prod: 125, pris: 1.05 },
+    SE2: { prod: 132, pris: 1.15 },
+    SE3: { prod: 142, pris: 1.35 },
+    SE4: { prod: 155, pris: 1.45 }
+};
+const ROT_ANDEL_ARBETE = 0.40; // 40% av installationskostnaden är arbete
+const ROT_PROCENT = 0.30;
+const ROT_MAX_PER_PERSON = 50000;
+const ROT_MAX_HUSHALL = 100000; // 2 vuxna
+const LIVSLANGD = 25;
+const DEGRADERING = 0.004; // 0.4% per år
+
+function formatKwh(v) { return Number(v).toLocaleString('sv-SE') + ' kWh/år'; }
+function formatM2(v) { return v + ' m²'; }
+function formatKr(v) { return Number(v).toLocaleString('sv-SE') + ' kr'; }
+
+function syncSlider(el, labelId, fmt) {
+    document.getElementById(labelId).textContent = fmt(el.value);
+    berakna();
+}
+
+function berakna() {
+    const forbrukning = parseInt(document.getElementById('sl-forbrukning').value);
+    const takyta = parseInt(document.getElementById('sl-takyta').value);
+    const elomrade = document.getElementById('sel-elomrade').value;
+    const bruttoKostnad = parseInt(document.getElementById('sl-kostnad').value);
+    const rotAktiv = document.getElementById('chk-rot').checked;
+
+    const { prod: prodPerM2, pris: elpris } = ELOMRADE[elomrade];
+
+    // Produktion
+    const produktionKwh = Math.round(takyta * prodPerM2);
+
+    // Täckningsgrad (max 100%)
+    const tackningsgrad = Math.min(100, Math.round((produktionKwh / forbrukning) * 100));
+
+    // ROT-avdrag
+    let rotAvdrag = 0;
+    if (rotAktiv) {
+        const arbetsKostnad = bruttoKostnad * ROT_ANDEL_ARBETE;
+        rotAvdrag = Math.min(arbetsKostnad * ROT_PROCENT, ROT_MAX_HUSHALL);
+    }
+    const nettoKostnad = Math.round(bruttoKostnad - rotAvdrag);
+
+    // Egenanvändning: antar max 80% egenanvändning av produktionen
+    const egenanvandning = Math.min(produktionKwh * 0.80, forbrukning);
+    const arsBesparing = Math.round(egenanvandning * elpris);
+
+    // Återbetalningstid
+    const aterbet = arsBesparing > 0 ? (nettoKostnad / arsBesparing).toFixed(1) : '—';
+
+    // Total besparing 25 år (med degradering)
+    let totalBesparing = 0;
+    let yearData = [];
+    let cumSavings = 0;
+    for (let y = 1; y <= LIVSLANGD; y++) {
+        const faktor = Math.pow(1 - DEGRADERING, y - 1);
+        const arligBesparing = arsBesparing * faktor;
+        cumSavings += arligBesparing;
+        yearData.push({ year: y, cum: Math.round(cumSavings) });
+    }
+    totalBesparing = Math.round(cumSavings);
+
+    // ROI
+    const roi = nettoKostnad > 0 ? Math.round(((totalBesparing - nettoKostnad) / nettoKostnad) * 100) : 0;
+
+    // Uppdatera UI
+    document.getElementById('res-produktion').textContent = produktionKwh.toLocaleString('sv-SE');
+    document.getElementById('res-tackningsgrad').textContent = tackningsgrad + '%';
+    document.getElementById('res-arsbesparing').textContent = arsBesparing.toLocaleString('sv-SE') + ' kr';
+    document.getElementById('res-nettokostnad').textContent = nettoKostnad.toLocaleString('sv-SE') + ' kr';
+    document.getElementById('res-aterbet').textContent = aterbet + ' år';
+    document.getElementById('res-roi').textContent = roi + '%';
+
+    ritaGraf(yearData, nettoKostnad);
+}
+
+function ritaGraf(yearData, nettoKostnad) {
+    const canvas = document.getElementById('chart');
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.parentElement.clientWidth - 64;
+    const h = 280;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.scale(dpr, dpr);
+
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const textColor = isDark ? '#d1d5db' : '#555';
+    const gridColor = isDark ? '#374151' : '#e2e8f0';
+    const primary = isDark ? '#34d399' : '#1a6b4a';
+    const danger = '#ef4444';
+
+    ctx.clearRect(0, 0, w, h);
+
+    const padL = 72, padR = 24, padT = 20, padB = 40;
+    const cw = w - padL - padR;
+    const ch = h - padT - padB;
+
+    const maxVal = Math.max(yearData[yearData.length - 1].cum, nettoKostnad) * 1.1;
+
+    // Grid
+    ctx.strokeStyle = gridColor;
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+        const y = padT + ch - (i / 4) * ch;
+        ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL + cw, y); ctx.stroke();
+        ctx.fillStyle = textColor;
+        ctx.font = '11px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        const val = Math.round((i / 4) * maxVal);
+        ctx.fillText(val.toLocaleString('sv-SE') + ' kr', padL - 6, y + 4);
+    }
+
+    // X-axis labels
+    ctx.fillStyle = textColor;
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    [1, 5, 10, 15, 20, 25].forEach(yr => {
+        const x = padL + ((yr - 1) / 24) * cw;
+        ctx.fillText('År ' + yr, x, h - padB + 16);
+    });
+
+    // Investment line (flat, red)
+    const invY = padT + ch - (nettoKostnad / maxVal) * ch;
+    ctx.strokeStyle = danger;
+    ctx.lineWidth = 2;
+    ctx.setLineDash([6, 4]);
+    ctx.beginPath();
+    ctx.moveTo(padL, invY);
+    ctx.lineTo(padL + cw, invY);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Label for investment line
+    ctx.fillStyle = danger;
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('Investering', padL + 4, invY - 6);
+
+    // Savings area fill
+    ctx.beginPath();
+    ctx.moveTo(padL, padT + ch);
+    yearData.forEach((d, i) => {
+        const x = padL + (i / 24) * cw;
+        const y = padT + ch - (d.cum / maxVal) * ch;
+        ctx.lineTo(x, y);
+    });
+    ctx.lineTo(padL + cw, padT + ch);
+    ctx.closePath();
+    ctx.fillStyle = isDark ? 'rgba(52,211,153,0.15)' : 'rgba(26,107,74,0.1)';
+    ctx.fill();
+
+    // Savings line
+    ctx.strokeStyle = primary;
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    yearData.forEach((d, i) => {
+        const x = padL + (i / 24) * cw;
+        const y = padT + ch - (d.cum / maxVal) * ch;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+
+    // Breakeven dot
+    for (let i = 1; i < yearData.length; i++) {
+        if (yearData[i].cum >= nettoKostnad) {
+            const fracBefore = (nettoKostnad - yearData[i-1].cum) / (yearData[i].cum - yearData[i-1].cum);
+            const dotX = padL + ((i - 1 + fracBefore) / 24) * cw;
+            const dotY = invY;
+            ctx.fillStyle = primary;
+            ctx.beginPath();
+            ctx.arc(dotX, dotY, 5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = primary;
+            ctx.font = 'bold 11px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Breakeven', dotX, dotY - 12);
+            break;
+        }
+    }
+
+    // Legend
+    ctx.font = '11px Inter, sans-serif';
+    ctx.fillStyle = primary;
+    ctx.fillRect(padL, padT - 14, 12, 3);
+    ctx.textAlign = 'left';
+    ctx.fillText('Kumulativ besparing', padL + 16, padT - 6);
+    ctx.fillStyle = danger;
+    ctx.fillRect(padL + 160, padT - 14, 12, 3);
+    ctx.fillText('Investering (netto)', padL + 176, padT - 6);
+}
+
+function toggleFaq(el) {
+    el.parentElement.classList.toggle('open');
+}
+
+// Init
+berakna();
+window.addEventListener('resize', berakna);
+</script>
+</body>
+</html>
