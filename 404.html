@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+        gtag('event', 'page_not_found', {
+            'page_path': window.location.pathname
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Sidan hittades inte | GratisKalkyl.se</title>
+    <meta name="description" content="Sidan du söker finns inte. Gå tillbaka till GratisKalkyl.se och hitta din kalkylator.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 17px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .logo span { color: var(--text); }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Main 404 content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 20px;
+        }
+        .error-wrap {
+            text-align: center;
+            max-width: 560px;
+        }
+        .error-code {
+            font-size: 7rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 16px;
+        }
+        .error-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .error-desc {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .btn-home {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.15s ease;
+            margin-bottom: 48px;
+        }
+        .btn-home:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+        .btn-home:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+            border-radius: 8px;
+        }
+
+        /* Popular calculators */
+        .popular-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+        }
+        .calc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .calc-link {
+            display: inline-block;
+            background: var(--white);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .calc-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .calc-link:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        footer a:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .error-code { font-size: 5rem; }
+            .error-title { font-size: 1.3rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/">Alla kalkylatorer</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="error-wrap">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Sidan hittades inte</h1>
+            <p class="error-desc">
+                Sidan du söker verkar inte finnas — den kan ha flyttats, tagits bort
+                eller så stavades adressen fel. Gå tillbaka till startsidan och
+                hitta kalkylatorn du söker.
+            </p>
+            <a href="/" class="btn-home">Till startsidan</a>
+
+            <p class="popular-heading">Populära kalkylatorer</p>
+            <div class="calc-links">
+                <a href="/kalkylatorer/loneraknare.html" class="calc-link">💰 Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator.html" class="calc-link">🏠 Bolånekalkylator</a>
+                <a href="/kalkylatorer/ranta-pa-ranta.html" class="calc-link">📈 Ränta på ränta</a>
+                <a href="/kalkylatorer/sparkalkylator.html" class="calc-link">💎 Sparkalkylator</a>
+                <a href="/kalkylatorer/rot-rut.html" class="calc-link">🔨 ROT & RUT</a>
+                <a href="/kalkylatorer/skatteaterbarings-kalkylator.html" class="calc-link">🧾 Skatteåterbäring</a>
+                <a href="/kalkylatorer/bmi-kalkylator.html" class="calc-link">⚖️ BMI-kalkylator</a>
+                <a href="/kalkylatorer/pensionskalkylator.html" class="calc-link">🎯 Pensionskalkylator</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 GratisKalkyl.se — Gratis kalkylatorer online</p>
+            <p style="margin-top:8px;">
+                <a href="/">Alla kalkylatorer</a> &nbsp;·&nbsp;
+                <a href="/artiklar/">Guider</a>
+            </p>
+            <p style="margin-top:12px;font-size:0.82rem;color:var(--text-light);opacity:0.7;">
+                Beräkningarna är ungefärliga och kan innehålla fel. Konsultera alltid en rådgivare vid viktiga ekonomiska beslut.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
