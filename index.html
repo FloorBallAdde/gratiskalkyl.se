@@ -1,505 +1,442 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GratisKalkyl.se — Gratis kalkylatorer och räknare online</title>
-    <meta name="description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt, ROT-avdrag och mycket mer. Snabba, enkla och alltid uppdaterade verktyg.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/">
-    <meta property="og:title" content="GratisKalkyl.se — Gratis kalkylatorer och räknare online">
-    <meta property="og:description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt, ROT-avdrag och mycket mer.">
-    <meta property="og:url" content="https://gratiskalkyl.se/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="GratisKalkyl.se — Gratis kalkylatorer online">
-    <meta name="twitter:description" content="Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön efter skatt och mycket mer.">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GratisKalkyl.se – Gratis kalkylatorer 2026 | Löneräknare, Bolån & mer</title>
+  <meta name="description" content="25 gratis kalkylatorer för din privatekonomi. Löneräknare, bolånekalkylator, sparkalkylator, ISK-skatt, ROT/RUT och mer. Snabbt, neutralt och utan bias.">
+  <link rel="canonical" href="https://gratiskalkyl.se/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#16a34a">
+  <meta property="og:title" content="GratisKalkyl.se – Gratis kalkylatorer för privatekonomi 2026">
+  <meta property="og:description" content="25 gratis kalkylatorer. Löneräknare, bolånekalkylator, sparkalkylator och mer. Utan bankbias.">
+  <meta property="og:url" content="https://gratiskalkyl.se/">
+  <meta property="og:type" content="website">
 
-        :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
-            --white: #ffffff;
-            --border: #e2e8f0;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --radius: 12px;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGTX1PYYFJ');
+  </script>
 
-        /* Header */
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        .logo span { color: var(--text); }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            padding: 48px 20px 32px;
-        }
-        .hero h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            color: var(--text);
-            letter-spacing: -0.01em;
-        }
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Calculator Grid */
-        .calc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 24px;
-            padding: 20px 0 48px;
-        }
-        .calc-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.3s ease, transform 0.2s ease;
-        }
-        .calc-card:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-            transform: translateY(-2px);
-        }
-        .calc-card:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .calc-card .icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-        .calc-card h2 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .calc-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-        .calc-card .tag {
-            display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-top: 16px;
-        }
-
-        /* Section heading */
-        .section-heading {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 8px 0 24px;
-            color: var(--text);
-        }
-        .section-divider {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 8px 0 32px;
-        }
-
-        /* Guide cards — same grid as calc-cards */
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
-            padding: 0 0 48px;
-        }
-
-        /* Coming soon cards */
-        .calc-card.coming-soon {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-        .calc-card.coming-soon .tag {
-            background: #f0f0f0;
-            color: #999;
-        }
-        @media (prefers-color-scheme: dark) {
-            .calc-card.coming-soon .tag {
-                background: #374151;
-                color: #9ca3af;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        footer a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .hero h1 { font-size: 1.6rem; }
-            .hero p { font-size: 1rem; }
-            .calc-grid { grid-template-columns: 1fr; }
-            nav { display: none; }
-            .calc-card {
-                padding: 16px;
-                min-height: 44px;
-            }
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "GratisKalkyl.se",
-        "url": "https://gratiskalkyl.se",
-        "description": "Gratis kalkylatorer online. Räkna ut ränta på ränta, nettolön, ROT-avdrag och mer.",
-        "inLanguage": "sv"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GratisKalkyl.se",
+    "url": "https://gratiskalkyl.se",
+    "description": "Gratis kalkylatorer för privatekonomi — neutrala, snabba och utan bankbias.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://gratiskalkyl.se/?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
     }
-    </script>
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Gratis kalkylatorer för privatekonomi 2026",
+    "url": "https://gratiskalkyl.se",
+    "numberOfItems": 25,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Löneräknare","url":"https://gratiskalkyl.se/kalkylatorer/loneraknare.html"},
+      {"@type":"ListItem","position":2,"name":"ISK-skatteberäknare","url":"https://gratiskalkyl.se/kalkylatorer/isk-skatteberaknare.html"},
+      {"@type":"ListItem","position":3,"name":"ROT & RUT-avdrag","url":"https://gratiskalkyl.se/kalkylatorer/rot-rut.html"},
+      {"@type":"ListItem","position":4,"name":"Skatteåterbäringskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/skatteaterbarings-kalkylator.html"},
+      {"@type":"ListItem","position":5,"name":"Kapitalvinstskatt","url":"https://gratiskalkyl.se/kalkylatorer/kapitalvinstskatt.html"},
+      {"@type":"ListItem","position":6,"name":"Frilanskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/frilanskalkylator.html"},
+      {"@type":"ListItem","position":7,"name":"Momsräknare","url":"https://gratiskalkyl.se/kalkylatorer/momsraknare.html"},
+      {"@type":"ListItem","position":8,"name":"Ränta på ränta","url":"https://gratiskalkyl.se/kalkylatorer/ranta-pa-ranta.html"},
+      {"@type":"ListItem","position":9,"name":"Sparkalkylator","url":"https://gratiskalkyl.se/kalkylatorer/sparkalkylator.html"},
+      {"@type":"ListItem","position":10,"name":"Pensionskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/pensionskalkylator.html"},
+      {"@type":"ListItem","position":11,"name":"Direktavkastningskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/direktavkastningskalkylator.html"},
+      {"@type":"ListItem","position":12,"name":"Bolånekalkylator","url":"https://gratiskalkyl.se/kalkylatorer/bolanekalkylator.html"},
+      {"@type":"ListItem","position":13,"name":"Lånekalkylator","url":"https://gratiskalkyl.se/kalkylatorer/lanekalkylator.html"},
+      {"@type":"ListItem","position":14,"name":"Amorteringskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/amorteringskalkylator.html"},
+      {"@type":"ListItem","position":15,"name":"Leasingkalkylator","url":"https://gratiskalkyl.se/kalkylatorer/leasingkalkylator.html"},
+      {"@type":"ListItem","position":16,"name":"Bilkostnadsräknare","url":"https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare.html"},
+      {"@type":"ListItem","position":17,"name":"Elkostnadskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/elkostnadskalkylator.html"},
+      {"@type":"ListItem","position":18,"name":"Solcellskalkylator","url":"https://gratiskalkyl.se/kalkylatorer/solcellskalkylator.html"},
+      {"@type":"ListItem","position":19,"name":"Förmånsbilkalkylator","url":"https://gratiskalkyl.se/kalkylatorer/formansbilkalkylator.html"},
+      {"@type":"ListItem","position":20,"name":"Semesterlönekalkylator","url":"https://gratiskalkyl.se/kalkylatorer/semesterlonekalkylator.html"},
+      {"@type":"ListItem","position":21,"name":"Semesterersättning","url":"https://gratiskalkyl.se/kalkylatorer/semesterersattning.html"},
+      {"@type":"ListItem","position":22,"name":"Föräldrapenningkalkylator","url":"https://gratiskalkyl.se/kalkylatorer/foraldrapenning.html"},
+      {"@type":"ListItem","position":23,"name":"A-kassekalkylator","url":"https://gratiskalkyl.se/kalkylatorer/akassa-kalkylator.html"},
+      {"@type":"ListItem","position":24,"name":"BMI-kalkylator","url":"https://gratiskalkyl.se/kalkylatorer/bmi-kalkylator.html"},
+      {"@type":"ListItem","position":25,"name":"Kalorikalkylator","url":"https://gratiskalkyl.se/kalkylatorer/kalorikalkylator.html"}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:#16a34a; --green-dark:#15803d; --green-light:#dcfce7;
+      --text:#111827; --muted:#6b7280; --bg:#f3f4f6;
+      --card:#ffffff; --border:#e5e7eb; --radius:12px;
+      --sh:0 1px 3px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.09);
+    }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+
+    /* HEADER */
+    .site-header { position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid var(--border); transition:box-shadow .2s; }
+    .site-header.shadow { box-shadow:var(--sh-md); }
+    .hdr { max-width:1120px; margin:0 auto; padding:0 1rem; height:60px; display:flex; align-items:center; gap:1rem; }
+    .logo { text-decoration:none; font-size:1.2rem; font-weight:800; color:var(--green); letter-spacing:-.01em; white-space:nowrap; flex-shrink:0; }
+    .logo span { color:var(--muted); font-weight:400; }
+    .search-wrap { flex:1; max-width:380px; margin-left:auto; position:relative; }
+    .search-icon { position:absolute; left:.7rem; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; }
+    #search { width:100%; padding:.5rem .75rem .5rem 2.1rem; border:1.5px solid var(--border); border-radius:8px; font-size:.9rem; background:var(--bg); color:var(--text); outline:none; transition:border-color .15s,box-shadow .15s; }
+    #search:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(22,163,74,.12); background:#fff; }
+    #search::placeholder { color:var(--muted); }
+
+    /* HERO */
+    .hero { background:linear-gradient(150deg,#fff 0%,#f0fdf4 60%,#dcfce7 100%); border-bottom:1px solid var(--border); text-align:center; padding:3rem 1rem 2.25rem; }
+    .hero h1 { font-size:clamp(1.6rem,4.5vw,2.4rem); font-weight:800; letter-spacing:-.02em; margin-bottom:.5rem; }
+    .hero-sub { color:var(--muted); font-size:1rem; margin-bottom:1.25rem; }
+    .hero-chips { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
+    .hero-chip { background:var(--green-light); color:var(--green-dark); font-size:.78rem; font-weight:600; padding:.3rem .8rem; border-radius:99px; border:1px solid rgba(22,163,74,.2); }
+
+    /* FILTER */
+    .filter-nav { background:#fff; border-bottom:1px solid var(--border); position:sticky; top:60px; z-index:90; }
+    .filter-scroll { max-width:1120px; margin:0 auto; padding:.7rem 1rem; display:flex; gap:.4rem; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
+    .filter-scroll::-webkit-scrollbar { display:none; }
+    .fbtn { display:inline-flex; align-items:center; gap:.3rem; white-space:nowrap; padding:.38rem .85rem; border:1.5px solid var(--border); border-radius:99px; background:#fff; color:var(--muted); font-size:.82rem; font-weight:600; cursor:pointer; transition:border-color .12s,color .12s,background .12s; flex-shrink:0; }
+    .fbtn:hover { border-color:var(--green); color:var(--green); }
+    .fbtn.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .fbtn .n { background:rgba(0,0,0,.1); border-radius:99px; padding:.1rem .4rem; font-size:.72rem; font-weight:700; }
+    .fbtn.active .n { background:rgba(255,255,255,.25); }
+
+    /* GRID */
+    .grid-wrap { max-width:1120px; margin:0 auto; padding:1.75rem 1rem 2rem; }
+    .grid-meta { font-size:.82rem; color:var(--muted); font-weight:500; margin-bottom:1.1rem; min-height:1.2em; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:500px){.grid{grid-template-columns:1fr;}}
+
+    /* CARD */
+    .card { display:flex; flex-direction:column; background:var(--card); border:1.5px solid var(--border); border-radius:var(--radius); padding:1.2rem 1.1rem 1rem; text-decoration:none; color:var(--text); box-shadow:var(--sh); transition:box-shadow .15s,border-color .15s,transform .12s; }
+    .card:hover { box-shadow:var(--sh-md); border-color:var(--green); transform:translateY(-2px); }
+    .card:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
+    .card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.7rem; }
+    .card-icon { font-size:1.9rem; line-height:1; }
+    .card-arrow { color:var(--border); font-size:1.1rem; transition:color .15s,transform .15s; }
+    .card:hover .card-arrow { color:var(--green); transform:translate(2px,-2px); }
+    .card h2 { font-size:.97rem; font-weight:700; margin-bottom:.25rem; line-height:1.3; }
+    .card-desc { font-size:.83rem; color:var(--muted); flex:1; margin-bottom:.85rem; line-height:1.45; }
+    .badge { display:inline-block; font-size:.68rem; font-weight:700; padding:.18rem .55rem; border-radius:99px; letter-spacing:.03em; text-transform:uppercase; align-self:flex-start; }
+    .b-pk{background:#dbeafe;color:#1d4ed8;} .b-sp{background:#dcfce7;color:#166534;}
+    .b-bo{background:#ffedd5;color:#c2410c;} .b-fo{background:#f3f4f6;color:#374151;}
+    .b-jo{background:#f3e8ff;color:#6d28d9;} .b-ha{background:#fce7f3;color:#be185d;}
+    .card.hidden { display:none; }
+
+    /* NO RESULTS */
+    .no-results { display:none; grid-column:1/-1; text-align:center; padding:3rem 1rem; color:var(--muted); }
+    .no-results.show { display:block; }
+    .no-results strong { color:var(--text); }
+
+    /* SEO */
+    .seo { max-width:780px; margin:0 auto; padding:0 1rem 3.5rem; }
+    .seo h2 { font-size:1.2rem; font-weight:700; margin-bottom:.85rem; }
+    .seo p { font-size:.92rem; color:var(--muted); margin-bottom:.65rem; line-height:1.7; }
+
+    /* FOOTER */
+    .site-footer { background:#fff; border-top:1px solid var(--border); text-align:center; padding:1.25rem 1rem; font-size:.82rem; color:var(--muted); }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <nav>
-                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
-                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container">
-        <div class="hero">
-            <h1>Gratis kalkylatorer online</h1>
-            <p>Räkna ut ränta, lön efter skatt, avdrag och mer. Snabba verktyg som alltid är uppdaterade.</p>
-        </div>
+<header class="site-header" id="hdr">
+  <div class="hdr">
+    <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
+    <div class="search-wrap">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" id="search" placeholder="Sök kalkylator…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
+    </div>
+  </div>
+</header>
 
-        <div class="calc-grid">
-            <a href="/kalkylatorer/ranta-pa-ranta.html" class="calc-card">
-                <div class="icon">📈</div>
-                <h2>Ränta på ränta-kalkylator</h2>
-                <p>Se hur ditt sparande växer över tid med ränta-på-ränta-effekten. Interaktiv graf visar utvecklingen år för år.</p>
-                <span class="tag">Populär</span>
-            </a>
+<section class="hero">
+  <h1>Gratis kalkylatorer för privatekonomi</h1>
+  <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
+  <div class="hero-chips">
+    <span class="hero-chip">✓ 25 kalkylatorer</span>
+    <span class="hero-chip">✓ 100% gratis</span>
+    <span class="hero-chip">✓ Uppdaterade 2026</span>
+    <span class="hero-chip">✓ Mobilvänliga</span>
+  </div>
+</section>
 
-            <a href="/kalkylatorer/loneraknare.html" class="calc-card">
-                <div class="icon">💰</div>
-                <h2>Löneräknare 2026</h2>
-                <p>Räkna ut din nettolön efter skatt. Välj kommun och månadslön — se exakt vad du får ut.</p>
-                <span class="tag">Ny</span>
-            </a>
+<nav class="filter-nav" aria-label="Filtrera kalkylatorer efter kategori">
+  <div class="filter-scroll">
+    <button class="fbtn active" data-cat="alla">Alla <span class="n">25</span></button>
+    <button class="fbtn" data-cat="pk">💰 Privatekonomi <span class="n">7</span></button>
+    <button class="fbtn" data-cat="sp">💹 Sparande <span class="n">4</span></button>
+    <button class="fbtn" data-cat="bo">🏠 Boende & Lån <span class="n">4</span></button>
+    <button class="fbtn" data-cat="fo">🚗 Fordon & Energi <span class="n">4</span></button>
+    <button class="fbtn" data-cat="jo">👪 Jobb & Familj <span class="n">4</span></button>
+    <button class="fbtn" data-cat="ha">💪 Hälsa <span class="n">2</span></button>
+  </div>
+</nav>
 
-            <a href="/kalkylatorer/rot-rut.html" class="calc-card">
-                <div class="icon">🏠</div>
-                <h2>ROT & RUT-kalkylator 2026</h2>
-                <p>Räkna ut ditt ROT- eller RUT-avdrag. Se exakt hur mycket du sparar på renovering och hushållstjänster.</p>
-                <span class="tag">Ny</span>
-            </a>
+<main>
+<section class="grid-wrap">
+  <p class="grid-meta" id="meta" aria-live="polite">Visar 25 kalkylatorer</p>
+  <div class="grid" id="grid">
 
-            <a href="/kalkylatorer/bolanekalkylator.html" class="calc-card">
-                <div class="icon">🏦</div>
-                <h2>Bolånekalkylator 2026</h2>
-                <p>Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag — och följ skulden år för år.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <!-- PRIVATEKONOMI -->
+    <a class="card" href="/kalkylatorer/loneraknare.html" data-cat="pk" data-kw="löneräknare lön skatt nettolön bruttolön kommunalskatt jobbskatteavdrag">
+      <div class="card-top"><span class="card-icon">💼</span><span class="card-arrow">↗</span></div>
+      <h2>Löneräknare</h2>
+      <p class="card-desc">Räkna ut din lön efter skatt för 2026 — inkl. kommunalskatt och jobbskatteavdrag.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/elkostnadskalkylator.html" class="calc-card">
-                <div class="icon">⚡</div>
-                <h2>Elkostnadskalkylator 2026</h2>
-                <p>Beräkna din elkostnad per månad baserat på förbrukning, elområde och avtal. Se fördelning mellan el, elnät och skatt.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/isk-skatteberaknare.html" data-cat="pk" data-kw="isk investeringssparkonto skatt schablonintäkt aktier fonder">
+      <div class="card-top"><span class="card-icon">📊</span><span class="card-arrow">↗</span></div>
+      <h2>ISK-skatteberäknare</h2>
+      <p class="card-desc">Beräkna skatten på ditt investeringssparkonto baserat på statslåneräntan.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/solcellskalkylator.html" class="calc-card">
-                <div class="icon">☀️</div>
-                <h2>Solcellskalkylator 2026</h2>
-                <p>Beräkna solcellsproduktion, elpris-besparing, återbetalningstid och ROI för din anläggning. Inkluderar ROT-avdrag och elområde SE1–SE4.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/rot-rut.html" data-cat="pk" data-kw="rot rut avdrag renovering städning hushållsnära hantverkare">
+      <div class="card-top"><span class="card-icon">🔧</span><span class="card-arrow">↗</span></div>
+      <h2>ROT & RUT-avdrag</h2>
+      <p class="card-desc">Beräkna ditt ROT- eller RUT-avdrag och se hur mycket du faktiskt betalar.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/bilkostnadsraknare.html" class="calc-card">
-                <div class="icon">🚗</div>
-                <h2>Bilkostnadsräknare 2026</h2>
-                <p>Räkna ut den verkliga månadskostnaden för din bil — drivmedel, försäkring, värdeminskning och service.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/skatteaterbarings-kalkylator.html" data-cat="pk" data-kw="skatteåterbäring kvarskatt deklaration skatteverket återbäring">
+      <div class="card-top"><span class="card-icon">💸</span><span class="card-arrow">↗</span></div>
+      <h2>Skatteåterbäring</h2>
+      <p class="card-desc">Se om du får skatteåterbäring eller kvarskatt baserat på din inkomst.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/leasingkalkylator.html" class="calc-card">
-                <div class="icon">🚘</div>
-                <h2>Leasingkalkylator Bil 2026</h2>
-                <p>Beräkna månadskostnad för billeasing och jämför mot att köpa med lån — ange nypris, restvärde och ränta.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/kapitalvinstskatt.html" data-cat="pk" data-kw="kapitalvinstskatt reavinstskatt aktier bostad fastighet försäljning">
+      <div class="card-top"><span class="card-icon">📉</span><span class="card-arrow">↗</span></div>
+      <h2>Kapitalvinstskatt</h2>
+      <p class="card-desc">Beräkna skatten vid försäljning av aktier, bostad eller fastighet.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/isk-skatteberaknare.html" class="calc-card">
-                <div class="icon">📊</div>
-                <h2>ISK-skatteberäknare 2026</h2>
-                <p>Beräkna schablonskatten på ditt investeringssparkonto. Skattefritt upp till 300 000 kr med nya reglerna.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/frilanskalkylator.html" data-cat="pk" data-kw="frilans konsult timpris faktura egenavgifter f-skatt">
+      <div class="card-top"><span class="card-icon">🧾</span><span class="card-arrow">↗</span></div>
+      <h2>Frilanskalkylator</h2>
+      <p class="card-desc">Räkna ut rätt timpris som frilansare — inkl. egenavgifter, overhead och skatt.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/sparkalkylator.html" class="calc-card">
-                <div class="icon">🎯</div>
-                <h2>Sparkalkylator 2026</h2>
-                <p>Räkna ut hur mycket du behöver spara per månad för att nå ditt mål. Två lägen: sparmål eller tillväxt.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/momsraknare.html" data-cat="pk" data-kw="moms momsräknare inklusive exklusive 25% 12% 6% mervärdesskatt">
+      <div class="card-top"><span class="card-icon">🧮</span><span class="card-arrow">↗</span></div>
+      <h2>Momsräknare</h2>
+      <p class="card-desc">Räkna snabbt om pris med eller utan moms för alla momssatser.</p>
+      <span class="badge b-pk">Privatekonomi</span>
+    </a>
 
-            <a href="/kalkylatorer/bmi-kalkylator.html" class="calc-card">
-                <div class="icon">⚖️</div>
-                <h2>BMI-kalkylator 2026</h2>
-                <p>Beräkna ditt BMI, se viktkategori, idealviktsintervall och basalmetabolism (BMR) — helt gratis.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <!-- SPARANDE -->
+    <a class="card" href="/kalkylatorer/ranta-pa-ranta.html" data-cat="sp" data-kw="ränta på ränta sparande compound interest kapital tillväxt">
+      <div class="card-top"><span class="card-icon">📈</span><span class="card-arrow">↗</span></div>
+      <h2>Ränta på ränta</h2>
+      <p class="card-desc">Se hur ditt kapital växer år för år med ränta på ränta-effekten.</p>
+      <span class="badge b-sp">Sparande</span>
+    </a>
 
-            <a href="/kalkylatorer/pensionskalkylator.html" class="calc-card">
-                <div class="icon">👴</div>
-                <h2>Pensionskalkylator 2026</h2>
-                <p>Beräkna din framtida pension — se allmän pension, tjänstepension och hur eget sparande påverkar din pensionsinkomst.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/sparkalkylator.html" data-cat="sp" data-kw="sparkalkylator spara månadsbelopp ränta slutvärde">
+      <div class="card-top"><span class="card-icon">🐷</span><span class="card-arrow">↗</span></div>
+      <h2>Sparkalkylator</h2>
+      <p class="card-desc">Beräkna hur ditt sparande växer med månatliga insättningar och ränta.</p>
+      <span class="badge b-sp">Sparande</span>
+    </a>
 
-            <a href="/kalkylatorer/lanekalkylator.html" class="calc-card">
-                <div class="icon">💳</div>
-                <h2>Lånekalkylator 2026</h2>
-                <p>Räkna ut månadskostnad, total kostnad och effektiv ränta för konsumtionslån. Se hela amorteringsplanen.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/pensionskalkylator.html" data-cat="sp" data-kw="pension pensionskalkylator premiepension tjänstepension ITP">
+      <div class="card-top"><span class="card-icon">🏖️</span><span class="card-arrow">↗</span></div>
+      <h2>Pensionskalkylator</h2>
+      <p class="card-desc">Räkna ut din framtida pension och se vad du behöver spara extra.</p>
+      <span class="badge b-sp">Sparande</span>
+    </a>
 
-            <a href="/kalkylatorer/semesterlonekalkylator.html" class="calc-card">
-                <div class="icon">🏖️</div>
-                <h2>Semesterlönekalkylator 2026</h2>
-                <p>Räkna ut din semesterlön med sammalöneregeln och procentregeln — se vilken metod som ger mest.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/direktavkastningskalkylator.html" data-cat="sp" data-kw="direktavkastning yield avkastning fastighet investering hyresintäkt">
+      <div class="card-top"><span class="card-icon">🏦</span><span class="card-arrow">↗</span></div>
+      <h2>Direktavkastning</h2>
+      <p class="card-desc">Beräkna direktavkastningen på en investering eller fastighet.</p>
+      <span class="badge b-sp">Sparande</span>
+    </a>
 
-            <a href="/kalkylatorer/foraldrapenning.html" class="calc-card">
-                <div class="icon">👶</div>
-                <h2>Föräldrapenningkalkylator 2026</h2>
-                <p>Räkna ut din föräldrapenning baserat på SGI. Se alla tre nivåer och hur mycket du tappar mot ordinarie lön.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <!-- BOENDE & LÅN -->
+    <a class="card" href="/kalkylatorer/bolanekalkylator.html" data-cat="bo" data-kw="bolån bostad ränta månadsbetalning boendekostnad bostadslån">
+      <div class="card-top"><span class="card-icon">🏠</span><span class="card-arrow">↗</span></div>
+      <h2>Bolånekalkylator</h2>
+      <p class="card-desc">Beräkna månadsbetalning, total kostnad och boendekostnad för ditt bolån.</p>
+      <span class="badge b-bo">Boende & Lån</span>
+    </a>
 
-            <a href="/kalkylatorer/skatteaterbarings-kalkylator.html" class="calc-card">
-                <div class="icon">💰</div>
-                <h2>Skatteåterbäringskalkylator 2026</h2>
-                <p>Räkna ut din förväntade skatteåterbäring. Ange lön, räntekostnader och avdrag — se direkt vad du får tillbaka.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/lanekalkylator.html" data-cat="bo" data-kw="lån lånekalkylator annuitet amortering effektiv ränta månadsbetalning">
+      <div class="card-top"><span class="card-icon">💳</span><span class="card-arrow">↗</span></div>
+      <h2>Lånekalkylator</h2>
+      <p class="card-desc">Räkna ut månadsbetalning, total räntekostnad och effektiv ränta på ditt lån.</p>
+      <span class="badge b-bo">Boende & Lån</span>
+    </a>
 
-            <a href="/kalkylatorer/kalorikalkylator.html" class="calc-card">
-                <div class="icon">🥗</div>
-                <h2>Kalorikalkylator 2026</h2>
-                <p>Beräkna ditt dagliga kaloribehov med Mifflin-St Jeor. Se BMR, TDEE och kalorimål för viktminskning eller ökning.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/amorteringskalkylator.html" data-cat="bo" data-kw="amortering amorteringskrav finansinspektionen fi belåningsgrad skuldkvot">
+      <div class="card-top"><span class="card-icon">📊</span><span class="card-arrow">↗</span></div>
+      <h2>Amorteringskalkylator</h2>
+      <p class="card-desc">Beräkna amorteringskrav enligt FI:s regler och skuldkvotstak 2026.</p>
+      <span class="badge b-bo">Boende & Lån</span>
+    </a>
 
-            <a href="/kalkylatorer/direktavkastningskalkylator.html" class="calc-card">
-                <div class="icon">📈</div>
-                <h2>Direktavkastningskalkylator 2026</h2>
-                <p>Beräkna direktavkastning, yield on cost och utdelningsutveckling för dina aktier. Se 10-årig prognos med interaktiv graf.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/leasingkalkylator.html" data-cat="bo" data-kw="leasing leasingkostnad privatlease månadsavgift restvärde">
+      <div class="card-top"><span class="card-icon">📝</span><span class="card-arrow">↗</span></div>
+      <h2>Leasingkalkylator</h2>
+      <p class="card-desc">Räkna ut total kostnad och månadsavgift för leasing av bil eller utrustning.</p>
+      <span class="badge b-bo">Boende & Lån</span>
+    </a>
 
-            <a href="/kalkylatorer/semesterersattning.html" class="calc-card">
-                <div class="icon">📅</div>
-                <h2>Semesterersättningskalkylator 2026</h2>
-                <p>Räkna ut din semesterersättning som timanställd eller vikarie. Procentregeln 12% på total intjänad lön — se brutto, netto och per dag.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <!-- FORDON & ENERGI -->
+    <a class="card" href="/kalkylatorer/bilkostnadsraknare.html" data-cat="fo" data-kw="bil bilkostnad drivmedel bensin diesel försäkring vägskatt per mil">
+      <div class="card-top"><span class="card-icon">🚗</span><span class="card-arrow">↗</span></div>
+      <h2>Bilkostnadsräknare</h2>
+      <p class="card-desc">Räkna ut den totala kostnaden för din bil per månad och per mil.</p>
+      <span class="badge b-fo">Fordon & Energi</span>
+    </a>
 
-            <a href="/kalkylatorer/momsraknare.html" class="calc-card">
-                <div class="icon">🧾</div>
-                <h2>Momsräknare 2026</h2>
-                <p>Lägg till eller dra av moms (25%, 12%, 6%). Räkna snabbt ut pris inkl. moms, exkl. moms och momsbeloppet.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/elkostnadskalkylator.html" data-cat="fo" data-kw="el elkostnad förbrukning kwh elpris elräkning energi">
+      <div class="card-top"><span class="card-icon">⚡</span><span class="card-arrow">↗</span></div>
+      <h2>Elkostnadskalkylator</h2>
+      <p class="card-desc">Beräkna din elkostnad utifrån förbrukning, elpris och nätavgift.</p>
+      <span class="badge b-fo">Fordon & Energi</span>
+    </a>
 
-            <a href="/kalkylatorer/kapitalvinstskatt.html" class="calc-card">
-                <div class="icon">📈</div>
-                <h2>Kapitalvinstskattkalkylator 2026</h2>
-                <p>Räkna ut skatten på vinst från aktier och fonder (30%) eller bostadsförsäljning (22%). Se netto efter skatt direkt.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/solcellskalkylator.html" data-cat="fo" data-kw="solceller solpanel solenergi besparing återbetalningstid investering">
+      <div class="card-top"><span class="card-icon">☀️</span><span class="card-arrow">↗</span></div>
+      <h2>Solcellskalkylator</h2>
+      <p class="card-desc">Beräkna besparing, återbetalningstid och lönsamhet för solceller på taket.</p>
+      <span class="badge b-fo">Fordon & Energi</span>
+    </a>
 
-            <a href="/kalkylatorer/formansbilkalkylator.html" class="calc-card">
-                <div class="icon">🚗</div>
-                <h2>Förmånsbilkalkylator 2026</h2>
-                <p>Beräkna förmånsvärde och skattekostnad för tjänstebil. Stöd för bensin/diesel, laddhybrid och elbil med 2026 års regler.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <a class="card" href="/kalkylatorer/formansbilkalkylator.html" data-cat="fo" data-kw="förmånsbil tjänstebil förmånsvärde skatt bilförmån">
+      <div class="card-top"><span class="card-icon">🏢</span><span class="card-arrow">↗</span></div>
+      <h2>Förmånsbilkalkylator</h2>
+      <p class="card-desc">Beräkna förmånsvärde och skattekostnad för din tjänstebil.</p>
+      <span class="badge b-fo">Fordon & Energi</span>
+    </a>
 
-            <a href="/kalkylatorer/amorteringskalkylator.html" class="calc-card">
-                <div class="icon">🏠</div>
-                <h2>Amorteringskalkylator 2026</h2>
-                <p>Räkna ut amortering, ränta och totalkostnad för bolån. Inkluderar FI:s amorteringskrav (1–2 %) och ränteavdrag.</p>
-                <span class="tag">Ny</span>
-            </a>
+    <!-- JOBB & FAMILJ -->
+    <a class="card" href="/kalkylatorer/semesterlonekalkylator.html" data-cat="jo" data-kw="semesterlön semester semesterdagar sammalöneregeln semesterlagen">
+      <div class="card-top"><span class="card-icon">🌴</span><span class="card-arrow">↗</span></div>
+      <h2>Semesterlönekalkylator</h2>
+      <p class="card-desc">Räkna ut din semesterlön enligt sammalöneregeln och procentregeln.</p>
+      <span class="badge b-jo">Jobb & Familj</span>
+    </a>
 
-            <a href="/kalkylatorer/frilanskalkylator.html" class="calc-card">
-                <div class="icon">💼</div>
-                <h2>Frilanskalkylator 2026</h2>
-                <p>Beräkna timpris och nettolön som frilansare eller konsult. Inkluderar egenavgifter (28,97 %), inkomstskatt och overhead.</p>
-            </a>
+    <a class="card" href="/kalkylatorer/semesterersattning.html" data-cat="jo" data-kw="semesterersättning intjänad semester utbetalning avsluta anställning">
+      <div class="card-top"><span class="card-icon">✈️</span><span class="card-arrow">↗</span></div>
+      <h2>Semesterersättning</h2>
+      <p class="card-desc">Beräkna semesterersättning vid avslut av anställning eller ej uttagen semester.</p>
+      <span class="badge b-jo">Jobb & Familj</span>
+    </a>
 
-            <a href="/kalkylatorer/akassa-kalkylator.html" class="calc-card">
-                <div class="icon">🛡️</div>
-                <h2>A-kassekalkylator 2026</h2>
-                <p>Beräkna dagpenning och månadsersättning från a-kassan baserat på din lön. Inkluderar period 1 (80 %) och period 2 (70 %).</p>
-                <span class="tag">Ny</span>
-            </a>
-        </div>
+    <a class="card" href="/kalkylatorer/foraldrapenning.html" data-cat="jo" data-kw="föräldrapenning föräldraledighet sgi försäkringskassan vab barn">
+      <div class="card-top"><span class="card-icon">👶</span><span class="card-arrow">↗</span></div>
+      <h2>Föräldrapenning</h2>
+      <p class="card-desc">Beräkna din föräldrapenning baserat på sjukpenninggrundande inkomst (SGI).</p>
+      <span class="badge b-jo">Jobb & Familj</span>
+    </a>
 
-        <hr class="section-divider">
-        <h2 class="section-heading">Guider &amp; Artiklar</h2>
-        <div class="guide-grid">
-            <a href="/artiklar/vad-ar-semesterlon.html" class="calc-card">
-                <div class="icon">🏖️</div>
-                <h2>Vad är semesterlön?</h2>
-                <p>Sammalöneregeln, procentregeln och vad som ingår i löneunderlaget — förklarat enkelt.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/hur-beraknas-pension.html" class="calc-card">
-                <div class="icon">👴</div>
-                <h2>Hur beräknas pension i Sverige?</h2>
-                <p>Inkomstpension, premiepension, tjänstepension och hur du påverkar din pension.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/vad-ar-rot-rut-avdrag.html" class="calc-card">
-                <div class="icon">🔨</div>
-                <h2>Vad är ROT- och RUT-avdrag?</h2>
-                <p>30% rabatt på renovering, 50% på städning — så fungerar avdragen och hur du ansöker.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/vad-ar-bolan.html" class="calc-card">
-                <div class="icon">🏠</div>
-                <h2>Hur mycket kan jag låna till bostad?</h2>
-                <p>Bolånetaket 85%, amorteringskravet och KALP-beräkningen — allt du behöver veta.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/vad-ar-isk.html" class="calc-card">
-                <div class="icon">📊</div>
-                <h2>Vad är ISK?</h2>
-                <p>Investeringssparkonto och schablonbeskattning — så fungerar ISK och när det lönar sig.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/vad-ar-kapitalvinstskatt.html" class="calc-card">
-                <div class="icon">📈</div>
-                <h2>Vad är kapitalvinstskatt?</h2>
-                <p>30% på aktievinster, 22% på bostadsvinster — skattesatser, kvittning av förluster och ISK-jämförelse.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/vad-ar-f-skatt.html" class="calc-card">
-                <div class="icon">🧾</div>
-                <h2>Vad är F-skatt?</h2>
-                <p>F-, A- och FA-skatt förklarat — vad det innebär att vara egenföretagare och hur du ansöker.</p>
-                <span class="tag">Guide</span>
-            </a>
-            <a href="/artiklar/hur-far-man-tillbaka-skatten.html" class="calc-card">
-                <div class="icon">💸</div>
-                <h2>Hur får man tillbaka skatten?</h2>
-                <p>Skatteåterbäring 2026 — varför du kan få tillbaka pengar, bästa avdragen och utbetalningstider.</p>
-                <span class="tag">Guide</span>
-            </a>
-        </div>
-    </main>
+    <a class="card" href="/kalkylatorer/akassa-kalkylator.html" data-cat="jo" data-kw="a-kassa akassa arbetslöshetskassa ersättning dagpenning arbetslös">
+      <div class="card-top"><span class="card-icon">🤝</span><span class="card-arrow">↗</span></div>
+      <h2>A-kassekalkylator</h2>
+      <p class="card-desc">Beräkna din a-kasseersättning vid arbetslöshet baserat på din inkomst.</p>
+      <span class="badge b-jo">Jobb & Familj</span>
+    </a>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-        </div>
-    </footer>
+    <!-- HÄLSA -->
+    <a class="card" href="/kalkylatorer/bmi-kalkylator.html" data-cat="ha" data-kw="bmi body mass index vikt längd hälsa övervikt normalvikt">
+      <div class="card-top"><span class="card-icon">⚖️</span><span class="card-arrow">↗</span></div>
+      <h2>BMI-kalkylator</h2>
+      <p class="card-desc">Beräkna ditt BMI och se vad resultatet innebär för din hälsa.</p>
+      <span class="badge b-ha">Hälsa</span>
+    </a>
+
+    <a class="card" href="/kalkylatorer/kalorikalkylator.html" data-cat="ha" data-kw="kalorier kaloribehov TDEE BMR energibehov kcal mat vikt">
+      <div class="card-top"><span class="card-icon">🥗</span><span class="card-arrow">↗</span></div>
+      <h2>Kalorikalkylator</h2>
+      <p class="card-desc">Beräkna ditt dagliga kaloribehov baserat på ålder, vikt, längd och aktivitet.</p>
+      <span class="badge b-ha">Hälsa</span>
+    </a>
+
+  </div>
+  <div class="no-results" id="no-res" role="status">Inga kalkylatorer matchade <strong id="no-term"></strong>. Prova ett annat sökord.</div>
+</section>
+
+<section class="seo">
+  <h2>Varför GratisKalkyl.se?</h2>
+  <p>GratisKalkyl.se är Sveriges oberoende kalkylatorplattform för privatekonomi. Ingen bank äger oss, inga lån är förvalda och inga produkter tjänar vi provision på att rekommendera. Alla kalkylatorer ger dig raka svar — utan dolda agendor.</p>
+  <p>Vi uppdaterar kontinuerligt med 2026 års skatteregler, räntesatser och lagkrav från Finansinspektionen, Skatteverket och Försäkringskassan. Med 25 kalkylatorer täcker vi allt från lön efter skatt och bolån till solceller och föräldrapenning.</p>
+  <p>Alla kalkylatorer fungerar direkt i webbläsaren, kräver ingen inloggning och är gratis att använda. Snabbt, enkelt och pålitligt.</p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var hdr=document.getElementById('hdr'),searchEl=document.getElementById('search'),
+      metaEl=document.getElementById('meta'),noResEl=document.getElementById('no-res'),
+      noTermEl=document.getElementById('no-term'),
+      cards=Array.from(document.getElementById('grid').querySelectorAll('.card')),
+      fBtns=Array.from(document.querySelectorAll('.fbtn')),
+      activeCat='alla',query='';
+
+  window.addEventListener('scroll',function(){hdr.classList.toggle('shadow',window.scrollY>8);},{passive:true});
+
+  function applyFilters(){
+    var n=0,q=query.toLowerCase();
+    cards.forEach(function(c){
+      var show=(activeCat==='alla'||c.dataset.cat===activeCat)&&(!q||(c.dataset.kw+' '+c.querySelector('h2').textContent).toLowerCase().includes(q));
+      c.classList.toggle('hidden',!show);
+      if(show)n++;
+    });
+    metaEl.textContent=q?n+(n===1?' kalkylator':' kalkylatorer')+' för "'+query+'"':'Visar '+n+(n===1?' kalkylator':' kalkylatorer');
+    if(n===0){noResEl.classList.add('show');noTermEl.textContent='"'+query+'"';}
+    else{noResEl.classList.remove('show');}
+  }
+
+  fBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      fBtns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');activeCat=btn.dataset.cat;applyFilters();
+      var p=new URLSearchParams();
+      if(activeCat!=='alla')p.set('filter',activeCat);
+      if(query)p.set('q',query);
+      history.replaceState(null,'',p.toString()?'?'+p:location.pathname);
+    });
+  });
+
+  searchEl.addEventListener('input',function(){
+    query=searchEl.value.trim();applyFilters();
+    var p=new URLSearchParams();
+    if(activeCat!=='alla')p.set('filter',activeCat);
+    if(query)p.set('q',query);
+    history.replaceState(null,'',p.toString()?'?'+p:location.pathname);
+  });
+
+  (function(){
+    var p=new URLSearchParams(location.search),f=p.get('filter'),q=p.get('q');
+    if(f){var btn=fBtns.find(function(b){return b.dataset.cat===f;});if(btn){fBtns.forEach(function(b){b.classList.remove('active');});btn.classList.add('active');activeCat=f;}}
+    if(q){searchEl.value=q;query=q;}
+    if(f||q)applyFilters();
+  })();
+})();
+</script>
 </body>
 </html>
