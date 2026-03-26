@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGTX1PYYFJ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyra vs Köpa-kalkylator 2026 – Är det billigare att hyra eller köpa bostad? | GratisKalkyl.se</title>
+  <meta name="description" content="Jämför total kostnad för att hyra eller köpa bostad i Sverige 2026. Se när köp lönar sig och beräkna break-even-punkten. Gratis, neutralt verktyg utan bankbias.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/hyra-vs-kopa-kalkylator.html">
+  <meta property="og:title" content="Hyra vs Köpa-kalkylator 2026 – Beräkna vad som lönar sig">
+  <meta property="og:description" content="Räkna ut om det är billigare att hyra eller köpa bostad. Se break-even, total kostnad och kapitaluppbyggnad år för år. Gratis och utan bankbias.">
+  <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/hyra-vs-kopa-kalkylator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hyra vs Köpa-kalkylator 2026">
+  <meta name="twitter:description" content="Är det billigare att hyra eller köpa bostad? Beräkna och jämför med GratisKalkyl.se.">
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Är det billigare att hyra eller köpa bostad i Sverige?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det beror på din situation och ort. Att köpa innebär höga initialkostnader (kontantinsats, stämpelskatt) men du bygger kapital via amortering och värdestegring. Att hyra ger flexibilitet men inget kapitaluppbyggnad. Generellt lönar sig köp på lång sikt (ofta 5–10 år), men det varierar kraftigt med ränteläge, bostadspriser och hyresläget på orten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är stämpelskatt vid bostadsköp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt — däremot kan föreningen ha pantbrev-avgifter. Stämpelskatten betalas normalt inom 3 månader från köpet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur mycket ska kontantinsatsen vara vid husköp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimikravet för kontantinsats i Sverige är 15% av bostadens köpeskilling. Det innebär att du maximalt får låna 85% av bostadens värde (bolånetak). Finansinspektionen reglerar detta via de så kallade bolåne- och amorteringskraven. Utöver kontantinsatsen bör du räkna med stämpelskatt (1,5% för fastighet), pantbrevskostnader samt ett buffertkapital."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad ingår i boendekostnaden för en bostadsrätt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30% avdrag upp till 100 000 kr/år), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur beräknas break-even vid hyra vs köp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till faktiska kostnader minus uppbyggt kapital. Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ska man räkna med avkastning på sparade pengar vid jämförelsen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på sparat kapital (kontantinsatsen) för att ge en rättvisare bild av hyra-alternativet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur mycket stiger bostadspriserna i Sverige historiskt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Historiskt har svenska bostadspriser ökat med i genomsnitt 4–6% per år nominellt, men med stora variationer mellan år och orter. Under 2022–2023 föll priserna med 10–15% i många delar av landet till följd av räntehöjningarna. Framtida prisuppgång är osäker — kalkylatorn låter dig testa olika scenarier från 0% till 8% per år."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"GratisKalkyl.se","item":"https://gratiskalkyl.se/"},
+      {"@type":"ListItem","position":2,"name":"Kalkylatorer","item":"https://gratiskalkyl.se/"},
+      {"@type":"ListItem","position":3,"name":"Hyra vs Köpa-kalkylator","item":"https://gratiskalkyl.se/kalkylatorer/hyra-vs-kopa-kalkylator.html"}
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #34d399;
+      --primary-dark: #059669;
+      --primary-light: #d1fae5;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 12px;
+      --sh: 0 1px 3px rgba(0,0,0,.07);
+      --sh-md: 0 4px 16px rgba(0,0,0,.09);
+      --blue: #3b82f6;
+      --blue-light: #eff6ff;
+      --orange: #f59e0b;
+      --orange-light: #fffbeb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #1e293b;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #334155;
+        --primary-light: #064e3b;
+        --blue-light: #1e3a5f;
+        --orange-light: #451a03;
+        --sh: 0 1px 3px rgba(0,0,0,.3);
+        --sh-md: 0 4px 16px rgba(0,0,0,.4);
+      }
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    .site-header { background: var(--card); border-bottom: 1px solid var(--border); box-shadow: var(--sh); }
+    .hdr { max-width: 960px; margin: 0 auto; padding: 0 1rem; height: 60px; display: flex; align-items: center; gap: 1rem; }
+    .logo { text-decoration: none; font-size: 1.15rem; font-weight: 800; color: var(--primary-dark); letter-spacing: -.01em; }
+    .logo span { color: var(--muted); font-weight: 400; }
+    .breadcrumb { font-size: .82rem; color: var(--muted); margin-left: auto; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary-dark); }
+
+    /* MAIN */
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+
+    h1 { font-size: clamp(1.4rem, 3.5vw, 2rem); font-weight: 800; letter-spacing: -.02em; margin-bottom: .4rem; line-height: 1.2; }
+    .subtitle { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+
+    /* GRID LAYOUT */
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 680px) { .calc-grid { grid-template-columns: 1fr; } }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--sh);
+    }
+    .card-title { font-size: .9rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
+    .card-title-icon { font-size: 1.1rem; }
+
+    /* FORM */
+    .field { margin-bottom: 1.25rem; }
+    .field:last-child { margin-bottom: 0; }
+    label { display: block; font-size: .85rem; font-weight: 600; color: var(--muted); margin-bottom: .35rem; }
+    .input-row { display: flex; align-items: center; gap: .5rem; }
+    input[type=number], input[type=range] { width: 100%; }
+    input[type=number] {
+      padding: .55rem .75rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: .95rem;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--text);
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+      -moz-appearance: textfield;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+    input[type=number]:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(52,211,153,.18); }
+    input[type=range] {
+      -webkit-appearance: none;
+      height: 5px;
+      border-radius: 99px;
+      background: var(--border);
+      outline: none;
+      margin-top: .3rem;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,.18);
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border: none;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+    }
+    .range-val { font-size: .9rem; font-weight: 700; color: var(--primary-dark); min-width: 56px; text-align: right; }
+    .unit { font-size: .82rem; color: var(--muted); white-space: nowrap; }
+
+    /* RESULTS */
+    .results-card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--sh);
+      margin-top: 1.5rem;
+    }
+    .results-title { font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem; }
+
+    .verdict-banner {
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: .95rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .verdict-banner.buy { background: var(--primary-light); color: var(--primary-dark); border: 1.5px solid rgba(52,211,153,.3); }
+    .verdict-banner.rent { background: var(--blue-light); color: #1d4ed8; border: 1.5px solid rgba(59,130,246,.3); }
+    .verdict-banner.tie { background: var(--orange-light); color: #92400e; border: 1.5px solid rgba(245,158,11,.3); }
+    .verdict-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .verdict-text strong { display: block; font-size: 1.05rem; margin-bottom: .15rem; }
+
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    @media (max-width: 500px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    .stat-box {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 1rem;
+      border: 1.5px solid var(--border);
+    }
+    .stat-box .stat-label { font-size: .78rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .3rem; }
+    .stat-box .stat-val { font-size: 1.4rem; font-weight: 800; letter-spacing: -.02em; }
+    .stat-box .stat-sub { font-size: .78rem; color: var(--muted); margin-top: .2rem; }
+    .stat-box.blue .stat-val { color: var(--blue); }
+    .stat-box.green .stat-val { color: var(--primary-dark); }
+    .stat-box.orange .stat-val { color: var(--orange); }
+    .stat-box.red .stat-val { color: #ef4444; }
+
+    /* COMPARISON TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 1.5rem; }
+    .compare-table thead tr { background: var(--bg); }
+    .compare-table th { padding: .6rem .75rem; text-align: left; font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border-bottom: 2px solid var(--border); }
+    .compare-table th:not(:first-child) { text-align: right; }
+    .compare-table td { padding: .55rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .compare-table td:not(:first-child) { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .compare-table tr:last-child td { border-bottom: none; font-weight: 700; }
+    .compare-table .total-row td { font-weight: 800; font-size: .95rem; background: var(--bg); }
+    .col-rent { color: var(--blue); }
+    .col-buy { color: var(--primary-dark); }
+
+    /* CANVAS CHART */
+    canvas { width: 100% !important; height: 220px !important; border-radius: 8px; display: block; }
+    .chart-legend { display: flex; gap: 1.25rem; margin-bottom: .75rem; flex-wrap: wrap; }
+    .chart-legend span { font-size: .82rem; font-weight: 600; display: flex; align-items: center; gap: .35rem; }
+    .leg-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+    /* FAQ */
+    .faq { margin-top: 3rem; }
+    .faq h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .faq-item { border: 1.5px solid var(--border); border-radius: 10px; margin-bottom: .75rem; overflow: hidden; }
+    .faq-q { padding: 1rem 1.1rem; font-weight: 600; font-size: .95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .faq-q:hover { background: var(--bg); }
+    .faq-chevron { font-size: 1rem; transition: transform .2s; color: var(--muted); flex-shrink: 0; margin-left: .5rem; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 1.1rem 1rem; font-size: .9rem; color: var(--muted); line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CROSS LINKS */
+    .cross-links { margin-top: 2.5rem; }
+    .cross-links h2 { font-size: 1rem; font-weight: 700; margin-bottom: .85rem; }
+    .link-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .link-pill { display: inline-block; padding: .4rem .9rem; border: 1.5px solid var(--border); border-radius: 99px; font-size: .83rem; font-weight: 600; color: var(--primary-dark); text-decoration: none; transition: border-color .15s, background .15s; }
+    .link-pill:hover { border-color: var(--primary); background: var(--primary-light); }
+
+    /* DISCLAIMER */
+    .disclaimer { margin-top: 2rem; font-size: .78rem; color: var(--muted); background: var(--bg); border-radius: 8px; padding: .75rem 1rem; line-height: 1.6; }
+
+    /* FOOTER */
+    footer { background: var(--card); border-top: 1px solid var(--border); text-align: center; padding: 1.25rem 1rem; font-size: .82rem; color: var(--muted); margin-top: 3rem; }
+    footer a { color: var(--primary-dark); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="hdr">
+    <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
+    <nav class="breadcrumb" aria-label="Brödsmulor">
+      <a href="/">Hem</a> &rsaquo; Hyra vs Köpa
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Hyra vs Köpa-kalkylator 2026</h1>
+  <p class="subtitle">Jämför total kostnad och kapitaluppbyggnad för att hyra eller köpa bostad — år för år, utan bankbias.</p>
+
+  <div class="calc-grid">
+
+    <!-- HYRA-KOLUMN -->
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">🔑</span>Att hyra</div>
+
+      <div class="field">
+        <label for="rent">Månadshyra (kr)</label>
+        <input type="number" id="rent" value="12000" min="1000" max="100000" step="500">
+      </div>
+      <div class="field">
+        <label>Hyresökning per år</label>
+        <div class="input-row">
+          <input type="range" id="rentIncrease" min="0" max="8" step="0.5" value="2">
+          <span class="range-val" id="rentIncreaseVal">2,0%</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="investYield">Avkastning på alternativplacering</label>
+        <div class="input-row">
+          <input type="range" id="investYield" min="0" max="10" step="0.5" value="5">
+          <span class="range-val" id="investYieldVal">5,0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KÖPA-KOLUMN -->
+    <div class="card">
+      <div class="card-title"><span class="card-title-icon">🏠</span>Att köpa</div>
+
+      <div class="field">
+        <label for="price">Köpeskilling (kr)</label>
+        <input type="number" id="price" value="3000000" min="100000" max="20000000" step="50000">
+      </div>
+      <div class="field">
+        <label for="downPct">Kontantinsats</label>
+        <div class="input-row">
+          <input type="range" id="downPct" min="15" max="50" step="1" value="15">
+          <span class="range-val" id="downPctVal">15%</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="rate">Bolåneränta (rörlig)</label>
+        <div class="input-row">
+          <input type="range" id="rate" min="1" max="10" step="0.25" value="4.5">
+          <span class="range-val" id="rateVal">4,50%</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fee">Månadsavgift / driftkostnad (kr)</label>
+        <input type="number" id="fee" value="3500" min="0" max="30000" step="100">
+      </div>
+      <div class="field">
+        <label for="appreciation">Förväntad prisutveckling per år</label>
+        <div class="input-row">
+          <input type="range" id="appreciation" min="-2" max="8" step="0.5" value="3">
+          <span class="range-val" id="appreciationVal">3,0%</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="years">Jämförelseperiod (år)</label>
+        <div class="input-row">
+          <input type="range" id="years" min="1" max="30" step="1" value="10">
+          <span class="range-val" id="yearsVal">10 år</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-card" id="results">
+    <div class="results-title">Resultat efter <span id="resYears">10</span> år</div>
+
+    <div class="verdict-banner" id="verdictBanner">
+      <span class="verdict-icon" id="verdictIcon">🏠</span>
+      <div class="verdict-text">
+        <strong id="verdictTitle">Köp är billigare</strong>
+        <span id="verdictDesc">Du sparar X kr totalt jämfört med att hyra.</span>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box blue">
+        <div class="stat-label">Nettokostnad hyra</div>
+        <div class="stat-val" id="rentNetCost">–</div>
+        <div class="stat-sub">totalt betalat i hyra</div>
+      </div>
+      <div class="stat-box green">
+        <div class="stat-label">Nettokostnad köp</div>
+        <div class="stat-val" id="buyNetCost">–</div>
+        <div class="stat-sub">kostnader minus eget kapital</div>
+      </div>
+      <div class="stat-box green">
+        <div class="stat-label">Eget kapital vid köp</div>
+        <div class="stat-val" id="buyEquity">–</div>
+        <div class="stat-sub">inkl. amortering & värdestegring</div>
+      </div>
+      <div class="stat-box blue">
+        <div class="stat-label">Sparat kapital vid hyra</div>
+        <div class="stat-val" id="rentSavings">–</div>
+        <div class="stat-sub">kontantinsats placerad med ränta</div>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-legend">
+      <span><span class="leg-dot" style="background:#3b82f6"></span>Hyra — kumulativ kostnad</span>
+      <span><span class="leg-dot" style="background:#34d399"></span>Köp — nettokostnad (kostn. minus kapital)</span>
+    </div>
+    <canvas id="chart" aria-label="Graf som jämför total kostnad för hyra vs köp"></canvas>
+
+    <!-- COMPARISON TABLE -->
+    <div style="overflow-x:auto; margin-top:1.5rem;">
+      <table class="compare-table" aria-label="Kostnadssammanfattning">
+        <thead>
+          <tr>
+            <th>Kostnadspost</th>
+            <th class="col-rent">Hyra</th>
+            <th class="col-buy">Köp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Startkapital (kontantinsats)</td><td class="col-rent" id="tRentDown">–</td><td class="col-buy" id="tBuyDown">–</td></tr>
+          <tr><td>Stämpelskatt / transaktionskostn.</td><td class="col-rent">0 kr</td><td class="col-buy" id="tStamp">–</td></tr>
+          <tr><td>Total hyra / räntor betalda</td><td class="col-rent" id="tRentPaid">–</td><td class="col-buy" id="tInterestPaid">–</td></tr>
+          <tr><td>Avgifter / driftkostnad</td><td class="col-rent">0 kr</td><td class="col-buy" id="tFeePaid">–</td></tr>
+          <tr><td>Ränteavdrag (30%)</td><td class="col-rent">0 kr</td><td class="col-buy" id="tTaxRelief">–</td></tr>
+          <tr><td>Summa kostnader</td><td class="col-rent" id="tRentTotal">–</td><td class="col-buy" id="tBuyTotal">–</td></tr>
+          <tr><td>Eget kapital / sparkapital vid slut</td><td class="col-rent" id="tRentCapital">–</td><td class="col-buy" id="tBuyCapital">–</td></tr>
+          <tr class="total-row"><td>Nettokostnad (kostn. minus kapital)</td><td class="col-rent" id="tRentNet">–</td><td class="col-buy" id="tBuyNet">–</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Vanliga frågor om hyra vs köpa bostad</h2>
+    <div class="faq-item">
+      <div class="faq-q">Är det billigare att hyra eller köpa bostad i Sverige? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Det beror på din situation och ort. Att köpa innebär höga initialkostnader (kontantinsats, stämpelskatt) men du bygger kapital via amortering och värdestegring. Att hyra ger flexibilitet men inget kapitaluppbyggnad. Generellt lönar sig köp på lång sikt (ofta 5–10 år), men det varierar kraftigt med ränteläge, bostadspriser och hyresläget på orten.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Vad är stämpelskatt vid bostadsköp? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt — däremot kan föreningen ha pantbrev-avgifter. Stämpelskatten betalas normalt inom 3 månader från köpet.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Hur mycket ska kontantinsatsen vara vid husköp? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Minimikravet för kontantinsats i Sverige är 15% av bostadens köpeskilling. Det innebär att du maximalt får låna 85% av bostadens värde (bolånetak). Finansinspektionen reglerar detta via de så kallade bolåne- och amorteringskraven. Utöver kontantinsatsen bör du räkna med stämpelskatt (1,5% för fastighet), pantbrevskostnader samt ett buffertkapital.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Vad ingår i boendekostnaden för en bostadsrätt? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30% avdrag upp till 100 000 kr/år), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Hur beräknas break-even vid hyra vs köp? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till faktiska kostnader minus uppbyggt kapital. Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ska man räkna med avkastning på sparade pengar vid jämförelsen? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på sparat kapital (kontantinsatsen) för att ge en rättvisare bild av hyra-alternativet.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Hur mycket stiger bostadspriserna i Sverige historiskt? <span class="faq-chevron">▼</span></div>
+      <div class="faq-a">Historiskt har svenska bostadspriser ökat med i genomsnitt 4–6% per år nominellt, men med stora variationer mellan år och orter. Under 2022–2023 föll priserna med 10–15% i många delar av landet till följd av räntehöjningarna. Framtida prisuppgång är osäker — kalkylatorn låter dig testa olika scenarier från -2% till 8% per år.</div>
+    </div>
+  </section>
+
+  <!-- CROSS LINKS -->
+  <nav class="cross-links" aria-label="Relaterade kalkylatorer">
+    <h2>Relaterade kalkylatorer</h2>
+    <div class="link-pills">
+      <a href="/kalkylatorer/bolanekalkylator.html" class="link-pill">Bolånekalkylator</a>
+      <a href="/kalkylatorer/amorteringskalkylator.html" class="link-pill">Amorteringskalkylator</a>
+      <a href="/kalkylatorer/sparkalkylator.html" class="link-pill">Sparkalkylator</a>
+      <a href="/kalkylatorer/ranta-pa-ranta.html" class="link-pill">Ränta på ränta</a>
+      <a href="/kalkylatorer/lanekalkylator.html" class="link-pill">Lånekalkylator</a>
+      <a href="/kalkylatorer/kapitalvinstskatt.html" class="link-pill">Kapitalvinstskatt</a>
+    </div>
+  </nav>
+
+  <p class="disclaimer">Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn är ett informationsverktyg och ersätter inte professionell ekonomisk rådgivning. Bostadsmarknad, räntor och skatteregler förändras — kontrollera alltid aktuell information hos Finansinspektionen och Skatteverket.</p>
+</main>
+
+<footer>
+  <p>&copy; 2026 <a href="/">GratisKalkyl.se</a> &mdash; Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ─── HELPERS ─────────────────────────────────────────────────────────────
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('sv-SE') + ' kr';
+  const pct = n => n.toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + '%';
+
+  // ─── RANGE LABELS ────────────────────────────────────────────────────────
+  function bindRange(rangeId, labelId, formatter) {
+    const el = $(rangeId);
+    const lbl = $(labelId);
+    const update = () => { lbl.textContent = formatter(parseFloat(el.value)); };
+    el.addEventListener('input', update);
+    update();
+  }
+  bindRange('rentIncrease', 'rentIncreaseVal', v => pct(v));
+  bindRange('investYield', 'investYieldVal', v => pct(v));
+  bindRange('downPct', 'downPctVal', v => v + '%');
+  bindRange('rate', 'rateVal', v => pct(v));
+  bindRange('appreciation', 'appreciationVal', v => pct(v));
+  bindRange('years', 'yearsVal', v => v + ' år');
+
+  // ─── CALCULATE ───────────────────────────────────────────────────────────
+  function calc() {
+    const monthlyRent   = parseFloat($('rent').value)         || 12000;
+    const rentIncrRate  = parseFloat($('rentIncrease').value) / 100;
+    const investYield   = parseFloat($('investYield').value)  / 100;
+    const price         = parseFloat($('price').value)        || 3000000;
+    const downPct       = parseFloat($('downPct').value)      / 100;
+    const annualRate    = parseFloat($('rate').value)         / 100;
+    const monthlyFee    = parseFloat($('fee').value)          || 0;
+    const appreciation  = parseFloat($('appreciation').value) / 100;
+    const years         = parseInt($('years').value)          || 10;
+
+    const months     = years * 12;
+    const downPayment = price * downPct;
+    const loan        = price - downPayment;
+    const monthlyRate = annualRate / 12;
+    // Amortization: FI requires 2% of loan if LTV > 70%, 1% if 50–70%
+    const ltv = loan / price;
+    let amorPct = ltv > 0.70 ? 0.02 : ltv > 0.50 ? 0.01 : 0;
+    // Monthly amortization (simplified: constant % of original loan per year)
+    const monthlyAmortization = (loan * amorPct) / 12;
+    // Stamp duty: 1.5% of price (fastighet) — 0 for bostadsrätt but defaulting to 1.5%
+    const stampDuty = price * 0.015;
+
+    // ── RENT SCENARIO ──────────────────────────────────────────────────────
+    let totalRentPaid = 0;
+    let currentRent   = monthlyRent;
+    const rentData    = []; // cumulative net cost per year
+
+    // Invested capital = downPayment + stampDuty (money NOT spent on buying)
+    let savedCapital = downPayment + stampDuty;
+
+    for (let m = 1; m <= months; m++) {
+      // Rent paid this month
+      totalRentPaid += currentRent;
+      // Rent increases yearly
+      if (m % 12 === 0) currentRent *= (1 + rentIncrRate);
+      // Saved capital grows monthly
+      savedCapital *= (1 + investYield / 12);
+
+      if (m % 12 === 0) {
+        const cumulativeCost = totalRentPaid - (savedCapital - (downPayment + stampDuty));
+        rentData.push(totalRentPaid);
+      }
+    }
+    const rentFinalCapital = savedCapital;
+    const rentNetCostTotal = totalRentPaid - (rentFinalCapital - (downPayment + stampDuty));
+
+    // ── BUY SCENARIO ───────────────────────────────────────────────────────
+    let remainingLoan   = loan;
+    let totalInterest   = 0;
+    let totalAmortized  = 0;
+    let totalFeePaid    = 0;
+    const buyData       = []; // cumulative net cost per year
+
+    for (let m = 1; m <= months; m++) {
+      const interestThisMonth = remainingLoan * monthlyRate;
+      // Tax relief: 30% of interest up to 100 000 kr/year — simplified as monthly
+      const taxReliefMonth = interestThisMonth * 0.30;
+      const netInterest = interestThisMonth - taxReliefMonth;
+      totalInterest += netInterest;
+      // Amortize
+      const amort = Math.min(monthlyAmortization, remainingLoan);
+      remainingLoan -= amort;
+      totalAmortized += amort;
+      totalFeePaid += monthlyFee;
+
+      if (m % 12 === 0) {
+        // Property value this year
+        const yr = m / 12;
+        const propertyValue = price * Math.pow(1 + appreciation, yr);
+        const equity = propertyValue - remainingLoan;
+        // Net cost = all cash out - current equity value
+        const cashOut = downPayment + stampDuty + totalInterest + totalFeePaid;
+        const netCost = cashOut - equity + downPayment; // approx
+        buyData.push(cashOut + downPayment - equity);
+      }
+    }
+
+    const propertyValueFinal = price * Math.pow(1 + appreciation, years);
+    const finalEquity        = propertyValueFinal - remainingLoan;
+    const taxReliefTotal     = (loan * annualRate * 0.30) * years; // simplified
+    const totalCashOutBuy    = downPayment + stampDuty + totalInterest + totalFeePaid;
+    const buyNetCostTotal    = totalCashOutBuy - finalEquity + downPayment;
+
+    // ─── UPDATE DOM ────────────────────────────────────────────────────────
+    $('resYears').textContent = years;
+
+    $('rentNetCost').textContent  = fmt(totalRentPaid);
+    $('buyNetCost').textContent   = fmt(Math.max(0, buyNetCostTotal));
+    $('buyEquity').textContent    = fmt(finalEquity);
+    $('rentSavings').textContent  = fmt(rentFinalCapital);
+
+    // Verdict
+    const diff = rentNetCostTotal - buyNetCostTotal;
+    const banner = $('verdictBanner');
+    const icon   = $('verdictIcon');
+    const title  = $('verdictTitle');
+    const desc   = $('verdictDesc');
+
+    if (Math.abs(diff) < 50000) {
+      banner.className = 'verdict-banner tie';
+      icon.textContent = '⚖️';
+      title.textContent = 'Ungefär lika kostsamt';
+      desc.textContent = `Hyra och köpa kostar ungefär lika mycket sett över ${years} år med dessa antaganden.`;
+    } else if (diff > 0) {
+      banner.className = 'verdict-banner buy';
+      icon.textContent = '🏠';
+      title.textContent = 'Köp är billigare';
+      desc.textContent = `Du sparar totalt ${fmt(diff)} jämfört med att hyra under ${years} år (nettokostnad).`;
+    } else {
+      banner.className = 'verdict-banner rent';
+      icon.textContent = '🔑';
+      title.textContent = 'Hyra är billigare';
+      desc.textContent = `Du sparar totalt ${fmt(-diff)} jämfört med att köpa under ${years} år (nettokostnad).`;
+    }
+
+    // Table
+    $('tRentDown').textContent     = fmt(downPayment + stampDuty);
+    $('tBuyDown').textContent      = fmt(downPayment);
+    $('tStamp').textContent        = fmt(stampDuty);
+    $('tRentPaid').textContent     = fmt(totalRentPaid);
+    $('tInterestPaid').textContent = fmt(totalInterest);
+    $('tFeePaid').textContent      = fmt(totalFeePaid);
+    $('tTaxRelief').textContent    = '−' + fmt(taxReliefTotal);
+    $('tRentTotal').textContent    = fmt(totalRentPaid + downPayment + stampDuty);
+    $('tBuyTotal').textContent     = fmt(totalCashOutBuy);
+    $('tRentCapital').textContent  = fmt(rentFinalCapital);
+    $('tBuyCapital').textContent   = fmt(finalEquity);
+    $('tRentNet').textContent      = fmt(Math.max(0, rentNetCostTotal));
+    $('tBuyNet').textContent       = fmt(Math.max(0, buyNetCostTotal));
+
+    // Chart
+    drawChart(rentData, buyData, years);
+  }
+
+  // ─── CANVAS CHART ────────────────────────────────────────────────────────
+  function drawChart(rentData, buyData, years) {
+    const canvas = $('chart');
+    const dpr    = window.devicePixelRatio || 1;
+    const w      = canvas.parentElement.clientWidth;
+    const h      = 220;
+    canvas.width  = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width  = w + 'px';
+    canvas.style.height = h + 'px';
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // Dark mode check
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const bg        = isDark ? '#1e293b' : '#f8fafc';
+    const gridColor = isDark ? '#334155' : '#e5e7eb';
+    const textColor = isDark ? '#94a3b8' : '#6b7280';
+
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+
+    const pad = { top: 16, right: 16, bottom: 36, left: 72 };
+    const cw  = w - pad.left - pad.right;
+    const ch  = h - pad.top - pad.bottom;
+
+    const allVals = [...rentData, ...buyData].filter(v => isFinite(v));
+    const maxVal  = Math.max(...allVals) * 1.05 || 1;
+    const minVal  = Math.min(0, ...allVals);
+
+    function xPos(i) { return pad.left + (i / (years - 1)) * cw; }
+    function yPos(v) { return pad.top + ch - ((v - minVal) / (maxVal - minVal)) * ch; }
+
+    // Grid lines
+    const gridCount = 5;
+    ctx.strokeStyle = gridColor;
+    ctx.lineWidth   = 1;
+    for (let i = 0; i <= gridCount; i++) {
+      const v  = minVal + (maxVal - minVal) * (i / gridCount);
+      const y  = yPos(v);
+      ctx.beginPath();
+      ctx.moveTo(pad.left, y);
+      ctx.lineTo(pad.left + cw, y);
+      ctx.stroke();
+      ctx.fillStyle = textColor;
+      ctx.font = `500 ${Math.round(10 * dpr) / dpr}px Inter, sans-serif`;
+      ctx.textAlign = 'right';
+      ctx.fillText(
+        v >= 1e6 ? (v / 1e6).toFixed(1) + ' Mkr' : (v / 1000).toFixed(0) + ' tkr',
+        pad.left - 6, y + 4
+      );
+    }
+
+    // X labels
+    ctx.textAlign = 'center';
+    ctx.fillStyle = textColor;
+    const step = Math.max(1, Math.floor(years / 6));
+    for (let i = 0; i < years; i += step) {
+      const x = xPos(i);
+      ctx.beginPath();
+      ctx.moveTo(x, pad.top);
+      ctx.lineTo(x, pad.top + ch);
+      ctx.strokeStyle = gridColor;
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+      ctx.fillText('År ' + (i + 1), x, h - 6);
+    }
+
+    // Line helper
+    function drawLine(data, color, dash = []) {
+      if (!data.length) return;
+      ctx.beginPath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = 2.5;
+      ctx.lineJoin    = 'round';
+      ctx.setLineDash(dash);
+      data.forEach((v, i) => {
+        const x = xPos(i);
+        const y = yPos(v);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    drawLine(rentData, '#3b82f6');
+    drawLine(buyData,  '#34d399', []);
+
+    // Dots at end
+    function dot(data, color) {
+      if (!data.length) return;
+      const x = xPos(data.length - 1);
+      const y = yPos(data[data.length - 1]);
+      ctx.beginPath();
+      ctx.arc(x, y, 4, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+    dot(rentData, '#3b82f6');
+    dot(buyData,  '#34d399');
+  }
+
+  // ─── EVENT LISTENERS ─────────────────────────────────────────────────────
+  const inputs = ['rent', 'rentIncrease', 'investYield', 'price', 'downPct',
+                  'rate', 'fee', 'appreciation', 'years'];
+  inputs.forEach(id => {
+    const el = $(id);
+    if (el) {
+      el.addEventListener('input', calc);
+      el.addEventListener('change', calc);
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Redraw chart on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(calc, 120);
+  });
+
+  // Initial calculation
+  calc();
+})();
+</script>
+</body>
+</html>
