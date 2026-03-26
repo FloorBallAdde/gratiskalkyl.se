@@ -160,6 +160,9 @@
 
     /* FOOTER */
     .site-footer { background:#fff; border-top:1px solid var(--border); text-align:center; padding:1.25rem 1rem; font-size:.82rem; color:var(--muted); }
+    .site-footer .footer-links { display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap; margin-bottom:.4rem; }
+    .site-footer .footer-links a { color:var(--muted); text-decoration:none; }
+    .site-footer .footer-links a:hover { color:var(--green); }
 
     /* DARK MODE */
     @media (prefers-color-scheme: dark) {
@@ -510,6 +513,11 @@
 </main>
 
 <footer class="site-footer">
+  <div class="footer-links">
+    <a href="/om-oss.html">Om oss</a>
+    <a href="/integritetspolicy.html">Integritetspolicy</a>
+    <a href="mailto:hej@gratiskalkyl.se">Kontakt</a>
+  </div>
   <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
 </footer>
 

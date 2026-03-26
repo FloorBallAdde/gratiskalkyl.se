@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om oss – GratisKalkyl.se</title>
+  <meta name="description" content="Om GratisKalkyl.se — en oberoende kalkylatorplattform för privatekonomi. Utan bankbias, utan reklam för lån. Raka svar på dina ekonomifrågor.">
+  <link rel="canonical" href="https://gratiskalkyl.se/om-oss.html">
+  <meta name="robots" content="index, follow">
+  <script>
+    (function(){
+      var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+      var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+      document.documentElement.setAttribute('data-theme',d?'dark':'light');
+    })();
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGTX1PYYFJ');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #16a34a;
+      --primary-dark: #15803d;
+      --text: #111827;
+      --muted: #6b7280;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --radius: 12px;
+    }
+    html[data-theme="dark"] {
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --bg: #111827;
+      --card: #1f2937;
+      --border: #374151;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+      gap: 1rem;
+    }
+    .site-header a.logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .site-header a.back {
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-header a.back:hover { color: var(--primary); }
+
+    /* MAIN */
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .lead {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    p { margin-bottom: 0.75rem; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    ul li { margin-bottom: 0.5rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Principles grid */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .principle-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.25rem;
+    }
+    .principle-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .principle-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .principle-desc { font-size: 0.875rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-block {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    .cta-block h2 { color: #fff; margin-bottom: 0.5rem; }
+    .cta-block p { color: rgba(255,255,255,0.85); margin-bottom: 1rem; }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #15803d;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.9; text-decoration: none; }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .site-footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+    .site-footer .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-footer .footer-links a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="/">GratisKalkyl.se</a>
+    <a class="back" href="/">← Alla kalkylatorer</a>
+  </div>
+</header>
+
+<main>
+  <h1>Om GratisKalkyl.se</h1>
+  <p class="lead">En oberoende kalkylatorplattform för privatekonomi — utan bankbias, utan dolda agendor.</p>
+
+  <div class="section">
+    <h2>Vad vi är</h2>
+    <p>GratisKalkyl.se är en gratis resurs för alla som vill räkna på sin privatekonomi. Vi erbjuder kalkylatorer för allt från löneräkning och bolån till föräldrapenning, a-kassa och solceller — samlade på ett ställe.</p>
+    <p>Sajten ägs och drivs av A Johansson AB, ett oberoende svensk holdingbolag. Vi är inte kopplade till någon bank, försäkringsbolag eller annan finansiell aktör. Det innebär att vi inte har ekonomiska incitament att leda dig mot något specifikt lån, försäkring eller sparprodukt.</p>
+  </div>
+
+  <div class="section">
+    <h2>Våra principer</h2>
+    <div class="principles">
+      <div class="principle-card">
+        <div class="principle-icon">⚖️</div>
+        <div class="principle-title">Oberoende</div>
+        <div class="principle-desc">Ingen bank, inget fondbolag och ingen mäklare äger oss. Resultaten styrs av matte, inte av affärsrelationer.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon">🎯</div>
+        <div class="principle-title">Raka svar</div>
+        <div class="principle-desc">Vi visar vad beräkningen ger — utan att dölja jobbiga siffror eller guida dig mot förinställda val.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon">🔄</div>
+        <div class="principle-title">Uppdaterade regler</div>
+        <div class="principle-desc">Vi följer 2026 års skatteregler, PBB, schablonbelopp och myndighetsgränser från Skatteverket och Försäkringskassan.</div>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon">🔒</div>
+        <div class="principle-title">Integritetsvänligt</div>
+        <div class="principle-desc">Alla kalkylatorer körs i din webbläsare. Vi lagrar inga beräkningsdata och samlar inte in personuppgifter.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Hur vi finansieras</h2>
+    <p>GratisKalkyl.se finansieras via Google AdSense (displayannonsering) och i vissa fall via affiliatelänkar till finansiella tjänster som Avanza, Nordnet, Lendo och liknande. Affiliatelänkar märks tydligt och påverkar aldrig beräkningarnas resultat eller neutralitet.</p>
+    <p>Vi strävar alltid efter att affiliate-rekommendationer är relevanta och att vi bara länkar till aktörer vi bedömer som seriösa. Vi ansvarar dock inte för tredje parts tjänster, priser eller villkor.</p>
+  </div>
+
+  <div class="section">
+    <h2>Ansvarsfriskrivning</h2>
+    <p>Beräkningarna på GratisKalkyl.se är avsedda som vägledning och ungefärliga uppskattningar. De ersätter inte individuell rådgivning från en behörig ekonomi- eller skatterådgivare. Regler och schablonbelopp kan ändras — kontrollera alltid med Skatteverket, Försäkringskassan eller annan berörd myndighet för exakta uppgifter.</p>
+    <p>GratisKalkyl.se är inte finansiell rådgivning och vi tar inget ansvar för ekonomiska beslut fattade på basis av våra kalkylatorer.</p>
+  </div>
+
+  <div class="section">
+    <h2>Kontakta oss</h2>
+    <p>Har du hittat ett fel i en kalkylator, vill tipsa om en ny funktion eller har en annan fråga? Hör av dig till <a href="mailto:hej@gratiskalkyl.se">hej@gratiskalkyl.se</a>.</p>
+  </div>
+
+  <div class="cta-block">
+    <h2>Prova våra kalkylatorer</h2>
+    <p>29 gratis kalkylatorer för din privatekonomi — löneräknare, bolån, a-kassa, ISK och mer.</p>
+    <a class="cta-btn" href="/">Utforska alla kalkylatorer →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">Alla kalkylatorer</a>
+    <a href="/om-oss.html">Om oss</a>
+    <a href="/integritetspolicy.html">Integritetspolicy</a>
+    <a href="mailto:hej@gratiskalkyl.se">Kontakt</a>
+  </div>
+  <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+</footer>
+
+</body>
+</html>

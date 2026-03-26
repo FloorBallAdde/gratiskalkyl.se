@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integritetspolicy – GratisKalkyl.se</title>
+  <meta name="description" content="Integritetspolicy för GratisKalkyl.se. Läs om hur vi hanterar personuppgifter, cookies och Google Analytics i enlighet med GDPR.">
+  <link rel="canonical" href="https://gratiskalkyl.se/integritetspolicy.html">
+  <meta name="robots" content="index, follow">
+  <script>
+    (function(){
+      var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+      var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+      document.documentElement.setAttribute('data-theme',d?'dark':'light');
+    })();
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGTX1PYYFJ');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #16a34a;
+      --primary-dark: #15803d;
+      --text: #111827;
+      --muted: #6b7280;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --radius: 12px;
+    }
+    html[data-theme="dark"] {
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --bg: #111827;
+      --card: #1f2937;
+      --border: #374151;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+      gap: 1rem;
+    }
+    .site-header a.logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .site-header a.back {
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-header a.back:hover { color: var(--primary); }
+
+    /* MAIN */
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .lead {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    p { margin-bottom: 0.75rem; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    ul li { margin-bottom: 0.4rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .badge-updated {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    html[data-theme="dark"] .badge-updated {
+      background: rgba(21, 128, 61, 0.25);
+      color: #4ade80;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .site-footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+    .site-footer .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-footer .footer-links a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="/">GratisKalkyl.se</a>
+    <a class="back" href="/">← Alla kalkylatorer</a>
+  </div>
+</header>
+
+<main>
+  <span class="badge-updated">Uppdaterad mars 2026</span>
+  <h1>Integritetspolicy</h1>
+  <p class="lead">Vi tar din integritet på allvar. Här förklarar vi vilka uppgifter vi samlar in, varför, och dina rättigheter enligt GDPR.</p>
+
+  <div class="section">
+    <h2>1. Personuppgiftsansvarig</h2>
+    <p>GratisKalkyl.se drivs av A Johansson AB, Sverige. Har du frågor om hur vi hanterar dina uppgifter, kontakta oss på <a href="mailto:hej@gratiskalkyl.se">hej@gratiskalkyl.se</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Vad vi samlar in och varför</h2>
+    <p>GratisKalkyl.se samlar inte in några personliga uppgifter som namn, e-post eller personnummer. Alla kalkylatorer körs lokalt i din webbläsare — vi skickar inga beräkningsdata till våra servrar.</p>
+    <p>Vi använder <strong>Google Analytics 4 (GA4)</strong> för att förstå hur webbplatsen används. GA4 samlar automatiskt in anonymiserade besöksdata, inklusive:</p>
+    <ul>
+      <li>Sidvisningar och navigeringsmönster</li>
+      <li>Ungefärlig geografisk plats (land/region, ej exakt adress)</li>
+      <li>Enhetstyp (mobil, dator, surfplatta)</li>
+      <li>Webbläsare och operativsystem</li>
+      <li>Trafikkälla (t.ex. sökmotorer, direktbesök)</li>
+    </ul>
+    <p>IP-adresser anonymiseras av Google innan de lagras. Vi har inget sätt att identifiera enskilda besökare.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Cookies</h2>
+    <p>Vi använder följande cookies:</p>
+    <ul>
+      <li><strong>GA4-cookies</strong> (Google Analytics): Mätcookies som hjälper oss förstå trafik och användning. Sätts av Google och har en livslängd på upp till 2 år. Läs mer i <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles integritetspolicy</a>.</li>
+      <li><strong>gk-theme</strong> (lokal lagring): En preferens för ljust/mörkt läge som lagras i din webbläsare. Skickas aldrig till någon server.</li>
+    </ul>
+    <p>Du kan när som helst radera cookies i din webbläsares inställningar. Du kan även opt-outa från Google Analytics via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Googles opt-out-tillägg</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Rättslig grund (GDPR)</h2>
+    <p>Vår rättsliga grund för GA4-mätning är <strong>berättigat intresse</strong> (art. 6.1 f GDPR) — vi har ett legitimt intresse av att förstå hur sajten används för att kunna förbättra den. Statistiken är aggregerad och anonym och kan inte kopplas till en fysisk person.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Datadelning och tredje parter</h2>
+    <p>Vi säljer eller delar inte dina uppgifter med tredje parter utöver vad som krävs för att driva tjänsten:</p>
+    <ul>
+      <li><strong>Google LLC</strong> — GA4-analys. Google kan behandla data i USA. Google är certifierat under EU–US Data Privacy Framework.</li>
+      <li><strong>Cloudflare</strong> — webbhosting och CDN. Cloudflare behandlar anonyma nätverksloggar för säkerhet och prestanda.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Dina rättigheter</h2>
+    <p>Enligt GDPR har du rätt att:</p>
+    <ul>
+      <li><strong>Begära tillgång</strong> till uppgifter vi eventuellt har om dig</li>
+      <li><strong>Begära rättelse</strong> av felaktiga uppgifter</li>
+      <li><strong>Begära radering</strong> (rätten att bli glömd)</li>
+      <li><strong>Invända</strong> mot behandling baserad på berättigat intresse</li>
+      <li><strong>Begära begränsning</strong> av behandling</li>
+      <li><strong>Lämna klagomål</strong> till Integritetsskyddsmyndigheten (IMY) på <a href="https://www.imy.se" target="_blank" rel="noopener">imy.se</a></li>
+    </ul>
+    <p>Kontakta oss på <a href="mailto:hej@gratiskalkyl.se">hej@gratiskalkyl.se</a> för att utöva dina rättigheter.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Ändringar i denna policy</h2>
+    <p>Om vi ändrar denna policy uppdateras datumet högst upp på sidan. Väsentliga ändringar kommuniceras via ett meddelande på startsidan. Senast uppdaterad: mars 2026.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">Alla kalkylatorer</a>
+    <a href="/om-oss.html">Om oss</a>
+    <a href="/integritetspolicy.html">Integritetspolicy</a>
+    <a href="mailto:hej@gratiskalkyl.se">Kontakt</a>
+  </div>
+  <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+</footer>
+
+</body>
+</html>
