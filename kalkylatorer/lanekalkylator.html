@@ -111,8 +111,13 @@
         {"@type":"Question","name":"Vad är skillnaden mellan annuitetslån och rak amortering?","acceptedAnswer":{"@type":"Answer","text":"Med annuitetslån betalar du samma belopp varje månad – ränteandelen minskar och amorteringsandelen ökar över tid. Med rak amortering betalar du lika mycket i amortering varje månad men mindre i ränta – månadsbeloppet minskar alltså över tid."}},
         {"@type":"Question","name":"Hur mycket kan jag låna?","acceptedAnswer":{"@type":"Answer","text":"Det beror på din inkomst, befintliga skulder och kreditvärdighet. Banker och kreditinstitut gör en individuell kreditprövning. Generellt bör dina totala skuldkostnader inte överstiga 30-40% av din nettoinkomst."}}
     ]}</script>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 <header>
     <div class="container">
         <a href="/">← Alla kalkylatorer</a>

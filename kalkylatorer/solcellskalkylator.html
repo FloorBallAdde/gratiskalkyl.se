@@ -300,8 +300,13 @@
             .results-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 <header>
     <div class="container">
         <nav>

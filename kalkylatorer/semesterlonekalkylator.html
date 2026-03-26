@@ -90,8 +90,13 @@
         {"@type":"Question","name":"Hur många semesterdagar har jag rätt till?","acceptedAnswer":{"@type":"Answer","text":"Enligt semesterlagen har alla anställda rätt till minst 25 semesterdagar per år. Många kollektivavtal ger fler dagar, vanligtvis 28–32 dagar beroende på ålder och anställningstid."}},
         {"@type":"Question","name":"Vad är semestertillägg?","acceptedAnswer":{"@type":"Answer","text":"Semestertillägg är det extra belopp du får utöver ordinarie lön under semesterdagar. Enligt sammalöneregeln är det 0,43% av månadslönen per dag. Det är ett sätt att kompensera för att du inte tjänar in provision eller rörliga tillägg under ledigheten."}}
     ]}</script>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 <header>
     <div class="container"><a href="/">← Alla kalkylatorer</a></div>
 </header>

@@ -315,8 +315,13 @@
     footer { background: var(--card); border-top: 1px solid var(--border); text-align: center; padding: 1.25rem 1rem; font-size: .82rem; color: var(--muted); margin-top: 3rem; }
     footer a { color: var(--primary-dark); text-decoration: none; }
   </style>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 
 <header class="site-header">
   <div class="hdr">

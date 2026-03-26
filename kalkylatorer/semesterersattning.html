@@ -108,8 +108,13 @@
         {"@type":"Question","name":"Hur många semesterdagar tjänar en timanställd in?","acceptedAnswer":{"@type":"Answer","text":"Timanställda tjänar in semesterdagar på samma sätt som månadsanställda: 25 dagar per år enligt semesterlagen. Antal intjänade dagar baseras på hur stor del av semesterintjänandeåret (1 april–31 mars) du arbetat. Har du arbetat hela året tjänar du in 25 dagar. Kollektivavtal kan ge fler dagar."}},
         {"@type":"Question","name":"Ska jag betala skatt på semesterersättning?","acceptedAnswer":{"@type":"Answer","text":"Ja, semesterersättning är skattepliktig inkomst precis som ordinarie lön. Din arbetsgivare drar preliminärskatt baserat på din kommunalskattesats och eventuell statlig skatt. I vår kalkylator kan du ange din skattesats för att se en uppskattning av nettoutbetalningen."}}
     ]}</script>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 <header>
     <div class="container"><a href="/">← Alla kalkylatorer</a></div>
 </header>

@@ -90,8 +90,13 @@
         {"@type":"Question","name":"Vad är SGI?","acceptedAnswer":{"@type":"Answer","text":"SGI (sjukpenninggrundande inkomst) är den inkomst Försäkringskassan använder för att beräkna din föräldrapenning. Den baseras på din förväntade årsinkomst. Max SGI 2026 är 573 000 kr, vilket ger max dagersättning på 1 116 kr."}},
         {"@type":"Question","name":"Hur länge kan jag ta ut föräldrapenning?","acceptedAnswer":{"@type":"Answer","text":"Totalt har ett par 480 dagar att dela på per barn. 390 dagar är på sjukpenningnivå, 90 dagar på lägstanivå (180 kr/dag). 90 av dagarna är reserverade för respektive förälder (kan ej överlåtas)."}}
     ]}</script>
+  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
+  <script>
+    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
 </head>
 <body>
+<script src="/theme.js"></script>
 <header>
     <div class="container"><a href="/">← Alla kalkylatorer</a></div>
 </header>
