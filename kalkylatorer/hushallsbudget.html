@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hushållsbudgetkalkylator 2026 – Räkna ut din månadsbudget | GratisKalkyl.se</title>
+    <meta name="description" content="Gratis hushållsbudgetkalkylator — fördela din inkomst på utgiftskategorier och se hur mycket du kan spara varje månad. Kaka-diagram och detaljerad budgetöversikt.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/hushallsbudget.html">
+    <meta property="og:title" content="Hushållsbudgetkalkylator 2026 — Planera din månadsbudget">
+    <meta property="og:description" content="Gratis hushållsbudgetkalkylator — se var pengarna tar vägen och hur mycket du kan spara varje månad.">
+    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/hushallsbudget.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sv_SE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hushållsbudgetkalkylator 2026 — Planera din månadsbudget">
+    <meta name="twitter:description" content="Gratis hushållsbudgetkalkylator — se var pengarna tar vägen och hur mycket du kan spara varje månad.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hur mycket bör jag lägga på boende i min budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En vanlig tumregel är att boendekostnaden (hyra eller bolån + avgifter) inte bör överstiga 30 % av din nettoinkomst. Vid hyra i Stockholm eller andra storstäder kan det dock vara svårt att hålla sig under den gränsen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad är en rimlig sparkvot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En sparkvot på 10–20 % av nettoinkomsten brukar rekommenderas. Det innebär att om du tar hem 30 000 kr/mån bör du spara 3 000–6 000 kr. Redan 10 % är ett bra mål för de flesta hushåll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur fungerar 50/30/20-regeln för hushållsbudget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "50/30/20-regeln innebär att 50 % av nettoinkomsten går till nödvändigheter (boende, mat, transport), 30 % till önskemål (nöje, kläder, resor) och 20 % till sparande och skuldbetalning. Det är ett praktiskt riktmärke men behöver anpassas efter din situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur räknar jag ut min nettoinkomst?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nettoinkomst är det du faktiskt får utbetalt efter skatt och sociala avgifter. Använd vår löneräknare för att beräkna exakt nettolön utifrån bruttolön och kommunalskatt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ska jag inkludera barnbidrag och andra bidrag i budgeten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, alla regelbundna inkomster bör ingå i budgeten — barnbidrag, bostadsbidrag, underhållsbidrag och liknande. Lägg in dem under Övriga inkomster i kalkylatorn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad räknas som fasta respektive rörliga kostnader?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fasta kostnader är desamma varje månad: hyra/bolån, el (abonnemang), försäkringar, prenumerationer och låneavgifter. Rörliga kostnader varierar: mat, bensin, nöje och kläder. Fasta kostnader är lättare att planera för."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur mycket bör en nödfond innehålla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En nödfond bör motsvara 3–6 månaders levnadskostnader. Om dina totala utgifter är 25 000 kr/mån bör nödfonden innehålla 75 000–150 000 kr på ett lättillgängligt sparkonto."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #1a6b4a;
+            --primary-light: #e8f5ee;
+            --primary-dark: #0d4a30;
+            --accent: #2563eb;
+            --text: #1a1a2e;
+            --text-light: #555;
+            --bg: #fafbfc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg: #111827;
+                --white: #1f2937;
+                --border: #374151;
+                --primary-light: rgba(26, 107, 74, 0.2);
+                --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            input[type="number"], select {
+                background: #1f2937 !important;
+                color: #f3f4f6 !important;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Nav */
+        .site-nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .site-nav .logo { font-weight: 800; font-size: 18px; color: var(--primary); }
+        .site-nav .back { font-size: 14px; color: var(--text-light); }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 40px 24px 32px;
+            text-align: center;
+        }
+        .page-header h1 { font-size: clamp(22px, 4vw, 32px); font-weight: 800; margin-bottom: 8px; }
+        .page-header p { font-size: 16px; opacity: 0.9; max-width: 560px; margin: 0 auto; }
+
+        /* Main layout */
+        .main { max-width: 900px; margin: 0 auto; padding: 32px 16px 48px; }
+
+        /* Card */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+
+        /* Income / expense sections */
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        /* Input rows */
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 16px;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 540px) { .input-grid { grid-template-columns: 1fr; } }
+
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .input-row label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .input-row .emoji-label { font-size: 15px; }
+        .input-row input[type="number"] {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            color: var(--text);
+            background: var(--bg);
+            transition: border-color 0.2s;
+        }
+        .input-row input:focus { outline: none; border-color: var(--primary); }
+
+        /* Total row */
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-light);
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-top: 4px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .total-row span:last-child { color: var(--primary); font-size: 17px; }
+
+        /* Results */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .result-box {
+            background: var(--primary-light);
+            border-radius: var(--radius);
+            padding: 16px;
+            text-align: center;
+        }
+        .result-box .label { font-size: 12px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+        .result-box .value { font-size: 22px; font-weight: 800; color: var(--primary); }
+        .result-box.negative .value { color: #dc2626; }
+        .result-box.warning .value { color: #d97706; }
+
+        /* Chart area */
+        .chart-wrap {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        #budgetChart { max-width: 220px; max-height: 220px; flex-shrink: 0; }
+        .legend { flex: 1; min-width: 180px; }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .legend-label { flex: 1; color: var(--text-light); }
+        .legend-pct { font-weight: 600; color: var(--text); }
+
+        /* Budget table */
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .budget-table th {
+            background: var(--primary-light);
+            padding: 8px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .budget-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .budget-table tr:last-child td { border-bottom: none; }
+        .budget-table .amount { text-align: right; font-weight: 600; }
+        .budget-table .pct { text-align: right; color: var(--text-light); font-size: 12px; }
+        .budget-table .summary-row td { font-weight: 700; background: var(--primary-light); }
+        .budget-table .green { color: var(--primary); }
+        .budget-table .red { color: #dc2626; }
+
+        /* Rule indicator */
+        .rule-bar {
+            margin-top: 16px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+        }
+        .rule-bar h3 { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+        .rule-segments {
+            display: flex;
+            height: 20px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        .rule-seg { transition: width 0.4s ease; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: white; overflow: hidden; }
+        .seg-needs { background: #3b82f6; }
+        .seg-wants { background: #f59e0b; }
+        .seg-save  { background: #10b981; }
+        .rule-labels { display: flex; gap: 16px; font-size: 12px; }
+        .rule-labels span { display: flex; align-items: center; gap: 4px; }
+        .dot-blue   { width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block; }
+        .dot-yellow { width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block; }
+        .dot-green  { width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block; }
+
+        /* Expandable */
+        .expand-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 10px 0 0;
+            background: none;
+            border: none;
+            font-family: inherit;
+            user-select: none;
+        }
+        .expand-toggle .arrow { transition: transform 0.2s; }
+        .expand-toggle.open .arrow { transform: rotate(180deg); }
+        .expand-content { display: none; padding-top: 12px; }
+        .expand-content.open { display: block; }
+
+        /* SEO + FAQ */
+        .seo-section { font-size: 15px; line-height: 1.7; color: var(--text-light); margin-bottom: 32px; }
+        .seo-section h2 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+        .seo-section p { margin-bottom: 12px; }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+        .faq-item p { font-size: 15px; color: var(--text-light); }
+
+        /* Cross-links */
+        .related { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .related a {
+            padding: 6px 14px;
+            background: var(--primary-light);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .related a:hover { background: var(--primary); color: white; text-decoration: none; }
+
+        /* Disclaimer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="logo">GratisKalkyl.se</a>
+    <span class="back">/ <a href="/">Alla kalkylatorer</a></span>
+</nav>
+
+<header class="page-header">
+    <h1>🏦 Hushållsbudgetkalkylator 2026</h1>
+    <p>Fördela din inkomst på utgiftskategorier och se hur mycket du kan spara — och var pengarna faktiskt tar vägen.</p>
+</header>
+
+<main class="main">
+
+<!-- INPUT CARD -->
+<div class="card">
+    <h2>Fyll i din månadsbudget</h2>
+
+    <!-- INCOME -->
+    <p class="section-title">💰 Inkomster (netto per månad)</p>
+    <div class="input-grid">
+        <div class="input-row">
+            <label>Nettolön (efter skatt)</label>
+            <input type="number" id="inc_salary" min="0" step="100" value="28000" placeholder="28 000">
+        </div>
+        <div class="input-row">
+            <label>Partners nettolön</label>
+            <input type="number" id="inc_partner" min="0" step="100" value="0" placeholder="0">
+        </div>
+        <div class="input-row">
+            <label>Barnbidrag / bostadsbidrag</label>
+            <input type="number" id="inc_bidrag" min="0" step="100" value="0" placeholder="0">
+        </div>
+        <div class="input-row">
+            <label>Övriga inkomster</label>
+            <input type="number" id="inc_other" min="0" step="100" value="0" placeholder="0">
+        </div>
+    </div>
+    <div class="total-row">
+        <span>Totala inkomster</span>
+        <span id="total_income_label">28 000 kr</span>
+    </div>
+
+    <br>
+
+    <!-- EXPENSES -->
+    <p class="section-title">📋 Utgifter per månad</p>
+    <div class="input-grid">
+        <div class="input-row">
+            <label>🏠 Boende (hyra/bolån + avgift)</label>
+            <input type="number" id="exp_boende" min="0" step="100" value="9000" placeholder="9 000">
+        </div>
+        <div class="input-row">
+            <label>⚡ El, värme & vatten</label>
+            <input type="number" id="exp_el" min="0" step="50" value="800" placeholder="800">
+        </div>
+        <div class="input-row">
+            <label>🛒 Mat & dagligvaror</label>
+            <input type="number" id="exp_mat" min="0" step="50" value="4500" placeholder="4 500">
+        </div>
+        <div class="input-row">
+            <label>🚗 Transport (bil, SL-kort, bränsle)</label>
+            <input type="number" id="exp_transport" min="0" step="50" value="2000" placeholder="2 000">
+        </div>
+        <div class="input-row">
+            <label>📱 Telefon & internet</label>
+            <input type="number" id="exp_tele" min="0" step="50" value="500" placeholder="500">
+        </div>
+        <div class="input-row">
+            <label>🎬 Nöje & prenumerationer</label>
+            <input type="number" id="exp_nojen" min="0" step="50" value="1500" placeholder="1 500">
+        </div>
+        <div class="input-row">
+            <label>👕 Kläder & skor</label>
+            <input type="number" id="exp_klader" min="0" step="50" value="500" placeholder="500">
+        </div>
+        <div class="input-row">
+            <label>💊 Hälsa & sjukvård</label>
+            <input type="number" id="exp_halsa" min="0" step="50" value="300" placeholder="300">
+        </div>
+        <div class="input-row">
+            <label>🏦 Lån & krediter (amortering+ränta)</label>
+            <input type="number" id="exp_lan" min="0" step="100" value="0" placeholder="0">
+        </div>
+        <div class="input-row">
+            <label>🎓 Barn & utbildning</label>
+            <input type="number" id="exp_barn" min="0" step="100" value="0" placeholder="0">
+        </div>
+        <div class="input-row">
+            <label>🌴 Resor & semester</label>
+            <input type="number" id="exp_resor" min="0" step="100" value="0" placeholder="0">
+        </div>
+        <div class="input-row">
+            <label>📦 Övrigt</label>
+            <input type="number" id="exp_ovrigt" min="0" step="100" value="400" placeholder="0">
+        </div>
+    </div>
+    <div class="total-row">
+        <span>Totala utgifter</span>
+        <span id="total_exp_label">20 000 kr</span>
+    </div>
+</div>
+
+<!-- RESULTS CARD -->
+<div class="card" id="results-card">
+    <h2>Resultat</h2>
+
+    <div class="results-grid">
+        <div class="result-box">
+            <div class="label">Totala inkomster</div>
+            <div class="value" id="res_income">28 000 kr</div>
+        </div>
+        <div class="result-box">
+            <div class="label">Totala utgifter</div>
+            <div class="value" id="res_expenses">20 000 kr</div>
+        </div>
+        <div class="result-box" id="box_savings">
+            <div class="label">Månadssparande</div>
+            <div class="value" id="res_savings">8 000 kr</div>
+        </div>
+        <div class="result-box" id="box_rate">
+            <div class="label">Sparkvot</div>
+            <div class="value" id="res_rate">28,6 %</div>
+        </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-wrap">
+        <canvas id="budgetChart" width="220" height="220"></canvas>
+        <div class="legend" id="chartLegend"></div>
+    </div>
+
+    <!-- 50/30/20 rule bar -->
+    <div class="rule-bar">
+        <h3>50/30/20-regeln jämförelse</h3>
+        <div class="rule-segments">
+            <div class="rule-seg seg-needs" id="seg_needs" style="width:50%">Nöd.</div>
+            <div class="rule-seg seg-wants" id="seg_wants" style="width:30%">Önsk.</div>
+            <div class="rule-seg seg-save" id="seg_save" style="width:20%">Spar</div>
+        </div>
+        <div class="rule-labels">
+            <span><span class="dot-blue"></span> Nödvändigheter: <strong id="pct_needs">0%</strong></span>
+            <span><span class="dot-yellow"></span> Önskemål: <strong id="pct_wants">0%</strong></span>
+            <span><span class="dot-green"></span> Sparande: <strong id="pct_save">0%</strong></span>
+        </div>
+        <p style="font-size:13px;color:var(--text-light);margin-top:8px;" id="rule_comment"></p>
+    </div>
+
+    <!-- Expandable table -->
+    <button class="expand-toggle" id="expandBtn" onclick="toggleExpand()">
+        <span class="arrow">▼</span> Visa detaljerad budgetöversikt
+    </button>
+    <div class="expand-content" id="expandContent">
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th class="amount">Belopp</th>
+                    <th class="pct">Andel av inkomst</th>
+                </tr>
+            </thead>
+            <tbody id="budgetTableBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- SEO SECTION -->
+<div class="seo-section card">
+    <h2>Hur planerar man en hushållsbudget?</h2>
+    <p>En hushållsbudget är grunden för god privatekonomi. Utan koll på inkomster och utgifter är det svårt att spara, amortera eller planera för framtiden. Med vår gratis hushållsbudgetkalkylator för 2026 kan du snabbt se om du spenderar mer än du tjänar — och var du kan dra ner.</p>
+    <p>Börja med att fylla i alla dina nettoinkomster (lön efter skatt, barnbidrag, eventuell hyresinkomst). Gå sedan igenom varje utgiftskategori och ange ett realistiskt månadsbelopp. Kalkylatorn visar direkt ditt månadssparande, sparkvot och en cirkelgraf över hur pengarna fördelas.</p>
+    <h2>50/30/20-regeln — ett enkelt riktmärke</h2>
+    <p>50/30/20-regeln är en populär tumregel för budgetplanering: 50 % av nettoinkomsten till nödvändigheter (boende, mat, transport), 30 % till önskemål (nöje, resor, kläder) och 20 % till sparande eller skuldbetalning. Kalkylatorn visar automatiskt var du landar relativt den regeln.</p>
+    <p>I Sverige med höga boendekostnader — särskilt i Stockholm, Göteborg och Malmö — kan det vara svårt att hålla boendekostnaden under 30 % av nettoinkomsten. Det är normalt att justera regeln efter sin livssituation.</p>
+    <h2>Sparkvot och ekonomisk trygghet</h2>
+    <p>Sparkvoten är andelen av inkomsten du sparar varje månad. En sparkvot på 10–20 % är ett vanligt rekommenderat mål. Med en sparkvot på 20 % och en nettolön på 30 000 kr/mån sparar du 72 000 kr per år — nog för att bygga en nödfond, amortera extra eller investera.</p>
+    <p>En nödfond på 3–6 månaders utgifter är ett viktigt säkerhetsnät. Placera nödfonden på ett sparkonto med hög ränta och enkel åtkomst. Läs mer i vår <a href="/kalkylatorer/sparkalkylator.html">sparkalkylator</a>.</p>
+    <h2>Relaterade kalkylatorer</h2>
+    <div class="related">
+        <a href="/kalkylatorer/loneraknare.html">🧮 Löneräknare</a>
+        <a href="/kalkylatorer/sparkalkylator.html">💰 Sparkalkylator</a>
+        <a href="/kalkylatorer/bolanekalkylator.html">🏠 Bolånekalkylator</a>
+        <a href="/kalkylatorer/amorteringskalkylator.html">📉 Amorteringskalkylator</a>
+        <a href="/kalkylatorer/lanekalkylator.html">💳 Lånekalkylator</a>
+        <a href="/kalkylatorer/ranta-pa-ranta.html">📈 Ränta-på-ränta</a>
+    </div>
+</div>
+
+<!-- FAQ -->
+<div class="card">
+    <h2>Vanliga frågor om hushållsbudget</h2>
+    <div class="faq-item">
+        <h3>Hur mycket bör jag lägga på boende i min budget?</h3>
+        <p>En vanlig tumregel är att boendekostnaden inte bör överstiga 30 % av nettoinkomsten. I storstäder kan det vara svårt att hålla sig under den gränsen.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Vad är en rimlig sparkvot?</h3>
+        <p>En sparkvot på 10–20 % av nettoinkomsten brukar rekommenderas. Redan 10 % är ett bra mål för de flesta hushåll — det ger drygt en månadslön extra per år.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Hur fungerar 50/30/20-regeln?</h3>
+        <p>50 % till nödvändigheter, 30 % till önskemål och 20 % till sparande och skuldbetalning. Det är ett praktiskt riktmärke men behöver anpassas efter din situation.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Hur räknar jag ut min nettoinkomst?</h3>
+        <p>Nettoinkomst är det du faktiskt får utbetalt efter skatt. Använd vår <a href="/kalkylatorer/loneraknare.html">löneräknare</a> för att beräkna exakt nettolön utifrån bruttolön och kommunalskatt.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Ska jag inkludera barnbidrag och bidrag i budgeten?</h3>
+        <p>Ja, alla regelbundna inkomster bör ingå — barnbidrag, bostadsbidrag och underhållsbidrag. Lägg in dem under Barnbidrag / bostadsbidrag i kalkylatorn.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Vad räknas som fasta respektive rörliga kostnader?</h3>
+        <p>Fasta kostnader är desamma varje månad: hyra, el-abonnemang, försäkringar och låneavgifter. Rörliga kostnader varierar: mat, bensin, nöje och kläder.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Hur stor bör en nödfond vara?</h3>
+        <p>En nödfond bör motsvara 3–6 månaders levnadskostnader på ett lättillgängligt sparkonto. Om dina utgifter är 22 000 kr/mån bör nödfonden innehålla 66 000–132 000 kr.</p>
+    </div>
+</div>
+
+</main>
+
+<footer>
+    <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+    <p style="margin-top:6px;">Beräkningarna är ungefärliga och kan innehålla fel. Använd alltid en kvalificerad rådgivare för viktiga ekonomiska beslut.</p>
+</footer>
+
+<script>
+(function() {
+    'use strict';
+
+    // ── Kategori-data ──────────────────────────────────────────────
+    var CATS = [
+        { id:'exp_boende',    label:'🏠 Boende',              color:'#3b82f6', group:'needs' },
+        { id:'exp_el',        label:'⚡ El & värme',          color:'#6366f1', group:'needs' },
+        { id:'exp_mat',       label:'🛒 Mat & dagligvaror',   color:'#10b981', group:'needs' },
+        { id:'exp_transport', label:'🚗 Transport',           color:'#f59e0b', group:'needs' },
+        { id:'exp_tele',      label:'📱 Telefon & internet',  color:'#8b5cf6', group:'needs' },
+        { id:'exp_nojen',     label:'🎬 Nöje & prenu.',       color:'#ec4899', group:'wants' },
+        { id:'exp_klader',    label:'👕 Kläder & skor',       color:'#14b8a6', group:'wants' },
+        { id:'exp_halsa',     label:'💊 Hälsa',               color:'#f97316', group:'needs' },
+        { id:'exp_lan',       label:'🏦 Lån & krediter',      color:'#ef4444', group:'needs' },
+        { id:'exp_barn',      label:'🎓 Barn & utbildning',   color:'#0ea5e9', group:'needs' },
+        { id:'exp_resor',     label:'🌴 Resor & semester',    color:'#84cc16', group:'wants' },
+        { id:'exp_ovrigt',    label:'📦 Övrigt',              color:'#94a3b8', group:'wants' }
+    ];
+
+    var INC_IDS = ['inc_salary','inc_partner','inc_bidrag','inc_other'];
+
+    function fmt(n) {
+        return n.toLocaleString('sv-SE', {maximumFractionDigits:0}) + ' kr';
+    }
+    function fmtPct(n) {
+        return n.toFixed(1).replace('.',',') + ' %';
+    }
+    function val(id) {
+        var v = parseFloat(document.getElementById(id).value) || 0;
+        return Math.max(0, v);
+    }
+
+    function calcAll() {
+        var income = INC_IDS.reduce(function(s, id){ return s + val(id); }, 0);
+        var expenses = CATS.reduce(function(s, c){ return s + val(c.id); }, 0);
+        var savings = income - expenses;
+        var rate = income > 0 ? (savings / income) * 100 : 0;
+
+        // Totals in input section
+        document.getElementById('total_income_label').textContent = fmt(income);
+        document.getElementById('total_exp_label').textContent    = fmt(expenses);
+
+        // Result boxes
+        document.getElementById('res_income').textContent   = fmt(income);
+        document.getElementById('res_expenses').textContent = fmt(expenses);
+        document.getElementById('res_savings').textContent  = fmt(savings);
+        document.getElementById('res_rate').textContent     = fmtPct(Math.max(0, rate));
+
+        // Color savings box
+        var boxS = document.getElementById('box_savings');
+        var boxR = document.getElementById('box_rate');
+        boxS.className = 'result-box' + (savings < 0 ? ' negative' : savings < income * 0.1 ? ' warning' : '');
+        boxR.className = 'result-box' + (rate < 0 ? ' negative' : rate < 10 ? ' warning' : '');
+
+        // 50/30/20 breakdown
+        var needsCats = CATS.filter(function(c){ return c.group === 'needs'; });
+        var wantsCats = CATS.filter(function(c){ return c.group === 'wants'; });
+        var needsAmt  = needsCats.reduce(function(s,c){ return s + val(c.id); }, 0);
+        var wantsAmt  = wantsCats.reduce(function(s,c){ return s + val(c.id); }, 0);
+        var saveAmt   = Math.max(0, savings);
+        var total503020 = needsAmt + wantsAmt + saveAmt;
+
+        if (total503020 > 0 && income > 0) {
+            var needsPct  = Math.round((needsAmt  / income) * 100);
+            var wantsPct  = Math.round((wantsAmt  / income) * 100);
+            var savePct   = Math.round((saveAmt   / income) * 100);
+            var remaining = 100 - needsPct - wantsPct - savePct;
+            savePct += remaining; // absorb rounding
+
+            document.getElementById('seg_needs').style.width = needsPct + '%';
+            document.getElementById('seg_wants').style.width = wantsPct + '%';
+            document.getElementById('seg_save').style.width  = savePct  + '%';
+            document.getElementById('pct_needs').textContent = needsPct + '%';
+            document.getElementById('pct_wants').textContent = wantsPct + '%';
+            document.getElementById('pct_save').textContent  = savePct  + '%';
+
+            var comment = '';
+            if (needsPct > 60) comment = '⚠️ Dina nödvändigheter är höga. Kan du minska boende- eller transportkostnader?';
+            else if (savePct >= 20) comment = '✅ Bra jobbat! Du sparar mer än 20 % av inkomsten — i linje med 50/30/20-regeln.';
+            else if (savePct >= 10) comment = '👍 Du sparar ' + savePct + '% — nära 20%-målet. Lite mer kan göra stor skillnad över tid.';
+            else comment = '💡 Ditt sparande är under 10%. Titta på om du kan minska på önskemål eller hitta billigare alternativ.';
+            document.getElementById('rule_comment').textContent = comment;
+        }
+
+        // Draw pie chart
+        drawChart(income);
+
+        // Budget table
+        buildTable(income, expenses, savings);
+    }
+
+    // ── Canvas pie chart ────────────────────────────────────────
+    function drawChart(income) {
+        var canvas = document.getElementById('budgetChart');
+        var ctx    = canvas.getContext('2d');
+        var W = canvas.width, H = canvas.height;
+        ctx.clearRect(0, 0, W, H);
+
+        var data = CATS.map(function(c){ return { label: c.label, color: c.color, amt: val(c.id) }; });
+        var savingsAmt = Math.max(0, income - data.reduce(function(s,d){ return s + d.amt; }, 0));
+        data.push({ label:'💚 Sparande', color:'#22c55e', amt: savingsAmt });
+
+        var total = data.reduce(function(s,d){ return s + d.amt; }, 0);
+        if (total === 0) {
+            ctx.fillStyle = '#e5e7eb';
+            ctx.beginPath();
+            ctx.arc(W/2, H/2, H/2 - 8, 0, Math.PI*2);
+            ctx.fill();
+            buildLegend([]);
+            return;
+        }
+
+        var startAngle = -Math.PI / 2;
+        var cx = W/2, cy = H/2, r = H/2 - 8;
+        var legendData = [];
+
+        data.forEach(function(d) {
+            if (d.amt <= 0) return;
+            var slice = (d.amt / total) * Math.PI * 2;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, r, startAngle, startAngle + slice);
+            ctx.closePath();
+            ctx.fillStyle = d.color;
+            ctx.fill();
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            legendData.push({ label: d.label, color: d.color, pct: (d.amt / total) * 100 });
+            startAngle += slice;
+        });
+
+        buildLegend(legendData);
+    }
+
+    function buildLegend(items) {
+        var el = document.getElementById('chartLegend');
+        el.innerHTML = '';
+        items
+            .filter(function(i){ return i.pct >= 0.5; })
+            .sort(function(a,b){ return b.pct - a.pct; })
+            .slice(0, 10)
+            .forEach(function(item) {
+                var div = document.createElement('div');
+                div.className = 'legend-item';
+                div.innerHTML =
+                    '<span class="legend-dot" style="background:' + item.color + '"></span>' +
+                    '<span class="legend-label">' + item.label + '</span>' +
+                    '<span class="legend-pct">' + item.pct.toFixed(0) + '%</span>';
+                el.appendChild(div);
+            });
+    }
+
+    // ── Budget table ────────────────────────────────────────────
+    function buildTable(income, expenses, savings) {
+        var tbody = document.getElementById('budgetTableBody');
+        tbody.innerHTML = '';
+
+        CATS.forEach(function(c) {
+            var amt = val(c.id);
+            if (amt <= 0) return;
+            var pct = income > 0 ? (amt / income * 100) : 0;
+            var tr = document.createElement('tr');
+            tr.innerHTML =
+                '<td>' + c.label + '</td>' +
+                '<td class="amount">' + fmt(amt) + '</td>' +
+                '<td class="pct">' + pct.toFixed(1).replace('.',',') + '%</td>';
+            tbody.appendChild(tr);
+        });
+
+        // Summary rows
+        var trExp = document.createElement('tr');
+        trExp.className = 'summary-row';
+        var expPct = income > 0 ? (expenses / income * 100).toFixed(1).replace('.',',') : '0,0';
+        trExp.innerHTML =
+            '<td>Totala utgifter</td>' +
+            '<td class="amount">' + fmt(expenses) + '</td>' +
+            '<td class="pct">' + expPct + '%</td>';
+        tbody.appendChild(trExp);
+
+        var trSav = document.createElement('tr');
+        trSav.className = 'summary-row';
+        var savPct = income > 0 ? (Math.max(0, savings) / income * 100).toFixed(1).replace('.',',') : '0,0';
+        var savClass = savings < 0 ? 'red' : 'green';
+        trSav.innerHTML =
+            '<td>Månadssparande</td>' +
+            '<td class="amount ' + savClass + '">' + fmt(savings) + '</td>' +
+            '<td class="pct ' + savClass + '">' + savPct + '%</td>';
+        tbody.appendChild(trSav);
+    }
+
+    // ── Toggle expand ───────────────────────────────────────────
+    window.toggleExpand = function() {
+        var btn  = document.getElementById('expandBtn');
+        var cont = document.getElementById('expandContent');
+        btn.classList.toggle('open');
+        cont.classList.toggle('open');
+    };
+
+    // ── Event listeners ─────────────────────────────────────────
+    function attachListeners() {
+        var allIds = INC_IDS.concat(CATS.map(function(c){ return c.id; }));
+        allIds.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) { el.addEventListener('input', calcAll); }
+        });
+    }
+
+    attachListeners();
+    calcAll();
+})();
+</script>
+
+</body>
+</html>
