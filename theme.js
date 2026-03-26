@@ -15,7 +15,7 @@
   try{saved=localStorage.getItem('gk-theme');}catch(e){}
   var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
   var isDark=(saved==='dark')||(saved===null&&prefersDark);
-  if(isDark)document.documentElement.setAttribute('data-theme','dark');
+  document.documentElement.setAttribute('data-theme',isDark?'dark':'light');
 
   /* ── 2. CSS-variabler för [data-theme="dark"] ─────────────────────── */
   var s=document.createElement('style');
@@ -39,6 +39,10 @@
     +'html[data-theme="dark"] .nav-back{color:#9ca3af!important;}'
     +'html[data-theme="dark"] .nav-back:hover{color:#34d399!important;}'
     +'html[data-theme="dark"] canvas{filter:brightness(.92);}'
+    /* Force light mode — åsidosätter OS dark mode */
+    +'html[data-theme="light"]{color-scheme:light;--primary:#1a6b4a!important;--primary-light:#e8f5ee!important;--text:#1a1a2e!important;--text-light:#555!important;--bg:#fafbfc!important;--white:#ffffff!important;--border:#e2e8f0!important;--shadow:0 2px 8px rgba(0,0,0,0.08)!important;--muted:#6b7280!important;}'
+    +'html[data-theme="light"] body{background:#fafbfc!important;color:#1a1a2e!important;}'
+    +'html[data-theme="light"] .site-nav{background:#fff!important;border-bottom-color:#e2e8f0!important;}'
     /* Toggle-knapp */
     +'.gk-theme-btn{'
       +'display:flex;align-items:center;justify-content:center;'
@@ -73,8 +77,7 @@
     btn.addEventListener('click',function(){
       var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
       var next=!nowDark;
-      if(next){document.documentElement.setAttribute('data-theme','dark');}
-      else{document.documentElement.removeAttribute('data-theme');}
+      document.documentElement.setAttribute('data-theme',next?'dark':'light');
       try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
       btn.innerHTML=next?SUN:MOON;
       btn.setAttribute('aria-label',next?'Aktivera ljust läge':'Aktivera mörkt läge');
@@ -85,8 +88,9 @@
       window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(e){
         var m=null;try{m=localStorage.getItem('gk-theme');}catch(ex){}
         if(m)return;
-        if(e.matches){document.documentElement.setAttribute('data-theme','dark');btn.innerHTML=SUN;btn.setAttribute('aria-label','Aktivera ljust läge');}
-        else{document.documentElement.removeAttribute('data-theme');btn.innerHTML=MOON;btn.setAttribute('aria-label','Aktivera mörkt läge');}
+        document.documentElement.setAttribute('data-theme',e.matches?'dark':'light');
+        btn.innerHTML=e.matches?SUN:MOON;
+        btn.setAttribute('aria-label',e.matches?'Aktivera ljust läge':'Aktivera mörkt läge');
       });
     }
   }

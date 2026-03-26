@@ -22,7 +22,7 @@
   try{savedTheme=localStorage.getItem('gk-theme');}catch(e){}
   var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
   var isDark=(savedTheme==='dark')||(savedTheme===null&&prefersDark);
-  if(isDark)document.documentElement.setAttribute('data-theme','dark');
+  document.documentElement.setAttribute('data-theme',isDark?'dark':'light');
 
   /* ── 2. Injicera CSS-variabler för [data-theme="dark"] ─────────────────
      Säkrar att toggle fungerar även om sidan inte har egna dark-media-queries.
@@ -150,11 +150,7 @@
     btn.addEventListener('click',function(){
       var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
       var next=!nowDark;
-      if(next){
-        document.documentElement.setAttribute('data-theme','dark');
-      }else{
-        document.documentElement.removeAttribute('data-theme');
-      }
+      document.documentElement.setAttribute('data-theme',next?'dark':'light');
       try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
       btn.setAttribute('aria-label',toggleLabel(next));
       btn.innerHTML=toggleIcon(next);
@@ -174,13 +170,8 @@
       try{manual=localStorage.getItem('gk-theme');}catch(ex){}
       if(manual)return;
       var btn=document.getElementById('gk-theme-btn');
-      if(e.matches){
-        document.documentElement.setAttribute('data-theme','dark');
-        if(btn){btn.setAttribute('aria-label',toggleLabel(true));btn.innerHTML=toggleIcon(true);}
-      }else{
-        document.documentElement.removeAttribute('data-theme');
-        if(btn){btn.setAttribute('aria-label',toggleLabel(false));btn.innerHTML=toggleIcon(false);}
-      }
+      document.documentElement.setAttribute('data-theme',e.matches?'dark':'light');
+      if(btn){btn.setAttribute('aria-label',toggleLabel(e.matches));btn.innerHTML=toggleIcon(e.matches);}
     });
   }
 
