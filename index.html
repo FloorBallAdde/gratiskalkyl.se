@@ -8,6 +8,14 @@
   <link rel="canonical" href="https://gratiskalkyl.se/">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#16a34a">
+  <!-- Dark mode: tillämpa tema innan render för att undvika FOUC -->
+  <script>
+    (function(){
+      var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+      var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+      if(d)document.documentElement.setAttribute('data-theme','dark');
+    })();
+  </script>
   <meta property="og:title" content="GratisKalkyl.se – 29 gratis kalkylatorer för privatekonomi 2026">
   <meta property="og:description" content="29 gratis kalkylatorer. Löneräknare, hushållsbudget, bolånekalkylator, hyra vs köpa, sparkalkylator och mer. Utan bankbias.">
   <meta property="og:url" content="https://gratiskalkyl.se/">
@@ -152,6 +160,60 @@
 
     /* FOOTER */
     .site-footer { background:#fff; border-top:1px solid var(--border); text-align:center; padding:1.25rem 1rem; font-size:.82rem; color:var(--muted); }
+
+    /* DARK MODE */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text:#f3f4f6; --muted:#9ca3af; --bg:#111827;
+        --card:#1f2937; --border:#374151; --green:#34d399; --green-dark:#059669;
+        --green-light:rgba(52,211,153,.15); --sh:0 1px 3px rgba(0,0,0,.3);
+        --sh-md:0 4px 16px rgba(0,0,0,.4);
+      }
+      body { background:var(--bg); color:var(--text); }
+      .site-header, .filter-nav, .site-footer { background:#1f2937!important; border-color:var(--border)!important; }
+      .hero { background:linear-gradient(150deg,#1f2937 0%,#111827 60%,#0d2017 100%)!important; }
+      #search { background:#111827; color:var(--text); border-color:var(--border); }
+      #search:focus { background:#1f2937; }
+      .fbtn { background:#1f2937; color:var(--muted); border-color:var(--border); }
+      .fbtn.active { background:var(--green); border-color:var(--green); color:#111827; }
+      .card { background:var(--card); border-color:var(--border); }
+      .b-pk{background:#1e3a5f;color:#93c5fd;} .b-sp{background:#052e16;color:#86efac;}
+      .b-bo{background:#431407;color:#fdba74;} .b-fo{background:#1f2937;color:#d1d5db;}
+      .b-jo{background:#2e1065;color:#c4b5fd;} .b-ha{background:#500724;color:#f9a8d4;}
+    }
+    html[data-theme="dark"] {
+      --text:#f3f4f6; --muted:#9ca3af; --bg:#111827;
+      --card:#1f2937; --border:#374151; --green:#34d399; --green-dark:#059669;
+      --green-light:rgba(52,211,153,.15); --sh:0 1px 3px rgba(0,0,0,.3);
+      --sh-md:0 4px 16px rgba(0,0,0,.4);
+    }
+    html[data-theme="dark"] body { background:#111827; color:#f3f4f6; }
+    html[data-theme="dark"] .site-header,
+    html[data-theme="dark"] .filter-nav,
+    html[data-theme="dark"] .site-footer { background:#1f2937!important; border-color:#374151!important; }
+    html[data-theme="dark"] .hero { background:linear-gradient(150deg,#1f2937 0%,#111827 60%,#0d2017 100%)!important; }
+    html[data-theme="dark"] #search { background:#111827; color:#f3f4f6; border-color:#374151; }
+    html[data-theme="dark"] #search:focus { background:#1f2937; }
+    html[data-theme="dark"] .fbtn { background:#1f2937; color:#9ca3af; border-color:#374151; }
+    html[data-theme="dark"] .fbtn.active { background:#34d399; border-color:#34d399; color:#111827; }
+    html[data-theme="dark"] .card { background:#1f2937; border-color:#374151; }
+    html[data-theme="dark"] .b-pk{background:#1e3a5f;color:#93c5fd;}
+    html[data-theme="dark"] .b-sp{background:#052e16;color:#86efac;}
+    html[data-theme="dark"] .b-bo{background:#431407;color:#fdba74;}
+    html[data-theme="dark"] .b-fo{background:#1f2937;color:#d1d5db;}
+    html[data-theme="dark"] .b-jo{background:#2e1065;color:#c4b5fd;}
+    html[data-theme="dark"] .b-ha{background:#500724;color:#f9a8d4;}
+
+    /* Toggle-knapp */
+    #gk-index-theme-btn {
+      flex-shrink:0; display:flex; align-items:center; justify-content:center;
+      width:36px; height:36px; border-radius:8px; border:1.5px solid var(--border);
+      background:var(--card,#fff); cursor:pointer; color:var(--muted);
+      transition:border-color .12s,color .12s; padding:0;
+    }
+    #gk-index-theme-btn:hover { border-color:var(--green); color:var(--green); }
+    html[data-theme="dark"] #gk-index-theme-btn { background:#1f2937; border-color:#374151; color:#fbbf24; }
+    html[data-theme="dark"] #gk-index-theme-btn:hover { border-color:#34d399; color:#34d399; }
   </style>
 </head>
 <body>
@@ -163,6 +225,9 @@
       <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="search" id="search" placeholder="Sök kalkylator…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
     </div>
+    <button id="gk-index-theme-btn" type="button" aria-label="Aktivera mörkt läge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </div>
 </header>
 
@@ -475,6 +540,36 @@
     if(q){searchEl.value=q;query=q;}
     if(f||q)applyFilters();
   })();
+})();
+</script>
+
+<script>
+/* Dark mode toggle för startsidan */
+(function(){
+  var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+  var btn=document.getElementById('gk-index-theme-btn');
+  if(!btn)return;
+  var dark=document.documentElement.getAttribute('data-theme')==='dark';
+  btn.innerHTML=dark?SUN:MOON;
+  btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
+  btn.addEventListener('click',function(){
+    var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
+    var next=!nowDark;
+    if(next){document.documentElement.setAttribute('data-theme','dark');}
+    else{document.documentElement.removeAttribute('data-theme');}
+    try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
+    btn.innerHTML=next?SUN:MOON;
+    btn.setAttribute('aria-label',next?'Aktivera ljust läge':'Aktivera mörkt läge');
+  });
+  if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(e){
+      var manual=null;try{manual=localStorage.getItem('gk-theme');}catch(ex){}
+      if(manual)return;
+      if(e.matches){document.documentElement.setAttribute('data-theme','dark');btn.innerHTML=SUN;btn.setAttribute('aria-label','Aktivera ljust läge');}
+      else{document.documentElement.removeAttribute('data-theme');btn.innerHTML=MOON;btn.setAttribute('aria-label','Aktivera mörkt läge');}
+    });
+  }
 })();
 </script>
 </body>
