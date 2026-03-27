@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://gratiskalkyl.se/">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#16a34a">
+
   <!-- Dark mode: tillämpa tema innan render för att undvika FOUC -->
   <script>
     (function(){
@@ -16,6 +17,12 @@
       document.documentElement.setAttribute('data-theme',d?'dark':'light');
     })();
   </script>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <meta property="og:title" content="GratisKalkyl.se – 29 gratis kalkylatorer för privatekonomi 2026">
   <meta property="og:description" content="29 gratis kalkylatorer. Löneräknare, hushållsbudget, bolånekalkylator, hyra vs köpa, sparkalkylator och mer. Utan bankbias.">
   <meta property="og:url" content="https://gratiskalkyl.se/">
@@ -90,155 +97,326 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --green:#16a34a; --green-dark:#15803d; --green-light:#dcfce7;
-      --text:#111827; --muted:#6b7280; --bg:#f3f4f6;
-      --card:#ffffff; --border:#e5e7eb; --radius:12px;
-      --sh:0 1px 3px rgba(0,0,0,.07); --sh-md:0 4px 16px rgba(0,0,0,.09);
+      --text:#111827; --muted:#6b7280; --bg:#f8fafc;
+      --card:#ffffff; --border:#e5e7eb; --radius:14px;
+      --sh:0 1px 4px rgba(0,0,0,.06); --sh-md:0 8px 24px rgba(0,0,0,.1);
+      --sh-lg:0 20px 48px rgba(0,0,0,.12);
     }
-    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    body {
+      font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.55;
+    }
 
-    /* HEADER */
-    .site-header { position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid var(--border); transition:box-shadow .2s; }
-    .site-header.shadow { box-shadow:var(--sh-md); }
-    .hdr { max-width:1120px; margin:0 auto; padding:0 1rem; height:60px; display:flex; align-items:center; gap:1rem; }
-    .logo { text-decoration:none; font-size:1.2rem; font-weight:800; color:var(--green); letter-spacing:-.01em; white-space:nowrap; flex-shrink:0; }
-    .logo span { color:var(--muted); font-weight:400; }
-    .search-wrap { flex:1; max-width:380px; margin-left:auto; position:relative; }
-    .search-icon { position:absolute; left:.7rem; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; }
-    #search { width:100%; padding:.5rem .75rem .5rem 2.1rem; border:1.5px solid var(--border); border-radius:8px; font-size:.9rem; background:var(--bg); color:var(--text); outline:none; transition:border-color .15s,box-shadow .15s; }
-    #search:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(22,163,74,.12); background:#fff; }
-    #search::placeholder { color:var(--muted); }
+    /* ── HEADER ──────────────────────────────────────────────────── */
+    .site-header {
+      position:sticky; top:0; z-index:100;
+      background:rgba(255,255,255,0.82);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(229,231,235,0.7);
+      transition:box-shadow .2s,background .2s;
+    }
+    .site-header.shadow { box-shadow:0 2px 16px rgba(0,0,0,.08); }
+    .hdr { max-width:1120px; margin:0 auto; padding:0 1.25rem; height:60px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .logo { text-decoration:none; font-size:1.15rem; font-weight:800; color:var(--green); letter-spacing:-.02em; white-space:nowrap; flex-shrink:0; }
+    .logo span { color:var(--muted); font-weight:500; }
+    .hdr-right { display:flex; align-items:center; gap:.5rem; }
 
-    /* HERO */
-    .hero { background:linear-gradient(150deg,#fff 0%,#f0fdf4 60%,#dcfce7 100%); border-bottom:1px solid var(--border); text-align:center; padding:3rem 1rem 2.25rem; }
-    .hero h1 { font-size:clamp(1.6rem,4.5vw,2.4rem); font-weight:800; letter-spacing:-.02em; margin-bottom:.5rem; }
-    .hero-sub { color:var(--muted); font-size:1rem; margin-bottom:1.25rem; }
+    /* ── HERO ────────────────────────────────────────────────────── */
+    .hero {
+      background:linear-gradient(160deg,#fff 0%,#f0fdf4 55%,#dcfce7 100%);
+      border-bottom:1px solid var(--border);
+      text-align:center;
+      padding:4.5rem 1.25rem 3.5rem;
+    }
+    .hero h1 {
+      font-size:clamp(2rem,5vw,3rem);
+      font-weight:800;
+      letter-spacing:-.02em;
+      line-height:1.15;
+      margin-bottom:.6rem;
+    }
+    .hero-sub {
+      color:var(--muted);
+      font-size:1.05rem;
+      font-weight:500;
+      margin-bottom:2rem;
+      max-width:520px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .hero-search {
+      max-width:560px;
+      margin:0 auto 1.75rem;
+      display:flex;
+      gap:.5rem;
+      background:#fff;
+      border:1.5px solid var(--border);
+      border-radius:12px;
+      padding:.35rem .35rem .35rem .9rem;
+      box-shadow:var(--sh-md);
+      transition:border-color .15s, box-shadow .15s;
+    }
+    .hero-search:focus-within {
+      border-color:var(--green);
+      box-shadow:0 0 0 3px rgba(22,163,74,.1), var(--sh-md);
+    }
+    .hero-search-icon { color:var(--muted); flex-shrink:0; align-self:center; }
+    #search {
+      flex:1; border:none; outline:none; background:transparent;
+      font-size:.97rem; font-family:inherit; color:var(--text);
+      padding:.45rem .4rem;
+    }
+    #search::placeholder { color:#9ca3af; }
+    .hero-search-btn {
+      flex-shrink:0;
+      background:var(--green);
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      padding:.5rem 1.1rem;
+      font-size:.9rem;
+      font-weight:700;
+      font-family:inherit;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:background .12s;
+    }
+    .hero-search-btn:hover { background:var(--green-dark); }
     .hero-chips { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
-    .hero-chip { background:var(--green-light); color:var(--green-dark); font-size:.78rem; font-weight:600; padding:.3rem .8rem; border-radius:99px; border:1px solid rgba(22,163,74,.2); }
+    .hero-chip {
+      background:var(--green-light); color:var(--green-dark);
+      font-size:.78rem; font-weight:600;
+      padding:.3rem .85rem; border-radius:99px;
+      border:1px solid rgba(22,163,74,.2);
+    }
 
-    /* FILTER */
-    .filter-nav { background:#fff; border-bottom:1px solid var(--border); position:sticky; top:60px; z-index:90; }
-    .filter-scroll { max-width:1120px; margin:0 auto; padding:.7rem 1rem; display:flex; gap:.4rem; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
+    /* ── FILTER ──────────────────────────────────────────────────── */
+    .filter-nav {
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      position:sticky; top:60px; z-index:90;
+    }
+    .filter-scroll {
+      max-width:1120px; margin:0 auto;
+      padding:.65rem 1.25rem;
+      display:flex; gap:.4rem;
+      overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+    }
     .filter-scroll::-webkit-scrollbar { display:none; }
-    .fbtn { display:inline-flex; align-items:center; gap:.3rem; white-space:nowrap; padding:.38rem .85rem; border:1.5px solid var(--border); border-radius:99px; background:#fff; color:var(--muted); font-size:.82rem; font-weight:600; cursor:pointer; transition:border-color .12s,color .12s,background .12s; flex-shrink:0; }
+    .fbtn {
+      display:inline-flex; align-items:center; gap:.3rem;
+      white-space:nowrap; padding:.38rem .9rem;
+      border:1.5px solid var(--border); border-radius:99px;
+      background:#fff; color:var(--muted);
+      font-size:.82rem; font-weight:600; font-family:inherit;
+      cursor:pointer; transition:border-color .12s,color .12s,background .12s;
+      flex-shrink:0;
+    }
     .fbtn:hover { border-color:var(--green); color:var(--green); }
     .fbtn.active { background:var(--green); border-color:var(--green); color:#fff; }
-    .fbtn .n { background:rgba(0,0,0,.1); border-radius:99px; padding:.1rem .4rem; font-size:.72rem; font-weight:700; }
+    .fbtn .n {
+      background:rgba(0,0,0,.1); border-radius:99px;
+      padding:.1rem .4rem; font-size:.72rem; font-weight:700;
+    }
     .fbtn.active .n { background:rgba(255,255,255,.25); }
 
-    /* GRID */
-    .grid-wrap { max-width:1120px; margin:0 auto; padding:1.75rem 1rem 2rem; }
-    .grid-meta { font-size:.82rem; color:var(--muted); font-weight:500; margin-bottom:1.1rem; min-height:1.2em; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    /* ── GRID ────────────────────────────────────────────────────── */
+    .grid-wrap { max-width:1120px; margin:0 auto; padding:2rem 1.25rem 2.5rem; }
+    .grid-meta { font-size:.82rem; color:var(--muted); font-weight:500; margin-bottom:1.25rem; min-height:1.2em; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
     @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:500px){.grid{grid-template-columns:1fr;}}
 
-    /* CARD */
-    .card { display:flex; flex-direction:column; background:var(--card); border:1.5px solid var(--border); border-radius:var(--radius); padding:1.2rem 1.1rem 1rem; text-decoration:none; color:var(--text); box-shadow:var(--sh); transition:box-shadow .15s,border-color .15s,transform .12s; }
-    .card:hover { box-shadow:var(--sh-md); border-color:var(--green); transform:translateY(-2px); }
+    /* ── CARD ────────────────────────────────────────────────────── */
+    .card {
+      display:flex; flex-direction:column;
+      background:var(--card); border:1.5px solid var(--border);
+      border-radius:var(--radius); padding:1.35rem 1.25rem 1.15rem;
+      text-decoration:none; color:var(--text);
+      box-shadow:var(--sh);
+      transition:box-shadow .2s, border-color .15s, transform .15s;
+    }
+    .card:hover {
+      box-shadow:var(--sh-lg);
+      border-color:var(--green);
+      transform:translateY(-3px);
+    }
     .card:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
-    .card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:.7rem; }
-    .card-icon { font-size:1.9rem; line-height:1; }
-    .card-arrow { color:var(--border); font-size:1.1rem; transition:color .15s,transform .15s; }
-    .card:hover .card-arrow { color:var(--green); transform:translate(2px,-2px); }
-    .card h2 { font-size:.97rem; font-weight:700; margin-bottom:.25rem; line-height:1.3; }
-    .card-desc { font-size:.83rem; color:var(--muted); flex:1; margin-bottom:.85rem; line-height:1.45; }
-    .badge { display:inline-block; font-size:.68rem; font-weight:700; padding:.18rem .55rem; border-radius:99px; letter-spacing:.03em; text-transform:uppercase; align-self:flex-start; }
+    .card-top {
+      display:flex; align-items:flex-start;
+      justify-content:space-between; margin-bottom:.9rem; gap:.5rem;
+    }
+    .card-icon-wrap {
+      width:46px; height:46px; border-radius:12px;
+      background:var(--green-light);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.35rem; flex-shrink:0;
+    }
+    .card h2 { font-size:.97rem; font-weight:700; margin-bottom:.3rem; line-height:1.3; }
+    .card-desc { font-size:.83rem; color:var(--muted); flex:1; margin-bottom:1rem; line-height:1.5; }
+    .card-footer { display:flex; align-items:center; justify-content:space-between; }
+    .badge {
+      display:inline-block; font-size:.67rem; font-weight:700;
+      padding:.18rem .55rem; border-radius:99px;
+      letter-spacing:.04em; text-transform:uppercase; flex-shrink:0;
+    }
     .b-pk{background:#dbeafe;color:#1d4ed8;} .b-sp{background:#dcfce7;color:#166534;}
     .b-bo{background:#ffedd5;color:#c2410c;} .b-fo{background:#f3f4f6;color:#374151;}
     .b-jo{background:#f3e8ff;color:#6d28d9;} .b-ha{background:#fce7f3;color:#be185d;}
+    .card-cta {
+      font-size:.8rem; font-weight:600; color:var(--green);
+      display:inline-flex; align-items:center; gap:.2rem;
+      opacity:0; transform:translateX(-4px);
+      transition:opacity .15s, transform .15s;
+    }
+    .card:hover .card-cta { opacity:1; transform:translateX(0); }
     .card.hidden { display:none; }
 
-    /* NO RESULTS */
+    /* ── NO RESULTS ──────────────────────────────────────────────── */
     .no-results { display:none; grid-column:1/-1; text-align:center; padding:3rem 1rem; color:var(--muted); }
     .no-results.show { display:block; }
     .no-results strong { color:var(--text); }
 
-    /* SEO */
-    .seo { max-width:780px; margin:0 auto; padding:0 1rem 3.5rem; }
-    .seo h2 { font-size:1.2rem; font-weight:700; margin-bottom:.85rem; }
-    .seo p { font-size:.92rem; color:var(--muted); margin-bottom:.65rem; line-height:1.7; }
+    /* ── VALUE PROP ──────────────────────────────────────────────── */
+    .value-prop {
+      background:#fff; border-top:1px solid var(--border);
+      padding:4rem 1.25rem;
+    }
+    .value-prop-inner { max-width:960px; margin:0 auto; }
+    .value-prop-label {
+      font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--green); margin-bottom:.75rem; display:flex; align-items:center; gap:.4rem;
+    }
+    .value-prop h2 {
+      font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800;
+      letter-spacing:-.02em; line-height:1.2; margin-bottom:.65rem;
+    }
+    .value-prop h2 em { color:var(--green); font-style:italic; }
+    .value-prop-lead {
+      color:var(--muted); font-size:.97rem; line-height:1.7;
+      max-width:580px; margin-bottom:3rem;
+    }
+    .value-prop-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:2rem;
+    }
+    @media(max-width:700px){ .value-prop-grid{grid-template-columns:1fr;gap:1.5rem;} }
+    .vp-item {}
+    .vp-icon {
+      width:42px; height:42px; border-radius:10px;
+      background:var(--green-light); display:flex; align-items:center;
+      justify-content:center; margin-bottom:.85rem; font-size:1.2rem;
+    }
+    .vp-item h3 { font-size:.97rem; font-weight:700; margin-bottom:.4rem; }
+    .vp-item p { font-size:.85rem; color:var(--muted); line-height:1.65; }
 
-    /* FOOTER */
-    .site-footer { background:#fff; border-top:1px solid var(--border); text-align:center; padding:1.25rem 1rem; font-size:.82rem; color:var(--muted); }
-    .site-footer .footer-links { display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap; margin-bottom:.4rem; }
-    .site-footer .footer-links a { color:var(--muted); text-decoration:none; }
+    /* ── FOOTER ──────────────────────────────────────────────────── */
+    .site-footer {
+      background:#fff; border-top:1px solid var(--border);
+      text-align:center; padding:1.5rem 1rem;
+      font-size:.82rem; color:var(--muted);
+    }
+    .site-footer .footer-links {
+      display:flex; justify-content:center; gap:1.5rem;
+      flex-wrap:wrap; margin-bottom:.5rem;
+    }
+    .site-footer .footer-links a { color:var(--muted); text-decoration:none; font-weight:500; }
     .site-footer .footer-links a:hover { color:var(--green); }
 
-    /* DARK MODE */
+    /* ── THEME TOGGLE BUTTON ─────────────────────────────────────── */
+    #gk-index-theme-btn {
+      flex-shrink:0; display:flex; align-items:center; justify-content:center;
+      width:36px; height:36px; border-radius:8px; border:1.5px solid var(--border);
+      background:transparent; cursor:pointer; color:var(--muted);
+      transition:border-color .12s,color .12s; padding:0;
+    }
+    #gk-index-theme-btn:hover { border-color:var(--green); color:var(--green); }
+
+    /* ── DARK MODE ───────────────────────────────────────────────── */
     @media (prefers-color-scheme: dark) {
       :root {
-        --text:#f3f4f6; --muted:#9ca3af; --bg:#111827;
-        --card:#1f2937; --border:#374151; --green:#34d399; --green-dark:#059669;
+        --text:#f3f4f6; --muted:#9ca3af; --bg:#0f172a;
+        --card:#1e293b; --border:#334155; --green:#34d399; --green-dark:#059669;
         --green-light:rgba(52,211,153,.15); --sh:0 1px 3px rgba(0,0,0,.3);
-        --sh-md:0 4px 16px rgba(0,0,0,.4);
+        --sh-md:0 8px 24px rgba(0,0,0,.4); --sh-lg:0 20px 48px rgba(0,0,0,.5);
       }
       body { background:var(--bg); color:var(--text); }
-      .site-header, .filter-nav, .site-footer { background:#1f2937!important; border-color:var(--border)!important; }
-      .hero { background:linear-gradient(150deg,#1f2937 0%,#111827 60%,#0d2017 100%)!important; }
-      #search { background:#111827; color:var(--text); border-color:var(--border); }
-      #search:focus { background:#1f2937; }
-      .fbtn { background:#1f2937; color:var(--muted); border-color:var(--border); }
-      .fbtn.active { background:var(--green); border-color:var(--green); color:#111827; }
-      .card { background:var(--card); border-color:var(--border); }
+      .site-header { background:rgba(15,23,42,0.82)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+      .filter-nav { background:rgba(15,23,42,0.9)!important; border-bottom-color:#334155!important; }
+      .hero { background:linear-gradient(160deg,#1e293b 0%,#0f172a 55%,#052e16 100%)!important; }
+      .hero-search { background:#1e293b; border-color:#334155; }
+      #search { color:#f3f4f6; }
+      #search::placeholder { color:#64748b; }
+      .hero-search-btn { background:var(--green); }
+      .fbtn { background:#1e293b; color:var(--muted); border-color:#334155; }
+      .fbtn.active { background:var(--green); border-color:var(--green); color:#0f172a; }
+      .card { background:var(--card); border-color:#334155; }
+      .card-icon-wrap { background:rgba(52,211,153,.12); }
+      .value-prop { background:#1e293b; border-top-color:#334155; }
+      .vp-icon { background:rgba(52,211,153,.12); }
+      .site-footer { background:#1e293b; border-top-color:#334155; }
       .b-pk{background:#1e3a5f;color:#93c5fd;} .b-sp{background:#052e16;color:#86efac;}
-      .b-bo{background:#431407;color:#fdba74;} .b-fo{background:#1f2937;color:#d1d5db;}
+      .b-bo{background:#431407;color:#fdba74;} .b-fo{background:#1e293b;color:#d1d5db;}
       .b-jo{background:#2e1065;color:#c4b5fd;} .b-ha{background:#500724;color:#f9a8d4;}
     }
     html[data-theme="dark"] {
-      --text:#f3f4f6; --muted:#9ca3af; --bg:#111827;
-      --card:#1f2937; --border:#374151; --green:#34d399; --green-dark:#059669;
+      --text:#f3f4f6; --muted:#9ca3af; --bg:#0f172a;
+      --card:#1e293b; --border:#334155; --green:#34d399; --green-dark:#059669;
       --green-light:rgba(52,211,153,.15); --sh:0 1px 3px rgba(0,0,0,.3);
-      --sh-md:0 4px 16px rgba(0,0,0,.4);
+      --sh-md:0 8px 24px rgba(0,0,0,.4); --sh-lg:0 20px 48px rgba(0,0,0,.5);
     }
-    html[data-theme="dark"] body { background:#111827; color:#f3f4f6; }
-    html[data-theme="dark"] .site-header,
-    html[data-theme="dark"] .filter-nav,
-    html[data-theme="dark"] .site-footer { background:#1f2937!important; border-color:#374151!important; }
-    html[data-theme="dark"] .hero { background:linear-gradient(150deg,#1f2937 0%,#111827 60%,#0d2017 100%)!important; }
-    html[data-theme="dark"] #search { background:#111827; color:#f3f4f6; border-color:#374151; }
-    html[data-theme="dark"] #search:focus { background:#1f2937; }
-    html[data-theme="dark"] .fbtn { background:#1f2937; color:#9ca3af; border-color:#374151; }
-    html[data-theme="dark"] .fbtn.active { background:#34d399; border-color:#34d399; color:#111827; }
-    html[data-theme="dark"] .card { background:#1f2937; border-color:#374151; }
+    html[data-theme="dark"] body { background:#0f172a; color:#f3f4f6; }
+    html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+    html[data-theme="dark"] .filter-nav { background:rgba(15,23,42,0.92)!important; border-bottom-color:#334155!important; }
+    html[data-theme="dark"] .hero { background:linear-gradient(160deg,#1e293b 0%,#0f172a 55%,#052e16 100%)!important; }
+    html[data-theme="dark"] .hero-search { background:#1e293b; border-color:#334155; }
+    html[data-theme="dark"] #search { color:#f3f4f6; }
+    html[data-theme="dark"] #search::placeholder { color:#64748b; }
+    html[data-theme="dark"] .fbtn { background:#1e293b; color:#9ca3af; border-color:#334155; }
+    html[data-theme="dark"] .fbtn.active { background:#34d399; border-color:#34d399; color:#0f172a; }
+    html[data-theme="dark"] .card { background:#1e293b; border-color:#334155; }
+    html[data-theme="dark"] .card-icon-wrap { background:rgba(52,211,153,.12); }
+    html[data-theme="dark"] .value-prop { background:#1e293b; border-top-color:#334155; }
+    html[data-theme="dark"] .vp-icon { background:rgba(52,211,153,.12); }
+    html[data-theme="dark"] .site-footer { background:#1e293b; border-top-color:#334155; }
     html[data-theme="dark"] .b-pk{background:#1e3a5f;color:#93c5fd;}
     html[data-theme="dark"] .b-sp{background:#052e16;color:#86efac;}
     html[data-theme="dark"] .b-bo{background:#431407;color:#fdba74;}
-    html[data-theme="dark"] .b-fo{background:#1f2937;color:#d1d5db;}
+    html[data-theme="dark"] .b-fo{background:#1e293b;color:#d1d5db;}
     html[data-theme="dark"] .b-jo{background:#2e1065;color:#c4b5fd;}
     html[data-theme="dark"] .b-ha{background:#500724;color:#f9a8d4;}
+    html[data-theme="dark"] #gk-index-theme-btn { border-color:#334155; color:#fbbf24; }
+    html[data-theme="dark"] #gk-index-theme-btn:hover { border-color:#34d399; color:#34d399; }
+    html[data-theme="dark"] .hero-chip { background:rgba(52,211,153,.15); color:#34d399; border-color:rgba(52,211,153,.25); }
 
-    /* FORCE LIGHT MODE — åsidosätter OS dark mode när användaren valt ljust */
+    /* FORCE LIGHT */
     html[data-theme="light"] {
-      --text:#111827; --muted:#6b7280; --bg:#f3f4f6;
+      --text:#111827; --muted:#6b7280; --bg:#f8fafc;
       --card:#ffffff; --border:#e5e7eb; --green:#16a34a; --green-dark:#15803d;
-      --green-light:#dcfce7;
+      --green-light:#dcfce7; --sh:0 1px 4px rgba(0,0,0,.06);
+      --sh-md:0 8px 24px rgba(0,0,0,.1); --sh-lg:0 20px 48px rgba(0,0,0,.12);
     }
-    html[data-theme="light"] body { background:#f3f4f6!important; color:#111827!important; }
-    html[data-theme="light"] .site-header,
-    html[data-theme="light"] .filter-nav,
-    html[data-theme="light"] .site-footer { background:#fff!important; border-color:#e5e7eb!important; }
-    html[data-theme="light"] .hero { background:linear-gradient(150deg,#fff 0%,#f0fdf4 60%,#dcfce7 100%)!important; }
-    html[data-theme="light"] #search { background:#f3f4f6; color:#111827; border-color:#e5e7eb; }
+    html[data-theme="light"] body { background:#f8fafc!important; color:#111827!important; }
+    html[data-theme="light"] .site-header { background:rgba(255,255,255,0.82)!important; border-bottom-color:rgba(229,231,235,0.7)!important; }
+    html[data-theme="light"] .filter-nav { background:rgba(255,255,255,0.92)!important; border-bottom-color:#e5e7eb!important; }
+    html[data-theme="light"] .hero { background:linear-gradient(160deg,#fff 0%,#f0fdf4 55%,#dcfce7 100%)!important; }
+    html[data-theme="light"] .hero-search { background:#fff; border-color:#e5e7eb; }
+    html[data-theme="light"] #search { color:#111827; }
     html[data-theme="light"] .fbtn { background:#fff; color:#6b7280; border-color:#e5e7eb; }
     html[data-theme="light"] .fbtn.active { background:#16a34a; border-color:#16a34a; color:#fff; }
     html[data-theme="light"] .card { background:#fff; border-color:#e5e7eb; }
+    html[data-theme="light"] .card-icon-wrap { background:#dcfce7; }
+    html[data-theme="light"] .value-prop { background:#fff; }
+    html[data-theme="light"] .vp-icon { background:#dcfce7; }
+    html[data-theme="light"] .site-footer { background:#fff; border-top-color:#e5e7eb; }
     html[data-theme="light"] .b-pk{background:#dbeafe;color:#1d4ed8;}
     html[data-theme="light"] .b-sp{background:#dcfce7;color:#166534;}
     html[data-theme="light"] .b-bo{background:#ffedd5;color:#c2410c;}
     html[data-theme="light"] .b-fo{background:#f3f4f6;color:#374151;}
     html[data-theme="light"] .b-jo{background:#f3e8ff;color:#6d28d9;}
     html[data-theme="light"] .b-ha{background:#fce7f3;color:#be185d;}
-
-    /* Toggle-knapp */
-    #gk-index-theme-btn {
-      flex-shrink:0; display:flex; align-items:center; justify-content:center;
-      width:36px; height:36px; border-radius:8px; border:1.5px solid var(--border);
-      background:var(--card,#fff); cursor:pointer; color:var(--muted);
-      transition:border-color .12s,color .12s; padding:0;
-    }
-    #gk-index-theme-btn:hover { border-color:var(--green); color:var(--green); }
-    html[data-theme="dark"] #gk-index-theme-btn { background:#1f2937; border-color:#374151; color:#fbbf24; }
-    html[data-theme="dark"] #gk-index-theme-btn:hover { border-color:#34d399; color:#34d399; }
   </style>
 </head>
 <body>
@@ -246,21 +424,24 @@
 <header class="site-header" id="hdr">
   <div class="hdr">
     <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
-    <div class="search-wrap">
-      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="search" placeholder="Sök kalkylator…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
+    <div class="hdr-right">
+      <button id="gk-index-theme-btn" type="button" aria-label="Aktivera mörkt läge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </div>
-    <button id="gk-index-theme-btn" type="button" aria-label="Aktivera mörkt läge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Gratis kalkylatorer för privatekonomi</h1>
+  <h1>Gratis kalkylatorer<br>för privatekonomi</h1>
   <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
+  <div class="hero-search" role="search">
+    <svg class="hero-search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="search" id="search" placeholder="Sök bland 30 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
+    <button class="hero-search-btn" type="button">Hitta kalkylator</button>
+  </div>
   <div class="hero-chips">
-    <span class="hero-chip">✓ 27 kalkylatorer</span>
+    <span class="hero-chip">✓ 30 kalkylatorer</span>
     <span class="hero-chip">✓ 100% gratis</span>
     <span class="hero-chip">✓ Uppdaterade 2026</span>
     <span class="hero-chip">✓ Mobilvänliga</span>
@@ -269,253 +450,358 @@
 
 <nav class="filter-nav" aria-label="Filtrera kalkylatorer efter kategori">
   <div class="filter-scroll">
-    <button class="fbtn active" data-cat="alla">Alla <span class="n">31</span></button>
-    <button class="fbtn" data-cat="pk">💰 Privatekonomi <span class="n">9</span></button>
-    <button class="fbtn" data-cat="sp">💹 Sparande <span class="n">4</span></button>
-    <button class="fbtn" data-cat="bo">🏠 Boende & Lån <span class="n">5</span></button>
-    <button class="fbtn" data-cat="fo">🚗 Fordon & Energi <span class="n">4</span></button>
-    <button class="fbtn" data-cat="jo">👪 Jobb & Familj <span class="n">7</span></button>
-    <button class="fbtn" data-cat="ha">💪 Hälsa <span class="n">2</span></button>
+    <button class="fbtn active" data-cat="alla">Alla <span class="n">30</span></button>
+    <button class="fbtn" data-cat="pk">Privatekonomi <span class="n">8</span></button>
+    <button class="fbtn" data-cat="sp">Sparande <span class="n">4</span></button>
+    <button class="fbtn" data-cat="bo">Boende &amp; Lån <span class="n">5</span></button>
+    <button class="fbtn" data-cat="fo">Fordon &amp; Energi <span class="n">4</span></button>
+    <button class="fbtn" data-cat="jo">Jobb &amp; Familj <span class="n">7</span></button>
+    <button class="fbtn" data-cat="ha">Hälsa <span class="n">2</span></button>
   </div>
 </nav>
 
 <main>
 <section class="grid-wrap">
-  <p class="grid-meta" id="meta" aria-live="polite">Visar 28 kalkylatorer</p>
+  <p class="grid-meta" id="meta" aria-live="polite">Visar 30 kalkylatorer</p>
   <div class="grid" id="grid">
 
     <!-- PRIVATEKONOMI -->
     <a class="card" href="/kalkylatorer/loneraknare.html" data-cat="pk" data-kw="löneräknare lön skatt nettolön bruttolön kommunalskatt jobbskatteavdrag">
-      <div class="card-top"><span class="card-icon">💼</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">💼</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Löneräknare</h2>
       <p class="card-desc">Räkna ut din lön efter skatt för 2026 — inkl. kommunalskatt och jobbskatteavdrag.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/isk-skatteberaknare.html" data-cat="pk" data-kw="isk investeringssparkonto skatt schablonintäkt aktier fonder">
-      <div class="card-top"><span class="card-icon">📊</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">📊</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>ISK-skatteberäknare</h2>
       <p class="card-desc">Beräkna skatten på ditt investeringssparkonto baserat på statslåneräntan.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/rot-rut.html" data-cat="pk" data-kw="rot rut avdrag renovering städning hushållsnära hantverkare">
-      <div class="card-top"><span class="card-icon">🔧</span><span class="card-arrow">↗</span></div>
-      <h2>ROT & RUT-avdrag</h2>
+      <div class="card-top">
+        <div class="card-icon-wrap">🔧</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
+      <h2>ROT &amp; RUT-avdrag</h2>
       <p class="card-desc">Beräkna ditt ROT- eller RUT-avdrag och se hur mycket du faktiskt betalar.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/skatteaterbarings-kalkylator.html" data-cat="pk" data-kw="skatteåterbäring kvarskatt deklaration skatteverket återbäring">
-      <div class="card-top"><span class="card-icon">💸</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">💸</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Skatteåterbäring</h2>
       <p class="card-desc">Se om du får skatteåterbäring eller kvarskatt baserat på din inkomst.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/kapitalvinstskatt.html" data-cat="pk" data-kw="kapitalvinstskatt reavinstskatt aktier bostad fastighet försäljning">
-      <div class="card-top"><span class="card-icon">📉</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">📉</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Kapitalvinstskatt</h2>
       <p class="card-desc">Beräkna skatten vid försäljning av aktier, bostad eller fastighet.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/frilanskalkylator.html" data-cat="pk" data-kw="frilans konsult timpris faktura egenavgifter f-skatt">
-      <div class="card-top"><span class="card-icon">🧾</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🧾</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Frilanskalkylator</h2>
       <p class="card-desc">Räkna ut rätt timpris som frilansare — inkl. egenavgifter, overhead och skatt.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/momsraknare.html" data-cat="pk" data-kw="moms momsräknare inklusive exklusive 25% 12% 6% mervärdesskatt">
-      <div class="card-top"><span class="card-icon">🧮</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🧮</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Momsräknare</h2>
       <p class="card-desc">Räkna snabbt om pris med eller utan moms för alla momssatser.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/hushallsbudget.html" data-cat="pk" data-kw="hushållsbudget budget månadsbudget inkomst utgifter spara 50/30/20 sparkvot privatekonomi">
-      <div class="card-top"><span class="card-icon">🏦</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏦</div>
+        <span class="badge b-pk">Privatekonomi</span>
+      </div>
       <h2>Hushållsbudgetkalkylator</h2>
       <p class="card-desc">Fördela din inkomst på utgiftskategorier och se hur mycket du kan spara varje månad.</p>
-      <span class="badge b-pk">Privatekonomi</span>
-    </a>
-
-    <a class="card" href="/kalkylatorer/reseavdragskalkylator.html" data-cat="pk" data-kw="reseavdrag pendling bil kollektivtrafik skatt avdrag deklaration skatteverket reskostnad">
-      <div class="card-top"><span class="card-icon">🚗</span><span class="card-arrow">↗</span></div>
-      <h2>Reseavdragskalkylator</h2>
-      <p class="card-desc">Räkna ut ditt reseavdrag för pendling 2026 — bil eller kollektivt. Se skattebesparingen vid deklarationen.</p>
-      <span class="badge b-pk">Privatekonomi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <!-- SPARANDE -->
     <a class="card" href="/kalkylatorer/ranta-pa-ranta.html" data-cat="sp" data-kw="ränta på ränta sparande compound interest kapital tillväxt">
-      <div class="card-top"><span class="card-icon">📈</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">📈</div>
+        <span class="badge b-sp">Sparande</span>
+      </div>
       <h2>Ränta på ränta</h2>
       <p class="card-desc">Se hur ditt kapital växer år för år med ränta på ränta-effekten.</p>
-      <span class="badge b-sp">Sparande</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/sparkalkylator.html" data-cat="sp" data-kw="sparkalkylator spara månadsbelopp ränta slutvärde">
-      <div class="card-top"><span class="card-icon">🐷</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🐷</div>
+        <span class="badge b-sp">Sparande</span>
+      </div>
       <h2>Sparkalkylator</h2>
       <p class="card-desc">Beräkna hur ditt sparande växer med månatliga insättningar och ränta.</p>
-      <span class="badge b-sp">Sparande</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/pensionskalkylator.html" data-cat="sp" data-kw="pension pensionskalkylator premiepension tjänstepension ITP">
-      <div class="card-top"><span class="card-icon">🏖️</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏖️</div>
+        <span class="badge b-sp">Sparande</span>
+      </div>
       <h2>Pensionskalkylator</h2>
       <p class="card-desc">Räkna ut din framtida pension och se vad du behöver spara extra.</p>
-      <span class="badge b-sp">Sparande</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/direktavkastningskalkylator.html" data-cat="sp" data-kw="direktavkastning yield avkastning fastighet investering hyresintäkt">
-      <div class="card-top"><span class="card-icon">🏦</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏦</div>
+        <span class="badge b-sp">Sparande</span>
+      </div>
       <h2>Direktavkastning</h2>
       <p class="card-desc">Beräkna direktavkastningen på en investering eller fastighet.</p>
-      <span class="badge b-sp">Sparande</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <!-- BOENDE & LÅN -->
     <a class="card" href="/kalkylatorer/bolanekalkylator.html" data-cat="bo" data-kw="bolån bostad ränta månadsbetalning boendekostnad bostadslån">
-      <div class="card-top"><span class="card-icon">🏠</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏠</div>
+        <span class="badge b-bo">Boende &amp; Lån</span>
+      </div>
       <h2>Bolånekalkylator</h2>
       <p class="card-desc">Beräkna månadsbetalning, total kostnad och boendekostnad för ditt bolån.</p>
-      <span class="badge b-bo">Boende & Lån</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/lanekalkylator.html" data-cat="bo" data-kw="lån lånekalkylator annuitet amortering effektiv ränta månadsbetalning">
-      <div class="card-top"><span class="card-icon">💳</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">💳</div>
+        <span class="badge b-bo">Boende &amp; Lån</span>
+      </div>
       <h2>Lånekalkylator</h2>
       <p class="card-desc">Räkna ut månadsbetalning, total räntekostnad och effektiv ränta på ditt lån.</p>
-      <span class="badge b-bo">Boende & Lån</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/amorteringskalkylator.html" data-cat="bo" data-kw="amortering amorteringskrav finansinspektionen fi belåningsgrad skuldkvot">
-      <div class="card-top"><span class="card-icon">📊</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">📊</div>
+        <span class="badge b-bo">Boende &amp; Lån</span>
+      </div>
       <h2>Amorteringskalkylator</h2>
       <p class="card-desc">Beräkna amorteringskrav enligt FI:s regler och skuldkvotstak 2026.</p>
-      <span class="badge b-bo">Boende & Lån</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/leasingkalkylator.html" data-cat="bo" data-kw="leasing leasingkostnad privatlease månadsavgift restvärde">
-      <div class="card-top"><span class="card-icon">📝</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">📝</div>
+        <span class="badge b-bo">Boende &amp; Lån</span>
+      </div>
       <h2>Leasingkalkylator</h2>
       <p class="card-desc">Räkna ut total kostnad och månadsavgift för leasing av bil eller utrustning.</p>
-      <span class="badge b-bo">Boende & Lån</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/hyra-vs-kopa-kalkylator.html" data-cat="bo" data-kw="hyra köpa bostad hyra vs köpa break-even kontantinsats bolån bostadsrätt jämförelse">
-      <div class="card-top"><span class="card-icon">🔑</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🔑</div>
+        <span class="badge b-bo">Boende &amp; Lån</span>
+      </div>
       <h2>Hyra vs Köpa-kalkylator</h2>
       <p class="card-desc">Jämför total kostnad och kapitaluppbyggnad för att hyra eller köpa bostad — se break-even år för år.</p>
-      <span class="badge b-bo">Boende & Lån</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <!-- FORDON & ENERGI -->
     <a class="card" href="/kalkylatorer/bilkostnadsraknare.html" data-cat="fo" data-kw="bil bilkostnad drivmedel bensin diesel försäkring vägskatt per mil">
-      <div class="card-top"><span class="card-icon">🚗</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🚗</div>
+        <span class="badge b-fo">Fordon &amp; Energi</span>
+      </div>
       <h2>Bilkostnadsräknare</h2>
       <p class="card-desc">Räkna ut den totala kostnaden för din bil per månad och per mil.</p>
-      <span class="badge b-fo">Fordon & Energi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/elkostnadskalkylator.html" data-cat="fo" data-kw="el elkostnad förbrukning kwh elpris elräkning energi">
-      <div class="card-top"><span class="card-icon">⚡</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">⚡</div>
+        <span class="badge b-fo">Fordon &amp; Energi</span>
+      </div>
       <h2>Elkostnadskalkylator</h2>
       <p class="card-desc">Beräkna din elkostnad utifrån förbrukning, elpris och nätavgift.</p>
-      <span class="badge b-fo">Fordon & Energi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/solcellskalkylator.html" data-cat="fo" data-kw="solceller solpanel solenergi besparing återbetalningstid investering">
-      <div class="card-top"><span class="card-icon">☀️</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">☀️</div>
+        <span class="badge b-fo">Fordon &amp; Energi</span>
+      </div>
       <h2>Solcellskalkylator</h2>
       <p class="card-desc">Beräkna besparing, återbetalningstid och lönsamhet för solceller på taket.</p>
-      <span class="badge b-fo">Fordon & Energi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/formansbilkalkylator.html" data-cat="fo" data-kw="förmånsbil tjänstebil förmånsvärde skatt bilförmån">
-      <div class="card-top"><span class="card-icon">🏢</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏢</div>
+        <span class="badge b-fo">Fordon &amp; Energi</span>
+      </div>
       <h2>Förmånsbilkalkylator</h2>
       <p class="card-desc">Beräkna förmånsvärde och skattekostnad för din tjänstebil.</p>
-      <span class="badge b-fo">Fordon & Energi</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <!-- JOBB & FAMILJ -->
     <a class="card" href="/kalkylatorer/semesterlonekalkylator.html" data-cat="jo" data-kw="semesterlön semester semesterdagar sammalöneregeln semesterlagen">
-      <div class="card-top"><span class="card-icon">🌴</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🌴</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>Semesterlönekalkylator</h2>
       <p class="card-desc">Räkna ut din semesterlön enligt sammalöneregeln och procentregeln.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/semesterersattning.html" data-cat="jo" data-kw="semesterersättning intjänad semester utbetalning avsluta anställning">
-      <div class="card-top"><span class="card-icon">✈️</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">✈️</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>Semesterersättning</h2>
       <p class="card-desc">Beräkna semesterersättning vid avslut av anställning eller ej uttagen semester.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/foraldrapenning.html" data-cat="jo" data-kw="föräldrapenning föräldraledighet sgi försäkringskassan vab barn">
-      <div class="card-top"><span class="card-icon">👶</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">👶</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>Föräldrapenning</h2>
       <p class="card-desc">Beräkna din föräldrapenning baserat på sjukpenninggrundande inkomst (SGI).</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/akassa-kalkylator.html" data-cat="jo" data-kw="a-kassa akassa arbetslöshetskassa ersättning dagpenning arbetslös">
-      <div class="card-top"><span class="card-icon">🤝</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🤝</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>A-kassekalkylator</h2>
       <p class="card-desc">Beräkna din a-kasseersättning vid arbetslöshet baserat på din inkomst.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/milersattningskalkylator.html" data-cat="jo" data-kw="milersättning tjänstekörning reseavdrag pendling bil km skatteverket schablonbelopp körjournal">
-      <div class="card-top"><span class="card-icon">🗺️</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🗺️</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>Milersättningskalkylator</h2>
       <p class="card-desc">Räkna ut skattefri milersättning för tjänstekörning och reseavdrag för pendling 2026.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/sjukpenningkalkylator.html" data-cat="jo" data-kw="sjukpenning sjukskrivning karensavdrag sjuklön sgi försäkringskassan ersättning sjuk">
-      <div class="card-top"><span class="card-icon">🏥</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🏥</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>Sjukpenningkalkylator</h2>
       <p class="card-desc">Beräkna karensavdrag, sjuklön och Försäkringskassans ersättning vid sjukskrivning 2026.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/csn-kalkylator.html" data-cat="jo" data-kw="csn lån studielån återbetalning student studier lånekalkylator csn-lån studiemedel">
-      <div class="card-top"><span class="card-icon">🎓</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🎓</div>
+        <span class="badge b-jo">Jobb &amp; Familj</span>
+      </div>
       <h2>CSN-kalkylator</h2>
       <p class="card-desc">Beräkna din CSN-återbetalning — månadsbelopp, total räntekostnad och återbetalningstid utifrån din inkomst.</p>
-      <span class="badge b-jo">Jobb & Familj</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <!-- HÄLSA -->
     <a class="card" href="/kalkylatorer/bmi-kalkylator.html" data-cat="ha" data-kw="bmi body mass index vikt längd hälsa övervikt normalvikt">
-      <div class="card-top"><span class="card-icon">⚖️</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">⚖️</div>
+        <span class="badge b-ha">Hälsa</span>
+      </div>
       <h2>BMI-kalkylator</h2>
       <p class="card-desc">Beräkna ditt BMI och se vad resultatet innebär för din hälsa.</p>
-      <span class="badge b-ha">Hälsa</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
     <a class="card" href="/kalkylatorer/kalorikalkylator.html" data-cat="ha" data-kw="kalorier kaloribehov TDEE BMR energibehov kcal mat vikt">
-      <div class="card-top"><span class="card-icon">🥗</span><span class="card-arrow">↗</span></div>
+      <div class="card-top">
+        <div class="card-icon-wrap">🥗</div>
+        <span class="badge b-ha">Hälsa</span>
+      </div>
       <h2>Kalorikalkylator</h2>
       <p class="card-desc">Beräkna ditt dagliga kaloribehov baserat på ålder, vikt, längd och aktivitet.</p>
-      <span class="badge b-ha">Hälsa</span>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
   </div>
   <div class="no-results" id="no-res" role="status">Inga kalkylatorer matchade <strong id="no-term"></strong>. Prova ett annat sökord.</div>
 </section>
 
-<section class="seo">
-  <h2>Varför GratisKalkyl.se?</h2>
-  <p>GratisKalkyl.se är Sveriges oberoende kalkylatorplattform för privatekonomi. Ingen bank äger oss, inga lån är förvalda och inga produkter tjänar vi provision på att rekommendera. Alla kalkylatorer ger dig raka svar — utan dolda agendor.</p>
-  <p>Vi uppdaterar kontinuerligt med 2026 års skatteregler, räntesatser och lagkrav från Finansinspektionen, Skatteverket och Försäkringskassan. Med 29 kalkylatorer täcker vi allt från lön efter skatt och hushållsbudget till hyra vs köpa, solceller och föräldrapenning.</p>
-  <p>Alla kalkylatorer fungerar direkt i webbläsaren, kräver ingen inloggning och är gratis att använda. Snabbt, enkelt och pålitligt.</p>
+<!-- VALUE PROP -->
+<section class="value-prop">
+  <div class="value-prop-inner">
+    <p class="value-prop-label">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Vårt löfte
+    </p>
+    <h2>Neutralitet som <em>grundpelare.</em></h2>
+    <p class="value-prop-lead">Vi samarbetar inte med banker. Vi säljer inte dina data. Vi har ingen dold agenda. Vi bygger verktyg för att du ska kunna ta kontroll över din egen ekonomi med matematik som enda vägvisare.</p>
+    <div class="value-prop-grid">
+      <div class="vp-item">
+        <div class="vp-icon">🔒</div>
+        <h3>Data Integritet</h3>
+        <p>Alla beräkningar sker lokalt i din webbläsare. Ingen inloggning, ingen datainsamling — dina siffror stannar hos dig.</p>
+      </div>
+      <div class="vp-item">
+        <div class="vp-icon">🎯</div>
+        <h3>Precision</h3>
+        <p>Kalkylatorer uppdaterade med 2026 års skatteregler, Finansinspektionens krav och Försäkringskassans schabloner.</p>
+      </div>
+      <div class="vp-item">
+        <div class="vp-icon">✅</div>
+        <h3>100% Gratis</h3>
+        <p>Alla 30 kalkylatorer är gratis att använda — för alltid. Inga premiumlås, inga dolda avgifter, inga banker bakom kulisserna.</p>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 
@@ -581,7 +867,7 @@
 </script>
 
 <script>
-/* Dark mode toggle för startsidan */
+/* Dark mode toggle */
 (function(){
   var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
   var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
@@ -598,16 +884,8 @@
     btn.innerHTML=next?SUN:MOON;
     btn.setAttribute('aria-label',next?'Aktivera ljust läge':'Aktivera mörkt läge');
   });
-  if(window.matchMedia){
-    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(e){
-      var manual=null;try{manual=localStorage.getItem('gk-theme');}catch(ex){}
-      if(manual)return;
-      document.documentElement.setAttribute('data-theme',e.matches?'dark':'light');
-      btn.innerHTML=e.matches?SUN:MOON;
-      btn.setAttribute('aria-label',e.matches?'Aktivera ljust läge':'Aktivera mörkt läge');
-    });
-  }
 })();
 </script>
+
 </body>
 </html>
