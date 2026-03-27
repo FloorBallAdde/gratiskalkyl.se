@@ -124,58 +124,57 @@
 
     /* ── HERO ────────────────────────────────────────────────────── */
     .hero {
-      background:linear-gradient(160deg,#fff 0%,#f0fdf4 55%,#dcfce7 100%);
+      background:#fff;
       border-bottom:1px solid var(--border);
-      text-align:center;
-      padding:4.5rem 1.25rem 3.5rem;
+      padding:4rem 1.25rem 3rem;
     }
+    .hero-inner { max-width:1120px; margin:0 auto; }
     .hero h1 {
-      font-size:clamp(2rem,5vw,3rem);
+      font-size:clamp(2rem,4.5vw,2.9rem);
       font-weight:800;
-      letter-spacing:-.02em;
-      line-height:1.15;
+      letter-spacing:-.025em;
+      line-height:1.12;
       margin-bottom:.6rem;
+      max-width:640px;
     }
     .hero-sub {
       color:var(--muted);
-      font-size:1.05rem;
+      font-size:1rem;
       font-weight:500;
-      margin-bottom:2rem;
-      max-width:520px;
-      margin-left:auto;
-      margin-right:auto;
+      margin-bottom:1.75rem;
+      max-width:480px;
     }
     .hero-search {
-      max-width:560px;
-      margin:0 auto 1.75rem;
+      max-width:520px;
       display:flex;
-      gap:.5rem;
-      background:#fff;
-      border:1.5px solid var(--border);
-      border-radius:12px;
-      padding:.35rem .35rem .35rem .9rem;
-      box-shadow:var(--sh-md);
+      gap:.4rem;
+      background:#f8fafc;
+      border:1.5px solid #e2e8f0;
+      border-radius:10px;
+      padding:.3rem .3rem .3rem .85rem;
+      margin-bottom:1.5rem;
       transition:border-color .15s, box-shadow .15s;
     }
     .hero-search:focus-within {
       border-color:var(--green);
-      box-shadow:0 0 0 3px rgba(22,163,74,.1), var(--sh-md);
+      box-shadow:0 0 0 3px rgba(22,163,74,.08);
+      background:#fff;
     }
-    .hero-search-icon { color:var(--muted); flex-shrink:0; align-self:center; }
+    .hero-search-icon { color:#94a3b8; flex-shrink:0; align-self:center; }
     #search {
       flex:1; border:none; outline:none; background:transparent;
-      font-size:.97rem; font-family:inherit; color:var(--text);
-      padding:.45rem .4rem;
+      font-size:.95rem; font-family:inherit; color:var(--text);
+      padding:.42rem .3rem;
     }
-    #search::placeholder { color:#9ca3af; }
+    #search::placeholder { color:#94a3b8; }
     .hero-search-btn {
       flex-shrink:0;
       background:var(--green);
       color:#fff;
       border:none;
-      border-radius:8px;
-      padding:.5rem 1.1rem;
-      font-size:.9rem;
+      border-radius:7px;
+      padding:.48rem 1rem;
+      font-size:.88rem;
       font-weight:700;
       font-family:inherit;
       cursor:pointer;
@@ -183,12 +182,13 @@
       transition:background .12s;
     }
     .hero-search-btn:hover { background:var(--green-dark); }
-    .hero-chips { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
+    .hero-chips { display:flex; gap:.4rem; flex-wrap:wrap; }
     .hero-chip {
-      background:var(--green-light); color:var(--green-dark);
-      font-size:.78rem; font-weight:600;
-      padding:.3rem .85rem; border-radius:99px;
-      border:1px solid rgba(22,163,74,.2);
+      background:#f1f5f9;
+      color:#475569;
+      font-size:.76rem; font-weight:600;
+      padding:.25rem .75rem; border-radius:99px;
+      border:1px solid #e2e8f0;
     }
 
     /* ── FILTER ──────────────────────────────────────────────────── */
@@ -370,10 +370,11 @@
     html[data-theme="dark"] body { background:#0f172a; color:#f3f4f6; }
     html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
     html[data-theme="dark"] .filter-nav { background:rgba(15,23,42,0.92)!important; border-bottom-color:#334155!important; }
-    html[data-theme="dark"] .hero { background:linear-gradient(160deg,#1e293b 0%,#0f172a 55%,#052e16 100%)!important; }
+    html[data-theme="dark"] .hero { background:#0f172a!important; }
     html[data-theme="dark"] .hero-search { background:#1e293b; border-color:#334155; }
     html[data-theme="dark"] #search { color:#f3f4f6; }
     html[data-theme="dark"] #search::placeholder { color:#64748b; }
+    html[data-theme="dark"] .hero-chip { background:#1e293b; color:#94a3b8; border-color:#334155; }
     html[data-theme="dark"] .fbtn { background:#1e293b; color:#9ca3af; border-color:#334155; }
     html[data-theme="dark"] .fbtn.active { background:#34d399; border-color:#34d399; color:#0f172a; }
     html[data-theme="dark"] .card { background:#1e293b; border-color:#334155; }
@@ -401,9 +402,10 @@
     html[data-theme="light"] body { background:#f8fafc!important; color:#111827!important; }
     html[data-theme="light"] .site-header { background:rgba(255,255,255,0.82)!important; border-bottom-color:rgba(229,231,235,0.7)!important; }
     html[data-theme="light"] .filter-nav { background:rgba(255,255,255,0.92)!important; border-bottom-color:#e5e7eb!important; }
-    html[data-theme="light"] .hero { background:linear-gradient(160deg,#fff 0%,#f0fdf4 55%,#dcfce7 100%)!important; }
-    html[data-theme="light"] .hero-search { background:#fff; border-color:#e5e7eb; }
+    html[data-theme="light"] .hero { background:#fff!important; }
+    html[data-theme="light"] .hero-search { background:#f8fafc; border-color:#e2e8f0; }
     html[data-theme="light"] #search { color:#111827; }
+    html[data-theme="light"] .hero-chip { background:#f1f5f9; color:#475569; border-color:#e2e8f0; }
     html[data-theme="light"] .fbtn { background:#fff; color:#6b7280; border-color:#e5e7eb; }
     html[data-theme="light"] .fbtn.active { background:#16a34a; border-color:#16a34a; color:#fff; }
     html[data-theme="light"] .card { background:#fff; border-color:#e5e7eb; }
@@ -433,18 +435,20 @@
 </header>
 
 <section class="hero">
-  <h1>Gratis kalkylatorer<br>för privatekonomi</h1>
-  <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
-  <div class="hero-search" role="search">
-    <svg class="hero-search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="search" id="search" placeholder="Sök bland 30 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
-    <button class="hero-search-btn" type="button">Hitta kalkylator</button>
-  </div>
-  <div class="hero-chips">
-    <span class="hero-chip">✓ 30 kalkylatorer</span>
-    <span class="hero-chip">✓ 100% gratis</span>
-    <span class="hero-chip">✓ Uppdaterade 2026</span>
-    <span class="hero-chip">✓ Mobilvänliga</span>
+  <div class="hero-inner">
+    <h1>Gratis kalkylatorer<br>för privatekonomi</h1>
+    <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
+    <div class="hero-search" role="search">
+      <svg class="hero-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" id="search" placeholder="Sök bland 30 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
+      <button class="hero-search-btn" type="button">Hitta kalkylator</button>
+    </div>
+    <div class="hero-chips">
+      <span class="hero-chip">30 kalkylatorer</span>
+      <span class="hero-chip">100% gratis</span>
+      <span class="hero-chip">Uppdaterade 2026</span>
+      <span class="hero-chip">Mobilvänliga</span>
+    </div>
   </div>
 </section>
 
@@ -783,7 +787,7 @@
       Vårt löfte
     </p>
     <h2>Neutralitet som <em>grundpelare.</em></h2>
-    <p class="value-prop-lead">Vi samarbetar inte med banker. Vi säljer inte dina data. Vi har ingen dold agenda. Vi bygger verktyg för att du ska kunna ta kontroll över din egen ekonomi med matematik som enda vägvisare.</p>
+    <p class="value-prop-lead">Vi säljer inga finansiella produkter och tjänar inga provisioner. Webbplatsen finansieras av annonser — inte av banker. Alla kalkylatorer ger dig raka svar baserade på matematik, ingenting annat.</p>
     <div class="value-prop-grid">
       <div class="vp-item">
         <div class="vp-icon">🔒</div>
@@ -798,7 +802,7 @@
       <div class="vp-item">
         <div class="vp-icon">✅</div>
         <h3>100% Gratis</h3>
-        <p>Alla 30 kalkylatorer är gratis att använda — för alltid. Inga premiumlås, inga dolda avgifter, inga banker bakom kulisserna.</p>
+        <p>Alla 30 kalkylatorer är gratis att använda — för alltid. Inga premiumlås och inga dolda avgifter.</p>
       </div>
     </div>
   </div>
@@ -809,7 +813,6 @@
   <div class="footer-links">
     <a href="/om-oss.html">Om oss</a>
     <a href="/integritetspolicy.html">Integritetspolicy</a>
-    <a href="mailto:hej@gratiskalkyl.se">Kontakt</a>
   </div>
   <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
 </footer>
