@@ -1,0 +1,97 @@
+/* GratisKalkyl.se — Mobile Touch Optimizations
+   Adds ≥44px touch targets for range sliders per Apple/Google HIG.
+   Loaded globally on all calculators. */
+
+/* ── RANGE SLIDER BASE ──────────────────────────────── */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 44px;          /* 44 px touch-target per HIG */
+    background: transparent;
+    cursor: pointer;
+    flex: 1;
+    accent-color: var(--green, #16a34a);
+}
+
+/* ── TRACK ──────────────────────────────────────────── */
+input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border, #e5e7eb);
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--border, #e5e7eb);
+}
+input[type=range]::-moz-range-track {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border, #e5e7eb);
+    border: none;
+}
+
+/* ── THUMB ──────────────────────────────────────────── */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--green, #16a34a);
+    cursor: pointer;
+    margin-top: -11px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.18);
+    transition: transform .12s, box-shadow .12s;
+}
+input[type=range]::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--green, #16a34a);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,.18);
+    transition: transform .12s, box-shadow .12s;
+}
+
+/* ── ACTIVE / PRESS FEEDBACK ────────────────────────── */
+input[type=range]:active::-webkit-slider-thumb,
+input[type=range]::-webkit-slider-thumb:active {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 8px rgba(22,163,74,.15);
+}
+input[type=range]:active::-moz-range-thumb {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 8px rgba(22,163,74,.15);
+}
+
+/* ── FOCUS RING (accessibility) ─────────────────────── */
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px rgba(22,163,74,.35), 0 1px 4px rgba(0,0,0,.18);
+}
+
+/* ── NUMBER INPUT — touch-friendly ──────────────────── */
+.num-input {
+    min-height: 44px;
+}
+
+/* ── INPUT ROW — min height for touch ───────────────── */
+.input-row {
+    min-height: 44px;
+    align-items: center;
+}
+
+/* ── MOBILE: larger inputs on small screens ─────────── */
+@media (max-width: 480px) {
+    .num-input {
+        width: 88px;
+        font-size: 1rem;
+        padding: .55rem .5rem;
+    }
+    input[type=range] {
+        height: 48px;
+    }
+}

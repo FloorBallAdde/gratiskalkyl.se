@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGTX1PYYFJ');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflationskalkylator 2026 – Räkna ut köpkraft &amp; prisutveckling | GratisKalkyl.se</title>
+  <meta name="description" content="Gratis inflationskalkylator för Sverige — se hur mycket pengar förlorar i värde över tid. Räkna ut köpkraft, prisutveckling och hur inflationen påverkar ditt sparande 2000–2026.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/inflationskalkylator.html">
+  <meta property="og:title" content="Inflationskalkylator 2026 — Räkna ut köpkraft och prisutveckling">
+  <meta property="og:description" content="Se hur mycket pengar förlorar i värde över tid med vår gratis inflationskalkylator. Baserad på SCB:s KPI-data för Sverige.">
+  <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/inflationskalkylator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Inflationskalkylator 2026 — Räkna ut köpkraft">
+  <meta name="twitter:description" content="Se hur inflation påverkar din köpkraft. Gratis, snabb och utan bankbias.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är inflation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inflation innebär att pengar förlorar i köpkraft över tid — det vill säga att du kan köpa mindre för samma summa pengar. I Sverige mäts inflation med KPI (Konsumentprisindex) som beräknas av SCB (Statistiska centralbyrån). Riksbanken har som mål att hålla inflationen på 2 % per år."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur beräknas inflation i Sverige?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SCB beräknar KPI (Konsumentprisindex) månadsvis genom att jämföra priser på en korg av varor och tjänster som representerar en genomsnittlig hushållskonsumtion. Förutom KPI används KPIF (KPI med fast ränta) och HIKP (harmoniserat index för jämförelser inom EU). Riksbanken använder KPIF som styrmål."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur hög har inflationen varit i Sverige historiskt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under 2000-talet låg svensk inflation ofta nära eller under Riksbankens mål på 2 %. Åren 2013–2020 var inflationen mycket låg (0–2 %). Från 2021 steg inflationen kraftigt, med en topp kring 8–10 % under 2022–2023 på grund av energipriser och global prisstegring efter pandemin. Sedan 2024 har inflationen sjunkit tillbaka mot 2 %-målet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur påverkar inflation mitt sparande?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Om din sparränta är lägre än inflationen minskar ditt sparandes reella värde — du förlorar köpkraft även om nominellt belopp ökar. Exempelvis: 100 000 kr på ett konto med 1 % ränta under ett år med 4 % inflation är i reala termer bara värt cirka 97 000 kr. Det är därför viktigt att investeringar i aktier, fonder eller ISK ger en avkastning som överstiger inflationen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är skillnaden mellan KPI och KPIF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KPI (Konsumentprisindex) inkluderar räntekostnader för egnahem, vilket gör att KPI stiger kraftigt när Riksbanken höjer räntan. KPIF (KPI med fast bostadsränta) exkluderar detta och är ett mer stabilt mått på underliggande inflation. Riksbanken använder KPIF med 2 % som inflationsmål."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur kan jag skydda mig mot inflation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vanliga sätt att skydda köpkraft mot inflation inkluderar: investera i aktier och fonder (historisk realavkastning ca 5–7 % per år), köpa realobligationer (inflationsskyddade statsobligationer), investera i fastigheter och råvaror, eller förhandla löneökningar som matchar inflationen. Pengar på sparkonto ger vanligen negativ realavkastning under hög inflation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad innebär 'realt värde' och 'nominellt värde'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det nominella värdet är det faktiska kronbeloppet utan hänsyn till inflation. Det reala värdet är det inflationsjusterade beloppet — vad pengarna faktiskt kan köpa. En löneökning på 3 % under ett år med 4 % inflation ger en real lönesänkning på 1 %. Kalkylatorn visar det reala värdet på ditt belopp efter inflationens påverkan."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #1a6b4a;
+      --primary-light: #e8f5ee;
+      --primary-dark: #0d4a30;
+      --accent: #2563eb;
+      --text: #1a1a2e;
+      --text-light: #555;
+      --bg: #fafbfc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --text-light: #d1d5db;
+        --bg: #111827;
+        --white: #1f2937;
+        --border: #374151;
+        --primary-light: rgba(26,107,74,0.2);
+        --primary: #34d399;
+        --shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+      input[type="number"], select {
+        background: #1f2937 !important;
+        color: #f3f4f6 !important;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    a { color: var(--primary); }
+
+    /* NAV */
+    .nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 1rem; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; gap: 0.5rem; height: 52px; }
+    .nav-back { text-decoration: none; color: var(--text-light); font-size: 0.85rem; display: flex; align-items: center; gap: 0.3rem; }
+    .nav-back:hover { color: var(--primary); }
+    .nav-sep { color: var(--border); }
+    .nav-title { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+
+    /* HERO */
+    .hero { background: var(--white); border-bottom: 1px solid var(--border); padding: 2rem 1rem 1.5rem; }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.4rem; }
+    .hero-sub { color: var(--text-light); font-size: 0.95rem; }
+
+    /* MAIN */
+    .main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+    /* CALC CARD */
+    .calc-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.25rem;
+    }
+    .calc-card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem; }
+
+    /* FORM */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    @media(max-width:600px){ .form-grid{ grid-template-columns: 1fr; } }
+
+    .field label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-light); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .field input, .field select {
+      width: 100%; padding: 0.65rem 0.85rem;
+      border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 1rem; font-family: inherit; color: var(--text);
+      background: var(--white);
+      transition: border-color 0.15s;
+    }
+    .field input:focus, .field select:focus { outline: none; border-color: var(--primary); }
+
+    .btn-calc {
+      margin-top: 1.25rem; width: 100%;
+      background: var(--primary); color: #fff;
+      border: none; border-radius: 8px;
+      padding: 0.85rem; font-size: 1rem; font-weight: 700;
+      font-family: inherit; cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn-calc:hover { opacity: 0.88; }
+
+    /* RESULTS */
+    .results { display: none; }
+    .results.show { display: block; }
+
+    .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.25rem; }
+    @media(max-width:500px){ .result-grid{ grid-template-columns: 1fr; } }
+
+    .result-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+    .result-box.highlight {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+    .result-box label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .result-box .value { font-size: 1.55rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .result-box.highlight .value { color: var(--primary); }
+    .result-box .sub { font-size: 0.8rem; color: var(--text-light); margin-top: 0.15rem; }
+
+    /* CHART */
+    .chart-wrap { position: relative; margin: 1.25rem 0 0.5rem; }
+    canvas { width: 100% !important; }
+
+    /* TABLE */
+    .tbl-wrap { overflow-x: auto; margin-top: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th { text-align: left; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-light); padding: 0.5rem 0.75rem; border-bottom: 2px solid var(--border); }
+    td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    .pos { color: #dc2626; } /* inflation = money losing value */
+    .neg { color: #16a34a; }
+
+    /* SEO */
+    .seo-section { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; margin-top: 1.25rem; }
+    .seo-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem; }
+    .seo-section h3 { font-size: 1rem; font-weight: 700; margin: 1.25rem 0 0.5rem; }
+    .seo-section p { font-size: 0.92rem; color: var(--text-light); line-height: 1.75; margin-bottom: 0.75rem; }
+    .seo-section ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    .seo-section li { font-size: 0.92rem; color: var(--text-light); line-height: 1.75; }
+
+    /* FAQ */
+    .faq-item { border-top: 1px solid var(--border); padding: 1rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q::after { content: "+"; font-size: 1.25rem; color: var(--primary); flex-shrink: 0; font-weight: 400; }
+    .faq-item.open .faq-q::after { content: "−"; }
+    .faq-a { display: none; font-size: 0.88rem; color: var(--text-light); line-height: 1.75; padding-top: 0.6rem; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CROSS-LINKS */
+    .cross-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .cross-link {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: var(--primary-light); color: var(--primary);
+      border-radius: 6px; padding: 0.35rem 0.75rem;
+      text-decoration: none; font-size: 0.82rem; font-weight: 600;
+      border: 1px solid rgba(26,107,74,0.2);
+      transition: background 0.12s;
+    }
+    .cross-link:hover { background: var(--primary); color: #fff; }
+
+    /* DISCLAIMER */
+    .disclaimer { font-size: 0.78rem; color: var(--text-light); margin-top: 1.5rem; padding: 0.75rem; background: var(--bg); border-radius: 6px; border: 1px solid var(--border); }
+  </style>
+    <link rel="stylesheet" href="/mobile.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      GratisKalkyl.se
+    </a>
+    <span class="nav-sep">›</span>
+    <span class="nav-title">Inflationskalkylator</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>📈 Inflationskalkylator 2026</h1>
+    <p class="hero-sub">Räkna ut hur inflation påverkar köpkraften — baserat på SCB:s KPI-data för Sverige 2000–2026.</p>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- INPUT -->
+  <div class="calc-card">
+    <h2>Ange belopp och tidsperiod</h2>
+    <div class="form-grid">
+      <div class="field">
+        <label for="amount">Belopp (kr)</label>
+        <input type="number" id="amount" value="100000" min="1" max="100000000" step="1000">
+      </div>
+      <div class="field">
+        <label for="from-year">Från år</label>
+        <select id="from-year"></select>
+      </div>
+      <div class="field">
+        <label for="to-year">Till år</label>
+        <select id="to-year"></select>
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Beräkna köpkraft</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results" id="results">
+    <div class="calc-card">
+      <h2 id="results-title">Resultat</h2>
+      <div class="result-grid">
+        <div class="result-box">
+          <label>Ursprungligt belopp</label>
+          <div class="value" id="res-original">–</div>
+          <div class="sub" id="res-original-sub">–</div>
+        </div>
+        <div class="result-box highlight">
+          <label>Värde i slutårets priser</label>
+          <div class="value" id="res-adjusted">–</div>
+          <div class="sub" id="res-adjusted-sub">–</div>
+        </div>
+        <div class="result-box">
+          <label>Ackumulerad inflation</label>
+          <div class="value" id="res-inflation-pct">–</div>
+          <div class="sub" id="res-inflation-sub">–</div>
+        </div>
+        <div class="result-box">
+          <label>Köpkraftsförlust</label>
+          <div class="value" id="res-loss">–</div>
+          <div class="sub" id="res-loss-sub">–</div>
+        </div>
+      </div>
+
+      <!-- CHART: Annual inflation bar chart -->
+      <h2>Inflation per år (KPI, %)</h2>
+      <div class="chart-wrap">
+        <canvas id="inflationChart" height="220"></canvas>
+      </div>
+
+      <!-- TABLE -->
+      <h2 style="margin-top:1.5rem;">Årsvis köpkraftsutveckling</h2>
+      <div class="tbl-wrap">
+        <table id="yearly-table">
+          <thead>
+            <tr>
+              <th>År</th>
+              <th>Inflation %</th>
+              <th>Ackum. %</th>
+              <th>Belopp (realt)</th>
+              <th>Värdeminskning</th>
+            </tr>
+          </thead>
+          <tbody id="yearly-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO TEXT -->
+  <div class="seo-section">
+    <h2>Inflation i Sverige — vad du behöver veta</h2>
+
+    <p>Inflation innebär att prisnivån stiger och att pengars köpkraft minskar över tid. Det är ett av de viktigaste begreppen inom privatekonomi, men det är lätt att underskatta hur stor effekten blir över längre perioder. En inflation på 2&nbsp;% per år kan verka liten, men på 20 år förlorar du nära 33&nbsp;% av köpkraften.</p>
+
+    <h3>Riksbankens inflationsmål</h3>
+    <p>Riksbanken (Sveriges centralbank) har sedan 1993 ett inflationsmål på 2&nbsp;% per år, mätt som KPIF (KPI med fast bostadsränta). Målet ska ge ekonomisk stabilitet och förutsägbarhet. Under 2022–2023 överskreds målet kraftigt då inflationen nådde 8–10&nbsp;% drivet av energipriser, störda leveranskedjor och stimulanser efter covid-pandemin. Riksbanken svarade med aggressiva räntehöjningar och inflationen sjönk tillbaka mot målet under 2024–2025.</p>
+
+    <h3>Hur inflation påverkar ditt sparande</h3>
+    <p>Om din sparränta understiger inflationen förlorar du realt sett pengar — det nominella beloppet ökar, men du kan köpa allt mindre för det. Under perioder med hög inflation är det extra viktigt att investera i tillgångar som historiskt ger avkastning över inflationen: aktier, aktiefonder och fastigheter. Ett ISK med indexfonder har historiskt gett en realavkastning på 4–7&nbsp;% per år.</p>
+
+    <h3>Löneökningar och inflation</h3>
+    <p>Arbetsmarknadsparterna förhandlar ofta löneökningar utifrån inflationsförväntningar. Om din lön ökar med 3&nbsp;% men inflationen är 5&nbsp;%, har du fått en reallönesänkning på 2&nbsp;%. Använd vår <a href="/kalkylatorer/loneraknare.html">löneräknare</a> för att se din nettolön, och kombinera med inflationskalkylatorn för att förstå din reala köpkraftsutveckling.</p>
+
+    <h3>Vad som driver inflation i Sverige</h3>
+    <p>De viktigaste drivkrafterna för inflation i Sverige är energipriser (el, drivmedel), importerade varor, bostadskostnader, livsmedel och lönetryck. Global prisutveckling, valutakurser och Riksbankens styrränta spelar alla en roll. Under 2022–2023 var det främst energi och livsmedel som drev upp KPI.</p>
+
+    <h3>Realt vs nominellt värde</h3>
+    <p>Det <em>nominella</em> värdet är det faktiska kronbeloppet. Det <em>reala</em> värdet är inflationsjusterat — vad pengarna faktiskt kan köpa. Vår inflationskalkylator visar det reala värdet på valfritt belopp för valfri tidsperiod, baserat på historiska KPI-data från SCB.</p>
+
+    <div class="cross-links">
+      <a href="/kalkylatorer/sparkalkylator.html" class="cross-link">💰 Sparkalkylator</a>
+      <a href="/kalkylatorer/ranta-pa-ranta.html" class="cross-link">📈 Ränta-på-ränta</a>
+      <a href="/kalkylatorer/loneraknare.html" class="cross-link">💼 Löneräknare</a>
+      <a href="/kalkylatorer/isk-skatteberaknare.html" class="cross-link">📊 ISK-skatt</a>
+      <a href="/kalkylatorer/pensionskalkylator.html" class="cross-link">🧓 Pension</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="seo-section" style="margin-top:1.25rem;">
+    <h2>Vanliga frågor om inflation</h2>
+    <div id="faq-container">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Vad är inflation?</div>
+        <div class="faq-a">Inflation innebär att pengar förlorar i köpkraft över tid — det vill säga att du kan köpa mindre för samma summa pengar. I Sverige mäts inflation med KPI (Konsumentprisindex) som beräknas av SCB. Riksbanken har som mål att hålla inflationen på 2&nbsp;% per år.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Hur beräknas inflation i Sverige?</div>
+        <div class="faq-a">SCB beräknar KPI månadsvis genom att jämföra priser på en korg av varor och tjänster som representerar en genomsnittlig hushållskonsumtion. Förutom KPI används KPIF (KPI med fast ränta) och HIKP (harmoniserat index för jämförelser inom EU). Riksbanken använder KPIF som styrmål.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Hur hög har inflationen varit i Sverige historiskt?</div>
+        <div class="faq-a">Under 2000-talet låg svensk inflation ofta nära eller under 2&nbsp;%. Åren 2013–2020 var inflationen mycket låg (0–2&nbsp;%). Från 2021 steg inflationen kraftigt, med en topp kring 8–10&nbsp;% under 2022–2023 på grund av energipriser och global prisstegring. Sedan 2024 har inflationen sjunkit tillbaka mot 2&nbsp;%-målet.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Hur påverkar inflation mitt sparande?</div>
+        <div class="faq-a">Om din sparränta är lägre än inflationen minskar ditt sparandes reella värde. Exempelvis: 100&nbsp;000&nbsp;kr på ett konto med 1&nbsp;% ränta under ett år med 4&nbsp;% inflation är i reala termer bara värt cirka 97&nbsp;000&nbsp;kr. Det är därför viktigt att investeringar i aktier, fonder eller ISK ger en avkastning som överstiger inflationen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Vad är skillnaden mellan KPI och KPIF?</div>
+        <div class="faq-a">KPI inkluderar räntekostnader för egnahem, vilket gör att KPI stiger kraftigt när Riksbanken höjer räntan. KPIF exkluderar detta och är ett mer stabilt mått på underliggande inflation. Riksbanken använder KPIF med 2&nbsp;% som inflationsmål.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Hur kan jag skydda mig mot inflation?</div>
+        <div class="faq-a">Vanliga sätt att skydda köpkraft: investera i aktier och fonder (historisk realavkastning ca 5–7&nbsp;% per år), köpa realobligationer, investera i fastigheter, eller förhandla löneökningar som matchar inflationen. Pengar på sparkonto ger vanligen negativ realavkastning under hög inflation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Vad innebär realt värde och nominellt värde?</div>
+        <div class="faq-a">Det nominella värdet är det faktiska kronbeloppet utan hänsyn till inflation. Det reala värdet är det inflationsjusterade beloppet — vad pengarna faktiskt kan köpa. En löneökning på 3&nbsp;% under ett år med 4&nbsp;% inflation ger en real lönesänkning på 1&nbsp;%. Kalkylatorn visar det reala värdet efter inflationens påverkan.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">Beräkningarna är ungefärliga och kan innehålla fel. Inflationsdata baseras på SCB:s publicerade KPI-årsgenomsnitt. Åren 2025–2026 är preliminära uppskattningar. Informationen utgör inte finansiell rådgivning.</p>
+
+</main>
+
+<script>
+// ─── KPI ANNUAL INFLATION DATA (SCB, årsgenomsnitt %) ────────────────────────
+// Källa: SCB Konsumentprisindex (KPI), årsmedelvärde
+const KPI = {
+  2000: 1.3,
+  2001: 2.7,
+  2002: 2.0,
+  2003: 2.3,
+  2004: 0.4,
+  2005: 0.8,
+  2006: 1.5,
+  2007: 2.2,
+  2008: 3.3,
+  2009: -0.3,
+  2010: 1.2,
+  2011: 3.0,
+  2012: 0.9,
+  2013: 0.0,
+  2014: -0.2,
+  2015: 0.0,
+  2016: 1.0,
+  2017: 1.8,
+  2018: 2.0,
+  2019: 1.8,
+  2020: 0.5,
+  2021: 2.4,
+  2022: 8.4,
+  2023: 8.5,
+  2024: 2.3,
+  2025: 1.5,
+  2026: 1.4
+};
+
+const MIN_YEAR = 2000;
+const MAX_YEAR = 2026;
+
+// ─── POPULATE YEAR SELECTS ────────────────────────────────────────────────────
+(function initSelects(){
+  var fromSel = document.getElementById('from-year');
+  var toSel   = document.getElementById('to-year');
+  for (var y = MIN_YEAR; y <= MAX_YEAR; y++) {
+    var o1 = document.createElement('option');
+    o1.value = y; o1.textContent = y;
+    if (y === 2010) o1.selected = true;
+    fromSel.appendChild(o1);
+
+    var o2 = document.createElement('option');
+    o2.value = y; o2.textContent = y;
+    if (y === MAX_YEAR) o2.selected = true;
+    toSel.appendChild(o2);
+  }
+  fromSel.addEventListener('change', function(){
+    var fy = parseInt(fromSel.value);
+    for (var i = 0; i < toSel.options.length; i++) {
+      toSel.options[i].disabled = parseInt(toSel.options[i].value) <= fy;
+    }
+    if (parseInt(toSel.value) <= fy) {
+      toSel.value = Math.min(fy + 1, MAX_YEAR);
+    }
+  });
+})();
+
+// ─── FORMAT ──────────────────────────────────────────────────────────────────
+function fmt(n) {
+  return Math.round(n).toLocaleString('sv-SE') + ' kr';
+}
+function fmtPct(n) {
+  return (n >= 0 ? '+' : '') + n.toFixed(1) + ' %';
+}
+
+// ─── CALCULATE ────────────────────────────────────────────────────────────────
+function calculate(){
+  var amount  = parseFloat(document.getElementById('amount').value) || 100000;
+  var fromY   = parseInt(document.getElementById('from-year').value);
+  var toY     = parseInt(document.getElementById('to-year').value);
+
+  if (toY <= fromY) { alert('Välj ett slutår som är efter startåret.'); return; }
+
+  var years = [];
+  var current = amount;
+  var cumFactor = 1;
+
+  for (var y = fromY + 1; y <= toY; y++) {
+    var rate = (KPI[y] || 0) / 100;
+    cumFactor *= (1 + rate);
+    var prevVal = current;
+    current = amount * cumFactor;
+    var loss = current - amount;
+    years.push({
+      year: y,
+      rate: KPI[y] || 0,
+      cumPct: (cumFactor - 1) * 100,
+      realValue: current,
+      lossVsStart: loss
+    });
+  }
+
+  var finalVal = amount * cumFactor;
+  var totalInflPct = (cumFactor - 1) * 100;
+  var loss = finalVal - amount;
+
+  // Results
+  document.getElementById('res-original').textContent = fmt(amount);
+  document.getElementById('res-original-sub').textContent = 'i ' + fromY + ' års priser';
+  document.getElementById('res-adjusted').textContent = fmt(finalVal);
+  document.getElementById('res-adjusted-sub').textContent = 'behövs i ' + toY + ' för samma köpkraft';
+  document.getElementById('res-inflation-pct').textContent = '+' + totalInflPct.toFixed(1) + ' %';
+  document.getElementById('res-inflation-sub').textContent = fromY + '–' + toY + ' (' + (toY - fromY) + ' år)';
+  document.getElementById('res-loss').textContent = fmt(loss);
+  document.getElementById('res-loss-sub').textContent = 'mer behövs för samma vara/tjänst';
+  document.getElementById('results-title').textContent = 'Resultat: ' + fromY + ' → ' + toY;
+
+  // Table
+  var tbody = document.getElementById('yearly-body');
+  tbody.innerHTML = '';
+  // Add start row
+  var startRow = '<tr><td><strong>' + fromY + '</strong></td><td>–</td><td>0,0&nbsp;%</td><td>' + fmt(amount) + '</td><td>–</td></tr>';
+  tbody.innerHTML = startRow;
+  years.forEach(function(r){
+    var cls = r.rate > 0 ? 'pos' : (r.rate < 0 ? 'neg' : '');
+    tbody.innerHTML += '<tr>' +
+      '<td>' + r.year + '</td>' +
+      '<td class="' + cls + '">' + fmtPct(r.rate) + '</td>' +
+      '<td>' + (r.cumPct >= 0 ? '+' : '') + r.cumPct.toFixed(1) + '&nbsp;%</td>' +
+      '<td>' + fmt(r.realValue) + '</td>' +
+      '<td class="pos">+' + fmt(r.lossVsStart) + '</td>' +
+    '</tr>';
+  });
+
+  drawChart(years, fromY);
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// ─── CANVAS BAR CHART ─────────────────────────────────────────────────────────
+function drawChart(years, fromY) {
+  var canvas = document.getElementById('inflationChart');
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var w = canvas.parentElement.clientWidth;
+  var h = 220;
+  canvas.width  = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width  = w + 'px';
+  canvas.style.height = h + 'px';
+  ctx.scale(dpr, dpr);
+
+  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var textCol  = isDark ? '#d1d5db' : '#555';
+  var gridCol  = isDark ? '#374151' : '#e2e8f0';
+  var barHigh  = '#dc2626'; // red for positive inflation
+  var barLow   = '#16a34a'; // green for deflation
+  var primary  = isDark ? '#34d399' : '#1a6b4a';
+
+  var pad = { top: 20, right: 10, bottom: 40, left: 48 };
+  var chartW = w - pad.left - pad.right;
+  var chartH = h - pad.top - pad.bottom;
+
+  var rates = years.map(function(r){ return r.rate; });
+  var maxRate = Math.max.apply(null, rates.concat([0]));
+  var minRate = Math.min.apply(null, rates.concat([0]));
+  var range = Math.max(Math.abs(maxRate), Math.abs(minRate));
+  var yMax = Math.ceil(range) + 1;
+  var yMin = minRate < 0 ? -Math.ceil(Math.abs(minRate)) - 0.5 : 0;
+  var yRange = yMax - yMin;
+
+  // Grid lines
+  ctx.strokeStyle = gridCol;
+  ctx.lineWidth = 1;
+  var gridSteps = 5;
+  for (var i = 0; i <= gridSteps; i++) {
+    var val = yMin + (yRange / gridSteps) * i;
+    var y = pad.top + chartH - ((val - yMin) / yRange) * chartH;
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + chartW, y); ctx.stroke();
+    ctx.fillStyle = textCol; ctx.font = '11px Inter,sans-serif'; ctx.textAlign = 'right';
+    ctx.fillText(val.toFixed(1) + '%', pad.left - 6, y + 4);
+  }
+
+  // Zero line
+  var zeroY = pad.top + chartH - ((0 - yMin) / yRange) * chartH;
+  ctx.strokeStyle = primary; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(pad.left, zeroY); ctx.lineTo(pad.left + chartW, zeroY); ctx.stroke();
+
+  // Bars
+  var barW = Math.max(4, Math.floor(chartW / years.length) - 3);
+  years.forEach(function(r, i) {
+    var x = pad.left + (i / years.length) * chartW + (chartW / years.length - barW) / 2;
+    var zY = zeroY;
+    var barH = Math.abs((r.rate / yRange) * chartH);
+    var barTop = r.rate >= 0 ? zY - barH : zY;
+    ctx.fillStyle = r.rate >= 0 ? barHigh : barLow;
+    ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, barTop, barW, barH, 2) : ctx.rect(x, barTop, barW, barH);
+    ctx.fill();
+
+    // Label
+    if (years.length <= 20 || i % 2 === 0) {
+      ctx.fillStyle = textCol; ctx.font = '10px Inter,sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(r.year, x + barW / 2, h - pad.bottom + 14);
+    }
+  });
+
+  ctx.fillStyle = textCol;
+  ctx.font = '11px Inter,sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('KPI %', pad.left + 2, pad.top - 4);
+}
+
+// ─── FAQ ─────────────────────────────────────────────────────────────────────
+function toggleFaq(el) {
+  var item = el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
