@@ -153,14 +153,14 @@
     .hero-search {
       max-width:520px;
       display:flex;
-      gap:.4rem;
+      align-items:center;
+      gap:.5rem;
       background:#f8fafc;
       border:1.5px solid #e2e8f0;
       border-radius:10px;
-      padding:.3rem .3rem .3rem .85rem;
+      padding:.4rem .75rem;
       margin-bottom:1.5rem;
       transition:border-color .15s, box-shadow .15s;
-      overflow:hidden;
     }
     .hero-search:focus-within {
       border-color:var(--green);
@@ -174,21 +174,6 @@
       padding:.42rem .3rem;
     }
     #search::placeholder { color:#94a3b8; }
-    .hero-search-btn {
-      flex-shrink:0;
-      background:var(--green);
-      color:#fff;
-      border:none;
-      border-radius:7px;
-      padding:.48rem 1rem;
-      font-size:.88rem;
-      font-weight:700;
-      font-family:inherit;
-      cursor:pointer;
-      white-space:nowrap;
-      transition:background .12s;
-    }
-    .hero-search-btn:hover { background:var(--green-dark); }
     .hero-chips { display:flex; gap:.4rem; flex-wrap:wrap; }
     .hero-chip {
       background:#f1f5f9;
@@ -356,7 +341,7 @@
       .hero-search { background:#1e293b; border-color:#334155; }
       #search { color:#f3f4f6; }
       #search::placeholder { color:#64748b; }
-      .hero-search-btn { background:var(--green); }
+
       .fbtn { background:#1e293b; color:var(--muted); border-color:#334155; }
       .fbtn.active { background:var(--green); border-color:var(--green); color:#0f172a; }
       .card { background:var(--card); border-color:#334155; }
@@ -447,8 +432,7 @@
     <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
     <div class="hero-search" role="search">
       <svg class="hero-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="search" placeholder="Sök bland 32 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
-      <button class="hero-search-btn" type="button">Hitta kalkylator</button>
+      <input type="search" id="search" placeholder="Sök bland 39 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
     </div>
     <div class="hero-chips">
       <span class="hero-chip">32 kalkylatorer</span>
@@ -625,6 +609,16 @@
       </div>
       <h2>Direktavkastning</h2>
       <p class="card-desc">Beräkna direktavkastningen på en investering eller fastighet.</p>
+      <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
+    </a>
+
+    <a class="card" href="/kalkylatorer/lonevaxling-kalkylator.html" data-cat="sp" data-kw="löneväxling löneväxlingskalkylator pension tjänstepension skattevinst nettolön arbetsgivaravgift skatteeffektiv">
+      <div class="card-top">
+        <div class="card-icon-wrap">🔄</div>
+        <span class="badge b-sp">Sparande</span>
+      </div>
+      <h2>Löneväxlingskalkylator</h2>
+      <p class="card-desc">Beräkna om löneväxling lönar sig — se nettokostnad, pensionsavsättning och projicerat kapital vid 65.</p>
       <div class="card-footer"><span></span><span class="card-cta">Öppna →</span></div>
     </a>
 
