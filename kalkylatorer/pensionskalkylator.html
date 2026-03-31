@@ -11,6 +11,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
     <title>Pensionskalkylator 2026 – Räkna ut pension | GratisKalkyl.se</title>
     <meta name="description" content="Beräkna din framtida pension gratis. Se allmän pension, tjänstepension och eget sparande. Interaktiv graf visar pensionsutvecklingen. Uppdaterad för 2026.">
     <meta name="robots" content="index, follow">
@@ -19,6 +21,7 @@
     <meta property="og:description" content="Beräkna din framtida pension. Se allmän pension, tjänstepension och eget sparande. Uppdaterad för 2026.">
     <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/pensionskalkylator.html">
     <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
     <meta property="og:locale" content="sv_SE">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Pensionskalkylator 2026 – Räkna ut din framtida pension">
@@ -484,6 +487,33 @@
     (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
   </script>
     <link rel="stylesheet" href="/mobile.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "GratisKalkyl.se",
+        "item": "https://gratiskalkyl.se/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Kalkylatorer",
+        "item": "https://gratiskalkyl.se/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pensionskalkylator 2026",
+        "item": "https://gratiskalkyl.se/kalkylatorer/pensionskalkylator.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <script src="/theme.js"></script>
@@ -692,7 +722,18 @@
                 </a>
             </div>
         </div>
-    </main>
+    
+    <!-- Relaterade kalkylatorer -->
+    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
+      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
+      <a href="/kalkylatorer/tjanstepensionskalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Tjänstepensionskalkylator</a>
+      <a href="/kalkylatorer/lonevaxling-kalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneväxlingskalkylator</a>
+      <a href="/kalkylatorer/sparkalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Sparkalkylator</a>
+      </div>
+    </section>
+
+</main>
 
     <footer>
         <div class="container">
