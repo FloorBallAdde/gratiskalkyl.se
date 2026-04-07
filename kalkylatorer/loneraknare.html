@@ -247,6 +247,43 @@
         }
         canvas { width: 100% !important; height: 100% !important; }
 
+        /* Share/copy bar */
+        .share-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1.5px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-family: inherit;
+            transition: border-color 0.2s, color 0.2s, background 0.2s, box-shadow 0.2s;
+        }
+        .share-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 2px 8px rgba(26,107,74,0.12);
+        }
+        .share-btn.copied {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .share-btn:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
         /* Table */
         .table-toggle {
             background: none;
@@ -480,11 +517,11 @@
         <div class="container header-inner">
             <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
             <nav>
-                <a href="/kalkylatorer/ranta-pa-ranta.html">Ränta på ränta</a>
-                <a href="/kalkylatorer/loneraknare.html">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut.html">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator.html">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare.html">ISK-skatt</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
             </nav>
         </div>
     </header>
@@ -554,6 +591,17 @@
                 </div>
             </div>
 
+            <div class="share-bar">
+                <button class="share-btn" id="copyBtn" onclick="copyResults()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    Kopiera resultat
+                </button>
+                <button class="share-btn" id="shareBtn" onclick="shareLink()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    Dela beräkning
+                </button>
+            </div>
+
             <div class="chart-container">
                 <canvas id="chart"></canvas>
             </div>
@@ -567,6 +615,7 @@
                         <th>Brutto</th>
                         <th>Kommunalskatt</th>
                         <th>Statlig skatt</th>
+                        <th>Jobbskatteavdrag</th>
                         <th>Total skatt</th>
                         <th>Netto</th>
                     </tr>
@@ -642,9 +691,9 @@
     <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
       <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/kalkylatorer/marginalskattekalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Marginalskattekalkylator</a>
-      <a href="/kalkylatorer/lonevaxling-kalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneväxlingskalkylator</a>
-      <a href="/kalkylatorer/arbetsgivaravgift-kalkylator.html" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Arbetsgivaravgiftskalkylator</a>
+      <a href="/kalkylatorer/marginalskattekalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Marginalskattekalkylator</a>
+      <a href="/kalkylatorer/lonevaxling-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneväxlingskalkylator</a>
+      <a href="/kalkylatorer/arbetsgivaravgift-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Arbetsgivaravgiftskalkylator</a>
       </div>
     </section>
 
@@ -652,7 +701,7 @@
 
     <footer>
         <div class="container">
-            <p style="margin-bottom:8px;"><a href="/om-oss.html" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy.html" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
+            <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
             <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
             Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
             <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
@@ -712,6 +761,51 @@
             return (Math.round(n * 100) / 100).toLocaleString('sv-SE') + '%';
         }
 
+        // Animated counter for result elements
+        const _counters = {};
+        function animateNum(elId, toVal, formatter) {
+            const el = document.getElementById(elId);
+            if (!el) return;
+            const fromVal = _counters[elId] !== undefined ? _counters[elId] : toVal;
+            _counters[elId] = toVal;
+            const duration = 380;
+            const start = performance.now();
+            const tick = (now) => {
+                const t = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+                el.textContent = formatter(fromVal + (toVal - fromVal) * eased);
+                if (t < 1) requestAnimationFrame(tick);
+                else el.textContent = formatter(toVal);
+            };
+            requestAnimationFrame(tick);
+        }
+
+        // Jobbskatteavdrag 2026 (IL 67 kap, under 66 år)
+        // Beräknas på förvärvsinkomst (W) och kommunal skattesats (S)
+        function calcJSA(W, S) {
+            if (W <= 0) return 0;
+            const PBB = 57300; // Prisbasbelopp 2026
+            let avdrag = 0;
+            if (W <= 0.91 * PBB) {
+                avdrag = 0;
+            } else if (W <= 2.72 * PBB) {
+                avdrag = (W - 0.91 * PBB) * 0.354 * S;
+            } else if (W <= 5.00 * PBB) {
+                avdrag = ((2.72 - 0.91) * PBB * 0.354 + (W - 2.72 * PBB) * (0.354 + 0.1)) * S;
+            } else if (W <= 7.04 * PBB) {
+                const jsa5 = ((2.72 - 0.91) * PBB * 0.354 + (5.00 - 2.72) * PBB * 0.454) * S;
+                avdrag = jsa5 - (W - 5.00 * PBB) * 0.030 * S;
+            } else {
+                const jsa5 = ((2.72 - 0.91) * PBB * 0.354 + (5.00 - 2.72) * PBB * 0.454) * S;
+                const jsa704 = jsa5 - (7.04 - 5.00) * PBB * 0.030 * S;
+                avdrag = Math.max(0, jsa704 - (W - 7.04 * PBB) * 0.03 * S);
+            }
+            return Math.max(0, avdrag);
+        }
+
+        // Shared state for copy/share
+        let _lastResult = {};
+
         // Calculate
         function calculate() {
             const manadslonBrutto = parseFloat(inputs.manadslonBrutto.num.value) || 0;
@@ -729,11 +823,14 @@
                 statligSkatt = (arslonBrutto - statligGrans) * 0.20;
             }
 
-            // Kommunalskatt
+            // Kommunalskatt (innan JSA)
             const kommunalskat = arslonBrutto * lokalSkatt;
 
-            // Total skatt
-            const totalSkattAr = kommunalskat + statligSkatt;
+            // Jobbskatteavdrag 2026
+            const jsa = calcJSA(arslonBrutto, lokalSkatt);
+
+            // Total skatt (efter JSA)
+            const totalSkattAr = kommunalskat + statligSkatt - jsa;
             const totalSkattMånad = totalSkattAr / 12;
 
             // Netto
@@ -741,22 +838,90 @@
             const nettoMånad = nettoAr / 12;
 
             // Effektiv skattesats
-            const effektivSkattesats = (totalSkattAr / arslonBrutto) * 100;
+            const effektivSkattesats = manadslonBrutto > 0 ? (totalSkattAr / arslonBrutto) * 100 : 0;
 
-            // Arbetsgivaravgift för information
-            const arbetsgivaravgift = arslonBrutto * 0.3142;
-            const arbetsgiversKostnad = arslonBrutto + arbetsgivaravgift;
+            // Spara för copy/share
+            _lastResult = {
+                brutto: manadslonBrutto,
+                netto: nettoMånad,
+                skatt: totalSkattMånad,
+                effektiv: effektivSkattesats,
+                kommunnamn: taxInfo.kommun,
+                jsaMånad: jsa / 12
+            };
 
-            // Update display
-            document.getElementById('nettoMånad').textContent = fmt(nettoMånad);
+            // Update display med animation
+            animateNum('nettoMånad', nettoMånad, v => fmt(v));
             document.getElementById('nettoÅr').textContent = fmt(nettoAr) + ' per år';
-            document.getElementById('totalSkattMånad').textContent = fmt(totalSkattMånad);
+            animateNum('totalSkattMånad', totalSkattMånad, v => fmt(v));
             document.getElementById('skattProcent').textContent = fmtPct(totalSkattAr / arslonBrutto * 100);
-            document.getElementById('kommunalskat').textContent = fmt(kommunalskat / 12);
+            animateNum('kommunalskat', kommunalskat / 12, v => fmt(v));
             document.getElementById('effektivSkatt').textContent = fmtPct(effektivSkattesats);
 
             drawChart(manadslonBrutto, totalSkattMånad, nettoMånad, kommunalskat / 12, statligSkatt / 12);
-            buildTable(manadslonBrutto, kommunalskat / 12, statligSkatt / 12, totalSkattMånad, nettoMånad);
+            buildTable(manadslonBrutto, kommunalskat / 12, statligSkatt / 12, totalSkattMånad, nettoMånad, jsa / 12);
+        }
+
+        // Kopiera resultat till urklipp
+        function copyResults() {
+            const r = _lastResult;
+            if (!r.brutto) return;
+            const text = [
+                '📊 Löneräknare — GratisKalkyl.se',
+                `Bruttolön:        ${fmt(r.brutto)}/mån`,
+                `Nettolön:         ${fmt(r.netto)}/mån`,
+                `Total skatt:      ${fmt(r.skatt)}/mån`,
+                `Jobbskatteavdrag: ${fmt(r.jsaMånad)}/mån`,
+                `Effektiv skatt:   ${fmtPct(r.effektiv)}`,
+                `Kommun:           ${r.kommunnamn}`,
+                '',
+                'Beräknat på: gratiskalkyl.se/kalkylatorer/loneraknare.html'
+            ].join('\n');
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kopierat!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Kopiera resultat';
+                }, 2500);
+            });
+        }
+
+        // Dela beräkning via URL
+        function shareLink() {
+            const r = _lastResult;
+            const params = new URLSearchParams({
+                lon: Math.round(r.brutto),
+                k: document.getElementById('kommun').value
+            });
+            const url = `${location.origin}${location.pathname}?${params.toString()}`;
+            if (navigator.share) {
+                navigator.share({ title: 'Löneräknare – GratisKalkyl.se', text: `Nettolön ${fmt(r.netto)}/mån för ${fmt(r.brutto)} brutto i ${r.kommunnamn}`, url });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('shareBtn');
+                    btn.classList.add('copied');
+                    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Länk kopierad!';
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                        btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Dela beräkning';
+                    }, 2500);
+                });
+            }
+        }
+
+        // Läs URL-parametrar vid sidinladdning
+        function loadFromURL() {
+            const params = new URLSearchParams(location.search);
+            if (params.get('lon')) {
+                const lon = parseInt(params.get('lon'));
+                inputs.manadslonBrutto.num.value = lon;
+                inputs.manadslonBrutto.range.value = lon;
+            }
+            if (params.get('k') && taxData[params.get('k')]) {
+                document.getElementById('kommun').value = params.get('k');
+            }
         }
 
         // Canvas chart
@@ -853,7 +1018,8 @@
         }
 
         // Table
-        function buildTable(brutto, kommunalskatt, statligSkatt, totalSkatt, netto) {
+        function buildTable(brutto, kommunalskatt, statligSkatt, totalSkatt, netto, jsa) {
+            jsa = jsa || 0;
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = `
                 <tr>
@@ -861,6 +1027,7 @@
                     <td>${fmt(brutto)}</td>
                     <td>${fmt(kommunalskatt)}</td>
                     <td>${fmt(statligSkatt)}</td>
+                    <td style="color:var(--primary);font-weight:600;">−${fmt(jsa)}</td>
                     <td>${fmt(totalSkatt)}</td>
                     <td><strong>${fmt(netto)}</strong></td>
                 </tr>
@@ -869,6 +1036,7 @@
                     <td>${fmt(brutto * 12)}</td>
                     <td>${fmt(kommunalskatt * 12)}</td>
                     <td>${fmt(statligSkatt * 12)}</td>
+                    <td style="color:var(--primary);font-weight:600;">−${fmt(jsa * 12)}</td>
                     <td>${fmt(totalSkatt * 12)}</td>
                     <td><strong>${fmt(netto * 12)}</strong></td>
                 </tr>
@@ -886,6 +1054,7 @@
         window.addEventListener('resize', calculate);
 
         // Init
+        loadFromURL();
         calculate();
     </script>
 
@@ -893,19 +1062,19 @@
     <div class="container" style="padding-bottom:48px;">
         <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Fler kalkylatorer</h3>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-            <a href="/kalkylatorer/ranta-pa-ranta.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+            <a href="/kalkylatorer/ranta-pa-ranta" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
                 <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
                 <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta-kalkylator</div>
             </a>
-            <a href="/kalkylatorer/rot-rut.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+            <a href="/kalkylatorer/rot-rut" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
                 <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
                 <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
             </a>
-            <a href="/kalkylatorer/bolanekalkylator.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+            <a href="/kalkylatorer/bolanekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
                 <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
                 <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
             </a>
-            <a href="/kalkylatorer/isk-skatteberaknare.html" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
+            <a href="/kalkylatorer/isk-skatteberaknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
                 <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
                 <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
             </a>
