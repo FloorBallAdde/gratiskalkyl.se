@@ -1,0 +1,17 @@
+# Cloudflare Pages redirects
+# Fix typo URL that Google has crawled (404)
+/kalkylatorer/lanekalykylator /kalkylatorer/lanekalkylator 301
+/kalkylatorer/lanekalykylator.html /kalkylatorer/lanekalkylator 301
+
+# Fix .html URLs that Google has crawled (redirect failures)
+/kalkylatorer/reseavdragskalkylator.html /kalkylatorer/reseavdragskalkylator 301
+/kalkylatorer/loneraknare.html /kalkylatorer/loneraknare 301
+/kalkylatorer/isk-skatteberaknare.html /kalkylatorer/isk-skatteberaknare 301
+/kalkylatorer/skatteaterbarings-kalkylator.html /kalkylatorer/skatteaterbarings-kalkylator 301
+/kalkylatorer/amorteringskalkylator.html /kalkylatorer/amorteringskalkylator 301
+/kalkylatorer/rot-rut.html /kalkylatorer/rot-rut 301
+/kalkylatorer/bolanekalkylator.html /kalkylatorer/bolanekalkylator 301
+/kalkylatorer/direktavkastningskalkylator.html /kalkylatorer/direktavkastningskalkylator 301
+/kalkylatorer/ranta-pa-ranta.html /kalkylatorer/ranta-pa-ranta 301
+/kalkylatorer/sparkalkylator.html /kalkylatorer/sparkalkylator 301
+/artiklar/vad-ar-kapitalvinstskatt.html /artiklar/vad-ar-kapitalvinstskatt 301
