@@ -18,3 +18,25 @@
 /kalkylatorer/ranta-pa-ranta.html /kalkylatorer/ranta-pa-ranta 301
 /kalkylatorer/sparkalkylator.html /kalkylatorer/sparkalkylator 301
 /artiklar/vad-ar-kapitalvinstskatt.html /artiklar/vad-ar-kapitalvinstskatt 301
+
+# Pretty-URL redirects för artiklar (Google har crawlat .html-versioner)
+/artiklar/vad-ar-bolan.html /artiklar/vad-ar-bolan 301
+/artiklar/vad-ar-isk.html /artiklar/vad-ar-isk 301
+/artiklar/vad-ar-rot-rut-avdrag.html /artiklar/vad-ar-rot-rut-avdrag 301
+/artiklar/vad-ar-f-skatt.html /artiklar/vad-ar-f-skatt 301
+/artiklar/vad-ar-semesterlon.html /artiklar/vad-ar-semesterlon 301
+/artiklar/hur-beraknas-pension.html /artiklar/hur-beraknas-pension 301
+/artiklar/hur-far-man-tillbaka-skatten.html /artiklar/hur-far-man-tillbaka-skatten 301
+
+# Pretty-URL redirects för kalkylatorer (säkerställ alla varianter)
+/kalkylatorer/sjukpenningkalkylator.html /kalkylatorer/sjukpenningkalkylator 301
+/kalkylatorer/foraldrapenning.html /kalkylatorer/foraldrapenning 301
+/kalkylatorer/uthyrningskalkylator.html /kalkylatorer/uthyrningskalkylator 301
+/kalkylatorer/akassa-kalkylator.html /kalkylatorer/akassa-kalkylator 301
+/kalkylatorer/akassakalkylator /kalkylatorer/akassa-kalkylator 301
+/kalkylatorer/akassakalkylator.html /kalkylatorer/akassa-kalkylator 301
+/kalkylatorer/tjanstepensionskalkylator.html /kalkylatorer/tjanstepensionskalkylator 301
+/kalkylatorer/traktamentekalkylator.html /kalkylatorer/traktamentekalkylator 301
+/kalkylatorer/milersattningskalkylator.html /kalkylatorer/milersattningskalkylator 301
+/kalkylatorer/elkostnadskalkylator.html /kalkylatorer/elkostnadskalkylator 301
+/kalkylatorer/lonevaxling-kalkylator.html /kalkylatorer/lonevaxling-kalkylator 301
