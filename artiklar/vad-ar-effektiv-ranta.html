@@ -113,6 +113,14 @@
             .example-table { font-size: 0.85rem; }
             .example-table th, .example-table td { padding: 10px 12px; }
         }
+    
+        .related-section { padding: 32px 0 48px; border-top: 1px solid var(--border); }
+        .related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .related-card { display: block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+        .related-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--primary); }
+        .related-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.3; color: var(--text); }
+        .related-card p { font-size: 0.88rem; color: var(--text-light); margin: 0; line-height: 1.5; }
     </style>
     <script type="application/ld+json">
     {
@@ -192,6 +200,63 @@
             }
         }
     ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hem",
+            "item": "https://gratiskalkyl.se/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guider",
+            "item": "https://gratiskalkyl.se/artiklar/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Vad är effektiv ränta?",
+            "item": "https://gratiskalkyl.se/artiklar/vad-ar-effektiv-ranta"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Vad är effektiv ränta? – Den enda räntan du ska jämföra",
+    "description": "Effektiv ränta visar lånets verkliga kostnad per år — inklusive avgifter och uppläggningskostnader.",
+    "url": "https://gratiskalkyl.se/artiklar/vad-ar-effektiv-ranta",
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "image": "https://gratiskalkyl.se/favicon.svg",
+    "author": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "url": "https://gratiskalkyl.se/om-oss"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://gratiskalkyl.se/favicon.svg"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gratiskalkyl.se/artiklar/vad-ar-effektiv-ranta"
+    },
+    "inLanguage": "sv-SE"
 }
     </script>
 </head>
@@ -407,6 +472,25 @@
             </div>
 
         </section>
+    
+        <section class="related-section">
+            <h2>📖 Relaterade guider</h2>
+            <div class="related-grid">
+                <a href="/artiklar/hur-mycket-far-jag-lana-2026" class="related-card">
+                    <h3>Hur mycket får jag låna 2026?</h3>
+                    <p>Bolånetaket 85 % och KALP — så funkar det.</p>
+                </a>
+                <a href="/artiklar/vad-ar-bolan" class="related-card">
+                    <h3>Vad är ett bolån?</h3>
+                    <p>Amortering, bindningstid och kontantinsats.</p>
+                </a>
+                <a href="/artiklar/manadssparande-rakna-ut" class="related-card">
+                    <h3>Månadssparande – räkna ut</h3>
+                    <p>Skapa kontantinsats via månadssparande.</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <footer>

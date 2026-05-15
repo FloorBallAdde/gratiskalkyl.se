@@ -461,7 +461,7 @@
     <p class="hero-sub">Sveriges neutrala kalkylatorplattform — utan bankbias, utan dolda agendor.</p>
     <div class="hero-search" role="search">
       <svg class="hero-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="search" placeholder="Sök bland 43 kalkylatorer…" autocomplete="off" aria-label="Sök bland kalkylatorer" spellcheck="false">
+      <input type="search" id="search" placeholder="Sök bland 43 kalkylatorer &amp; 20 guider…" autocomplete="off" aria-label="Sök bland kalkylatorer och guider" spellcheck="false">
     </div>
     <div class="hero-chips">
       <span class="hero-chip">43 kalkylatorer</span>
@@ -1021,20 +1021,45 @@
       metaEl=document.getElementById('meta'),noResEl=document.getElementById('no-res'),
       noTermEl=document.getElementById('no-term'),
       cards=Array.from(document.getElementById('grid').querySelectorAll('.card')),
+      guideCards=Array.from(document.querySelectorAll('.guides-grid .guide-card')),
+      guidesSection=document.querySelector('.guides-section'),
       fBtns=Array.from(document.querySelectorAll('.fbtn')),
       activeCat='alla',query='';
 
   window.addEventListener('scroll',function(){hdr.classList.toggle('shadow',window.scrollY>8);},{passive:true});
 
   function applyFilters(){
-    var n=0,q=query.toLowerCase();
+    var nCalc=0,nGuides=0,q=query.toLowerCase();
     cards.forEach(function(c){
       var show=(activeCat==='alla'||c.dataset.cat===activeCat)&&(!q||(c.dataset.kw+' '+c.querySelector('h2').textContent).toLowerCase().includes(q));
       c.classList.toggle('hidden',!show);
-      if(show)n++;
+      if(show)nCalc++;
     });
-    metaEl.textContent=q?n+(n===1?' kalkylator':' kalkylatorer')+' för "'+query+'"':'Visar '+n+(n===1?' kalkylator':' kalkylatorer');
-    if(n===0){noResEl.classList.add('show');noTermEl.textContent='"'+query+'"';}
+    // Filter guides only if there's a search query (always show all when empty)
+    guideCards.forEach(function(g){
+      if(!q){ g.classList.remove('hidden'); nGuides++; return; }
+      var txt=(g.textContent||'').toLowerCase();
+      var href=(g.getAttribute('href')||'').toLowerCase();
+      // Exclude the "Se alla guider →"-card from search hits
+      var isSeeAll=href.endsWith('/artiklar/');
+      var match=!isSeeAll && txt.includes(q);
+      g.classList.toggle('hidden',!match);
+      if(match)nGuides++;
+    });
+    // Show/hide entire guides section based on whether anything matches
+    if(guidesSection){
+      var hideSection=q && nGuides===0;
+      guidesSection.style.display=hideSection?'none':'';
+    }
+    if(q){
+      var parts=[];
+      if(nCalc>0)parts.push(nCalc+(nCalc===1?' kalkylator':' kalkylatorer'));
+      if(nGuides>0)parts.push(nGuides+(nGuides===1?' guide':' guider'));
+      metaEl.textContent=(parts.length?parts.join(' + ')+' för "'+query+'"':'Inga träffar för "'+query+'"');
+    }else{
+      metaEl.textContent='Visar '+nCalc+(nCalc===1?' kalkylator':' kalkylatorer');
+    }
+    if(nCalc===0 && nGuides===0 && q){noResEl.classList.add('show');noTermEl.textContent='"'+query+'"';}
     else{noResEl.classList.remove('show');}
   }
 

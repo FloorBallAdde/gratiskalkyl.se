@@ -113,6 +113,14 @@
             .example-table { font-size: 0.85rem; }
             .example-table th, .example-table td { padding: 10px 12px; }
         }
+    
+        .related-section { padding: 32px 0 48px; border-top: 1px solid var(--border); }
+        .related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .related-card { display: block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+        .related-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--primary); }
+        .related-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.3; color: var(--text); }
+        .related-card p { font-size: 0.88rem; color: var(--text-light); margin: 0; line-height: 1.5; }
     </style>
     <script type="application/ld+json">
     {
@@ -192,6 +200,63 @@
             }
         }
     ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hem",
+            "item": "https://gratiskalkyl.se/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guider",
+            "item": "https://gratiskalkyl.se/artiklar/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Räkna ut föräldrapenning 2026",
+            "item": "https://gratiskalkyl.se/artiklar/rakna-ut-foraldrapenning-2026"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Räkna ut föräldrapenning 2026 – Så mycket får du per dag",
+    "description": "Föräldrapenning 2026 — så räknar du ut din ersättning per dag. SGI-taket 588 000 kr och 80 %.",
+    "url": "https://gratiskalkyl.se/artiklar/rakna-ut-foraldrapenning-2026",
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "image": "https://gratiskalkyl.se/favicon.svg",
+    "author": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "url": "https://gratiskalkyl.se/om-oss"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://gratiskalkyl.se/favicon.svg"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gratiskalkyl.se/artiklar/rakna-ut-foraldrapenning-2026"
+    },
+    "inLanguage": "sv-SE"
 }
     </script>
 </head>
@@ -414,6 +479,25 @@
             </div>
 
         </section>
+    
+        <section class="related-section">
+            <h2>📖 Relaterade guider</h2>
+            <div class="related-grid">
+                <a href="/artiklar/vad-ar-semesterlon" class="related-card">
+                    <h3>Vad är semesterlön?</h3>
+                    <p>Sammalöneregeln, procentregeln och löneunderlaget.</p>
+                </a>
+                <a href="/artiklar/rakna-ut-nettolon-2026" class="related-card">
+                    <h3>Räkna ut nettolön 2026</h3>
+                    <p>Lön efter skatt — bas för SGI-beräkning.</p>
+                </a>
+                <a href="/artiklar/vad-ar-marginalskatt" class="related-card">
+                    <h3>Vad är marginalskatt?</h3>
+                    <p>Vad blir nästa lönehöjning netto?</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
