@@ -36,29 +36,29 @@
     <meta name="twitter:title" content="Månadssparande – Räkna ut tillväxt">
     <meta name="twitter:description" content="Vad blir 1 000 kr/månad om 20 år? 520 000 kr vid 7 %. Här är tabellen.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         :root {
-            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
-            --text: #1a1a2e; --text-light: #555;
-            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
         @media (prefers-color-scheme: dark) {
             :root {
-                --text: #f3f4f6; --text-light: #d1d5db;
-                --bg: #111827; --white: #1f2937; --border: #374151;
-                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+                --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
             }
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
         .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
         .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
         .site-header a:hover { color: var(--primary); }
         .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
         .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--text); }
+        .logo span { color: var(--text-light); font-weight: 500; }
         nav a { margin-left: 24px; }
         .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 
@@ -133,16 +133,16 @@
     
         /* Dark mode overrides — controlled by data-theme attribute */
         html[data-theme="dark"] {
-            --text: #f3f4f6; --text-light: #d1d5db;
-                --bg: #111827; --white: #1f2937; --border: #374151;
-                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
         }
         html[data-theme="light"] {
-            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
-            --text: #1a1a2e; --text-light: #555;
-            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
         .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
         .theme-toggle-btn:hover { background:var(--primary-light); border-color:var(--primary); color:var(--primary); }
@@ -290,12 +290,10 @@
 <body>
     <header class="site-header">
         <div class="header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
             <nav>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
-                <a href="/artiklar/">Guider</a>
+                <a href="/">Kalkylatorer</a>
+                <a href="/artiklar/">📖 Guider</a>
             </nav>
             <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
