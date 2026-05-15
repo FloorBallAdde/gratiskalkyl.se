@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Vad är effektiv ränta? – Den enda räntan du ska jämföra</title>
+    <meta name="description" content="Effektiv ränta visar lånets verkliga kostnad per år — inklusive avgifter och uppläggningskostnader. Så räknar du den och varför nominell ränta är vilseledande.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/vad-ar-effektiv-ranta">
+    <meta property="og:title" content="Vad är effektiv ränta? – Den enda räntan du ska jämföra">
+    <meta property="og:description" content="Effektiv ränta — lånets verkliga kostnad inklusive alla avgifter. Det är denna ränta du ska jämföra mellan banker.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/vad-ar-effektiv-ranta">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vad är effektiv ränta? – Lånets sanna kostnad">
+    <meta name="twitter:description" content="Effektiv ränta visar lånets verkliga pris med alla avgifter. Så räknar du den.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Vad är effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Effektiv ränta är lånets totala kostnad per år uttryckt som en procentsats — inklusive nominell ränta, uppläggningsavgift, aviavgift och alla andra obligatoriska kostnader. Det är den enda räntan du ska jämföra mellan långivare. Konsumentkreditlagen kräver att den redovisas."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Skillnad mellan nominell och effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nominell ränta är bara grundräntan på själva lånebeloppet. Effektiv ränta inkluderar dessutom alla avgifter — uppläggning, aviavgifter, försäkringar etc — omräknat till en årlig procentsats. På privatlån kan skillnaden vara 1–3 procentenheter; på bolån är de oftast lika."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Varför är effektiv ränta högre än nominell?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eftersom effektiv ränta inkluderar avgifter (engångs- och löpande) gör de att lånet kostar mer per år än vad enbart räntan visar. Engångsavgifter i början väger tyngst för korta lån — därför har korta lån med fasta avgifter ofta mycket högre effektiv ränta än samma nominell ränta över längre tid."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Måste banker redovisa effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Sedan 2011 är det lagstadgat (Konsumentkreditlagen) att alla låneerbjudanden måste redovisa effektiv ränta tydligt — i marknadsföring, avtal och i representativa räkneexempel. Banker som bryter mot detta kan få sanktioner från Konsumentverket eller Finansinspektionen."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Den matematiska formeln är komplex (en iterativ ekvation som löses numeriskt), men principen är: \"Vilken årlig räntesats motsvarar de totala kostnaderna för lånet?\" Den tar hänsyn till storlek, löptid, avgifter och tidpunkten för dessa. Använd en lånekalkylator för exakt beräkning."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är \"från X % i ränta\"-erbjudanden?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "\"Från\"-räntan är den allra lägsta räntan som <em>någon</em> kund får — typiskt bara de med högst kreditvärdighet och stor inkomst. De flesta hamnar väsentligt högre. Be alltid om individuell offert som visar din faktiska effektiva ränta."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Är 0 %-ränta-erbjudanden verkligen gratis?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sällan helt gratis. Räntefria perioder finns men kan kombineras med uppläggningsavgift, månadsavgift eller villkor som gör effektiv ränta över 0 %. Vid utebliven betalning av räntefri kredit kan effektiv ränta hoppa upp till 20–35 %. Läs alltid villkoren."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Påverkar lånets löptid effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Längre löptid sprider engångsavgifter över flera år och sänker effektiv ränta något (allt annat lika). Kortare löptid med samma fasta avgifter ger högre effektiv ränta. Detta gör att samma lån med samma avgifter har olika effektiv ränta vid 3 år vs 5 år."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Var hittar jag lägst effektiv ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Använd jämförelsetjänster som Sambla, Lendo eller Compricer — de visar effektiv ränta från flera långivare med en enda ansökan. Räntan du faktiskt får beror på din kreditprofil; ju högre inkomst, lägre skuldkvot och bättre kredithistorik desto lägre erbjudande."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Vad är effektiv ränta?</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Lån</span>
+            <h1>Vad är effektiv ränta? – Lånets sanna kostnad förklarad</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 5 min läsning</p>
+            <p class="article-intro"><strong>Effektiv ränta</strong> är den enda räntan du verkligen ska jämföra när du tar lån. Till skillnad från den <em>nominella</em> räntan (som bara visar grundräntan) inkluderar den effektiva räntan <strong>alla avgifter</strong> — uppläggningsavgift, aviavgifter och eventuella villkor — uttryckt som en årlig procentsats. Den är lagstadgad att redovisas och är ditt enda hederliga jämförelseverktyg mellan långivare.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>Nominell vs effektiv ränta</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">Nominell</div>
+                    <div class="label">Bara grundräntan</div>
+                    <div class="desc">Räntan på själva lånet, exklusive avgifter.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">Effektiv</div>
+                    <div class="label">Lånets totala kostnad</div>
+                    <div class="desc">Inkluderar alla avgifter, omräknat per år.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">Lag</div>
+                    <div class="label">Måste redovisas</div>
+                    <div class="desc">Konsumentkreditlagen kräver effektiv ränta.</div>
+                </div>
+            </div>
+
+            <h2>Vad ingår i effektiv ränta?</h2>
+            <ul>
+                <li><strong>Nominell ränta</strong> — den "vanliga" årsräntan</li>
+                <li><strong>Uppläggningsavgift</strong> — engångsavgift vid lånets start (kan vara 500–1 500 kr)</li>
+                <li><strong>Aviavgift</strong> — månadsavgift för utskick (vanligen 29–49 kr/månad)</li>
+                <li><strong>Eventuella tilläggsavgifter</strong> — t.ex. för förtidsåterbetalning eller försäkringar som krävs</li>
+                <li><strong>Tidseffekt</strong> — när i tiden avgifterna betalas (engångsavgift i början väger tyngre än spridda)</li>
+            </ul>
+
+            <p>Formeln är komplex matematiskt, men principen är: <em>"Vilken årlig räntesats motsvarar de totala kostnaderna för lånet?"</em></p>
+
+            <h2>Räkneexempel – privatlån</h2>
+            <p>Du lånar 100 000 kr i 5 år med:</p>
+            <ul>
+                <li>Nominell ränta: 7,0 %</li>
+                <li>Uppläggningsavgift: 600 kr (engångs)</li>
+                <li>Aviavgift: 49 kr/månad i 60 månader = 2 940 kr</li>
+            </ul>
+
+            <p>Effektiv ränta i detta exempel blir cirka <strong>8,3 %</strong> — alltså 1,3 procentenheter högre än den nominella räntan.</p>
+
+            <p>Hade lånet varit räntefritt men med samma avgifter? Den effektiva räntan skulle ändå vara cirka <strong>1,5 %</strong>. Avgifter <em>är</em> ränta.</p>
+
+            <h2>Räkneexempel – bolån</h2>
+            <p>Du lånar 2 000 000 kr i 25 år (med planerad omsättning vart 3:e år):</p>
+            <ul>
+                <li>Nominell ränta (3 år bunden): 4,0 %</li>
+                <li>Uppläggningsavgift: 0 kr (sällsynt på bolån)</li>
+                <li>Aviavgift: 0 kr (oftast 0 på bolån via autogiro)</li>
+            </ul>
+
+            <p>Effektiv ränta = <strong>4,0 %</strong>. På bolån är effektiv och nominell ränta oftast nära identiska eftersom avgifterna är låga eller noll.</p>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> På <em>privatlån och kreditkort</em> är skillnaden mellan nominell och effektiv ränta ofta stor — räkna noga. På <em>bolån</em> är skillnaden minimal — fokusera mer på den nominella räntan vid jämförelser.</p>
+            </div>
+
+            <h2>Räkneexempel – kreditkort</h2>
+            <p>Många kreditkort lockar med "0 % ränta" på köp men har dolda avgifter:</p>
+            <ul>
+                <li>Nominell ränta vid räntefri period: 0 %</li>
+                <li>Vid utebliven betalning av hela skulden: ofta 18–25 % nominell ränta + förseningsavgift 30–50 kr/mån</li>
+                <li>Effektiv ränta vid kvarstående skuld: ofta <strong>20–35 %</strong></li>
+            </ul>
+
+            <p>Detta är varför kreditkortsskuld är extremt dyr — den effektiva räntan på en obetald kreditkortsfaktura kan motsvara förlust på 25 % av beloppet per år.</p>
+
+            <h2>Två lån — samma nominella ränta, olika effektiv</h2>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Lån A</th>
+                        <th>Lån B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>50 000 kr i 3 år</td><td>50 000 kr i 3 år</td></tr>
+                    <tr><td>Nominell ränta 6,0 %</td><td>Nominell ränta 6,0 %</td></tr>
+                    <tr><td>Inga avgifter</td><td>Uppläggning 595 kr + avi 39 kr/mån</td></tr>
+                    <tr><td><strong>Effektiv ränta 6,17 %</strong></td><td><strong>Effektiv ränta 8,42 %</strong></td></tr>
+                </tbody>
+            </table>
+
+            <p>Lån B låter likadant som A i marknadsföringen — men kostar 2,25 procentenheter mer per år i verklig kostnad. Det är därför du <em>alltid</em> ska jämföra effektiv ränta, inte nominell.</p>
+
+            <h2>Lagkrav – konsumentkreditlagen</h2>
+            <p>Sedan 2011 är det lagstadgat (Konsumentkreditlagen) att alla låneerbjudanden måste innehålla effektiv ränta tydligt redovisad. Den ska anges:</p>
+            <ul>
+                <li>I all marknadsföring av låneerbjudanden</li>
+                <li>I avtalet före undertecknande</li>
+                <li>I jämförande exempel (representativ effektiv ränta)</li>
+            </ul>
+
+            <p>Banker som inte följer detta kan få sanktioner från Konsumentverket eller Finansinspektionen.</p>
+
+            <h2>Vad effektiv ränta INTE inkluderar</h2>
+            <p>Vissa kostnader räknas <em>inte</em> in i effektiv ränta:</p>
+            <ul>
+                <li><strong>Frivilliga försäkringar</strong> (t.ex. låneskydd) som du kan välja bort</li>
+                <li><strong>Förseningsavgifter</strong> vid missade betalningar — gäller bara om de inträffar</li>
+                <li><strong>Notariatskostnader</strong> eller pantbrev vid bolån (separata kostnader)</li>
+                <li><strong>Värderingskostnader</strong> som inte är obligatoriska</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Vid bolån — räkna gärna in pantbrevskostnader (2 % av beloppet, engångs) och lagfartsavgift (1,5 % vid köp) som engångsutgifter. De påverkar inte den löpande effektiva räntan men ÄR delar av husköpets totalkostnad.</p>
+            </div>
+
+            <h2>Räntejämförelse i praktiken</h2>
+            <ol>
+                <li><strong>Jämför alltid effektiv ränta — inte nominell.</strong> Bank A med 5,5 % nominell + avgifter kan kosta mer än bank B med 6,0 % utan avgifter.</li>
+                <li><strong>Be om "representativt exempel".</strong> Långivare måste enligt lag visa effektiv ränta för en typisk lånesumma och löptid.</li>
+                <li><strong>Räkna på din egen situation.</strong> Effektiv ränta beror på lånets storlek och löptid — be om exakt beräkning för ditt scenario.</li>
+                <li><strong>Hoppa över "från X %" — det är minimum.</strong> Faktiska räntan beror på din kreditprofil; höga snitt är vanligare än lägstanivån.</li>
+                <li><strong>Använd jämförelsetjänster.</strong> Sambla, Lendo, Compricer m.fl. visar effektiv ränta från flera långivare med en ansökan.</li>
+            </ol>
+
+            <h2>Vanliga misstag</h2>
+            <ul>
+                <li><strong>Stirrar på nominell ränta.</strong> Den är bara halva sanningen — alltid kolla effektiv ränta också.</li>
+                <li><strong>Tror att "0 % ränta"-erbjudanden är gratis.</strong> Ofta finns avgifter som gör effektiv ränta till flera procent.</li>
+                <li><strong>Jämför olika löptider.</strong> 50 000 kr i 2 år kontra 5 år har olika effektiv ränta även med samma nominell — kortare lån = högre effektiv ränta från fasta avgifter.</li>
+                <li><strong>Ignorerar småskrift om försäkringar.</strong> "Obligatorisk låneskydd" på 39 kr/mån kan höja effektiv ränta märkbart.</li>
+                <li><strong>Glömmer förtidslösen-villkor.</strong> Vissa privatlån har avgift för att lösa lånet i förtid — inkluderas inte i effektiv ränta vid normal löptid.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut effektiv ränta</h3>
+                <p>Skriv in nominell ränta, avgifter och löptid — se den verkliga kostnaden för ditt lån.</p>
+                <a href="/kalkylatorer/lanekalkylator" class="cta-btn">Öppna lånekalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är effektiv ränta?</button>
+                <div class="faq-answer">Effektiv ränta är lånets totala kostnad per år uttryckt som en procentsats — inklusive nominell ränta, uppläggningsavgift, aviavgift och alla andra obligatoriska kostnader. Det är den enda räntan du ska jämföra mellan långivare. Konsumentkreditlagen kräver att den redovisas.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Skillnad mellan nominell och effektiv ränta?</button>
+                <div class="faq-answer">Nominell ränta är bara grundräntan på själva lånebeloppet. Effektiv ränta inkluderar dessutom alla avgifter — uppläggning, aviavgifter, försäkringar etc — omräknat till en årlig procentsats. På privatlån kan skillnaden vara 1–3 procentenheter; på bolån är de oftast lika.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Varför är effektiv ränta högre än nominell?</button>
+                <div class="faq-answer">Eftersom effektiv ränta inkluderar avgifter (engångs- och löpande) gör de att lånet kostar mer per år än vad enbart räntan visar. Engångsavgifter i början väger tyngst för korta lån — därför har korta lån med fasta avgifter ofta mycket högre effektiv ränta än samma nominell ränta över längre tid.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Måste banker redovisa effektiv ränta?</button>
+                <div class="faq-answer">Ja. Sedan 2011 är det lagstadgat (Konsumentkreditlagen) att alla låneerbjudanden måste redovisa effektiv ränta tydligt — i marknadsföring, avtal och i representativa räkneexempel. Banker som bryter mot detta kan få sanktioner från Konsumentverket eller Finansinspektionen.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas effektiv ränta?</button>
+                <div class="faq-answer">Den matematiska formeln är komplex (en iterativ ekvation som löses numeriskt), men principen är: &quot;Vilken årlig räntesats motsvarar de totala kostnaderna för lånet?&quot; Den tar hänsyn till storlek, löptid, avgifter och tidpunkten för dessa. Använd en lånekalkylator för exakt beräkning.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är &quot;från X % i ränta&quot;-erbjudanden?</button>
+                <div class="faq-answer">&quot;Från&quot;-räntan är den allra lägsta räntan som &lt;em&gt;någon&lt;/em&gt; kund får — typiskt bara de med högst kreditvärdighet och stor inkomst. De flesta hamnar väsentligt högre. Be alltid om individuell offert som visar din faktiska effektiva ränta.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Är 0 %-ränta-erbjudanden verkligen gratis?</button>
+                <div class="faq-answer">Sällan helt gratis. Räntefria perioder finns men kan kombineras med uppläggningsavgift, månadsavgift eller villkor som gör effektiv ränta över 0 %. Vid utebliven betalning av räntefri kredit kan effektiv ränta hoppa upp till 20–35 %. Läs alltid villkoren.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Påverkar lånets löptid effektiv ränta?</button>
+                <div class="faq-answer">Ja. Längre löptid sprider engångsavgifter över flera år och sänker effektiv ränta något (allt annat lika). Kortare löptid med samma fasta avgifter ger högre effektiv ränta. Detta gör att samma lån med samma avgifter har olika effektiv ränta vid 3 år vs 5 år.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Var hittar jag lägst effektiv ränta?</button>
+                <div class="faq-answer">Använd jämförelsetjänster som Sambla, Lendo eller Compricer — de visar effektiv ränta från flera långivare med en enda ansökan. Räntan du faktiskt får beror på din kreditprofil; ju högre inkomst, lägre skuldkvot och bättre kredithistorik desto lägre erbjudande.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

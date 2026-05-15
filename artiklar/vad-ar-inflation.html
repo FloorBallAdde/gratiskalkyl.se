@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Vad är inflation? – Så påverkas dina pengar 2026</title>
+    <meta name="description" content="Inflation 2026 — hur mäts den, vad är KPI och hur mycket har pengarna förlorat i värde? Konkreta exempel på vad 1 000 kr är värt om 10, 20, 30 år.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/vad-ar-inflation">
+    <meta property="og:title" content="Vad är inflation? – Så påverkas dina pengar 2026">
+    <meta property="og:description" content="Inflation förklarad — KPI, KPIF, vad pengarna är värda om 10–30 år och hur du skyddar dig.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/vad-ar-inflation">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vad är inflation? – Allt om KPI 2026">
+    <meta name="twitter:description" content="Inflation 2026 — hur den mäts, vad den betyder för sparande och löner.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Vad är inflation?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inflation är den allmänna prisökningen i ekonomin — och samtidigt att pengarna tappar köpkraft. När priserna stiger med 2 % per år betyder det att 1 000 kr nästa år köper varor och tjänster som idag skulle kosta cirka 980 kr."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är Riksbankens inflationsmål?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riksbankens inflationsmål är 2 % per år, mätt med KPIF (konsumentprisindex med fast ränta). Det är ett lagstadgat mål — Riksbanken får använda penningpolitiska verktyg (främst styrräntan) för att hålla inflationen kring den nivån."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Skillnad mellan KPI och KPIF?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "KPI mäter alla prisförändringar inklusive bolåneräntor. KPIF är samma index men med ränteförändringarnas effekt neutraliserad. Eftersom Riksbanken styr räntan vore det märkligt att låta deras egen åtgärd påverka deras inflationsmått — därför används KPIF."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är 1 000 kr värt om 20 år?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vid 2 % årlig inflation är 1 000 kr värt cirka 673 kr i dagens köpkraft om 20 år — en förlust på 33 %. Vid 4 % inflation är samma 1 000 kr värt bara cirka 456 kr om 20 år (förlust 54 %)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur skyddar man sig mot inflation?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "På lång sikt ger aktier och fastigheter bäst skydd mot inflation — historiskt 5–7 % real avkastning. Sparkonto med ränta under inflationen är en garanterad reell förlust. Realränteobligationer är ett annat alternativ med garanterad real avkastning."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur hög var inflationen 2022?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inflationen i Sverige toppade på cirka 12 % under hösten 2022 (KPI) — den högsta nivån sedan 1990-talet. Orsakerna var energikris efter Rysslands invasion av Ukraina, störda leveranskedjor efter pandemin och stigande råvarupriser globalt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Varför sänker hög inflation bolåneräntorna senare?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hög inflation tvingar Riksbanken att höja styrräntan för att dämpa konsumtion och investeringar. Höjd styrränta ökar bolåneräntorna. När inflationen sedan kommer ner sänker Riksbanken styrräntan igen — och bolåneräntorna följer efter. Detta är varför bolåneräntorna 2022–2023 sköt i höjden för att sedan komma ner igen."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Är inflation alltid dåligt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inte alltid. Låg positiv inflation (~2 %) anses smörja ekonomin — företag kan justera priser och löner uppåt utan att tvingas sänka något. Hög inflation (>5 %) är däremot skadlig eftersom den skapar osäkerhet och urgröper sparande. Deflation (sjunkande priser) är ofta värre än lätt inflation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas inflationsjusterad lön?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Reallöneökning = nominell löneökning − inflation. Får du 4 % löneökning vid 3 % inflation är din reallöneökning 1 %. Får du bara 2 % löneökning vid 4 % inflation tappar du 2 % i köpkraft trots att nominella lönen ökat. Det är reallönen som avgör om du faktiskt har det bättre."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Vad är inflation?</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Ekonomi</span>
+            <h1>Vad är inflation? – Så påverkas dina pengar över tid</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 6 min läsning</p>
+            <p class="article-intro"><strong>Inflation</strong> är den allmänna prisökningen i ekonomin — och därmed också att dina pengar gradvis tappar köpkraft. Riksbankens mål är <strong>2 %</strong> inflation per år, men under 2022–2024 låg den långt över det. Här går vi igenom hur inflation mäts (KPI, KPIF), vad den betyder för ditt sparande och hur mycket 1 000 kr faktiskt är värt om 10, 20 eller 30 år.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>Inflation 2026 – snabba fakta</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">2 %</div>
+                    <div class="label">Riksbankens mål</div>
+                    <div class="desc">Per år enligt KPIF.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">~2 %</div>
+                    <div class="label">Inflation 2026 (estimat)</div>
+                    <div class="desc">Ner från ~12 % under 2022 års topp.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">~45 %</div>
+                    <div class="label">Köpkraftsförlust på 20 år</div>
+                    <div class="desc">Vid 2 % årlig inflation.</div>
+                </div>
+            </div>
+
+            <h2>Hur mäts inflation? KPI och KPIF</h2>
+            <p>I Sverige mäts inflationen huvudsakligen via två index från SCB:</p>
+
+            <ul>
+                <li><strong>KPI – Konsumentprisindex.</strong> Mäter prisförändringen i en korg av varor och tjänster som den genomsnittliga konsumenten köper (mat, bostad, transport, kläder, fritid m.m.).</li>
+                <li><strong>KPIF – KPI med fast ränta.</strong> Samma som KPI men där effekten av bolåneräntor är "neutraliserad". Detta är det mått som <em>Riksbanken styr efter</em> eftersom räntan är deras eget verktyg och inte ska påverka deras mål.</li>
+            </ul>
+
+            <h2>Riksbankens mål – varför 2 %?</h2>
+            <p>Riksbankens lagstadgade mål är en inflation på <strong>2 % per år</strong> mätt med KPIF. Anledningen att målet inte är 0 %:</p>
+            <ul>
+                <li>Låg <em>positiv</em> inflation smörjer ekonomin — företag kan justera priser och löner upp utan att behöva sänka något</li>
+                <li>0 % skulle riskera <em>deflation</em> (sjunkande priser) som kan paralysera konsumtion och investeringar (Japan på 90-talet)</li>
+                <li>2 % anses vara en bra balans — pengar tappar värde långsamt nog att inte skada, snabbt nog att uppmuntra till investering</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Notera:</strong> Riksbanken kan inte styra inflationen exakt — den påverkas av globala råvarupriser, valutakurser och inhemska produktionskostnader. Verktyget Riksbanken har är <em>styrräntan</em>, som påverkar bolån, sparräntor och kreditförhållanden.</p>
+            </div>
+
+            <h2>Köpkraftsförlust – så mycket är 1 000 kr värt om...?</h2>
+            <p>Vid 2 % årlig inflation tappar pengarna värde enligt formeln <strong>Värde = Belopp / (1 + inflation)^år</strong>.</p>
+
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Antal år framåt</th>
+                        <th>Köpkraft av 1 000 kr</th>
+                        <th>Förlust</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>5 år</td><td>906 kr</td><td class="num">9,4 %</td></tr>
+                    <tr><td>10 år</td><td>820 kr</td><td class="num">18 %</td></tr>
+                    <tr><td>20 år</td><td>673 kr</td><td class="num">33 %</td></tr>
+                    <tr><td>30 år</td><td>552 kr</td><td class="num">45 %</td></tr>
+                    <tr><td>50 år</td><td>372 kr</td><td class="num">63 %</td></tr>
+                </tbody>
+            </table>
+
+            <p>Vid <em>4 % inflation</em> (mer realistiskt scenario på lång sikt enligt vissa) försvinner 50 % av köpkraften redan på 18 år, 70 % på 30 år.</p>
+
+            <h2>Räkneexempel – framtida värde av lön</h2>
+            <p>Du tjänar 30 000 kr/månad idag. Vid 2 % inflation över 20 år: din lön behöver vara <strong>44 580 kr</strong> om 20 år för att ha samma köpkraft.</p>
+
+            <ul>
+                <li>30 000 × (1,02)^20 = 30 000 × 1,486 = 44 580 kr</li>
+                <li>Får du löneökning under 2 %/år tappar du köpkraft i absolut tal</li>
+                <li>"Reallöneökning" = löneökning − inflation. Är inflation 4 % och du får 3 % löneökning → reallönen sänks 1 %</li>
+            </ul>
+
+            <h2>Räkneexempel – sparkonto under inflation</h2>
+            <p>Du har 100 000 kr på sparkonto med 1 % ränta. Inflationen är 3 %.</p>
+            <ul>
+                <li>Efter 1 år: 101 000 kr nominellt, men köpkraften är 100 000 / 1,03 = 97 087 kr → du <strong>förlorat ~3 000 kr i reellt värde</strong></li>
+                <li>Efter 10 år: ~110 462 kr nominellt, ~74 410 kr i dagens köpkraft</li>
+            </ul>
+            <p>Detta är varför "förvara pengar på sparkonto" är en <em>förlorad strategi</em> långsiktigt — räntan måste minst matcha inflationen för att du ska bibehålla köpkraften.</p>
+
+            <h2>Hur skyddar du dig mot inflation?</h2>
+            <ol>
+                <li><strong>Investera i aktier.</strong> Aktier har historiskt haft 5–7 % real avkastning (efter inflation). Indexfonder med låg avgift är det vanligaste valet för långsiktigt sparande.</li>
+                <li><strong>Köp realränteobligationer.</strong> Statspapper där räntan justeras med inflationen. Ger garanterad real avkastning över räntan plus inflation.</li>
+                <li><strong>Investera i bostäder.</strong> Boendekostnader stiger oftast med inflationen — äger du din bostad slipper du hyreshöjningar.</li>
+                <li><strong>Förhandla löneökning över inflationen.</strong> Krav på reallöneökning, inte bara nominell.</li>
+                <li><strong>Undvik kontanter på sparkonto långsiktigt.</strong> Endast nödfond (3–6 månadsutgifter) bör ligga på sparkonto.</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Det är inte fel att ha en del kontanter — du behöver buffert och flexibilitet. Men varje krona som "ligger länge" på sparkonto med under-inflations-ränta är en aktiv förlust över tid.</p>
+            </div>
+
+            <h2>Inflation och räntor — hur de hänger ihop</h2>
+            <p>Riksbanken höjer styrräntan när inflationen är för hög och sänker när den är för låg. Sambandet:</p>
+            <ul>
+                <li><strong>Hög inflation → Riksbanken höjer styrräntan → bolåneräntor stiger → konsumtion minskar → inflation dämpas</strong></li>
+                <li><strong>Låg inflation → Riksbanken sänker styrräntan → bolåneräntor sjunker → konsumtion ökar → inflation stiger</strong></li>
+            </ul>
+            <p>Detta är varför bolåneräntorna 2022–2023 sköt i höjden — Riksbanken bekämpade inflationen som steg över 10 % under några månader.</p>
+
+            <h2>Historisk inflation i Sverige</h2>
+            <ul>
+                <li><strong>1970–80-tal:</strong> Hög inflation (10–15 %) på grund av oljekris och löne-pris-spiraler</li>
+                <li><strong>1990-tal:</strong> Inflationsmålet 2 % infördes 1993 efter kronfallet</li>
+                <li><strong>2000–2020:</strong> Stabil inflation oftast 0–2 %</li>
+                <li><strong>2022–2023:</strong> Kraftig inflation upp till ~12 % (energikris, krig, leveranskedjor)</li>
+                <li><strong>2024–2026:</strong> Inflationen tillbaka mot målet 2 %</li>
+            </ul>
+
+            <h2>Vanliga missuppfattningar</h2>
+            <ul>
+                <li><strong>"Inflation är bra om jag har lån."</strong> Delvis sant — det reella värdet av din skuld minskar. Men oftast stiger räntan samtidigt så det är inte gratis.</li>
+                <li><strong>"Sparkonto ger mig skydd."</strong> Bara om räntan överstiger inflationen. På långsiktiga pengar är aktier oftast bättre.</li>
+                <li><strong>"Inflation gör att allt är dyrare."</strong> Nominellt ja — men löner och tillgångar stiger också med tiden. Det är <em>reella</em> skillnader som spelar roll.</li>
+                <li><strong>"Min lön höjs 3 % — jag är inflationssäker."</strong> Bara om inflationen är 3 % eller lägre. Är den 5 % tappar du faktiskt köpkraft.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut inflationens effekt</h3>
+                <p>Skriv in belopp, inflationsnivå och antal år — se exakt vad pengarna är värda i framtidens köpkraft.</p>
+                <a href="/kalkylatorer/inflationskalkylator" class="cta-btn">Öppna inflationskalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är inflation?</button>
+                <div class="faq-answer">Inflation är den allmänna prisökningen i ekonomin — och samtidigt att pengarna tappar köpkraft. När priserna stiger med 2 % per år betyder det att 1 000 kr nästa år köper varor och tjänster som idag skulle kosta cirka 980 kr.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är Riksbankens inflationsmål?</button>
+                <div class="faq-answer">Riksbankens inflationsmål är 2 % per år, mätt med KPIF (konsumentprisindex med fast ränta). Det är ett lagstadgat mål — Riksbanken får använda penningpolitiska verktyg (främst styrräntan) för att hålla inflationen kring den nivån.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Skillnad mellan KPI och KPIF?</button>
+                <div class="faq-answer">KPI mäter alla prisförändringar inklusive bolåneräntor. KPIF är samma index men med ränteförändringarnas effekt neutraliserad. Eftersom Riksbanken styr räntan vore det märkligt att låta deras egen åtgärd påverka deras inflationsmått — därför används KPIF.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är 1 000 kr värt om 20 år?</button>
+                <div class="faq-answer">Vid 2 % årlig inflation är 1 000 kr värt cirka 673 kr i dagens köpkraft om 20 år — en förlust på 33 %. Vid 4 % inflation är samma 1 000 kr värt bara cirka 456 kr om 20 år (förlust 54 %).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur skyddar man sig mot inflation?</button>
+                <div class="faq-answer">På lång sikt ger aktier och fastigheter bäst skydd mot inflation — historiskt 5–7 % real avkastning. Sparkonto med ränta under inflationen är en garanterad reell förlust. Realränteobligationer är ett annat alternativ med garanterad real avkastning.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur hög var inflationen 2022?</button>
+                <div class="faq-answer">Inflationen i Sverige toppade på cirka 12 % under hösten 2022 (KPI) — den högsta nivån sedan 1990-talet. Orsakerna var energikris efter Rysslands invasion av Ukraina, störda leveranskedjor efter pandemin och stigande råvarupriser globalt.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Varför sänker hög inflation bolåneräntorna senare?</button>
+                <div class="faq-answer">Hög inflation tvingar Riksbanken att höja styrräntan för att dämpa konsumtion och investeringar. Höjd styrränta ökar bolåneräntorna. När inflationen sedan kommer ner sänker Riksbanken styrräntan igen — och bolåneräntorna följer efter. Detta är varför bolåneräntorna 2022–2023 sköt i höjden för att sedan komma ner igen.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Är inflation alltid dåligt?</button>
+                <div class="faq-answer">Inte alltid. Låg positiv inflation (~2 %) anses smörja ekonomin — företag kan justera priser och löner uppåt utan att tvingas sänka något. Hög inflation (&gt;5 %) är däremot skadlig eftersom den skapar osäkerhet och urgröper sparande. Deflation (sjunkande priser) är ofta värre än lätt inflation.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas inflationsjusterad lön?</button>
+                <div class="faq-answer">Reallöneökning = nominell löneökning − inflation. Får du 4 % löneökning vid 3 % inflation är din reallöneökning 1 %. Får du bara 2 % löneökning vid 4 % inflation tappar du 2 % i köpkraft trots att nominella lönen ökat. Det är reallönen som avgör om du faktiskt har det bättre.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

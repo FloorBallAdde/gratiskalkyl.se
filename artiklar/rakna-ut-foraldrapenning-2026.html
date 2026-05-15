@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Räkna ut föräldrapenning 2026 – Så mycket får du per dag</title>
+    <meta name="description" content="Föräldrapenning 2026 — så räknar du ut din ersättning per dag. SGI-taket 588 000 kr, 80 %, lägstanivå och grundnivå. Exempel för olika inkomster.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/rakna-ut-foraldrapenning-2026">
+    <meta property="og:title" content="Räkna ut föräldrapenning 2026 – Så mycket får du per dag">
+    <meta property="og:description" content="Föräldrapenning 2026 — så räknar du ut din ersättning. SGI, taket, lägstanivå och konkreta exempel.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/rakna-ut-foraldrapenning-2026">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Räkna ut föräldrapenning 2026">
+    <meta name="twitter:description" content="Föräldrapenning per dag 2026 — SGI-tak, 80-procentsregel, lägstanivå.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Hur mycket föräldrapenning får jag 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Du får 80 % av din SGI (sjukpenninggrundande inkomst) upp till taket 588 000 kr/år 2026. Det motsvarar max cirka 1 250 kr per dag före skatt. För de sista 90 dagarna av de 480 totala dagarna får du lägstanivå på 180 kr/dag oavsett inkomst."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur många föräldradagar finns det per barn?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Totalt 480 dagar per barn — att dela mellan föräldrarna. Av dessa är 390 på sjukpenningnivå (80 % av lönen) och 90 på lägstanivå (180 kr/dag). 90 dagar per förälder är dessutom reserverade (\"pappa-/mammamånader\") och kan inte överlåtas till den andra föräldern."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är SGI-taket 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SGI-taket är 10 × prisbasbeloppet, vilket 2026 är cirka 588 000 kr per år. Det innebär att max ersättning från Försäkringskassan är cirka 1 250 kr per dag före skatt. Tjänar du mer ger inte den extra inkomsten någon högre föräldrapenning från staten."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är föräldralön?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Föräldralön är ett extra tillägg från arbetsgivaren utöver Försäkringskassans ersättning, oftast reglerat i kollektivavtal. Vanligast är 10 % av lönen i 90–180 dagar — vilket lyfter ersättningen till cirka 90 % av lönen. Tjänstemannaavtal har generellt bra föräldralön."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas föräldrapenning för egenföretagare?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "För egenföretagare med F-skatt baseras SGI på förväntad nettointäkt, inte omsättning. Du måste själv kontrollera och uppdatera SGI hos Försäkringskassan — sker det inte används senast registrerade siffra som ofta är inaktuell. Många egenföretagare har för låg registrerad SGI och får därmed mindre ersättning än de borde."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Kan jag ta ut hela föräldrapenningen på 480 dagar i sträck?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, om du tar ut 7 dagar/vecka räcker 480 dagar i ungefär 68 veckor (15,7 månader). De flesta tar bara ut vardagar (5 dagar/vecka) — då räcker 480 dagar i ungefär 96 veckor eller 22 månader. Du måste ta ut dagarna före barnets 12-årsdag."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Kan båda föräldrarna vara hemma samtidigt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, ni kan vara hemma samtidigt under 30 så kallade \"dubbeldagar\" under barnets första år. Båda får ut full föräldrapenning under dessa dagar (totalt 60 dagar förbrukas eftersom båda räknar var sin dag). Användbart vid barnets första veckor eller särskilda tillfällen."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Får jag pension under föräldraledighet?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, du tjänar in allmän pension även under föräldraledighet eftersom föräldrapenningen är pensionsgrundande. Tjänstepension däremot är beroende av kollektivavtal — vissa avtal har full pensionsavsättning under föräldraledigheten, andra inte. Kolla med din arbetsgivare."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "När ska jag anmäla föräldraledighet till arbetsgivaren?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Du måste anmäla minst 2 månader i förväg (eller så fort du vet). För ledighet i samband med barnets födelse räcker det att meddela \"så snart som möjligt\". Anmäl till Försäkringskassan via Mina Sidor — där väljer du också vilken nivå (sjukpenning- eller lägstanivå) och hur många dagar."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Räkna ut föräldrapenning 2026</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Familj</span>
+            <h1>Räkna ut föräldrapenning 2026 – Så mycket får du per dag</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 7 min läsning</p>
+            <p class="article-intro">Föräldrapenningen ger dig <strong>80 % av din lön</strong> upp till ett tak — och varar i totalt <strong>480 dagar per barn</strong> som ni delar mellan er. Här går vi igenom exakt hur ersättningen räknas ut 2026, vad SGI-taket innebär och hur mycket du får per dag vid olika inkomster. Plus de tre nivåerna: sjukpenningnivå, grundnivå och lägstanivå.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>Föräldrapenningens grunddata 2026</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">480</div>
+                    <div class="label">Dagar per barn (totalt)</div>
+                    <div class="desc">Att dela mellan föräldrarna.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">80 %</div>
+                    <div class="label">Av lönen (sjukpenningnivå)</div>
+                    <div class="desc">Upp till SGI-taket.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">588 000</div>
+                    <div class="label">SGI-taket (kr/år) 2026</div>
+                    <div class="desc">10 × prisbasbeloppet (~58 800 kr).</div>
+                </div>
+            </div>
+
+            <h2>De tre nivåerna</h2>
+            <ol>
+                <li><strong>Sjukpenningnivå:</strong> 80 % av SGI (sjukpenninggrundande inkomst), upp till taket på 588 000 kr/år (2026). Max cirka 1 250 kr per dag före skatt. Detta är vad du får på 390 av de 480 dagarna om du har arbetat.</li>
+                <li><strong>Grundnivå:</strong> 250 kr per dag (2026). Gäller om du inte har någon arbetsinkomst men ändå uppfyller kraven (försäkrad i Sverige).</li>
+                <li><strong>Lägstanivå:</strong> 180 kr per dag. Gäller för de sista 90 dagarna av de 480 — oavsett inkomst.</li>
+            </ol>
+
+            <h2>Hur dagarna fördelas</h2>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Dagstyp</th>
+                        <th>Antal dagar</th>
+                        <th>Ersättningsnivå</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sjukpenningnivå (80 %)</td><td>390 dagar</td><td class="num">~1 250 kr/dag max</td></tr>
+                    <tr><td>Lägstanivå</td><td>90 dagar</td><td class="num">180 kr/dag</td></tr>
+                    <tr><td><strong>Totalt</strong></td><td><strong>480 dagar</strong></td><td>—</td></tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <p><strong>Viktigt:</strong> Av de 480 dagarna är <strong>90 dagar reserverade för vardera föräldern</strong> ("pappamånader"/"mammamånader") och kan inte överlåtas. De resterande 300 dagarna är fria att fördela. Använder den ena föräldern inte sina 90 reserverade dagar går de förlorade.</p>
+            </div>
+
+            <h2>Räkneexempel – 30 000 kr/månad i lön</h2>
+            <p>Du tjänar 30 000 kr/månad = 360 000 kr/år. Det är under SGI-taket.</p>
+            <ul>
+                <li>SGI: 360 000 kr/år</li>
+                <li>Daglig ersättning: 360 000 × 0,97 (omräkningstal) / 365 × 0,80 ≈ <strong>~768 kr/dag före skatt</strong></li>
+                <li>Per månad (30 dagar): cirka <strong>23 040 kr före skatt</strong></li>
+                <li>Efter ~30 % skatt: cirka 16 100 kr/månad</li>
+            </ul>
+
+            <h2>Räkneexempel – 50 000 kr/månad i lön</h2>
+            <p>Du tjänar 50 000 kr/månad = 600 000 kr/år. Det överstiger SGI-taket på 588 000 kr.</p>
+            <ul>
+                <li>SGI: 588 000 kr/år (taket — högre lön ger ingen extra ersättning)</li>
+                <li>Daglig ersättning (max): cirka <strong>1 250 kr/dag före skatt</strong></li>
+                <li>Per månad (30 dagar): cirka <strong>37 500 kr före skatt</strong></li>
+                <li>Efter skatt: cirka 26 200 kr/månad</li>
+            </ul>
+            <p>Eftersom din lön ligger över taket "förlorar" du den ersättning som motsvarar 30 000 kr/månad (skillnaden mellan din faktiska och täckta lön). Många arbetsgivare har <strong>föräldralön</strong> som kompletterar — kolla ditt kollektivavtal.</p>
+
+            <h2>Räkneexempel – föräldraledighet med 20 000 kr/månad</h2>
+            <p>Du tjänar 20 000 kr/månad = 240 000 kr/år.</p>
+            <ul>
+                <li>SGI: 240 000 kr/år</li>
+                <li>Daglig ersättning: 240 000 × 0,97 / 365 × 0,80 ≈ <strong>~512 kr/dag före skatt</strong></li>
+                <li>Per månad: cirka <strong>15 360 kr före skatt</strong></li>
+            </ul>
+
+            <h2>Föräldralön — det viktiga tillägget</h2>
+            <p>Många kollektivavtal har <strong>föräldralön</strong> som arbetsgivaren betalar utöver Försäkringskassans ersättning. Vanligast är 10 % av lönen i upp till 90–180 dagar.</p>
+
+            <ul>
+                <li>För lön <em>under</em> taket: föräldralönen kompletterar så du får cirka 90 % av lönen istället för 80 %</li>
+                <li>För lön <em>över</em> taket: föräldralönen kompenserar delvis för det som ligger över Försäkringskassans tak — kan vara 10 % av din faktiska lön över taket</li>
+            </ul>
+
+            <p>Kollektivavtal som har bra föräldralön: <em>Akademikerna, Vision, Unionen, Tjänstemannaavtal</em> — ofta 90 % av lönen i 180 dagar.</p>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Söker du nytt jobb — fråga om föräldralön. Skillnaden mellan kollektivavtal med och utan föräldralön kan bli 30 000–60 000 kr per barn.</p>
+            </div>
+
+            <h2>Hur tas dagar ut?</h2>
+            <p>Du kan ta ut föräldrapenning som:</p>
+            <ul>
+                <li><strong>Hel dag</strong> — 1 dag förbrukas, full ersättning</li>
+                <li><strong>3/4 dag</strong> — du arbetar 25 %, får 75 % av ersättningen, förbrukar 0,75 dagar</li>
+                <li><strong>1/2 dag</strong> — du arbetar 50 %, får 50 %, förbrukar 0,5 dagar</li>
+                <li><strong>1/4 dag</strong> — du arbetar 75 %, får 25 %, förbrukar 0,25 dagar</li>
+                <li><strong>1/8 dag</strong> — du arbetar 87,5 %, får 12,5 %, förbrukar 0,125 dagar</li>
+            </ul>
+            <p>Detta gör det möjligt att "trappa ner" återgång till arbete — extra användbart sista månaderna före full återgång.</p>
+
+            <h2>SGI – hur den räknas</h2>
+            <p>SGI är din "sjukpenninggrundande inkomst" — vad Försäkringskassan anser att du <em>normalt</em> tjänar. Den används som bas för både sjukpenning, föräldrapenning, vab och tillfällig föräldrapenning.</p>
+
+            <ul>
+                <li>Räknas på din <strong>månadsinkomst × 12</strong> (eller liknande), inte semesterersättning eller engångsbelopp</li>
+                <li>Vid varierande lön — gör snitt över rimlig period</li>
+                <li>För egenföretagare med F-skatt: SGI baseras på <em>förväntad</em> inkomst — viktigt att den är realistisk</li>
+                <li>Du kan tappa SGI vid arbetslöshet om du inte söker jobb aktivt — kallas "SGI-skydd"</li>
+            </ul>
+
+            <h2>Föräldrapenning för egenföretagare</h2>
+            <p>Som egenföretagare med F-skatt eller FA-skatt:</p>
+            <ul>
+                <li>SGI baseras på din <strong>förväntade nettointäkt</strong>, inte omsättning</li>
+                <li>Du <em>måste</em> själv kontrollera och uppdatera din SGI hos Försäkringskassan — annars baseras ersättningen på senast registrerade siffra (kan vara orealistiskt låg)</li>
+                <li>Du kan välja "<strong>karens 1 dag</strong>" eller längre — påverkar din sjukförsäkring men inte föräldrapenning</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Viktigt:</strong> Du måste anmäla föräldraledighet till arbetsgivaren minst <strong>2 månader i förväg</strong>. Sen anmälan kan göra att du tappar några dagars ersättning eller skapar problem med kollektivavtals-föräldralönen.</p>
+            </div>
+
+            <h2>Skatt på föräldrapenning</h2>
+            <p>Föräldrapenning beskattas som vanlig inkomst — kommunalskatt + jobbskatteavdrag gäller. Försäkringskassan drar preliminär skatt (30 % standard), men du kan ansöka om jämkning för att få rätt skatteavdrag direkt.</p>
+
+            <h2>Vanliga misstag</h2>
+            <ul>
+                <li><strong>Tror att 480 dagar = 16 månader.</strong> Det är 480 vardagar/helger — om du tar ut 7 dagar/vecka blir det 68 veckor (~15,7 månader).</li>
+                <li><strong>Glömmer pappa-/mammamånaderna.</strong> 90 dagar reserverade per förälder — använder du dem inte går de förlorade vid barnets 12-årsdag.</li>
+                <li><strong>Räknar inte med föräldralön.</strong> Många kollektivavtal har 10 % extra, kan bli 30 000+ kr per barn.</li>
+                <li><strong>Tar ut för många dagar i början.</strong> 90 av de 480 dagarna är på lägstanivå (180 kr/dag) — bäst att spara dem till slutet eller använda dem efter att SGI redan utnyttjats fullt.</li>
+                <li><strong>Egenföretagare med felaktig SGI.</strong> Glömmer uppdatera SGI hos Försäkringskassan → får för lite ersättning.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut din föräldrapenning</h3>
+                <p>Skriv in din månadslön — se exakt vad du får per dag, per månad och total ersättning över hela ledigheten.</p>
+                <a href="/kalkylatorer/foraldrapenning" class="cta-btn">Öppna föräldrapenning-kalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket föräldrapenning får jag 2026?</button>
+                <div class="faq-answer">Du får 80 % av din SGI (sjukpenninggrundande inkomst) upp till taket 588 000 kr/år 2026. Det motsvarar max cirka 1 250 kr per dag före skatt. För de sista 90 dagarna av de 480 totala dagarna får du lägstanivå på 180 kr/dag oavsett inkomst.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur många föräldradagar finns det per barn?</button>
+                <div class="faq-answer">Totalt 480 dagar per barn — att dela mellan föräldrarna. Av dessa är 390 på sjukpenningnivå (80 % av lönen) och 90 på lägstanivå (180 kr/dag). 90 dagar per förälder är dessutom reserverade (&quot;pappa-/mammamånader&quot;) och kan inte överlåtas till den andra föräldern.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är SGI-taket 2026?</button>
+                <div class="faq-answer">SGI-taket är 10 × prisbasbeloppet, vilket 2026 är cirka 588 000 kr per år. Det innebär att max ersättning från Försäkringskassan är cirka 1 250 kr per dag före skatt. Tjänar du mer ger inte den extra inkomsten någon högre föräldrapenning från staten.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är föräldralön?</button>
+                <div class="faq-answer">Föräldralön är ett extra tillägg från arbetsgivaren utöver Försäkringskassans ersättning, oftast reglerat i kollektivavtal. Vanligast är 10 % av lönen i 90–180 dagar — vilket lyfter ersättningen till cirka 90 % av lönen. Tjänstemannaavtal har generellt bra föräldralön.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas föräldrapenning för egenföretagare?</button>
+                <div class="faq-answer">För egenföretagare med F-skatt baseras SGI på förväntad nettointäkt, inte omsättning. Du måste själv kontrollera och uppdatera SGI hos Försäkringskassan — sker det inte används senast registrerade siffra som ofta är inaktuell. Många egenföretagare har för låg registrerad SGI och får därmed mindre ersättning än de borde.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Kan jag ta ut hela föräldrapenningen på 480 dagar i sträck?</button>
+                <div class="faq-answer">Ja, om du tar ut 7 dagar/vecka räcker 480 dagar i ungefär 68 veckor (15,7 månader). De flesta tar bara ut vardagar (5 dagar/vecka) — då räcker 480 dagar i ungefär 96 veckor eller 22 månader. Du måste ta ut dagarna före barnets 12-årsdag.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Kan båda föräldrarna vara hemma samtidigt?</button>
+                <div class="faq-answer">Ja, ni kan vara hemma samtidigt under 30 så kallade &quot;dubbeldagar&quot; under barnets första år. Båda får ut full föräldrapenning under dessa dagar (totalt 60 dagar förbrukas eftersom båda räknar var sin dag). Användbart vid barnets första veckor eller särskilda tillfällen.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Får jag pension under föräldraledighet?</button>
+                <div class="faq-answer">Ja, du tjänar in allmän pension även under föräldraledighet eftersom föräldrapenningen är pensionsgrundande. Tjänstepension däremot är beroende av kollektivavtal — vissa avtal har full pensionsavsättning under föräldraledigheten, andra inte. Kolla med din arbetsgivare.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">När ska jag anmäla föräldraledighet till arbetsgivaren?</button>
+                <div class="faq-answer">Du måste anmäla minst 2 månader i förväg (eller så fort du vet). För ledighet i samband med barnets födelse räcker det att meddela &quot;så snart som möjligt&quot;. Anmäl till Försäkringskassan via Mina Sidor — där väljer du också vilken nivå (sjukpenning- eller lägstanivå) och hur många dagar.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

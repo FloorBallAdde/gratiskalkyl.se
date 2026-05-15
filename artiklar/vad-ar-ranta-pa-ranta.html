@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Vad är ränta på ränta? – Så fungerar världens 8:e underverk</title>
+    <meta name="description" content="Ränta på ränta gör att ditt sparande växer exponentiellt över tid. Så fungerar effekten, formeln och varför Einstein kallade det världens 8:e underverk.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/vad-ar-ranta-pa-ranta">
+    <meta property="og:title" content="Vad är ränta på ränta? – Så fungerar världens 8:e underverk">
+    <meta property="og:description" content="Ränta på ränta-effekten förklarad — hur ditt sparande växer exponentiellt och varför tid är viktigare än insättning.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/vad-ar-ranta-pa-ranta">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vad är ränta på ränta? – Förklaring & exempel">
+    <meta name="twitter:description" content="Ränta på ränta gör sparande exponentiellt. Formeln, exemplen och varför tid slår timing.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Vad är ränta på ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ränta på ränta innebär att du tjänar avkastning även på den avkastning du redan tjänat. Pengarna växer exponentiellt över tid — varje års avkastning ökar grundbeloppet som genererar nästa års avkastning. Albert Einstein lär ha kallat det \"världens 8:e underverk\"."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur mycket är 1 000 kr/månad i 30 år värt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vid 7 % årlig avkastning blir 1 000 kr/månad i 30 år ungefär 1,22 miljoner kronor. Din egen insättning är 360 000 kr — resten (860 000 kr) är avkastning från ränta på ränta-effekten."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är formeln för ränta på ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Slutbelopp = Startbelopp × (1 + räntesats)^antal år. Exempel: 10 000 kr × (1,07)^20 = 38 700 kr efter 20 år vid 7 % årlig ränta. För månatligt sparande används en mer komplex formel men principen är densamma."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är regeln om 72?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Regel om 72 är ett snabbt sätt att räkna ut hur lång tid det tar att fördubbla pengar. Dela 72 med räntesatsen: vid 7 % ränta tar det 10 år, vid 4 % tar det 18 år. Funkar för räntor mellan 4 och 15 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är skillnaden mellan enkel ränta och ränta på ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enkel ränta beräknas bara på grundbeloppet — du får samma räntebelopp varje år. Ränta på ränta beräknas på grundbeloppet plus redan upparbetad ränta — beloppet växer exponentiellt. På lång sikt blir skillnaden enorm."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Varför ska man börja spara tidigt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tid är den viktigaste variabeln i ränta på ränta-effekten. Den som börjar spara vid 25 år och slutar vid 35 (10 års sparande) kan ofta sluta med mer kapital än den som sparar lika mycket varje månad mellan 35 och 65 år (30 års sparande) — för att avkastningen får längre tid att kompoundera."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur påverkar avgifter ränta på ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Avgifter på 1 % per år kan låta lite, men på lång sikt äter de upp 20–30 % av slutbeloppet. En indexfond med 0,2 % avgift slår nästan alltid aktivt förvaltade fonder med 1,5 % avgift på 20+ års sikt, just på grund av kompoundningseffekten."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Är ISK eller depå bättre för ränta på ränta?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ISK är vanligtvis bättre eftersom du betalar en låg schablonskatt (cirka 0,888 % på kapitalet 2026) istället för 30 % på vinsten. Pengarna kompounderar utan att skatt äter avkastningen varje år. ISK lönar sig om din avkastning överstiger cirka 3 % per år."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är en realistisk avkastning för långsiktigt sparande?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "På en bred global indexfond är en realistisk långsiktig avkastning cirka 7 % per år i nominella tal (cirka 5 % efter inflation). Räntefonder ligger lägre (2–4 %), enskilda aktier kan svänga mer. Använd 6–7 % som en konservativ utgångspunkt i din beräkning."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Vad är ränta på ränta?</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Sparande</span>
+            <h1>Vad är ränta på ränta? – Världens 8:e underverk förklarat</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 6 min läsning</p>
+            <p class="article-intro">Ränta på ränta — eller <strong>compound interest</strong> som det kallas på engelska — är den effekt som gör att avkastningen i sig själv börjar generera ny avkastning. Albert Einstein lär ha kallat det "världens åttonde underverk". Det är förklaringen till varför ett sparkonto med 100 kr/månad i 40 år kan växa till över en miljon kronor. Här går vi igenom hur det fungerar och visar exakt vad ditt sparande blir över tid.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>Ränta på ränta – grundprincipen</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">7 %</div>
+                    <div class="label">Snittavkastning aktier</div>
+                    <div class="desc">Reell avkastning på lång sikt (efter inflation).</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">10 år</div>
+                    <div class="label">Dubblar pengarna vid 7 %</div>
+                    <div class="desc">Regel om 72: 72/ränta = år till fördubbling.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">8x</div>
+                    <div class="label">Tillväxt på 30 år vid 7 %</div>
+                    <div class="desc">10 000 kr blir ~80 000 kr utan en enda extra insättning.</div>
+                </div>
+            </div>
+
+            <p>Med <strong>enkel ränta</strong> tjänar du ränta bara på det ursprungliga beloppet. Sätter du in 10 000 kr till 5 % får du 500 kr i ränta varje år — i evigheter.</p>
+
+            <p>Med <strong>ränta på ränta</strong> tjänar du ränta även på den ränta du redan tjänat. Det första året får du 500 kr. Andra året får du ränta på 10 500 kr → 525 kr. Tredje året på 11 025 kr → 551 kr. Och så vidare. Beloppet växer exponentiellt, inte linjärt.</p>
+
+            <h2>Formeln för ränta på ränta</h2>
+            <p>Den matematiska formeln är:</p>
+            <p><strong>Slutbelopp = Startbelopp × (1 + ränta)^år</strong></p>
+            <p>Exempel: 10 000 kr × (1 + 0,07)^20 = 10 000 × 3,87 = <strong>38 700 kr</strong> efter 20 år.</p>
+
+            <p>Med <strong>månatligt sparande</strong> blir formeln något mer komplex, men resultatet drivs av samma princip — varje insättning börjar omedelbart generera egen avkastning.</p>
+
+            <div class="info-box">
+                <p><strong>Regel om 72:</strong> Vill du veta hur många år det tar att fördubbla ett belopp? Dela 72 med räntesatsen. Vid 7 % ränta fördubblas pengarna på ~10 år. Vid 4 % tar det 18 år. Vid 10 % tar det 7 år.</p>
+            </div>
+
+            <h2>Räkneexempel – 1 000 kr/månad i 30 år</h2>
+            <p>Du sätter in 1 000 kr/månad på ett ISK-konto och får i snitt 7 % årlig avkastning. Efter 30 år har du:</p>
+            <ul>
+                <li>Egen insättning totalt: 1 000 × 12 × 30 = <strong>360 000 kr</strong></li>
+                <li>Avkastning (ränta på ränta): <strong>~860 000 kr</strong></li>
+                <li>Totalt sparkapital: <strong>~1 220 000 kr</strong></li>
+            </ul>
+            <p>Du har själv satt in 360 000 kr — men avkastningen är mer än dubbelt så stor som dina egna insättningar. Det är ränta-på-ränta-effekten i kortform.</p>
+
+            <h2>Räkneexempel – varför tidigt sparande slår sent</h2>
+            <p>Två vänner, Anna och Björn, ska båda gå i pension vid 65.</p>
+            <ul>
+                <li><strong>Anna</strong> börjar spara 2 000 kr/mån vid 25 och slutar vid 35. Hon sparar bara i 10 år — totalt 240 000 kr egen insättning.</li>
+                <li><strong>Björn</strong> väntar och börjar vid 35, sparar 2 000 kr/mån fram till 65. Han sparar i 30 år — totalt 720 000 kr egen insättning.</li>
+            </ul>
+            <p>Vid 7 % avkastning blir resultatet vid 65 års ålder:</p>
+            <ul>
+                <li><strong>Anna: ~2,4 miljoner kr</strong> (insatt 240 000, växt i 30 år efter sista insättningen)</li>
+                <li><strong>Björn: ~2,3 miljoner kr</strong> (insatt 720 000, men inte lika lång tillväxttid)</li>
+            </ul>
+            <p>Anna sparade <em>en tredjedel</em> av Björns belopp och fick ändå <em>mer</em>. Tio år tidigare start var värt 480 000 kr i extra insättning.</p>
+
+            <div class="info-box">
+                <p><strong>Sensmoral:</strong> Tiden är den viktigaste variabeln, inte beloppet. Börja spara så tidigt du kan — även små belopp.</p>
+            </div>
+
+            <h2>Vad påverkar ränta på ränta-effekten?</h2>
+            <ol>
+                <li><strong>Tid.</strong> Den klart viktigaste variabeln. Effekten är exponentiell — varje extra år ger oproportionerligt mycket mer.</li>
+                <li><strong>Räntesats / avkastning.</strong> Skillnaden mellan 5 % och 8 % verkar liten men blir enorm över 30 år. 10 000 kr blir 43 200 kr vid 5 % och 100 600 kr vid 8 % efter 30 år.</li>
+                <li><strong>Insättningsfrekvens.</strong> Månadsvis insättning ger mer än årsvis, eftersom varje krona börjar generera avkastning tidigare.</li>
+                <li><strong>Avgifter.</strong> En fondavgift på 1 %/år kan sänka slutbeloppet med 20–30 % över en spartid på 30 år. Indexfonder med låga avgifter (under 0,2 %) maximerar effekten.</li>
+                <li><strong>Skatt.</strong> ISK med 0,888 % schablonskatt (2026) är vanligtvis bättre än depåkonto med 30 % kapitalvinstskatt, om du har en avkastning över ungefär 3 %.</li>
+            </ol>
+
+            <h2>Tabell – så växer 1 000 kr/månad över tid</h2>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Spartid</th>
+                        <th>Egen insättning</th>
+                        <th>Slutbelopp vid 7 %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>10 år</td><td>120 000 kr</td><td class="num">172 800 kr</td></tr>
+                    <tr><td>20 år</td><td>240 000 kr</td><td class="num">520 900 kr</td></tr>
+                    <tr><td>30 år</td><td>360 000 kr</td><td class="num">1 220 000 kr</td></tr>
+                    <tr><td>40 år</td><td>480 000 kr</td><td class="num">2 640 000 kr</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Vanliga misstag</h2>
+            <ul>
+                <li><strong>Att vänta med att börja spara.</strong> "Jag börjar när jag tjänar mer" — men varje år du väntar kostar exponentiellt mycket vid pensionen.</li>
+                <li><strong>Att ta ut pengar mellan åren.</strong> Bryter ränta på ränta-cykeln. Sätt in på ett konto du inte rör (gärna ISK).</li>
+                <li><strong>Att jaga snabba avkastningar.</strong> Hög volatilitet drar ner medianavkastningen — stabila indexfonder slår oftast aktiv förvaltning över 20+ år.</li>
+                <li><strong>Glömma inflationen.</strong> Sätter du in på sparkonto med 0,5 % ränta och inflationen är 2 % förlorar du köpkraft varje år. Aktier behövs för att slå inflationen på lång sikt.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut ditt eget sparmål</h3>
+                <p>Skriv in månadsbelopp, antal år och förväntad avkastning — se exakt hur pengarna växer med ränta på ränta.</p>
+                <a href="/kalkylatorer/ranta-pa-ranta" class="cta-btn">Öppna ränta-på-ränta-kalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är ränta på ränta?</button>
+                <div class="faq-answer">Ränta på ränta innebär att du tjänar avkastning även på den avkastning du redan tjänat. Pengarna växer exponentiellt över tid — varje års avkastning ökar grundbeloppet som genererar nästa års avkastning. Albert Einstein lär ha kallat det &quot;världens 8:e underverk&quot;.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket är 1 000 kr/månad i 30 år värt?</button>
+                <div class="faq-answer">Vid 7 % årlig avkastning blir 1 000 kr/månad i 30 år ungefär 1,22 miljoner kronor. Din egen insättning är 360 000 kr — resten (860 000 kr) är avkastning från ränta på ränta-effekten.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är formeln för ränta på ränta?</button>
+                <div class="faq-answer">Slutbelopp = Startbelopp × (1 + räntesats)^antal år. Exempel: 10 000 kr × (1,07)^20 = 38 700 kr efter 20 år vid 7 % årlig ränta. För månatligt sparande används en mer komplex formel men principen är densamma.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är regeln om 72?</button>
+                <div class="faq-answer">Regel om 72 är ett snabbt sätt att räkna ut hur lång tid det tar att fördubbla pengar. Dela 72 med räntesatsen: vid 7 % ränta tar det 10 år, vid 4 % tar det 18 år. Funkar för räntor mellan 4 och 15 %.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är skillnaden mellan enkel ränta och ränta på ränta?</button>
+                <div class="faq-answer">Enkel ränta beräknas bara på grundbeloppet — du får samma räntebelopp varje år. Ränta på ränta beräknas på grundbeloppet plus redan upparbetad ränta — beloppet växer exponentiellt. På lång sikt blir skillnaden enorm.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Varför ska man börja spara tidigt?</button>
+                <div class="faq-answer">Tid är den viktigaste variabeln i ränta på ränta-effekten. Den som börjar spara vid 25 år och slutar vid 35 (10 års sparande) kan ofta sluta med mer kapital än den som sparar lika mycket varje månad mellan 35 och 65 år (30 års sparande) — för att avkastningen får längre tid att kompoundera.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur påverkar avgifter ränta på ränta?</button>
+                <div class="faq-answer">Avgifter på 1 % per år kan låta lite, men på lång sikt äter de upp 20–30 % av slutbeloppet. En indexfond med 0,2 % avgift slår nästan alltid aktivt förvaltade fonder med 1,5 % avgift på 20+ års sikt, just på grund av kompoundningseffekten.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Är ISK eller depå bättre för ränta på ränta?</button>
+                <div class="faq-answer">ISK är vanligtvis bättre eftersom du betalar en låg schablonskatt (cirka 0,888 % på kapitalet 2026) istället för 30 % på vinsten. Pengarna kompounderar utan att skatt äter avkastningen varje år. ISK lönar sig om din avkastning överstiger cirka 3 % per år.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är en realistisk avkastning för långsiktigt sparande?</button>
+                <div class="faq-answer">På en bred global indexfond är en realistisk långsiktig avkastning cirka 7 % per år i nominella tal (cirka 5 % efter inflation). Räntefonder ligger lägre (2–4 %), enskilda aktier kan svänga mer. Använd 6–7 % som en konservativ utgångspunkt i din beräkning.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

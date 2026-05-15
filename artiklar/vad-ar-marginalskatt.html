@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Vad är marginalskatt? – Så mycket skattar du på sista kronan</title>
+    <meta name="description" content="Marginalskatt 2026 är skatten på din sista intjänade krona — i Sverige 32–55 % beroende på lön. Så fungerar den och vad den betyder för lönehöjning, bonus och OB.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/vad-ar-marginalskatt">
+    <meta property="og:title" content="Vad är marginalskatt? – Så mycket skattar du på sista kronan">
+    <meta property="og:description" content="Marginalskatt 2026 — skatten på din sista intjänade krona. Förklaring, exempel och vad den betyder för lönehöjning och bonus.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/vad-ar-marginalskatt">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vad är marginalskatt? – 2026 års nivåer">
+    <meta name="twitter:description" content="Skatten på sista kronan: 32–55 % beroende på lön. Så fungerar marginalskatten i Sverige.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Vad är marginalskatt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Marginalskatt är den skatt du betalar på den sista intjänade kronan — inte snittet på hela lönen. I Sverige ligger marginalskatten mellan 32 och 52 % beroende på inkomstnivå. Det är marginalskatten som avgör hur mycket du får ut netto av en lönehöjning eller bonus."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är skiktgränsen för statlig skatt 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brytpunkten för statlig skatt 2026 är 640 200 kr per år, eller 53 350 kr per månad. På inkomst över den nivån betalar du 20 % statlig skatt utöver kommunalskatten — vilket gör marginalskatten cirka 52 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är skillnaden mellan marginalskatt och genomsnittsskatt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Genomsnittsskatt är total skatt delat med total inkomst (effektiv skattesats). Marginalskatt är skatten på just den sista intjänade kronan. I ett progressivt skattesystem som Sveriges är marginalskatten alltid högre än genomsnittsskatten."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur hög är marginalskatten i Sverige 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "För inkomst under brytpunkten (640 200 kr/år) är marginalskatten cirka 32 % (kommunalskatt minus jobbskatteavdrag). För inkomst över brytpunkten tillkommer 20 % statlig skatt, vilket ger en total marginalskatt på cirka 52 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad blir en lönehöjning på 3 000 kr netto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Om du ligger under brytpunkten (under 53 350 kr/mån) blir nettot cirka 2 040 kr (32 % skatt). Om du ligger över brytpunkten blir nettot cirka 1 440 kr (52 % skatt). Marginalskatten avgör — inte din nuvarande genomsnittsskatt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Är värnskatten kvar 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nej, värnskatten på 5 % avskaffades 1 januari 2020. Tidigare hade Sverige tre statliga skiktgränser — nu finns bara en brytpunkt på 640 200 kr/år och en statlig skattesats på 20 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas marginalskatt med jobbskatteavdrag?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jobbskatteavdraget är en skattereduktion som ges på arbetsinkomst. Det sänker både genomsnittsskatten och marginalskatten — i intervallet där det fasas in. För typiska heltidslöner är effektiv marginalskatt cirka 32 % (lägre än kommunalskatten på ~32 % på grund av jobbskatteavdraget)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Påverkar marginalskatten valet mellan lön och utdelning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Egenföretagare med eget bolag kan ofta välja mellan att ta lön (beskattas med marginalskatt 32–52 %) eller utdelning enligt 3:12-reglerna (20 % skatt under gränsbeloppet). Vid hög marginalskatt är utdelning ofta mer skatteeffektivt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är \"marginalskatt på arbete\" inklusive arbetsgivaravgift?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Räknar man in arbetsgivaravgift (31,42 % på bruttolönen) och kommunal- + statlig skatt blir total marginalskatt på arbete cirka 67 % över brytpunkten. Detta är vad debatten ibland refererar till — men du som löntagare ser bara dina cirka 52 %."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Vad är marginalskatt?</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Skatt</span>
+            <h1>Vad är marginalskatt? – Skatten på din sista intjänade krona</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 6 min läsning</p>
+            <p class="article-intro"><strong>Marginalskatt</strong> är vad du betalar i skatt på <em>nästa</em> intjänade krona — inte snittet på hela lönen. I Sverige ligger marginalskatten mellan 32 och 55 % beroende på vad du tjänar. Det är marginalskatten som avgör hur mycket netto du får av en lönehöjning, bonus, OB-tillägg eller frilans-faktura. Här går vi igenom skiktgränserna 2026 och vad det betyder i praktiken.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>Marginalskatt – två komponenter</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">~32 %</div>
+                    <div class="label">Marginalskatt under brytpunkten</div>
+                    <div class="desc">Kommunalskatt minus jobbskatteavdrag.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">~52 %</div>
+                    <div class="label">Marginalskatt över brytpunkten</div>
+                    <div class="desc">Kommunalskatt + 20 % statlig.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">640 200</div>
+                    <div class="label">Brytpunkt (kr/år) 2026</div>
+                    <div class="desc">53 350 kr/mån — då slår statlig skatt in.</div>
+                </div>
+            </div>
+
+            <h2>Vad är skillnaden mellan marginal- och genomsnittsskatt?</h2>
+            <p><strong>Genomsnittsskatt</strong> är total skatt delat med total inkomst — det vill säga den effektiva skattesatsen på hela lönen.</p>
+            <p><strong>Marginalskatt</strong> är skatten på den <em>sista</em> kronan du tjänar — alltså hur stor del av en lönehöjning eller bonus du tappar till Skatteverket.</p>
+            <p>Marginalskatten är nästan alltid <em>högre</em> än genomsnittsskatten i ett progressivt skattesystem som det svenska. Det är därför "skatten på lönehöjningen" känns högre än "skatten på lönen".</p>
+
+            <h2>Marginalskattens skiktgränser 2026</h2>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Inkomst-intervall</th>
+                        <th>Vad som beskattas</th>
+                        <th>Marginalskatt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0 – ~25 000 kr/år</td><td>Grundavdrag (ingen skatt)</td><td class="num">0 %</td></tr>
+                    <tr><td>~25 000 – 640 200 kr/år</td><td>Kommunalskatt − jobbskatteavdrag</td><td class="num">~32 %</td></tr>
+                    <tr><td>Över 640 200 kr/år</td><td>+ 20 % statlig skatt</td><td class="num">~52 %</td></tr>
+                </tbody>
+            </table>
+
+            <p>Värnskatten på 5 % avskaffades 2020, så Sverige har sedan dess bara <em>två</em> skiktgränser för förvärvsinkomst — inte tre som tidigare.</p>
+
+            <div class="info-box">
+                <p><strong>Notera:</strong> När man räknar in arbetsgivaravgifter (~31,4 %) på lönen blir den "totala marginalskatten" på arbete cirka 67 % över brytpunkten. Det är den siffran som ibland nämns i debatten — men du som löntagare ser bara dina cirka 52 %.</p>
+            </div>
+
+            <h2>Räkneexempel – lönehöjning under brytpunkten</h2>
+            <p>Du tjänar 35 000 kr/månad och får 2 000 kr i lönehöjning. Marginalskatten är cirka 32 %.</p>
+            <ul>
+                <li>Bruttohöjning: 2 000 kr/månad</li>
+                <li>Skatt: 2 000 × 32 % = 640 kr</li>
+                <li><strong>Nettohöjning: 1 360 kr/månad</strong></li>
+            </ul>
+            <p>Av varje extra hundralapp i lön landar 68 kr på kontot — när du är under brytpunkten för statlig skatt.</p>
+
+            <h2>Räkneexempel – lönehöjning över brytpunkten</h2>
+            <p>Du tjänar 60 000 kr/månad och får 5 000 kr i lönehöjning. Eftersom hela höjningen ligger över brytpunkten är marginalskatten cirka 52 %.</p>
+            <ul>
+                <li>Bruttohöjning: 5 000 kr/månad</li>
+                <li>Skatt (kommunal ~32 % + statlig 20 %): 5 000 × 52 % = 2 600 kr</li>
+                <li><strong>Nettohöjning: 2 400 kr/månad</strong></li>
+            </ul>
+            <p>Av varje extra hundralapp i lön landar bara 48 kr på kontot när du är över brytpunkten.</p>
+
+            <h2>Räkneexempel – bonus som passerar brytpunkten</h2>
+            <p>Du tjänar 50 000 kr/månad och får 30 000 kr i engångsbonus. Genom bonusen passerar du brytpunkten — så marginalskatten är blandad.</p>
+            <ul>
+                <li>Den del av bonusen som ligger under brytpunkten (3 350 kr): beskattas med ~32 %</li>
+                <li>Den del som ligger över brytpunkten (26 650 kr): beskattas med ~52 %</li>
+                <li>Skatt totalt: 3 350 × 0,32 + 26 650 × 0,52 = 1 072 + 13 858 = 14 930 kr</li>
+                <li><strong>Netto av bonusen: ~15 070 kr</strong></li>
+            </ul>
+
+            <h2>Varför marginalskatten spelar roll</h2>
+            <ul>
+                <li><strong>Lönehöjning vs förmåner.</strong> Vid hög marginalskatt blir skattefria förmåner (friskvård, tjänstepension via löneväxling) ofta mer värda än motsvarande bruttolönehöjning.</li>
+                <li><strong>Extrajobb och frilans.</strong> Din marginalskatt på huvudlönen avgör vad du faktiskt får ut av varje frilanstimme — om huvudlönen ligger över brytpunkten beskattas frilanstimmen i samma skikt.</li>
+                <li><strong>Sparbeslut.</strong> Är marginalskatten 52 % kan löneväxling till tjänstepension vara mycket lönsamt — du sänker beskattningsbar inkomst nu och beskattas eventuellt lägre vid utbetalning.</li>
+                <li><strong>RUT/ROT.</strong> Avdragen är värda mer för dig som har hög marginalskatt, eftersom du har mer skatt att kvitta avdraget mot.</li>
+            </ul>
+
+            <h2>Marginalskatt på kapitalinkomst</h2>
+            <p>Marginalskatt diskuteras oftast om löneinkomst, men det finns även marginalskatt på kapital:</p>
+            <ul>
+                <li><strong>Aktievinster och utdelning:</strong> 30 % flat skatt (kapitalvinstskatt).</li>
+                <li><strong>ISK:</strong> ~0,888 % schablonskatt på kapitalet 2026 — ingen skatt på vinsten alls.</li>
+                <li><strong>Bostadsvinst:</strong> 22 % kapitalvinstskatt på vinst (med möjlighet till uppskov).</li>
+                <li><strong>Ränteinkomster:</strong> 30 %.</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Vid hög marginalskatt på lön (52 %) är det ofta mer skatteeffektivt att ta utdelning från eget bolag (3:12-reglerna ger 20 % skatt under gränsbeloppet) — under förutsättning att du har eget bolag. Konsultera redovisningsbyrå för upplägget.</p>
+            </div>
+
+            <h2>Vanliga missuppfattningar</h2>
+            <ul>
+                <li><strong>"Jag tappar 50 % av allt över brytpunkten."</strong> Nej — du tappar 50 % av <em>den del</em> som ligger över brytpunkten. Inkomsten under brytpunkten beskattas precis som tidigare.</li>
+                <li><strong>"Värnskatten finns kvar."</strong> Nej, värnskatten avskaffades 2020. Sverige har idag bara en statlig skiktgräns.</li>
+                <li><strong>"Marginalskatt = arbetsgivaravgift."</strong> Arbetsgivaravgiften (31,4 %) betalas av arbetsgivaren ovanpå din bruttolön — du ser den inte själv på lönebeskedet.</li>
+                <li><strong>"Min lönehöjning på 2 000 kr blir bara 1 000 kr netto."</strong> Bara om du ligger i statlig skatt — under brytpunkten blir nettot cirka 1 360 kr av 2 000 kr.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut din marginalskatt</h3>
+                <p>Skriv in din månadslön — se din exakta marginalskatt och vad nästa lönehöjning blir netto.</p>
+                <a href="/kalkylatorer/marginalskattekalkylator" class="cta-btn">Öppna marginalskatte­kalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är marginalskatt?</button>
+                <div class="faq-answer">Marginalskatt är den skatt du betalar på den sista intjänade kronan — inte snittet på hela lönen. I Sverige ligger marginalskatten mellan 32 och 52 % beroende på inkomstnivå. Det är marginalskatten som avgör hur mycket du får ut netto av en lönehöjning eller bonus.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är skiktgränsen för statlig skatt 2026?</button>
+                <div class="faq-answer">Brytpunkten för statlig skatt 2026 är 640 200 kr per år, eller 53 350 kr per månad. På inkomst över den nivån betalar du 20 % statlig skatt utöver kommunalskatten — vilket gör marginalskatten cirka 52 %.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är skillnaden mellan marginalskatt och genomsnittsskatt?</button>
+                <div class="faq-answer">Genomsnittsskatt är total skatt delat med total inkomst (effektiv skattesats). Marginalskatt är skatten på just den sista intjänade kronan. I ett progressivt skattesystem som Sveriges är marginalskatten alltid högre än genomsnittsskatten.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur hög är marginalskatten i Sverige 2026?</button>
+                <div class="faq-answer">För inkomst under brytpunkten (640 200 kr/år) är marginalskatten cirka 32 % (kommunalskatt minus jobbskatteavdrag). För inkomst över brytpunkten tillkommer 20 % statlig skatt, vilket ger en total marginalskatt på cirka 52 %.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad blir en lönehöjning på 3 000 kr netto?</button>
+                <div class="faq-answer">Om du ligger under brytpunkten (under 53 350 kr/mån) blir nettot cirka 2 040 kr (32 % skatt). Om du ligger över brytpunkten blir nettot cirka 1 440 kr (52 % skatt). Marginalskatten avgör — inte din nuvarande genomsnittsskatt.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Är värnskatten kvar 2026?</button>
+                <div class="faq-answer">Nej, värnskatten på 5 % avskaffades 1 januari 2020. Tidigare hade Sverige tre statliga skiktgränser — nu finns bara en brytpunkt på 640 200 kr/år och en statlig skattesats på 20 %.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas marginalskatt med jobbskatteavdrag?</button>
+                <div class="faq-answer">Jobbskatteavdraget är en skattereduktion som ges på arbetsinkomst. Det sänker både genomsnittsskatten och marginalskatten — i intervallet där det fasas in. För typiska heltidslöner är effektiv marginalskatt cirka 32 % (lägre än kommunalskatten på ~32 % på grund av jobbskatteavdraget).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Påverkar marginalskatten valet mellan lön och utdelning?</button>
+                <div class="faq-answer">Ja. Egenföretagare med eget bolag kan ofta välja mellan att ta lön (beskattas med marginalskatt 32–52 %) eller utdelning enligt 3:12-reglerna (20 % skatt under gränsbeloppet). Vid hög marginalskatt är utdelning ofta mer skatteeffektivt.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är &quot;marginalskatt på arbete&quot; inklusive arbetsgivaravgift?</button>
+                <div class="faq-answer">Räknar man in arbetsgivaravgift (31,42 % på bruttolönen) och kommunal- + statlig skatt blir total marginalskatt på arbete cirka 67 % över brytpunkten. Detta är vad debatten ibland refererar till — men du som löntagare ser bara dina cirka 52 %.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

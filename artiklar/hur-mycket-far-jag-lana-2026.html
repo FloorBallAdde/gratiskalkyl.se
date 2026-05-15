@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Hur mycket får jag låna 2026? – Bolån, privatlån & KALP</title>
+    <meta name="description" content="Så räknar bankerna ut hur mycket du får låna 2026 — bolånetaket 85 %, KALP-kvar-att-leva-på och skuldkvotstaket 4,5x inkomsten. Exempel för olika inkomster.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026">
+    <meta property="og:title" content="Hur mycket får jag låna 2026? – Bolån, privatlån & KALP">
+    <meta property="og:description" content="Lånebelopp 2026 — bolånetaket, KALP och skuldkvotstak förklarat. Hur mycket får du verkligen låna?">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hur mycket får jag låna 2026?">
+    <meta name="twitter:description" content="Bolånetak 85 %, skuldkvotstak 4,5x och KALP — så räknar banken ut ditt max-belopp.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text); }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Hur mycket får jag låna 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Du får låna max 85 % av bostadens värde (bolånetaket) och max 4,5 × hushållets bruttoårsinkomst (skuldkvotstaket). Dessutom måste du klara bankens KALP-test där kalkylräntan är cirka 7 % och du måste ha \"kvar att leva på\" efter alla utgifter. Den lägsta av dessa tre gränser blir ditt max-belopp."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är bolånetaket 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bolånetaket är 85 % av bostadens värde. Det betyder att du måste ha minst 15 % i kontantinsats. På en bostad värd 3 miljoner kr får du alltså låna max 2 550 000 kr — resten (450 000 kr) måste vara eget kapital eller annan finansiering."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är skuldkvotstaket?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Skuldkvotstaket är 4,5 × hushållets bruttoårsinkomst. Vid en bruttolön på 600 000 kr/år är max total skuld 2 700 000 kr. Detta är inte lag men en stark rekommendation från Finansinspektionen som de flesta banker följer strikt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är KALP-beräkning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "KALP står för \"Kvar att leva på\". Banken stress-testar din ekonomi genom att räkna med en kalkylränta på cirka 7 % (även om din faktiska ränta är 4 %) plus schablonbelopp för mat, kläder, försäkringar, barn och bil. Du måste ha tillräckligt kvar per månad efter alla utgifter för att få lånet."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur mycket är amorteringskravet 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Belåningsgrad över 70 % kräver 2 % årlig amortering. Belåningsgrad 50–70 % kräver 1 %. Under 50 % finns inget tvingande amorteringskrav. Om skuldkvoten dessutom överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men sådana lån godkänns sällan av bank."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas min skuldkvot?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Skuldkvot = total skuld / bruttoårsinkomst. Total skuld inkluderar bolån, privatlån, billån, studielån (CSN) och kreditkortsskuld. Bruttoårsinkomst räknas före skatt. Vid skuldkvot >4,5 anses lånet riskabelt och avslås oftast."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Räknas CSN-lån mot skuldkvoten?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, CSN-skuld räknas in i den totala skulden vid skuldkvotsberäkning. Har du 200 000 kr i CSN-skuld minskar utrymmet för bolån med 200 000 kr. Däremot räknas CSN-månadsbetalningen oftast inte fullt ut i KALP eftersom den anses mer flexibel än bolån."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Kan jag låna mer som par?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Vid gemensam ansökan räknas båda parters bruttoinkomster ihop. Två personer med 35 000 kr brutto/mån vardera får alltså låna utifrån 840 000 kr/år bruttoinkomst — max 3 780 000 kr i skuld. Schablonbelopp i KALP justeras dock också uppåt (två vuxna)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vilken ränta använder banken i KALP-testet?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bankerna använder oftast en kalkylränta på cirka 7 % i KALP-testet, även om de faktiska bolåneräntorna 2026 ligger på 3,5–4,5 %. Detta är ett stresstest för att säkerställa att du klarar betalningarna även vid framtida räntehöjningar."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
+            <nav>
+                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
+                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
+                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
+                <a href="/artiklar/">Guider</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Hur mycket får jag låna?</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Lån</span>
+            <h1>Hur mycket får jag låna 2026? – Bolån och privatlån</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 7 min läsning</p>
+            <p class="article-intro">När du ansöker om lån — oavsett om det är bolån eller privatlån — är det inte bara din lön som avgör. Bankerna räknar ut ditt max-belopp utifrån <strong>bolånetaket (85 %)</strong>, <strong>skuldkvotstaket (4,5 × bruttoinkomst)</strong> och en så kallad <strong>KALP-beräkning</strong> som testar hur mycket pengar du har kvar att leva på efter alla utgifter. Här går vi igenom exakt hur mycket du faktiskt får låna 2026 — med exempel för olika inkomster.</p>
+        </div>
+
+        <article class="article-body">
+            <h2>De tre gränserna 2026</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">85 %</div>
+                    <div class="label">Bolånetaket</div>
+                    <div class="desc">Max 85 % av bostadens värde i bolån.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">4,5 x</div>
+                    <div class="label">Skuldkvotstaket</div>
+                    <div class="desc">Total skuld ≤ 4,5 × bruttoårsinkomst.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">KALP</div>
+                    <div class="label">Kvar att leva på</div>
+                    <div class="desc">Bankens stresstest — kalkylränta ~7 %.</div>
+                </div>
+            </div>
+
+            <h2>1. Bolånetaket – max 85 % av bostadens värde</h2>
+            <p>Sedan 2010 finns ett tak på hur stor andel av bostadens värde som får finansieras med bolån. Du måste alltså ha minst 15 % i kontantinsats. Detta gäller all köp av primärbostad i Sverige.</p>
+            <ul>
+                <li>Bostad värd 3 000 000 kr → max bolån 2 550 000 kr → kontantinsats minst 450 000 kr</li>
+                <li>Bostad värd 5 000 000 kr → max bolån 4 250 000 kr → kontantinsats minst 750 000 kr</li>
+                <li>Bostad värd 8 000 000 kr → max bolån 6 800 000 kr → kontantinsats minst 1 200 000 kr</li>
+            </ul>
+            <p>Saknar du kontantinsats kan du ta privatlån eller blancolån som kompletterande finansiering — men då slår skuldkvotstaket och KALP-beräkningen in.</p>
+
+            <h2>2. Skuldkvotstaket – max 4,5 × bruttoinkomst</h2>
+            <p>Finansinspektionen rekommenderar att bankerna inte ger total skuld överstigande 4,5 × hushållets <strong>bruttoinkomst</strong> per år. Detta är en stark riktlinje — de flesta banker följer den strikt.</p>
+
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Bruttoårsinkomst</th>
+                        <th>Månadslön (12 mån)</th>
+                        <th>Max total skuld</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>400 000 kr</td><td>33 300 kr</td><td class="num">1 800 000 kr</td></tr>
+                    <tr><td>600 000 kr</td><td>50 000 kr</td><td class="num">2 700 000 kr</td></tr>
+                    <tr><td>800 000 kr</td><td>66 700 kr</td><td class="num">3 600 000 kr</td></tr>
+                    <tr><td>1 200 000 kr</td><td>100 000 kr</td><td class="num">5 400 000 kr</td></tr>
+                    <tr><td>1 600 000 kr (par)</td><td>133 300 kr</td><td class="num">7 200 000 kr</td></tr>
+                </tbody>
+            </table>
+
+            <p>Notera att taket gäller <em>hushållets samlade</em> bruttoinkomst — köper ni som par räknas båda lönerna ihop.</p>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Befintliga lån (studielån, billån, kreditkort) räknas in i skuldkvoten. Har du 200 000 kr i CSN-skuld minskar det utrymmet för bolån med 200 000 kr.</p>
+            </div>
+
+            <h2>3. KALP – "Kvar att leva på"</h2>
+            <p>KALP är bankens egen stresstest. Banken räknar med en <strong>kalkylränta på cirka 7 %</strong> (även om din faktiska ränta är 4 %), drar bort schablonbelopp för mat, kläder, försäkringar, transport och eventuella barn, och kontrollerar att du har tillräckligt kvar varje månad för att klara dig.</p>
+
+            <p>Schablonbelopp som banken använder (cirka 2026):</p>
+            <ul>
+                <li>Vuxen: 4 000–5 000 kr/månad</li>
+                <li>Barn 0–6 år: 3 000 kr/månad</li>
+                <li>Barn 7–17 år: 4 000 kr/månad</li>
+                <li>Bil: 4 000 kr/månad</li>
+                <li>Driftskostnad bostad: 2 000–4 000 kr/månad</li>
+            </ul>
+
+            <h2>Räkneexempel – familj med två barn</h2>
+            <p>Anna och Björn tjänar tillsammans 80 000 kr brutto/månad. De har två barn (4 och 8 år), en bil, inga övriga lån. De vill köpa hus för 4 500 000 kr.</p>
+            <ul>
+                <li><strong>Bolånetaket:</strong> 85 % × 4 500 000 = 3 825 000 kr max bolån</li>
+                <li><strong>Skuldkvotstaket:</strong> 4,5 × (80 000 × 12) = 4 320 000 kr max total skuld</li>
+                <li><strong>KALP-test:</strong> Vid 3 825 000 kr bolån och 7 % kalkylränta blir månadskostnad ~22 300 kr (ränta) + amortering ~6 400 kr = ~28 700 kr/mån. Familjen har efter mat, försäkringar, bil och barn cirka 35 000 kr/mån kvar — det går.</li>
+            </ul>
+            <p>Familjen får alltså låna upp till 3 825 000 kr — bolånetaket är begränsande, inte skuldkvotstaket.</p>
+
+            <h2>Räkneexempel – ensamstående utan barn</h2>
+            <p>Karin är ensamstående utan barn, tjänar 35 000 kr brutto/månad. Hon vill köpa bostadsrätt för 2 500 000 kr.</p>
+            <ul>
+                <li><strong>Bolånetaket:</strong> 85 % × 2 500 000 = 2 125 000 kr max bolån</li>
+                <li><strong>Skuldkvotstaket:</strong> 4,5 × (35 000 × 12) = 1 890 000 kr max total skuld</li>
+                <li>Resultat: <strong>1 890 000 kr</strong> är max — skuldkvotstaket sätter gränsen, inte bolånetaket</li>
+                <li>Karin behöver alltså en kontantinsats på 2 500 000 − 1 890 000 = <strong>610 000 kr</strong></li>
+            </ul>
+
+            <h2>Amorteringskravet</h2>
+            <p>Vid bolån gäller följande amorteringskrav 2026:</p>
+            <ul>
+                <li>Belåningsgrad >70 %: minst 2 % årlig amortering</li>
+                <li>Belåningsgrad 50–70 %: minst 1 % årlig amortering</li>
+                <li>Belåningsgrad <50 %: inget tvingande amorteringskrav</li>
+                <li><strong>Extra:</strong> Om skuldkvoten överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men detta är sällan aktuellt eftersom banken oftast inte godkänner sådana lån.</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Amortera direkt eller indirekt på bolån istället för att sätta motsvarande belopp på sparkonto. Bolåneränta efter ränteavdrag är typiskt 2,5–3,5 % efter skatt — sparkonto ger sällan mer än 2 %. Du "tjänar" mellanskillnaden på att amortera.</p>
+            </div>
+
+            <h2>Privatlån / blancolån — vad gäller där?</h2>
+            <p>Privatlån följer inte bolånetaket men <em>påverkar</em> skuldkvoten. Maxbelopp är ofta 600 000 kr men de facto-taket är vad KALP klarar av. Räntor 2026 ligger på cirka 6–15 % beroende på kreditprofil och belopp. För 200 000 kr i privatlån på 8 år är månadskostnaden cirka 2 800 kr vid 8 % ränta.</p>
+
+            <h2>Tips för att låna mer</h2>
+            <ul>
+                <li><strong>Öka kontantinsatsen.</strong> Mer eget kapital → lägre belåningsgrad → mindre amorteringskrav → mer KALP-utrymme.</li>
+                <li><strong>Betala av småskulder.</strong> Kreditkort med utestående saldo räknas mot skuldkvoten. Lös in dem före bolåneansökan.</li>
+                <li><strong>Köp som par.</strong> Två inkomster ger dubbelt skuldkvotsutrymme och dubbla schablonbelopp.</li>
+                <li><strong>Jämför banker.</strong> KALP-schablonbelopp varierar mellan banker. En bank kan godkänna det en annan inte gör.</li>
+                <li><strong>Visa bonus/sidoinkomst.</strong> Stabila extrainkomster (frilans, hyresintäkt) kan räknas in om de varat i 2+ år.</li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut ditt lånebelopp</h3>
+                <p>Skriv in lön, befintliga lån och utgifter — se exakt hur mycket banken sannolikt godkänner.</p>
+                <a href="/kalkylatorer/lanekalkylator" class="cta-btn">Öppna lånekalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket får jag låna 2026?</button>
+                <div class="faq-answer">Du får låna max 85 % av bostadens värde (bolånetaket) och max 4,5 × hushållets bruttoårsinkomst (skuldkvotstaket). Dessutom måste du klara bankens KALP-test där kalkylräntan är cirka 7 % och du måste ha &quot;kvar att leva på&quot; efter alla utgifter. Den lägsta av dessa tre gränser blir ditt max-belopp.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är bolånetaket 2026?</button>
+                <div class="faq-answer">Bolånetaket är 85 % av bostadens värde. Det betyder att du måste ha minst 15 % i kontantinsats. På en bostad värd 3 miljoner kr får du alltså låna max 2 550 000 kr — resten (450 000 kr) måste vara eget kapital eller annan finansiering.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är skuldkvotstaket?</button>
+                <div class="faq-answer">Skuldkvotstaket är 4,5 × hushållets bruttoårsinkomst. Vid en bruttolön på 600 000 kr/år är max total skuld 2 700 000 kr. Detta är inte lag men en stark rekommendation från Finansinspektionen som de flesta banker följer strikt.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är KALP-beräkning?</button>
+                <div class="faq-answer">KALP står för &quot;Kvar att leva på&quot;. Banken stress-testar din ekonomi genom att räkna med en kalkylränta på cirka 7 % (även om din faktiska ränta är 4 %) plus schablonbelopp för mat, kläder, försäkringar, barn och bil. Du måste ha tillräckligt kvar per månad efter alla utgifter för att få lånet.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket är amorteringskravet 2026?</button>
+                <div class="faq-answer">Belåningsgrad över 70 % kräver 2 % årlig amortering. Belåningsgrad 50–70 % kräver 1 %. Under 50 % finns inget tvingande amorteringskrav. Om skuldkvoten dessutom överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men sådana lån godkänns sällan av bank.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas min skuldkvot?</button>
+                <div class="faq-answer">Skuldkvot = total skuld / bruttoårsinkomst. Total skuld inkluderar bolån, privatlån, billån, studielån (CSN) och kreditkortsskuld. Bruttoårsinkomst räknas före skatt. Vid skuldkvot &gt;4,5 anses lånet riskabelt och avslås oftast.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Räknas CSN-lån mot skuldkvoten?</button>
+                <div class="faq-answer">Ja, CSN-skuld räknas in i den totala skulden vid skuldkvotsberäkning. Har du 200 000 kr i CSN-skuld minskar utrymmet för bolån med 200 000 kr. Däremot räknas CSN-månadsbetalningen oftast inte fullt ut i KALP eftersom den anses mer flexibel än bolån.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Kan jag låna mer som par?</button>
+                <div class="faq-answer">Ja. Vid gemensam ansökan räknas båda parters bruttoinkomster ihop. Två personer med 35 000 kr brutto/mån vardera får alltså låna utifrån 840 000 kr/år bruttoinkomst — max 3 780 000 kr i skuld. Schablonbelopp i KALP justeras dock också uppåt (två vuxna).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vilken ränta använder banken i KALP-testet?</button>
+                <div class="faq-answer">Bankerna använder oftast en kalkylränta på cirka 7 % i KALP-testet, även om de faktiska bolåneräntorna 2026 ligger på 3,5–4,5 %. Detta är ett stresstest för att säkerställa att du klarar betalningarna även vid framtida räntehöjningar.</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
