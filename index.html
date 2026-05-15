@@ -1084,12 +1084,54 @@ html[data-theme="dark"] .popular-card--guide .popular-type { color:#818cf8; }
 </style>
 
 <footer class="site-footer">
-  <div class="footer-links">
-    <a href="/om-oss">Om oss</a>
-    <a href="/integritetspolicy">Integritetspolicy</a>
+  <div class="footer-rich-cols">
+    <div class="footer-rich-col">
+      <h3>🧮 Populära kalkylatorer</h3>
+      <ul>
+        <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
+        <li><a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a></li>
+        <li><a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a></li>
+        <li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li>
+        <li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatteberäknare</a></li>
+        <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
+      </ul>
+    </div>
+    <div class="footer-rich-col">
+      <h3>📖 Populära guider</h3>
+      <ul>
+        <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
+        <li><a href="/artiklar/hur-mycket-far-jag-lana-2026">Hur mycket får jag låna?</a></li>
+        <li><a href="/artiklar/vad-ar-ranta-pa-ranta">Vad är ränta på ränta?</a></li>
+        <li><a href="/artiklar/manadssparande-rakna-ut">Månadssparande — räkna ut</a></li>
+        <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
+        <li><a href="/artiklar/csn-2026-belopp-och-regler">CSN 2026 — belopp & regler</a></li>
+      </ul>
+    </div>
+    <div class="footer-rich-col">
+      <h3>Bläddra alla</h3>
+      <ul>
+        <li><a href="/">Alla 43 kalkylatorer</a></li>
+        <li><a href="/artiklar/">Alla 20 guider</a></li>
+        <li><a href="/om-oss">Om oss</a></li>
+        <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+      </ul>
+    </div>
   </div>
-  <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+  <div class="footer-rich-bottom">
+    <p>© 2026 GratisKalkyl.se — Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
+  </div>
 </footer>
+
+<style>
+.site-footer { background: var(--card); border-top: 1px solid var(--border); color: var(--muted); padding: 48px 1.25rem 24px; font-size: 0.9rem; }
+.footer-rich-cols { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.footer-rich-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); margin-bottom: 12px; }
+.footer-rich-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-rich-col li { margin-bottom: 8px; }
+.footer-rich-col a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.15s; }
+.footer-rich-col a:hover { color: var(--green); }
+.footer-rich-bottom { max-width: 1120px; margin: 24px auto 0; text-align: center; }
+</style>
 
 <script>
 (function(){
