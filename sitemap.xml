@@ -326,8 +326,14 @@
   </url>
   <url>
     <loc>https://gratiskalkyl.se/artiklar/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gratiskalkyl.se/artiklar/skattefri-uthyrning-2026</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
