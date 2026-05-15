@@ -472,6 +472,72 @@
   </div>
 </section>
 
+<!-- Mest sökta — kort genväg till topp-innehåll (kalkylator + guide blandat) -->
+<section class="popular-strip" aria-labelledby="popular-heading">
+  <div class="popular-inner">
+    <h2 id="popular-heading">⚡ Mest sökta just nu</h2>
+    <div class="popular-grid">
+      <a href="/kalkylatorer/loneraknare" class="popular-card popular-card--calc">
+        <span class="popular-type">🧮 Kalkylator</span>
+        <span class="popular-title">Löneräknare 2026</span>
+      </a>
+      <a href="/artiklar/rakna-ut-nettolon-2026" class="popular-card popular-card--guide">
+        <span class="popular-type">📖 Guide</span>
+        <span class="popular-title">Räkna ut nettolön 2026</span>
+      </a>
+      <a href="/kalkylatorer/bolanekalkylator" class="popular-card popular-card--calc">
+        <span class="popular-type">🧮 Kalkylator</span>
+        <span class="popular-title">Bolånekalkylator</span>
+      </a>
+      <a href="/artiklar/hur-mycket-far-jag-lana-2026" class="popular-card popular-card--guide">
+        <span class="popular-type">📖 Guide</span>
+        <span class="popular-title">Hur mycket får jag låna?</span>
+      </a>
+      <a href="/kalkylatorer/ranta-pa-ranta" class="popular-card popular-card--calc">
+        <span class="popular-type">🧮 Kalkylator</span>
+        <span class="popular-title">Ränta på ränta</span>
+      </a>
+      <a href="/artiklar/vad-ar-ranta-pa-ranta" class="popular-card popular-card--guide">
+        <span class="popular-type">📖 Guide</span>
+        <span class="popular-title">Vad är ränta på ränta?</span>
+      </a>
+      <a href="/kalkylatorer/isk-skatteberaknare" class="popular-card popular-card--calc">
+        <span class="popular-type">🧮 Kalkylator</span>
+        <span class="popular-title">ISK-skatteberäknare</span>
+      </a>
+      <a href="/artiklar/vad-ar-marginalskatt" class="popular-card popular-card--guide">
+        <span class="popular-type">📖 Guide</span>
+        <span class="popular-title">Vad är marginalskatt?</span>
+      </a>
+    </div>
+    <div class="popular-cta-row">
+      <a href="#kalkylatorer" class="popular-cta-link">Se alla 43 kalkylatorer ↓</a>
+      <a href="/artiklar/" class="popular-cta-link">Bläddra alla 20 guider →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.popular-strip { background:var(--bg); padding:2.5rem 1.25rem 1.5rem; border-bottom:1px solid var(--border); }
+.popular-inner { max-width:1120px; margin:0 auto; }
+.popular-inner h2 { font-size:1.1rem; font-weight:700; margin-bottom:1rem; color:var(--text); }
+.popular-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:.75rem; }
+.popular-card { display:flex; flex-direction:column; gap:.35rem; background:var(--card); border:1.5px solid var(--border); border-radius:10px; padding:.85rem 1rem; text-decoration:none; color:var(--text); transition:border-color .15s, transform .15s, box-shadow .15s; }
+.popular-card:hover { border-color:var(--green); transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,.08); }
+.popular-type { font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+.popular-card--calc .popular-type { color:var(--green); }
+.popular-card--guide .popular-type { color:#6366f1; }
+.popular-title { font-size:.95rem; font-weight:600; color:var(--text); line-height:1.3; }
+.popular-cta-row { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:1.25rem; }
+.popular-cta-link { font-size:.9rem; font-weight:600; color:var(--green); text-decoration:none; }
+.popular-cta-link:hover { text-decoration:underline; }
+html[data-theme="dark"] .popular-card--guide .popular-type { color:#818cf8; }
+@media (max-width:600px) {
+  .popular-grid { grid-template-columns:1fr 1fr; }
+  .popular-title { font-size:.85rem; }
+}
+</style>
+
 <nav class="filter-nav" id="kalkylatorer" aria-label="Filtrera kalkylatorer efter kategori">
   <div class="filter-scroll">
     <button class="fbtn active" data-cat="alla">Alla <span class="n">43</span></button>
@@ -1000,10 +1066,16 @@
 .guides-inner h2 em { font-style:normal; color:var(--green); }
 .guides-lead { font-size:1.05rem; color:var(--muted); max-width:640px; margin-bottom:2rem; line-height:1.55; }
 .guides-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
-.guide-card { display:block; background:var(--card); border:1.5px solid var(--border); border-radius:var(--radius); padding:1.25rem 1.15rem; text-decoration:none; color:var(--text); transition:box-shadow .2s, border-color .15s, transform .15s; }
+.guide-card { display:block; background:var(--card); border:1.5px solid var(--border); border-radius:var(--radius); padding:1.25rem 1.15rem; text-decoration:none; color:var(--text); transition:box-shadow .2s, border-color .15s, transform .15s; position:relative; }
 .guide-card:hover { box-shadow:var(--sh-lg); border-color:var(--green); transform:translateY(-3px); }
 .guide-card h3 { font-size:1rem; font-weight:700; margin-bottom:.35rem; line-height:1.3; color:var(--text); }
 .guide-card p { font-size:.85rem; color:var(--muted); line-height:1.5; margin:0; }
+.guide-card::before { content:"📖 Guide"; display:inline-block; background:rgba(34,197,94,.12); color:var(--green); font-size:.68rem; font-weight:700; padding:3px 8px; border-radius:99px; margin-bottom:.5rem; letter-spacing:.03em; text-transform:uppercase; }
+.guide-card[href$="/artiklar/"]::before { content:"📚 Bibliotek"; background:rgba(99,102,241,.12); color:#6366f1; }
+.guide-card.hidden { display:none; }
+
+/* "Calculator" tag on each .card to match guides */
+.card .calc-tag { display:inline-block; background:rgba(34,197,94,.12); color:var(--green); font-size:.65rem; font-weight:700; padding:2px 7px; border-radius:99px; margin-left:.5rem; letter-spacing:.03em; text-transform:uppercase; vertical-align:middle; }
 </style>
 
 <footer class="site-footer">

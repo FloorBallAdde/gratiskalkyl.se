@@ -11,6 +11,15 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dark mode: tillämpa tema innan render -->
+    <script>
+      (function(){
+        var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+        var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+        document.documentElement.setAttribute('data-theme',d?'dark':'light');
+      })();
+    </script>
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
     <title>Guider om ekonomi 2026 – Lär dig mer | GratisKalkyl.se</title>
@@ -79,6 +88,35 @@
             body { font-size: 16px; }
             .articles-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Dark mode overrides — controlled by data-theme attribute */
+        html[data-theme="dark"] {
+            --text: #f3f4f6; --text-light: #d1d5db;
+                --bg: #111827; --white: #1f2937; --border: #374151;
+                --primary-light: rgba(26,107,74,0.2); --primary: #34d399;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        html[data-theme="light"] {
+            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
+            --text: #1a1a2e; --text-light: #555;
+            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
+        }
+        .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
+        .theme-toggle-btn:hover { background:var(--primary-light); border-color:var(--primary); color:var(--primary); }
+        .theme-toggle-btn svg { display:block; }
+
+        /* Article search */
+        .article-search { position:relative; max-width:560px; margin-top:24px; display:flex; align-items:center; background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:4px 12px 4px 44px; transition:border-color .15s, box-shadow .15s; }
+        .article-search:focus-within { border-color:var(--primary); box-shadow:0 0 0 4px var(--primary-light); }
+        .article-search-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-light); pointer-events:none; }
+        .article-search input { flex:1; border:none; outline:none; padding:12px 0; font-size:1rem; background:transparent; color:var(--text); font-family:inherit; }
+        .article-search input::placeholder { color:var(--text-light); }
+        .article-search-clear { background:none; border:none; cursor:pointer; font-size:1.5rem; color:var(--text-light); padding:0 8px; line-height:1; }
+        .article-search-clear:hover { color:var(--text); }
+        .article-search-meta { margin-top:12px; font-size:0.9rem; color:var(--text-light); min-height:1.2em; }
+        .article-card.hidden { display:none; }
+
     </style>
 </head>
 <body>
@@ -91,6 +129,9 @@
                 <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
                 <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
             </nav>
+            <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
         </div>
     </header>
 
@@ -104,9 +145,16 @@
         <div class="page-hero">
             <h1>Guider & Artiklar</h1>
             <p>Privatekonomin förklarad enkelt. Uppdaterade guider om semesterlön, pension, avdrag, bolån och sparande — utan onödig krångel.</p>
+
+            <div class="article-search" role="search">
+                <svg class="article-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="search" id="article-search" placeholder="Sök bland 20 guider…" autocomplete="off" aria-label="Sök bland guider" spellcheck="false">
+                <button type="button" id="article-search-clear" class="article-search-clear" aria-label="Rensa sökning" hidden>×</button>
+            </div>
+            <p class="article-search-meta" id="article-search-meta" aria-live="polite"></p>
         </div>
 
-        <div class="articles-grid">
+        <div class="articles-grid" id="articles-grid">
             <a href="/artiklar/rakna-ut-nettolon-2026" class="article-card">
                 <div class="icon">💰</div>
                 <h2>Räkna ut nettolön 2026</h2>
@@ -248,5 +296,80 @@
             <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter.</p>
         </div>
     </footer>
+
+    <script>
+    /* Theme toggle */
+    (function(){
+      var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var btn=document.getElementById('gk-theme-btn');
+      if(!btn)return;
+      function setIcon(){
+        var dark=document.documentElement.getAttribute('data-theme')==='dark';
+        btn.innerHTML=dark?SUN:MOON;
+        btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
+      }
+      setIcon();
+      btn.addEventListener('click',function(){
+        var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
+        var next=!nowDark;
+        document.documentElement.setAttribute('data-theme',next?'dark':'light');
+        try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
+        setIcon();
+      });
+    })();
+    </script>
+
+    <script>
+    /* Article search + URL-param support */
+    (function(){
+      'use strict';
+      var input=document.getElementById('article-search'),
+          clearBtn=document.getElementById('article-search-clear'),
+          metaEl=document.getElementById('article-search-meta'),
+          grid=document.getElementById('articles-grid');
+      if(!input||!grid)return;
+
+      var cards=Array.from(grid.querySelectorAll('.article-card'));
+      // Pre-cache each card's searchable text
+      cards.forEach(function(c){
+        c.dataset.search=(c.textContent||'').toLowerCase().replace(/\s+/g,' ').trim();
+      });
+
+      function apply(query){
+        var q=query.trim().toLowerCase();
+        var n=0;
+        cards.forEach(function(c){
+          var show=!q || c.dataset.search.indexOf(q)!==-1;
+          c.classList.toggle('hidden',!show);
+          if(show)n++;
+        });
+        if(q){
+          metaEl.textContent=n===0
+            ? 'Inga träffar för "'+query.trim()+'"'
+            : n+(n===1?' guide':' guider')+' för "'+query.trim()+'"';
+          clearBtn.hidden=false;
+        }else{
+          metaEl.textContent='';
+          clearBtn.hidden=true;
+        }
+        // Sync URL
+        var url=new URL(location.href);
+        if(q){ url.searchParams.set('q',query.trim()); }else{ url.searchParams.delete('q'); }
+        history.replaceState(null,'',url.pathname+(url.search||''));
+      }
+
+      input.addEventListener('input',function(){ apply(input.value); });
+      clearBtn.addEventListener('click',function(){
+        input.value=''; apply(''); input.focus();
+      });
+
+      // On load: read ?q= URL parameter and apply
+      var p=new URLSearchParams(location.search);
+      var q0=p.get('q');
+      if(q0){ input.value=q0; apply(q0); }
+    })();
+    </script>
+
 </body>
 </html>
