@@ -22,19 +22,19 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Hur mycket får jag låna 2026? – Bolån, privatlån & KALP</title>
-    <meta name="description" content="Så räknar bankerna ut hur mycket du får låna 2026 — bolånetaket 85 %, KALP-kvar-att-leva-på och skuldkvotstaket 4,5x inkomsten. Exempel för olika inkomster.">
+    <title>Amorteringskrav 2026 — Så räknas amortering på bolån</title>
+    <meta name="description" content="Amorteringskrav 2026 förklarat: 1 % vid 50–70 % belåning, 2 % vid >70 %. Plus tilläggsregeln på 1 % vid skuldkvot >4,5x. Exempel + räkna direkt i kalkylatorn.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026">
-    <meta property="og:title" content="Hur mycket får jag låna 2026? – Bolån, privatlån & KALP">
-    <meta property="og:description" content="Lånebelopp 2026 — bolånetaket, KALP och skuldkvotstak förklarat. Hur mycket får du verkligen låna?">
-    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/amorteringskrav-2026">
+    <meta property="og:title" content="Amorteringskrav 2026 — Så räknas amortering på bolån">
+    <meta property="og:description" content="Bolånetak, belåningsgrad och tilläggsregeln. Räkna ut din amortering med exempel.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/amorteringskrav-2026">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="sv_SE">
     <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hur mycket får jag låna 2026?">
-    <meta name="twitter:description" content="Bolånetak 85 %, skuldkvotstak 4,5x och KALP — så räknar banken ut ditt max-belopp.">
+    <meta name="twitter:title" content="Amorteringskrav 2026">
+    <meta name="twitter:description" content="Så räknar bankerna ut din månadsamortering 2026 — belåningsgrad, skuldkvot och kalkyl.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         :root {
@@ -73,6 +73,11 @@
         h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
         .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
         .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .tldr { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 24px; margin: 24px 0 8px; }
+        .tldr strong { color: var(--primary-dark); display:block; margin-bottom:6px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; }
+        .tldr ul { padding-left: 20px; margin: 0; }
+        .tldr li { font-size: 0.95rem; margin-bottom: 4px; }
 
         .article-body { padding: 32px 0; }
         .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
@@ -123,7 +128,7 @@
             .example-table { font-size: 0.85rem; }
             .example-table th, .example-table td { padding: 10px 12px; }
         }
-    
+
         .related-section { padding: 32px 0 48px; border-top: 1px solid var(--border); }
         .related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
         .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
@@ -131,7 +136,7 @@
         .related-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--primary); }
         .related-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.3; color: var(--text); }
         .related-card p { font-size: 0.88rem; color: var(--text-light); margin: 0; line-height: 1.5; }
-    
+
         /* Dark mode overrides — controlled by data-theme attribute */
         html[data-theme="dark"] {
             --text: #f3f4f6; --text-light: #9ca3af;
@@ -149,7 +154,6 @@
         .theme-toggle-btn:hover { background:var(--primary-light); border-color:var(--primary); color:var(--primary); }
         .theme-toggle-btn svg { display:block; }
 
-    
         /* Rich footer with popular links */
         .site-footer-rich { background: var(--white); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 40px; color: var(--text-light); font-size: 0.9rem; }
         .site-footer-rich .container { max-width: 1100px; }
@@ -171,74 +175,74 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "Hur mycket får jag låna 2026?",
+            "name": "Vad är amorteringskravet 2026?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Du får låna max 85 % av bostadens värde (bolånetaket) och max 4,5 × hushållets bruttoårsinkomst (skuldkvotstaket). Dessutom måste du klara bankens KALP-test där kalkylräntan är cirka 7 % och du måste ha \"kvar att leva på\" efter alla utgifter. Den lägsta av dessa tre gränser blir ditt max-belopp."
+                "text": "Amorteringskravet säger hur mycket av bolånet du minst måste betala av varje år. Vid belåningsgrad över 70 % gäller 2 % årlig amortering. Vid 50–70 % gäller 1 %. Under 50 % finns inget tvingande amorteringskrav. Reglerna är beslutade av Finansinspektionen och gäller alla nya bolån i Sverige."
             }
         },
         {
             "@type": "Question",
-            "name": "Vad är bolånetaket 2026?",
+            "name": "Hur räknar jag ut min månadsamortering?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Bolånetaket är 85 % av bostadens värde. Det betyder att du måste ha minst 15 % i kontantinsats. På en bostad värd 3 miljoner kr får du alltså låna max 2 550 000 kr — resten (450 000 kr) måste vara eget kapital eller annan finansiering."
+                "text": "Multiplicera bolånet med amorteringsprocenten och dela med 12. Exempel: 2 500 000 kr bolån × 2 % = 50 000 kr/år ÷ 12 = ca 4 170 kr/mån. Du kan räkna ut din exakta månadsamortering i amorteringskalkylatorn på GratisKalkyl.se."
             }
         },
         {
             "@type": "Question",
-            "name": "Vad är skuldkvotstaket?",
+            "name": "Vad är belåningsgrad?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Skuldkvotstaket är 4,5 × hushållets bruttoårsinkomst. Vid en bruttolön på 600 000 kr/år är max total skuld 2 700 000 kr. Detta är inte lag men en stark rekommendation från Finansinspektionen som de flesta banker följer strikt."
+                "text": "Belåningsgrad = bolån ÷ bostadens marknadsvärde. Köper du en bostad för 3 000 000 kr och tar 2 100 000 kr i bolån är belåningsgraden 70 %. Belåningsgraden styr hur stor amorteringen blir per år."
             }
         },
         {
             "@type": "Question",
-            "name": "Vad är KALP-beräkning?",
+            "name": "Vad är tilläggsregeln (skärpt amorteringskrav)?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "KALP står för \"Kvar att leva på\". Banken stress-testar din ekonomi genom att räkna med en kalkylränta på cirka 7 % (även om din faktiska ränta är 4 %) plus schablonbelopp för mat, kläder, försäkringar, barn och bil. Du måste ha tillräckligt kvar per månad efter alla utgifter för att få lånet."
+                "text": "Om din totala skuld överstiger 4,5 × hushållets bruttoårsinkomst tillkommer ytterligare 1 % amortering per år utöver det vanliga kravet. Det kallas skärpt amorteringskrav eller tilläggsregeln. I praktiken godkänner bankerna sällan lån som hamnar över 4,5x — så det är ovanligt att tilläggsregeln slår till."
             }
         },
         {
             "@type": "Question",
-            "name": "Hur mycket är amorteringskravet 2026?",
+            "name": "Kan jag amortera mer än kravet?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Belåningsgrad över 70 % kräver 2 % årlig amortering. Belåningsgrad 50–70 % kräver 1 %. Under 50 % finns inget tvingande amorteringskrav. Om skuldkvoten dessutom överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men sådana lån godkänns sällan av bank."
+                "text": "Ja. Amorteringskravet är ett minimum — du får alltid amortera mer. Många väljer att amortera ner under 70 % eller 50 % för att sänka kravet och få lägre månadskostnad. Vissa banker tar dock ut en räntejusteringsavgift om du betalar av extra på ett bundet lån i förtid."
             }
         },
         {
             "@type": "Question",
-            "name": "Hur räknas min skuldkvot?",
+            "name": "Slipper jag amorteringskravet om jag löser in lånet?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Skuldkvot = total skuld / bruttoårsinkomst. Total skuld inkluderar bolån, privatlån, billån, studielån (CSN) och kreditkortsskuld. Bruttoårsinkomst räknas före skatt. Vid skuldkvot >4,5 anses lånet riskabelt och avslås oftast."
+                "text": "Om du löser in lånet helt är kravet uppfyllt — det finns inget kvar att amortera på. Men om du flyttar lånet till en annan bank följer amorteringskravet med. Undantag: vid skuldsanering, omläggning vid skilsmässa eller andra särskilda livsförhållanden kan banken bevilja amorteringsfrihet under en period."
             }
         },
         {
             "@type": "Question",
-            "name": "Räknas CSN-lån mot skuldkvoten?",
+            "name": "Är det smart att amortera eller spara istället?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ja, CSN-skuld räknas in i den totala skulden vid skuldkvotsberäkning. Har du 200 000 kr i CSN-skuld minskar utrymmet för bolån med 200 000 kr. Däremot räknas CSN-månadsbetalningen oftast inte fullt ut i KALP eftersom den anses mer flexibel än bolån."
+                "text": "Bolåneräntan efter ränteavdrag (30 % på första 100 000 kr i räntekostnad) ligger 2026 på 2,5–3,2 %. Sparkonto ger 2–3 %. Aktiefonder ger historiskt 7 % före skatt. Det innebär att rent matematiskt är aktiesparande oftast bättre långsiktigt — men amortering ger garanterad avkastning utan risk. Många väljer att göra båda parallellt."
             }
         },
         {
             "@type": "Question",
-            "name": "Kan jag låna mer som par?",
+            "name": "Kan jag pausa amorteringen?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ja. Vid gemensam ansökan räknas båda parters bruttoinkomster ihop. Två personer med 35 000 kr brutto/mån vardera får alltså låna utifrån 840 000 kr/år bruttoinkomst — max 3 780 000 kr i skuld. Schablonbelopp i KALP justeras dock också uppåt (två vuxna)."
+                "text": "Finansinspektionen tillåter banker att bevilja amorteringspaus vid arbetslöshet, längre sjukdom, skilsmässa eller dödsfall i hushållet. Pausen är typiskt 6–12 månader. Du måste själv ansöka hos banken och styrka situationen. Räntan måste fortfarande betalas under pausen."
             }
         },
         {
             "@type": "Question",
-            "name": "Vilken ränta använder banken i KALP-testet?",
+            "name": "Räknas amortering som boendekostnad?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Bankerna använder oftast en kalkylränta på cirka 7 % i KALP-testet, även om de faktiska bolåneräntorna 2026 ligger på 3,5–4,5 %. Detta är ett stresstest för att säkerställa att du klarar betalningarna även vid framtida räntehöjningar."
+                "text": "Tekniskt sett är amortering inte en kostnad — du betalar av din skuld och bygger eget kapital. Men kassaflödesmässigt fungerar den som en utgift i månadsbudgeten. Banken räknar in både ränta och amortering i KALP-testet när de bedömer hur mycket du får låna."
             }
         }
     ]
@@ -265,8 +269,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Hur mycket får jag låna?",
-            "item": "https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026"
+            "name": "Amorteringskrav 2026",
+            "item": "https://gratiskalkyl.se/artiklar/amorteringskrav-2026"
         }
     ]
 }
@@ -275,11 +279,11 @@
 {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Hur mycket får jag låna 2026? – Bolån, privatlån & KALP",
-    "description": "Så räknar bankerna ut hur mycket du får låna 2026 — bolånetaket 85 %, KALP och skuldkvotstaket 4,5x inkomsten.",
-    "url": "https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026",
-    "datePublished": "2026-05-15",
-    "dateModified": "2026-05-15",
+    "headline": "Amorteringskrav 2026 — Så räknas amortering på bolån",
+    "description": "Amorteringskrav 2026 förklarat: 1 % vid 50–70 % belåning, 2 % vid >70 %. Plus tilläggsregeln på 1 % vid skuldkvot >4,5x.",
+    "url": "https://gratiskalkyl.se/artiklar/amorteringskrav-2026",
+    "datePublished": "2026-05-26",
+    "dateModified": "2026-05-26",
     "image": "https://gratiskalkyl.se/favicon.svg",
     "author": {
         "@type": "Organization",
@@ -296,7 +300,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://gratiskalkyl.se/artiklar/hur-mycket-far-jag-lana-2026"
+        "@id": "https://gratiskalkyl.se/artiklar/amorteringskrav-2026"
     },
     "inLanguage": "sv-SE"
 }
@@ -322,131 +326,150 @@
             <span aria-hidden="true">›</span>
             <a href="/artiklar/">Guider</a>
             <span aria-hidden="true">›</span>
-            <span aria-current="page">Hur mycket får jag låna?</span>
+            <span aria-current="page">Amorteringskrav 2026</span>
         </nav>
 
         <div class="article-header">
-            <span class="article-tag">Lån</span>
-            <h1>Hur mycket får jag låna 2026? – Bolån och privatlån</h1>
-            <p class="article-meta">Uppdaterad maj 2026 · 7 min läsning</p>
-            <p class="article-intro">När du ansöker om lån — oavsett om det är bolån eller privatlån — är det inte bara din lön som avgör. Bankerna räknar ut ditt max-belopp utifrån <strong>bolånetaket (85 %)</strong>, <strong>skuldkvotstaket (4,5 × bruttoinkomst)</strong> och en så kallad <strong>KALP-beräkning</strong> som testar hur mycket pengar du har kvar att leva på efter alla utgifter. Här går vi igenom exakt hur mycket du faktiskt får låna 2026 — med exempel för olika inkomster.</p>
+            <span class="article-tag">Bolån</span>
+            <h1>Amorteringskrav 2026 — Så räknas amortering på bolån</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 8 min läsning</p>
+            <p class="article-intro">Amorteringskravet bestämmer hur mycket av ditt bolån du minst måste betala av varje år. 2026 är reglerna fortfarande desamma som under de senaste åren: <strong>1 % per år</strong> vid belåningsgrad mellan 50 och 70 %, <strong>2 % per år</strong> vid över 70 %. Plus ett <strong>skärpt amorteringskrav</strong> om skuldkvoten överstiger 4,5x hushållets bruttoinkomst. Här går vi igenom exakt hur reglerna fungerar, vad du faktiskt betalar per månad och om det är smart att amortera mer än kravet.</p>
         </div>
 
         <article class="article-body">
-            <h2>De tre gränserna 2026</h2>
+            <div class="tldr">
+                <strong>TLDR — Tre snabba punkter</strong>
+                <ul>
+                    <li>Belåningsgrad >70 % → 2 % amortering/år. 50–70 % → 1 %. Under 50 % → inget krav.</li>
+                    <li>Skuldkvot >4,5x bruttoinkomst → extra 1 % ovanpå grundkravet (tilläggsregeln).</li>
+                    <li>Räkna ut din exakta månadsamortering i <a href="/kalkylatorer/amorteringskalkylator">amorteringskalkylatorn</a>.</li>
+                </ul>
+            </div>
+
+            <h2>De två amorteringsgränserna 2026</h2>
+            <p>Amorteringskravet bygger på <strong>belåningsgraden</strong> — alltså hur stor andel av bostadens värde du har lånat. Ju högre belåningsgrad, desto högre amorteringskrav. Reglerna bestämdes av Finansinspektionen 2016 (för 70 %-gränsen) och utökades 2018 (skärpt krav) — och har inte ändrats sedan dess.</p>
 
             <div class="rule-cards">
                 <div class="rule-card">
-                    <div class="number">85 %</div>
-                    <div class="label">Bolånetaket</div>
-                    <div class="desc">Max 85 % av bostadens värde i bolån.</div>
+                    <div class="number">2 %</div>
+                    <div class="label">Belåning >70 %</div>
+                    <div class="desc">Hög belåningsgrad — högsta amorteringskravet.</div>
                 </div>
                 <div class="rule-card">
-                    <div class="number">4,5 x</div>
-                    <div class="label">Skuldkvotstaket</div>
-                    <div class="desc">Total skuld ≤ 4,5 × bruttoårsinkomst.</div>
+                    <div class="number">1 %</div>
+                    <div class="label">Belåning 50–70 %</div>
+                    <div class="desc">Mellanläge — standardkrav.</div>
                 </div>
                 <div class="rule-card">
-                    <div class="number">KALP</div>
-                    <div class="label">Kvar att leva på</div>
-                    <div class="desc">Bankens stresstest — kalkylränta ~7 %.</div>
+                    <div class="number">0 %</div>
+                    <div class="label">Belåning &lt;50 %</div>
+                    <div class="desc">Inget tvingande krav — men de flesta amorterar ändå.</div>
                 </div>
             </div>
 
-            <h2>1. Bolånetaket – max 85 % av bostadens värde</h2>
-            <p>Sedan 2010 finns ett tak på hur stor andel av bostadens värde som får finansieras med bolån. Du måste alltså ha minst 15 % i kontantinsats. Detta gäller all köp av primärbostad i Sverige.</p>
+            <h2>Belåningsgrad — så räknas den ut</h2>
+            <p>Belåningsgraden är förhållandet mellan ditt bolån och bostadens marknadsvärde. Banken använder antingen köpeskillingen eller en värdering vid omsättning.</p>
             <ul>
-                <li>Bostad värd 3 000 000 kr → max bolån 2 550 000 kr → kontantinsats minst 450 000 kr</li>
-                <li>Bostad värd 5 000 000 kr → max bolån 4 250 000 kr → kontantinsats minst 750 000 kr</li>
-                <li>Bostad värd 8 000 000 kr → max bolån 6 800 000 kr → kontantinsats minst 1 200 000 kr</li>
+                <li>Bostad värd 3 000 000 kr, bolån 2 100 000 kr → belåning 70 %</li>
+                <li>Bostad värd 4 500 000 kr, bolån 3 600 000 kr → belåning 80 %</li>
+                <li>Bostad värd 6 000 000 kr, bolån 2 700 000 kr → belåning 45 %</li>
             </ul>
-            <p>Saknar du kontantinsats kan du ta privatlån eller blancolån som kompletterande finansiering — men då slår skuldkvotstaket och KALP-beräkningen in.</p>
+            <p>Du kan alltså aktivt påverka belåningsgraden genom större kontantinsats vid köp — eller genom att amortera ner befintligt bolån under en gräns och därefter ansöka om sänkt amorteringskrav.</p>
 
-            <h2>2. Skuldkvotstaket – max 4,5 × bruttoinkomst</h2>
-            <p>Finansinspektionen rekommenderar att bankerna inte ger total skuld överstigande 4,5 × hushållets <strong>bruttoinkomst</strong> per år. Detta är en stark riktlinje — de flesta banker följer den strikt.</p>
+            <h2>Räkneexempel — vad amorteringen kostar i kronor</h2>
+            <p>Multiplicera bolånet med amorteringsprocenten — det är årsbeloppet. Dela med 12 så får du månadsamorteringen.</p>
 
             <table class="example-table">
                 <thead>
                     <tr>
-                        <th>Bruttoårsinkomst</th>
-                        <th>Månadslön (12 mån)</th>
-                        <th>Max total skuld</th>
+                        <th>Bolån</th>
+                        <th>Belåningsgrad</th>
+                        <th>Årsamortering</th>
+                        <th>Månadsamortering</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>400 000 kr</td><td>33 300 kr</td><td class="num">1 800 000 kr</td></tr>
-                    <tr><td>600 000 kr</td><td>50 000 kr</td><td class="num">2 700 000 kr</td></tr>
-                    <tr><td>800 000 kr</td><td>66 700 kr</td><td class="num">3 600 000 kr</td></tr>
-                    <tr><td>1 200 000 kr</td><td>100 000 kr</td><td class="num">5 400 000 kr</td></tr>
-                    <tr><td>1 600 000 kr (par)</td><td>133 300 kr</td><td class="num">7 200 000 kr</td></tr>
+                    <tr><td>1 500 000 kr</td><td>60 % (1 %)</td><td class="num">15 000 kr</td><td class="num">1 250 kr</td></tr>
+                    <tr><td>2 500 000 kr</td><td>75 % (2 %)</td><td class="num">50 000 kr</td><td class="num">4 170 kr</td></tr>
+                    <tr><td>3 000 000 kr</td><td>80 % (2 %)</td><td class="num">60 000 kr</td><td class="num">5 000 kr</td></tr>
+                    <tr><td>4 000 000 kr</td><td>85 % (2 %)</td><td class="num">80 000 kr</td><td class="num">6 670 kr</td></tr>
+                    <tr><td>2 000 000 kr</td><td>45 % (0 %)</td><td class="num">0 kr</td><td class="num">0 kr</td></tr>
                 </tbody>
             </table>
 
-            <p>Notera att taket gäller <em>hushållets samlade</em> bruttoinkomst — köper ni som par räknas båda lönerna ihop.</p>
+            <p>I praktiken minskar amorteringen i takt med att skulden går ner. Vissa banker räknar om amorteringskravet en gång per år — andra håller fast vid den ursprungliga procentsatsen från lånetillfället.</p>
 
             <div class="info-box">
-                <p><strong>Tips:</strong> Befintliga lån (studielån, billån, kreditkort) räknas in i skuldkvoten. Har du 200 000 kr i CSN-skuld minskar det utrymmet för bolån med 200 000 kr.</p>
+                <p><strong>Tips:</strong> När belåningsgraden går från 71 % till 69 % halveras ditt amorteringskrav. En extrainsats på 30 000 kr vid 70 %-gränsen kan alltså spara dig 25 000 kr/år i amortering.</p>
             </div>
 
-            <h2>3. KALP – "Kvar att leva på"</h2>
-            <p>KALP är bankens egen stresstest. Banken räknar med en <strong>kalkylränta på cirka 7 %</strong> (även om din faktiska ränta är 4 %), drar bort schablonbelopp för mat, kläder, försäkringar, transport och eventuella barn, och kontrollerar att du har tillräckligt kvar varje månad för att klara dig.</p>
-
-            <p>Schablonbelopp som banken använder (cirka 2026):</p>
+            <h2>Tilläggsregeln — skärpt amorteringskrav</h2>
+            <p>Utöver grundkravet finns en regel som många glömmer: <strong>om hushållets totala skuld överstiger 4,5 × bruttoårsinkomsten tillkommer ytterligare 1 % amortering per år</strong>. Den infördes 2018 och kallas skärpt amorteringskrav eller tilläggsregeln.</p>
             <ul>
-                <li>Vuxen: 4 000–5 000 kr/månad</li>
-                <li>Barn 0–6 år: 3 000 kr/månad</li>
-                <li>Barn 7–17 år: 4 000 kr/månad</li>
-                <li>Bil: 4 000 kr/månad</li>
-                <li>Driftskostnad bostad: 2 000–4 000 kr/månad</li>
+                <li>Total skuld räknas inklusive bolån, privatlån, billån och CSN-lån.</li>
+                <li>Bruttoinkomst räknas före skatt — för gemensam ansökan summeras båda lönerna.</li>
+                <li>Tillägget gäller bara nya bolån som tagits efter 2018.</li>
             </ul>
 
-            <h2>Räkneexempel – familj med två barn</h2>
-            <p>Anna och Björn tjänar tillsammans 80 000 kr brutto/månad. De har två barn (4 och 8 år), en bil, inga övriga lån. De vill köpa hus för 4 500 000 kr.</p>
-            <ul>
-                <li><strong>Bolånetaket:</strong> 85 % × 4 500 000 = 3 825 000 kr max bolån</li>
-                <li><strong>Skuldkvotstaket:</strong> 4,5 × (80 000 × 12) = 4 320 000 kr max total skuld</li>
-                <li><strong>KALP-test:</strong> Vid 3 825 000 kr bolån och 7 % kalkylränta blir månadskostnad ~22 300 kr (ränta) + amortering ~6 400 kr = ~28 700 kr/mån. Familjen har efter mat, försäkringar, bil och barn cirka 35 000 kr/mån kvar — det går.</li>
-            </ul>
-            <p>Familjen får alltså låna upp till 3 825 000 kr — bolånetaket är begränsande, inte skuldkvotstaket.</p>
+            <p>I praktiken godkänner banker sällan lån som hamnar över 4,5x — så tilläggsregeln slår mer sällan till nu än när den var ny. Men om du redan har stora CSN-lån eller andra skulder kan det räcka för att tippa över gränsen.</p>
 
-            <h2>Räkneexempel – ensamstående utan barn</h2>
-            <p>Karin är ensamstående utan barn, tjänar 35 000 kr brutto/månad. Hon vill köpa bostadsrätt för 2 500 000 kr.</p>
+            <h2>Räkneexempel — Anna och Björn köper bostadsrätt</h2>
+            <p>Anna tjänar 35 000 kr brutto/månad och Björn 45 000 kr brutto/månad. Tillsammans 80 000 kr/mån = 960 000 kr/år. De har 150 000 kr i CSN-skuld men inga andra lån. De köper bostadsrätt för 3 200 000 kr och tar bolån på 2 700 000 kr.</p>
             <ul>
-                <li><strong>Bolånetaket:</strong> 85 % × 2 500 000 = 2 125 000 kr max bolån</li>
-                <li><strong>Skuldkvotstaket:</strong> 4,5 × (35 000 × 12) = 1 890 000 kr max total skuld</li>
-                <li>Resultat: <strong>1 890 000 kr</strong> är max — skuldkvotstaket sätter gränsen, inte bolånetaket</li>
-                <li>Karin behöver alltså en kontantinsats på 2 500 000 − 1 890 000 = <strong>610 000 kr</strong></li>
+                <li><strong>Belåningsgrad:</strong> 2 700 000 / 3 200 000 = 84 % → grundkrav 2 %</li>
+                <li><strong>Skuldkvot:</strong> (2 700 000 + 150 000) / 960 000 = 2,97x → under 4,5 → ingen tillägg</li>
+                <li><strong>Årsamortering:</strong> 2 700 000 × 2 % = 54 000 kr/år</li>
+                <li><strong>Månadsamortering:</strong> 54 000 / 12 = <strong>4 500 kr/mån</strong></li>
             </ul>
+            <p>När de amorterat ner till 2 240 000 kr (70 % av 3 200 000) sänks kravet till 1 % — vilket tar ungefär 10 år vid 2 % amortering plus eventuella extrainbetalningar.</p>
 
-            <h2>Amorteringskravet</h2>
-            <p>Vid bolån gäller följande amorteringskrav 2026:</p>
+            <h2>Räkneexempel — singel med högre belåning</h2>
+            <p>Karin är ensamstående och tjänar 32 000 kr brutto/månad = 384 000 kr/år. Hon har inga andra lån. Hon köper lägenhet för 2 200 000 kr och behöver låna 1 870 000 kr (85 % belåning).</p>
             <ul>
-                <li>Belåningsgrad >70 %: minst 2 % årlig amortering</li>
-                <li>Belåningsgrad 50–70 %: minst 1 % årlig amortering</li>
-                <li>Belåningsgrad <50 %: inget tvingande amorteringskrav</li>
-                <li><strong>Extra:</strong> Om skuldkvoten överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men detta är sällan aktuellt eftersom banken oftast inte godkänner sådana lån.</li>
+                <li><strong>Belåningsgrad:</strong> 85 % → grundkrav 2 %</li>
+                <li><strong>Skuldkvot:</strong> 1 870 000 / 384 000 = 4,87x → <em>över 4,5</em> → tilläggsregeln slår till</li>
+                <li><strong>Totalt amorteringskrav:</strong> 2 % + 1 % = 3 % per år</li>
+                <li><strong>Årsamortering:</strong> 1 870 000 × 3 % = 56 100 kr/år</li>
+                <li><strong>Månadsamortering:</strong> 56 100 / 12 = <strong>4 680 kr/mån</strong></li>
+            </ul>
+            <p>I praktiken är det dock troligt att banken inte godkänner lånet alls eftersom det överstiger 4,5x — Karin skulle behöva minska lånebeloppet eller spara ihop större kontantinsats.</p>
+
+            <h2>Amortera eller spara — vad lönar sig?</h2>
+            <p>Den klassiska frågan: ska du amortera ner bolånet eller sätta in pengarna på börsen istället?</p>
+
+            <p>Bolåneräntan 2026 ligger på ungefär 3,5–4,5 % brutto. Efter ränteavdraget (30 % på första 100 000 kr i räntekostnad per person) blir effektiv ränta cirka 2,5–3,2 %. Alternativ avkastning:</p>
+            <ul>
+                <li><strong>Sparkonto:</strong> 2–3 % — knappt bättre än bolån efter avdrag.</li>
+                <li><strong>Globalfond i ISK:</strong> historiskt 7 % före schablonskatt (~0,9 %).</li>
+                <li><strong>Bolån-amortering:</strong> 2,5–3,2 % garanterad "avkastning" utan risk.</li>
             </ul>
 
             <div class="info-box">
-                <p><strong>Tips:</strong> Amortera direkt eller indirekt på bolån istället för att sätta motsvarande belopp på sparkonto. Bolåneränta efter ränteavdrag är typiskt 2,5–3,5 % efter skatt — sparkonto ger sällan mer än 2 %. Du "tjänar" mellanskillnaden på att amortera.</p>
+                <p><strong>Rekommendation:</strong> Amortera tills du klarat 70 %-gränsen — då sänks amorteringskravet och den effektiva avkastningen på amortering är högre. Därefter kan börssparande i <a href="/kalkylatorer/isk-skatteberaknare">ISK</a> ofta löna sig bättre långsiktigt — men kombinera gärna med fortsatt amortering för att bygga säkerhet.</p>
             </div>
 
-            <h2>Privatlån / blancolån — vad gäller där?</h2>
-            <p>Privatlån följer inte bolånetaket men <em>påverkar</em> skuldkvoten. Maxbelopp är ofta 600 000 kr men de facto-taket är vad KALP klarar av. Räntor 2026 ligger på cirka 6–15 % beroende på kreditprofil och belopp. För 200 000 kr i privatlån på 8 år är månadskostnaden cirka 2 800 kr vid 8 % ränta.</p>
-
-            <h2>Tips för att låna mer</h2>
+            <h2>Kan jag pausa eller minska amorteringen?</h2>
+            <p>Ja, men bara i särskilda situationer. Finansinspektionen tillåter banker att bevilja amorteringspaus vid:</p>
             <ul>
-                <li><strong>Öka kontantinsatsen.</strong> Mer eget kapital → lägre belåningsgrad → mindre amorteringskrav → mer KALP-utrymme.</li>
-                <li><strong>Betala av småskulder.</strong> Kreditkort med utestående saldo räknas mot skuldkvoten. Lös in dem före bolåneansökan.</li>
-                <li><strong>Köp som par.</strong> Två inkomster ger dubbelt skuldkvotsutrymme och dubbla schablonbelopp.</li>
-                <li><strong>Jämför banker.</strong> KALP-schablonbelopp varierar mellan banker. En bank kan godkänna det en annan inte gör.</li>
-                <li><strong>Visa bonus/sidoinkomst.</strong> Stabila extrainkomster (frilans, hyresintäkt) kan räknas in om de varat i 2+ år.</li>
+                <li>Arbetslöshet eller längre sjukskrivning</li>
+                <li>Skilsmässa eller separation där bostaden ska säljas</li>
+                <li>Dödsfall i hushållet</li>
+                <li>Föräldraledighet med inkomstbortfall (varierar mellan banker)</li>
             </ul>
+            <p>Pausen är typiskt 6–12 månader. Du måste själv ansöka hos banken och styrka din situation. Räntan måste fortfarande betalas under pausen — det är bara amorteringen som tas bort.</p>
+
+            <h2>Vanliga misstag att undvika</h2>
+            <ol>
+                <li><strong>Glömma av amorteringen vid byte av bank.</strong> Amorteringskravet följer med när du flyttar bolånet. Det går inte att "resetta" genom omläggning.</li>
+                <li><strong>Tro att amortering på bunden ränta är gratis.</strong> Vissa banker tar ut ränteskillnadsersättning om du betalar av mer än 10 % per år på ett bundet lån i förtid. Kolla villkoren först.</li>
+                <li><strong>Räkna in amortering som "kostnad" i hushållsbudgeten.</strong> Amortering bygger eget kapital — det är inte konsumtion. Däremot påverkar den månadens kassaflöde.</li>
+                <li><strong>Ignorera 70 %-gränsen.</strong> Att amortera ner från 71 % till 69 % halverar kravet. Sikt på trösklarna.</li>
+            </ol>
 
             <div class="cta-card">
-                <h3>Räkna ut ditt lånebelopp</h3>
-                <p>Skriv in lön, befintliga lån och utgifter — se exakt hur mycket banken sannolikt godkänner.</p>
-                <a href="/kalkylatorer/lanekalkylator" class="cta-btn">Öppna lånekalkylatorn →</a>
+                <h3>Räkna ut din månadsamortering</h3>
+                <p>Skriv in bolån, bostadsvärde och belåningsgrad — se exakt vad du behöver amortera per månad och hur snabbt du når 70 %-gränsen.</p>
+                <a href="/kalkylatorer/amorteringskalkylator" class="cta-btn">Öppna amorteringskalkylatorn →</a>
             </div>
         </article>
 
@@ -454,66 +477,66 @@
             <h2>Vanliga frågor</h2>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Hur mycket får jag låna 2026?</button>
-                <div class="faq-answer">Du får låna max 85 % av bostadens värde (bolånetaket) och max 4,5 × hushållets bruttoårsinkomst (skuldkvotstaket). Dessutom måste du klara bankens KALP-test där kalkylräntan är cirka 7 % och du måste ha &quot;kvar att leva på&quot; efter alla utgifter. Den lägsta av dessa tre gränser blir ditt max-belopp.</div>
+                <button class="faq-question" type="button">Vad är amorteringskravet 2026?</button>
+                <div class="faq-answer">Amorteringskravet säger hur mycket av bolånet du minst måste betala av varje år. Vid belåningsgrad över 70 % gäller 2 % årlig amortering. Vid 50–70 % gäller 1 %. Under 50 % finns inget tvingande amorteringskrav. Reglerna är beslutade av Finansinspektionen och gäller alla nya bolån i Sverige.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Vad är bolånetaket 2026?</button>
-                <div class="faq-answer">Bolånetaket är 85 % av bostadens värde. Det betyder att du måste ha minst 15 % i kontantinsats. På en bostad värd 3 miljoner kr får du alltså låna max 2 550 000 kr — resten (450 000 kr) måste vara eget kapital eller annan finansiering.</div>
+                <button class="faq-question" type="button">Hur räknar jag ut min månadsamortering?</button>
+                <div class="faq-answer">Multiplicera bolånet med amorteringsprocenten och dela med 12. Exempel: 2 500 000 kr bolån × 2 % = 50 000 kr/år ÷ 12 = ca 4 170 kr/mån. Du kan räkna ut din exakta månadsamortering i amorteringskalkylatorn på GratisKalkyl.se.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Vad är skuldkvotstaket?</button>
-                <div class="faq-answer">Skuldkvotstaket är 4,5 × hushållets bruttoårsinkomst. Vid en bruttolön på 600 000 kr/år är max total skuld 2 700 000 kr. Detta är inte lag men en stark rekommendation från Finansinspektionen som de flesta banker följer strikt.</div>
+                <button class="faq-question" type="button">Vad är belåningsgrad?</button>
+                <div class="faq-answer">Belåningsgrad = bolån ÷ bostadens marknadsvärde. Köper du en bostad för 3 000 000 kr och tar 2 100 000 kr i bolån är belåningsgraden 70 %. Belåningsgraden styr hur stor amorteringen blir per år.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Vad är KALP-beräkning?</button>
-                <div class="faq-answer">KALP står för &quot;Kvar att leva på&quot;. Banken stress-testar din ekonomi genom att räkna med en kalkylränta på cirka 7 % (även om din faktiska ränta är 4 %) plus schablonbelopp för mat, kläder, försäkringar, barn och bil. Du måste ha tillräckligt kvar per månad efter alla utgifter för att få lånet.</div>
+                <button class="faq-question" type="button">Vad är tilläggsregeln (skärpt amorteringskrav)?</button>
+                <div class="faq-answer">Om din totala skuld överstiger 4,5 × hushållets bruttoårsinkomst tillkommer ytterligare 1 % amortering per år utöver det vanliga kravet. Det kallas skärpt amorteringskrav eller tilläggsregeln. I praktiken godkänner bankerna sällan lån som hamnar över 4,5x — så det är ovanligt att tilläggsregeln slår till.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Hur mycket är amorteringskravet 2026?</button>
-                <div class="faq-answer">Belåningsgrad över 70 % kräver 2 % årlig amortering. Belåningsgrad 50–70 % kräver 1 %. Under 50 % finns inget tvingande amorteringskrav. Om skuldkvoten dessutom överstiger 4,5 × bruttoinkomst tillkommer 1 % extra amortering — men sådana lån godkänns sällan av bank.</div>
+                <button class="faq-question" type="button">Kan jag amortera mer än kravet?</button>
+                <div class="faq-answer">Ja. Amorteringskravet är ett minimum — du får alltid amortera mer. Många väljer att amortera ner under 70 % eller 50 % för att sänka kravet och få lägre månadskostnad. Vissa banker tar dock ut en räntejusteringsavgift om du betalar av extra på ett bundet lån i förtid.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Hur räknas min skuldkvot?</button>
-                <div class="faq-answer">Skuldkvot = total skuld / bruttoårsinkomst. Total skuld inkluderar bolån, privatlån, billån, studielån (CSN) och kreditkortsskuld. Bruttoårsinkomst räknas före skatt. Vid skuldkvot &gt;4,5 anses lånet riskabelt och avslås oftast.</div>
+                <button class="faq-question" type="button">Slipper jag amorteringskravet om jag löser in lånet?</button>
+                <div class="faq-answer">Om du löser in lånet helt är kravet uppfyllt — det finns inget kvar att amortera på. Men om du flyttar lånet till en annan bank följer amorteringskravet med. Undantag: vid skuldsanering, omläggning vid skilsmässa eller andra särskilda livsförhållanden kan banken bevilja amorteringsfrihet under en period.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Räknas CSN-lån mot skuldkvoten?</button>
-                <div class="faq-answer">Ja, CSN-skuld räknas in i den totala skulden vid skuldkvotsberäkning. Har du 200 000 kr i CSN-skuld minskar utrymmet för bolån med 200 000 kr. Däremot räknas CSN-månadsbetalningen oftast inte fullt ut i KALP eftersom den anses mer flexibel än bolån.</div>
+                <button class="faq-question" type="button">Är det smart att amortera eller spara istället?</button>
+                <div class="faq-answer">Bolåneräntan efter ränteavdrag (30 % på första 100 000 kr i räntekostnad) ligger 2026 på 2,5–3,2 %. Sparkonto ger 2–3 %. Aktiefonder ger historiskt 7 % före skatt. Det innebär att rent matematiskt är aktiesparande oftast bättre långsiktigt — men amortering ger garanterad avkastning utan risk. Många väljer att göra båda parallellt.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Kan jag låna mer som par?</button>
-                <div class="faq-answer">Ja. Vid gemensam ansökan räknas båda parters bruttoinkomster ihop. Två personer med 35 000 kr brutto/mån vardera får alltså låna utifrån 840 000 kr/år bruttoinkomst — max 3 780 000 kr i skuld. Schablonbelopp i KALP justeras dock också uppåt (två vuxna).</div>
+                <button class="faq-question" type="button">Kan jag pausa amorteringen?</button>
+                <div class="faq-answer">Finansinspektionen tillåter banker att bevilja amorteringspaus vid arbetslöshet, längre sjukdom, skilsmässa eller dödsfall i hushållet. Pausen är typiskt 6–12 månader. Du måste själv ansöka hos banken och styrka situationen. Räntan måste fortfarande betalas under pausen.</div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" type="button">Vilken ränta använder banken i KALP-testet?</button>
-                <div class="faq-answer">Bankerna använder oftast en kalkylränta på cirka 7 % i KALP-testet, även om de faktiska bolåneräntorna 2026 ligger på 3,5–4,5 %. Detta är ett stresstest för att säkerställa att du klarar betalningarna även vid framtida räntehöjningar.</div>
+                <button class="faq-question" type="button">Räknas amortering som boendekostnad?</button>
+                <div class="faq-answer">Tekniskt sett är amortering inte en kostnad — du betalar av din skuld och bygger eget kapital. Men kassaflödesmässigt fungerar den som en utgift i månadsbudgeten. Banken räknar in både ränta och amortering i KALP-testet när de bedömer hur mycket du får låna.</div>
             </div>
 
         </section>
-    
+
         <section class="related-section">
             <h2>📖 Relaterade guider</h2>
             <div class="related-grid">
-                <a href="/artiklar/amorteringskrav-2026" class="related-card">
-                    <h3>Amorteringskrav 2026</h3>
-                    <p>1 % vid 50–70 % belåning, 2 % vid >70 % — så räknas din månadsamortering.</p>
-                </a>
-                <a href="/artiklar/vad-ar-effektiv-ranta" class="related-card">
-                    <h3>Vad är effektiv ränta?</h3>
-                    <p>Den enda räntan du ska jämföra mellan långivare.</p>
+                <a href="/artiklar/hur-mycket-far-jag-lana-2026" class="related-card">
+                    <h3>Hur mycket får jag låna 2026?</h3>
+                    <p>Bolånetaket, skuldkvot och KALP-beräkning förklarat.</p>
                 </a>
                 <a href="/artiklar/vad-ar-bolan" class="related-card">
                     <h3>Vad är ett bolån?</h3>
                     <p>Bolån, amortering, ränta och kontantinsats förklarat.</p>
+                </a>
+                <a href="/artiklar/vad-ar-effektiv-ranta" class="related-card">
+                    <h3>Vad är effektiv ränta?</h3>
+                    <p>Den enda räntan du ska jämföra mellan långivare.</p>
                 </a>
             </div>
         </section>
@@ -527,9 +550,9 @@
                 <ul>
                     <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
                     <li><a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a></li>
+                    <li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskalkylator</a></li>
                     <li><a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a></li>
                     <li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li>
-                    <li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatteberäknare</a></li>
                     <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
                 </ul>
             </div>
@@ -538,17 +561,17 @@
                 <ul>
                     <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
                     <li><a href="/artiklar/hur-mycket-far-jag-lana-2026">Hur mycket får jag låna?</a></li>
+                    <li><a href="/artiklar/amorteringskrav-2026">Amorteringskrav 2026</a></li>
                     <li><a href="/artiklar/vad-ar-ranta-pa-ranta">Vad är ränta på ränta?</a></li>
                     <li><a href="/artiklar/manadssparande-rakna-ut">Månadssparande — räkna ut</a></li>
                     <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
-                    <li><a href="/artiklar/csn-2026-belopp-och-regler">CSN 2026 — belopp & regler</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Om sajten</h3>
                 <ul>
                     <li><a href="/">Alla 43 kalkylatorer</a></li>
-                    <li><a href="/artiklar/">Alla 20 guider</a></li>
+                    <li><a href="/artiklar/">Alla 21 guider</a></li>
                     <li><a href="/om-oss">Om oss</a></li>
                     <li><a href="/integritetspolicy">Integritetspolicy</a></li>
                 </ul>
@@ -556,7 +579,7 @@
         </div>
         <div class="container footer-bottom">
             <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
-            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Finansinspektionen och din bank vid osäkerhet.</p>
         </div>
     </footer>
 

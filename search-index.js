@@ -424,6 +424,15 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "guide",
+    "url": "/artiklar/amorteringskrav-2026",
+    "title": "Amorteringskrav 2026",
+    "icon": "📉",
+    "category": "Guide",
+    "desc": "1 % vid 50–70 % belåning, 2 % vid >70 %. Plus tilläggsregeln vid skuldkvot >4,5x. Räkneexempel inkluderat.",
+    "kw": "amorteringskrav 2026 bolån amortering belåningsgrad skuldkvot tilläggsregeln 1 % 2 % skärpt amorteringskrav räkna ut amortering"
+  },
+  {
+    "type": "guide",
     "url": "/artiklar/manadssparande-rakna-ut",
     "title": "Månadssparande – räkna ut",
     "icon": "🐷",
