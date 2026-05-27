@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dark mode: tillämpa tema innan render -->
+    <script>
+      (function(){
+        var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+        var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+        document.documentElement.setAttribute('data-theme',d?'dark':'light');
+      })();
+    </script>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Räkna ut sjuklön 2026 — Kalkylator, formel & exempel</title>
+    <meta name="description" content="Räkna ut sjuklön 2026: 80 % av lönen i 14 dagar minus karensavdrag. Formel, exempel för månadslön och timlön, plus färdig kalkylator. Sjuklön vs sjukpenning förklarat.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/rakna-ut-sjuklon-2026">
+    <meta property="og:title" content="Räkna ut sjuklön 2026 — Formel & kalkylator">
+    <meta property="og:description" content="80 % av lönen dag 1–14, minus karensavdrag. Räkna ut sjuklönen på 30 sek med vår kalkylator + se exempel för månadslön och timlön.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/rakna-ut-sjuklon-2026">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Räkna ut sjuklön 2026">
+    <meta name="twitter:description" content="80 % av lönen i 14 dagar, minus karensavdrag. Formel, exempel och kalkylator.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.82); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border-bottom:1px solid rgba(229,231,235,0.7); padding: 16px 0; transition:box-shadow .2s, background .2s; }
+        html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text-light); font-weight: 500; }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .tldr { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 24px; margin: 24px 0 8px; }
+        .tldr strong { color: var(--primary-dark); display:block; margin-bottom:6px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; }
+        .tldr ul { padding-left: 20px; margin: 0; }
+        .tldr li { font-size: 0.95rem; margin-bottom: 4px; }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin: 8px 0 4px; }
+        .rule-card .desc { font-size: 0.8rem; color: var(--text-light); }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 24px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        .formula-box { background: var(--white); border: 1px dashed var(--primary); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .formula-box .label { font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .formula-box .formula { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.5; }
+
+        .cta-card { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; border-radius: var(--radius); padding: 32px 28px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .faq-section { padding: 32px 0 64px; border-top: 1px solid var(--border); }
+        .faq-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 16px 20px; background: none; border: none; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-question.open::after { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; padding: 0 20px; font-size: 0.95rem; color: var(--text-light); }
+        .faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 24px 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+
+        .related-section { padding: 32px 0 48px; border-top: 1px solid var(--border); }
+        .related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .related-card { display: block; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+        .related-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--primary); }
+        .related-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.3; color: var(--text); }
+        .related-card p { font-size: 0.88rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+        /* Dark mode overrides */
+        html[data-theme="dark"] {
+            --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+        }
+        html[data-theme="light"] {
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
+        }
+        .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
+        .theme-toggle-btn:hover { background:var(--primary-light); border-color:var(--primary); color:var(--primary); }
+        .theme-toggle-btn svg { display:block; }
+
+        .site-footer-rich { background: var(--white); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 40px; color: var(--text-light); font-size: 0.9rem; }
+        .site-footer-rich .container { max-width: 1100px; }
+        .footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+        .footer-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); margin-bottom: 12px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 8px; }
+        .footer-col a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; transition: color 0.15s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding-top: 24px; text-align: center; }
+        .footer-bottom p { margin: 4px 0; }
+        .footer-bottom .disclaimer { font-size: 0.75rem; opacity: 0.7; max-width: 700px; margin: 8px auto 0; }
+        .footer-bottom a { color: var(--primary); text-decoration: none; }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Hur räknar man ut sjuklön?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sjuklönen är 80 % av din vanliga lön under dag 1–14 av sjukfrånvaron. Från det dras karensavdraget, som är 20 % av en genomsnittlig veckosjuklön (cirka en arbetsdags sjuklön). Har du månadslön: multiplicera månadslönen med 80 % och dela proportionellt på antalet sjukfrånvaroarbetsdagar — dra sedan av karensavdraget. Räkna exakt i sjukpenningkalkylatorn och karensavdragskalkylatorn på GratisKalkyl.se."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad är skillnaden mellan sjuklön och sjukpenning 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sjuklön betalas av arbetsgivaren dag 1–14 av sjukfrånvaron och är 80 % av lönen minus karensavdrag. Sjukpenning betalas av Försäkringskassan från dag 15 och framåt — också cirka 80 % av lönen men beräknad på SGI (sjukpenninggrundande inkomst), upp till maxtaket 1 218 kr/dag 2026. Två olika system, samma procentsats, olika utbetalare."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur mycket är sjuklön per dag 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "För en arbetstagare med månadslön 35 000 kr blir sjuklönen per arbetsdag cirka 35 000 × 12 ÷ 260 × 0,80 = 1 292 kr. För 25 000 kr/mån blir det cirka 923 kr/arbetsdag. Karensavdrag dras vid första sjukfrånvarotillfället och motsvarar ungefär en hel arbetsdags sjuklön (20 % av genomsnittlig veckosjuklön)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur räknas karensavdraget vid sjukfrånvaro?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Karensavdraget är 20 % av en genomsnittlig veckosjuklön. För en heltidsanställd med månadslön 30 000 kr blir det cirka 1 108 kr (30 000 × 12 ÷ 52 × 0,80 × 0,20). Avdraget dras vid sjukfrånvarons första dag oavsett när på arbetspasset du blir sjuk. Vid återinsjuknande inom fem kalenderdagar görs inget nytt karensavdrag."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Får alla anställda sjuklön?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anställda som varit anställda i minst en månad — eller arbetat sammanhängande 14 kalenderdagar — har rätt till sjuklön enligt sjuklönelagen. Korta vikariat under 14 dagar kvalificerar inte. Egenföretagare och uppdragstagare har inte rätt till sjuklön men kan istället få sjukpenning från Försäkringskassan från dag 1 (efter karensdagar)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vad händer efter sjuklöneperiodens 14 dagar?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Från dag 15 tar Försäkringskassan över med sjukpenning. Du måste själv ansöka om sjukpenning hos Försäkringskassan, och från och med sjukdag åtta krävs läkarintyg. Sjukpenningen är cirka 80 % av SGI:n, med ett dagsmaxtak på 1 218 kr (2026). Räkna ut din sjukpenning i sjukpenningkalkylatorn."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Kan arbetsgivaren betala mer än 80 % i sjuklön?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Många kollektivavtal innehåller en sjuklönetilläggsregel som höjer ersättningen till 90 % eller till och med 100 % av lönen under sjuklöneperioden. Kontrollera ditt kollektivavtal eller med HR. För lönenivåer över taket i Försäkringskassan (SGI ~46 200 kr/mån 2026) kan kollektivavtal också ge tilläggsersättning vid längre sjukskrivning."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Räknas sjuklön som pensionsgrundande inkomst?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Sjuklönen från arbetsgivaren är pensionsgrundande på samma sätt som vanlig lön — den beskattas som inkomst av tjänst och påverkar din allmänna pension. Däremot är sjukpenning från Försäkringskassan också pensionsgrundande, men beräknas på SGI-basen och har taket 1 218 kr/dag (2026)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Hur fungerar sjuklön vid timanställning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "För timanställda räknas sjuklön som 80 % av den lön du skulle haft för det inplanerade arbetspasset minus karensavdrag. Är passet inte schemalagt utgår ingen sjuklön — du måste vara avtalad att jobba för att få sjuklön. Många timanställda hamnar därför utan ersättning vid sjukdom, vilket är värt att känna till innan."
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hem",
+            "item": "https://gratiskalkyl.se/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guider",
+            "item": "https://gratiskalkyl.se/artiklar/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Räkna ut sjuklön 2026",
+            "item": "https://gratiskalkyl.se/artiklar/rakna-ut-sjuklon-2026"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Räkna ut sjuklön 2026 — Kalkylator, formel och exempel",
+    "description": "Sjuklön 2026: 80 % av lönen i 14 dagar minus karensavdrag. Formel, exempel för månadslön och timlön plus färdig kalkylator.",
+    "url": "https://gratiskalkyl.se/artiklar/rakna-ut-sjuklon-2026",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "image": "https://gratiskalkyl.se/favicon.svg",
+    "author": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "url": "https://gratiskalkyl.se/om-oss"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://gratiskalkyl.se/favicon.svg"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gratiskalkyl.se/artiklar/rakna-ut-sjuklon-2026"
+    },
+    "inLanguage": "sv-SE"
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
+            <nav>
+                <a href="/">Kalkylatorer</a>
+                <a href="/artiklar/">📖 Guider</a>
+            </nav>
+            <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Räkna ut sjuklön 2026</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Lön &amp; ersättning</span>
+            <h1>Räkna ut sjuklön 2026 — Kalkylator, formel och exempel</h1>
+            <p class="article-meta">Uppdaterad maj 2026 · 8 min läsning</p>
+            <p class="article-intro">Sjuklönen är ersättningen din <strong>arbetsgivare</strong> betalar dag 1–14 när du är sjuk. Den utgör <strong>80 % av din vanliga lön</strong> minus ett <strong>karensavdrag</strong> som motsvarar cirka en arbetsdags sjuklön. Från dag 15 tar Försäkringskassan över med sjukpenning. Här går vi igenom exakt hur du räknar ut sjuklönen för månadslön och timlön, vad karensavdraget blir i kronor, och var brytpunkten ligger mellan sjuklön och sjukpenning.</p>
+        </div>
+
+        <article class="article-body">
+            <div class="tldr">
+                <strong>TLDR — Tre snabba punkter</strong>
+                <ul>
+                    <li>Sjuklön = 80 % av lönen dag 1–14, betalt av arbetsgivaren.</li>
+                    <li>Karensavdrag = 20 % av genomsnittlig veckosjuklön — dras vid sjukfrånvarons första dag.</li>
+                    <li>Räkna direkt i <a href="/kalkylatorer/sjukpenningkalkylator">sjukpenningkalkylatorn</a> + <a href="/kalkylatorer/karensavdragskalkylator">karensavdragskalkylatorn</a>.</li>
+                </ul>
+            </div>
+
+            <h2>Sjuklön vs sjukpenning — två system, två utbetalare</h2>
+            <p>Det första som förvirrar är att svensk sjukersättning består av <em>två</em> separata system med olika utbetalare. Du går från det ena till det andra utan att märka det själv, men det är värt att förstå skillnaden:</p>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">Dag 1–14</div>
+                    <div class="label">Sjuklön</div>
+                    <div class="desc">Arbetsgivaren betalar 80 % av lönen — minus karensavdrag dag 1.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">Dag 15+</div>
+                    <div class="label">Sjukpenning</div>
+                    <div class="desc">Försäkringskassan tar över. ~80 % av SGI:n, dagsmax 1 218 kr 2026.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">14 d</div>
+                    <div class="label">Sjuklöneperiod</div>
+                    <div class="desc">Arbetsgivarens betalningsansvar — räknat i kalenderdagar.</div>
+                </div>
+            </div>
+
+            <p>Sjuklöneperioden är alltid 14 kalenderdagar (inte arbetsdagar) och börjar räknas från första sjukfrånvarodagen. Om du blir sjuk en onsdag — då räknas onsdagen som dag 1, även om torsdag–fredag är lediga dagar enligt schemat.</p>
+
+            <h2>Formeln för sjuklön — månadslön</h2>
+            <p>För en månadsanställd på heltid räknas sjuklönen per arbetsdag som du skulle ha jobbat. Grundformeln:</p>
+
+            <div class="formula-box">
+                <div class="label">Formel — sjuklön per arbetsdag</div>
+                <div class="formula">Månadslön × 12 ÷ 260 × 0,80 = sjuklön per arbetsdag</div>
+            </div>
+
+            <p>260 är ungefärligt antal arbetsdagar per år (5 dagar × 52 veckor). För en exakt beräkning används 261 eller 262 beroende på året, men 260 är vad de flesta arbetsgivare räknar med. Formeln ger sjuklönen för en hel arbetsdags sjukfrånvaro.</p>
+
+            <p>Vid del av dag (du går hem klockan 11 efter halva passet) blir sjuklönen proportionell mot frånvarotiden, alltid med 80 %-faktorn.</p>
+
+            <h2>Karensavdraget — så räknas det</h2>
+            <p>Karensavdraget ersatte den gamla karensdagen 2019 och fungerar lite annorlunda. Det är inte längre en hel sjukdag som "försvinner" — det är ett <em>schablonavdrag</em> på 20 % av en genomsnittlig veckosjuklön.</p>
+
+            <div class="formula-box">
+                <div class="label">Formel — karensavdrag</div>
+                <div class="formula">Månadslön × 12 ÷ 52 × 0,80 × 0,20 = karensavdrag i kronor</div>
+            </div>
+
+            <p>Praktiskt sett motsvarar karensavdraget ungefär en hel arbetsdags sjuklön för en heltidsarbetare. Avdraget dras vid första sjukfrånvarotillfället — sedan utgår full sjuklön (80 %) för resterande dagar i sjukperioden.</p>
+
+            <div class="info-box">
+                <p><strong>Tips:</strong> Om du blir sjuk en halvdag (t.ex. går hem klockan 12) dras hela karensavdraget ändå — men du får sjuklön för resterande del av dagen. Det betyder att kortare frånvaro på en halv dag kan ge negativ nettoeffekt jämfört med att vara på jobbet hela dagen.</p>
+            </div>
+
+            <h2>Räkneexempel — Anna med månadslön 30 000 kr</h2>
+            <p>Anna jobbar heltid (40 h/vecka) med månadslön 30 000 kr brutto. Hon blir sjuk i 5 arbetsdagar (en hel arbetsvecka). Så här räknas hennes ersättning:</p>
+
+            <ul>
+                <li><strong>Sjuklön per arbetsdag:</strong> 30 000 × 12 ÷ 260 × 0,80 = <strong>1 108 kr/dag</strong></li>
+                <li><strong>Karensavdrag (dras dag 1):</strong> 30 000 × 12 ÷ 52 × 0,80 × 0,20 = <strong>1 108 kr</strong></li>
+                <li><strong>Sjuklön 5 dagar:</strong> 5 × 1 108 = 5 540 kr</li>
+                <li><strong>Minus karensavdrag:</strong> −1 108 kr</li>
+                <li><strong>Total sjuklön efter karens:</strong> <strong>4 432 kr brutto</strong></li>
+            </ul>
+
+            <p>Av detta dras sedan vanlig skatt enligt skattetabell. Vid kommunalskatt ~32 % blir nettoersättningen cirka 3 014 kr för veckans frånvaro.</p>
+
+            <h2>Räkneexempel — Björn med timlön 200 kr</h2>
+            <p>Björn är timanställd med timlön 200 kr brutto. Han har 3 inplanerade arbetspass à 8 timmar nästa vecka och blir sjuk hela perioden.</p>
+
+            <ul>
+                <li><strong>Sjuklön per arbetspass:</strong> 8 × 200 × 0,80 = <strong>1 280 kr/pass</strong></li>
+                <li><strong>Karensavdrag:</strong> ungefär 20 % av en veckas sjuklön = (3 × 1 280) ÷ 5 ≈ <strong>768 kr</strong> (variabel — kollektivavtalets schablon avgör)</li>
+                <li><strong>Sjuklön 3 pass:</strong> 3 × 1 280 = 3 840 kr</li>
+                <li><strong>Minus karensavdrag:</strong> −768 kr</li>
+                <li><strong>Total sjuklön efter karens:</strong> <strong>3 072 kr brutto</strong></li>
+            </ul>
+
+            <p>Viktigt för timanställda: <strong>du får bara sjuklön för pass du faktiskt skulle ha jobbat</strong>. Om du inte är inschemad för någon vecka utgår ingen sjuklön den veckan, även om du är fortsatt sjuk.</p>
+
+            <h2>Räkneexempel — högre lön + brytpunkten mot sjukpenning</h2>
+            <p>Karin tjänar 50 000 kr/mån brutto. Hon blir sjuk i tre veckor (15 arbetsdagar). Sjuklöneperioden är 14 kalenderdagar — efter det tar Försäkringskassan över.</p>
+
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Utbetalare</th>
+                        <th>Per dag (brutto)</th>
+                        <th>Totalt (brutto)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Dag 1–14 (sjuklön)</td><td>Arbetsgivare</td><td class="num">1 846 kr/arb.dag</td><td class="num">~16 600 kr*</td></tr>
+                    <tr><td>Dag 15+ (sjukpenning)</td><td>Försäkringskassan</td><td class="num">1 218 kr (taket)</td><td class="num">8 526 kr/v</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.85rem; color: var(--text-light); margin-top:-12px;">* 10 arbetsdagar × 1 846 kr − karensavdrag 1 846 kr ≈ 16 614 kr</p>
+
+            <p>Notera Karins sjuklön per arbetsdag är högre (1 846 kr) eftersom hon har högre lön — men när Försäkringskassan tar över på dag 15 möter hon dagsmaxtaket på 1 218 kr/dag oavsett. Här ligger den stora ekonomiska klyftan i svensk sjukförsäkring: höglönar som blir långvarigt sjuka tappar mest.</p>
+
+            <h2>Sjuklön + kollektivavtal — när 90 % eller 100 % gäller</h2>
+            <p>Många kollektivavtal innehåller en sjuklönetilläggsregel som höjer ersättningen utöver lagens 80 %. Vanliga upplägg:</p>
+            <ul>
+                <li><strong>Tjänstemän (Unionen/Akavia):</strong> ofta 90 % från dag 2 i sjuklöneperioden + 10 % av lönedelen över SGI-taket vid längre sjukskrivning.</li>
+                <li><strong>Industriavtalen (IF Metall):</strong> typiskt 100 % sjuklön + särskild sjuklönefyllnad.</li>
+                <li><strong>Kommunal sektor:</strong> AB-avtalet ger ofta 10 % sjuklönetillägg utöver de 80 % som arbetsgivaren betalar.</li>
+            </ul>
+            <p>Kontrollera ditt eget kollektivavtal eller fråga HR. Tilläggen är ofta större vid längre sjukskrivning och spelar störst roll för dig som ligger över SGI-taket (cirka 46 200 kr/mån 2026).</p>
+
+            <h2>Vanliga misstag att undvika</h2>
+            <ol>
+                <li><strong>Räkna sjuklönen som 80 % av månadslönen rakt av.</strong> Sjuklönen är 80 % av lönen <em>för dagarna du varit borta</em> — inte hela månadens lön.</li>
+                <li><strong>Glömma karensavdraget vid återinsjuknande inom 5 dagar.</strong> Inget nytt karensavdrag tas ut om du blir sjuk igen inom 5 kalenderdagar från föregående sjukperiod.</li>
+                <li><strong>Tro att timanställda alltid får sjuklön.</strong> Bara för inplanerade pass — och bara om anställningstiden uppfyller kvalifikationsperioden (1 månads sammanlagd anställning eller 14 dagars sammanhängande anställning).</li>
+                <li><strong>Anta att sjukpenningen är 80 % av lönen efter dag 14.</strong> Den är 80 % av SGI:n, som är begränsad till 1 218 kr/dag 2026 — för höglönar betyder det en kraftigt sänkt ersättning på dag 15.</li>
+            </ol>
+
+            <div class="cta-card">
+                <h3>Räkna ut sjuklön och karensavdrag</h3>
+                <p>Använd våra kalkylatorer för exakt svar på 30 sekunder — sjukpenningkalkylatorn för dag 15+ och karensavdragskalkylatorn för avdragsdelen.</p>
+                <a href="/kalkylatorer/sjukpenningkalkylator" class="cta-btn">Öppna sjukpenningkalkylatorn →</a>
+            </div>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknar man ut sjuklön?</button>
+                <div class="faq-answer">Sjuklönen är 80 % av din vanliga lön under dag 1–14 av sjukfrånvaron. Från det dras karensavdraget, som är 20 % av en genomsnittlig veckosjuklön (cirka en arbetsdags sjuklön). Har du månadslön: multiplicera månadslönen med 80 % och dela proportionellt på antalet sjukfrånvaroarbetsdagar — dra sedan av karensavdraget. Räkna exakt i sjukpenningkalkylatorn och karensavdragskalkylatorn på GratisKalkyl.se.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är skillnaden mellan sjuklön och sjukpenning 2026?</button>
+                <div class="faq-answer">Sjuklön betalas av arbetsgivaren dag 1–14 av sjukfrånvaron och är 80 % av lönen minus karensavdrag. Sjukpenning betalas av Försäkringskassan från dag 15 och framåt — också cirka 80 % av lönen men beräknad på SGI (sjukpenninggrundande inkomst), upp till maxtaket 1 218 kr/dag 2026. Två olika system, samma procentsats, olika utbetalare.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket är sjuklön per dag 2026?</button>
+                <div class="faq-answer">För en arbetstagare med månadslön 35 000 kr blir sjuklönen per arbetsdag cirka 35 000 × 12 ÷ 260 × 0,80 = 1 292 kr. För 25 000 kr/mån blir det cirka 923 kr/arbetsdag. Karensavdrag dras vid första sjukfrånvarotillfället och motsvarar ungefär en hel arbetsdags sjuklön (20 % av genomsnittlig veckosjuklön).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur räknas karensavdraget vid sjukfrånvaro?</button>
+                <div class="faq-answer">Karensavdraget är 20 % av en genomsnittlig veckosjuklön. För en heltidsanställd med månadslön 30 000 kr blir det cirka 1 108 kr (30 000 × 12 ÷ 52 × 0,80 × 0,20). Avdraget dras vid sjukfrånvarons första dag oavsett när på arbetspasset du blir sjuk. Vid återinsjuknande inom fem kalenderdagar görs inget nytt karensavdrag.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Får alla anställda sjuklön?</button>
+                <div class="faq-answer">Anställda som varit anställda i minst en månad — eller arbetat sammanhängande 14 kalenderdagar — har rätt till sjuklön enligt sjuklönelagen. Korta vikariat under 14 dagar kvalificerar inte. Egenföretagare och uppdragstagare har inte rätt till sjuklön men kan istället få sjukpenning från Försäkringskassan från dag 1 (efter karensdagar).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad händer efter sjuklöneperiodens 14 dagar?</button>
+                <div class="faq-answer">Från dag 15 tar Försäkringskassan över med sjukpenning. Du måste själv ansöka om sjukpenning hos Försäkringskassan, och från och med sjukdag åtta krävs läkarintyg. Sjukpenningen är cirka 80 % av SGI:n, med ett dagsmaxtak på 1 218 kr (2026). Räkna ut din sjukpenning i sjukpenningkalkylatorn.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Kan arbetsgivaren betala mer än 80 % i sjuklön?</button>
+                <div class="faq-answer">Ja. Många kollektivavtal innehåller en sjuklönetilläggsregel som höjer ersättningen till 90 % eller till och med 100 % av lönen under sjuklöneperioden. Kontrollera ditt kollektivavtal eller med HR. För lönenivåer över taket i Försäkringskassan (SGI ~46 200 kr/mån 2026) kan kollektivavtal också ge tilläggsersättning vid längre sjukskrivning.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Räknas sjuklön som pensionsgrundande inkomst?</button>
+                <div class="faq-answer">Ja. Sjuklönen från arbetsgivaren är pensionsgrundande på samma sätt som vanlig lön — den beskattas som inkomst av tjänst och påverkar din allmänna pension. Däremot är sjukpenning från Försäkringskassan också pensionsgrundande, men beräknas på SGI-basen och har taket 1 218 kr/dag (2026).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur fungerar sjuklön vid timanställning?</button>
+                <div class="faq-answer">För timanställda räknas sjuklön som 80 % av den lön du skulle haft för det inplanerade arbetspasset minus karensavdrag. Är passet inte schemalagt utgår ingen sjuklön — du måste vara avtalad att jobba för att få sjuklön. Många timanställda hamnar därför utan ersättning vid sjukdom, vilket är värt att känna till innan.</div>
+            </div>
+
+        </section>
+
+        <section class="related-section">
+            <h2>📖 Relaterade guider och kalkylatorer</h2>
+            <div class="related-grid">
+                <a href="/kalkylatorer/sjukpenningkalkylator" class="related-card">
+                    <h3>Sjukpenningkalkylator</h3>
+                    <p>Räkna ut Försäkringskassans utbetalning från dag 15.</p>
+                </a>
+                <a href="/kalkylatorer/karensavdragskalkylator" class="related-card">
+                    <h3>Karensavdragskalkylator</h3>
+                    <p>Exakt karensavdrag baserat på din månadslön.</p>
+                </a>
+                <a href="/artiklar/rakna-ut-nettolon-2026" class="related-card">
+                    <h3>Räkna ut nettolön 2026</h3>
+                    <p>Vad blir din lön efter skatt — kompletta tabeller.</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+        <footer class="site-footer-rich">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <h3>🧮 Populära kalkylatorer</h3>
+                <ul>
+                    <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
+                    <li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenningkalkylator</a></li>
+                    <li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdragskalkylator</a></li>
+                    <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
+                    <li><a href="/kalkylatorer/foraldrapenning">Föräldrapenningkalkylator</a></li>
+                    <li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlönekalkylator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>📖 Populära guider</h3>
+                <ul>
+                    <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
+                    <li><a href="/artiklar/rakna-ut-foraldrapenning-2026">Räkna ut föräldrapenning 2026</a></li>
+                    <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
+                    <li><a href="/artiklar/vad-ar-semesterlon">Vad är semesterlön?</a></li>
+                    <li><a href="/artiklar/amorteringskrav-2026">Amorteringskrav 2026</a></li>
+                    <li><a href="/artiklar/vad-ar-bolan">Vad är ett bolån?</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Om sajten</h3>
+                <ul>
+                    <li><a href="/">Alla 43 kalkylatorer</a></li>
+                    <li><a href="/artiklar/">Alla 22 guider</a></li>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Försäkringskassan, ditt kollektivavtal och din arbetsgivare vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+
+    <script>
+    /* Theme toggle */
+    (function(){
+      var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var btn=document.getElementById('gk-theme-btn');
+      if(!btn)return;
+      function setIcon(){
+        var dark=document.documentElement.getAttribute('data-theme')==='dark';
+        btn.innerHTML=dark?SUN:MOON;
+        btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
+      }
+      setIcon();
+      btn.addEventListener('click',function(){
+        var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
+        var next=!nowDark;
+        document.documentElement.setAttribute('data-theme',next?'dark':'light');
+        try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
+        setIcon();
+      });
+    })();
+    </script>
+
+</body>
+</html>
