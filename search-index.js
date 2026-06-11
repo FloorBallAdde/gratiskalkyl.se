@@ -478,6 +478,15 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "guide",
+    "url": "/artiklar/barnbidrag-2026",
+    "title": "Barnbidrag 2026 – hur mycket får du?",
+    "icon": "👨‍👩‍👧‍👦",
+    "category": "Guide",
+    "desc": "1 250 kr per barn och månad plus flerbarnstillägg. Total utbetalning per familj, utbetalningsdatum och regler.",
+    "kw": "barnbidrag 2026 flerbarnstillägg hur mycket är barnbidraget belopp utbetalning försäkringskassan barn familj"
+  },
+  {
+    "type": "guide",
     "url": "/artiklar/vad-ar-f-skatt",
     "title": "Vad är F-skatt?",
     "icon": "🧾",
