@@ -6,6 +6,13 @@
 # Fix unknown /dag URL that Google has crawled as 404 (external broken link)
 /dag / 301
 
+# Fix /mån och /år 404 (samma mönster som /dag — GSC-genomgång 2026-06-22)
+/mån / 301
+/år / 301
+
+# lanekalkylator.html saknade .html→clean-redirect (GSC 404 2026-06-22)
+/kalkylatorer/lanekalkylator.html /kalkylatorer/lanekalkylator 301
+
 # Fix .html URLs that Google has crawled (redirect failures)
 /kalkylatorer/reseavdragskalkylator.html /kalkylatorer/reseavdragskalkylator 301
 /kalkylatorer/loneraknare.html /kalkylatorer/loneraknare 301
