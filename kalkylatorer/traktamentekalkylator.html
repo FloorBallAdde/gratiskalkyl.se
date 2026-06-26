@@ -43,7 +43,7 @@
           "name": "Hur mycket är skattefritt traktamente 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Skattefritt traktamente för inrikes tjänsteresor 2026 är 300 kr per heldagsresa (mer än 10 km från bostaden och vanliga arbetsplatsen, och minst 5 timmar borta). Halvdagsersättning (minst 5 timmar men återvänder samma dag) är 150 kr. Vid övernattning tillkommer nattraktamente om 150 kr per natt."
+            "text": "Skattefritt traktamente för inrikes tjänsteresor 2026 är 300 kr per hel dag och 150 kr per halv dag. En hel dag är när resan börjar före kl 12.00 eller slutar efter kl 19.00 (samt mellandagar); en halv dag när resan börjar kl 12.00 eller senare eller slutar kl 19.00 eller tidigare. Skattefriheten kräver övernattning. Tillkommer gör nattraktamente om 150 kr per natt om arbetsgivaren inte betalar logi."
           }
         },
         {
@@ -51,7 +51,7 @@
           "name": "Vad räknas som en traktamentsgrundande resa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En tjänsteresa ger rätt till traktamente om: (1) du är mer än 10 km från din bostad och vanliga arbetsplats, (2) du är borta mer än 5 timmar, och (3) du inte kan äta och övernatta hemma. Resan måste också vara beordrad av arbetsgivaren och du får inte ha möjlighet att övernatta hemma."
+            "text": "En tjänsteresa ger rätt till skattefritt traktamente om: (1) resan går utanför din vanliga verksamhetsort (mer än 50 km från både bostad och vanlig arbetsplats), (2) den innebär minst en övernattning, och (3) den är beordrad av arbetsgivaren. Endagsresor utan övernattning ger inte skattefritt traktamente."
           }
         },
         {
@@ -321,11 +321,12 @@
     <div class="info-box">
       <h3>📌 Skattefria schablonbelopp 2026 (inrikes)</h3>
       <ul>
-        <li><strong>Heldagsresa:</strong> 300 kr (mer än 10 km hemifrån, borta &gt;5 h)</li>
-        <li><strong>Halvdagsresa:</strong> 150 kr (5–10 h, återvänder samma dag)</li>
+        <li><strong>Hel dag:</strong> 300 kr (avresa före kl 12.00 / hemkomst efter kl 19.00, samt mellandagar)</li>
+        <li><strong>Halv dag:</strong> 150 kr (avresa kl 12.00 eller senare / hemkomst kl 19.00 eller tidigare)</li>
+        <li><strong>Villkor:</strong> kräver övernattning och resa utanför vanliga verksamhetsorten (&gt;50 km)</li>
         <li><strong>Nattraktamente:</strong> 150 kr/natt (om arbetsgivaren ej betalar logi)</li>
         <li><strong>Efter 3 mån på samma ort:</strong> 210 kr/heldag (70 %) · <strong>efter 2 år:</strong> 150 kr (50 %)</li>
-        <li><strong>Måltidsreduktion:</strong> Frukost –15 %, Lunch –35 %, Middag –35 %</li>
+        <li><strong>Måltidsreduktion:</strong> Frukost –15 %, Lunch –35 %, Middag –35 % (full kost –85 %)</li>
       </ul>
       <p style="margin:12px 0 0;font-size:14px;">📖 Osäker på reglerna? Läs vår kompletta <a href="/artiklar/traktamente-2026" style="color:var(--primary);font-weight:600;">guide om traktamente 2026</a> — villkor, måltidsavdrag och utlandstraktamente förklarat med exempel.</p>
     </div>
@@ -341,7 +342,7 @@
       <div class="form-grid">
         <div class="form-row">
           <div class="field">
-            <label>Antal heldagar <span class="label-sub">(mer än 10 km, &gt;5 h)</span></label>
+            <label>Antal heldagar <span class="label-sub">(avresa före 12 / hem efter 19)</span></label>
             <div class="range-row">
               <input type="range" id="heldagar" min="0" max="200" value="5" oninput="syncVal('heldagar','heldagar_n')">
               <span class="range-val" id="heldagar_n">5</span>
@@ -349,7 +350,7 @@
             <input type="number" id="heldagar_i" min="0" max="365" value="5" oninput="syncSlider('heldagar','heldagar_i','heldagar_n')">
           </div>
           <div class="field">
-            <label>Antal halvdagar <span class="label-sub">(5–10 h, hem samma dag)</span></label>
+            <label>Antal halvdagar <span class="label-sub">(avresa efter 12 / hem före 19)</span></label>
             <div class="range-row">
               <input type="range" id="halvdagar" min="0" max="100" value="2" oninput="syncVal('halvdagar','halvdagar_n')">
               <span class="range-val" id="halvdagar_n">2</span>
@@ -495,10 +496,10 @@
 <section class="seo-section">
   <h2>Vad är traktamente och när har du rätt till det?</h2>
   <p>Traktamente är en ersättning som din arbetsgivare kan betala när du reser i tjänsten och inte kan äta och övernatta hemma. Syftet är att täcka de ökade levnadskostnaderna — mat, logi och smärre utgifter — som uppstår under resan. Det skattefria beloppet styrs av Skatteverkets schablonbelopp, som justeras regelbundet.</p>
-  <p>För att du ska ha rätt till traktamente krävs tre saker: resan måste vara beordrad av arbetsgivaren, du måste befinna dig mer än 10 kilometer från din bostad och vanliga arbetsplats, och du måste vara borta så länge att du inte rimligen kan äta och övernatta hemma — minst 5 timmar för halvdagsersättning.</p>
+  <p>För att du ska ha rätt till skattefritt traktamente krävs tre saker: resan måste vara beordrad av arbetsgivaren, gå utanför din vanliga verksamhetsort (mer än 50 kilometer från både din bostad och din vanliga arbetsplats), och innebära minst en övernattning. En endagsresa utan övernattning ger inte skattefritt traktamente.</p>
 
   <h2>Inrikes traktamente 2026 — så beräknas det</h2>
-  <p>Skatteverkets schablonbelopp för inrikes tjänsteresor 2026 är <strong>300 kr per heldagsresa</strong>. En heldagsresa innebär att du är borta hela dagen och inte kan äta hemma. Återvänder du samma dag men är borta minst 5 timmar gäller istället <strong>halvdagsersättning om 150 kr</strong>. Övernattning utanför hemmet ger rätt till ytterligare <strong>150 kr per natt</strong> i nattraktamente, förutsatt att arbetsgivaren inte betalar logikostnaden.</p>
+  <p>Skatteverkets schablonbelopp för inrikes tjänsteresor 2026 är <strong>300 kr per hel dag</strong>. En hel dag är avresedagen om resan börjar före kl 12.00, hemkomstdagen om den slutar efter kl 19.00, samt alla mellanliggande dagar. Börjar resan kl 12.00 eller senare, eller slutar kl 19.00 eller tidigare, gäller istället <strong>halvdagsersättning om 150 kr</strong>. Övernattning utanför hemmet ger rätt till ytterligare <strong>150 kr per natt</strong> i nattraktamente, förutsatt att arbetsgivaren inte betalar logikostnaden.</p>
   <p>Betalar arbetsgivaren för dina måltider reduceras det skattefria traktamentet: frukost drar av 15 %, lunch 35 % och middag 35 % av heldagsbeloppet. Om alla tre måltider ingår i exempelvis ett konferenspaket reduceras traktamentet med 85 % — från 300 kr till 45 kr.</p>
 
   <h2>Utlandstraktamente — varför varierar beloppet per land?</h2>
@@ -552,8 +553,8 @@
 <script>
   /* ---- FAQ data ---- */
   const faqs = [
-    { q: "Hur mycket är skattefritt traktamente 2026?", a: "Skattefritt traktamente för inrikes tjänsteresor 2026 är 300 kr per heldagsresa (mer än 10 km från bostaden och vanliga arbetsplatsen, och minst 5 timmar borta). Halvdagsersättning är 150 kr. Vid övernattning tillkommer nattraktamente om 150 kr per natt om arbetsgivaren inte betalar logi." },
-    { q: "Vad räknas som en traktamentsgrundande resa?", a: "En tjänsteresa ger rätt till traktamente om: (1) du är mer än 10 km från din bostad och vanliga arbetsplats, (2) du är borta mer än 5 timmar, och (3) du inte kan äta och övernatta hemma. Resan måste vara beordrad av arbetsgivaren." },
+    { q: "Hur mycket är skattefritt traktamente 2026?", a: "Skattefritt traktamente för inrikes tjänsteresor 2026 är 300 kr per hel dag och 150 kr per halv dag. Hel dag gäller när resan börjar före kl 12.00 eller slutar efter kl 19.00 (samt mellandagar). Skattefriheten kräver övernattning. Vid övernattning tillkommer nattraktamente om 150 kr per natt om arbetsgivaren inte betalar logi." },
+    { q: "Vad räknas som en traktamentsgrundande resa?", a: "En tjänsteresa ger rätt till skattefritt traktamente om: (1) resan går utanför din vanliga verksamhetsort (mer än 50 km från både bostad och vanlig arbetsplats), (2) den innebär minst en övernattning, och (3) den är beordrad av arbetsgivaren. Endagsresor utan övernattning ger inte skattefritt traktamente." },
     { q: "Är traktamente skattepliktigt om arbetsgivaren betalar mer?", a: "Ja. Om din arbetsgivare betalar mer traktamente än Skatteverkets schablonbelopp (300 kr/dag inrikes 2026) är överskjutande del skattepliktig och ska beskattas som lön." },
     { q: "Hur beräknas traktamente vid utlandsresor?", a: "Traktamente för utlandsresor beräknas enligt Skatteverkets landsspecifika schablonbelopp. Dessa varierar per land och uppdateras årligen. Halva beloppet gäller vid avresedag och hemkomstdag om resan varar mer än ett dygn." },
     { q: "Vad är nattraktamente?", a: "Nattraktamente är ersättning för övernattningskostnader. Om din arbetsgivare inte betalar logi har du rätt till skattefritt nattraktamente om 150 kr per natt (inrikes 2026). Betalar arbetsgivaren logiet har du inte rätt till nattraktamente." },
