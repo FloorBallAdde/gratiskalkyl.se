@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XGTX1PYYFJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dark mode: tillämpa tema innan render -->
+    <script>
+      (function(){
+        var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
+        var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+        document.documentElement.setAttribute('data-theme',d?'dark':'light');
+      })();
+    </script>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <title>Traktamente 2026 – belopp, regler & måltidsavdrag (komplett guide)</title>
+    <meta name="description" content="Traktamente 2026: 300 kr/heldag, 150 kr/halvdag, 150 kr nattraktamente. Så fungerar måltidsavdrag, reducerat traktamente och utlandstraktamente — med räkneexempel.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gratiskalkyl.se/artiklar/traktamente-2026">
+    <meta property="og:title" content="Traktamente 2026 – belopp, regler & måltidsavdrag">
+    <meta property="og:description" content="300 kr/heldag, 150 kr/halvdag, 150 kr nattraktamente. Så fungerar måltidsavdrag, reducerat traktamente och utlandstraktamente 2026 — med räkneexempel.">
+    <meta property="og:url" content="https://gratiskalkyl.se/artiklar/traktamente-2026">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Traktamente 2026 – belopp & regler">
+    <meta name="twitter:description" content="300 kr/heldag, 150 kr/halvdag, 150 kr natt. Måltidsavdrag och utlandstraktamente 2026 — med exempel.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.82); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border-bottom:1px solid rgba(229,231,235,0.7); padding: 16px 0; transition:box-shadow .2s, background .2s; }
+        html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+        .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .site-header a:hover { color: var(--primary); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--text-light); font-weight: 500; }
+        nav a { margin-left: 24px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+        .breadcrumb { padding: 16px 0 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .article-header { padding: 24px 0 32px; }
+        .article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+        .article-meta { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .article-intro { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        .article-body { padding: 32px 0; }
+        .article-body h2 { font-size: 1.4rem; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        .article-body h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 16px; }
+        .article-body li { margin-bottom: 8px; }
+
+        .tldr-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 8px 0 24px; box-shadow: var(--shadow); }
+        .tldr-box .tldr-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); margin-bottom: 10px; }
+        .tldr-box ul { margin: 0; padding-left: 20px; }
+        .tldr-box li { margin-bottom: 6px; font-size: 0.95rem; }
+
+        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 24px 0; }
+        .info-box p { margin: 0; font-size: 0.95rem; }
+        .info-box strong { color: var(--primary); }
+
+        .rule-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .rule-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+        .rule-card .number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .rule-card .label { font-size: 0.85rem; color: var(--text-light); margin-top: 6px; }
+        .rule-card .desc { font-size: 0.82rem; color: var(--text-light); margin-top: 8px; border-top: 1px solid var(--border); padding-top: 8px; }
+
+        .example-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 0.95rem; }
+        .example-table th, .example-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        .example-table th { background: var(--primary-light); color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .example-table tr:last-child td { border-bottom: none; }
+        .example-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+        .cta-card { background: var(--primary); border-radius: var(--radius); padding: 28px 32px; margin: 40px 0; text-align: center; }
+        .cta-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .cta-card p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95rem; }
+        .cta-btn { display: inline-block; background: white; color: var(--primary); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+        @media (prefers-color-scheme: dark) {
+            .cta-card { background: #065f46; }
+            .cta-btn { color: #065f46; }
+        }
+
+        .faq-section { padding: 0 0 40px; }
+        .faq-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; }
+        .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+        .faq-question { width: 100%; background: var(--white); border: none; padding: 20px 24px; text-align: left; font-size: 1rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        .faq-question:hover { background: var(--primary-light); }
+        .faq-question::after { content: '+'; font-size: 1.4rem; color: var(--primary); font-weight: 400; flex-shrink: 0; margin-left: 16px; }
+        .faq-question.open::after { content: '−'; }
+        .faq-answer { display: none; padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-light); line-height: 1.7; background: var(--white); }
+        .faq-answer.open { display: block; }
+
+        footer { background: var(--white); border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 40px; }
+        footer a { color: var(--primary); text-decoration: none; }
+        .disclaimer { margin-top: 8px; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            body { font-size: 16px; }
+            .article-body h2 { font-size: 1.2rem; }
+            .cta-card { padding: 20px; }
+            .example-table { font-size: 0.85rem; }
+            .example-table th, .example-table td { padding: 10px 12px; }
+        }
+
+        /* Dark mode overrides — controlled by data-theme attribute */
+        html[data-theme="dark"] {
+            --text: #f3f4f6; --text-light: #9ca3af;
+                --bg: #0f172a; --white: #1e293b; --border: #334155;
+                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+        }
+        html[data-theme="light"] {
+            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
+            --text: #111827; --text-light: #6b7280;
+            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
+        }
+        .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
+        .theme-toggle-btn:hover { background:var(--primary-light); border-color:var(--primary); color:var(--primary); }
+        .theme-toggle-btn svg { display:block; }
+
+        /* Rich footer with popular links */
+        .site-footer-rich { background: var(--white); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 40px; color: var(--text-light); font-size: 0.9rem; }
+        .site-footer-rich .container { max-width: 1100px; }
+        .footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+        .footer-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); margin-bottom: 12px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 8px; }
+        .footer-col a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; transition: color 0.15s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding-top: 24px; text-align: center; }
+        .footer-bottom p { margin: 4px 0; }
+        .footer-bottom .disclaimer { font-size: 0.75rem; opacity: 0.7; max-width: 700px; margin: 8px auto 0; }
+        .footer-bottom a { color: var(--primary); text-decoration: none; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hur mycket är traktamente 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Det skattefria schablontraktamentet för inrikes tjänsteresor 2026 är 300 kr per hel dag och 150 kr per halv dag. Vid övernattning där arbetsgivaren inte betalar boendet kan dessutom ett nattraktamente på 150 kr betalas ut. Beloppen är desamma som 2025 och fastställs av Skatteverket."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad räknas som hel respektive halv dag för traktamente?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En hel dag är avresedagen om resan börjar före kl. 12.00, hemkomstdagen om resan slutar efter kl. 19.00, samt alla mellanliggande dagar. En halv dag är avresedagen om resan börjar kl. 12.00 eller senare, eller hemkomstdagen om resan slutar kl. 19.00 eller tidigare. Hel dag ger 300 kr, halv dag 150 kr (2026)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vilka villkor gäller för skattefritt traktamente 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "För skattefritt traktamente krävs att tjänsteresan sker utanför den vanliga verksamhetsorten (mer än 50 km från både bostaden och den vanliga arbetsplatsen) och att den innebär minst en övernattning. Är något av villkoren inte uppfyllt blir ersättningen i regel skattepliktig lön."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur fungerar måltidsavdrag på traktamentet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Om arbetsgivaren eller någon annan bjuder på måltider reduceras traktamentet: fri frukost, lunch och middag minskar heldagstraktamentet med 85 %, lunch och middag med 70 %, lunch eller middag med 35 %, och enbart frukost med 15 %. Vid fri kost hela dagen återstår alltså 45 kr av 300 kr (2026)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad är nattraktamente 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nattraktamente är ett skattefritt belopp på 150 kr per natt (2026) som arbetsgivaren kan betala ut om den anställde ordnar boendet själv och arbetsgivaren inte har någon kostnad för logi. Kan den anställde visa en högre faktisk logikostnad kan den ersättas skattefritt i stället."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vad händer med traktamentet vid längre tjänsteresor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vid tjänsteresa på samma ort i Sverige längre än tre månader sänks det skattefria traktamentet till 70 % av helt belopp, dvs. 210 kr per dag 2026. Efter två år sänks det till 50 %, alltså 150 kr per dag. Reglerna gäller sammanhängande vistelse på samma ort."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hur fungerar utlandstraktamente 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vid utrikes tjänsteresor gäller ett normalbelopp som Skatteverket fastställer per land varje år, eftersom levnadskostnaderna skiljer sig åt. Halv dag och måltidsavdrag beräknas på landets normalbelopp på samma sätt som för inrikes resor. Du hittar aktuella landsbelopp i Skatteverkets allmänna råd för utlandstraktamenten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Måste jag skatta på traktamente?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nej, traktamente upp till schablonbeloppet (300 kr hel dag, 150 kr halv dag, 150 kr natt 2026) är skattefritt om villkoren är uppfyllda. Betalar arbetsgivaren ut mer än schablonen är den överskjutande delen skattepliktig lön som beskattas och är pensions- och avgiftsgrundande."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hem",
+            "item": "https://gratiskalkyl.se/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guider",
+            "item": "https://gratiskalkyl.se/artiklar/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Traktamente 2026",
+            "item": "https://gratiskalkyl.se/artiklar/traktamente-2026"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Traktamente 2026 – belopp, regler & måltidsavdrag",
+    "description": "Traktamente 2026: 300 kr/heldag, 150 kr/halvdag, 150 kr nattraktamente. Så fungerar måltidsavdrag, reducerat traktamente och utlandstraktamente — med räkneexempel.",
+    "url": "https://gratiskalkyl.se/artiklar/traktamente-2026",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "image": "https://gratiskalkyl.se/favicon.svg",
+    "author": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "url": "https://gratiskalkyl.se/om-oss"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "GratisKalkyl.se",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://gratiskalkyl.se/favicon.svg"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gratiskalkyl.se/artiklar/traktamente-2026"
+    },
+    "inLanguage": "sv-SE"
+}
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
+            <nav>
+                <a href="/">Kalkylatorer</a>
+                <a href="/artiklar/">📖 Guider</a>
+            </nav>
+            <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="Brödsmulor">
+            <a href="/">Hem</a>
+            <span aria-hidden="true">›</span>
+            <a href="/artiklar/">Guider</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Traktamente 2026</span>
+        </nav>
+
+        <div class="article-header">
+            <span class="article-tag">Guide</span>
+            <h1>Traktamente 2026 – belopp, regler &amp; måltidsavdrag</h1>
+            <p class="article-meta">Uppdaterad juni 2026 · 7 min läsning</p>
+            <p class="article-intro">Traktamente är den skattefria ersättning du får för ökade levnadskostnader på tjänsteresa med övernattning. För 2026 är det skattefria schablonbeloppet <strong>300 kr per hel dag</strong>, 150 kr per halv dag och 150 kr i nattraktamente — oförändrat mot 2025. Här går vi igenom beloppen, villkoren, hur måltidsavdraget fungerar och vad som gäller vid längre resor och utlandsresor, med tydliga räkneexempel.</p>
+        </div>
+
+        <article class="article-body">
+            <div class="tldr-box">
+                <div class="tldr-label">Kort sammanfattning</div>
+                <ul>
+                    <li><strong>300 kr/hel dag</strong>, 150 kr/halv dag och 150 kr nattraktamente är skattefritt 2026.</li>
+                    <li>Kräver tjänsteresa <strong>utanför vanliga verksamhetsorten</strong> (mer än 50 km) och <strong>minst en övernattning</strong>.</li>
+                    <li>Fri kost minskar traktamentet — full kost hela dagen drar av 85 % (kvar 45 kr).</li>
+                </ul>
+            </div>
+
+            <h2>Traktamentsbelopp 2026 (inrikes)</h2>
+
+            <div class="rule-cards">
+                <div class="rule-card">
+                    <div class="number">300</div>
+                    <div class="label">Hel dag (kr)</div>
+                    <div class="desc">Skattefritt schablonbelopp inrikes.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">150</div>
+                    <div class="label">Halv dag (kr)</div>
+                    <div class="desc">Hälften av heldagsbeloppet.</div>
+                </div>
+                <div class="rule-card">
+                    <div class="number">150</div>
+                    <div class="label">Nattraktamente (kr)</div>
+                    <div class="desc">När du ordnar boendet själv.</div>
+                </div>
+            </div>
+
+            <p>Beloppen fastställs av Skatteverket och är <strong>oförändrade jämfört med 2025</strong>. De gäller skattefritt så länge tjänsteresan uppfyller villkoren nedan. Betalar arbetsgivaren ut ett högre traktamente än schablonen blir den överskjutande delen skattepliktig lön.</p>
+
+            <h2>Villkor för skattefritt traktamente</h2>
+
+            <p>För att traktamentet ska vara skattefritt måste tre saker vara uppfyllda:</p>
+
+            <ul>
+                <li><strong>Tjänsteresa utanför den vanliga verksamhetsorten.</strong> Resmålet ska ligga mer än 50 km från både din bostad och din vanliga arbetsplats.</li>
+                <li><strong>Minst en övernattning.</strong> En endagsresa utan övernattning ger inte rätt till skattefritt traktamente — då blir ersättningen i regel skattepliktig.</li>
+                <li><strong>Beordrad av arbetsgivaren.</strong> Resan ska vara en del av arbetet, inte en privat resa.</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Bra att veta:</strong> Den "vanliga verksamhetsorten" är ett område inom 50 km från din arbetsplats. Pendlar du dagligen inom det området räknas det inte som tjänsteresa, oavsett avstånd.</p>
+            </div>
+
+            <h2>Hel dag eller halv dag – så räknas det</h2>
+
+            <p>Avgörande är klockslaget när resan börjar och slutar:</p>
+
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Dag</th>
+                        <th>Räknas som hel dag</th>
+                        <th>Räknas som halv dag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Avresedag</strong></td>
+                        <td>Resan börjar före kl. 12.00</td>
+                        <td>Resan börjar kl. 12.00 eller senare</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hemkomstdag</strong></td>
+                        <td>Resan slutar efter kl. 19.00</td>
+                        <td>Resan slutar kl. 19.00 eller tidigare</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mellandagar</strong></td>
+                        <td>Alltid hel dag</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Måltidsavdrag – när någon bjuder på maten</h2>
+
+            <p>Om kost ingår i resan (t.ex. fri frukost på hotellet, lunch eller middag som arbetsgivaren betalar) ska traktamentet reduceras. Reduktionen räknas i procent av heldagsbeloppet 300 kr:</p>
+
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Fri kost</th>
+                        <th>Reduktion</th>
+                        <th>Kvar av 300 kr</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frukost, lunch och middag</td>
+                        <td>85 %</td>
+                        <td class="num">45 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Lunch och middag</td>
+                        <td>70 %</td>
+                        <td class="num">90 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Lunch eller middag</td>
+                        <td>35 %</td>
+                        <td class="num">195 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Endast frukost</td>
+                        <td>15 %</td>
+                        <td class="num">255 kr</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <p><strong>Undantag:</strong> Måltider på allmänna transportmedel (t.ex. flyget) som ingår i biljettpriset, och hotellfrukost som ingår i rumspriset, räknas i regel <strong>inte</strong> som fri kost och ska därför inte reducera traktamentet.</p>
+            </div>
+
+            <h2>Räkneexempel – tvådagars tjänsteresa</h2>
+            <p>Du åker på en tjänsteresa till en stad 30 mil bort. Du reser kl. 08.00 på måndagen och är tillbaka kl. 21.00 på tisdagen. Hotellet bjuder på frukost tisdag morgon, och arbetsgivaren betalar en gemensam middag på måndagen.</p>
+            <ul>
+                <li><strong>Måndag (avresedag före kl. 12):</strong> hel dag = 300 kr. Fri middag drar av 35 % (105 kr) → <strong>195 kr</strong></li>
+                <li><strong>Tisdag (hemkomst efter kl. 19):</strong> hel dag = 300 kr. Fri frukost drar av 15 % (45 kr) → <strong>255 kr</strong></li>
+                <li><strong>Nattraktamente</strong> (en natt, eget ordnat boende): <strong>150 kr</strong></li>
+                <li><strong>Summa skattefritt traktamente:</strong> 195 + 255 + 150 = <strong>600 kr</strong></li>
+            </ul>
+
+            <div class="cta-card">
+                <h3>Räkna ut ditt traktamente direkt</h3>
+                <p>Skriv in antal dagar och måltider — få ditt skattefria traktamente för 2026 på 30 sekunder.</p>
+                <a href="/kalkylatorer/traktamentekalkylator" class="cta-btn">Öppna traktamentekalkylatorn →</a>
+            </div>
+
+            <h2>Reducerat traktamente vid långa resor</h2>
+            <p>Pågår tjänsteresan länge på samma ort i Sverige sänks det skattefria beloppet stegvis:</p>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Vistelsens längd</th>
+                        <th>Andel av helt belopp</th>
+                        <th>Skattefritt per dag 2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Upp till 3 månader</td>
+                        <td>100 %</td>
+                        <td class="num">300 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Efter 3 månader</td>
+                        <td>70 %</td>
+                        <td class="num">210 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Efter 2 år</td>
+                        <td>50 %</td>
+                        <td class="num">150 kr</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Reglerna gäller sammanhängande vistelse på samma ort. Avbryts resan av en längre period på hemorten kan beräkningen börja om — kontrollera mot Skatteverket vid osäkerhet.</p>
+
+            <h2>Utlandstraktamente 2026</h2>
+            <p>Vid utrikes tjänsteresor gäller inte 300-kronorsbeloppet. I stället fastställer Skatteverket ett <strong>normalbelopp per land</strong> varje år, eftersom levnadskostnaderna varierar. Halvdagsberäkning, övernattning och måltidsavdrag fungerar på samma sätt som inrikes, men utgår från landets normalbelopp. Aktuella landsbelopp publiceras i Skatteverkets allmänna råd om normalbelopp för ökade levnadskostnader i utlandet.</p>
+
+            <h2>Vanliga misstag att undvika</h2>
+            <ul>
+                <li><strong>Glömma övernattningskravet.</strong> Utan övernattning blir traktamentet skattepliktigt — endagsresor ger inte skattefritt traktamente.</li>
+                <li><strong>Missa måltidsavdraget.</strong> Bjuder arbetsgivaren på maten måste traktamentet reduceras, annars blir mellanskillnaden skattepliktig.</li>
+                <li><strong>Räkna fel på hel/halv dag.</strong> Det är klockslaget kl. 12.00 (avresa) och 19.00 (hemkomst) som avgör — inte antalet timmar.</li>
+                <li><strong>Blanda ihop traktamente och milersättning.</strong> Traktamente täcker mat och småutgifter; bilresan ersätts separat via milersättning.</li>
+            </ul>
+        </article>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur mycket är traktamente 2026?</button>
+                <div class="faq-answer">Det skattefria schablontraktamentet för inrikes tjänsteresor 2026 är 300 kr per hel dag och 150 kr per halv dag. Vid övernattning där arbetsgivaren inte betalar boendet kan dessutom ett nattraktamente på 150 kr betalas ut. Beloppen är desamma som 2025 och fastställs av Skatteverket.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad räknas som hel respektive halv dag för traktamente?</button>
+                <div class="faq-answer">En hel dag är avresedagen om resan börjar före kl. 12.00, hemkomstdagen om resan slutar efter kl. 19.00, samt alla mellanliggande dagar. En halv dag är avresedagen om resan börjar kl. 12.00 eller senare, eller hemkomstdagen om resan slutar kl. 19.00 eller tidigare. Hel dag ger 300 kr, halv dag 150 kr (2026).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vilka villkor gäller för skattefritt traktamente 2026?</button>
+                <div class="faq-answer">För skattefritt traktamente krävs att tjänsteresan sker utanför den vanliga verksamhetsorten (mer än 50 km från både bostaden och den vanliga arbetsplatsen) och att den innebär minst en övernattning. Är något av villkoren inte uppfyllt blir ersättningen i regel skattepliktig lön.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur fungerar måltidsavdrag på traktamentet?</button>
+                <div class="faq-answer">Om arbetsgivaren eller någon annan bjuder på måltider reduceras traktamentet: fri frukost, lunch och middag minskar heldagstraktamentet med 85 %, lunch och middag med 70 %, lunch eller middag med 35 %, och enbart frukost med 15 %. Vid fri kost hela dagen återstår alltså 45 kr av 300 kr (2026).</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad är nattraktamente 2026?</button>
+                <div class="faq-answer">Nattraktamente är ett skattefritt belopp på 150 kr per natt (2026) som arbetsgivaren kan betala ut om den anställde ordnar boendet själv och arbetsgivaren inte har någon kostnad för logi. Kan den anställde visa en högre faktisk logikostnad kan den ersättas skattefritt i stället.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Vad händer med traktamentet vid längre tjänsteresor?</button>
+                <div class="faq-answer">Vid tjänsteresa på samma ort i Sverige längre än tre månader sänks det skattefria traktamentet till 70 % av helt belopp, dvs. 210 kr per dag 2026. Efter två år sänks det till 50 %, alltså 150 kr per dag. Reglerna gäller sammanhängande vistelse på samma ort.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Hur fungerar utlandstraktamente 2026?</button>
+                <div class="faq-answer">Vid utrikes tjänsteresor gäller ett normalbelopp som Skatteverket fastställer per land varje år, eftersom levnadskostnaderna skiljer sig åt. Halv dag och måltidsavdrag beräknas på landets normalbelopp på samma sätt som för inrikes resor. Du hittar aktuella landsbelopp i Skatteverkets allmänna råd för utlandstraktamenten.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">Måste jag skatta på traktamente?</button>
+                <div class="faq-answer">Nej, traktamente upp till schablonbeloppet (300 kr hel dag, 150 kr halv dag, 150 kr natt 2026) är skattefritt om villkoren är uppfyllda. Betalar arbetsgivaren ut mer än schablonen är den överskjutande delen skattepliktig lön som beskattas och är pensions- och avgiftsgrundande.</div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="site-footer-rich">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <h3>🧮 Populära kalkylatorer</h3>
+                <ul>
+                    <li><a href="/kalkylatorer/traktamentekalkylator">Traktamentekalkylator</a></li>
+                    <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
+                    <li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li>
+                    <li><a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a></li>
+                    <li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li>
+                    <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>📖 Populära guider</h3>
+                <ul>
+                    <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
+                    <li><a href="/artiklar/skattefri-uthyrning-2026">Skattefri uthyrning 2026</a></li>
+                    <li><a href="/artiklar/vad-ar-f-skatt">Vad är F-skatt?</a></li>
+                    <li><a href="/artiklar/vad-ar-moms-2026">Vad är moms 2026?</a></li>
+                    <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
+                    <li><a href="/artiklar/csn-2026-belopp-och-regler">CSN 2026 — belopp &amp; regler</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Om sajten</h3>
+                <ul>
+                    <li><a href="/">Alla 43 kalkylatorer</a></li>
+                    <li><a href="/artiklar/">Alla guider</a></li>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
+            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var answer = btn.nextElementSibling;
+                btn.classList.toggle('open');
+                answer.classList.toggle('open');
+            });
+        });
+    </script>
+
+    <script>
+    /* Theme toggle */
+    (function(){
+      var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var btn=document.getElementById('gk-theme-btn');
+      if(!btn)return;
+      function setIcon(){
+        var dark=document.documentElement.getAttribute('data-theme')==='dark';
+        btn.innerHTML=dark?SUN:MOON;
+        btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
+      }
+      setIcon();
+      btn.addEventListener('click',function(){
+        var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
+        var next=!nowDark;
+        document.documentElement.setAttribute('data-theme',next?'dark':'light');
+        try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
+        setIcon();
+      });
+    })();
+    </script>
+
+</body>
+</html>
