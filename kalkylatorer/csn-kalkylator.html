@@ -44,7 +44,7 @@
           "name": "Hur mycket betalar man tillbaka på CSN-lån per månad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Återbetalningen av CSN-lån baseras på din inkomst. Årsbeloppet är 5 % av din bruttoinkomst (fastställd inkomst från Skatteverket). Beloppet betalas i tolv lika stora månadsrater. Det finns ett minimibelopp – 2026 är lägsta månadsbelopp cirka 275 kr. Om 5 % av din inkomst ger ett lägre belopp tillämpas minimibeloppet."
+            "text": "För studielån tagna efter 30 juni 2001 (annuitetslån) räknar CSN ut ett årsbelopp utifrån skulden, räntan och återbetalningstiden — högst 25 år eller till det år du fyller 64. Årsbeloppet ökar med cirka 2 % per år och är minst 8 880 kr 2026 (740 kr/mån). Exempel: 300 000 kr i skuld ger ungefär 12 450 kr första året, cirka 1 040 kr/mån. Beloppet beror inte på din inkomst, men vid låg inkomst kan du ansöka om nedsättning."
           }
         },
         {
@@ -60,7 +60,7 @@
           "name": "Vad är räntan på CSN-lån 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CSN-räntan fastställs varje år och baseras på statslåneräntan plus ett påslag. För 2026 är CSN-räntan 2,1 % per år. Räntan är densamma oavsett när du tog ditt lån. Räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr ränteutgifter per år."
+            "text": "CSN-räntan fastställs varje år och baseras på statslåneräntan plus ett påslag. För 2026 är CSN-räntan 2,135 % per år. Räntan är densamma oavsett när du tog ditt lån. Räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr ränteutgifter per år."
           }
         },
         {
@@ -417,7 +417,7 @@
 
 <main>
     <h1>CSN-kalkylator 2026</h1>
-    <p class="lead">Beräkna din CSN-återbetalning — månadsbelopp, total räntekostnad och hur länge du betalar utifrån din inkomst.</p>
+    <p class="lead">Beräkna din CSN-återbetalning 2026 för annuitetslån (studielån tagna efter 30 juni 2001) — månadsbelopp, total räntekostnad och hur länge du betalar.</p>
 
     <!-- INPUTS -->
     <div class="card">
@@ -436,18 +436,18 @@
             <div class="field">
                 <label for="interestRate">CSN-ränta (%/år)</label>
                 <div class="input-row">
-                    <input type="range" id="interestRange" min="0" max="8" step="0.1" value="2.1">
-                    <input type="number" id="interestRate" min="0" max="20" step="0.1" value="2.1">
+                    <input type="range" id="interestRange" min="0" max="8" step="0.005" value="2.135">
+                    <input type="number" id="interestRate" min="0" max="20" step="0.001" value="2.135">
                 </div>
-                <div class="field-hint">CSN-räntan 2026 är 2,1 %.</div>
+                <div class="field-hint">CSN-räntan 2026 är 2,135 %.</div>
             </div>
             <div class="field">
-                <label for="incomeGrowth">Inkomstökning per år (%)</label>
+                <label for="incomeGrowth">Din ålder när återbetalningen börjar</label>
                 <div class="input-row">
-                    <input type="range" id="growthRange" min="0" max="10" step="0.5" value="2">
-                    <input type="number" id="incomeGrowth" min="0" max="20" step="0.1" value="2">
+                    <input type="range" id="growthRange" min="18" max="60" step="1" value="26">
+                    <input type="number" id="incomeGrowth" min="18" max="63" step="1" value="26">
                 </div>
-                <div class="field-hint">Historisk löneökning i Sverige: ~2–3 %/år.</div>
+                <div class="field-hint">Lånet ska vara betalt inom 25 år eller senast det år du fyller 64.</div>
             </div>
         </div>
 
@@ -459,7 +459,7 @@
                 <input type="range" id="incomeRange" min="0" max="1000000" step="5000" value="350000">
                 <input type="number" id="grossIncome" min="0" max="9999999" value="350000">
             </div>
-            <div class="field-hint">Din totala bruttoinkomst (lön, ersättningar). 5 % av detta blir årsbeloppet som återbetalas till CSN.</div>
+            <div class="field-hint">Används för att visa hur stor del av lönen CSN-betalningen tar. Har du låg inkomst kan du ansöka om nedsättning hos CSN.</div>
         </div>
 
         <div class="two-col">
@@ -483,12 +483,12 @@
         <div class="result-box highlight">
             <div class="result-label">Månadsbelopp</div>
             <div class="result-value" id="resMonthly">–</div>
-            <div class="result-sub" id="resMonthlyNote">5 % av bruttoinkomst / 12</div>
+            <div class="result-sub" id="resMonthlyNote">Första årets belopp / 12</div>
         </div>
         <div class="result-box">
             <div class="result-label">Återbetalningstid</div>
             <div class="result-value" id="resYears">–</div>
-            <div class="result-sub">Max 25 år</div>
+            <div class="result-sub">Max 25 år eller till 64 års ålder</div>
         </div>
         <div class="result-box">
             <div class="result-label">Total räntekostnad</div>
@@ -518,7 +518,7 @@
                 <thead>
                     <tr>
                         <th>År</th>
-                        <th>Bruttoinkomst</th>
+                        <th>Ålder</th>
                         <th>Årsbelopp</th>
                         <th>Räntekostnad</th>
                         <th>Amortering</th>
@@ -542,9 +542,9 @@
     <!-- SEO TEXT -->
     <div class="seo-text">
         <h2>Så fungerar CSN-återbetalningen 2026</h2>
-        <p>När du slutar studera börjar återbetalningen av CSN-lånet den 1 januari året efter. Systemet är inkomstbaserat: varje år betalar du tillbaka 5 % av din bruttoinkomst (den inkomst som Skatteverket fastställt för föregående år). Det innebär att dina betalningar automatiskt ökar när du tjänar mer — och minskar om du av någon anledning har lägre inkomst ett år.</p>
-        <p>Det lägsta månadsbeloppet 2026 är 275 kr (3 300 kr/år). Har du tillfälligt låg inkomst kan du ansöka om anstånd hos CSN. Maximal återbetalningstid är 25 år räknat från studieupphörande, och lånet avskrivs om det återstår vid periodens slut. En åldersgräns gäller också — du ska normalt vara klar senast det år du fyller 64.</p>
-        <p>CSN-räntan för 2026 är 2,1 % och räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr. Det innebär att den effektiva räntan för de flesta är ca 1,5 % — historiskt sett mycket förmånlig jämfört med privatlån och bolån.</p>
+        <p>Återbetalningen börjar normalt sex månader efter att du fått studiemedel sista gången. För lån tagna efter 30 juni 2001 — så kallade <strong>annuitetslån</strong>, som gäller de flesta — räknar CSN ut ett årsbelopp utifrån din skuld, räntan och hur många år du har kvar att betala. Beloppet ökar med cirka 2 % per år, så du betalar lite mindre i början och lite mer i slutet. Beloppet beror alltså inte på din lön.</p>
+        <p>Det minsta årsbeloppet 2026 är 8 880 kr (740 kr/mån), plus en avgift på 150 kr per år. Lånet ska vara betalt inom högst 25 år eller senast det år du fyller 64 — det som kommer först. Har du låg inkomst kan du ansöka om nedsättning av årsbeloppet. Har du äldre lån från 1989–2001 (studielån) gäller i stället inkomstbaserad återbetalning.</p>
+        <p>CSN-räntan för 2026 är 2,135 % och räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr. Det innebär att den effektiva räntan för de flesta är ca 1,5 % — historiskt sett mycket förmånlig jämfört med privatlån och bolån.</p>
     </div>
 
     <!-- FAQ -->
@@ -553,7 +553,7 @@
 
         <details>
             <summary>Hur mycket betalar man tillbaka på CSN-lån per månad?</summary>
-            <div class="faq-body">Återbetalningen av CSN-lån baseras på din inkomst. Årsbeloppet är 5 % av din bruttoinkomst (fastställd inkomst från Skatteverket). Beloppet betalas i tolv lika stora månadsrater. Det finns ett minimibelopp – 2026 är lägsta månadsbelopp cirka 275 kr. Om 5 % av din inkomst ger ett lägre belopp tillämpas minimibeloppet.</div>
+            <div class="faq-body">För studielån tagna efter 30 juni 2001 (annuitetslån) räknar CSN ut ett årsbelopp utifrån skulden, räntan och återbetalningstiden — högst 25 år eller till det år du fyller 64. Årsbeloppet ökar med cirka 2 % per år och är minst 8 880 kr 2026 (740 kr/mån). Exempel: 300 000 kr i skuld ger ungefär 12 450 kr första året, cirka 1 040 kr/mån. Beloppet beror inte på din inkomst, men vid låg inkomst kan du ansöka om nedsättning.</div>
         </details>
 
         <details>
@@ -563,7 +563,7 @@
 
         <details>
             <summary>Vad är räntan på CSN-lån 2026?</summary>
-            <div class="faq-body">CSN-räntan fastställs varje år baserat på statslåneräntan plus ett påslag. För 2026 är CSN-räntan 2,1 % per år. Räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr ränteutgifter per år.</div>
+            <div class="faq-body">CSN-räntan fastställs varje år baserat på statslåneräntan plus ett påslag. För 2026 är CSN-räntan 2,135 % per år. Räntekostnaden är avdragsgill i deklarationen med 30 % upp till 100 000 kr ränteutgifter per år.</div>
         </details>
 
         <details>
@@ -602,7 +602,7 @@
 
     <!-- DISCLAIMER -->
     <div class="disclaimer">
-        Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn utgår från 2026 års CSN-ränta (2,1 %) och inkomstbaserat återbetalningssystem. Faktiska belopp fastställs av CSN och Skatteverket. Kontakta CSN eller besök <a href="https://www.csn.se" target="_blank" rel="noopener">csn.se</a> för exakta uppgifter om din situation.
+        Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn utgår från 2026 års CSN-ränta (2,135 %), minsta årsbelopp 8 880 kr och reglerna för annuitetslån. Faktiska belopp fastställs av CSN och Skatteverket. Kontakta CSN eller besök <a href="https://www.csn.se" target="_blank" rel="noopener">csn.se</a> för exakta uppgifter om din situation.
     </div>
 
 
@@ -617,10 +617,12 @@
 </main>
 
 <script>
-// ─── CONSTANTS ───
-const MIN_ANNUAL_PAYMENT = 3300;  // minimum annual repayment 2026 (~275 kr/month)
-const MAX_YEARS = 25;
-const INCOME_PCT = 0.05;  // 5% of gross income
+// ─── CONSTANTS (CSN 2026, annuitetslån) ───
+const MIN_ANNUAL_PAYMENT = 8880;  // minsta årsbelopp 2026 = 0,15 × prisbasbeloppet 59 200 kr
+const MAX_YEARS = 25;             // högst 25 år …
+const MAX_AGE = 64;               // … och senast det år du fyller 64
+const INDEX_G = 0.02;             // årsbeloppet räknas upp med ca 2 % per år
+const AVGIFT = 150;               // årlig avgift (kr)
 
 // ─── ELEMENT REFS ───
 const loanRange = document.getElementById('loanRange');
@@ -659,15 +661,23 @@ function fmtYrs(n) {
 }
 
 // ─── MAIN CALCULATION ───
+// Annuitetslån med indexering: första årsbeloppet A = D·(r−g) / (1 − ((1+g)/(1+r))^n).
+// CSN räknar om varje år på kvarvarande skuld och antal år, vilket ger ett belopp som ökar med ca 2 %/år.
+function annuitet(D, r, g, n) {
+    if (n <= 0) return D * (1 + r);
+    if (Math.abs(r - g) < 1e-9) return D * (1 + r) / n;
+    return D * (r - g) / (1 - Math.pow((1 + g) / (1 + r), n));
+}
+
 function calculate() {
     const principal = parseFloat(loanAmount.value) || 0;
     const annualRate = (parseFloat(interestRate.value) || 0) / 100;
     const income = parseFloat(grossIncome.value) || 0;
-    const growthPct = (parseFloat(incomeGrowth.value) || 0) / 100;
+    const startAge = Math.max(18, Math.min(63, parseInt(incomeGrowth.value) || 26));
     const endYear = parseInt(studyEndYear.value) || 2024;
     const extra = parseFloat(extraPayment.value) || 0;
 
-    if (principal <= 0 || income <= 0) {
+    if (principal <= 0) {
         document.getElementById('resMonthly').textContent = '–';
         document.getElementById('resYears').textContent = '–';
         document.getElementById('resInterest').textContent = '–';
@@ -677,104 +687,59 @@ function calculate() {
         return;
     }
 
-    // Simulate year-by-year repayment
+    const nTotal = Math.max(1, Math.min(MAX_YEARS, MAX_AGE - startAge + 1));
     let debt = principal;
-    let currentIncome = income;
     let totalInterest = 0;
-    let year = endYear + 1; // repayment starts year after studying ends
+    let totalPaid = 0;
+    let year = endYear + 1;
     let yearsElapsed = 0;
+    let firstPayment = 0;
     const rows = [];
     const chartLabels = [endYear + ''];
     const chartDebt = [principal];
 
-    while (debt > 0 && yearsElapsed < MAX_YEARS) {
-        const annualInterest = debt * annualRate;
-        const rawAnnualPayment = currentIncome * INCOME_PCT;
-        const annualPayment = Math.max(rawAnnualPayment, MIN_ANNUAL_PAYMENT);
-        const totalAnnual = annualPayment + extra;
-
-        let amortization = totalAnnual - annualInterest;
-        if (amortization < 0) amortization = 0; // interest-only scenario
-
-        const actualAmort = Math.min(amortization, debt);
-        const actualInterest = Math.min(annualInterest, debt + annualInterest - actualAmort);
-
-        debt -= actualAmort;
-        if (debt < 0) debt = 0;
-
-        totalInterest += actualInterest;
-
-        rows.push({
-            year,
-            income: currentIncome,
-            annualPayment: Math.min(annualPayment, actualAmort + actualInterest),
-            interest: actualInterest,
-            amortization: actualAmort,
-            debtEnd: debt,
-        });
+    while (debt > 0.5 && yearsElapsed < nTotal) {
+        const nRem = nTotal - yearsElapsed;
+        const interest = debt * annualRate;
+        let payment = Math.max(annuitet(debt, annualRate, INDEX_G, nRem), MIN_ANNUAL_PAYMENT);
+        payment = Math.min(payment + extra, debt + interest);
+        if (yearsElapsed === 0) firstPayment = payment;
+        const amort = payment - interest;
+        debt = Math.max(0, debt - amort);
+        totalInterest += interest;
+        totalPaid += payment;
+        rows.push({ year, age: startAge + yearsElapsed, annualPayment: payment, interest, amortization: amort, debtEnd: debt });
         chartLabels.push(year + '');
         chartDebt.push(debt);
-
-        currentIncome *= (1 + growthPct);
-        year++;
-        yearsElapsed++;
-
-        if (yearsElapsed >= MAX_YEARS && debt > 0) {
-            // Remainder written off
-            rows.push({ year, income: currentIncome, annualPayment: 0, interest: 0, amortization: 0, debtEnd: 0, writeOff: debt });
-            chartLabels.push(year + '');
-            chartDebt.push(0);
-            break;
-        }
+        year++; yearsElapsed++;
     }
 
-    const totalYears = yearsElapsed + (debt > 0 ? 0 : 0);
-    const totalPaid = principal + totalInterest;
-
-    // First month payment
-    const firstYearPayment = Math.max(income * INCOME_PCT, MIN_ANNUAL_PAYMENT);
-    const monthlyPayment = (firstYearPayment + extra) / 12;
-
-    // Alert: if income too low for minimum
+    const monthlyPayment = firstPayment / 12;
     const alertBox = document.getElementById('alertBox');
-    if (income * INCOME_PCT < MIN_ANNUAL_PAYMENT) {
+    if (income > 0 && firstPayment > income * 0.05) {
         alertBox.style.display = '';
-        alertBox.innerHTML = '<strong>OBS:</strong> Din inkomst ger ett årsbelopp under minimigränsen (3 300 kr/år). CSN tillämpar minimibeloppet 275 kr/mån. Du kan ansöka om anstånd om din inkomst är mycket låg.';
+        alertBox.innerHTML = '<strong>Tips:</strong> Årsbeloppet motsvarar ' + (firstPayment / income * 100).toFixed(1).replace('.', ',') + ' % av din bruttoinkomst. Har du låg inkomst kan du ansöka om nedsättning av årsbeloppet hos CSN.';
     } else {
         alertBox.style.display = 'none';
     }
 
-    // Update result boxes
     document.getElementById('resMonthly').textContent = fmt(monthlyPayment);
-    document.getElementById('resMonthlyNote').textContent = extra > 0
-        ? `5 % av inkomst + ${fmt(extra/12)} extra/mån`
-        : '5 % av bruttoinkomst / 12';
-    document.getElementById('resYears').textContent = yearsElapsed >= MAX_YEARS ? '25 år (max)' : fmtYrs(yearsElapsed);
+    document.getElementById('resMonthlyNote').textContent = (extra > 0 ? 'Inkl. ' + fmt(extra / 12) + ' extra/mån · ' : '') + 'ökar ca 2 %/år + avgift ' + AVGIFT + ' kr/år';
+    document.getElementById('resYears').textContent = fmtYrs(yearsElapsed);
     document.getElementById('resInterest').textContent = fmt(totalInterest);
-    document.getElementById('resInterestNote').textContent = `Effektivt ~${((annualRate * 0.7) * 100).toFixed(1)} % efter ränteavdrag`;
+    document.getElementById('resInterestNote').textContent = `Effektivt ~${((annualRate * 0.7) * 100).toFixed(1).replace('.', ',')} % efter ränteavdrag`;
     document.getElementById('resTotal').textContent = fmt(totalPaid);
 
-    // Build amortization table
     const tbody = document.getElementById('amorBody');
-    tbody.innerHTML = rows.map(r => {
-        if (r.writeOff) {
-            return `<tr style="color:var(--primary-dark);font-weight:600;">
-                <td>${r.year}</td>
-                <td colspan="4">Lånet avskrivs (25 år max)</td>
-                <td>0 kr</td>
-            </tr>`;
-        }
-        return `<tr>
+    tbody.innerHTML = rows.map(r => `<tr>
             <td>${r.year}</td>
-            <td>${Math.round(r.income).toLocaleString('sv-SE')}</td>
+            <td>${r.age} år</td>
             <td>${Math.round(r.annualPayment).toLocaleString('sv-SE')}</td>
             <td>${Math.round(r.interest).toLocaleString('sv-SE')}</td>
             <td>${Math.round(r.amortization).toLocaleString('sv-SE')}</td>
             <td><strong>${Math.round(r.debtEnd).toLocaleString('sv-SE')}</strong></td>
-        </tr>`;
-    }).join('');
+        </tr>`).join('');
 
-    // Draw chart
     drawChart(chartLabels, chartDebt, principal);
 }
 

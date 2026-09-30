@@ -471,7 +471,7 @@
 
         <h3>Maximalt avdrag och regler att känna till</h3>
         <ul>
-            <li>Maxgräns: 50 000 kr per år (avdragsbelopp)</li>
+            <li>Inget maxbelopp — allt över gränsbeloppet är avdragsgillt</li>
             <li>Gränsbelopp (tröskel): 15 000 kr per år (höjt från 11 000 kr fr.o.m. inkomståret 2026)</li>
             <li>Bil: minst 5 km enkel väg + tidsbesparing ≥ 2 h/dag vs. kollektivt</li>
             <li>Förmånsbil: ger normalt inte rätt till reseavdrag</li>
@@ -551,7 +551,7 @@
     // ── CONSTANTS ──────────────────────────────────────────────
     const GRANSBEL = 15000;        // kr/år gränsbelopp
     const BIL_KM   = 2.50;         // kr/km (schablonbelopp 2026)
-    const MAX_AVDRAG = 50000;       // max reseavdrag/år
+    const MAX_AVDRAG = Infinity;    // inget tak för reseavdrag
 
     let mode = 'bil';
 
@@ -660,7 +660,7 @@
 
         rows.push(['Totala reskostnader/år', '—', fmt(total)]);
         rows.push(['Minus gränsbelopp', '− 15 000 kr', '']);
-        rows.push(['Avdragsgrundande belopp', '(max 50 000 kr)', avdrag > 0 ? '<span class="td-green">' + fmt(avdrag) + '</span>' : '0 kr — gränsbelopp ej nått']);
+        rows.push(['Avdragsgrundande belopp', '(över 15 000 kr)', avdrag > 0 ? '<span class="td-green">' + fmt(avdrag) + '</span>' : '0 kr — gränsbelopp ej nått']);
         rows.push(['Kommunalskatt', skatt.toFixed(1) + ' %', '']);
         rows.push(['Skattebesparning', avdrag + ' × ' + (skatt/100).toFixed(2), avdrag > 0 ? '<span class="td-green">' + fmt(besparing) + '</span>' : '0 kr']);
         rows.push(['Nettokostnad/år', total + ' − ' + Math.round(besparing), fmt(netto)]);

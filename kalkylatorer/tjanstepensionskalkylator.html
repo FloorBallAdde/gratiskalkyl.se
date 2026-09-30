@@ -51,7 +51,7 @@
         "name": "Hur mycket betalar arbetsgivaren in till tjänstepensionen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Avsättningen beror på kollektivavtal och lön. För ITP 1 och SAF-LO gäller: 4,5 % på lön upp till 7,5 inkomstbasbelopp (IBB), vilket 2026 motsvarar ca 48 500 kr/mån, och 30 % på lön däröver. AKAP-KR (statligt anställda) har 6 % under gränsen. Arbetsgivarens avsättning ingår inte i din bruttolön — det är ett tillägg ovanpå."
+          "text": "Avsättningen beror på kollektivavtal och lön. För ITP 1 och SAF-LO gäller: 4,5 % på lön upp till 7,5 inkomstbasbelopp (IBB), vilket 2026 motsvarar ca 52 100 kr/mån, och 30 % på lön däröver. AKAP-KR (statligt anställda) har 6 % under gränsen. Arbetsgivarens avsättning ingår inte i din bruttolön — det är ett tillägg ovanpå."
         }
       },
       {
@@ -434,7 +434,7 @@
           <div class="field">
             <label for="salary">Månadslön (brutto, kr)</label>
             <input type="number" id="salary" value="45000" min="10000" max="500000" step="500" oninput="calculate()">
-            <p class="hint">Gränsen på 7,5 IBB = ca 48 500 kr/mån (2026)</p>
+            <p class="hint">Gränsen på 7,5 IBB = ca 52 100 kr/mån (2026)</p>
           </div>
 
           <div class="field">
@@ -456,7 +456,7 @@
               <option value="custom">Eget avtal (ange % nedan)</option>
             </select>
             <div class="plan-info" id="planInfo">
-              <strong>ITP 1:</strong> 4,5 % på lön ≤ 7,5 IBB (ca 48 500 kr/mån) + 30 % på lön däröver. Avgiftsbestämt — du väljer placering.
+              <strong>ITP 1:</strong> 4,5 % på lön ≤ 7,5 IBB (ca 52 100 kr/mån) + 30 % på lön däröver. Avgiftsbestämt — du väljer placering.
             </div>
           </div>
 
@@ -568,7 +568,7 @@
           Hur mycket betalar arbetsgivaren in till tjänstepensionen?
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a">Avsättningen beror på kollektivavtal och lön. För ITP 1 och SAF-LO gäller: 4,5 % på lön upp till 7,5 inkomstbasbelopp (IBB), vilket 2026 motsvarar ca 48 500 kr/mån, och 30 % på lön däröver. AKAP-KR (statligt anställda) har 6 % under gränsen. Arbetsgivarens avsättning ingår inte i din bruttolön — det är ett tillägg ovanpå.</div>
+        <div class="faq-a">Avsättningen beror på kollektivavtal och lön. För ITP 1 och SAF-LO gäller: 4,5 % på lön upp till 7,5 inkomstbasbelopp (IBB), vilket 2026 motsvarar ca 52 100 kr/mån, och 30 % på lön däröver. AKAP-KR (statligt anställda) har 6 % under gränsen. Arbetsgivarens avsättning ingår inte i din bruttolön — det är ett tillägg ovanpå.</div>
       </div>
 
       <div class="faq-item">
@@ -643,11 +643,11 @@
 
 <script>
   // ─── Konstanter ───────────────────────────────────────────
-  const IBB_2026 = 77600;                          // SEK/år
-  const TIER1_LIMIT_MONTHLY = (7.5 * IBB_2026) / 12; // ≈ 48 500 kr/mån
+  const IBB_2026 = 83400;                          // SEK/år (inkomstbasbelopp 2026)
+  const TIER1_LIMIT_MONTHLY = (7.5 * IBB_2026) / 12; // ≈ 52 125 kr/mån
 
   const PLAN_INFO = {
-    itp1:   { t1: 0.045, t2: 0.30, label: '<strong>ITP 1:</strong> 4,5 % på lön ≤ 7,5 IBB (ca 48 500 kr/mån) + 30 % på lön däröver. Avgiftsbestämt — du väljer placering.' },
+    itp1:   { t1: 0.045, t2: 0.30, label: '<strong>ITP 1:</strong> 4,5 % på lön ≤ 7,5 IBB (ca 52 100 kr/mån) + 30 % på lön däröver. Avgiftsbestämt — du väljer placering.' },
     saflo:  { t1: 0.045, t2: 0.30, label: '<strong>SAF-LO / Avtalspension SAF-LO:</strong> 4,5 % på lön ≤ 7,5 IBB + 30 % däröver. Samma struktur som ITP 1 men för kollektivanställda.' },
     kapkl:  { t1: 0.045, t2: 0.30, label: '<strong>KAP-KL:</strong> 4,5 % på lön ≤ 7,5 IBB + 30 % däröver, för anställda i kommuner och regioner. Kan kompletteras med frivillig del.' },
     akap:   { t1: 0.06,  t2: 0.30, label: '<strong>AKAP-KR:</strong> 6 % på lön ≤ 7,5 IBB + 30 % däröver, för statliga anställda. Något högre grundavsättning.' },

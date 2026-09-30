@@ -44,7 +44,7 @@
           "name": "Hur mycket är arbetsgivaravgiften 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Arbetsgivaravgiften 2026 är 31,42 % för en anställd i åldern 26–65 år. Avgiften beräknas på bruttolönen och består av sju komponenter: ålderspensionsavgift (10,21 %), efterlevandepensionsavgift (0,60 %), sjukförsäkringsavgift (3,55 %), föräldraförsäkringsavgift (2,60 %), arbetsmarknadsavgift (2,64 %), arbetsskadeavgift (0,20 %) och allmän löneavgift (11,62 %)."
+            "text": "Arbetsgivaravgiften 2026 är 31,42 % för anställda födda 1959–2002 och 2008 eller senare. Avgiften beräknas på bruttolönen och består av sju komponenter: ålderspensionsavgift (10,21 %), efterlevandepensionsavgift (0,60 %), sjukförsäkringsavgift (3,55 %), föräldraförsäkringsavgift (2,60 %), arbetsmarknadsavgift (2,64 %), arbetsskadeavgift (0,20 %) och allmän löneavgift (11,62 %)."
           }
         },
         {
@@ -52,15 +52,15 @@
           "name": "Vad är reducerad arbetsgivaravgift för unga 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "För anställda som fyller högst 25 år under 2026 (born 2001 eller senare) gäller en reducerad arbetsgivaravgift på 10,21 % — enbart ålderspensionsavgiften. Reduktionen gäller på lönedelar upp till 25 000 kr per månad. Syftet är att göra det billigare för arbetsgivare att anställa unga och ge dem in på arbetsmarknaden."
+            "text": "Från 1 april 2026 till 30 september 2027 är arbetsgivaravgiften tillfälligt sänkt till 20,81 % för anställda födda 2003–2007 (19–23 år). Den sänkta avgiften gäller på lön upp till 25 000 kr per månad — på lön över det betalar arbetsgivaren full avgift, 31,42 %. Den gamla nedsättningen för alla under 26 år finns inte längre."
           }
         },
         {
           "@type": "Question",
-          "name": "Vad är arbetsgivaravgift för anställda över 65?",
+          "name": "Vad är arbetsgivaravgiften för äldre anställda 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "För anställda som fyller 66 år eller mer under 2026 (born 1960 eller tidigare) är arbetsgivaravgiften reducerad till 10,21 % — enbart ålderspensionsavgiften. Det innebär en stor besparing jämfört med den ordinarie satsen på 31,42 %."
+            "text": "För anställda födda 1938–1958 betalar arbetsgivaren 2026 bara ålderspensionsavgiften på 10,21 %. För anställda födda 1937 eller tidigare betalas ingen arbetsgivaravgift alls."
           }
         },
         {
@@ -348,9 +348,10 @@
                 <div class="field">
                     <label>Ålderskategori (den anställde)</label>
                     <select id="alder-select" onchange="berakna()">
-                        <option value="standard" selected>Standard (26–65 år) — 31,42 %</option>
-                        <option value="ung">Ung (under 26 år, f. 2001+) — 10,21 %</option>
-                        <option value="aldre">Äldre (66+ år, f. 1960 el. tidigare) — 10,21 %</option>
+                        <option value="standard" selected>Standard (f. 1959–2002, 2008+) — 31,42 %</option>
+                        <option value="ung">Ung (f. 2003–2007, fr.o.m. 1 april 2026) — 20,81 % upp till 25 000 kr</option>
+                        <option value="aldre">Äldre (f. 1938–1958) — 10,21 %</option>
+                        <option value="noll">Född 1937 eller tidigare — 0 %</option>
                     </select>
                 </div>
             </div>
@@ -414,9 +415,9 @@
     <!-- SEO TEXT -->
     <div class="seo-section">
         <h2>Arbetsgivaravgift 2026 — så fungerar det</h2>
-        <p>Som arbetsgivare i Sverige betalar du <strong>arbetsgivaravgift ovanpå den anställdes bruttolön</strong>. Avgiften är 31,42 % för anställda i åldern 26–65 år och finansierar det svenska socialförsäkringssystemet — pensioner, sjukförsäkring, föräldrapenning och a-kassa.</p>
+        <p>Som arbetsgivare i Sverige betalar du <strong>arbetsgivaravgift ovanpå den anställdes bruttolön</strong>. Avgiften är 31,42 % för de flesta anställda och finansierar det svenska socialförsäkringssystemet — pensioner, sjukförsäkring, föräldrapenning och a-kassa.</p>
         <p>Har du en anställd med <strong>35 000 kr i månadslön</strong> kostar det dig faktiskt <strong>46 000 kr i månaden</strong> (35 000 + 11 000 i avgifter). Kalkylatorn ovan visar din verkliga lönekostnad i realtid.</p>
-        <p>För <strong>unga anställda under 26 år</strong> gäller en reducerad sats om 10,21 % — enbart ålderspensionsavgiften. Det gör det betydligt billigare att anställa unga och är en stor fördel för arbetsgivare inom handeln, restaurang och service.</p>
+        <p>För <strong>unga anställda födda 2003–2007</strong> är avgiften tillfälligt sänkt till 20,81 % på lön upp till 25 000 kr/mån, från 1 april 2026 till 30 september 2027. Det gör det billigare att anställa unga, särskilt inom handel, restaurang och service. För äldre anställda födda 1938–1958 betalas bara ålderspensionsavgiften, 10,21 %.</p>
         <p>Arbetsgivaravgiften redovisas månadsvis via <strong>arbetsgivardeklaration (AGI)</strong> till Skatteverket. Sedan 2019 ska uppgifterna lämnas per individ, vilket innebär att Skatteverket får ett komplett löneintyg för varje anställd direkt i systemet.</p>
     </div>
 
@@ -426,15 +427,15 @@
         <ul class="faq-list" id="faq-list">
             <li class="faq-item">
                 <button class="faq-btn">Hur mycket är arbetsgivaravgiften 2026?<span class="faq-icon">+</span></button>
-                <div class="faq-body">Arbetsgivaravgiften 2026 är <strong>31,42 %</strong> för anställda i åldern 26–65 år. Den består av sju komponenter: ålderspensionsavgift (10,21 %), efterlevandepensionsavgift (0,60 %), sjukförsäkringsavgift (3,55 %), föräldraförsäkringsavgift (2,60 %), arbetsmarknadsavgift (2,64 %), arbetsskadeavgift (0,20 %) och allmän löneavgift (11,62 %).</div>
+                <div class="faq-body">Arbetsgivaravgiften 2026 är <strong>31,42 %</strong> för de flesta anställda (födda 1959–2002 och 2008 eller senare). Den består av sju komponenter: ålderspensionsavgift (10,21 %), efterlevandepensionsavgift (0,60 %), sjukförsäkringsavgift (3,55 %), föräldraförsäkringsavgift (2,60 %), arbetsmarknadsavgift (2,64 %), arbetsskadeavgift (0,20 %) och allmän löneavgift (11,62 %).</div>
             </li>
             <li class="faq-item">
                 <button class="faq-btn">Vad är reducerad arbetsgivaravgift för unga 2026?<span class="faq-icon">+</span></button>
-                <div class="faq-body">För anställda som fyller högst 25 år under 2026 (född 2001 eller senare) är arbetsgivaravgiften <strong>10,21 %</strong> — enbart ålderspensionsavgiften. Sänkningen gäller på lön upp till 25 000 kr/mån. Syfte: att sänka trösklarna för att ge unga deras första jobb.</div>
+                <div class="faq-body">Från 1 april 2026 till 30 september 2027 är arbetsgivaravgiften tillfälligt sänkt till 20,81 % för anställda födda 2003–2007 (19–23 år). Den sänkta avgiften gäller på lön upp till 25 000 kr per månad — på lön över det betalar arbetsgivaren full avgift, 31,42 %. Den gamla nedsättningen för alla under 26 år finns inte längre.</div>
             </li>
             <li class="faq-item">
-                <button class="faq-btn">Vad är arbetsgivaravgift för anställda över 65?<span class="faq-icon">+</span></button>
-                <div class="faq-body">Anställda som fyller 66 år eller mer under 2026 (född 1960 eller tidigare) ger en arbetsgivaravgift på <strong>10,21 %</strong>. Skälet är att flertalet förmåner (sjukförsäkring, föräldrapenning, a-kassa) inte är aktuella i den åldern, och man vill uppmuntra äldre att fortsätta arbeta.</div>
+                <button class="faq-btn">Vad är arbetsgivaravgiften för äldre anställda 2026?<span class="faq-icon">+</span></button>
+                <div class="faq-body">För anställda födda 1938–1958 betalar arbetsgivaren 2026 bara ålderspensionsavgiften på 10,21 %. För anställda födda 1937 eller tidigare betalas ingen arbetsgivaravgift alls. Skälet är att flera förmåner (sjukförsäkring, föräldrapenning, a-kassa) inte är aktuella i den åldern, och man vill uppmuntra äldre att fortsätta arbeta.</div>
             </li>
             <li class="faq-item">
                 <button class="faq-btn">Vad skiljer arbetsgivaravgift från egenavgifter?<span class="faq-icon">+</span></button>
@@ -523,10 +524,19 @@
         const man   = parseInt(document.getElementById('manader-select').value) || 12;
         const alder = document.getElementById('alder-select').value;
 
-        const komponenter = (alder === 'standard') ? KOMPONENTER_STANDARD : KOMPONENTER_REDUCERAD;
-        const totalSats   = komponenter.reduce((s, k) => s + k.sats, 0);
+        let komponenter;
+        if (alder === 'standard') komponenter = KOMPONENTER_STANDARD;
+        else if (alder === 'aldre') komponenter = KOMPONENTER_REDUCERAD;
+        else if (alder === 'noll') komponenter = [];
+        else komponenter = KOMPONENTER_STANDARD.map(k => ({ namn: k.namn, sats: k.namn === 'Ålderspensionsavgift' ? k.sats : (k.namn === 'Allmän löneavgift' ? 0.05805 : k.sats / 2), full: k.sats }));
 
-        const avgift_per_anst_mån  = lon * totalSats;
+        // Ungdomsnedsättning: sänkt sats på lön upp till 25 000 kr/mån, full sats över
+        const TAK_UNG = 25000;
+        const lonSankt = (alder === 'ung') ? Math.min(lon, TAK_UNG) : lon;
+        const lonFull  = (alder === 'ung') ? Math.max(0, lon - TAK_UNG) : 0;
+        komponenter = komponenter.map(k => ({ namn: k.namn, sats: k.sats, belopp: lonSankt * k.sats + lonFull * (k.full || k.sats) }));
+        const avgift_per_anst_mån  = komponenter.reduce((s, k) => s + k.belopp, 0);
+        const totalSats   = lon > 0 ? avgift_per_anst_mån / lon : komponenter.reduce((s, k) => s + k.sats, 0);
         const totalkostnad_per_mån = (lon + avgift_per_anst_mån) * antal;
         const avgift_totalt_mån    = avgift_per_anst_mån * antal;
         const totalkostnad_per_år  = totalkostnad_per_mån * man;
@@ -568,7 +578,7 @@
             rows += `<tr>
                 <td>${k.namn}</td>
                 <td style="text-align:right">${(k.sats * 100).toFixed(2).replace('.', ',')} %</td>
-                <td style="text-align:right">${fmt(lon * k.sats)}</td>
+                <td style="text-align:right">${fmt(k.belopp)}</td>
             </tr>`;
         });
         rows += `<tr class="total-row">

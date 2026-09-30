@@ -52,7 +52,7 @@
           "name": "Hur mycket är underhållsstödet 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Underhållsstödets normbelopp per barn och månad är: 0–6 år: 1 573 kr, 7–10 år: 1 723 kr, 11–14 år: 1 873 kr, 15–18 år: 2 223 kr. Beloppen uppdateras årligen av Försäkringskassan och gäller per kalenderår. Kontrollera alltid aktuella belopp på Försäkringskassans webbplats."
+            "text": "Underhållsstödets normbelopp per barn och månad är: 0–6 år: 1 673 kr, 7–14 år: 1 823 kr, 15 år och äldre: 2 223 kr. Beloppen uppdateras årligen av Försäkringskassan och gäller per kalenderår. Kontrollera alltid aktuella belopp på Försäkringskassans webbplats."
           }
         },
         {
@@ -349,10 +349,10 @@
             <div class="input-group">
                 <label for="ald-fk">Barnets ålder</label>
                 <select id="ald-fk">
-                    <option value="0-6">0–6 år (1 573 kr/mån)</option>
-                    <option value="7-10">7–10 år (1 723 kr/mån)</option>
-                    <option value="11-14">11–14 år (1 873 kr/mån)</option>
-                    <option value="15-18" selected>15–18 år (2 223 kr/mån)</option>
+                    <option value="0-6">0–6 år (1 673 kr/mån)</option>
+                    <option value="7-10">7–10 år (1 823 kr/mån)</option>
+                    <option value="11-14">11–14 år (1 823 kr/mån)</option>
+                    <option value="15-18" selected>15 år och äldre (2 223 kr/mån)</option>
                 </select>
             </div>
             <div class="input-group">
@@ -536,7 +536,7 @@
         <p>Underhållsstöd är ett statligt bidrag som Försäkringskassan (FK) betalar ut till den förälder barnet bor stadigvarande hos — kallad boendeföräldern. Syftet är att garantera barnet ett minimum av ekonomiskt stöd oavsett om den andra föräldern (umgängesföräldern) betalar eller inte. Storleken beror enbart på barnets ålder och är oberoende av boendeförälderns inkomst.</p>
 
         <h2>Normbelopp per åldersgrupp 2026</h2>
-        <p>Försäkringskassan fastställer normbeloppet varje år. För 2025/2026 gäller följande månadsbelopp per barn: 0–6 år: 1 573 kr, 7–10 år: 1 723 kr, 11–14 år: 1 873 kr, 15–18 år: 2 223 kr. Ansök alltid direkt via FK:s webbplats för att bekräfta aktuella belopp.</p>
+        <p>Försäkringskassan fastställer normbeloppet varje år. För 2026 gäller följande månadsbelopp per barn (Försäkringskassan): 0–6 år: 1 673 kr, 7–14 år: 1 823 kr, 15 år och äldre: 2 223 kr. Ansök alltid direkt via FK:s webbplats för att bekräfta aktuella belopp.</p>
 
         <h2>Vad är återkravsbeloppet?</h2>
         <p>När FK betalar underhållsstöd kräver de tillbaka delar av beloppet från umgängesföräldern — det som kallas återkravsbelopp eller underhållsbidrag till FK. Beloppet beräknas på umgängesförälderns inkomst och kan maximalt motsvara normbeloppet. Vid låg inkomst (under ca 120 000 kr/år) är återkravet noll. FK fattar beslut om exakt belopp och meddelar umgängesföräldern skriftligt.</p>
@@ -575,7 +575,7 @@
 
 <script>
 // ─── DATA ───────────────────────────────────────────────────────────────────
-const NORMBELOPP = {'0-6':1573,'7-10':1723,'11-14':1873,'15-18':2223};
+const NORMBELOPP = {'0-6':1673,'7-10':1823,'11-14':1823,'15-18':2223}; // Försäkringskassan 2026: 0–6 år 1 673, 7–14 år 1 823, 15+ 2 223
 const NORMKOSTNAD = {'0-6':5500,'7-10':7500,'11-14':9500,'15-18':12000};
 
 // ─── HELPERS ────────────────────────────────────────────────────────────────
@@ -839,7 +839,7 @@ document.getElementById('netto-umg').addEventListener('input', updatePrivat);
 // ─── FAQ ───────────────────────────────────────────────────────────────────
 var faqs = [
     {q:'Vad är underhållsstöd och vem kan ansöka?', a:'Underhållsstöd är ett bidrag från Försäkringskassan (FK) som betalas ut till den förälder barnet bor hos (boendeföräldern) när den andra föräldern (umgängesföräldern) inte betalar underhållsbidrag eller betalar ett lägre belopp än FK:s normbelopp. Barnet måste bo i Sverige och ha fyllt 18 år senast vid ansökningstillfället. Bidraget upphör när barnet fyller 18 år — eller 20 år om barnet studerar på gymnasiet.'},
-    {q:'Hur mycket är underhållsstödet 2026?', a:'Underhållsstödets normbelopp per barn och månad: 0–6 år: 1 573 kr, 7–10 år: 1 723 kr, 11–14 år: 1 873 kr, 15–18 år: 2 223 kr. Beloppen uppdateras årligen — kontrollera aktuella siffror på Försäkringskassan.se.'},
+    {q:'Hur mycket är underhållsstödet 2026?', a:'Underhållsstödets normbelopp per barn och månad: 0–6 år: 1 673 kr, 7–14 år: 1 823 kr, 15 år och äldre: 2 223 kr. Beloppen uppdateras årligen — kontrollera aktuella siffror på Försäkringskassan.se.'},
     {q:'Vad är återkravsbeloppet och hur beräknas det?', a:'Återkravsbeloppet är det belopp som umgängesföräldern är skyldig att betala till Försäkringskassan per månad. Beloppet beräknas på umgängesförälderns taxerade inkomst och skalas upp med ökad inkomst. Vid låga inkomster (under ca 120 000 kr/år) är återkravet noll. Vid högre inkomster ökar beloppet och kan motsvara hela normbeloppet.'},
     {q:'Vad är skillnaden mellan underhållsstöd och underhållsbidrag?', a:'Underhållsstöd är ett statligt bidrag från FK som garanterar ett minimumbelopp till boendeföräldern. Underhållsbidrag är en privat överenskommelse (eller domstolsbeslut) om vad umgängesföräldern direkt betalar till boendeföräldern. Det privata bidraget beräknas utifrån bägge föräldrarnas inkomster och kan vara högre än FK:s normbelopp.'},
     {q:'Kan man få underhållsstöd vid växelvis boende?', a:'Nej, underhållsstöd betalas normalt inte ut vid växelvis boende (50/50) eftersom ingen förälder är utpekad boendeförälder. Däremot kan ett privat underhållsbidrag vara aktuellt vid växelvis boende om föräldrarnas inkomster skiljer sig markant. Kontakta Försäkringskassan för individuell bedömning.'},

@@ -14,7 +14,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Amorteringskalkylator",
     "icon": "📊",
     "category": "Boende &amp; Lån",
-    "desc": "Beräkna amorteringskrav enligt FI:s regler och skuldkvotstak 2026.",
+    "desc": "Beräkna amorteringskrav 2026 — 1 % eller 2 % beroende på belåningsgrad, bolånetak 90 %.",
     "kw": "amortering amorteringskrav finansinspektionen fi belåningsgrad skuldkvot"
   },
   {
@@ -446,8 +446,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Hur mycket får jag låna 2026?",
     "icon": "🏦",
     "category": "Guide",
-    "desc": "Bolånetaket 85 %, skuldkvotstaket 4,5 × inkomsten och KALP — så räknar banken ut ditt max-belopp.",
-    "kw": "hur mycket får jag låna 2026? bolånetaket 85 %, skuldkvotstaket 4,5 × inkomsten och kalp — så räknar banken ut ditt max-belopp."
+    "desc": "Bolånetaket 90 %, bankernas skuldkvot och KALP — så räknar banken ut ditt max-belopp.",
+    "kw": "hur mycket får jag låna 2026? bolånetaket 90 %, skuldkvot och kalp — så räknar banken ut ditt max-belopp."
   },
   {
     "type": "guide",

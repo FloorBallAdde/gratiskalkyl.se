@@ -44,7 +44,7 @@
           "name": "Hur mycket är milersättningen 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Skatteverkets schablonbelopp för milersättning 2026 är 25 kr per mil (2,50 kr/km) för bilar som drivs med bensin eller diesel. För laddhybrider är schablonbeloppet 18,50 kr/mil och för elbilar 9,50 kr/mil. Ersättning upp till dessa belopp är skattefri för anställda och avdragsgill för arbetsgivaren."
+            "text": "Skatteverkets schablonbelopp för milersättning 2026 är 25 kr per mil (2,50 kr/km) när du kör din egen bil i tjänsten — oavsett om bilen går på bensin, diesel, el eller är en laddhybrid. Kör du förmånsbil och betalar drivmedlet själv är beloppet 9,50 kr/mil för elbil och 12 kr/mil för övriga drivmedel. Ersättning upp till dessa belopp är skattefri för anställda och avdragsgill för arbetsgivaren."
           }
         },
         {
@@ -52,7 +52,7 @@
           "name": "Är milersättning skattepliktig?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Milersättning upp till Skatteverkets schablonbelopp (25 kr/mil för bensin/diesel) är helt skattefri. Betalar arbetsgivaren mer än schablonbeloppet beskattas överskjutande del som lön. Du som anställd behöver inte deklarera milersättningen separat om den ryms inom schablonbeloppet."
+            "text": "Milersättning upp till Skatteverkets schablonbelopp (25 kr/mil för egen bil) är helt skattefri. Betalar arbetsgivaren mer än schablonbeloppet beskattas överskjutande del som lön. Du som anställd behöver inte deklarera milersättningen separat om den ryms inom schablonbeloppet."
           }
         },
         {
@@ -60,7 +60,7 @@
           "name": "Vad är reseavdrag och hur beräknas det?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats."
+            "text": "Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det finns inget maxbelopp för avdraget. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats."
           }
         },
         {
@@ -432,18 +432,18 @@
             <div class="rate-box">
                 <strong>Skatteverkets schablonbelopp 2026 (skattefritt):</strong>
                 <table>
-                    <tr><td>Bensin / diesel</td><td>25,00 kr/mil</td></tr>
-                    <tr><td>Laddhybrid</td><td>18,50 kr/mil</td></tr>
-                    <tr><td>Elbil</td><td>9,50 kr/mil</td></tr>
+                    <tr><td>Egen bil (alla drivmedel)</td><td>25,00 kr/mil</td></tr>
+                    <tr><td>Förmånsbil, ej eldrift</td><td>12,00 kr/mil</td></tr>
+                    <tr><td>Förmånsbil, eldrift</td><td>9,50 kr/mil</td></tr>
                 </table>
             </div>
 
             <div class="field">
                 <label>Biltyp</label>
                 <select id="car-type" onchange="calcTjanst()">
-                    <option value="25">Bensin / diesel (25 kr/mil)</option>
-                    <option value="18.5">Laddhybrid (18,50 kr/mil)</option>
-                    <option value="9.5">Elbil (9,50 kr/mil)</option>
+                    <option value="25">Egen bil, alla drivmedel (25 kr/mil)</option>
+                    <option value="12">Förmånsbil, bensin/diesel/hybrid (12 kr/mil)</option>
+                    <option value="9.5">Förmånsbil, el (9,50 kr/mil)</option>
                 </select>
             </div>
 
@@ -566,7 +566,6 @@
                     <tr><td>Bruttokostnad (25 kr/mil)</td><td id="det-r-gross">—</td></tr>
                     <tr><td>Avdrag självrisktröskeln</td><td>15 000 kr</td></tr>
                     <tr><td>Avdragsgillt belopp</td><td id="det-r-avdrag">—</td></tr>
-                    <tr><td>Max avdrag (tak)</td><td>50 000 kr</td></tr>
                     <tr><td>Skattesats</td><td id="det-r-tax">—</td></tr>
                     <tr><td>Skattebesparing</td><td id="det-r-besparing">—</td></tr>
                 </table>
@@ -614,9 +613,9 @@
         <h3>Skatteverkets schablonbelopp 2026</h3>
         <table class="rate-table">
             <tr><th>Biltyp</th><th>Kr per mil</th><th>Kr per km</th><th>Status</th></tr>
-            <tr><td>Bensin / diesel</td><td>25,00 kr</td><td>2,50 kr</td><td>Skattefritt</td></tr>
-            <tr><td>Laddhybrid</td><td>18,50 kr</td><td>1,85 kr</td><td>Skattefritt</td></tr>
-            <tr><td>Elbil (eldrift)</td><td>9,50 kr</td><td>0,95 kr</td><td>Skattefritt</td></tr>
+            <tr><td>Egen bil (alla drivmedel)</td><td>25,00 kr</td><td>2,50 kr</td><td>Skattefritt</td></tr>
+            <tr><td>Förmånsbil, ej eldrift</td><td>12,00 kr</td><td>1,20 kr</td><td>Skattefritt</td></tr>
+            <tr><td>Förmånsbil, eldrift</td><td>9,50 kr</td><td>0,95 kr</td><td>Skattefritt</td></tr>
         </table>
 
         <p>Om din arbetsgivare betalar mer än schablonbeloppet — till exempel 30 kr/mil — beskattas de överskjutande 5 kr/mil som vanlig lön. Det är därför de flesta arbetsgivare håller sig exakt till schablonbeloppet.</p>
@@ -634,8 +633,8 @@
         <p>För att ha rätt till milersättning måste du föra en körjournal. Den ska innehålla: datum, startpunkt, destination, ändamål med resan och antal kilometer. Körjournalen är ditt underlag gentemot arbetsgivaren och Skatteverket — spara den i minst 6 år.</p>
 
         <h3>Reseavdrag för pendling med bil</h3>
-        <p>Kör du din privata bil till jobbet och sparar minst 2 timmar per dag jämfört med kollektivtrafik kan du göra reseavdrag i deklarationen. Avdragsbeloppet är dina faktiska pendlingskostnader (beräknade till 25 kr/mil) minus en självrisktröskel på 15 000 kr per år. Det maximala avdraget är 50 000 kr per år (gäller sedan 2024).</p>
-        <p>En anställd som pendlar 30 km vardera väg, 220 dagar per år, har en bruttokostnad på 660 mil × 25 kr = 16 500 kr. Med 15 000 kr i självrisk (höjt från 15 000 kr 2026) kvarstår 1 500 kr i avdrag — vilket ger ca 480 kr tillbaka på skatten vid 32 % skattesats.</p>
+        <p>Kör du din privata bil till jobbet och sparar minst 2 timmar per dag jämfört med kollektivtrafik kan du göra reseavdrag i deklarationen. Avdragsbeloppet är dina faktiska pendlingskostnader (beräknade till 25 kr/mil) minus en självrisktröskel på 15 000 kr per år. Gränsbeloppet höjdes från 11 000 kr till 15 000 kr från och med inkomståret 2026, alltså deklarationen du lämnar våren 2027. Det finns inget maxbelopp.</p>
+        <p>En anställd som pendlar 30 km vardera väg, 220 dagar per år, kör 1 320 mil per år och får en bruttokostnad på 1 320 mil × 25 kr = 33 000 kr. Efter gränsbeloppet på 15 000 kr kvarstår 18 000 kr i avdrag — vilket ger ca 5 760 kr tillbaka på skatten vid 32 % skattesats.</p>
 
         <h3>Tjänstebil vs privat bil</h3>
         <p>Har du förmånsbil (tjänstebil) kan du i de flesta fall inte göra reseavdrag för pendlingen. Du beskattas i stället för förmånsvärdet av bilen. Om du kör tjänstebil privat gäller andra regler — använd vår <a href="/kalkylatorer/formansbilkalkylator" style="color:var(--primary)">förmånsbilkalkylator</a> för att beräkna förmånsvärdet.</p>
@@ -647,15 +646,15 @@
 
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Hur mycket är milersättningen 2026? <span class="arrow">+</span></button>
-            <div class="faq-a">Skatteverkets schablonbelopp för milersättning 2026 är 25 kr per mil (2,50 kr/km) för bilar som drivs med bensin eller diesel. För laddhybrider är schablonbeloppet 18,50 kr/mil och för elbilar 9,50 kr/mil. Ersättning upp till dessa belopp är skattefri för anställda och avdragsgill för arbetsgivaren.</div>
+            <div class="faq-a">Skatteverkets schablonbelopp för milersättning 2026 är 25 kr per mil (2,50 kr/km) när du kör din egen bil i tjänsten — oavsett om bilen går på bensin, diesel, el eller är en laddhybrid. Kör du förmånsbil och betalar drivmedlet själv är beloppet 9,50 kr/mil för elbil och 12 kr/mil för övriga drivmedel. Ersättning upp till dessa belopp är skattefri för anställda och avdragsgill för arbetsgivaren.</div>
         </div>
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Är milersättning skattepliktig? <span class="arrow">+</span></button>
-            <div class="faq-a">Milersättning upp till Skatteverkets schablonbelopp (25 kr/mil för bensin/diesel) är helt skattefri. Betalar arbetsgivaren mer än schablonbeloppet beskattas överskjutande del som lön. Du som anställd behöver inte deklarera milersättningen separat om den ryms inom schablonbeloppet.</div>
+            <div class="faq-a">Milersättning upp till Skatteverkets schablonbelopp (25 kr/mil för egen bil) är helt skattefri. Betalar arbetsgivaren mer än schablonbeloppet beskattas överskjutande del som lön. Du som anställd behöver inte deklarera milersättningen separat om den ryms inom schablonbeloppet.</div>
         </div>
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Vad är reseavdrag och hur beräknas det? <span class="arrow">+</span></button>
-            <div class="faq-a">Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats.</div>
+            <div class="faq-a">Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det finns inget maxbelopp för avdraget. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats.</div>
         </div>
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Vad krävs för att få reseavdrag? <span class="arrow">+</span></button>
@@ -746,7 +745,7 @@
         const days = parseFloat(document.getElementById('resa-days').value) || 220;
         const taxRate = parseFloat(document.getElementById('tax-input').value) / 100 || 0.32;
         const THRESHOLD = 15000; // beloppsgräns reseavdrag 2026 (höjd från 15 000 kr)
-        const MAX_AVDRAG = 50000;
+        const MAX_AVDRAG = Infinity; // inget tak för reseavdrag
 
         const kmPerDay = kmOne * 2;
         const totalKm = kmPerDay * days;
@@ -810,7 +809,7 @@
 
         const yearly = monthly * 12;
         // Estimate fuel cost (assumed: 0.80 kr/km for petrol)
-        const fuelCostPerKm = rate === 25 ? 0.9 : rate === 18.5 ? 0.55 : 0.2;
+        const fuelCostPerKm = rate === 25 ? 0.9 : rate === 12 ? 0.9 : 0.2;
         const fuelMonth = km * fuelCostPerKm;
 
         const vals = [monthly, fuelMonth, monthly - fuelMonth];

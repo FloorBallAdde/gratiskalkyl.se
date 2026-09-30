@@ -20,7 +20,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
     <title>Amorteringskalkylator 2026 – Räkna ut bolånets amortering | Gratis</title>
-    <meta name="description" content="Räkna ut din månatliga amortering 2026 på 30 sekunder. Inkluderar FI:s amorteringskrav (1 % vid 50–70 % belåning, 2 % vid över 70 %) och skuldkvotstaket på 4,5 ×. Se ränta och totalkostnad för bolånet – gratis kalkylator.">
+    <meta name="description" content="Räkna ut din månatliga amortering 2026 på 30 sekunder. Med 2026 års regler: amorteringskrav 1 % vid 50–70 % belåning, 2 % vid över 70 %, och bolånetak 90 %. Se ränta och totalkostnad för bolånet – gratis kalkylator.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/amorteringskalkylator">
     <meta property="og:title" content="Amorteringskalkylator 2026 – Räkna ut amortering och amorteringskrav">
@@ -44,15 +44,15 @@
           "name": "Vad är amorteringskravet i Sverige 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Finansinspektionens amorteringskrav innebär att du måste amortera minst 1 % per år om belåningsgraden är 50–70 % av bostadens värde, och minst 2 % per år om belåningsgraden överstiger 70 %. Bolånetaket är 85 % – du måste ha minst 15 % i kontantinsats."
+            "text": "Amorteringskravet innebär att du måste amortera minst 1 % per år om belåningsgraden är 50–70 % av bostadens värde, och minst 2 % per år om belåningsgraden överstiger 70 %. Sedan 1 april 2026 är bolånetaket 90 % – du behöver minst 10 % i kontantinsats – och det skärpta amorteringskravet vid hög skuldkvot är borttaget."
           }
         },
         {
           "@type": "Question",
-          "name": "Vad är skuldkvotstakregeln?",
+          "name": "Finns det skärpta amorteringskravet kvar 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Om din totala bolåneskuld överstiger 4,5 gånger din bruttoinkomst (hushållets samlade inkomster före skatt) måste du amortera ytterligare 1 % per år utöver grundkravet. Exempel: hushållsinkomst 800 000 kr/år → skuldkvotstaket slår in om lånet är mer än 3 600 000 kr."
+            "text": "Nej. Det skärpta amorteringskravet — ytterligare 1 % per år om bolånet översteg 4,5 gånger hushållets bruttoinkomst — slopades 1 april 2026. Nya lån omfattas inte. Har du ett äldre lån med skärpt krav upphör det inte automatiskt: du behöver be banken om nya villkor."
           }
         },
         {
@@ -567,7 +567,7 @@
 
     <div class="calc-wrapper">
         <div class="fi-badge">
-            <strong>FI:s amorteringskrav 2026:</strong> Belåningsgrad 50–70 % → amortera minst <strong>1 % / år</strong>. Belåningsgrad &gt; 70 % → amortera minst <strong>2 % / år</strong>. Skuld &gt; 4,5× inkomst → <strong>+1 % extra</strong>.
+            <strong>Amorteringskrav 2026 (fr.o.m. 1 april):</strong> Belåningsgrad 50–70 % → amortera minst <strong>1 % / år</strong>. Belåningsgrad &gt; 70 % → amortera minst <strong>2 % / år</strong>. Bolånetak <strong>90 %</strong>. Skärpt krav vid skuldkvot &gt; 4,5 är borttaget.
         </div>
 
         <!-- Amortization mode -->
@@ -585,9 +585,9 @@
             </div>
             <div class="input-group">
                 <label for="kontantinsats">Kontantinsats (kr)</label>
-                <span class="sublabel" id="kiProcent">15 % av köpeskillingen</span>
-                <input type="number" id="kontantinsats" value="525000" min="0" max="15000000" step="25000">
-                <input type="range" id="kontantinsatsRange" min="0" max="5000000" step="25000" value="525000">
+                <span class="sublabel" id="kiProcent">10 % av köpeskillingen</span>
+                <input type="number" id="kontantinsats" value="350000" min="0" max="15000000" step="25000">
+                <input type="range" id="kontantinsatsRange" min="0" max="5000000" step="25000" value="350000">
                 <div class="range-labels"><span>0 kr</span><span>5 mkr</span></div>
             </div>
             <div class="input-group">
@@ -603,9 +603,9 @@
                 <input type="range" id="customAmortRange" min="0.5" max="10" step="0.1" value="2">
                 <div class="range-labels"><span>0,5 %</span><span>10 %</span></div>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="display:none;">
                 <label for="arsinkomst">Hushållets bruttoinkomst (kr/år)</label>
-                <span class="sublabel">Används för skuldkvotstak</span>
+                <span class="sublabel">Används inte längre (skärpt krav slopat 2026)</span>
                 <input type="number" id="arsinkomst" value="900000" min="0" max="10000000" step="25000">
                 <input type="range" id="arsinkomstRange" min="0" max="5000000" step="25000" value="900000">
                 <div class="range-labels"><span>0 kr</span><span>5 mkr</span></div>
@@ -618,8 +618,8 @@
             <div class="fi-krav-strip" id="fiKravStrip">
                 <div class="fi-krav-item" id="kravLow">Belåningsgrad &lt; 50 %: inget krav</div>
                 <div class="fi-krav-item" id="kravMid">50–70 %: 1 % / år</div>
-                <div class="fi-krav-item" id="kravHigh">70–85 %: 2 % / år</div>
-                <div class="fi-krav-item" id="kravSkuld">Skuldkvot &gt; 4,5×: +1 % / år</div>
+                <div class="fi-krav-item" id="kravHigh">70–90 %: 2 % / år</div>
+                <div class="fi-krav-item" id="kravSkuld" style="display:none;"></div>
             </div>
         </div>
 
@@ -708,17 +708,12 @@
                 <td>2 500 kr / mån</td>
             </tr>
             <tr>
-                <td>70–85 %</td>
+                <td>70–90 %</td>
                 <td>2 % av lånebeloppet / år</td>
                 <td>5 000 kr / mån</td>
             </tr>
-            <tr>
-                <td>Skuld &gt; 4,5× inkomst</td>
-                <td>+1 % extra utöver ovan</td>
-                <td>+2 500 kr / mån extra</td>
-            </tr>
         </table>
-        <p>Bolånetaket är 85 % av bostadens värde — du måste alltid ha minst 15 % i kontantinsats. Saknar du tillräcklig kontantinsats kan du eventuellt låna till den av närstående, men banken bedömer alltid din betalningsförmåga (KALP-kalkyl).</p>
+        <p>Sedan 1 april 2026 är bolånetaket 90 % av bostadens värde — du behöver minst 10 % i kontantinsats (tidigare 15 %). Vid utökning av ett befintligt lån får belåningsgraden vara högst 80 %. Det skärpta amorteringskravet på ytterligare 1 % vid skuld över 4,5 gånger inkomsten är borttaget. Saknar du tillräcklig kontantinsats kan du eventuellt låna till den av närstående, men banken bedömer alltid din betalningsförmåga (KALP-kalkyl).</p>
 
         <h3>Ränteavdraget — 30 % rabatt på räntekostnaden</h3>
         <p>I Sverige får du dra av 30 % av räntekostnaderna upp till 100 000 kr per år (och 21 % på belopp däröver) i deklarationen. Det innebär att den verkliga nettokostnaden för räntan är lägre än det belopp du betalar till banken. Kalkylatorn visar din nettokostnad efter ränteavdrag så att du vet din reella månadskostnad.</p>
@@ -744,12 +739,12 @@
 
         <details>
             <summary>Vad är amorteringskravet i Sverige 2026?</summary>
-            <p>Finansinspektionens amorteringskrav innebär att du måste amortera minst 1 % per år om belåningsgraden är 50–70 % av bostadens värde, och minst 2 % per år om belåningsgraden överstiger 70 %. Bolånetaket är 85 % – du måste ha minst 15 % i kontantinsats.</p>
+            <p>Amorteringskravet innebär att du måste amortera minst 1 % per år om belåningsgraden är 50–70 % av bostadens värde, och minst 2 % per år om belåningsgraden överstiger 70 %. Sedan 1 april 2026 är bolånetaket 90 % – du behöver minst 10 % i kontantinsats – och det skärpta amorteringskravet vid hög skuldkvot är borttaget.</p>
         </details>
 
         <details>
-            <summary>Vad är skuldkvotstakregeln?</summary>
-            <p>Om din totala bolåneskuld överstiger 4,5 gånger din bruttoinkomst (hushållets samlade inkomster före skatt) måste du amortera ytterligare 1 % per år utöver grundkravet. Exempel: hushållsinkomst 800 000 kr/år → skuldkvotstaket slår in om lånet är mer än 3 600 000 kr.</p>
+            <summary>Finns det skärpta amorteringskravet kvar 2026?</summary>
+            <p>Nej. Det skärpta amorteringskravet — ytterligare 1 % per år om bolånet översteg 4,5 gånger hushållets bruttoinkomst — slopades 1 april 2026. Nya lån omfattas inte. Har du ett äldre lån med skärpt krav upphör det inte automatiskt: du behöver be banken om nya villkor.</p>
         </details>
 
         <details>
@@ -793,7 +788,7 @@
     <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">📖 Lär dig mer</h3>
     <a href="/artiklar/amorteringskrav-2026" style="display:block;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:18px 20px;text-decoration:none;color:inherit;transition:box-shadow 0.2s ease,transform 0.2s ease;">
         <div style="font-weight:700;font-size:1rem;margin-bottom:4px;color:var(--text);">Amorteringskrav 2026 — Så räknas amortering på bolån</div>
-        <div style="font-size:0.9rem;color:var(--text-light);">Grundkravet på 1 % / 2 %, tilläggsregeln vid skuldkvot >4,5x och räkneexempel för hela hushållssituationer.</div>
+        <div style="font-size:0.9rem;color:var(--text-light);">Grundkravet på 1 % / 2 %, bolånetaket 90 % och vad det slopade skärpta kravet betyder för dig — med räkneexempel.</div>
     </a>
 </div>
 
@@ -866,7 +861,7 @@
 
         // Skuldkvotstaket: if debt > 4.5× income, +1%
         const skuldkvot = arsinkomst > 0 ? lan / arsinkomst : 0;
-        const skuldkvotExtra = skuldkvot > 4.5 ? 1 : 0;
+        const skuldkvotExtra = 0; // skärpt amorteringskrav slopat 1 april 2026
         const fiTotalPct = fiBasePct + skuldkvotExtra;
 
         // Determine actual amortization rate used
@@ -900,7 +895,7 @@
         document.getElementById('resAmortPct').textContent = lan > 0 ? fmtPct(amortPct) + ' / år' : '';
         document.getElementById('resRanta').textContent = lan > 0 ? fmt(rantaNetto) : '—';
         document.getElementById('resBelaning').textContent = belaningsgrad > 0 ? fmtPct(belaningsgrad) : '—';
-        document.getElementById('resBelaning2').textContent = belaningsgrad > 85 ? '⚠️ Överstiger 85 %' : (belaningsgrad > 0 ? 'Lån: ' + fmt(lan) : '');
+        document.getElementById('resBelaning2').textContent = belaningsgrad > 90 ? '⚠️ Överstiger bolånetaket 90 %' : (belaningsgrad > 0 ? 'Lån: ' + fmt(lan) : '');
 
         // Build yearly amortization schedule
         buildChart(lan, rantaPct, amortPct, bostadspris);

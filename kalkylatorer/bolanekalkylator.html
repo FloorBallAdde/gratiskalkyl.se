@@ -380,7 +380,7 @@
                 "name": "Hur mycket behöver jag amortera på mitt bolån?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Dessutom krävs ytterligare 1% om skulden överstiger 4,5 gånger din bruttoinkomst."
+                    "text": "Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Det skärpta kravet på ytterligare 1% vid skuld över 4,5 gånger bruttoinkomsten slopades 1 april 2026."
                 }
             },
             {
@@ -404,7 +404,7 @@
                 "name": "Hur mycket kan jag låna för att köpa bostad?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Banker tillämpar ett bolånetak på 85% av bostadens marknadsvärde. Du behöver alltså minst 15% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%)."
+                    "text": "Sedan 1 april 2026 är bolånetaket 90% av bostadens marknadsvärde. Du behöver alltså minst 10% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%)."
                 }
             },
             {
@@ -473,8 +473,8 @@
                 </div>
                 <div class="input-group">
                     <label for="kontantinsats">Kontantinsats (%)</label>
-                    <input type="number" id="kontantinsats" value="15" min="0" max="90" step="1">
-                    <input type="range" id="kontantinsatsSlider" min="0" max="90" step="1" value="15">
+                    <input type="number" id="kontantinsats" value="10" min="0" max="90" step="1">
+                    <input type="range" id="kontantinsatsSlider" min="0" max="90" step="1" value="10">
                     <div class="range-labels"><span>0%</span><span>90%</span></div>
                 </div>
                 <div class="input-group">
@@ -501,7 +501,7 @@
                 </div>
                 <div class="input-group">
                     <label for="bruttoinkomst">Hushållets bruttoinkomst (kr/mån)</label>
-                    <div class="sublabel">Används för skuldkvotskravet</div>
+                    <div class="sublabel">Används för att visa din skuldkvot</div>
                     <input type="number" id="bruttoinkomst" value="50000" min="0" max="500000" step="1000">
                 </div>
             </div>
@@ -567,12 +567,12 @@ Belåningsgrad = Lån / Bostadens värde × 100
             <p>Att jämföra bolåneräntor via Lendo, Hypoteket eller Compricer tar 15 minuter och kan spara 10 000–25 000 kr om året på ett större bolån. Banker förhandlar – be alltid om ett bättre erbjudande innan du skriver avtal.</p>
 
             <h3>Amorteringskrav i Sverige 2026</h3>
-            <p>Sedan 2016 gäller lagstadgade amorteringskrav för nya bolån:</p>
+            <p>Amorteringskraven för nya bolån 2026 (efter ändringen 1 april 2026):</p>
             <ul>
                 <li><strong>Belåningsgrad över 70 %:</strong> minst 2 % amortering per år</li>
                 <li><strong>Belåningsgrad 50–70 %:</strong> minst 1 % amortering per år</li>
                 <li><strong>Belåningsgrad under 50 %:</strong> inget krav, men frivillig amortering rekommenderas</li>
-                <li><strong>Skuldkvot över 4,5× bruttoinkomst:</strong> ytterligare 1 % amortering per år utöver ovan</li>
+                <li><strong>Skärpt krav vid skuldkvot över 4,5:</strong> borttaget sedan 1 april 2026 — har du ett äldre lån med skärpt krav, be banken om nya villkor</li>
             </ul>
             <p>Amorteringskravet gäller från den dag du tecknar lånet. Har du ett lån sedan innan 2016 kan du ha amorteringsfrihet om din bank beviljar det, men nya lån och omläggningar utlöser alltid kravet.</p>
 
@@ -581,7 +581,7 @@ Belåningsgrad = Lån / Bostadens värde × 100
             <p>Exempel: Bolån 3 000 000 kr till 3,5 % ger 105 000 kr/år i räntekostnad. Ränteavdraget: (100 000 × 30 %) + (5 000 × 21 %) = 30 000 + 1 050 = <strong>31 050 kr tillbaka</strong> i deklarationen, alltså 2 588 kr/månad lägre nettokostnad.</p>
 
             <h3>Bolånetaket och kontantinsatsen</h3>
-            <p>Finansinspektionen reglerar hur mycket du får låna till bostad. I Sverige gäller ett <strong>bolånetak på 85 %</strong> av bostadens marknadsvärde. Du måste ha minst 15 % i kontantinsats (eget kapital). Köper du en bostad för 4 000 000 kr måste du ha minst 600 000 kr kontant.</p>
+            <p>Finansinspektionen reglerar hur mycket du får låna till bostad. Sedan 1 april 2026 gäller ett <strong>bolånetak på 90 %</strong> av bostadens marknadsvärde (tidigare 85 %). Du måste ha minst 10 % i kontantinsats (eget kapital). Köper du en bostad för 4 000 000 kr måste du ha minst 400 000 kr kontant. Vid utökning av ett befintligt lån är taket 80 %.</p>
             <p>Banken gör också en kreditprövning med en <strong>kalkylränta på 6–8 %</strong> (högre än verklig ränta) för att säkerställa att du klarar lånekostnaden även vid räntehöjningar. Det är kalkylräntan, inte aktuell ränta, som oftast begränsar hur mycket du kan låna.</p>
 
             <h3>Rörlig eller bunden ränta – vad ska du välja?</h3>
@@ -593,7 +593,7 @@ Belåningsgrad = Lån / Bostadens värde × 100
             <h2>Vanliga frågor om bolån 2026</h2>
             <details class="faq-item">
                 <summary>Hur mycket behöver jag amortera på mitt bolån?</summary>
-                <p>Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Dessutom krävs ytterligare 1% om skulden överstiger 4,5 gånger din bruttoinkomst.</p>
+                <p>Amorteringskravet i Sverige innebär att du måste amortera minst 1% per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Det skärpta kravet på ytterligare 1% vid skuld över 4,5 gånger bruttoinkomsten slopades 1 april 2026.</p>
             </details>
             <details class="faq-item">
                 <summary>Vad är ränteavdrag och hur mycket får jag tillbaka?</summary>
@@ -605,7 +605,7 @@ Belåningsgrad = Lån / Bostadens värde × 100
             </details>
             <details class="faq-item">
                 <summary>Hur mycket kan jag låna för att köpa bostad?</summary>
-                <p>Banker tillämpar ett bolånetak på 85% av bostadens marknadsvärde. Du behöver alltså minst 15% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%).</p>
+                <p>Sedan 1 april 2026 är bolånetaket 90% av bostadens marknadsvärde. Du behöver alltså minst 10% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta 6–8%).</p>
             </details>
             <details class="faq-item">
                 <summary>Vad innebär kalkylräntan?</summary>
