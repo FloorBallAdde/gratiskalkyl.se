@@ -388,6 +388,33 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "guide",
+    "url": "/artiklar/deklaration-2027",
+    "title": "Deklaration 2027 – datum och nyheter",
+    "icon": "🧾",
+    "category": "Guide",
+    "desc": "Sista dag 3 maj, reseavdrag från 15 000 kr, ROT 30 % och slopad solcellsreduktion.",
+    "kw": "deklaration 2027 deklarera datum sista dag avdrag nyheter inkomstår 2026 skatteverket"
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/skatteaterbaring-2027",
+    "title": "När kommer skatteåterbäringen 2027?",
+    "icon": "💸",
+    "category": "Guide",
+    "desc": "April om du godkänner senast 31 mars, annars juni. Alla utbetalningar och villkor.",
+    "kw": "skatteåterbäring 2027 när kommer pengarna utbetalning datum april juni skatt tillbaka"
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/reseavdrag-2027",
+    "title": "Reseavdrag 2027 – så räknar du",
+    "icon": "🚗",
+    "category": "Guide",
+    "desc": "Gräns 15 000 kr, 25 kr/mil och 2 timmars tidsvinst. Räkneexempel för bil och kollektivt.",
+    "kw": "reseavdrag 2027 gränsbelopp 15000 25 kr mil pendling bil kollektivtrafik deklaration"
+  },
+  {
+    "type": "guide",
     "url": "/artiklar/a-kassa-2026-belopp-och-regler",
     "title": "A-kassa 2026 – belopp och regler",
     "icon": "🤝",
