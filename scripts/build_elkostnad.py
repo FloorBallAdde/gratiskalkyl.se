@@ -51,7 +51,7 @@ def page(blocks):
     title = "Elkostnadskalkylator 2026 – vad borde elen kosta? | SE1–SE4"
     desc = ("Räkna ut din elkostnad och se om du betalar för mycket. Jämför ditt elpris med SCB:s snittpris för nya "
             "avtal i ditt elområde – uppdateras varje månad.")
-    crumbs = [("Hem", "/"), ("Bil & energi", None), ("Elkostnad", None)]
+    crumbs = [("Hem", "/"), ("Bil & energi", "/bil-och-energi"), ("Elkostnad", None)]
     ld = [
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Elkostnadskalkylator – vad borde elen kosta?",
          "url": S.SITE + PATH, "applicationCategory": "FinanceApplication", "operatingSystem": "Web",

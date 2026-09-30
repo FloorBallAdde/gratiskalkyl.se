@@ -404,6 +404,11 @@
       <div class="band-wrap" id="bandWrap"></div>
       <div class="args" id="args"></div>
       <p class="note" id="note"></p>
+      <div id="gkSave" style="margin-top:16px;padding:14px 16px;border-radius:12px;background:#E4F1EA;color:#0A5236">
+        <strong style="display:block;font-size:15px">Spara i Min ekonomi</strong>
+        <span style="font-size:14px;line-height:1.45">Då ser du direkt på startsidan hur din lön står sig mot yrket nästa gång. Sparas bara i din webbläsare – vi ser inte dina siffror.</span>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button type="button" id="gkSaveBtn" style="min-height:44px;padding:0 18px;border:none;border-radius:10px;background:#0D6A45;color:#fff;font:inherit;font-weight:700;cursor:pointer">Spara min lön</button><span id="gkSaveMsg" role="status" style="font-size:14px;font-weight:600"></span></div>
+      </div>
     </div>
     <p class="note" id="empty">Välj ett yrke för att se resultatet.</p>
   </div>
@@ -609,6 +614,7 @@ function berakna(){
   else args.push('Nämn tre konkreta resultat från det senaste året och vad de har betytt för verksamheten.');
   document.getElementById('args').innerHTML = '<h3>💬 Dina argument i lönesamtalet</h3><ol>' + args.map(a => '<li>' + a + '</li>').join('') + '</ol>';
   document.getElementById('note').textContent = (fallback ? 'För få i vald sektor – siffrorna gäller alla sektorer. ' : '') + 'Efter skatt beräknas med ' + Math.round(skatt*100) + ' % marginalskatt. Källa: SCB lönestrukturstatistik 2025.';
+  window.__gkLon = { yrke: valdKod, yrkesNamn: d[0], lon: lon, alder: alder, median: med, ref: ref, refTyp: ageMean ? 'alder' : 'median', percentil: pct, mal: mal, under: under };
   if (typeof gtag === 'function') gtag('event', 'loneforhandling_berakna', { yrke: valdKod });
 }
 
@@ -618,6 +624,34 @@ function toggleFaq(el){ const item = el.parentElement; item.classList.toggle('op
   document.getElementById('chips').innerHTML = POPULAR.filter(x => DATA[x[0]]).map(x => '<button type="button" class="chip" onclick="valjYrke(\''+x[0]+'\')">' + x[1] + '</button>').join('');
   const q = new URLSearchParams(location.search).get('yrke');
   if (q && DATA[q]) valjYrke(q);
+})();
+</script>
+<script>
+/* Min ekonomi – sparas bara i webbläsaren (samma nyckel som /assets/gk.js) */
+(function(){
+  var KEY = 'gk-min-ekonomi';
+  function all(){ try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(e){ return {}; } }
+  var btn = document.getElementById('gkSaveBtn'), msg = document.getElementById('gkSaveMsg');
+  btn.addEventListener('click', function(){
+    if (!window.__gkLon) return;
+    try {
+      var a = all(), v = Object.assign({}, window.__gkLon, { sparad: new Date().toISOString().slice(0,10) });
+      a.lon = v; localStorage.setItem(KEY, JSON.stringify(a));
+      msg.textContent = 'Sparat på den här enheten.';
+      if (typeof gtag === 'function') gtag('event', 'spara_min_ekonomi', { typ: 'lon' });
+    } catch(e){ msg.textContent = 'Det gick inte att spara i den här webbläsaren.'; }
+  });
+  var saved = all().lon;
+  if (saved && saved.yrke && DATA[saved.yrke] && !new URLSearchParams(location.search).get('yrke')) {
+    var l = document.getElementById('lon'); l.value = saved.lon; l.dataset.touched = '1';
+    if (saved.alder) document.getElementById('alder').value = saved.alder;
+    valjYrke(saved.yrke);
+    msg.textContent = 'Dina sparade siffror från ' + saved.sparad + ' är ifyllda.';
+  } else if (saved && saved.lon && saved.yrke === new URLSearchParams(location.search).get('yrke')) {
+    var l2 = document.getElementById('lon'); l2.value = saved.lon; l2.dataset.touched = '1';
+    if (saved.alder) document.getElementById('alder').value = saved.alder;
+    berakna();
+  }
 })();
 </script>
 </body>

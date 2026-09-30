@@ -10,7 +10,7 @@ SITE = "https://gratiskalkyl.se"
 
 # Ämnen i menyn. (namn, undertext, hubb-url eller None, [(titel, url), ...])
 TOPICS = [
-    ("Lön & jobb", "Lön, semester, egen firma", None, [
+    ("Lön & jobb", "Lön, semester, egen firma", "/lon-och-jobb", [
         ("Löneräknare – nettolön", "/kalkylatorer/loneraknare"),
         ("Löneförhandling – vad ska du begära?", "/kalkylatorer/loneforhandling"),
         ("Lön per yrke (105 yrken)", "/kalkylatorer/yrkeslon/"),
@@ -20,7 +20,7 @@ TOPICS = [
         ("Arbetsgivaravgift", "/kalkylatorer/arbetsgivaravgift-kalkylator"),
         ("Traktamente", "/kalkylatorer/traktamentekalkylator"),
     ]),
-    ("Skatt & deklaration", "Återbäring, avdrag, marginalskatt", None, [
+    ("Skatt & deklaration", "Återbäring, avdrag, marginalskatt", "/skatt-och-deklaration", [
         ("Skatteåterbäring", "/kalkylatorer/skatteaterbarings-kalkylator"),
         ("Reseavdrag", "/kalkylatorer/reseavdragskalkylator"),
         ("Marginalskatt", "/kalkylatorer/marginalskattekalkylator"),
@@ -29,7 +29,7 @@ TOPICS = [
         ("Kapitalvinstskatt", "/kalkylatorer/kapitalvinstskatt"),
         ("Moms", "/kalkylatorer/momsraknare"),
     ]),
-    ("Boende & lån", "Bolån, amortering, budget", None, [
+    ("Boende & lån", "Bolån, amortering, budget", "/boende-och-lan", [
         ("Bolån – månadskostnad", "/kalkylatorer/bolanekalkylator"),
         ("Amorteringskrav", "/kalkylatorer/amorteringskalkylator"),
         ("Lån och privatlån", "/kalkylatorer/lanekalkylator"),
@@ -37,8 +37,8 @@ TOPICS = [
         ("Uthyrning av bostad", "/kalkylatorer/uthyrningskalkylator"),
         ("Hushållsbudget", "/kalkylatorer/hushallsbudget"),
     ]),
-    ("Bil & energi", "El, bil, leasing, solceller", None, [
-        ("Elkostnad – vad borde elen kosta?", "/kalkylatorer/elkostnadskalkylator"),
+    ("Bil & energi", "El, bil, leasing, solceller", "/bil-och-energi", [
+        ("Elkostnad och elavtal", "/kalkylatorer/elkostnadskalkylator"),
         ("Bilkostnad", "/kalkylatorer/bilkostnadsraknare"),
         ("Leasing", "/kalkylatorer/leasingkalkylator"),
         ("Förmånsbil", "/kalkylatorer/formansbilkalkylator"),
@@ -46,7 +46,7 @@ TOPICS = [
         ("Milersättning", "/kalkylatorer/milersattningskalkylator"),
         ("Solceller", "/kalkylatorer/solcellskalkylator"),
     ]),
-    ("Sparande & pension", "Ränta på ränta, pension, CSN", None, [
+    ("Sparande & pension", "Ränta på ränta, pension, CSN", "/sparande-och-pension", [
         ("Ränta på ränta", "/kalkylatorer/ranta-pa-ranta"),
         ("Sparande", "/kalkylatorer/sparkalkylator"),
         ("Pension", "/kalkylatorer/pensionskalkylator"),
@@ -56,7 +56,7 @@ TOPICS = [
         ("Inflation", "/kalkylatorer/inflationskalkylator"),
         ("CSN – studielån", "/kalkylatorer/csn-kalkylator"),
     ]),
-    ("Familj & trygghet", "Föräldrapenning, sjuk, a-kassa", None, [
+    ("Familj & trygghet", "Föräldrapenning, sjuk, a-kassa", "/familj-och-trygghet", [
         ("Föräldrapenning", "/kalkylatorer/foraldrapenning"),
         ("Barnbidrag", "/kalkylatorer/barnbidragskalkylator"),
         ("Sjukpenning", "/kalkylatorer/sjukpenningkalkylator"),
@@ -115,10 +115,10 @@ def head(title, description, path, og_title=None, jsonld=(), extra_head=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/search-dropdown.css">
-<link rel="stylesheet" href="/assets/gk.css?v=20260930">
+<link rel="stylesheet" href="/assets/gk.css?v=20260930b">
 <script defer src="/search-index.js"></script>
 <script defer src="/search-dropdown.js"></script>
-<script defer src="/assets/gk.js?v=20260930"></script>
+<script defer src="/assets/gk.js?v=20260930b"></script>
 {ld}
 {extra_head}
 </head>
@@ -129,9 +129,14 @@ def header():
     groups = []
     for i, (name, sub, hub, links) in enumerate(TOPICS):
         items = "".join(f'<li><a href="{u}">{e(t)}</a></li>' for t, u in links)
+        if hub:
+            items = f'<li class="gk-mg-hubli"><a href="{hub}"><strong>Allt om {e(name)} →</strong></a></li>' + items
+            title = f'<a class="gk-mg-title" href="{hub}">{e(name)}<small>{e(sub)}</small></a>'
+        else:
+            title = f'<span class="gk-mg-title">{e(name)}<small>{e(sub)}</small></span>'
         groups.append(
             f'<div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false">'
-            f'<span>{e(name)}<small>{e(sub)}</small></span>{ICON_CHEV}</button><ul>{items}</ul></div>'
+            f'<span>{e(name)}<small>{e(sub)}</small></span>{ICON_CHEV}</button>{title}<ul>{items}</ul></div>'
         )
     n_calc = sum(len([1 for t, u in l if "yrkeslon" not in u]) for _, _, _, l in TOPICS) - 1  # reseavdrag listas en gång
     return f"""<body class="gk2">

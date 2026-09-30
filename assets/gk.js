@@ -33,8 +33,13 @@
     set: function (k, v) {
       try {
         var a = this.all(); v.sparad = new Date().toISOString().slice(0, 10); a[k] = v;
-        localStorage.setItem(KEY, JSON.stringify(a)); return true;
+        localStorage.setItem(KEY, JSON.stringify(a));
+        if (typeof window.gtag === 'function') window.gtag('event', 'spara_min_ekonomi', { typ: k });
+        return true;
       } catch (e) { return false; }
+    },
+    clear: function () {
+      try { localStorage.removeItem(KEY); return true; } catch (e) { return false; }
     },
     remove: function (k) {
       try { var a = this.all(); delete a[k]; localStorage.setItem(KEY, JSON.stringify(a)); return true; } catch (e) { return false; }
