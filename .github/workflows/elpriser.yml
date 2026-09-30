@@ -1,0 +1,36 @@
+# Hämtar SCB:s nya elpriser varje månad och uppdaterar elkostnadssidan.
+# SCB publicerar runt den 23:e. Körs en gång per dag den 23–28 och gör
+# bara en commit om det finns nya, kontrollerade siffror.
+name: Uppdatera elpriser från SCB
+
+on:
+  schedule:
+    - cron: "20 7 23-28 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: elpriser
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hämta och kontrollera siffror
+        run: python3 scripts/update_elpriser.py
+      - name: Spara om något ändrats
+        run: |
+          if git diff --quiet; then
+            echo "Inget nytt."
+            exit 0
+          fi
+          git config user.name "gratiskalkyl-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/elpriser.json kalkylatorer/elkostnadskalkylator.html
+          git commit -m "Elpriser: nya siffror från SCB ($(python3 -c 'import json;print(json.load(open("data/elpriser.json"))["manader"][-1])'))"
+          git push

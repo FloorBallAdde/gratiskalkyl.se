@@ -95,8 +95,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Elkostnadskalkylator",
     "icon": "⚡",
     "category": "Fordon &amp; Energi",
-    "desc": "Beräkna din elkostnad utifrån förbrukning, elpris och nätavgift.",
-    "kw": "el elkostnad förbrukning kwh elpris elräkning energi"
+    "desc": "Vad borde elen kosta? Jämför ditt elpris med SCB:s snitt för nya avtal i ditt elområde.",
+    "kw": "el elkostnad förbrukning kwh elpris elräkning energi elavtal rörligt fast anvisat byta elavtal snittpris"
   },
   {
     "type": "kalkylator",
