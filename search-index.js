@@ -648,31 +648,13 @@ window.SITE_SEARCH_INDEX = [
     "kw": "vad är semesterlön? semesterlön vs semesterersättning — så räknar du ut och så fungerar lagen."
   },
   {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/sjukskoterska",
-    "title": "Lön sjuksköterska 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 38 000 kr/mån + nettolön och lönespann för sjuksköterska.",
-    "kw": "lön sjuksköterska 2026 vad tjänar en sjuksköterska snittlön nettolön bruttolön vård & omsorg"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/larare",
-    "title": "Lön lärare (grundskola) 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 38 500 kr/mån + nettolön och lönespann för lärare (grundskola).",
-    "kw": "lön lärare (grundskola) 2026 vad tjänar en lärare (grundskola) snittlön nettolön bruttolön utbildning"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/polis",
-    "title": "Lön polis 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 41 000 kr/mån + nettolön och lönespann för polis.",
-    "kw": "lön polis 2026 vad tjänar en polis snittlön nettolön bruttolön rättsväsende"
+    "type": "kalkylator",
+    "url": "/kalkylatorer/yrkeslon/",
+    "title": "Lön per yrke 2026 – 105 yrken",
+    "icon": "📋",
+    "category": "Jobb & Familj",
+    "desc": "Medianlön och nettolön för 105 yrken enligt SCB:s lönestatistik.",
+    "kw": "lön per yrke lönestatistik vad tjänar yrken medianlön scb lönelista"
   },
   {
     "type": "yrkeslon",
@@ -680,143 +662,107 @@ window.SITE_SEARCH_INDEX = [
     "title": "Lön undersköterska 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 30 500 kr/mån + nettolön och lönespann för undersköterska.",
-    "kw": "lön undersköterska 2026 vad tjänar en undersköterska snittlön nettolön bruttolön vård & omsorg"
+    "desc": "Medianlön 33 500 kr/mån + lön efter ålder, sektor och kön för undersköterska.",
+    "kw": "lön undersköterska 2026 vad tjänar en undersköterska medianlön snittlön nettolön ingångslön vård & omsorg"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/it-tekniker",
-    "title": "Lön it-tekniker 2026",
+    "url": "/kalkylatorer/yrkeslon/systemutvecklare",
+    "title": "Lön systemutvecklare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 41 000 kr/mån + nettolön och lönespann för it-tekniker.",
-    "kw": "lön it-tekniker 2026 vad tjänar en it-tekniker snittlön nettolön bruttolön it & teknik"
+    "desc": "Medianlön 53 500 kr/mån + lön efter ålder, sektor och kön för systemutvecklare.",
+    "kw": "lön systemutvecklare 2026 vad tjänar en systemutvecklare medianlön snittlön nettolön ingångslön it & teknik"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/snickare",
-    "title": "Lön snickare 2026",
+    "url": "/kalkylatorer/yrkeslon/larare",
+    "title": "Lön grundskollärare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 33 000 kr/mån + nettolön och lönespann för snickare.",
-    "kw": "lön snickare 2026 vad tjänar en snickare snittlön nettolön bruttolön bygg & hantverk"
+    "desc": "Medianlön 42 100 kr/mån + lön efter ålder, sektor och kön för grundskollärare.",
+    "kw": "lön grundskollärare 2026 vad tjänar en grundskollärare medianlön snittlön nettolön ingångslön utbildning"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/civilingenjor",
-    "title": "Lön civilingenjör 2026",
+    "url": "/kalkylatorer/yrkeslon/butikssaljare",
+    "title": "Lön butikssäljare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 51 000 kr/mån + nettolön och lönespann för civilingenjör.",
-    "kw": "lön civilingenjör 2026 vad tjänar en civilingenjör snittlön nettolön bruttolön ingenjör & teknik"
+    "desc": "Medianlön 33 000 kr/mån + lön efter ålder, sektor och kön för butikssäljare.",
+    "kw": "lön butikssäljare 2026 vad tjänar en butikssäljare medianlön snittlön nettolön ingångslön handel & service"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/lakare",
-    "title": "Lön läkare (allmänläkare) 2026",
+    "url": "/kalkylatorer/yrkeslon/lagerarbetare",
+    "title": "Lön lagerarbetare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 70 000 kr/mån + nettolön och lönespann för läkare (allmänläkare).",
-    "kw": "lön läkare (allmänläkare) 2026 vad tjänar en läkare (allmänläkare) snittlön nettolön bruttolön vård & omsorg"
+    "desc": "Medianlön 33 400 kr/mån + lön efter ålder, sektor och kön för lagerarbetare.",
+    "kw": "lön lagerarbetare 2026 vad tjänar en lagerarbetare medianlön snittlön nettolön ingångslön transport & lager"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/ekonom",
-    "title": "Lön ekonom 2026",
+    "url": "/kalkylatorer/yrkeslon/stadare",
+    "title": "Lön städare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 47 000 kr/mån + nettolön och lönespann för ekonom.",
-    "kw": "lön ekonom 2026 vad tjänar en ekonom snittlön nettolön bruttolön ekonomi & finans"
+    "desc": "Medianlön 28 500 kr/mån + lön efter ålder, sektor och kön för städare.",
+    "kw": "lön städare 2026 vad tjänar en städare medianlön snittlön nettolön ingångslön handel & service"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/jurist",
-    "title": "Lön jurist 2026",
+    "url": "/kalkylatorer/yrkeslon/vardbitrade",
+    "title": "Lön vårdbiträde 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 56 000 kr/mån + nettolön och lönespann för jurist.",
-    "kw": "lön jurist 2026 vad tjänar en jurist snittlön nettolön bruttolön juridik"
+    "desc": "Medianlön 29 100 kr/mån + lön efter ålder, sektor och kön för vårdbiträde.",
+    "kw": "lön vårdbiträde 2026 vad tjänar en vårdbiträde medianlön snittlön nettolön ingångslön vård & omsorg"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/tandlakare",
-    "title": "Lön tandläkare 2026",
+    "url": "/kalkylatorer/yrkeslon/kokbitrade",
+    "title": "Lön restaurang- och köksbiträde 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 64 000 kr/mån + nettolön och lönespann för tandläkare.",
-    "kw": "lön tandläkare 2026 vad tjänar en tandläkare snittlön nettolön bruttolön vård & omsorg"
+    "desc": "Medianlön 28 300 kr/mån + lön efter ålder, sektor och kön för restaurang- och köksbiträde.",
+    "kw": "lön restaurang- och köksbiträde 2026 vad tjänar en restaurang- och köksbiträde medianlön snittlön nettolön ingångslön hotell & restaurang"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/forskollarare",
-    "title": "Lön förskollärare 2026",
+    "url": "/kalkylatorer/yrkeslon/butikssaljare-dagligvaror",
+    "title": "Lön butikssäljare i dagligvaruhandeln 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 33 000 kr/mån + nettolön och lönespann för förskollärare.",
-    "kw": "lön förskollärare 2026 vad tjänar en förskollärare snittlön nettolön bruttolön utbildning"
+    "desc": "Medianlön 32 700 kr/mån + lön efter ålder, sektor och kön för butikssäljare i dagligvaruhandeln.",
+    "kw": "lön butikssäljare i dagligvaruhandeln 2026 vad tjänar en butikssäljare i dagligvaruhandeln medianlön snittlön nettolön ingångslön handel & service"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/elektriker",
-    "title": "Lön elektriker 2026",
+    "url": "/kalkylatorer/yrkeslon/boendestodjare",
+    "title": "Lön boendestödjare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 35 500 kr/mån + nettolön och lönespann för elektriker.",
-    "kw": "lön elektriker 2026 vad tjänar en elektriker snittlön nettolön bruttolön bygg & hantverk"
+    "desc": "Medianlön 33 100 kr/mån + lön efter ålder, sektor och kön för boendestödjare.",
+    "kw": "lön boendestödjare 2026 vad tjänar en boendestödjare medianlön snittlön nettolön ingångslön vård & omsorg"
   },
   {
     "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/byggnadsarbetare",
-    "title": "Lön byggnadsarbetare 2026",
+    "url": "/kalkylatorer/yrkeslon/barnskotare",
+    "title": "Lön barnskötare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 33 500 kr/mån + nettolön och lönespann för byggnadsarbetare.",
-    "kw": "lön byggnadsarbetare 2026 vad tjänar en byggnadsarbetare snittlön nettolön bruttolön bygg & hantverk"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/frisor",
-    "title": "Lön frisör 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 27 500 kr/mån + nettolön och lönespann för frisör.",
-    "kw": "lön frisör 2026 vad tjänar en frisör snittlön nettolön bruttolön service"
+    "desc": "Medianlön 28 100 kr/mån + lön efter ålder, sektor och kön för barnskötare.",
+    "kw": "lön barnskötare 2026 vad tjänar en barnskötare medianlön snittlön nettolön ingångslön utbildning"
   },
   {
     "type": "yrkeslon",
     "url": "/kalkylatorer/yrkeslon/saljare",
-    "title": "Lön säljare 2026",
+    "title": "Lön företagssäljare 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 36 000 kr/mån + nettolön och lönespann för säljare.",
-    "kw": "lön säljare 2026 vad tjänar en säljare snittlön nettolön bruttolön försäljning"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/sakerhetsvakt",
-    "title": "Lön säkerhetsvakt 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 28 000 kr/mån + nettolön och lönespann för säkerhetsvakt.",
-    "kw": "lön säkerhetsvakt 2026 vad tjänar en säkerhetsvakt snittlön nettolön bruttolön säkerhet"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/brandman",
-    "title": "Lön brandman 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 33 000 kr/mån + nettolön och lönespann för brandman.",
-    "kw": "lön brandman 2026 vad tjänar en brandman snittlön nettolön bruttolön rättsväsende"
-  },
-  {
-    "type": "yrkeslon",
-    "url": "/kalkylatorer/yrkeslon/socionom",
-    "title": "Lön socionom 2026",
-    "icon": "💼",
-    "category": "Yrkeslön",
-    "desc": "Snittlön 36 500 kr/mån + nettolön och lönespann för socionom.",
-    "kw": "lön socionom 2026 vad tjänar en socionom snittlön nettolön bruttolön vård & omsorg"
+    "desc": "Medianlön 50 300 kr/mån + lön efter ålder, sektor och kön för företagssäljare.",
+    "kw": "lön företagssäljare 2026 vad tjänar en företagssäljare medianlön snittlön nettolön ingångslön försäljning & marknad"
   },
   {
     "type": "yrkeslon",
@@ -824,7 +770,835 @@ window.SITE_SEARCH_INDEX = [
     "title": "Lön personlig assistent 2026",
     "icon": "💼",
     "category": "Yrkeslön",
-    "desc": "Snittlön 26 500 kr/mån + nettolön och lönespann för personlig assistent.",
-    "kw": "lön personlig assistent 2026 vad tjänar en personlig assistent snittlön nettolön bruttolön vård & omsorg"
+    "desc": "Medianlön 31 900 kr/mån + lön efter ålder, sektor och kön för personlig assistent.",
+    "kw": "lön personlig assistent 2026 vad tjänar en personlig assistent medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/utredare",
+    "title": "Lön utredare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 46 100 kr/mån + lön efter ålder, sektor och kön för utredare.",
+    "kw": "lön utredare 2026 vad tjänar en utredare medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kontorsassistent",
+    "title": "Lön kontorsassistent 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 900 kr/mån + lön efter ålder, sektor och kön för kontorsassistent.",
+    "kw": "lön kontorsassistent 2026 vad tjänar en kontorsassistent medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/lastbilsforare",
+    "title": "Lön lastbilschaufför 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 33 900 kr/mån + lön efter ålder, sektor och kön för lastbilschaufför.",
+    "kw": "lön lastbilschaufför 2026 vad tjänar en lastbilschaufför medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/forskollarare",
+    "title": "Lön förskollärare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 37 800 kr/mån + lön efter ålder, sektor och kön för förskollärare.",
+    "kw": "lön förskollärare 2026 vad tjänar en förskollärare medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/sjukskoterska",
+    "title": "Lön sjuksköterska 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 42 900 kr/mån + lön efter ålder, sektor och kön för sjuksköterska.",
+    "kw": "lön sjuksköterska 2026 vad tjänar en sjuksköterska medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/cnc-operator",
+    "title": "Lön CNC-operatör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 300 kr/mån + lön efter ålder, sektor och kön för CNC-operatör.",
+    "kw": "lön cnc-operatör 2026 vad tjänar en cnc-operatör medianlön snittlön nettolön ingångslön industri & produktion"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/snickare",
+    "title": "Lön snickare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 300 kr/mån + lön efter ålder, sektor och kön för snickare.",
+    "kw": "lön snickare 2026 vad tjänar en snickare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/organisationsutvecklare",
+    "title": "Lön organisationsutvecklare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 53 700 kr/mån + lön efter ålder, sektor och kön för organisationsutvecklare.",
+    "kw": "lön organisationsutvecklare 2026 vad tjänar en organisationsutvecklare medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/elektriker",
+    "title": "Lön elektriker 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 000 kr/mån + lön efter ålder, sektor och kön för elektriker.",
+    "kw": "lön elektriker 2026 vad tjänar en elektriker medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kock",
+    "title": "Lön kock 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 32 200 kr/mån + lön efter ålder, sektor och kön för kock.",
+    "kw": "lön kock 2026 vad tjänar en kock medianlön snittlön nettolön ingångslön hotell & restaurang"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/civilingenjor-elektroteknik",
+    "title": "Lön civilingenjör inom elektroteknik 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 54 200 kr/mån + lön efter ålder, sektor och kön för civilingenjör inom elektroteknik.",
+    "kw": "lön civilingenjör inom elektroteknik 2026 vad tjänar en civilingenjör inom elektroteknik medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/elevassistent",
+    "title": "Lön elevassistent 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 29 000 kr/mån + lön efter ålder, sektor och kön för elevassistent.",
+    "kw": "lön elevassistent 2026 vad tjänar en elevassistent medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/servitor",
+    "title": "Lön servitör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 30 200 kr/mån + lön efter ålder, sektor och kön för servitör.",
+    "kw": "lön servitör 2026 vad tjänar en servitör medianlön snittlön nettolön ingångslön hotell & restaurang"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/civilingenjor",
+    "title": "Lön civilingenjör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 56 600 kr/mån + lön efter ålder, sektor och kön för civilingenjör.",
+    "kw": "lön civilingenjör 2026 vad tjänar en civilingenjör medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/bilmekaniker",
+    "title": "Lön bilmekaniker 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 000 kr/mån + lön efter ålder, sektor och kön för bilmekaniker.",
+    "kw": "lön bilmekaniker 2026 vad tjänar en bilmekaniker medianlön snittlön nettolön ingångslön industri & produktion"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/fastighetsskotare",
+    "title": "Lön fastighetsskötare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 33 300 kr/mån + lön efter ålder, sektor och kön för fastighetsskötare.",
+    "kw": "lön fastighetsskötare 2026 vad tjänar en fastighetsskötare medianlön snittlön nettolön ingångslön handel & service"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/redovisningsekonom",
+    "title": "Lön redovisningsekonom 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 44 600 kr/mån + lön efter ålder, sektor och kön för redovisningsekonom.",
+    "kw": "lön redovisningsekonom 2026 vad tjänar en redovisningsekonom medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/ekonomiassistent",
+    "title": "Lön ekonomiassistent 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 37 500 kr/mån + lön efter ålder, sektor och kön för ekonomiassistent.",
+    "kw": "lön ekonomiassistent 2026 vad tjänar en ekonomiassistent medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/vd",
+    "title": "Lön VD 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 68 400 kr/mån + lön efter ålder, sektor och kön för VD.",
+    "kw": "lön vd 2026 vad tjänar en vd medianlön snittlön nettolön ingångslön chefer"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/it-arkitekt",
+    "title": "Lön IT-arkitekt 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 56 200 kr/mån + lön efter ålder, sektor och kön för IT-arkitekt.",
+    "kw": "lön it-arkitekt 2026 vad tjänar en it-arkitekt medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/underhallsmekaniker",
+    "title": "Lön underhållsmekaniker 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 000 kr/mån + lön efter ålder, sektor och kön för underhållsmekaniker.",
+    "kw": "lön underhållsmekaniker 2026 vad tjänar en underhållsmekaniker medianlön snittlön nettolön ingångslön industri & produktion"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/lakare",
+    "title": "Lön specialistläkare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 96 800 kr/mån + lön efter ålder, sektor och kön för specialistläkare.",
+    "kw": "lön specialistläkare 2026 vad tjänar en specialistläkare medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kundtjanst",
+    "title": "Lön kundtjänstmedarbetare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 32 000 kr/mån + lön efter ålder, sektor och kön för kundtjänstmedarbetare.",
+    "kw": "lön kundtjänstmedarbetare 2026 vad tjänar en kundtjänstmedarbetare medianlön snittlön nettolön ingångslön handel & service"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/gymnasielarare",
+    "title": "Lön gymnasielärare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 44 200 kr/mån + lön efter ålder, sektor och kön för gymnasielärare.",
+    "kw": "lön gymnasielärare 2026 vad tjänar en gymnasielärare medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/marknadsforare",
+    "title": "Lön marknadsförare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 53 000 kr/mån + lön efter ålder, sektor och kön för marknadsförare.",
+    "kw": "lön marknadsförare 2026 vad tjänar en marknadsförare medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/socionom",
+    "title": "Lön socialsekreterare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 41 200 kr/mån + lön efter ålder, sektor och kön för socialsekreterare.",
+    "kw": "lön socialsekreterare 2026 vad tjänar en socialsekreterare medianlön snittlön nettolön ingångslön socialt arbete"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/hr-specialist",
+    "title": "Lön HR-specialist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 48 500 kr/mån + lön efter ålder, sektor och kön för HR-specialist.",
+    "kw": "lön hr-specialist 2026 vad tjänar en hr-specialist medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/byggingenjor",
+    "title": "Lön byggingenjör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 49 400 kr/mån + lön efter ålder, sektor och kön för byggingenjör.",
+    "kw": "lön byggingenjör 2026 vad tjänar en byggingenjör medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/elingenjor",
+    "title": "Lön elingenjör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 49 500 kr/mån + lön efter ålder, sektor och kön för elingenjör.",
+    "kw": "lön elingenjör 2026 vad tjänar en elingenjör medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/maskiningenjor",
+    "title": "Lön maskiningenjör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 45 500 kr/mån + lön efter ålder, sektor och kön för maskiningenjör.",
+    "kw": "lön maskiningenjör 2026 vad tjänar en maskiningenjör medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/busschauffor",
+    "title": "Lön busschaufför 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 33 200 kr/mån + lön efter ålder, sektor och kön för busschaufför.",
+    "kw": "lön busschaufför 2026 vad tjänar en busschaufför medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/inkopare",
+    "title": "Lön inköpare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 49 200 kr/mån + lön efter ålder, sektor och kön för inköpare.",
+    "kw": "lön inköpare 2026 vad tjänar en inköpare medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/civilingenjor-maskinteknik",
+    "title": "Lön civilingenjör inom maskinteknik 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 51 800 kr/mån + lön efter ålder, sektor och kön för civilingenjör inom maskinteknik.",
+    "kw": "lön civilingenjör inom maskinteknik 2026 vad tjänar en civilingenjör inom maskinteknik medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/banktjansteman",
+    "title": "Lön banktjänsteman 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 43 700 kr/mån + lön efter ålder, sektor och kön för banktjänsteman.",
+    "kw": "lön banktjänsteman 2026 vad tjänar en banktjänsteman medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kommunikator",
+    "title": "Lön kommunikatör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 46 000 kr/mån + lön efter ålder, sektor och kön för kommunikatör.",
+    "kw": "lön kommunikatör 2026 vad tjänar en kommunikatör medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/controller",
+    "title": "Lön controller 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 55 100 kr/mån + lön efter ålder, sektor och kön för controller.",
+    "kw": "lön controller 2026 vad tjänar en controller medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/sakerhetsvakt",
+    "title": "Lön väktare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 000 kr/mån + lön efter ålder, sektor och kön för väktare.",
+    "kw": "lön väktare 2026 vad tjänar en väktare medianlön snittlön nettolön ingångslön säkerhet"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/polis",
+    "title": "Lön polis 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 43 300 kr/mån + lön efter ålder, sektor och kön för polis.",
+    "kw": "lön polis 2026 vad tjänar en polis medianlön snittlön nettolön ingångslön säkerhet"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/anlaggningsmaskinforare",
+    "title": "Lön anläggningsmaskinförare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 800 kr/mån + lön efter ålder, sektor och kön för anläggningsmaskinförare.",
+    "kw": "lön anläggningsmaskinförare 2026 vad tjänar en anläggningsmaskinförare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/ordersamordnare",
+    "title": "Lön ordersamordnare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 38 800 kr/mån + lön efter ålder, sektor och kön för ordersamordnare.",
+    "kw": "lön ordersamordnare 2026 vad tjänar en ordersamordnare medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/tradgardsanlaggare",
+    "title": "Lön trädgårdsanläggare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 31 000 kr/mån + lön efter ålder, sektor och kön för trädgårdsanläggare.",
+    "kw": "lön trädgårdsanläggare 2026 vad tjänar en trädgårdsanläggare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/forsaljningschef",
+    "title": "Lön försäljningschef 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 71 000 kr/mån + lön efter ålder, sektor och kön för försäljningschef.",
+    "kw": "lön försäljningschef 2026 vad tjänar en försäljningschef medianlön snittlön nettolön ingångslön chefer"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/medicinsk-sekreterare",
+    "title": "Lön medicinsk sekreterare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 32 400 kr/mån + lön efter ålder, sektor och kön för medicinsk sekreterare.",
+    "kw": "lön medicinsk sekreterare 2026 vad tjänar en medicinsk sekreterare medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/skotare",
+    "title": "Lön skötare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 34 000 kr/mån + lön efter ålder, sektor och kön för skötare.",
+    "kw": "lön skötare 2026 vad tjänar en skötare medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/fritidspedagog",
+    "title": "Lön fritidspedagog 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 36 600 kr/mån + lön efter ålder, sektor och kön för fritidspedagog.",
+    "kw": "lön fritidspedagog 2026 vad tjänar en fritidspedagog medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/anlaggningsarbetare",
+    "title": "Lön anläggningsarbetare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 200 kr/mån + lön efter ålder, sektor och kön för anläggningsarbetare.",
+    "kw": "lön anläggningsarbetare 2026 vad tjänar en anläggningsarbetare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/idrottstranare",
+    "title": "Lön idrottstränare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 33 900 kr/mån + lön efter ålder, sektor och kön för idrottstränare.",
+    "kw": "lön idrottstränare 2026 vad tjänar en idrottstränare medianlön snittlön nettolön ingångslön socialt arbete"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/behandlingsassistent",
+    "title": "Lön behandlingsassistent 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 36 700 kr/mån + lön efter ålder, sektor och kön för behandlingsassistent.",
+    "kw": "lön behandlingsassistent 2026 vad tjänar en behandlingsassistent medianlön snittlön nettolön ingångslön socialt arbete"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/arbetsledare-bygg",
+    "title": "Lön arbetsledare inom bygg 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 50 400 kr/mån + lön efter ålder, sektor och kön för arbetsledare inom bygg.",
+    "kw": "lön arbetsledare inom bygg 2026 vad tjänar en arbetsledare inom bygg medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/it-tekniker",
+    "title": "Lön IT-tekniker 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 38 500 kr/mån + lön efter ålder, sektor och kön för IT-tekniker.",
+    "kw": "lön it-tekniker 2026 vad tjänar en it-tekniker medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/specialpedagog",
+    "title": "Lön specialpedagog 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 47 800 kr/mån + lön efter ålder, sektor och kön för specialpedagog.",
+    "kw": "lön specialpedagog 2026 vad tjänar en specialpedagog medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/fritidsledare",
+    "title": "Lön fritidsledare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 32 600 kr/mån + lön efter ålder, sektor och kön för fritidsledare.",
+    "kw": "lön fritidsledare 2026 vad tjänar en fritidsledare medianlön snittlön nettolön ingångslön socialt arbete"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/loneadministrator",
+    "title": "Lön löneadministratör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 38 500 kr/mån + lön efter ålder, sektor och kön för löneadministratör.",
+    "kw": "lön löneadministratör 2026 vad tjänar en löneadministratör medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/civilingenjor-bygg",
+    "title": "Lön civilingenjör inom bygg och anläggning 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 51 300 kr/mån + lön efter ålder, sektor och kön för civilingenjör inom bygg och anläggning.",
+    "kw": "lön civilingenjör inom bygg och anläggning 2026 vad tjänar en civilingenjör inom bygg och anläggning medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/drifttekniker-it",
+    "title": "Lön drifttekniker inom IT 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 42 500 kr/mån + lön efter ålder, sektor och kön för drifttekniker inom IT.",
+    "kw": "lön drifttekniker inom it 2026 vad tjänar en drifttekniker inom it medianlön snittlön nettolön ingångslön it & teknik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/revisor",
+    "title": "Lön revisor 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 47 600 kr/mån + lön efter ålder, sektor och kön för revisor.",
+    "kw": "lön revisor 2026 vad tjänar en revisor medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/fysioterapeut",
+    "title": "Lön fysioterapeut (sjukgymnast) 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 000 kr/mån + lön efter ålder, sektor och kön för fysioterapeut (sjukgymnast).",
+    "kw": "lön fysioterapeut (sjukgymnast) 2026 vad tjänar en fysioterapeut (sjukgymnast) medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/ekonomichef",
+    "title": "Lön ekonomichef 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 65 000 kr/mån + lön efter ålder, sektor och kön för ekonomichef.",
+    "kw": "lön ekonomichef 2026 vad tjänar en ekonomichef medianlön snittlön nettolön ingångslön chefer"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/hotellreceptionist",
+    "title": "Lön hotellreceptionist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 30 200 kr/mån + lön efter ålder, sektor och kön för hotellreceptionist.",
+    "kw": "lön hotellreceptionist 2026 vad tjänar en hotellreceptionist medianlön snittlön nettolön ingångslön hotell & restaurang"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/universitetslektor",
+    "title": "Lön universitetslektor 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 55 500 kr/mån + lön efter ålder, sektor och kön för universitetslektor.",
+    "kw": "lön universitetslektor 2026 vad tjänar en universitetslektor medianlön snittlön nettolön ingångslön utbildning"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/rektor",
+    "title": "Lön rektor 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 60 200 kr/mån + lön efter ålder, sektor och kön för rektor.",
+    "kw": "lön rektor 2026 vad tjänar en rektor medianlön snittlön nettolön ingångslön chefer"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/psykolog",
+    "title": "Lön psykolog 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 48 400 kr/mån + lön efter ålder, sektor och kön för psykolog.",
+    "kw": "lön psykolog 2026 vad tjänar en psykolog medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/betongarbetare",
+    "title": "Lön betongarbetare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 000 kr/mån + lön efter ålder, sektor och kön för betongarbetare.",
+    "kw": "lön betongarbetare 2026 vad tjänar en betongarbetare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/forsakringsradgivare",
+    "title": "Lön försäkringsrådgivare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 48 400 kr/mån + lön efter ålder, sektor och kön för försäkringsrådgivare.",
+    "kw": "lön försäkringsrådgivare 2026 vad tjänar en försäkringsrådgivare medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/tandskoterska",
+    "title": "Lön tandsköterska 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 33 300 kr/mån + lön efter ålder, sektor och kön för tandsköterska.",
+    "kw": "lön tandsköterska 2026 vad tjänar en tandsköterska medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kriminalvardare",
+    "title": "Lön kriminalvårdare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 34 900 kr/mån + lön efter ålder, sektor och kön för kriminalvårdare.",
+    "kw": "lön kriminalvårdare 2026 vad tjänar en kriminalvårdare medianlön snittlön nettolön ingångslön säkerhet"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/ekonom",
+    "title": "Lön ekonom 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 52 000 kr/mån + lön efter ålder, sektor och kön för ekonom.",
+    "kw": "lön ekonom 2026 vad tjänar en ekonom medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/kurator",
+    "title": "Lön kurator 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 41 400 kr/mån + lön efter ålder, sektor och kön för kurator.",
+    "kw": "lön kurator 2026 vad tjänar en kurator medianlön snittlön nettolön ingångslön socialt arbete"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/brevbarare",
+    "title": "Lön brevbärare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 29 500 kr/mån + lön efter ålder, sektor och kön för brevbärare.",
+    "kw": "lön brevbärare 2026 vad tjänar en brevbärare medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/finansanalytiker",
+    "title": "Lön finansanalytiker 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 67 400 kr/mån + lön efter ålder, sektor och kön för finansanalytiker.",
+    "kw": "lön finansanalytiker 2026 vad tjänar en finansanalytiker medianlön snittlön nettolön ingångslön administration & ekonomi"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/truckforare",
+    "title": "Lön truckförare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 36 400 kr/mån + lön efter ålder, sektor och kön för truckförare.",
+    "kw": "lön truckförare 2026 vad tjänar en truckförare medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/svetsare",
+    "title": "Lön svetsare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 35 500 kr/mån + lön efter ålder, sektor och kön för svetsare.",
+    "kw": "lön svetsare 2026 vad tjänar en svetsare medianlön snittlön nettolön ingångslön industri & produktion"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/it-chef",
+    "title": "Lön IT-chef 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 71 700 kr/mån + lön efter ålder, sektor och kön för IT-chef.",
+    "kw": "lön it-chef 2026 vad tjänar en it-chef medianlön snittlön nettolön ingångslön chefer"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/st-lakare",
+    "title": "Lön ST-läkare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 56 300 kr/mån + lön efter ålder, sektor och kön för ST-läkare.",
+    "kw": "lön st-läkare 2026 vad tjänar en st-läkare medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/journalist",
+    "title": "Lön journalist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 43 700 kr/mån + lön efter ålder, sektor och kön för journalist.",
+    "kw": "lön journalist 2026 vad tjänar en journalist medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/advokat",
+    "title": "Lön advokat 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 66 000 kr/mån + lön efter ålder, sektor och kön för advokat.",
+    "kw": "lön advokat 2026 vad tjänar en advokat medianlön snittlön nettolön ingångslön juridik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/jurist",
+    "title": "Lön jurist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 46 800 kr/mån + lön efter ålder, sektor och kön för jurist.",
+    "kw": "lön jurist 2026 vad tjänar en jurist medianlön snittlön nettolön ingångslön juridik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/bolagsjurist",
+    "title": "Lön bolagsjurist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 67 800 kr/mån + lön efter ålder, sektor och kön för bolagsjurist.",
+    "kw": "lön bolagsjurist 2026 vad tjänar en bolagsjurist medianlön snittlön nettolön ingångslön juridik"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/tandlakare",
+    "title": "Lön tandläkare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 53 600 kr/mån + lön efter ålder, sektor och kön för tandläkare.",
+    "kw": "lön tandläkare 2026 vad tjänar en tandläkare medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/brandman",
+    "title": "Lön brandman 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 37 600 kr/mån + lön efter ålder, sektor och kön för brandman.",
+    "kw": "lön brandman 2026 vad tjänar en brandman medianlön snittlön nettolön ingångslön säkerhet"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/frisor",
+    "title": "Lön frisör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 32 900 kr/mån + lön efter ålder, sektor och kön för frisör.",
+    "kw": "lön frisör 2026 vad tjänar en frisör medianlön snittlön nettolön ingångslön handel & service"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/byggnadsarbetare",
+    "title": "Lön byggnadsarbetare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 40 000 kr/mån + lön efter ålder, sektor och kön för byggnadsarbetare.",
+    "kw": "lön byggnadsarbetare 2026 vad tjänar en byggnadsarbetare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/veterinar",
+    "title": "Lön veterinär 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 53 000 kr/mån + lön efter ålder, sektor och kön för veterinär.",
+    "kw": "lön veterinär 2026 vad tjänar en veterinär medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/barnmorska",
+    "title": "Lön barnmorska 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 48 300 kr/mån + lön efter ålder, sektor och kön för barnmorska.",
+    "kw": "lön barnmorska 2026 vad tjänar en barnmorska medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/arbetsterapeut",
+    "title": "Lön arbetsterapeut 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 39 700 kr/mån + lön efter ålder, sektor och kön för arbetsterapeut.",
+    "kw": "lön arbetsterapeut 2026 vad tjänar en arbetsterapeut medianlön snittlön nettolön ingångslön vård & omsorg"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/fastighetsmaklare",
+    "title": "Lön fastighetsmäklare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 45 000 kr/mån + lön efter ålder, sektor och kön för fastighetsmäklare.",
+    "kw": "lön fastighetsmäklare 2026 vad tjänar en fastighetsmäklare medianlön snittlön nettolön ingångslön försäljning & marknad"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/lokforare",
+    "title": "Lön lokförare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 45 500 kr/mån + lön efter ålder, sektor och kön för lokförare.",
+    "kw": "lön lokförare 2026 vad tjänar en lokförare medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/vvs-montor",
+    "title": "Lön VVS-montör 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 42 700 kr/mån + lön efter ålder, sektor och kön för VVS-montör.",
+    "kw": "lön vvs-montör 2026 vad tjänar en vvs-montör medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/malare",
+    "title": "Lön målare 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 37 900 kr/mån + lön efter ålder, sektor och kön för målare.",
+    "kw": "lön målare 2026 vad tjänar en målare medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/arkitekt",
+    "title": "Lön arkitekt 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 50 300 kr/mån + lön efter ålder, sektor och kön för arkitekt.",
+    "kw": "lön arkitekt 2026 vad tjänar en arkitekt medianlön snittlön nettolön ingångslön bygg & hantverk"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/pilot",
+    "title": "Lön pilot 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 70 700 kr/mån + lön efter ålder, sektor och kön för pilot.",
+    "kw": "lön pilot 2026 vad tjänar en pilot medianlön snittlön nettolön ingångslön transport & lager"
+  },
+  {
+    "type": "yrkeslon",
+    "url": "/kalkylatorer/yrkeslon/it-sakerhetsspecialist",
+    "title": "Lön IT-säkerhetsspecialist 2026",
+    "icon": "💼",
+    "category": "Yrkeslön",
+    "desc": "Medianlön 54 900 kr/mån + lön efter ålder, sektor och kön för IT-säkerhetsspecialist.",
+    "kw": "lön it-säkerhetsspecialist 2026 vad tjänar en it-säkerhetsspecialist medianlön snittlön nettolön ingångslön it & teknik"
   }
 ];
