@@ -217,6 +217,15 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "kalkylator",
+    "url": "/kalkylatorer/loneforhandling",
+    "title": "Löneförhandling – vad ska du begära?",
+    "icon": "💰",
+    "category": "Jobb & Familj",
+    "desc": "Jämför din lön med 396 yrken (SCB 2025) och få lönekrav, första bud och argument till lönesamtalet.",
+    "kw": "löneförhandling lönesamtal lönekrav begära lön löneökning lönerevision marknadslön medianlön yrke percentil märket"
+  },
+  {
+    "type": "kalkylator",
     "url": "/kalkylatorer/lonevaxling-kalkylator",
     "title": "Löneväxlingskalkylator",
     "icon": "🔄",
