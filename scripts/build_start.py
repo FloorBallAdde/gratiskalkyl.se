@@ -100,7 +100,7 @@ def page():
 <div class="gk-src">{S.ICON_CHECK}<span>Källor: SCB, Skatteverket, Försäkringskassan och Energimyndigheten</span></div>
 </div>
 <div class="gk-stack" style="gap:10px">
-<h2 style="font-family:var(--gk-font);font-size:16px;font-weight:700;color:var(--gk-muted)">Mest använda just nu</h2>
+<h2 style="font-family:var(--gk-font);font-size:16px;font-weight:700;color:var(--gk-muted)">Mest använda</h2>
 <ul class="gk-rank">{popular}</ul>
 </div>
 </div>
@@ -143,7 +143,7 @@ def page():
 <div class="gk-sec-head"><div><h2 id="h-lofte">Vårt löfte</h2></div></div>
 <div class="gk-promise">
 <div><strong>Oberoende</strong><span>Vi säljer inga finansiella produkter. Annonser och märkta samarbetslänkar påverkar aldrig uträkningarna.</span></div>
-<div><strong>Dina siffror stannar hos dig</strong><span>Allt räknas i din webbläsare. Ingen inloggning och ingen datainsamling.</span></div>
+<div><strong>Dina siffror stannar hos dig</strong><span>Allt räknas i din webbläsare och vi sparar aldrig det du fyller i. Ingen inloggning. Vi använder Google Analytics för anonym besöksstatistik.</span></div>
 <div><strong>Officiella källor</strong><span>Regler och siffror från SCB, Skatteverket, Försäkringskassan och Energimyndigheten – med källa och datum.</span></div>
 </div>
 </section>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,40 +34,25 @@
     <meta name="twitter:title" content="ROT & RUT-kalkylator 2026 – Räkna ut ditt avdrag">
     <meta name="twitter:description" content="Beräkna ditt ROT- eller RUT-avdrag för 2026. Se hur mycket du sparar på renovering och hushållstjänster.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -313,11 +299,11 @@
             .toggle-btn { padding: 12px 8px; font-size: 0.9rem; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
@@ -412,28 +398,46 @@
     }
     </script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut" style="color:var(--primary);">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / ROT & RUT-kalkylator</div>
             <h1>ROT & RUT-kalkylator 2026</h1>
@@ -524,7 +528,7 @@
 
         <!-- Info Section -->
         <div class="info-section">
-            <p style="margin:0 0 16px;padding:12px 16px;background:var(--primary-light,#ecfdf5);border-radius:8px;">📖 Inför deklarationen 2027: <a href="/artiklar/deklaration-2027" style="color:var(--primary);font-weight:600;">Deklaration 2027 – datum och nyheter</a> · <a href="/artiklar/skatteaterbaring-2027" style="color:var(--primary);font-weight:600;">När kommer skatteåterbäringen 2027?</a></p>
+            <p style="margin:0 0 16px;padding:12px 16px;background:var(--primary-light,#E4F1EA);border-radius:8px;">📖 Inför deklarationen 2027: <a href="/artiklar/deklaration-2027" style="color:var(--primary);font-weight:600;">Deklaration 2027 – datum och nyheter</a> · <a href="/artiklar/skatteaterbaring-2027" style="color:var(--primary);font-weight:600;">När kommer skatteåterbäringen 2027?</a></p>
             <h2>ROT- och RUT-avdrag 2026 – allt du behöver veta</h2>
             <p>ROT- och RUT-avdraget är två av Sveriges mest använda skatteregler för privatpersoner. Tillsammans ger de dig möjlighet att få tillbaka upp till <strong>75 000 kronor per person och år</strong> på arbetskostnader för hem- och hushållstjänster. Känner du till alla regler? Här går vi igenom allt från takregler och procentsatser till exakt vilka tjänster som godkänns.</p>
 
@@ -535,7 +539,7 @@
                 <li>Målning och tapetsering av väggar, tak och fasad</li>
                 <li>Installation eller byte av kök och badrum</li>
                 <li>Takbyten och takrenoveringar</li>
-                <li>El-arbeten, VVS och installation av bergvärme eller solceller</li>
+                <li>El-arbeten, VVS och installation av bergvärme (solceller ger i stället skattereduktion för grön teknik, se nedan)</li>
                 <li>Fönster- och dörrbyte</li>
                 <li>Dräneringsarbeten och markarbeten runt bostaden</li>
                 <li>Inglasning av balkong eller veranda</li>
@@ -553,14 +557,14 @@
                 <li>Trädgårdsarbete (gräsklippning, häckklippning, snöskottning)</li>
                 <li>Tvätt och strykning av kläder</li>
                 <li>IT-tjänster i hemmet (datorhjälp, installation, support)</li>
-                <li>Läxhjälp och annan pedagogisk verksamhet</li>
-                <li>Personlig omsorg och enklare sjukvård i hemmet</li>
+                                <li>Personlig omsorg i hemmet (sjukvård ingår inte)</li>
             </ul>
 
             <h3>Tak och gemensamt maxbelopp</h3>
-            <p>Sedan 2016 gäller ett <strong>gemensamt tak på 75 000 kr per person och år</strong> för ROT och RUT ihop. Det innebär att du inte kan använda 75 000 kr för ROT och ytterligare 75 000 kr för RUT – de delar på utrymmet.</p>
+            <p>Det gäller ett <strong>gemensamt tak på 75 000 kr per person och år</strong> för ROT och RUT ihop, varav högst 50 000 kr får vara ROT-avdrag. Det innebär att du inte kan använda 75 000 kr för ROT och ytterligare 75 000 kr för RUT – de delar på utrymmet.</p>
             <p>Exempel: Om du använder 45 000 kr av taket på ROT-arbeten kan du använda maximalt 30 000 kr kvar till RUT-avdrag under samma år. För ett par i ett gemensamt hushåll gäller taket <strong>per person</strong>, vilket innebär att ni tillsammans kan utnyttja upp till 150 000 kr totalt (75 000 kr vardera).</p>
-            <p>Taket baseras på det faktiska avdraget (pengarna du får tillbaka), inte på den fakturerade arbetskostnaden. Vill du maximera ROT-avdraget på 75 000 kr innebär det att du behöver ha haft arbetskostnader på minst 250 000 kr (250 000 × 30 % = 75 000 kr).</p>
+            <p>Taket baseras på det faktiska avdraget (pengarna du får tillbaka), inte på den fakturerade arbetskostnaden. ROT-avdraget är högst 50 000 kr per person och år – för att nå det behöver du ha haft arbetskostnader på minst 166 667 kr (166 667 × 30 % ≈ 50 000 kr). Resterande 25 000 kr av det gemensamma taket kan bara användas till RUT.</p>
+            <p>Under 2025 var ROT-avdraget tillfälligt höjt till 50 % för arbete som utfördes och betalades mellan 12 maj och 31 december 2025. Från 1 januari 2026 gäller åter 30 %, så jämför inte fakturor från 2025 rakt av med 2026.</p>
 
             <h3>Hur fungerar det praktiskt?</h3>
             <p>Du som kund betalar aldrig fullt pris för tjänsten. Hantverkaren eller serviceföretaget fakturerar dig på det reducerade beloppet direkt och ansöker sedan om utbetalning från Skatteverket. Det kallas <strong>fakturamodellen</strong> och innebär att du aldrig behöver vänta på pengarna – avdraget syns direkt på fakturan.</p>
@@ -582,10 +586,10 @@
                 <li>För RUT: tjänsten måste utföras i eller i nära anslutning till ditt hem</li>
                 <li>Du får inte använda avdraget för arbeten på hyresrätter (som hyresgäst)</li>
             </ul>
-            <p>Pensionärer kan utnyttja ett förhöjt RUT-avdrag – upp till <strong>75 000 kr enbart för RUT</strong> – jämfört med 75 000 kr kombinerat för övriga. Det är en förmån som riktar sig till att underlätta kvarboende i hemmet på äldre dagar.</p>
+            <p>Samma regler och tak gäller oavsett ålder – det finns inget särskilt förhöjt RUT-avdrag för pensionärer.</p>
 
-            <h3>ROT-avdrag för solceller 2026</h3>
-            <p>Installation av solceller är ett av de mest populära ROT-arbetena 2026. En genomsnittlig solcellsinstallation kostar 120 000–200 000 kr, varav installation och arbete typiskt utgör 40–60 % av kostnaden. Med ROT-avdrag på 30 % av arbetsdelen kan du spara 15 000–25 000 kr beroende på installation. Kombinerat med elcertifikat och eventuell ROT-avdrag kan solceller ha en återbetalningstid på 8–12 år.</p>
+            <h3>Solceller 2026 – grön teknik i stället för ROT</h3>
+            <p>Installation av solceller ger inte ROT-avdrag. I stället finns <strong>skattereduktion för grön teknik</strong>, som för nätanslutna solceller är <strong>15 % av kostnaden för arbete och material</strong>. Skattereduktionen för grön teknik är högst 50 000 kr per person och år och dras, precis som ROT, direkt på fakturan av installationsföretaget. Köper du materialet själv gäller skattereduktionen bara installationsarbetet. Exempel: en installation för 150 000 kr inklusive material ger 22 500 kr i skattereduktion (15 %).</p>
 
             <h3>Förlorar du avdraget om du inte deklarerar rätt?</h3>
             <p>Avdraget sker automatiskt via fakturamodellen och behöver normalt inte deklareras separat. Skatteverket håller reda på hur mycket du har utnyttjat. Du kan kontrollera ditt kvarvarande utrymme direkt på <strong>Skatteverkets hemsida</strong> under "Mina sidor". Om din totala skatt understiger 75 000 kr riskerar du att inte kunna utnyttja hela avdraget – det överskjutande beloppet kan inte sparas till nästa år.</p>
@@ -625,12 +629,12 @@
         </div>
     
     <!-- Relaterade kalkylatorer -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
+    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
       <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/kalkylatorer/skatteaterbarings-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Skatteåterbäringskalkylator</a>
-      <a href="/kalkylatorer/loneraknare" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneräknare</a>
-      <a href="/kalkylatorer/reseavdragskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Reseavdragskalkylator</a>
+      <a href="/kalkylatorer/skatteaterbarings-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Skatteåterbäringskalkylator</a>
+      <a href="/kalkylatorer/loneraknare" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneräknare</a>
+      <a href="/kalkylatorer/reseavdragskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Reseavdragskalkylator</a>
       </div>
     </section>
 
@@ -662,7 +666,7 @@
     <footer style="background:var(--white);border-top:1px solid var(--border);padding:32px 0;text-align:center;color:var(--text-light);font-size:0.9rem;">
         <div class="container">
             <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/" style="color:var(--primary);text-decoration:none;">Alla kalkylatorer</a></p>
+            Senast uppdaterad: 30 september 2026 | <a href="/" style="color:var(--primary);text-decoration:none;">Alla kalkylatorer</a></p>
             <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
         </div>
     </footer>
@@ -747,8 +751,8 @@
             ctx.scale(dpr, dpr);
 
             // Clear
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            ctx.fillStyle = isDark ? '#1f2937' : '#ffffff';
+            const isDark = false;
+            ctx.fillStyle = isDark ? '#15201A' : '#ffffff';
             ctx.fillRect(0, 0, W, H);
 
             const pad = { top: 24, bottom: 50, left: 60, right: 30 };
@@ -760,9 +764,9 @@
             const gap = cW * 0.2;
 
             const colors = {
-                material: isDark ? '#6b7280' : '#94a3b8',
+                material: isDark ? '#56625B' : '#94a3b8',
                 arbete: isDark ? '#60a5fa' : '#3b82f6',
-                avdrag: isDark ? '#34d399' : '#1a6b4a',
+                avdrag: isDark ? '#0D6A45' : '#0D6A45',
                 betalar: isDark ? '#f59e0b' : '#d97706'
             };
 
@@ -789,13 +793,13 @@
             // Labels
             ctx.font = '600 13px Inter, sans-serif';
             ctx.textAlign = 'center';
-            ctx.fillStyle = isDark ? '#d1d5db' : '#555';
+            ctx.fillStyle = isDark ? '#d1d5db' : '#56625B';
             ctx.fillText('Total kostnad', x1 + barW / 2, pad.top + cH + 20);
             ctx.fillText('Din kostnad', x2 + barW / 2, pad.top + cH + 20);
 
             // Value labels on top of bars
             ctx.font = '700 13px Inter, sans-serif';
-            ctx.fillStyle = isDark ? '#f3f4f6' : '#1a1a2e';
+            ctx.fillStyle = isDark ? '#f3f4f6' : '#15201A';
             ctx.fillText(Math.round(totalCost).toLocaleString('sv-SE') + ' kr', x1 + barW / 2, pad.top + cH - hMaterial - hArbete - 8);
             ctx.fillText(Math.round(betalar).toLocaleString('sv-SE') + ' kr', x2 + barW / 2, pad.top + cH - hBetalar - hAvdrag - 8);
 
@@ -846,11 +850,21 @@
         calculate();
     </script>
 
-<footer style="background:var(--white,#fff);border-top:1px solid var(--border,#e2e8f0);padding:24px 0;text-align:center;color:var(--text-light,#6b7280);font-size:0.85rem;">
-  <div style="max-width:900px;margin:0 auto;padding:0 1rem;">
-    <p style="margin-bottom:6px;"><a href="/om-oss" style="color:var(--primary,#16a34a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#16a34a);text-decoration:none;">Integritetspolicy</a> &nbsp;|&nbsp; <a href="/" style="color:var(--primary,#16a34a);text-decoration:none;">Alla kalkylatorer</a></p>
-    <p style="font-size:0.75rem;opacity:0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. © 2026 GratisKalkyl.se</p>
-  </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 </body>
 </html>

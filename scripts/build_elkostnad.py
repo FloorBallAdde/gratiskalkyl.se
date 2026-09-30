@@ -211,7 +211,7 @@ def page(blocks):
 
 <h2>Rörligt eller fast elpris?</h2>
 <p>Med rörligt pris betalar du ungefär vad elen kostade på elbörsen den månaden plus elhandlarens påslag. Det har ofta varit billigast i snitt, men priset kan dubblas under en kall vinter. Med fast pris betalar du samma pris i 1–3 år och vet vad elen kommer att kosta. Tabellen ovan visar hur det har sett ut i ditt elområde det senaste året.</p>
-<p>Tim- och kvartsprisavtal följer elbörsen timme för timme. De kan löna sig om du kan flytta förbrukning, till exempel laddning av elbil, till billiga timmar. SCB publicerar inget eget snittpris för dem, så vi jämför dem med rörligt månadspris.</p>
+<p>Tim- och kvartsprisavtal följer elbörsen, där priset sedan 1 oktober 2025 sätts per kvart. De kan löna sig om du kan flytta förbrukning, till exempel laddning av elbil, till billiga timmar. SCB publicerar inget eget snittpris för dem, så vi jämför dem med rörligt månadspris.</p>
 
 <h2>Så sänker du elkostnaden</h2>
 <ul>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -50,7 +51,7 @@
           "name": "Vad kostar en solcellsanläggning att installera?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En typisk solcellsanläggning för en villa kostar 100 000–250 000 kr före avdrag, beroende på storlek och tak. Med skattereduktionen för grön teknik (15 % av hela kostnaden för arbete och material, max 50 000 kr per person och år) sjunker nettokostnaden. Priset per installerad kWp har sjunkit kraftigt de senaste åren."
+            "text": "Priset beror på anläggningens storlek, taket och installatören, så begär flera offerter. Med skattereduktionen för grön teknik får du tillbaka 15 % av kostnaden för arbete och material (vid fast pris räknas 97 % av totalpriset), högst 50 000 kr per person och år."
           }
         },
         {
@@ -58,7 +59,7 @@
           "name": "Hur beräknas återbetalningstiden för solceller?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Återbetalningstiden beräknas som nettoinvesteringskostnad dividerat med den årliga elbesparingen. Elbesparingen är solcellsproduktionen (kWh/år) multiplicerad med det totala elpriset du betalar (inkl. elnät, skatter och avgifter). Typisk återbetalningstid i Sverige är 8–15 år, beroende på elområde och anläggningsstorlek."
+            "text": "Återbetalningstiden = nettokostnad efter avdrag ÷ årsbesparing. Årsbesparingen = egenanvänd el × ditt elpris + såld el × ersättningen för såld el. Såld el ger ungefär spotpriset, och för el som matas in från 2026 finns ingen skattereduktion. Därför spelar andelen du använder själv stor roll. Med kalkylatorns förval (30 m², SE3, 150 000 kr, 35 % egenanvändning) blir återbetalningstiden drygt 30 år. Med lägre installationskostnad, högre egenanvändning eller hög rörlig nätavgift blir den kortare."
           }
         },
         {
@@ -66,7 +67,7 @@
           "name": "Vilket avdrag kan man få för solceller 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Solceller ger inte ROT-avdrag utan skattereduktion för grön teknik: 15 % av kostnaden för arbete och material, högst 50 000 kr per person och år. Installerar du också ett batteri eller en laddbox får du 50 % på den delen. Avdraget görs direkt på fakturan av installatören."
+            "text": "Solceller ger inte ROT-avdrag utan skattereduktion för grön teknik: 15 % av kostnaden för arbete och material (vid fast pris räknas 97 % av totalpriset), högst 50 000 kr per person och år. Är ni två ägare som båda betalar kan ni tillsammans få upp till 100 000 kr, om ni har tillräckligt med skatt att dra av mot. Installerar du också ett batteri eller en laddbox får du 50 % på den delen. Avdraget görs direkt på fakturan av installatören."
           }
         },
         {
@@ -74,7 +75,7 @@
           "name": "Kan man sälja el tillbaka till nätet med solceller?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, överskottsel kan säljas till ditt elbolag. Priset du får är vanligtvis spotpriset minus en liten avgift, vilket är lägre än vad du betalar per kWh. Egenanvändning av solcellsel (direkt konsumtion) är ekonomiskt mer fördelaktigt än att sälja tillbaka. Kalkylatorn fokuserar på egenanvändning, men vid bra täckningsgrad säljer många även en del till nätet."
+            "text": "Ja, överskottsel kan säljas till ett elhandelsföretag. Du får normalt spotpriset för den tid elen matas in, ofta minus en avgift, och ibland en liten ersättning från nätbolaget. Skattereduktionen på 60 öre/kWh gäller inte el som matas in efter 31 december 2025. Därför är det mer värt att använda solelen själv – då slipper du köpa el med nätavgift, energiskatt och moms. Kalkylatorn räknar med både egenanvänd och såld el."
           }
         },
         {
@@ -97,37 +98,25 @@
     }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --primary-dark: #10b981;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-        }
+        
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             font-size: 17px;
@@ -309,19 +298,17 @@
             .results-grid { grid-template-columns: repeat(2, 1fr); }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -350,23 +337,44 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-<header>
-    <div class="container">
-        <nav>
-            <a href="/" class="logo">GratisKalkyl.se ☀️</a>
-            <div class="nav-links">
-                <a href="/">Alla kalkylatorer</a>
-                <a href="/kalkylatorer/elkostnadskalkylator">Elkostnad</a>
-                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
-            </div>
-        </nav>
-    </div>
-</header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<main class="container" style="padding-top: 40px; padding-bottom: 40px;">
+
+
+<main class="container" style="padding-top: 40px; padding-bottom: 40px;" id="innehall">
     <h1>☀️ Solcellskalkylator 2026</h1>
     <p class="subtitle">Räkna ut solcellsproduktion, elpris-besparing, återbetalningstid och ROI för din anläggning — med skattereduktion för grön teknik och elområde SE1–SE4.</p>
 
@@ -391,7 +399,7 @@
 
         <div class="input-group">
             <label for="sel-elomrade">Elområde</label>
-            <select id="sel-elomrade" onchange="berakna()">
+            <select id="sel-elomrade" onchange="bytOmrade()">
                 <option value="SE1">SE1 — Norrland (Luleå)</option>
                 <option value="SE2">SE2 — Norrland/Norrland (Sundsvall)</option>
                 <option value="SE3" selected>SE3 — Mellansverige (Stockholm)</option>
@@ -407,11 +415,46 @@
             <input type="range" id="sl-kostnad" min="30000" max="500000" step="5000" value="150000" oninput="syncSlider(this,'val-kostnad',formatKr)">
         </div>
 
+        <div class="input-group">
+            <label>
+                Andel av solelen du använder själv
+                <span class="val" id="val-egen">35 %</span>
+            </label>
+            <input type="range" id="sl-egen" min="10" max="100" step="5" value="35" oninput="syncSlider(this,'val-egen',formatPct)">
+            <div style="font-size:0.85rem;color:var(--text-light);margin-top:6px;">Förval 35 % är ett antagande för en villa utan batteri – ändra efter din förbrukning. Resten säljs. Med batteri eller mycket förbrukning dagtid blir andelen högre.</div>
+        </div>
+
+        <div class="input-group">
+            <label>
+                Ditt elpris för köpt el
+                <span class="val" id="val-kopt">1,44 kr/kWh</span>
+            </label>
+            <input type="range" id="sl-kopt" min="0.50" max="4.00" step="0.01" value="1.44" oninput="syncSlider(this,'val-kopt',formatKrKwh)">
+            <div style="font-size:0.85rem;color:var(--text-light);margin-top:6px;">Förval: SCB:s snittpris för nya rörliga avtal (villa med elvärme, apr–aug 2026) + energiskatt 36 öre + moms. Lägg till din rörliga nätavgift inkl. moms.</div>
+        </div>
+
+        <div class="input-group">
+            <label>
+                Ersättning för såld el
+                <span class="val" id="val-salj">66 öre/kWh</span>
+            </label>
+            <input type="range" id="sl-salj" min="0" max="200" step="1" value="66" oninput="syncSlider(this,'val-salj',formatOre)">
+            <div style="font-size:0.85rem;color:var(--text-light);margin-top:6px;">Förval: spotpris (Nord Pool), snitt apr–aug 2026. Ingen skattereduktion för el som matas in från 2026.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="sel-agare">Antal ägare som får avdraget för grön teknik</label>
+            <select id="sel-agare" onchange="berakna()">
+                <option value="1" selected>1 person (max 50 000 kr)</option>
+                <option value="2">2 personer (max 100 000 kr)</option>
+            </select>
+        </div>
+
         <div class="toggle-row">
             <input type="checkbox" id="chk-rot" checked onchange="berakna()">
             <div>
                 <label for="chk-rot">Inkludera skattereduktion för grön teknik (15 %)</label>
-                <div class="desc">15 % av hela kostnaden (arbete + material), max 50 000 kr/person</div>
+                <div class="desc">15 % av kostnaden för arbete och material – vid fast pris räknas 97 % av totalpriset. Max 50 000 kr per person och år.</div>
             </div>
         </div>
     </div>
@@ -432,7 +475,7 @@
             <div class="result-card highlight">
                 <div class="label">Årsbesparing</div>
                 <div class="value" id="res-arsbesparing">—</div>
-                <div class="unit">kr/år</div>
+                <div class="unit" id="res-arsbesparing-unit">kr/år</div>
             </div>
             <div class="result-card">
                 <div class="label">Nettokostnad</div>
@@ -452,27 +495,23 @@
         </div>
     </div>
 
+    <p style="font-size:0.85rem;color:var(--text-light);margin:-8px 0 24px;">Årsbesparing = egenanvänd el × ditt elpris + såld el × ersättningen för såld el. Återbetalningstid = nettokostnad ÷ årsbesparing första året. Ingen hänsyn till växelriktarbyte, underhåll, prisförändringar eller ränta.</p>
+
     <div class="calc-box">
         <h2>Kumulativ besparing vs investering (25 år)</h2>
         <canvas id="chart" height="280"></canvas>
     </div>
 
-    <div class="affiliate-box">
-        <h3>Jämför offerter från solcellsinstallatörer</h3>
-        <p style="font-size:0.9rem; color: var(--text-light); margin-bottom: 12px;">Hämta kostnadsfria offerter och hitta bästa pris på din anläggning.</p>
-        <div class="affiliate-links">
-            <a href="https://www.eneo.se/?utm_source=gratiskalkyl" class="affiliate-btn" rel="noopener noreferrer" target="_blank">Hämta offert — Eneo</a>
-            <a href="https://www.sveasolar.com/?utm_source=gratiskalkyl" class="affiliate-btn" rel="noopener noreferrer" target="_blank">Hämta offert — Svea Solar</a>
-        </div>
-    </div>
+    
 
     <div class="seo-text">
         <h2>Lönar sig solceller i Sverige 2026?</h2>
-        <p>Solceller har blivit ett av de mest populära hemmaenergiprojekten i Sverige. Med skattereduktion för grön teknik och kraftigt sjunkande installationskostnader är 2026 ett av de bästa åren någonsin att investera i solceller. Men lönsamheten varierar kraftigt beroende på var i Sverige du bor, hur stor anläggning du väljer och hur du använder elen.</p>
-        <p>En villa med 30 m² solceller i elområde SE3 kan producera runt 4 000–4 500 kWh per år. Det motsvarar ungefär 40–50% av en normalhushålls årsförbrukning. I Skåne och södra Sverige (SE4) är produktionen ännu högre tack vare fler soltimmar, och elprisen är historiskt sett höga — en dubbel fördel för solcellsägare.</p>
-        <p>Återbetalningstiden för en solcellsanläggning i Sverige ligger typiskt på 8–14 år. Med skattereduktionen för grön teknik sänker du kostnaden med 15 % (max 50 000 kr per person och år). En anläggning som kostar 150 000 kr brutto hamnar då på 127 500 kr netto. Observera att skattereduktionen för mikroproduktion (60 öre/kWh för såld el) togs bort från 2026 — egenanvändning av elen är därför det som lönar sig bäst.</p>
-        <p>Solceller håller i 25–30 år och effekten minskar bara med 0,3–0,5% per år. Det innebär att en bra investering idag ger avkastning långt in på 2040- och 2050-talet. Många husägare ser en totalavkastning på 200–400% över anläggningens livslängd.</p>
-        <p>Välj rätt installationskostnad i kalkylatorn ovan och se exakt hur din anläggning kan prestera. Kom ihåg att jämföra flera offerter — prisskillnaden mellan installatörer kan vara 20–40%.</p>
+        <p>Lönsamheten för solceller varierar kraftigt beroende på var i Sverige du bor, vad anläggningen kostar, elpriset och hur stor del av solelen du använder själv. Två saker är annorlunda 2026: skattereduktionen på 60 öre/kWh för såld el gäller inte el som matas in efter 31 december 2025, och skattereduktionen för grön teknik för solceller är 15 % (den var 20 % vid slutbetalning före 1 juli 2025).</p>
+        <p>En villa med 30 m² solceller i elområde SE3 producerar med kalkylatorns antagande (142 kWh per m² och år) ca 4 260 kWh per år. Hur mycket av den elen du använder själv beror på när du förbrukar el. Utan batteri produceras mest el mitt på dagen på sommaren, när många villor använder lite el, så en stor del säljs. Kalkylatorn har 35 % egenanvändning som förval. Det är ett antagande – andelen varierar mycket mellan hushåll, så ändra värdet om du vet hur mycket el du använder dagtid. Din egen andel kan du räkna ut från nätbolagets mätdata: producerad el minus inmatad el.</p>
+        <p>Varje kWh du använder själv sparar det du annars hade betalat: elhandel, energiskatt, rörlig nätavgift och moms. Såld el ger ungefär spotpriset. Kalkylatorns förval för köpt el är SCB:s snittpris för nya rörliga elavtal för villa med elvärme april–augusti 2026 plus energiskatt 36 öre och moms (SE3: 1,44 kr/kWh). Din rörliga nätavgift ingår inte i förvalet – lägg till den (inkl. moms) om du vill räkna exaktare. Förvalet för såld el är Nord Pools spotpris i snitt april–augusti 2026 (SE3: 66 öre/kWh). Solel säljs ofta mitt på dagen, när spotpriset kan vara lägre än månadssnittet.</p>
+        <p>Med kalkylatorns förval (30 m², SE3, 9 000 kWh/år, 150 000 kr och 35 % egenanvändning) blir årsbesparingen ca 4 000 kr och den enkla återbetalningstiden drygt 30 år, efter avdraget för grön teknik (150 000 − 21 825 = 128 175 kr). Det är längre än panelernas förväntade livslängd. Kalkylen blir bättre om anläggningen är billigare, om du använder mer av solelen själv (till exempel laddar elbilen eller kör värmepumpen dagtid), om din rörliga nätavgift är hög eller om elpriset stiger. Kalkylatorn räknar inte med byte av växelriktare, underhåll, framtida prisförändringar eller ränta.</p>
+        <p>Solceller håller ofta i 25–30 år och effekten minskar normalt med 0,3–0,5 % per år. Kalkylatorn räknar med 0,4 % per år.</p>
+        <p>Fyll i din egen installationskostnad, förbrukning och elpris i kalkylatorn ovan. Jämför flera offerter – priserna skiljer sig mellan installatörer.</p>
     </div>
 
     <div class="faq-section">
@@ -483,19 +522,19 @@
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">Vad kostar en solcellsanläggning att installera? <span class="arrow">▼</span></div>
-            <div class="faq-a">En typisk solcellsanläggning för en villa kostar 100 000–250 000 kr före avdrag, beroende på storlek och tak. Med skattereduktionen för grön teknik (15 % av hela kostnaden för arbete och material, max 50 000 kr per person och år) sjunker nettokostnaden. Priset per installerad kWp har sjunkit kraftigt de senaste åren.</div>
+            <div class="faq-a">Priset beror på anläggningens storlek, taket och installatören, så begär flera offerter. Med skattereduktionen för grön teknik får du tillbaka 15 % av kostnaden för arbete och material (vid fast pris räknas 97 % av totalpriset), högst 50 000 kr per person och år.</div>
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">Hur beräknas återbetalningstiden för solceller? <span class="arrow">▼</span></div>
-            <div class="faq-a">Återbetalningstiden beräknas som nettoinvesteringskostnad dividerat med den årliga elbesparingen. Elbesparingen är solcellsproduktionen (kWh/år) multiplicerad med det totala elpriset du betalar (inkl. elnät, skatter och avgifter). Typisk återbetalningstid i Sverige är 8–15 år, beroende på elområde och anläggningsstorlek.</div>
+            <div class="faq-a">Återbetalningstiden = nettokostnad efter avdrag ÷ årsbesparing. Årsbesparingen = egenanvänd el × ditt elpris + såld el × ersättningen för såld el. Såld el ger ungefär spotpriset, och för el som matas in från 2026 finns ingen skattereduktion. Därför spelar andelen du använder själv stor roll. Med kalkylatorns förval (30 m², SE3, 150 000 kr, 35 % egenanvändning) blir återbetalningstiden drygt 30 år. Med lägre installationskostnad, högre egenanvändning eller hög rörlig nätavgift blir den kortare.</div>
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">Vilket avdrag kan man få för solceller 2026? <span class="arrow">▼</span></div>
-            <div class="faq-a">Solceller ger inte ROT-avdrag utan <strong>skattereduktion för grön teknik</strong>: 15 % av kostnaden för arbete och material, högst 50 000 kr per person och år. Installerar du också ett batteri eller en laddbox får du 50 % på den delen. Avdraget görs direkt på fakturan av installatören.</div>
+            <div class="faq-a">Solceller ger inte ROT-avdrag utan <strong>skattereduktion för grön teknik</strong>: 15 % av kostnaden för arbete och material (vid fast pris räknas 97 % av totalpriset), högst 50 000 kr per person och år. Är ni två ägare som båda betalar kan ni tillsammans få upp till 100 000 kr, om ni har tillräckligt med skatt att dra av mot. Installerar du också ett batteri eller en laddbox får du 50 % på den delen. Avdraget görs direkt på fakturan av installatören.</div>
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">Kan man sälja el tillbaka till nätet med solceller? <span class="arrow">▼</span></div>
-            <div class="faq-a">Ja, överskottsel kan säljas till ditt elbolag. Priset du får är vanligtvis spotpriset minus en liten avgift, vilket är lägre än vad du betalar per kWh. Egenanvändning av solcellsel (direkt konsumtion) är ekonomiskt mer fördelaktigt än att sälja tillbaka. Kalkylatorn fokuserar på egenanvändning, men vid bra täckningsgrad säljer många även en del till nätet.</div>
+            <div class="faq-a">Ja, överskottsel kan säljas till ett elhandelsföretag. Du får normalt spotpriset för den tid elen matas in, ofta minus en avgift, och ibland en liten ersättning från nätbolaget. Skattereduktionen på 60 öre/kWh gäller inte el som matas in efter 31 december 2025. Därför är det mer värt att använda solelen själv – då slipper du köpa el med nätavgift, energiskatt och moms. Kalkylatorn räknar med både egenanvänd och såld el.</div>
         </div>
         <div class="faq-item">
             <div class="faq-q" onclick="toggleFaq(this)">Hur länge håller solceller? <span class="arrow">▼</span></div>
@@ -518,36 +557,65 @@
     </div>
 </main>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-        Senast uppdaterad: mars 2026 | <a href="/">Tillbaka till startsidan</a></p>
-        <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
-// --- Elområde data: [kWh/m²/år, kr/kWh total inkl. nät+skatt]
+// --- Elområde data
+// prod: kWh per m² och år (kalkylatorns antagande)
+// kopt: förval för köpt el, kr/kWh = (SCB:s snittpris för nya rörliga avtal, villa med elvärme, apr–aug 2026 + energiskatt 36 öre) × 1,25 moms.
+//       Rörlig nätavgift ingår inte – användaren kan lägga till den.
+//       SCB-snitt apr–aug 2026 (öre/kWh exkl. moms): SE1 48,2 · SE2 50,0 · SE3 79,6 · SE4 100,4
+// salj: förval för såld el, öre/kWh = Nord Pools spotpris, snitt apr–aug 2026 (exkl. moms)
 const ELOMRADE = {
-    SE1: { prod: 125, pris: 1.05 },
-    SE2: { prod: 132, pris: 1.15 },
-    SE3: { prod: 142, pris: 1.35 },
-    SE4: { prod: 155, pris: 1.45 }
+    SE1: { prod: 125, kopt: 1.05, salj: 35 },
+    SE2: { prod: 132, kopt: 1.08, salj: 37 },
+    SE3: { prod: 142, kopt: 1.44, salj: 66 },
+    SE4: { prod: 155, kopt: 1.71, salj: 86 }
 };
-const ROT_ANDEL_ARBETE = 1.00; // grön teknik: avdrag på hela kostnaden (arbete + material)
-const ROT_PROCENT = 0.15;      // skattereduktion för grön teknik, solceller 15 % (2026)
-const ROT_MAX_PER_PERSON = 50000;
-const ROT_MAX_HUSHALL = 100000; // 2 vuxna
+// Skattereduktion för grön teknik (Skatteverket): solceller 15 %, vid fast pris räknas 97 % av totalpriset
+// som arbete och material, högst 50 000 kr per person och år.
+const GRON_PROCENT = 0.15;
+const GRON_ANDEL_FAST_PRIS = 0.97;
+const GRON_MAX_PER_PERSON = 50000;
 const LIVSLANGD = 25;
 const DEGRADERING = 0.004; // 0.4% per år
 
 function formatKwh(v) { return Number(v).toLocaleString('sv-SE') + ' kWh/år'; }
 function formatM2(v) { return v + ' m²'; }
 function formatKr(v) { return Number(v).toLocaleString('sv-SE') + ' kr'; }
+function formatPct(v) { return v + ' %'; }
+function formatKrKwh(v) { return Number(v).toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' kr/kWh'; }
+function formatOre(v) { return v + ' öre/kWh'; }
 
 function syncSlider(el, labelId, fmt) {
     document.getElementById(labelId).textContent = fmt(el.value);
+    berakna();
+}
+
+// Byt elområde: sätt förvalspriserna för området
+function bytOmrade() {
+    const d = ELOMRADE[document.getElementById('sel-elomrade').value];
+    const kopt = document.getElementById('sl-kopt');
+    const salj = document.getElementById('sl-salj');
+    kopt.value = d.kopt;
+    salj.value = d.salj;
+    document.getElementById('val-kopt').textContent = formatKrKwh(d.kopt);
+    document.getElementById('val-salj').textContent = formatOre(d.salj);
     berakna();
 }
 
@@ -557,8 +625,12 @@ function berakna() {
     const elomrade = document.getElementById('sel-elomrade').value;
     const bruttoKostnad = parseInt(document.getElementById('sl-kostnad').value);
     const rotAktiv = document.getElementById('chk-rot').checked;
+    const egenAndel = parseInt(document.getElementById('sl-egen').value) / 100;
+    const elpris = parseFloat(document.getElementById('sl-kopt').value);          // kr/kWh
+    const saljpris = parseFloat(document.getElementById('sl-salj').value) / 100;  // kr/kWh
+    const agare = parseInt(document.getElementById('sel-agare').value) || 1;
 
-    const { prod: prodPerM2, pris: elpris } = ELOMRADE[elomrade];
+    const prodPerM2 = ELOMRADE[elomrade].prod;
 
     // Produktion
     const produktionKwh = Math.round(takyta * prodPerM2);
@@ -566,20 +638,20 @@ function berakna() {
     // Täckningsgrad (max 100%)
     const tackningsgrad = Math.min(100, Math.round((produktionKwh / forbrukning) * 100));
 
-    // ROT-avdrag
-    let rotAvdrag = 0;
+    // Skattereduktion för grön teknik
+    let gronAvdrag = 0;
     if (rotAktiv) {
-        const arbetsKostnad = bruttoKostnad * ROT_ANDEL_ARBETE;
-        rotAvdrag = Math.min(arbetsKostnad * ROT_PROCENT, ROT_MAX_HUSHALL);
+        gronAvdrag = Math.min(bruttoKostnad * GRON_ANDEL_FAST_PRIS * GRON_PROCENT, GRON_MAX_PER_PERSON * agare);
     }
-    const nettoKostnad = Math.round(bruttoKostnad - rotAvdrag);
+    const nettoKostnad = Math.round(bruttoKostnad - gronAvdrag);
 
-    // Egenanvändning: antar max 80% egenanvändning av produktionen
-    const egenanvandning = Math.min(produktionKwh * 0.80, forbrukning);
-    const arsBesparing = Math.round(egenanvandning * elpris);
+    // Egenanvänd el (högst din förbrukning) och såld el
+    const egenKwh = Math.min(produktionKwh * egenAndel, forbrukning);
+    const saldKwh = produktionKwh - egenKwh;
+    const arsBesparing = Math.round(egenKwh * elpris + saldKwh * saljpris);
 
-    // Återbetalningstid
-    const aterbet = arsBesparing > 0 ? (nettoKostnad / arsBesparing).toFixed(1) : '—';
+    // Återbetalningstid (enkel: nettokostnad ÷ årsbesparing första året)
+    const aterbet = arsBesparing > 0 ? (nettoKostnad / arsBesparing).toFixed(1).replace('.', ',') : '—';
 
     // Total besparing 25 år (med degradering)
     let totalBesparing = 0;
@@ -600,6 +672,7 @@ function berakna() {
     document.getElementById('res-produktion').textContent = produktionKwh.toLocaleString('sv-SE');
     document.getElementById('res-tackningsgrad').textContent = tackningsgrad + '%';
     document.getElementById('res-arsbesparing').textContent = arsBesparing.toLocaleString('sv-SE') + ' kr';
+    document.getElementById('res-arsbesparing-unit').textContent = 'kr/år · ' + Math.round(egenKwh).toLocaleString('sv-SE') + ' kWh egen, ' + Math.round(saldKwh).toLocaleString('sv-SE') + ' kWh såld';
     document.getElementById('res-nettokostnad').textContent = nettoKostnad.toLocaleString('sv-SE') + ' kr';
     document.getElementById('res-aterbet').textContent = aterbet + ' år';
     document.getElementById('res-roi').textContent = roi + '%';
@@ -619,10 +692,10 @@ function ritaGraf(yearData, nettoKostnad) {
     canvas.style.height = h + 'px';
     ctx.scale(dpr, dpr);
 
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const textColor = isDark ? '#d1d5db' : '#555';
-    const gridColor = isDark ? '#374151' : '#e2e8f0';
-    const primary = isDark ? '#34d399' : '#1a6b4a';
+    const isDark = false;
+    const textColor = isDark ? '#d1d5db' : '#56625B';
+    const gridColor = isDark ? '#3A4640' : '#E2E0D8';
+    const primary = isDark ? '#0D6A45' : '#0D6A45';
     const danger = '#ef4444';
 
     ctx.clearRect(0, 0, w, h);

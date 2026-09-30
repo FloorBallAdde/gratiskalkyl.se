@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,30 +34,23 @@
     <meta name="twitter:title" content="Lånekalkylator 2026">
     <meta name="twitter:description" content="Räkna ut månadskostnad för lån. Gratis kalkylator 2026.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827;
-                --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2);
-                --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 16px 20px; }
         header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
         header a:hover { color: white; }
@@ -83,10 +77,10 @@
         .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
         .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
         .result-box .value { font-size: 1.5rem; font-weight: 800; color: var(--primary-dark); }
-        @media (prefers-color-scheme: dark) { .result-box .value { color: var(--primary); } }
+        
         .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
         .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; font-size: 0.9rem; color: #92400e; }
-        @media (prefers-color-scheme: dark) { .warning-box { background: rgba(146,64,14,0.15); border-color: #92400e; color: #fbbf24; } }
+        
         .table-wrap { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
         th { background: var(--primary); color: white; padding: 10px 12px; text-align: right; font-weight: 600; }
@@ -114,25 +108,23 @@
         footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.85rem; margin-top: 48px; }
         footer a { color: rgba(255,255,255,0.9); }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"Vad är effektiv ränta?","acceptedAnswer":{"@type":"Answer","text":"Effektiv ränta är den totala lånekostnaden per år uttryckt som en procentsats av lånebeloppet. Den inkluderar nominell ränta plus avgifter (uppläggningsavgift, aviavgift) och gör det möjligt att jämföra olika lån rättvist."}},
+        {"@type":"Question","name":"Vad är effektiv ränta?","acceptedAnswer":{"@type":"Answer","text":"Effektiv ränta är lånets kreditkostnad angiven som en årlig ränta på kreditbeloppet. Den inkluderar nominell ränta plus avgifter (uppläggningsavgift, aviavgift) och räknas som den årliga räntesats där nuvärdet av alla betalningar är lika med lånebeloppet. Det gör det möjligt att jämföra olika lån rättvist."}},
         {"@type":"Question","name":"Vad är skillnaden mellan annuitetslån och rak amortering?","acceptedAnswer":{"@type":"Answer","text":"Med annuitetslån betalar du samma belopp varje månad – ränteandelen minskar och amorteringsandelen ökar över tid. Med rak amortering betalar du lika mycket i amortering varje månad men mindre i ränta – månadsbeloppet minskar alltså över tid."}},
         {"@type":"Question","name":"Hur mycket kan jag låna?","acceptedAnswer":{"@type":"Answer","text":"Det beror på din inkomst, befintliga skulder och kreditvärdighet. Banker och kreditinstitut gör en individuell kreditprövning. Generellt bör dina totala skuldkostnader inte överstiga 30-40% av din nettoinkomst."}}
     ]}</script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -161,16 +153,44 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-<header>
-    <div class="container">
-        <a href="/">← Alla kalkylatorer</a>
-    </div>
-</header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<main class="container">
+
+
+<main class="container" id="innehall">
     <h1>💳 Lånekalkylator 2026</h1>
     <p class="subtitle">Räkna ut månadskostnad, total kostnad och effektiv ränta för ditt lån. Se hela amorteringsplanen.</p>
 
@@ -184,7 +204,7 @@
             <div>
                 <label for="ranta">Nominell ränta (%)</label>
                 <input type="number" id="ranta" value="9.9" min="0.1" max="50" step="0.1">
-                <div class="hint">Årsränta från banken/kreditinstitutet</div>
+                <div class="hint">Årsränta från banken/kreditinstitutet. Räntetak för konsumentkrediter: 22 % (andra halvåret 2026)</div>
             </div>
             <div>
                 <label for="loptid">Löptid</label>
@@ -204,7 +224,7 @@
             <div>
                 <label for="upplaggsavgift">Uppläggningsavgift (kr)</label>
                 <input type="number" id="upplaggsavgift" value="395" min="0" max="10000" step="5">
-                <div class="hint">Engångsavgift vid lånets start</div>
+                <div class="hint">Engångsavgift vid lånets start (högst 592 kr för konsumtionslån 2026)</div>
             </div>
             <div>
                 <label for="aviavgift">Aviavgift / mån (kr)</label>
@@ -268,7 +288,9 @@ n = antal månader</div>
 
         <h3>Effektiv ränta – det rätta jämförelsetalet</h3>
         <p>Den nominella räntan är inte hela sanningen. Effektiv ränta räknar in alla avgifter (uppläggningsavgift, aviavgift) och visar den faktiska årskostnaden som en procentsats. Enligt EU:s konsumentkreditdirektiv är det effektiva räntan du ska jämföra när du shoppar lån.</p>
-        <p>Exempel: Ett lån på 50 000 kr med 9,9 % nominell ränta, 395 kr uppläggningsavgift och 36 månaders löptid ger en effektiv ränta på ca 10,5 %. Lägg till en månadsavgift på 29 kr och den effektiva räntan kan stiga till 12–14 %.</p>
+        <p>Kalkylatorn räknar effektiv ränta enligt konsumentkreditlagens definition – kreditkostnaden angiven som en årlig ränta på kreditbeloppet. Först tas den månadsränta fram där nuvärdet av alla månadsbetalningar (inklusive avgifter) blir lika med lånebeloppet minus uppläggningsavgiften, som antas betalas när lånet betalas ut. Sedan räknas den om till årsränta med ränta på ränta: (1 + månadsränta)^12 − 1. Därför blir effektiv ränta något högre än den nominella räntan även helt utan avgifter.</p>
+        <p>Exempel: Ett lån på 50 000 kr med 9,9 % nominell ränta, 395 kr uppläggningsavgift och 36 månaders löptid ger en effektiv ränta på ca 11,0 %. Lägg till en aviavgift på 29 kr/mån och den effektiva räntan stiger till ca 12,3 %.</p>
+        <p>Sedan 1 mars 2025 gäller ett räntetak för konsumentkrediter som inte är bolån: krediträntan och dröjsmålsräntan får inte överstiga referensräntan plus 20 procentenheter, alltså 22 % under andra halvåret 2026. Uppläggningsavgiften får vara högst 1 % av prisbasbeloppet (592 kr för avtal som ingås 2026), och de sammanlagda kreditkostnaderna får inte bli större än själva kreditbeloppet. Reglerna gäller avtal som ingåtts från och med 1 mars 2025. Den 20 november 2026 ersätts konsumentkreditlagen (2010:1846) av en ny konsumentkreditlag (SFS 2026:1011), som behåller räntetaket och kostnadstaket. Den gamla lagen gäller fortfarande för avtal som ingåtts före den 20 november 2026.</p>
 
         <h3>Jämför lån smart – var tittar du?</h3>
         <p>Tre saker att alltid kontrollera när du jämför lån: effektiv ränta, total återbetalningskostnad och om det finns förtidsåterbetalningsrätt (möjlighet att betala av i förtid utan avgift). Jämförelsesajter som Lendo, Sambla och Zmarta låter dig få erbjudanden från flera banker med en ansökan – utan att det påverkar din kreditvärdighet. Anyfin-appen kan refinansiera dyrare lån till lägre ränta om du kvalificerar dig.</p>
@@ -278,12 +300,12 @@ n = antal månader</div>
         <ul>
             <li>3 år (36 mån): ~1 660 kr/mån, totalt ~59 800 kr — räntekostnad ca 9 800 kr</li>
             <li>5 år (60 mån): ~1 112 kr/mån, totalt ~66 700 kr — räntekostnad ca 16 700 kr</li>
-            <li>8 år (96 mån): ~806 kr/mån, totalt ~77 400 kr — räntekostnad ca 27 400 kr</li>
+            <li>8 år (96 mån): ~813 kr/mån, totalt ~78 000 kr — räntekostnad ca 28 000 kr</li>
         </ul>
         <p>Lägre månadskostnad kan vara nödvändigt för budgeten – men välj kortast möjliga löptid du har råd med för att minimera räntekostnaden.</p>
 
         <h3>När är ett lån rätt val?</h3>
-        <p>Lån kan vara rätt vid: nödvändiga utgifter du inte kan vänta med (bilreparation, tandläkare), refinansiering av dyrare skulder (kreditkort med 20–25 % ränta kan refinansieras till 8–12 %), eller planerade inköp med tydlig återbetalningsplan. Lån är sällan rätt för konsumtion, semestrar eller löpande utgifter – det skapar skulder utan tillgång.</p>
+        <p>Lån kan vara rätt vid: nödvändiga utgifter du inte kan vänta med (bilreparation, tandläkare), refinansiering av dyrare skulder (t.ex. kreditkortsskuld med hög ränta till ett billigare privatlån), eller planerade inköp med tydlig återbetalningsplan. Lån är sällan rätt för konsumtion, semestrar eller löpande utgifter – det skapar skulder utan tillgång.</p>
     </div>
 
     <!-- FAQ -->
@@ -291,7 +313,7 @@ n = antal månader</div>
         <h2>Vanliga frågor om lån 2026</h2>
         <details class="faq-item">
             <summary>Vad är effektiv ränta och varför spelar det roll?</summary>
-            <p>Effektiv ränta är den totala lånekostnaden per år inkl. alla avgifter, uttryckt som procent av lånebeloppet. Det är det enda rättvisa jämförelsetalet när du shoppar lån. Nominell ränta 9,9 % kan ge effektiv ränta på 11–14 % beroende på avgifter.</p>
+            <p>Effektiv ränta är lånets kreditkostnad inklusive alla avgifter, angiven som en årlig ränta på lånebeloppet. Det är det enda rättvisa jämförelsetalet när du shoppar lån. Nominell ränta 9,9 % kan ge effektiv ränta på 11–14 % beroende på avgifter och löptid.</p>
         </details>
         <details class="faq-item">
             <summary>Kan jag betala av lånet i förtid?</summary>
@@ -303,11 +325,11 @@ n = antal månader</div>
         </details>
         <details class="faq-item">
             <summary>Vad händer om jag missar en betalning?</summary>
-            <p>Första missade betalning ger en påminnelse med avgift (max 60 kr). Fortsätter du att missa betalningar skickas ärendet till inkasso. Obetald skuld hos inkasso kan leda till utmätning och betalningsanmärkning. Kontakta alltid långivaren direkt om du vet att du inte kan betala – de kan ofta erbjuda betalningsuppehåll.</p>
+            <p>För konsumtionslån som tagits från och med 1 mars 2025 är du enligt konsumentkreditlagen inte skyldig att betala någon annan ersättning för förseningen än dröjsmålsränta – alltså inga påminnelse- eller förseningsavgifter. Dröjsmålsräntan omfattas också av räntetaket (22 % under andra halvåret 2026). Fortsätter du att missa betalningar kan ärendet gå till inkasso. Obetald skuld hos inkasso kan leda till utmätning och betalningsanmärkning. Kontakta alltid långivaren direkt om du vet att du inte kan betala – de kan ofta erbjuda betalningsuppehåll.</p>
         </details>
         <details class="faq-item">
             <summary>Vad är skillnaden mellan privatlån och kreditkort?</summary>
-            <p>Privatlån har fast ränta, fast löptid och tydlig plan för amortering. Kreditkort har rörlig skuld och ofta högre ränta (15–25 %) men större flexibilitet. För belopp över 20 000 kr är privatlån nästan alltid billigare än kreditkort på lång sikt.</p>
+            <p>Privatlån har fast ränta, fast löptid och tydlig plan för amortering. Kreditkort har rörlig skuld och ofta högre ränta (för avtal från 1 mars 2025 högst 22 % under andra halvåret 2026 på grund av räntetaket) men större flexibilitet. För belopp över 20 000 kr är privatlån nästan alltid billigare än kreditkort på lång sikt.</p>
         </details>
         <details class="faq-item">
             <summary>Hur jämför jag lån smartast?</summary>
@@ -321,10 +343,10 @@ n = antal månader</div>
 
 
     <!-- Relaterade guider (auto-added 2026-05-15) -->
-    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:12px;">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #1a1a2e);">📖 Läs djupare i guiden</h2>
+    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:12px;">
+      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #15201A);">📖 Läs djupare i guiden</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-        <a href="/artiklar/hur-mycket-far-jag-lana-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #e2e8f0);">📖 Hur mycket får jag låna 2026?</a><a href="/artiklar/vad-ar-effektiv-ranta" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #e2e8f0);">📖 Vad är effektiv ränta?</a>
+        <a href="/artiklar/hur-mycket-far-jag-lana-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Hur mycket får jag låna 2026?</a><a href="/artiklar/vad-ar-effektiv-ranta" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Vad är effektiv ränta?</a>
       </div>
     </div>
 
@@ -353,14 +375,22 @@ n = antal månader</div>
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-        Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
-        <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">Beräkningarna är ungefärliga. Använd som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
 let visaAlla = false;
@@ -413,25 +443,25 @@ function berakna() {
         totalRanta = totalKostnad - belopp - upplaggsavgift;
     }
 
-    // Effektiv ränta (Newton-Raphson)
-    const totalUtbetalat = totalKostnad;
+    // Effektiv ränta enligt konsumentkreditlagens definition:
+    // den månadsränta i där nuvärdet av alla betalningar (inkl. avgifter) = utbetalt belopp
+    // (lånebelopp minus uppläggningsavgift, som antas betalas vid utbetalningen),
+    // omräknad till årlig ränta: (1 + i)^12 − 1.
     const nettoLan = belopp - upplaggsavgift;
-    let effRanta = arlig / 100;
-    for (let iter = 0; iter < 100; iter++) {
-        const re = effRanta / 12;
-        let npv = -nettoLan;
-        let dnpv = 0;
-        for (let i = 1; i <= n; i++) {
-            const pmt = planData[i-1].bet;
-            const d = Math.pow(1+re, i);
-            npv += pmt / d;
-            dnpv -= i * pmt / (d * (1+re));
-        }
-        const delta = npv / dnpv;
-        effRanta -= delta;
-        if (Math.abs(delta) < 1e-8) break;
+    function nuvarde(im) {
+        let s = 0;
+        for (let k = 1; k <= n; k++) s += planData[k-1].bet / Math.pow(1 + im, k);
+        return s;
     }
-    const effArsranta = effRanta * 100;
+    let lo = 0, hi = 1; // månadsränta 0–100 %
+    if (nuvarde(lo) < nettoLan) { lo = -0.5; }
+    for (let iter = 0; iter < 200; iter++) {
+        const mid = (lo + hi) / 2;
+        if (nuvarde(mid) > nettoLan) lo = mid; else hi = mid;
+        if (hi - lo < 1e-12) break;
+    }
+    const manadsIrr = (lo + hi) / 2;
+    const effArsranta = (Math.pow(1 + manadsIrr, 12) - 1) * 100;
 
     const grid = document.getElementById('resultGrid');
     grid.innerHTML = `
@@ -442,9 +472,24 @@ function berakna() {
     `;
 
     const warn = document.getElementById('warningBox');
-    if (effArsranta > 20) {
+    const RANTETAK = 22;          // referensränta 2,0 % + 20 procentenheter (andra halvåret 2026)
+    const MAX_UPPLAGG = 592;      // 1 % av prisbasbeloppet 2026 (59 200 kr)
+    const varningar = [];
+    if (arlig > RANTETAK) {
+        varningar.push(`Nominell ränta ${fmtDec(arlig)} % är över räntetaket för konsumentkrediter (${RANTETAK} % under andra halvåret 2026: referensräntan 2 % + 20 procentenheter). Taket gäller lån utan bostad som säkerhet som tagits från och med 1 mars 2025.`);
+    }
+    if (upplaggsavgift > MAX_UPPLAGG) {
+        varningar.push(`Uppläggningsavgiften får vara högst 1 % av prisbasbeloppet, ${MAX_UPPLAGG} kr för avtal som ingås 2026 (gäller inte bolån).`);
+    }
+    if (totalRanta + upplaggsavgift > belopp) {
+        varningar.push(`Kreditkostnaderna (${fmt(totalRanta + upplaggsavgift)} kr) är större än lånebeloppet. För konsumentkrediter från och med 1 mars 2025 får kostnaderna inte överstiga kreditbeloppet.`);
+    }
+    if (effArsranta > 20 && varningar.length === 0) {
+        varningar.push(`Effektiv ränta ${fmtDec(effArsranta)} % är högt. Jämför erbjudanden via Lendo eller Sambla för att eventuellt hitta lägre ränta.`);
+    }
+    if (varningar.length) {
         warn.style.display = 'block';
-        warn.innerHTML = `⚠️ Effektiv ränta ${fmtDec(effArsranta)} % är högt. Jämför erbjudanden via Lendo eller Sambla för att eventuellt hitta lägre ränta.`;
+        warn.innerHTML = varningar.map(v => '⚠️ ' + v).join('<br>');
     } else { warn.style.display = 'none'; }
 
     renderPlan(false);

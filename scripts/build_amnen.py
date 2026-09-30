@@ -49,7 +49,7 @@ COMPARE = {
 }
 
 GUIDES = {
-    "/lon-och-jobb": ["/artiklar/rakna-ut-nettolon-2026", "/artiklar/vad-ar-semesterlon", "/artiklar/vad-ar-f-skatt"],
+    "/lon-och-jobb": ["/artiklar/rakna-ut-nettolon-2026", "/artiklar/vad-ar-semesterlon", "/artiklar/traktamente-2026", "/artiklar/vad-ar-f-skatt"],
     "/skatt-och-deklaration": ["/artiklar/deklaration-2027", "/artiklar/skatteaterbaring-2027", "/artiklar/reseavdrag-2027",
                                "/artiklar/hur-far-man-tillbaka-skatten", "/artiklar/vad-ar-marginalskatt",
                                "/artiklar/vad-ar-kapitalvinstskatt", "/artiklar/vad-ar-moms-2026", "/artiklar/vad-ar-rot-rut-avdrag"],

@@ -71,6 +71,8 @@ TOPICS = [
     ]),
 ]
 
+N_CALC = 44
+N_GUIDES = 29
 GA_ID = "G-XGTX1PYYFJ"
 ADSENSE = "ca-pub-8657228803389245"
 
@@ -94,7 +96,7 @@ def head(title, description, path, og_title=None, jsonld=(), extra_head=""):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){{var s=null;try{{s=localStorage.getItem("gk-theme");}}catch(e){{}}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light");}})();</script>
+<script>(function(){{var s=null;try{{s=localStorage.getItem("gk-theme");}}catch(e){{}}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");}})();</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_ID}');</script>
@@ -115,17 +117,19 @@ def head(title, description, path, og_title=None, jsonld=(), extra_head=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/search-dropdown.css">
-<link rel="stylesheet" href="/assets/gk.css?v=20260930b">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
 <script defer src="/search-index.js"></script>
 <script defer src="/search-dropdown.js"></script>
-<script defer src="/assets/gk.js?v=20260930b"></script>
+<script defer src="/assets/gk.js?v=20261001"></script>
 {ld}
 {extra_head}
 </head>
 """
 
 
-def header():
+def shell_top(skin=False):
+    """Sidhuvud + meny utan <body>. skin=True används på äldre sidor (div i stället för header/nav,
+    så att sidornas egna elementregler i CSS inte påverkar skalet)."""
     groups = []
     for i, (name, sub, hub, links) in enumerate(TOPICS):
         items = "".join(f'<li><a href="{u}">{e(t)}</a></li>' for t, u in links)
@@ -138,10 +142,10 @@ def header():
             f'<div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false">'
             f'<span>{e(name)}<small>{e(sub)}</small></span>{ICON_CHEV}</button>{title}<ul>{items}</ul></div>'
         )
-    n_calc = sum(len([1 for t, u in l if "yrkeslon" not in u]) for _, _, _, l in TOPICS) - 1  # reseavdrag listas en gång
-    return f"""<body class="gk2">
-<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
-<header class="gk-hdr">
+    tag, extra = ("div", ' role="banner"') if skin else ("header", "")
+    g2 = " gk2" if skin else ""
+    return f"""<a class="gk-skip{g2}" href="#innehall">Hoppa till innehållet</a>
+<{tag} class="gk-hdr{g2}"{extra}>
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span>{ICON_SEARCH}<input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -150,22 +154,26 @@ def header():
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false">{ICON_MENU}{ICON_CLOSE}<span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</header>
-<div class="gk-menu" id="gk-menu" hidden>
+</{tag}>
+<div class="gk-menu{g2}" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span>{ICON_SEARCH}<input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
 <div class="gk-menu-groups">{''.join(groups)}</div>
 <span class="gk-menu-label">Allt på ett ställe</span>
 <ul class="gk-menu-links">
-<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>{N_CALC}</span></a></li>
 <li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
-<li><a href="/artiklar/">Alla guider <span>28</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>{N_GUIDES}</span></a></li>
 </ul>
 <button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
 </div>
 </div>
 """
+
+
+def header():
+    return '<body class="gk2">\n' + shell_top(False)
 
 
 def breadcrumbs(items):
@@ -193,22 +201,27 @@ def breadcrumb_ld(items):
     }
 
 
-def footer(note=""):
-    return f"""<footer class="gk-ftr">
+def footer_html(note="", skin=False):
+    tag, extra = ("div", ' role="contentinfo"') if skin else ("footer", "")
+    ntag, nextra = ("div", ' role="navigation"') if skin else ("nav", "")
+    g2 = " gk2" if skin else ""
+    return f"""<{tag} class="gk-ftr{g2}"{extra}>
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
 <p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.{(' ' + note) if note else ''}</p>
 </div>
-<nav aria-label="Sidfot">
+<{ntag} class="gk-ftr-nav" aria-label="Sidfot"{nextra}>
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
-</nav>
+</{ntag}>
 </div>
-</footer>
-</body>
-</html>
+</{tag}>
 """
+
+
+def footer(note=""):
+    return footer_html(note) + "</body>\n</html>\n"

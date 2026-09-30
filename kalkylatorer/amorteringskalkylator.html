@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -84,7 +85,7 @@
           "name": "Hur länge tar det att amortera av ett bolån?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Med 2 % amorteringskrav tar det 50 år att amortera ner till noll från 100 % belåning, men i praktiken sjunker belåningsgraden med åren och kravet minskas. Väljer du att amortera mer — t.ex. 3 % per år — kortar du lånetiden kraftigt och sparar stor på räntekostnader totalt."
+            "text": "Amorteringen räknas på det ursprungliga lånebeloppet, så 2 % per år skulle ge ett skuldfritt lån efter 50 år. Men kravet sjunker till 1 % när belåningsgraden inte längre är över 70 % och upphör helt vid 50 %, så amorterar du bara minimikravet blir en del av lånet kvar. Väljer du att amortera mer — t.ex. 3 % per år — kortar du lånetiden kraftigt och sparar stort på räntekostnader totalt."
           }
         },
         {
@@ -92,7 +93,7 @@
           "name": "Räknas amorteringskravet på ursprungligt eller aktuellt lån?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Amorteringskravet beräknas som en procent av det ursprungliga lånebeloppet vid varje tidpunkt. I takt med att du amorterar sjunker belåningsgraden — och när den sjunker under 70 % minskar kravet från 2 % till 1 %, och under 50 % försvinner minimikravet helt."
+            "text": "Amorteringskravet beräknas som en procent av det ursprungliga lånebeloppet, inte av det aktuella saldot. Belåningsgraden räknas mot bostadens värde när lånet togs (eller vid en senare omvärdering, tidigast efter fem år). I takt med att du amorterar sjunker belåningsgraden — när den är 70 % eller lägre minskar kravet från 2 % till 1 % av det ursprungliga lånet, och vid 50 % eller lägre försvinner minimikravet helt."
           }
         }
       ]
@@ -100,40 +101,25 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -184,9 +170,7 @@
             font-size: 0.9rem;
         }
         .fi-badge strong { color: var(--primary); }
-        @media (prefers-color-scheme: dark) {
-            .fi-badge { border-color: rgba(52,211,153,0.4); }
-        }
+        
 
         .input-grid {
             display: grid;
@@ -289,9 +273,7 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
         }
-        @media (prefers-color-scheme: dark) {
-            .result-box.highlight { background: linear-gradient(135deg, #059669, #065f46); }
-        }
+        
         .result-box .label {
             font-size: 0.72rem;
             font-weight: 500;
@@ -375,7 +357,7 @@
             text-align: right;
             font-weight: 500;
         }
-        @media (prefers-color-scheme: dark) { .data-table th { color: var(--primary); } }
+        
         .data-table th:first-child { text-align: left; }
         .data-table td {
             padding: 12px;
@@ -406,7 +388,7 @@
             font-weight: 600;
             color: var(--primary-dark);
         }
-        @media (prefers-color-scheme: dark) { .rule-table th { color: var(--primary); } }
+        
         .rule-table td {
             padding: 12px;
             border-bottom: 1px solid var(--border);
@@ -498,19 +480,17 @@
             .affiliate-cta { flex-direction: column; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -539,24 +519,44 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-<header>
-    <div class="container">
-        <div class="header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/">Alla kalkylatorer</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a>
-                <a href="/kalkylatorer/lanekalkylator">Lånekalkylator</a>
-            </nav>
-        </div>
-    </div>
-</header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<main class="container">
+
+
+<main class="container" id="innehall">
     <div class="page-header">
         <div class="breadcrumb">
             <a href="/">GratisKalkyl.se</a> &rsaquo; <a href="/">Kalkylatorer</a> &rsaquo; Amorteringskalkylator
@@ -597,8 +597,8 @@
                 <div class="range-labels"><span>0,5 %</span><span>12 %</span></div>
             </div>
             <div class="input-group" id="customAmortGroup" style="display:none;">
-                <label for="customAmort">Amortering (% / år)</label>
-                <span class="sublabel">Utöver FI:s minimikrav</span>
+                <label for="customAmort">Total amortering (% / år)</label>
+                <span class="sublabel">Av ursprungligt lånebelopp – bör vara minst FI:s krav</span>
                 <input type="number" id="customAmort" value="2" min="0.5" max="15" step="0.1">
                 <input type="range" id="customAmortRange" min="0.5" max="10" step="0.1" value="2">
                 <div class="range-labels"><span>0,5 %</span><span>10 %</span></div>
@@ -638,7 +638,7 @@
             <div class="result-box">
                 <div class="label">Ränta/mån (netto)</div>
                 <div class="value" id="resRanta">—</div>
-                <div class="sub">efter 30 % ränteavdrag</div>
+                <div class="sub">efter ränteavdrag (30 %/21 %)</div>
             </div>
             <div class="result-box">
                 <div class="label">Belåningsgrad</div>
@@ -674,13 +674,7 @@
         </table>
 
         <!-- Affiliate CTA -->
-        <div class="affiliate-cta">
-            <div class="cta-text">
-                <h3>Jämför bolåneräntor — spara tusenlappar varje år</h3>
-                <p>Hitta det lägsta bolånet via Compricer eller Lendo. Gratis och utan bindning.</p>
-            </div>
-            <a href="https://www.compricer.se/bolan/" class="cta-btn" target="_blank" rel="noopener sponsored">Jämför räntor →</a>
-        </div>
+        
     </div>
 
     <!-- SEO Info section -->
@@ -689,7 +683,7 @@
         <p>Att köpa bostad är det största ekonomiska beslutet för de flesta svenska hushåll. Vår amorteringskalkylator hjälper dig att förstå din verkliga månadskostnad, hur Finansinspektionens amorteringskrav påverkar dig och hur ränteavdraget minskar din faktiska kostnad. Räkna på olika scenarion och se hur extra amortering förkortar lånetiden och spar pengar på sikt.</p>
 
         <h3>FI:s amorteringskrav — så fungerar det 2026</h3>
-        <p>Finansinspektionen (FI) införde amorteringskrav 2016 och skärpte dem 2018. Reglerna gäller alla nya bolån och bolån som utökas:</p>
+        <p>Finansinspektionen (FI) införde amorteringskravet 1 juni 2016. Det gäller bolån som tagits från och med dess – lån tagna före 1 juni 2016 omfattas inte. Amorteringen räknas i procent av det ursprungliga lånebeloppet, och belåningsgraden räknas mot bostadens värde när lånet togs (omvärdering får göras tidigast efter fem år):</p>
 
         <table class="rule-table">
             <tr>
@@ -704,12 +698,12 @@
             </tr>
             <tr>
                 <td>50–70 %</td>
-                <td>1 % av lånebeloppet / år</td>
+                <td>1 % av ursprungligt lånebelopp / år</td>
                 <td>2 500 kr / mån</td>
             </tr>
             <tr>
                 <td>70–90 %</td>
-                <td>2 % av lånebeloppet / år</td>
+                <td>2 % av ursprungligt lånebelopp / år</td>
                 <td>5 000 kr / mån</td>
             </tr>
         </table>
@@ -730,7 +724,7 @@
         <p>Nackdelen är att pengarna låses upp i bostaden och inte är lika likvida som ett sparkonto. En bra tumregel: håll tre månadslöner i likvid buffert — amortera resten.</p>
 
         <h3>Vad påverkar bolåneräntan 2026?</h3>
-        <p>Bolåneräntan sätts i förhållande till Riksbankens styrränta och bankernas finansieringskostnader. 2026 är rörlig bolåneränta (3 månaders bindningstid) i intervallet 3–4 % beroende på bank och belåningsgrad. En lägre belåningsgrad ger normalt sett en marginellt lägre ränta — ytterligare ett skäl att amortera aktivt.</p>
+        <p>Bolåneräntan sätts i förhållande till Riksbankens styrränta och bankernas finansieringskostnader. Enligt SCB var den genomsnittliga rörliga bolåneräntan (3 månaders bindningstid) för nya avtal 2,73 % i augusti 2026, och snittet för alla nya bolån 2,78 %. Din egen ränta beror på bank och belåningsgrad. En lägre belåningsgrad ger normalt sett en marginellt lägre ränta — ytterligare ett skäl att amortera aktivt.</p>
     </div>
 
     <!-- FAQ Section -->
@@ -749,7 +743,7 @@
 
         <details>
             <summary>Hur beräknas amorteringen per månad?</summary>
-            <p>Amorteringskravet anges i procent per år av det ursprungliga lånebeloppet vid varje tidpunkt. Exempel: Lån på 2 000 000 kr med 2 % krav = 40 000 kr/år = 3 333 kr/månad. Utöver detta tillkommer räntekostnaden, som minskar i takt med att lånet amorteras ned.</p>
+            <p>Amorteringskravet anges i procent per år av det ursprungliga lånebeloppet. Exempel: Lån på 2 000 000 kr med 2 % krav = 40 000 kr/år = 3 333 kr/månad. Utöver detta tillkommer räntekostnaden, som minskar i takt med att lånet amorteras ned.</p>
         </details>
 
         <details>
@@ -764,24 +758,32 @@
 
         <details>
             <summary>Hur länge tar det att amortera av ett bolån?</summary>
-            <p>Med 2 % amorteringskrav tar det 50 år att amortera ner till noll från 100 % belåning, men i praktiken sjunker belåningsgraden med åren och kravet minskas. Väljer du att amortera mer — t.ex. 3 % per år — kortar du lånetiden kraftigt och sparar stort på räntekostnader totalt.</p>
+            <p>Amorteringen räknas på det ursprungliga lånebeloppet, så 2 % per år skulle ge ett skuldfritt lån efter 50 år. Men kravet sjunker till 1 % när belåningsgraden inte längre är över 70 % och upphör helt vid 50 %, så amorterar du bara minimikravet blir en del av lånet kvar. Väljer du att amortera mer — t.ex. 3 % per år — kortar du lånetiden kraftigt och sparar stort på räntekostnader totalt.</p>
         </details>
 
         <details>
             <summary>Räknas amorteringskravet på ursprungligt eller aktuellt lån?</summary>
-            <p>Amorteringskravet beräknas som en procent av det aktuella lånesaldot. I takt med att du amorterar sjunker belåningsgraden — och när den sjunker under 70 % minskar kravet från 2 % till 1 %, och under 50 % försvinner minimikravet helt.</p>
+            <p>Amorteringskravet beräknas som en procent av det ursprungliga lånebeloppet, inte av det aktuella saldot. Belåningsgraden räknas mot bostadens värde när lånet togs (eller vid en senare omvärdering, tidigast efter fem år). I takt med att du amorterar sjunker belåningsgraden — när den är 70 % eller lägre minskar kravet från 2 % till 1 % av det ursprungliga lånet, och vid 50 % eller lägre försvinner minimikravet helt.</p>
         </details>
     </div>
 </main>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-        Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
-        <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <!-- Cross-linking -->
 <div class="container" style="padding-bottom:24px;">
@@ -892,7 +894,9 @@
         document.getElementById('resTotal').textContent = lan > 0 ? fmt(totalPerMaand) : '—';
         document.getElementById('resTotalSub').textContent = lan > 0 ? 'amortering + netto ränta' : '';
         document.getElementById('resAmort').textContent = lan > 0 ? fmt(amortPerMaand) : '—';
-        document.getElementById('resAmortPct').textContent = lan > 0 ? fmtPct(amortPct) + ' / år' : '';
+        document.getElementById('resAmortPct').textContent = lan > 0
+            ? fmtPct(amortPct) + ' / år' + (calcMode === 'custom' && amortPct < fiTotalPct ? ' – under FI:s krav (' + fiTotalPct + ' %)' : '')
+            : '';
         document.getElementById('resRanta').textContent = lan > 0 ? fmt(rantaNetto) : '—';
         document.getElementById('resBelaning').textContent = belaningsgrad > 0 ? fmtPct(belaningsgrad) : '—';
         document.getElementById('resBelaning2').textContent = belaningsgrad > 90 ? '⚠️ Överstiger bolånetaket 90 %' : (belaningsgrad > 0 ? 'Lån: ' + fmt(lan) : '');
@@ -901,24 +905,33 @@
         buildChart(lan, rantaPct, amortPct, bostadspris);
     }
 
+    // Årsplan enligt FI:s amorteringskrav:
+    // amorteringen är en procent av det URSPRUNGLIGA lånebeloppet, och belåningsgraden
+    // räknas mot bostadens värde vid lånetillfället (köpeskillingen).
+    // Minimikrav: 2 % när belåningsgraden är över 70 %, 1 % över 50 %, annars 0 %.
+    // Eget belopp: användarens procentsats av det ursprungliga lånet varje år.
     function buildChart(initialLan, rantaPct, amortPct, bostadspris) {
-        const years = Math.min(30, 50);
+        const years = 30;
         const labels = [];
         const amortData = [];
         const rantaData = [];
         const tableRows = [];
 
         let saldo = initialLan;
-        const monthlyRate = rantaPct / 100 / 12;
 
         for (let yr = 1; yr <= years; yr++) {
             if (saldo <= 0) break;
 
-            // Determine krav for current saldo
+            // Belåningsgrad vid årets början mot värdet vid lånetillfället
             const bg = bostadspris > 0 ? saldo / bostadspris * 100 : 0;
-            let pct = amortPct; // use the mode's amortPct directly (already includes skuldkvot if needed)
+            let pct;
+            if (calcMode === 'custom') {
+                pct = amortPct;
+            } else {
+                pct = bg > 70 ? 2 : (bg > 50 ? 1 : 0);
+            }
 
-            const amortYear = Math.min(saldo, saldo * pct / 100);
+            const amortYear = Math.min(saldo, initialLan * pct / 100);
             const rantaYear = saldo * rantaPct / 100;
 
             // Ränteavdrag
@@ -967,8 +980,8 @@
         canvas.height = H * dpr;
         ctx.scale(dpr, dpr);
 
-        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const primaryColor = isDark ? '#34d399' : '#1a6b4a';
+        const isDark = false;
+        const primaryColor = isDark ? '#0D6A45' : '#0D6A45';
         const accentColor = '#6366f1';
         const textColor = isDark ? '#9ca3af' : '#666';
         const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';

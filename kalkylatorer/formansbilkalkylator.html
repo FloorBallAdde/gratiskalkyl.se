@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -72,7 +73,7 @@
                 "name": "Hur mycket skatt betalar man på förmånsbil per månad?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Skatten beräknas som förmånsvärdet x din marginalskattesats (kommunalskatt + eventuell statlig skatt). För en bensinbil med nybilspris 400 000 kr blir förmånsvärdet cirka 6 700 kr/månad plus fordonsskatt, vilket vid 32 % skatt ger ungefär 2 150 kr/månad i extra skatt. Skatten dras direkt på din lön via arbetsgivaren."
+                    "text": "Skatten beräknas som förmånsvärdet × din marginalskatt: kommunalskatt, plus 20 % statlig skatt på den del av årsinkomsten (lön + förmånsvärde) som överstiger 660 400 kr 2026. För en bensinbil med nybilspris 400 000 kr blir förmånsvärdet cirka 6 700 kr/månad plus fordonsskatt, vilket vid 32 % skatt ger ungefär 2 140 kr/månad i extra skatt plus skatten på fordonsskatten. Skatten dras direkt på din lön via arbetsgivaren."
                 }
             },
             {
@@ -80,7 +81,7 @@
                 "name": "Vad gäller för elbilar och laddhybrider som förmånsbil 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr."
+                    "text": "För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. Det gäller bilar som blev skattepliktiga första gången den 1 juli 2022 eller senare; äldre bilar har andra nedsättningsregler. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr."
                 }
             },
             {
@@ -96,7 +97,7 @@
                 "name": "Kan man kvitta drivmedelskostnad mot förmånsvärdet?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja, om du betalar drivmedlet privat för tjänstekörning kan du kvittera mot arbetsgivaren. Om du betalar privat drivmedel för privatresor inkluderar arbetsgivaren ett drivmedelstillägg i förmånsvärdet. Det är viktigt att hålla reda på milkörning för att göra rätt avdrag."
+                    "text": "Drivmedel ingår inte i bilförmånen utan hanteras separat. Betalar arbetsgivaren drivmedel för dina privata resor uppstår en drivmedelsförmån som värderas till 1,2 × marknadsvärdet av drivmedlet; betalar du tillbaka en del minskar förmånsvärdet med det beloppet. Betalar du själv drivmedlet för privata resor blir det ingen drivmedelsförmån. Betalar du drivmedel för tjänsteresor kan arbetsgivaren ersätta dig skattefritt med högst 12 kr/mil (9,50 kr/mil för bil som drivs helt med el)."
                 }
             },
             {
@@ -112,36 +113,24 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(52,211,153,0.15);
-                --primary: #34d399;
-                --primary-dark: #6ee7b7;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -371,36 +360,56 @@
             font-size: 0.8rem; color: var(--text-light); line-height: 1.6;
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
+<div id="innehall"></div>
 
-<header>
-    <div class="container">
-        <div class="header-inner">
-            <a href="/" class="logo">GratisKalkyl.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/">Kalkylatorer</a>
-                <a href="/artiklar/">Guider</a>
-            </nav>
-        </div>
-    </div>
-</header>
+
+
 
 <div class="container">
     <div class="breadcrumb">
@@ -432,9 +441,8 @@
                 </div>
                 <div>
                     <input type="number" class="number-input" id="kommunalskatt"
-                           value="32" min="28" max="36" step="0.1" placeholder="Kommunalskatt %"
-                           oninput="calculate()">
-                    <p class="input-hint">Kommunalskattesats % (din kommun, t.ex. 32)</p>
+                           value="32" min="28" max="36" step="0.1" placeholder="Kommunalskatt %">
+                    <p class="input-hint">Kommunalskattesats % (din kommun, t.ex. 32). Statlig skatt räknas med utifrån lönen nedan.</p>
                 </div>
             </div>
         </div>
@@ -449,6 +457,21 @@
                 <button class="fuel-btn" onclick="setFuel('bev',this)">Elbil (BEV)</button>
             </div>
             <p class="input-hint" id="fuel-hint">Full förmånsvärdesberäkning baserat på nypris.</p>
+        </div>
+
+        <div class="input-group">
+            <div class="input-row">
+                <div>
+                    <div class="input-label"><label for="lon">Din bruttolön (kr/mån)</label></div>
+                    <input type="number" class="number-input" id="lon" value="40000" min="0" max="500000" step="500" placeholder="Bruttolön kr/mån">
+                    <p class="input-hint">Används för att se om förmånen hamnar över brytpunkten för statlig skatt (660 400 kr/år 2026).</p>
+                </div>
+                <div>
+                    <div class="input-label"><label for="fordonsskatt">Bilens fordonsskatt (kr/år)</label></div>
+                    <input type="number" class="number-input" id="fordonsskatt" value="0" min="0" max="100000" step="100" placeholder="Fordonsskatt kr/år">
+                    <p class="input-hint">Fordonsskatten ingår i förmånsvärdet. Nya bensin- och dieselbilar kan ha förhöjd skatt (malus) de första tre åren.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Results -->
@@ -466,7 +489,7 @@
             <div class="result-box">
                 <div class="result-label">Förmånsvärde/år</div>
                 <div class="result-value" id="r-fv-year">-</div>
-                <div class="result-sub">ränte- och prisbasbeloppsdel</div>
+                <div class="result-sub">inkl. fordonsskatt</div>
             </div>
             <div class="result-box">
                 <div class="result-label">Arbetsgivaravgift/år</div>
@@ -491,14 +514,7 @@
     </div>
 
     <!-- Affiliate -->
-    <div class="affiliate-box">
-        <h3>Jämför billeasingavtal gratis</h3>
-        <p>Hitta bästa privatleasing eller tjänstebilsleasing genom att jämföra erbjudanden från flera aktörer på marknaden.</p>
-        <div class="affiliate-buttons">
-            <a href="https://www.zmarta.se/billaan" target="_blank" rel="noopener nofollow" class="btn-af btn-primary-af">Jämför via Zmarta</a>
-            <a href="https://www.sambla.se/billaan" target="_blank" rel="noopener nofollow" class="btn-af btn-outline-af">Billån via Sambla</a>
-        </div>
-    </div>
+    
 
     <!-- SEO text -->
     <div class="seo-section">
@@ -512,7 +528,7 @@
         <p><strong>Räntedel:</strong> 70 % av statslåneräntan den 30 november året före (2,55 % för 2026) plus 1 procentenhet, gånger nybilspriset. Det ger 2,785 % för 2026. Summan av de tre delarna plus fordonsskatten är förmånsvärdet per år.</p>
 
         <h3>Elbil och laddhybrid som förmånsbil</h3>
-        <p>För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr. Det gör elbilar klart billigare som förmånsbil: en elbil för 400 000 kr får ett förmånsvärde på cirka 4 060 kr/månad, mot cirka 6 700 kr för en bensinbil med samma pris.</p>
+        <p>För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. Det gäller bilar som blev skattepliktiga första gången den 1 juli 2022 eller senare; äldre bilar har andra nedsättningsregler. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr. Det gör elbilar klart billigare som förmånsbil: en elbil för 400 000 kr får ett förmånsvärde på cirka 4 060 kr/månad, mot cirka 6 700 kr för en bensinbil med samma pris.</p>
 
         <h3>Arbetsgivarens kostnad för förmånsbilen</h3>
         <p>Förutom den skatt du som anställd betalar, belastar förmånen också din arbetsgivare med sociala avgifter på 31,42% av förmånsvärdet. Den totala kostnaden för arbetsgivaren inkluderar därför bilens faktiska kostnad plus arbetsgivaravgiften på förmånsvärdet — något som många arbetsgivare tar hänsyn till vid förhandlingar.</p>
@@ -520,8 +536,8 @@
         <h3>Jämför förmånsbil med privat bil</h3>
         <p>En förmånsbil kan vara ekonomiskt fördelaktig om arbetsgivaren täcker drivmedelskostnader och service. Jämför din månadskostnad för förmånsbilen med vad det faktiskt kostar att äga och driva en privat bil — använd vår <a href="/kalkylatorer/bilkostnadsraknare">bilkostnadsräknare</a> för en fullständig jämförelse. Glöm inte att räkna in försäkring, amortering på billånet och däckkostnader i det privata alternativet.</p>
 
-        <h3>Vad är drivmedelstillägget?</h3>
-        <p>Om arbetsgivaren betalar allt drivmedel — inkl. privatkörning — läggs ett drivmedelstillägg till förmånsvärdet. För bensin/diesel är tillägget 2026 fastställt till ett belopp per månad beroende på bilens drivmedelstyp. Betalar du privat drivmedel för privata resor slipper du detta tillägg men måste hålla reda på milkörningen för att kvitta eventuell tjänstekörning mot arbetsgivaren.</p>
+        <h3>Vad är drivmedelsförmån?</h3>
+        <p>Drivmedel ingår inte i bilförmånsvärdet. Om arbetsgivaren betalar drivmedel även för din privata körning får du en drivmedelsförmån, som värderas till 1,2 × marknadsvärdet av drivmedlet för de privata resorna. Betalar du själv drivmedlet för privata resor blir det ingen drivmedelsförmån. Betalar du drivmedel för tjänsteresor kan arbetsgivaren ersätta dig skattefritt med högst 12 kr/mil (9,50 kr/mil för bil som drivs helt med el) — håll därför reda på körningen i jobbet.</p>
     </div>
 
     <!-- FAQ -->
@@ -538,11 +554,11 @@
         </div>
         <div class="faq-item">
             <div class="faq-question">Hur mycket skatt betalar man på förmånsbil per månad?</div>
-            <div class="faq-answer">Skatten beräknas som förmånsvärdet multiplicerat med din kommunalskattesats. För en bensinbil med nybilspris 400 000 kr blir förmånsvärdet cirka 6 700 kr/månad plus fordonsskatt, vilket vid 32 % skatt ger ungefär 2 150 kr extra skatt per månad. Skatten dras direkt på din lön via arbetsgivarens löneberäkning.</div>
+            <div class="faq-answer">Skatten beräknas som förmånsvärdet × din marginalskatt: kommunalskatt, plus 20 % statlig skatt på den del av årsinkomsten (lön + förmånsvärde) som överstiger 660 400 kr 2026. För en bensinbil med nybilspris 400 000 kr blir förmånsvärdet cirka 6 700 kr/månad plus fordonsskatt, vilket vid 32 % skatt ger ungefär 2 140 kr/månad i extra skatt plus skatten på fordonsskatten. Skatten dras direkt på din lön via arbetsgivaren.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Vad gäller för elbilar och laddhybrider som förmånsbil 2026?</div>
-            <div class="faq-answer">För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr.</div>
+            <div class="faq-answer">För elbilar sätts nybilspriset ned med 350 000 kr, för laddhybrider med 140 000 kr och för gasbilar med 100 000 kr innan förmånsvärdet räknas ut — dock högst med 50 % av nybilspriset. Det gäller bilar som blev skattepliktiga första gången den 1 juli 2022 eller senare; äldre bilar har andra nedsättningsregler. En elbil för 400 000 kr räknas alltså som om den kostade 200 000 kr.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Vad är skillnaden mellan förmånsvärde och förmånsskatt?</div>
@@ -550,7 +566,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-question">Kan man kvitta drivmedelskostnad mot förmånsvärdet?</div>
-            <div class="faq-answer">Ja, om du betalar drivmedlet privat för tjänstekörning kan du kvittera mot arbetsgivaren. Om du betalar privat drivmedel för privatresor läggs istället ett drivmedelstillägg till förmånsvärdet. Det är viktigt att hålla reda på milkörningen för att göra rätt avdrag.</div>
+            <div class="faq-answer">Drivmedel ingår inte i bilförmånen utan hanteras separat. Betalar arbetsgivaren drivmedel för dina privata resor uppstår en drivmedelsförmån som värderas till 1,2 × marknadsvärdet av drivmedlet; betalar du tillbaka en del minskar förmånsvärdet med det beloppet. Betalar du själv drivmedlet för privata resor blir det ingen drivmedelsförmån. Betalar du drivmedel för tjänsteresor kan arbetsgivaren ersätta dig skattefritt med högst 12 kr/mil (9,50 kr/mil för bil som drivs helt med el).</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Hur jämför man förmånsbil mot privat bilinnehav?</div>
@@ -584,26 +600,22 @@
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#16a34a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#16a34a);text-decoration:none;">Integritetspolicy</a></p>
-            <div class="footer-inner">
-            <div>
-                <div class="footer-logo">GratisKalkyl.se</div>
-                <p style="font-size:0.85rem;color:var(--text-light);margin-top:6px;">Gratis kalkylatorer för svenska hushåll</p>
-            </div>
-            <div class="footer-links">
-                <a href="/">Alla kalkylatorer</a>
-                <a href="/artiklar/">Guider</a>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a>
-            </div>
-        </div>
-        <div class="disclaimer">
-            Beräkningarna är ungefärliga och kan innehålla fel — verifiera alltid viktiga beslut med Skatteverket eller en skatterådgivare. GratisKalkyl.se tar inget ansvar för eventuella felaktigheter. Förmånsvärdesregler uppdateras av Skatteverket och kan ändras mellan åren.
-        </div>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
 (function() {
@@ -616,8 +628,8 @@
     var NEDSATTNING = { fossil: 0, phev: 140000, bev: 350000 }; // nedsättning av nybilspriset, max 50 %
     var HINTS     = {
         fossil: 'Bensin/diesel: förmånsvärde = 0,29 × PBB + 2,785 % + 13 % av nybilspriset (+ fordonsskatt).',
-        phev:   'Laddhybrid: nybilspriset sätts ned med 140 000 kr (högst 50 %) innan förmånsvärdet räknas.',
-        bev:    'Elbil: nybilspriset sätts ned med 350 000 kr (högst 50 %) innan förmånsvärdet räknas.'
+        phev:   'Laddhybrid: nybilspriset sätts ned med 140 000 kr (högst 50 %) innan förmånsvärdet räknas. Gäller bilar som blev skattepliktiga fr.o.m. 1 juli 2022.',
+        bev:    'Elbil: nybilspriset sätts ned med 350 000 kr (högst 50 %) innan förmånsvärdet räknas. Gäller bilar som blev skattepliktiga fr.o.m. 1 juli 2022.'
     };
 
     function fmtSEK(n) {
@@ -650,6 +662,9 @@
     function calculate() {
         var nypris        = parseInt(document.getElementById('nypris').value) || 400000;
         var kommSkatt     = (parseFloat(document.getElementById('kommunalskatt').value) || 32) / 100;
+        var lonMan        = Math.max(0, parseFloat(document.getElementById('lon').value) || 0);
+        var fordonsskatt  = Math.max(0, parseFloat(document.getElementById('fordonsskatt').value) || 0);
+        var BRYTPUNKT     = 660400; // brytpunkt för statlig skatt 2026 (kr/år)
 
         // Nedsättning av nybilspriset för miljöbilar (högst 50 %)
         var nedsattning   = Math.min(NEDSATTNING[fuelType], nypris * 0.5);
@@ -663,13 +678,17 @@
         // Förmånsvärde med nedsättning
         var rantedel      = rantaFaktor * prisFV;
         var prisdel       = fastDel + 0.13 * prisFV;
-        var fvYear        = rantedel + prisdel;
-        var actRed        = baseFV - fvYear;
+        var fvYear        = rantedel + prisdel + fordonsskatt; // förmånsvärdet inkluderar fordonsskatten
+        var actRed        = baseFV + fordonsskatt - fvYear;
         var grans         = fastDel;
 
         var fvMonth       = fvYear / 12;
-        var taxMonth      = fvMonth   * kommSkatt;
-        var taxYear       = fvYear    * kommSkatt;
+        // Marginalskatt: kommunalskatt på hela förmånsvärdet + 20 % statlig skatt på den del
+        // av lön + förmånsvärde som ligger över brytpunkten.
+        var overBryt      = Math.min(fvYear, Math.max(0, lonMan * 12 + fvYear - BRYTPUNKT));
+        var taxYear       = fvYear * kommSkatt + overBryt * 0.20;
+        var taxMonth      = taxYear / 12;
+        var margSats      = fvYear > 0 ? taxYear / fvYear : kommSkatt;
         var empYear       = fvYear    * EMP_AVG;
 
         // Update result boxes
@@ -691,13 +710,15 @@
             rows.push(['Sänkning jämfört med bensinbil', '-' + fmtSEK(actRed)]);
         }
         rows = rows.concat([
-            ['Förmånsvärde per år (exkl. fordonsskatt)',    fmtSEK(fvYear)],
+            ['Fordonsskatt',                               fmtSEK(fordonsskatt)],
+            ['Förmånsvärde per år (inkl. fordonsskatt)',    fmtSEK(fvYear)],
             ['Förmånsvärde per månad',                     fmtSEK(fvMonth)],
             ['Kommunalskattesats',                         (kommSkatt*100).toFixed(1) + '%'],
+            ['Del av förmånen över brytpunkten (+20 % statlig skatt)', fmtSEK(overBryt)],
+            ['Genomsnittlig marginalskatt på förmånen',    (margSats*100).toFixed(1) + '%'],
             ['Extra skatt per månad',                      fmtSEK(taxMonth)],
             ['Extra skatt per år',                         fmtSEK(taxYear)],
-            ['Arbetsgivaravgift per år (31,42%)',           fmtSEK(empYear)],
-            ['Total extra kostnad arbetsgivaren/år',        fmtSEK(fvYear + empYear)]
+            ['Arbetsgivarens merkostnad: avgift på förmånsvärdet/år (31,42%)', fmtSEK(empYear)]
         ]);
 
         var tbody = document.getElementById('detail-tbody');
@@ -714,17 +735,17 @@
         var W = canvas.width, H = canvas.height;
         ctx.clearRect(0, 0, W, H);
 
-        var dark     = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var textCol  = dark ? '#f3f4f6' : '#1a1a2e';
-        var subCol   = dark ? '#9ca3af' : '#6b7280';
+        var dark     = false;
+        var textCol  = dark ? '#f3f4f6' : '#15201A';
+        var subCol   = dark ? '#9ca3af' : '#56625B';
         var gridCol  = dark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.05)';
 
         // Stacked bar för förmånsvärde-komponenter, sedan enskilda staplar för skatt och arbetsgivare
         var bars = [
-            { label: 'Räntedel',          value: rantedel, color: '#34d399' },
-            { label: 'Fast + prisdel',    value: prisdel,  color: '#059669' },
+            { label: 'Räntedel',          value: rantedel, color: '#0D6A45' },
+            { label: 'Fast + prisdel',    value: prisdel,  color: '#0D6A45' },
             { label: 'Miljösänkning',     value: reduction, color: '#f87171' },
-            { label: 'Förmånsvärde/år',   value: fvYear,   color: '#6ee7b7' },
+            { label: 'Förmånsvärde/år',   value: fvYear,   color: '#B9DCC8' },
             { label: 'Din skatt/år',      value: taxYear,  color: '#f59e0b' },
             { label: 'Arb.avgift/år',     value: empYear,  color: '#8b5cf6' }
         ];
@@ -797,6 +818,8 @@
     calculate();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', calculate);
     document.getElementById('kommunalskatt').addEventListener('input', calculate);
+    document.getElementById('lon').addEventListener('input', calculate);
+    document.getElementById('fordonsskatt').addEventListener('input', calculate);
 })();
 </script>
 </body>

@@ -109,12 +109,24 @@
     });
   }
 
+  function inFixed(el) {
+    for (var n = el; n && n !== document.body; n = n.parentElement) {
+      if (window.getComputedStyle(n).position === 'fixed') return true;
+    }
+    return false;
+  }
+
   function positionDropdown(input, dropdown) {
     var rect = input.getBoundingClientRect();
-    dropdown.style.position = 'fixed';
-    dropdown.style.left = rect.left + 'px';
-    dropdown.style.top = (rect.bottom + 6) + 'px';
-    dropdown.style.width = rect.width + 'px';
+    var vw = document.documentElement.clientWidth;
+    var w = Math.min(Math.max(rect.width, 280), vw - 16);
+    var left = Math.max(8, Math.min(rect.left, vw - w - 8));
+    var fixed = inFixed(input);
+    dropdown.style.position = fixed ? 'fixed' : 'absolute';
+    dropdown.style.left = (fixed ? left : left + window.scrollX) + 'px';
+    dropdown.style.top = (fixed ? rect.bottom + 6 : rect.bottom + window.scrollY + 6) + 'px';
+    dropdown.style.width = w + 'px';
+    dropdown.style.maxHeight = Math.max(200, Math.min(480, window.innerHeight * 0.6)) + 'px';
   }
 
   function attach(input) {

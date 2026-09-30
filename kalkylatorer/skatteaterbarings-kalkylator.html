@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,45 +34,27 @@
     <meta name="twitter:title" content="Skatteåterbäringskalkylator 2026 – Räkna ut din skatteåterbäring">
     <meta name="twitter:description" content="Räkna ut din förväntade skatteåterbäring för 2026. Ange lön, räntekostnader och avdrag.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
-            --positive: #16a34a;
+            --positive: #0D6A45;
             --negative: #dc2626;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-            .data-table th {
-                color: #34d399 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -339,7 +322,7 @@
         }
         .info-section li { margin-bottom: 8px; }
         .formula-box {
-            background: #f8f9fa;
+            background: #F6F5F1;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px;
@@ -348,12 +331,7 @@
             margin: 16px 0;
             overflow-x: auto;
         }
-        @media (prefers-color-scheme: dark) {
-            .formula-box {
-                background: rgba(26, 107, 74, 0.1);
-                border-color: var(--border);
-            }
-        }
+        
 
         /* FAQ */
         details { margin-bottom: 16px; }
@@ -430,11 +408,11 @@
             .cross-links { grid-template-columns: 1fr 1fr; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
@@ -457,7 +435,7 @@
                 "name": "Vad påverkar storleken på skatteåterbäringen?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "De vanligaste faktorerna som ger skatteåterbäring är: ränteavdrag på bolån (30% av räntekostnaderna), ROT- och RUT-avdrag, resor till och från arbetet (över 11 000 kr per år), kapitalförluster och om du har betalat för mycket preliminärskatt under året."
+                    "text": "De vanligaste faktorerna som ger skatteåterbäring är ränteavdrag på bolån (30 % av räntekostnaderna), resor till och från arbetet (kostnader över 15 000 kr per år 2026), kapitalförluster och att du har betalat för mycket preliminärskatt under året, till exempel efter en ojämn inkomst. ROT- och RUT-avdrag ger normalt ingen återbäring eftersom de redan är avdragna på fakturan."
                 }
             },
             {
@@ -465,7 +443,7 @@
                 "name": "Hur beräknas ränteavdraget?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Du får dra av 30% av dina räntekostnader som en skattereduktion. Om ditt underskott av kapital överstiger 100 000 kr per år är avdraget 21% på den överskjutande delen. Ränteavdraget gäller bolåneränta, studielånsränta och andra lån."
+                    "text": "Du får 30 % av ditt underskott av kapital (räntekostnader minus kapitalinkomster) som skattereduktion. Om underskottet överstiger 100 000 kr per år är reduktionen 21 % på den överskjutande delen. Ränteavdraget gäller bland annat bolåneränta och ränta på privatlån."
                 }
             },
             {
@@ -473,7 +451,7 @@
                 "name": "Vad är skillnaden mellan skatteåterbäring och restskatt?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Skatteåterbäring innebär att du har betalat mer preliminärskatt än din slutliga skatt — du får pengar tillbaka. Restskatt innebär det motsatta, att du har betalat för lite preliminärskatt och måste betala in mellanskillnaden. Restskatt kan uppstå om du t.ex. har haft kapitalvinster eller sidoinkomster."
+                    "text": "Skatteåterbäring innebär att du betalat mer preliminärskatt än din slutliga skatt — du får pengar tillbaka. Restskatt innebär att du betalat för lite och måste betala in mellanskillnaden. Restskatt kan uppstå vid kapitalvinster, sidoinkomster eller om du jämkat skatten för mycket."
                 }
             },
             {
@@ -481,7 +459,7 @@
                 "name": "Hur mycket ROT-avdrag kan jag få?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "ROT-avdrag ger 30% skattereduktion på arbetskostnaden för renovering och reparation av din bostad. Maxbeloppet per person och år är 50 000 kr. ROT- och RUT-avdrag delar på ett gemensamt tak om 75 000 kr per person."
+                    "text": "ROT-avdrag ger 30 % skattereduktion på arbetskostnaden för renovering och reparation av din bostad. Maxbeloppet per person och år är 50 000 kr. ROT- och RUT-avdrag delar på ett gemensamt tak om 75 000 kr per person. Avdraget görs direkt på fakturan och ger därför normalt ingen skatteåterbäring."
                 }
             },
             {
@@ -489,7 +467,7 @@
                 "name": "Räknas jobbskatteavdraget in automatiskt?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja, jobbskatteavdraget är redan inräknat i Skatteverkets skattetabeller som din arbetsgivare använder. Du behöver inte ansöka om det separat. Kalkylatorn tar hänsyn till jobbskatteavdraget i beräkningen av både din preliminärskatt och din slutliga skatt."
+                    "text": "Ja, jobbskatteavdraget är redan inräknat i Skatteverkets skattetabeller som din arbetsgivare använder. Du behöver inte ansöka om det. Kalkylatorn tar hänsyn till detta i beräkningen av både preliminärskatt och slutlig skatt."
                 }
             },
             {
@@ -497,16 +475,14 @@
                 "name": "Vad är skiktgränsen för statlig skatt 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Skiktgränsen för statlig inkomstskatt 2026 är 643 000 kr. Det innebär att du betalar 20% statlig skatt på den del av din beskattningsbara inkomst som överstiger detta belopp. Med hänsyn till grundavdraget motsvarar detta en årsinkomst (brytpunkt) på cirka 660 400 kr, eller en månadslön på cirka 55 000 kr."
+                    "text": "Skiktgränsen för 2026 är 643 000 kr. Du betalar 20 procent statlig skatt på beskattningsbar inkomst som överstiger detta belopp. Med hänsyn till grundavdraget motsvarar det en månadslön på cirka 55 000 kr (brytpunkt 660 400 kr)."
                 }
             }
         ]
     }
     </script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -535,23 +511,44 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
-                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> › Skatteåterbäringskalkylator</div>
             <h1>Skatteåterbäringskalkylator 2026</h1>
@@ -570,15 +567,15 @@
 
                 <div class="input-group">
                     <label for="taxRate">Kommunalskatt</label>
-                    <div class="sublabel">Total kommunal + landstingsskatt</div>
-                    <input type="number" id="taxRate" value="32.37" min="28" max="36" step="0.01">
-                    <input type="range" id="taxRateRange" min="28" max="36" step="0.01" value="32.37">
+                    <div class="sublabel">Total kommunal- och regionskatt (snitt 32,38 %)</div>
+                    <input type="number" id="taxRate" value="32.38" min="28" max="36" step="0.01">
+                    <input type="range" id="taxRateRange" min="28" max="36" step="0.01" value="32.38">
                     <div class="range-labels"><span>28 %</span><span>36 %</span></div>
                 </div>
 
                 <div class="input-group">
                     <label for="interest">Räntekostnader per år</label>
-                    <div class="sublabel">Bolåneränta, studielånsränta m.m.</div>
+                    <div class="sublabel">Bolåneränta, ränta på privatlån m.m.</div>
                     <input type="number" id="interest" value="0" min="0" max="500000" step="1000">
                     <input type="range" id="interestRange" min="0" max="300000" step="1000" value="0">
                     <div class="range-labels"><span>0 kr</span><span>300 000 kr</span></div>
@@ -586,7 +583,7 @@
 
                 <div class="input-group">
                     <label for="capitalGain">Kapitalvinst / -förlust</label>
-                    <div class="sublabel">Positivt = vinst, negativt = förlust</div>
+                    <div class="sublabel">Netto efter kvittning. Positivt = vinst, negativt = förlust (70 % av förlust på noterade aktier och aktiefonder är avdragsgill)</div>
                     <input type="number" id="capitalGain" value="0" min="-500000" max="500000" step="1000">
                     <input type="range" id="capitalGainRange" min="-200000" max="200000" step="1000" value="0">
                     <div class="range-labels"><span>-200 000 kr</span><span>+200 000 kr</span></div>
@@ -594,7 +591,7 @@
 
                 <div class="input-group">
                     <label for="rot">ROT-avdrag utnyttjat</label>
-                    <div class="sublabel">Max 50 000 kr/person/år</div>
+                    <div class="sublabel">Avdraget på fakturan, max 50 000 kr/person/år. Ger ingen återbäring, men restskatt om skatten inte räcker</div>
                     <input type="number" id="rot" value="0" min="0" max="50000" step="1000">
                     <input type="range" id="rotRange" min="0" max="50000" step="1000" value="0">
                     <div class="range-labels"><span>0 kr</span><span>50 000 kr</span></div>
@@ -602,7 +599,7 @@
 
                 <div class="input-group">
                     <label for="rut">RUT-avdrag utnyttjat</label>
-                    <div class="sublabel">Max 75 000 kr/person/år</div>
+                    <div class="sublabel">Avdraget på fakturan, ROT + RUT max 75 000 kr/person/år. Ger ingen återbäring</div>
                     <input type="number" id="rut" value="0" min="0" max="75000" step="1000">
                     <input type="range" id="rutRange" min="0" max="75000" step="1000" value="0">
                     <div class="range-labels"><span>0 kr</span><span>75 000 kr</span></div>
@@ -629,7 +626,7 @@
                 <div class="result-box">
                     <div class="label">Ränteavdrag</div>
                     <div class="value" id="interestDeductionValue">0 kr</div>
-                    <div class="sub">30 % skattereduktion</div>
+                    <div class="sub">Reduktion för underskott av kapital</div>
                 </div>
             </div>
 
@@ -671,27 +668,27 @@
 
         <!-- SEO content -->
         <div class="info-section">
-            <p style="margin:0 0 16px;padding:12px 16px;background:var(--primary-light,#ecfdf5);border-radius:8px;">📖 Inför deklarationen 2027: <a href="/artiklar/skatteaterbaring-2027" style="color:var(--primary);font-weight:600;">När kommer skatteåterbäringen 2027?</a> · <a href="/artiklar/deklaration-2027" style="color:var(--primary);font-weight:600;">Deklaration 2027 – datum och nyheter</a> · <a href="/artiklar/reseavdrag-2027" style="color:var(--primary);font-weight:600;">Reseavdrag 2027</a></p>
+            <p style="margin:0 0 16px;padding:12px 16px;background:var(--primary-light,#E4F1EA);border-radius:8px;">📖 Inför deklarationen 2027: <a href="/artiklar/skatteaterbaring-2027" style="color:var(--primary);font-weight:600;">När kommer skatteåterbäringen 2027?</a> · <a href="/artiklar/deklaration-2027" style="color:var(--primary);font-weight:600;">Deklaration 2027 – datum och nyheter</a> · <a href="/artiklar/reseavdrag-2027" style="color:var(--primary);font-weight:600;">Reseavdrag 2027</a></p>
             <h2>Hur fungerar skatteåterbäringen?</h2>
             <p>Varje månad drar din arbetsgivare preliminärskatt från din lön baserat på Skatteverkets skattetabeller. När du deklarerar året efter jämförs den inbetalda preliminärskatten med din faktiska skatt. Om du betalat för mycket får du tillbaka mellanskillnaden som skatteåterbäring. Har du däremot betalat för lite måste du betala restskatt.</p>
 
-            <p>Den vanligaste orsaken till skatteåterbäring är ränteavdrag på bolån. Du får dra av 30 procent av dina räntekostnader, och eftersom detta avdrag oftast inte är inräknat i din preliminärskatt uppstår en mellanskillnad. Andra vanliga orsaker är ROT- och RUT-avdrag som du utnyttjat under året.</p>
+            <p>Den vanligaste orsaken till skatteåterbäring är ränteavdrag på bolån. Du får dra av 30 procent av dina räntekostnader, och eftersom detta avdrag oftast inte är inräknat i din preliminärskatt uppstår en mellanskillnad. Andra vanliga orsaker är reseavdrag, kapitalförluster och att preliminärskatten blivit för hög, till exempel vid en ojämn inkomst. ROT- och RUT-avdrag ger däremot normalt ingen återbäring, eftersom avdraget redan har gjorts på fakturan.</p>
 
             <h3>Så beräknas din skatt 2026</h3>
-            <p>Din totala inkomstskatt beräknas i flera steg. Först dras grundavdraget från din årsinkomst — detta varierar med din inkomstnivå och är som störst (45 600 kr) för inkomster runt 161 000–184 900 kr per år. Den återstående beskattningsbara inkomsten beskattas med din kommunalskatt (i genomsnitt 32,37 procent). Tjänar du mer än skiktgränsen på 643 000 kr tillkommer 20 procent statlig skatt på överskjutande belopp.</p>
+            <p>Din totala inkomstskatt beräknas i flera steg. Först dras grundavdraget från din årsinkomst — detta varierar med din inkomstnivå och är som störst (45 600 kr) för inkomster runt 161 000–184 100 kr per år. Den återstående beskattningsbara inkomsten beskattas med din kommunalskatt (i genomsnitt 32,38 procent). Tjänar du mer än skiktgränsen på 643 000 kr tillkommer 20 procent statlig skatt på överskjutande belopp.</p>
 
-            <p>Därefter reduceras skatten med jobbskatteavdraget, som är en skattereduktion för alla med arbetsinkomst. Jobbskatteavdraget 2026 har förstärkts och ger en sänkning på upp till 4 366 kr per månad för heltidsarbetande.</p>
+            <p>Därefter reduceras skatten med jobbskatteavdraget, som är en skattereduktion för alla med arbetsinkomst. Jobbskatteavdraget 2026 har förstärkts och ger en sänkning på upp till 4 366 kr per månad vid genomsnittlig kommunalskatt. Dessutom får du en skattereduktion för förvärvsinkomst på högst 1 500 kr per år, och du betalar public service-avgift (högst 1 184 kr) och begravningsavgift. Kalkylatorn räknar med allt detta och utgår från att preliminärskatten motsvarar skatten på din lön.</p>
 
             <h3>Ränteavdrag — den största faktorn</h3>
-            <p>Ränteavdraget ger dig 30 procent av dina räntekostnader tillbaka i form av lägre skatt. Har du t.ex. betalat 60 000 kr i bolåneränta under året innebär det 18 000 kr i skattereduktion. Om ditt underskott av kapital (räntekostnader minus kapitalinkomster) överstiger 100 000 kr per år är avdraget 21 procent på den överskjutande delen.</p>
+            <p>Ränteavdraget ger dig 30 procent av dina räntekostnader tillbaka i form av lägre skatt. Har du t.ex. betalat 60 000 kr i bolåneränta under året innebär det 18 000 kr i skattereduktion. Avdraget räknas på ditt underskott av kapital, det vill säga räntekostnader minus kapitalinkomster. Har du en kapitalvinst på 50 000 kr och 60 000 kr i räntor blir underskottet 10 000 kr och reduktionen 3 000 kr. Överstiger underskottet 100 000 kr per år är avdraget 21 procent på den överskjutande delen. En förlust på noterade aktier och aktiefonder som inte kvittas mot vinster räknas med 70 procent i underskottet.</p>
 
             <div class="formula-box">
-Ränteavdrag = räntekostnad × 30 %<br>
+Ränteavdrag = (räntekostnad − kapitalinkomst) × 30 %<br>
 (Om underskott &gt; 100 000 kr: 21 % på överskjutande del)
             </div>
 
-            <h3>ROT och RUT minskar skatten direkt</h3>
-            <p>ROT-avdraget ger 30 procent skattereduktion på arbetskostnaden för renovering, reparation och ombyggnad av din bostad, med ett maxbelopp på 50 000 kr per person och år. RUT-avdraget ger 50 procent skattereduktion på hushållstjänster som städning, barnpassning och trädgårdsarbete, med ett maxbelopp på 75 000 kr. ROT och RUT delar på ett gemensamt tak om 75 000 kr.</p>
+            <h3>ROT och RUT dras av på fakturan</h3>
+            <p>ROT-avdraget ger 30 procent skattereduktion på arbetskostnaden för renovering, reparation och ombyggnad av din bostad, med ett maxbelopp på 50 000 kr per person och år. RUT-avdraget ger 50 procent skattereduktion på hushållstjänster som städning, barnpassning och trädgårdsarbete, med ett maxbelopp på 75 000 kr. ROT och RUT delar på ett gemensamt tak om 75 000 kr. Avdraget görs direkt på fakturan: företaget får pengarna från Skatteverket och det räknas av mot din skatt i deklarationen. Därför ger ROT och RUT normalt ingen skatteåterbäring. Räcker inte din skatt till avdraget får du i stället betala tillbaka mellanskillnaden.</p>
 
             <h3>Tips för att maximera din återbäring</h3>
             <p>Se till att alla räntekostnader är korrekt rapporterade — banken skickar kontrolluppgifter men det kan vara värt att dubbelkolla. Glöm inte att deklarera resor till och från arbetet om du har längre avstånd. Om du gjort kapitalförluster under året, t.ex. sålt aktier med förlust, kan dessa kvitta mot vinster och minska din skatt.</p>
@@ -705,12 +702,12 @@ Ränteavdrag = räntekostnad × 30 %<br>
 
             <details>
                 <summary>Vad påverkar storleken på skatteåterbäringen?</summary>
-                <p style="color:var(--text-light);padding:8px 0 16px;">De vanligaste faktorerna är ränteavdrag på bolån, ROT/RUT-avdrag, arbetsresor och kapitalförluster. Om du har haft en ojämn inkomst under året (t.ex. börjat nytt jobb) kan den preliminärskatten ha blivit för hög eller för låg.</p>
+                <p style="color:var(--text-light);padding:8px 0 16px;">De vanligaste faktorerna som ger skatteåterbäring är ränteavdrag på bolån (30 % av räntekostnaderna), resor till och från arbetet (kostnader över 15 000 kr per år 2026), kapitalförluster och att du har betalat för mycket preliminärskatt under året, till exempel efter en ojämn inkomst. ROT- och RUT-avdrag ger normalt ingen återbäring eftersom de redan är avdragna på fakturan.</p>
             </details>
 
             <details>
                 <summary>Hur beräknas ränteavdraget?</summary>
-                <p style="color:var(--text-light);padding:8px 0 16px;">Du får 30 procent av dina räntekostnader som skattereduktion. Om ditt underskott av kapital överstiger 100 000 kr per år är reduktionen 21 procent på den överskjutande delen. Avdraget gäller bolåneränta, studielånsränta och andra lån.</p>
+                <p style="color:var(--text-light);padding:8px 0 16px;">Du får 30 % av ditt underskott av kapital (räntekostnader minus kapitalinkomster) som skattereduktion. Om underskottet överstiger 100 000 kr per år är reduktionen 21 % på den överskjutande delen. Ränteavdraget gäller bland annat bolåneränta och ränta på privatlån.</p>
             </details>
 
             <details>
@@ -720,7 +717,7 @@ Ränteavdrag = räntekostnad × 30 %<br>
 
             <details>
                 <summary>Hur mycket ROT-avdrag kan jag få?</summary>
-                <p style="color:var(--text-light);padding:8px 0 16px;">ROT-avdrag ger 30 procent skattereduktion på arbetskostnaden för renovering med ett max på 50 000 kr per person och år. ROT och RUT delar på ett gemensamt tak om 75 000 kr per person.</p>
+                <p style="color:var(--text-light);padding:8px 0 16px;">ROT-avdrag ger 30 % skattereduktion på arbetskostnaden för renovering och reparation av din bostad. Maxbeloppet per person och år är 50 000 kr. ROT- och RUT-avdrag delar på ett gemensamt tak om 75 000 kr per person. Avdraget görs direkt på fakturan och ger därför normalt ingen skatteåterbäring.</p>
             </details>
 
             <details>
@@ -755,144 +752,173 @@ Ränteavdrag = räntekostnad × 30 %<br>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter. Kontakta alltid Skatteverket för exakta belopp.</p>
-        </div>
-    </footer>
+    <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
-    // === 2026 Swedish Tax Constants ===
-    const PBB = 59200;          // Prisbasbelopp 2026
-    const SKIKTGRANS = 643000;  // Skiktgräns statlig skatt
-    const STATLIG_SKATT = 0.20; // Statlig skattesats
-    const BEGRAVNINGSAVGIFT = 0.00292; // Genomsnitt 2026
-
-    // === Grundavdrag calculation (under 66) ===
-    function calcGrundavdrag(income) {
-        if (income <= 0) return 0;
-        const pbb = PBB;
-        if (income <= 0.423 * pbb) {
-            return Math.round(0.423 * pbb / 100) * 100;
-        } else if (income <= 0.995 * pbb) {
-            return Math.round(0.423 * pbb / 100) * 100;
-        } else if (income <= 2.72 * pbb) {
-            const base = 0.423 * pbb;
-            const extra = 0.2 * (income - 0.995 * pbb);
-            return Math.min(Math.round((base + extra) / 100) * 100, 45600);
-        } else if (income <= 3.11 * pbb) {
-            return 45600;
-        } else if (income <= 7.88 * pbb) {
-            const ga = 45600 - 0.1 * (income - 3.11 * pbb);
-            return Math.max(Math.round(ga / 100) * 100, 17400);
-        } else {
-            return 17400;
+    // Skattemodell 2026 – samma regler som Skatteverkets skattetabeller (SKV 433, 2026).
+    // Grundavdrag, jobbskatteavdrag, statlig skatt, skattereduktion för förvärvsinkomst,
+    // allmän pensionsavgift, public service-avgift och begravningsavgift. aldre = fyllt 66 år vid årets ingång.
+    var GKSkatt2026 = (function () {
+        var PBB = 59200, IBB = 83400, SKIKT = 643000, PS_MAX = 1184, APA_MAX = 47100;
+        function r6(x) { return Math.round(x * 1e6) / 1e6; }
+        function grundavdrag(fi, aldre) {
+            if (fi <= 0) return 0;
+            var P = PBB, g;
+            if (fi <= 0.99 * P) g = 0.423 * P;
+            else if (fi <= 2.72 * P) g = 0.423 * P + 0.2 * (fi - 0.99 * P);
+            else if (fi <= 3.11 * P) g = 0.77 * P;
+            else if (fi <= 7.88 * P) g = 0.77 * P - 0.1 * (fi - 3.11 * P);
+            else g = 0.293 * P;
+            if (aldre) {
+                var t;
+                if (fi <= 0.91 * P) t = 0.687 * P;
+                else if (fi <= 1.11 * P) t = 0.885 * P - 0.2 * fi;
+                else if (fi <= 1.965 * P) t = 0.6 * P + 0.057 * fi;
+                else if (fi <= 2.72 * P) t = 0.333 * P + 0.1949 * fi;
+                else if (fi <= 3.11 * P) t = 0.3949 * fi - 0.212 * P;
+                else if (fi <= 3.24 * P) t = 0.4949 * fi - 0.523 * P;
+                else if (fi <= 5 * P) t = 0.356 * fi - 0.073 * P;
+                else if (fi <= 7.88 * P) t = 0.017 * P + 0.338 * fi;
+                else if (fi <= 8.08 * P) t = 0.703 * P + 0.251 * fi;
+                else if (fi <= 11.16 * P) t = 2.732 * P;
+                else if (fi <= 12.84 * P) t = 9.651 * P - 0.62 * fi;
+                else t = 1.691 * P;
+                g += t;
+            }
+            return Math.min(Math.ceil(r6(g) / 100) * 100, fi);
         }
-    }
-
-    // === Jobbskatteavdrag (under 66, 2026) ===
-    function calcJobbskatteavdrag(earnedIncome, grundavdrag, kommunalskatt) {
-        const w = earnedIncome;
-        const ga = grundavdrag;
-        const k = kommunalskatt;
-        const pbb = PBB;
-
-        if (w <= 0) return 0;
-
-        let jsa;
-        if (w <= 0.91 * pbb) {
-            jsa = (w - ga) * k;
-        } else if (w <= 3.24 * pbb) {
-            jsa = (0.91 * pbb - ga) * k + 0.3405 * (w - 0.91 * pbb);
-        } else if (w <= 8.08 * pbb) {
-            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (w - 3.24 * pbb);
-        } else if (w <= 13.54 * pbb) {
-            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (8.08 - 3.24) * pbb + 0.030 * (w - 8.08 * pbb);
-        } else {
-            jsa = (0.91 * pbb - ga) * k + 0.3405 * (3.24 - 0.91) * pbb + 0.128 * (8.08 - 3.24) * pbb + 0.030 * (13.54 - 8.08) * pbb;
+        function jobbskatteavdrag(ai, ga, ki, aldre) {
+            if (ai <= 0) return 0;
+            var P = PBB, u;
+            if (aldre) {
+                if (ai <= 1.75 * P) u = 0.22 * ai;
+                else if (ai <= 5.24 * P) u = 0.2635 * P + 0.07 * ai;
+                else u = 0.6293 * P;
+                return Math.floor(r6(u));
+            }
+            if (ai <= 0.91 * P) u = ai - ga;
+            else if (ai <= 3.24 * P) u = 0.91 * P + 0.3874 * (ai - 0.91 * P) - ga;
+            else if (ai <= 8.08 * P) u = 1.813 * P + 0.251 * (ai - 3.24 * P) - ga;
+            else u = 3.027 * P - ga;
+            return Math.max(0, Math.floor(r6(u * ki)));
         }
-
-        return Math.max(0, Math.round(jsa));
-    }
-
-    // === Ränteavdrag ===
-    function calcRanteavdrag(interestCost, capitalGain) {
-        const deficit = interestCost - Math.max(0, capitalGain);
-        if (deficit <= 0) return 0;
-        if (deficit <= 100000) {
-            return Math.round(deficit * 0.30);
-        } else {
-            return Math.round(100000 * 0.30 + (deficit - 100000) * 0.21);
+        function pensionsavgift(inkomst) {
+            if (inkomst < 0.423 * PBB) return 0;
+            var x = r6(0.07 * Math.min(inkomst, 8.07 * IBB)), h = Math.floor(x / 100);
+            return Math.min(x - h * 100 > 50 ? (h + 1) * 100 : h * 100, APA_MAX);
         }
-    }
+        function forvarvsreduktion(bfi) {
+            if (bfi <= 40000) return 0;
+            return Math.floor(r6((Math.min(bfi, 240000) - 40000) * 0.0075));
+        }
+        // fi = årsinkomst (kr), o.kommunalskatt / o.begravning / o.kyrkoavgift i procent,
+        // o.arbetsinkomst = underlag för jobbskatteavdrag (standard = fi), o.aldre = 66+.
+        function skattAr(fi, o) {
+            o = o || {};
+            fi = Math.max(0, fi || 0);
+            var ai = o.arbetsinkomst !== undefined ? Math.max(0, o.arbetsinkomst) : fi;
+            var ks = o.kommunalskatt !== undefined ? o.kommunalskatt : 32.38;
+            var bg = o.begravning !== undefined ? o.begravning : 0.292;
+            var ky = o.kyrkoavgift || 0;
+            var aldre = !!o.aldre, ki = ks / 100;
+            var ga = grundavdrag(fi, aldre);
+            var bfi = Math.max(0, Math.floor(r6(fi - ga) / 100) * 100);
+            var kommunal = bfi * ki;
+            var statlig = Math.max(0, bfi - SKIKT) * 0.2;
+            var rum = kommunal + statlig;
+            var apa = pensionsavgift(ai);
+            var redApa = Math.min(apa, rum); rum -= redApa;
+            var jsa = Math.min(jobbskatteavdrag(ai, ga, ki, aldre), rum); rum -= jsa;
+            var redFi = Math.min(forvarvsreduktion(bfi), rum);
+            var ps = Math.min(Math.floor(bfi * 0.01), PS_MAX);
+            var begr = bfi * bg / 100, kyrka = bfi * ky / 100;
+            var total = kommunal + statlig + apa - redApa - jsa - redFi + ps + begr + kyrka;
+            return {
+                grundavdrag: ga, bfi: bfi, kommunalskatt: kommunal, statligSkatt: statlig,
+                pensionsavgift: apa, jobbskatteavdrag: jsa, forvarvsreduktion: redFi,
+                publicService: ps, begravning: begr, kyrkoavgift: kyrka,
+                total: total, netto: fi - total
+            };
+        }
+        return { PBB: PBB, IBB: IBB, SKIKT: SKIKT, grundavdrag: grundavdrag,
+                 jobbskatteavdrag: jobbskatteavdrag, pensionsavgift: pensionsavgift,
+                 forvarvsreduktion: forvarvsreduktion, skattAr: skattAr };
+    })();
 
-    // === Kapitalskatt ===
-    function calcKapitalskatt(capitalGain) {
-        if (capitalGain <= 0) return 0;
-        return Math.round(capitalGain * 0.30);
+    // === Kapital: överskott beskattas med 30 %, underskott ger skattereduktion 30 % (21 % över 100 000 kr) ===
+    // Nettoförlust på marknadsnoterade aktier och aktiefonder räknas med 70 % (kvotering).
+    function calcKapital(interestCost, capitalGain) {
+        const kapitalinkomst = capitalGain >= 0 ? capitalGain : 0.7 * capitalGain;
+        const netto = kapitalinkomst - Math.max(0, interestCost);
+        if (netto >= 0) return { kapitalskatt: Math.floor(netto * 0.30), underskottsreduktion: 0 };
+        const underskott = -netto;
+        const red = underskott <= 100000 ? underskott * 0.30 : 30000 + (underskott - 100000) * 0.21;
+        return { kapitalskatt: 0, underskottsreduktion: Math.floor(red) };
     }
 
     // === Main calculation ===
     function calculate() {
         const monthlySalary = parseFloat(document.getElementById('salary').value) || 0;
-        const taxRatePercent = parseFloat(document.getElementById('taxRate').value) || 32.37;
+        const taxRatePercent = parseFloat(document.getElementById('taxRate').value) || 32.38;
         const interestCost = parseFloat(document.getElementById('interest').value) || 0;
         const capitalGain = parseFloat(document.getElementById('capitalGain').value) || 0;
-        const rotAmount = parseFloat(document.getElementById('rot').value) || 0;
-        const rutAmount = parseFloat(document.getElementById('rut').value) || 0;
+        const rotAmount = Math.max(0, parseFloat(document.getElementById('rot').value) || 0);
+        const rutAmount = Math.max(0, parseFloat(document.getElementById('rut').value) || 0);
 
-        const annualIncome = monthlySalary * 12;
-        const kommunalskatt = taxRatePercent / 100;
+        const annualIncome = Math.max(0, monthlySalary * 12);
 
-        // Step 1: Grundavdrag
-        const grundavdrag = calcGrundavdrag(annualIncome);
-        const taxableIncome = Math.max(0, annualIncome - grundavdrag);
+        // Skatt på lönen (slutlig skatt 2026). Antas motsvara den preliminärskatt arbetsgivaren dragit.
+        const sk = GKSkatt2026.skattAr(annualIncome, { kommunalskatt: taxRatePercent, begravning: 0.292 });
+        const grundavdrag = sk.grundavdrag;
+        const taxableIncome = sk.bfi;
+        const kommunalSkattBelopp = Math.round(sk.kommunalskatt);
+        const statligSkattBelopp = Math.round(sk.statligSkatt);
+        const avgifter = Math.round(sk.begravning + sk.publicService);
+        const jsa = sk.jobbskatteavdrag;
+        const forvarvsreduktion = sk.forvarvsreduktion;
+        const preliminaryTax = Math.max(0, Math.round(sk.total));
 
-        // Step 2: Kommunalskatt
-        const kommunalSkattBelopp = Math.round(taxableIncome * kommunalskatt);
+        // Kapital
+        const kap = calcKapital(interestCost, capitalGain);
+        const kapitalskatt = kap.kapitalskatt;
 
-        // Step 3: Statlig skatt
-        const statligSkattBelopp = Math.round(Math.max(0, taxableIncome - SKIKTGRANS) * STATLIG_SKATT);
+        // Utrymme för ytterligare skattereduktioner: kvarvarande kommunal och statlig skatt
+        // (inkl. statlig skatt på kapital) efter pensionsavgift, jobbskatteavdrag och förvärvsreduktion.
+        let utrymme = Math.max(0, sk.total - sk.pensionsavgift - sk.publicService - sk.begravning) + kapitalskatt;
+        const ranteavdrag = Math.min(kap.underskottsreduktion, utrymme);
+        utrymme -= ranteavdrag;
 
-        // Step 4: Begravningsavgift
-        const begravning = Math.round(taxableIncome * BEGRAVNINGSAVGIFT);
+        // ROT/RUT: redan avdraget på fakturan (preliminär skattereduktion). Ger ingen återbäring,
+        // men det som inte ryms i skatten måste betalas tillbaka.
+        const rotBegr = Math.min(rotAmount, 50000);
+        const rotRutTotal = Math.min(rotBegr + rutAmount, 75000);
+        const rotRutEjRyms = Math.max(0, rotRutTotal - utrymme);
 
-        // Step 5: Jobbskatteavdrag
-        const jsa = calcJobbskatteavdrag(annualIncome, grundavdrag, kommunalskatt);
+        const actualFinalTax = Math.max(0, preliminaryTax + kapitalskatt - ranteavdrag);
 
-        // Step 6: Ränteavdrag
-        const ranteavdrag = calcRanteavdrag(interestCost, capitalGain);
-
-        // Step 7: Kapitalskatt (on gains)
-        const kapitalskatt = calcKapitalskatt(capitalGain);
-
-        // Step 8: ROT/RUT (capped at combined 75000)
-        const rotRutTotal = Math.min(rotAmount + rutAmount, 75000);
-
-        // Step 9: Final tax
-        const bruttoSkatt = kommunalSkattBelopp + statligSkattBelopp + begravning + kapitalskatt;
-        const reductions = jsa + ranteavdrag + rotRutTotal;
-        const finalTax = Math.max(0, Math.round(bruttoSkatt - reductions));
-
-        // Step 10: Preliminary tax (what employer withheld)
-        // Preliminary tax tables include: kommunalskatt on taxable income + statlig skatt - jobbskatteavdrag
-        // They do NOT include: ränteavdrag, ROT/RUT, kapitalskatt
-        const preliminaryTax = Math.max(0, Math.round(kommunalSkattBelopp + statligSkattBelopp + begravning - jsa));
-
-        // Actual final tax includes capital gains tax but minus additional reductions
-        const actualFinalTax = Math.max(0, Math.round(preliminaryTax + kapitalskatt - ranteavdrag - rotRutTotal));
-
-        // Skatteåterbäring = preliminary - actual final
-        const refund = preliminaryTax - actualFinalTax;
+        // Skatteåterbäring = preliminärskatt − slutlig skatt − ROT/RUT som inte ryms
+        const refund = Math.round(preliminaryTax - actualFinalTax - rotRutEjRyms);
 
         // Effective tax rate
         const effectiveTaxRate = annualIncome > 0 ? (actualFinalTax / annualIncome * 100) : 0;
 
         // Update UI
-        const fmt = v => v.toLocaleString('sv-SE') + ' kr';
+        const fmt = v => Math.round(v).toLocaleString('sv-SE') + ' kr';
         const mainBox = document.getElementById('mainResult');
         const refundEl = document.getElementById('refundValue');
         const refundSub = document.getElementById('refundSub');
@@ -911,27 +937,26 @@ Ränteavdrag = räntekostnad × 30 %<br>
         document.getElementById('prelimTaxValue').textContent = fmt(preliminaryTax);
         document.getElementById('interestDeductionValue').textContent = fmt(ranteavdrag);
         document.getElementById('jsaValue').textContent = fmt(jsa);
-        document.getElementById('effectiveTaxValue').textContent = effectiveTaxRate.toFixed(1) + ' %';
+        document.getElementById('effectiveTaxValue').textContent = effectiveTaxRate.toFixed(1).replace('.', ',') + ' %';
 
         // Update detail table
         updateDetailTable({
             annualIncome, grundavdrag, taxableIncome,
-            kommunalSkattBelopp, statligSkattBelopp, begravning,
-            jsa, ranteavdrag, kapitalskatt, rotRutTotal,
+            kommunalSkattBelopp, statligSkattBelopp, avgifter,
+            jsa, forvarvsreduktion, ranteavdrag, kapitalskatt, rotRutTotal, rotRutEjRyms,
             preliminaryTax, actualFinalTax, refund
         });
 
         // Update chart
         drawChart({
-            kommunalSkattBelopp, statligSkattBelopp, begravning,
-            jsa, ranteavdrag, rotRutTotal, kapitalskatt,
+            statligSkattBelopp, avgifter, kapitalskatt,
             preliminaryTax, actualFinalTax, refund
         });
     }
 
     // === Detail table ===
     function updateDetailTable(d) {
-        const fmt = v => v.toLocaleString('sv-SE') + ' kr';
+        const fmt = v => Math.round(v).toLocaleString('sv-SE') + ' kr';
         const rows = [
             ['Årsinkomst brutto', fmt(d.annualIncome)],
             ['Grundavdrag', '−' + fmt(d.grundavdrag)],
@@ -939,12 +964,14 @@ Ränteavdrag = räntekostnad × 30 %<br>
             ['', ''],
             ['Kommunalskatt', fmt(d.kommunalSkattBelopp)],
             ['Statlig inkomstskatt', fmt(d.statligSkattBelopp)],
-            ['Begravningsavgift', fmt(d.begravning)],
-            ['Kapitalskatt', fmt(d.kapitalskatt)],
+            ['Public service- och begravningsavgift', fmt(d.avgifter)],
+            ['Kapitalskatt (30 % av överskott)', fmt(d.kapitalskatt)],
             ['', ''],
             ['Jobbskatteavdrag', '−' + fmt(d.jsa)],
-            ['Ränteavdrag', '−' + fmt(d.ranteavdrag)],
-            ['ROT/RUT-avdrag', '−' + fmt(d.rotRutTotal)],
+            ['Skattereduktion för förvärvsinkomst', '−' + fmt(d.forvarvsreduktion)],
+            ['Ränteavdrag (underskott av kapital)', '−' + fmt(d.ranteavdrag)],
+            ['ROT/RUT (redan avdraget på fakturan)', fmt(d.rotRutTotal)],
+            ['ROT/RUT som inte ryms i skatten', fmt(d.rotRutEjRyms)],
             ['', ''],
             ['Preliminärskatt betald', fmt(d.preliminaryTax)],
             ['Slutlig skatt', fmt(d.actualFinalTax)],
@@ -991,10 +1018,10 @@ Ränteavdrag = räntekostnad × 30 %<br>
         const H = rect.height;
 
         // Detect dark mode
-        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const textColor = isDark ? '#d1d5db' : '#555';
-        const gridColor = isDark ? '#374151' : '#e2e8f0';
-        const bgColor = isDark ? '#1f2937' : '#ffffff';
+        const isDark = false;
+        const textColor = isDark ? '#d1d5db' : '#56625B';
+        const gridColor = isDark ? '#3A4640' : '#E2E0D8';
+        const bgColor = isDark ? '#15201A' : '#ffffff';
 
         ctx.clearRect(0, 0, W, H);
 
@@ -1003,17 +1030,17 @@ Ränteavdrag = räntekostnad × 30 %<br>
             {
                 label: 'Preliminärskatt',
                 segments: [
-                    { value: d.kommunalSkattBelopp - d.jsa, color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
+                    { value: d.preliminaryTax - d.statligSkattBelopp - d.avgifter, color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
                     { value: d.statligSkattBelopp, color: isDark ? '#8b5cf6' : '#8b5cf6', label: 'Statlig skatt' },
-                    { value: d.begravning, color: isDark ? '#6b7280' : '#9ca3af', label: 'Begravningsavg.' },
+                    { value: d.avgifter, color: isDark ? '#56625B' : '#9ca3af', label: 'Avgifter' },
                 ]
             },
             {
                 label: 'Slutlig skatt',
                 segments: [
-                    { value: Math.max(0, d.kommunalSkattBelopp - d.jsa - d.ranteavdrag - d.rotRutTotal), color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
+                    { value: Math.max(0, d.actualFinalTax - d.statligSkattBelopp - d.avgifter - d.kapitalskatt), color: isDark ? '#3b82f6' : '#3b82f6', label: 'Kommunalskatt (netto)' },
                     { value: d.statligSkattBelopp, color: isDark ? '#8b5cf6' : '#8b5cf6', label: 'Statlig skatt' },
-                    { value: d.begravning, color: isDark ? '#6b7280' : '#9ca3af', label: 'Begravningsavg.' },
+                    { value: d.avgifter, color: isDark ? '#56625B' : '#9ca3af', label: 'Avgifter' },
                     { value: d.kapitalskatt, color: isDark ? '#f59e0b' : '#f59e0b', label: 'Kapitalskatt' },
                 ]
             }
@@ -1091,7 +1118,7 @@ Ränteavdrag = räntekostnad × 30 %<br>
             const midX = (x1 + x2) / 2;
             const midY = H / 2 - 10;
 
-            ctx.fillStyle = d.refund >= 0 ? (isDark ? '#34d399' : '#16a34a') : (isDark ? '#f87171' : '#dc2626');
+            ctx.fillStyle = d.refund >= 0 ? (isDark ? '#0D6A45' : '#0D6A45') : (isDark ? '#f87171' : '#dc2626');
             ctx.font = '700 14px Inter, sans-serif';
             ctx.textAlign = 'center';
             const refundText = d.refund >= 0

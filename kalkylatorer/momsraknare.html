@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -50,7 +51,7 @@
                 "name": "Vilka momssatser finns i Sverige 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sverige har tre momssatser: 25% (standardsats för de flesta varor och tjänster), 12% (restaurang, hotell, camping, konstverk, cyklar) och 6% (livsmedel sedan 1 april 2026, böcker, tidningar, kollektivtrafik, bio, teater, sport). Momsen på livsmedel är tillfälligt sänkt från 12% till 6% under perioden 1 april 2026 – 31 december 2027."
+                    "text": "Sverige har tre momssatser: 25% (standardsats för de flesta varor och tjänster), 12% (restaurang, hotell, camping, konstverk, reparation av cyklar) och 6% (livsmedel sedan 1 april 2026, böcker, tidningar, kollektivtrafik, bio, teater, sport). Momsen på livsmedel är tillfälligt sänkt från 12% till 6% under perioden 1 april 2026 – 31 december 2027."
                 }
             },
             {
@@ -66,7 +67,7 @@
                 "name": "Hur fungerar momsbefrielse för småföretag?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger 80 000 kr per år. Dessa företag behöver inte ta ut eller redovisa moms. Ansökan görs hos Skatteverket."
+                    "text": "Från 1 januari 2025 är omsättningsgränsen för momsbefrielse 120 000 kr per år. Företag med säte i Sverige som inte omsätter mer än så är automatiskt befriade från moms och behöver inte ta ut eller redovisa moms. Är företaget redan momsregistrerat kan det begära att bli momsbefriat hos Skatteverket."
                 }
             },
             {
@@ -97,43 +98,26 @@
     }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --primary-dark: #10b981;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-            input[type="range"] { accent-color: #34d399; }
-        }
+        
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -213,9 +197,7 @@
             background: var(--primary-light);
             color: var(--primary-dark);
         }
-        @media (prefers-color-scheme: dark) {
-            .mode-btn:not(.active):hover { color: var(--primary); }
-        }
+        
 
         /* Input grid */
         .input-grid {
@@ -399,9 +381,7 @@
             font-weight: 700;
             border-top: 2px solid var(--border);
         }
-        @media (prefers-color-scheme: dark) {
-            .data-table th { color: var(--primary); }
-        }
+        
 
         /* Info section */
         .info-section { margin-bottom: 48px; }
@@ -434,7 +414,7 @@
             border-bottom: 1px solid var(--border);
         }
         .rate-table tr:nth-child(even) td { background: var(--primary-light); }
-        @media (prefers-color-scheme: dark) { .rate-table th { color: var(--primary); } }
+        
 
         /* FAQ */
         details { margin-bottom: 16px; }
@@ -508,19 +488,17 @@
             .results { grid-template-columns: 1fr; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -549,23 +527,44 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> › Momsräknare</div>
             <h1>Momsräknare 2026</h1>
@@ -655,9 +654,9 @@
                 </thead>
                 <tbody>
                     <tr><td><strong>25%</strong></td><td>Standardsats</td><td>Kläder, elektronik, tjänster, alkohol, tobak</td></tr>
-                    <tr><td><strong>12%</strong></td><td>Reducerad sats</td><td>Restaurang, hotell, camping, cyklar</td></tr>
+                    <tr><td><strong>12%</strong></td><td>Reducerad sats</td><td>Restaurang, hotell, camping, konstverk, reparation av cyklar</td></tr>
                     <tr><td><strong>6%</strong></td><td>Reducerad sats</td><td>Livsmedel (tillfälligt 1 apr 2026 – 31 dec 2027), böcker, tidningar, kollektivtrafik, bio, teater</td></tr>
-                    <tr><td><strong>0%</strong></td><td>Momsfritt</td><td>Sjukvård, tandvård, utbildning, finansiella tjänster</td></tr>
+                    <tr><td><strong>–</strong></td><td>Undantaget från moms</td><td>Sjukvård, tandvård, utbildning, finansiella tjänster (ingen moms tas ut)</td></tr>
                 </tbody>
             </table>
 
@@ -675,7 +674,7 @@
             Exempel: 1 000 kr × 0,25 ÷ 1,25 = <strong>200 kr</strong></p>
 
             <h2>Momsbefrielseregeln 2026</h2>
-            <p>Från 1 januari 2025 gäller en höjd omsättningsgräns för SMF-undantaget. Företag med en omsättning under <strong>80 000 kr per år</strong> kan ansöka om befrielse från moms hos Skatteverket och behöver då inte ta ut eller redovisa moms. Tidigare gräns var 30 000 kr.</p>
+            <p>Från 1 januari 2025 gäller en höjd omsättningsgräns för momsbefrielse. Företag med säte i Sverige och en omsättning på högst <strong>120 000 kr per år</strong> är automatiskt befriade från moms och behöver inte ta ut eller redovisa moms. Är företaget redan momsregistrerat kan det begära att bli momsbefriat hos Skatteverket.</p>
 
             <h2>Vanliga frågor om moms</h2>
 
@@ -693,10 +692,10 @@
                     <p>Sverige har tre aktiva momssatser:</p>
                     <ul>
                         <li><strong>25%</strong> – Standardsats för de flesta varor och tjänster, elektronik, kläder, alkohol</li>
-                        <li><strong>12%</strong> – Restaurang och caféer, hotell, camping, konstverk, cyklar</li>
+                        <li><strong>12%</strong> – Restaurang och caféer, hotell, camping, konstverk, reparation av cyklar (försäljning av cyklar har 25 %)</li>
                         <li><strong>6%</strong> – Livsmedel (sedan 1 april 2026), böcker, tidningar, kollektivtrafik, bio, teater, sportevenemang</li>
                     </ul>
-                    <p>Därtill finns 0% moms (momsfritt) för sjukvård, tandvård och utbildning.</p>
+                    <p>Därtill är vissa tjänster undantagna från moms, till exempel sjukvård, tandvård och utbildning. Då tas ingen moms ut alls (det är inte en egen momssats).</p>
                 </div>
             </details>
 
@@ -710,7 +709,7 @@
             <details>
                 <summary>Hur fungerar momsbefrielse för småföretag?</summary>
                 <div class="faq-body">
-                    <p>Från 1 januari 2025 gäller momsbefrielseregeln (SMF-undantaget) för företag vars omsättning inte överstiger <strong>80 000 kr per år</strong>. Dessa företag behöver inte ta ut eller redovisa moms. Ansökan görs hos Skatteverket.</p>
+                    <p>Från 1 januari 2025 är omsättningsgränsen för momsbefrielse <strong>120 000 kr per år</strong>. Företag med säte i Sverige som inte omsätter mer än så är automatiskt befriade från moms och behöver inte ta ut eller redovisa moms. Är företaget redan momsregistrerat kan det begära att bli momsbefriat hos Skatteverket.</p>
                 </div>
             </details>
 
@@ -766,22 +765,31 @@
     
 
     <!-- Relaterade guider (auto-added 2026-05-15) -->
-    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:12px;">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #1a1a2e);">📖 Läs djupare i guiden</h2>
+    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:12px;">
+      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #15201A);">📖 Läs djupare i guiden</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-        <a href="/artiklar/vad-ar-moms-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #e2e8f0);">📖 Vad är moms 2026?</a>
+        <a href="/artiklar/vad-ar-moms-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Vad är moms 2026?</a>
       </div>
     </div>
 
 </main>
 
-    <footer>
-        <div class="container">
-            <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online &nbsp;|&nbsp; <a href="/">Fler kalkylatorer</a></p>
-            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-        </div>
-    </footer>
+    <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
         let mode = 'add';
@@ -833,7 +841,7 @@
                 moms = inkl - exkl;
             }
 
-            const share = inkl > 0 ? ((moms / inkl) * 100).toFixed(1) + '%' : '0%';
+            const share = inkl > 0 ? ((moms / inkl) * 100).toFixed(1).replace('.', ',') + '%' : '0%';
 
             document.getElementById('mainLabel').textContent  = mode === 'add' ? 'Pris inkl. moms' : 'Pris exkl. moms';
             document.getElementById('mainValue').textContent  = fmt(mode === 'add' ? inkl : exkl);
@@ -862,10 +870,10 @@
             ctx.scale(dpr, dpr);
             ctx.clearRect(0, 0, W, H);
 
-            const dark    = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const pColor  = dark ? '#34d399' : '#1a6b4a';
+            const dark    = false;
+            const pColor  = dark ? '#0D6A45' : '#0D6A45';
             const aColor  = dark ? '#60a5fa' : '#2563eb';
-            const tColor  = dark ? '#d1d5db' : '#555555';
+            const tColor  = dark ? '#d1d5db' : '#56625B';
 
             const inkl  = exkl + moms;
             const barW  = Math.min(W * 0.28, 140);

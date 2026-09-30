@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,40 +34,25 @@
     <meta name="twitter:title" content="Ränta på ränta-kalkylator 2026">
     <meta name="twitter:description" content="Räkna ut ränta på ränta med vår gratis kalkylator. Se hur ditt sparande växer med interaktiv graf.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -298,7 +284,7 @@
             margin-bottom: 16px;
         }
         .formula-box {
-            background: #f8f9fa;
+            background: #F6F5F1;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px;
@@ -307,12 +293,7 @@
             margin: 16px 0;
             overflow-x: auto;
         }
-        @media (prefers-color-scheme: dark) {
-            .formula-box {
-                background: rgba(26, 107, 74, 0.1);
-                border-color: var(--border);
-            }
-        }
+        
 
         footer {
             background: var(--white);
@@ -353,11 +334,11 @@
             }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
@@ -395,7 +376,7 @@
                 "name": "Vilken avkastning kan jag förvänta mig?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Historisk genomsnittlig avkastning för en bred aktieindexfond har varit cirka 7–8% per år före inflation. Sparkonto ger 2–4%, obligationer 3–5%."
+                    "text": "Det beror på din sparform. Räntan på sparkonton följer i stort Riksbankens styrränta, som var 1,75 % i augusti 2026. Globala aktieindexfonder har historiskt avkastat ca 7–9 % per år i nominella termer. För en långsiktig plan brukar ca 7 % nominellt (ungefär 5 % efter inflation) användas som riktmärke för en bred aktiefond. Testa gärna med flera olika räntor för att se spannet av möjliga utfall."
                 }
             },
             {
@@ -403,7 +384,7 @@
                 "name": "Räknar kalkylatorn med skatt?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK betalar du en årlig schablonsskatt. I en vanlig depå beskattas vinsten med 30% kapitalvinstskatt."
+                    "text": "Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK betalar du en årlig schablonskatt (1,065 % av kapitalunderlaget över 300 000 kr 2026). I en vanlig aktiedepå beskattas realiserade vinster med 30 % kapitalvinstskatt."
                 }
             },
             {
@@ -418,28 +399,46 @@
     }
     </script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Ränta på ränta-kalkylator</div>
             <h1>Ränta på ränta-kalkylator</h1>
@@ -462,14 +461,14 @@
                 </div>
                 <div class="input-group">
                     <label for="arligRanta">Årlig avkastning (%)</label>
-                    <div class="sublabel">Genomsnittlig börsutveckling: ca 7–8%</div>
+                    <div class="sublabel">Riktmärke för aktiefonder: ca 7 % per år (nominellt)</div>
                     <input type="number" id="arligRanta" value="7" min="0" max="30" step="0.1">
                     <input type="range" id="arligRantaRange" min="0" max="15" step="0.1" value="7">
                     <div class="range-labels"><span>0%</span><span>15%</span></div>
                 </div>
                 <div class="input-group">
                     <label for="tid">Spartid (år)</label>
-                    <input type="number" id="tid" value="20" min="1" max="50" step="1">
+                    <input type="number" id="tid" value="20" min="0" max="50" step="1">
                     <input type="range" id="tidRange" min="1" max="50" step="1" value="20">
                     <div class="range-labels"><span>1 år</span><span>50 år</span></div>
                 </div>
@@ -518,7 +517,7 @@
             <p>Skillnaden mellan enkel ränta och ränta på ränta är dramatisk över tid. Med enkel ränta ger 100 000 kr vid 7 % avkastning alltid 7 000 kr per år. Med ränta på ränta växer avkastningen varje år eftersom basen ökar:</p>
             <ul>
                 <li><strong>År 1:</strong> 100 000 kr → 107 000 kr (+7 000 kr)</li>
-                <li><strong>År 10:</strong> kapital har vuxit till ca 197 000 kr (+7 000 kr i ränta på räntan)</li>
+                <li><strong>År 10:</strong> kapital har vuxit till ca 197 000 kr (årets avkastning är ca 12 900 kr, varav ca 5 900 kr är ränta på tidigare ränta)</li>
                 <li><strong>År 20:</strong> kapital har vuxit till ca 387 000 kr (+25 000 kr bara det året)</li>
                 <li><strong>År 30:</strong> kapital har vuxit till ca 761 000 kr — utan att sätta in en krona extra</li>
             </ul>
@@ -527,24 +526,24 @@
             <h3>Varför starttidpunkten är viktigare än sparbeloppet</h3>
             <p>En av de mest kraftfulla insikterna om ränta på ränta är att när du börjar spara är viktigare än hur mycket du sparar. Jämför tre personer som alla sparar 1 000 kr/månad vid 7 % avkastning och slutar vid 65:</p>
             <ul>
-                <li><strong>Anna börjar vid 25:</strong> sparar i 40 år → ca 2 630 000 kr</li>
-                <li><strong>Björn börjar vid 35:</strong> sparar i 30 år → ca 1 220 000 kr</li>
-                <li><strong>Cecilia börjar vid 45:</strong> sparar i 20 år → ca 521 000 kr</li>
+                <li><strong>Anna börjar vid 25:</strong> sparar i 40 år → ca 2 470 000 kr</li>
+                <li><strong>Björn börjar vid 35:</strong> sparar i 30 år → ca 1 170 000 kr</li>
+                <li><strong>Cecilia börjar vid 45:</strong> sparar i 20 år → ca 508 000 kr</li>
             </ul>
-            <p>Anna sparar dubbelt så länge som Cecilia men slutar med <strong>fem gånger</strong> så mycket kapital. De tio extra åren på slutet gör enorm skillnad eftersom kapitalbasen då är störst.</p>
+            <p>Anna sparar dubbelt så länge som Cecilia men slutar med <strong>nästan fem gånger</strong> så mycket kapital. De extra åren i början gör enorm skillnad eftersom de tidiga insättningarna hinner växa längst.</p>
 
             <h3>Realistiska avkastningar för olika sparformer</h3>
             <p>Vilken avkastning du kan förvänta dig beror helt på hur du väljer att spara och investera:</p>
             <ul>
-                <li><strong>Sparkonto / högränta:</strong> 2–4 % per år — låg risk, ingen aktieexponering</li>
+                <li><strong>Sparkonto / högränta:</strong> räntan följer i stort Riksbankens styrränta (1,75 % i augusti 2026) — låg risk, ingen aktieexponering</li>
                 <li><strong>Obligationsfond:</strong> 3–5 % per år — låg till medelhög risk</li>
-                <li><strong>Global indexfond:</strong> 7–9 % per år historiskt (MSCI World) — aktiemarknadsrisk</li>
-                <li><strong>Bred aktieportfölj:</strong> 6–10 % per år historiskt — kräver lång horisont</li>
+                <li><strong>Global indexfond:</strong> 7–9 % per år historiskt, nominellt (MSCI World) — aktiemarknadsrisk</li>
+                <li><strong>Bred aktieportfölj:</strong> 6–10 % per år historiskt, nominellt — kräver lång horisont</li>
             </ul>
-            <p>Historisk avkastning är ingen garanti för framtida resultat, men som riktmärke brukar 7 % (justerat för inflation) användas för globala aktieindexfonder på lång sikt. Testa olika scenarier i kalkylatorn ovan.</p>
+            <p>Historisk avkastning är ingen garanti för framtida resultat, men som riktmärke brukar ca 7 % per år nominellt (ungefär 5 % efter inflation) användas för globala aktieindexfonder på lång sikt. Kalkylatorn räknar med att den årliga avkastningen fördelas jämnt över årets månader, så att 7 % i fältet blir exakt 7 % per år. Testa olika scenarier i kalkylatorn ovan.</p>
 
             <h3>Skatteeffektivt sparande — ISK vs kapitalförsäkring</h3>
-            <p>I Sverige är <strong>investeringssparkontot (ISK)</strong> populärast för långsiktigt sparande med ränta på ränta-effekt. Du betalar en schablonsskatt på kontovärdet varje år, men behöver aldrig betala 30 % kapitalvinstskatt vid försäljning. För sparande under 300 000 kr är ISK skattefritt 2026. Återinvesterade utdelningar och kursvinster beskattas inte löpande, vilket gör att hela avkastningen bidrar till ränta på ränta-effekten.</p>
+            <p>I Sverige är <strong>investeringssparkontot (ISK)</strong> populärast för långsiktigt sparande med ränta på ränta-effekt. Du betalar en schablonskatt på kontots värde varje år, men behöver aldrig betala 30 % kapitalvinstskatt vid försäljning. För sparande under 300 000 kr är ISK skattefritt 2026. Återinvesterade utdelningar och kursvinster beskattas inte löpande, vilket gör att hela avkastningen bidrar till ränta på ränta-effekten.</p>
 
             <h2>Vanliga frågor om ränta på ränta och långsiktigt sparande</h2>
 
@@ -555,7 +554,7 @@
 
             <details>
                 <summary>Vilken avkastning ska jag räkna med?</summary>
-                <p>Det beror på din sparform. Sparkonto ger i dag 2–4 %. Globala aktieindexfonder har historiskt avkastat ca 7–9 % per år i nominella termer. För en långsiktig plan brukar 6–7 % vara ett konservativt men realistiskt antagande för en diversifierad aktieportfölj. Testa gärna med flera olika räntor för att se spannet av möjliga utfall.</p>
+                <p>Det beror på din sparform. Räntan på sparkonton följer i stort Riksbankens styrränta, som var 1,75 % i augusti 2026. Globala aktieindexfonder har historiskt avkastat ca 7–9 % per år i nominella termer. För en långsiktig plan brukar ca 7 % nominellt (ungefär 5 % efter inflation) användas som riktmärke för en bred aktiefond. Testa gärna med flera olika räntor för att se spannet av möjliga utfall.</p>
             </details>
 
             <details>
@@ -570,7 +569,7 @@
 
             <details>
                 <summary>Räknar kalkylatorn med skatt?</summary>
-                <p>Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK betalar du en årlig schablonsskatt (ca 1,065 % av kapitalet 2026). I en vanlig aktiedepå beskattas realiserade vinster med 30 % kapitalvinstskatt. ISK är oftast förmånligare för långsiktigt sparande eftersom skatten är låg och du slipper deklarera enskilda affärer.</p>
+                <p>Nej, kalkylatorn visar avkastning före skatt. Om du sparar i ISK betalar du en årlig schablonskatt (1,065 % av kapitalunderlaget över 300 000 kr 2026). I en vanlig aktiedepå beskattas realiserade vinster med 30 % kapitalvinstskatt. ISK är oftast förmånligare för långsiktigt sparande eftersom skatten är låg och du slipper deklarera enskilda affärer.</p>
             </details>
 
             <details>
@@ -580,33 +579,41 @@
         </div>
     
     <!-- Relaterade kalkylatorer -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
+    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
       <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/kalkylatorer/sparkalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Sparkalkylator</a>
-      <a href="/kalkylatorer/isk-skatteberaknare" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">ISK-skatteberäknare</a>
-      <a href="/kalkylatorer/inflationskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Inflationskalkylator</a>
+      <a href="/kalkylatorer/sparkalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Sparkalkylator</a>
+      <a href="/kalkylatorer/isk-skatteberaknare" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">ISK-skatteberäknare</a>
+      <a href="/kalkylatorer/inflationskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Inflationskalkylator</a>
       </div>
     </section>
     <!-- Relaterade guider -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
+    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
       <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade guider</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/artiklar/vad-ar-ranta-pa-ranta" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">📖 Vad är ränta på ränta?</a>
+      <a href="/artiklar/vad-ar-ranta-pa-ranta" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">📖 Vad är ränta på ränta?</a>
       </div>
     </section>
 
 
 </main>
 
-    <footer>
-        <div class="container">
-            <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-        </div>
-    </footer>
+    <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
         // Elements
@@ -634,9 +641,10 @@
             const P = parseFloat(inputs.startkapital.num.value) || 0;
             const M = parseFloat(inputs.manadsspar.num.value) || 0;
             const r = (parseFloat(inputs.arligRanta.num.value) || 0) / 100;
-            const years = parseInt(inputs.tid.num.value) || 1;
+            const years = Math.max(0, parseInt(inputs.tid.num.value) || 0);
 
-            const monthlyRate = r / 12;
+            // Årlig avkastning omräknad till motsvarande månadsavkastning: (1 + r)^(1/12) − 1
+            const monthlyRate = Math.pow(1 + r, 1 / 12) - 1;
             const yearlyData = [];
             let balance = P;
 
@@ -653,7 +661,7 @@
                 });
             }
 
-            const last = yearlyData[yearlyData.length - 1];
+            const last = yearlyData.length ? yearlyData[yearlyData.length - 1] : { total: P, insatt: P, ranta: 0 };
             document.getElementById('totalValue').textContent = fmt(last.total);
             document.getElementById('totalInsatt').textContent = fmt(last.insatt);
             document.getElementById('totalRanta').textContent = fmt(last.ranta);
@@ -715,17 +723,17 @@
                 const hTotal = (d.total / maxVal) * cH;
 
                 // Insatt bar
-                ctx.fillStyle = '#e2e8f0';
+                ctx.fillStyle = '#E2E0D8';
                 ctx.fillRect(x, pad.top + cH - hTotal, barW, hTotal - hInsatt > 0 ? hTotal - hInsatt : 0);
 
                 // Ränta bar (stacked on top visually, but drawn from bottom up to insatt height)
-                ctx.fillStyle = '#e2e8f0';
+                ctx.fillStyle = '#E2E0D8';
                 ctx.fillRect(x, pad.top + cH - hInsatt, barW, hInsatt);
 
                 // Override: insatt = light gray from bottom, ränta = green on top
                 ctx.fillStyle = '#cbd5e1';
                 ctx.fillRect(x, pad.top + cH - hInsatt, barW, hInsatt);
-                ctx.fillStyle = '#1a6b4a';
+                ctx.fillStyle = '#0D6A45';
                 ctx.fillRect(x, pad.top + cH - hTotal, barW, hTotal - hInsatt > 0 ? hTotal - hInsatt : 0);
             });
 
@@ -749,7 +757,7 @@
             ctx.fillRect(pad.left, legY - 8, 12, 12);
             ctx.fillStyle = '#888';
             ctx.fillText('Insatt', pad.left + 16, legY + 2);
-            ctx.fillStyle = '#1a6b4a';
+            ctx.fillStyle = '#0D6A45';
             ctx.fillRect(pad.left + 80, legY - 8, 12, 12);
             ctx.fillStyle = '#888';
             ctx.fillText('Avkastning', pad.left + 96, legY + 2);

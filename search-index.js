@@ -4,8 +4,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/akassa-kalkylator",
     "title": "A-kassekalkylator",
     "icon": "🤝",
-    "category": "Jobb &amp; Familj",
-    "desc": "Beräkna din a-kasseersättning vid arbetslöshet baserat på din inkomst.",
+    "category": "Jobb & Familj",
+    "desc": "Räkna ut din a-kassa 2026 – ersättning per dag och månad, brutto och netto.",
     "kw": "a-kassa akassa arbetslöshetskassa ersättning dagpenning arbetslös"
   },
   {
@@ -13,7 +13,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/amorteringskalkylator",
     "title": "Amorteringskalkylator",
     "icon": "📊",
-    "category": "Boende &amp; Lån",
+    "category": "Boende & Lån",
     "desc": "Beräkna amorteringskrav 2026 — 1 % eller 2 % beroende på belåningsgrad, bolånetak 90 %.",
     "kw": "amortering amorteringskrav finansinspektionen fi belåningsgrad skuldkvot"
   },
@@ -23,7 +23,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Arbetsgivaravgiftskalkylator",
     "icon": "👥",
     "category": "Privatekonomi",
-    "desc": "Räkna ut arbetsgivaravgift (31,42&nbsp;%) och total lönekostnad per anställd 2026.",
+    "desc": "Räkna ut arbetsgivaravgift (31,42 %) och total lönekostnad per anställd 2026.",
     "kw": "arbetsgivaravgift lönekostnad sociala avgifter arbetsgivare anställd 31 42 reducerad ung"
   },
   {
@@ -40,7 +40,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/barnbidragskalkylator",
     "title": "Barnbidragskalkylator",
     "icon": "👶",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Räkna ut barnbidrag och flerbarnstillägg 2026. Se exakt hur mycket du får per månad och år — inkl. delad vårdnad.",
     "kw": "barnbidrag flerbarnstillägg försäkringskassan barn grundbidrag belopp 2026 per barn månadsbelopp"
   },
@@ -49,7 +49,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/bilkostnadsraknare",
     "title": "Bilkostnadsräknare",
     "icon": "🚗",
-    "category": "Fordon &amp; Energi",
+    "category": "Fordon & Energi",
     "desc": "Räkna ut den totala kostnaden för din bil per månad och per mil.",
     "kw": "bil bilkostnad drivmedel bensin diesel försäkring vägskatt per mil"
   },
@@ -58,7 +58,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/bolanekalkylator",
     "title": "Bolånekalkylator",
     "icon": "🏠",
-    "category": "Boende &amp; Lån",
+    "category": "Boende & Lån",
     "desc": "Beräkna månadsbetalning, total kostnad och boendekostnad för ditt bolån.",
     "kw": "bolån bostad ränta månadsbetalning boendekostnad bostadslån"
   },
@@ -67,8 +67,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/csn-kalkylator",
     "title": "CSN-kalkylator",
     "icon": "🎓",
-    "category": "Jobb &amp; Familj",
-    "desc": "Beräkna din CSN-återbetalning — månadsbelopp, total räntekostnad och återbetalningstid utifrån din inkomst.",
+    "category": "Jobb & Familj",
+    "desc": "Beräkna din CSN-återbetalning 2026 – månadsbelopp, total räntekostnad och hur länge du betalar.",
     "kw": "csn lån studielån återbetalning student studier lånekalkylator csn-lån studiemedel"
   },
   {
@@ -85,7 +85,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/drivmedelskalkylator",
     "title": "Drivmedelskalkylator",
     "icon": "⛽",
-    "category": "Fordon &amp; Energi",
+    "category": "Fordon & Energi",
     "desc": "Räkna ut din årliga bränslekostnad för bensin, diesel eller elbil. Jämför kostnad per mil.",
     "kw": "drivmedel bränsle bensin diesel elbil bränslekostnad kostnad per mil laddhybrid drivmedelskalkylator"
   },
@@ -94,7 +94,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/elkostnadskalkylator",
     "title": "Elkostnadskalkylator",
     "icon": "⚡",
-    "category": "Fordon &amp; Energi",
+    "category": "Fordon & Energi",
     "desc": "Vad borde elen kosta? Jämför ditt elpris med SCB:s snitt för nya avtal i ditt elområde.",
     "kw": "el elkostnad förbrukning kwh elpris elräkning energi elavtal rörligt fast anvisat byta elavtal snittpris"
   },
@@ -112,7 +112,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/formansbilkalkylator",
     "title": "Förmånsbilkalkylator",
     "icon": "🏢",
-    "category": "Fordon &amp; Energi",
+    "category": "Fordon & Energi",
     "desc": "Beräkna förmånsvärde och skattekostnad för din tjänstebil.",
     "kw": "förmånsbil tjänstebil förmånsvärde skatt bilförmån"
   },
@@ -121,8 +121,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/foraldrapenning",
     "title": "Föräldrapenning",
     "icon": "👶",
-    "category": "Jobb &amp; Familj",
-    "desc": "Beräkna din föräldrapenning baserat på sjukpenninggrundande inkomst (SGI).",
+    "category": "Jobb & Familj",
+    "desc": "Räkna ut din föräldrapenning 2026 – sjukpenningnivå (max 1 259 kr/dag), lägstanivå och grundnivå.",
     "kw": "föräldrapenning föräldraledighet sgi försäkringskassan vab barn"
   },
   {
@@ -139,7 +139,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/hyra-vs-kopa-kalkylator",
     "title": "Hyra vs Köpa-kalkylator",
     "icon": "🔑",
-    "category": "Boende &amp; Lån",
+    "category": "Boende & Lån",
     "desc": "Jämför total kostnad och kapitaluppbyggnad för att hyra eller köpa bostad — se break-even år för år.",
     "kw": "hyra köpa bostad hyra vs köpa break-even kontantinsats bolån bostadsrätt jämförelse"
   },
@@ -158,7 +158,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Inflationskalkylator",
     "icon": "📈",
     "category": "Privatekonomi",
-    "desc": "Räkna ut hur inflation påverkar köpkraften 2000–2026 — baserat på SCB:s KPI-data för Sverige.",
+    "desc": "Räkna ut hur inflationen påverkar köpkraften 1980–2026 med SCB:s KPI.",
     "kw": "inflation inflationskalkylator köpkraft kpi konsumentprisindex prisutveckling pengarnas värde riksbanken scb"
   },
   {
@@ -184,8 +184,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/karensavdragskalkylator",
     "title": "Karensavdragskalkylator",
     "icon": "🤒",
-    "category": "Jobb &amp; Familj",
-    "desc": "Räkna ut vad karensavdraget kostar dig 2026. 20% av veckolönen dras på dag 1 — se exakt nettoeffekten och sjuklön dag 2–14.",
+    "category": "Jobb & Familj",
+    "desc": "Karensavdrag 2026 = 20 % av den genomsnittliga veckosjuklönen (16 % av veckolönen). Se vad en sjukdag kostar dig.",
     "kw": "karensavdrag karens karensdagen sjukdag sjuk sjuklön ersättning försäkringskassan veckolön 20% sjukfrånvaro sjukförsäkring"
   },
   {
@@ -193,8 +193,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/leasingkalkylator",
     "title": "Leasingkalkylator",
     "icon": "📝",
-    "category": "Boende &amp; Lån",
-    "desc": "Räkna ut total kostnad och månadsavgift för leasing av bil eller utrustning.",
+    "category": "Boende & Lån",
+    "desc": "Jämför privatleasing mot köp – månadskostnad, restvärde och total kostnad för bilen.",
     "kw": "leasing leasingkostnad privatlease månadsavgift restvärde"
   },
   {
@@ -202,7 +202,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/lanekalkylator",
     "title": "Lånekalkylator",
     "icon": "💳",
-    "category": "Boende &amp; Lån",
+    "category": "Boende & Lån",
     "desc": "Räkna ut månadsbetalning, total räntekostnad och effektiv ränta på ditt lån.",
     "kw": "lån lånekalkylator annuitet amortering effektiv ränta månadsbetalning"
   },
@@ -221,7 +221,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Löneförhandling – vad ska du begära?",
     "icon": "💰",
     "category": "Jobb & Familj",
-    "desc": "Jämför din lön med 396 yrken (SCB 2025) och få lönekrav, första bud och argument till lönesamtalet.",
+    "desc": "Jämför din lön med 395 yrken (SCB 2025) och få lönekrav, första bud och argument till lönesamtalet.",
     "kw": "löneförhandling lönesamtal lönekrav begära lön löneökning lönerevision marknadslön medianlön yrke percentil märket"
   },
   {
@@ -239,7 +239,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Marginalskattekalkylator",
     "icon": "📊",
     "category": "Privatekonomi",
-    "desc": "Se hur mycket skatt du betalar på din nästa löneökning. Med jobbskatteavdrag och&nbsp;2026&nbsp;års&nbsp;regler.",
+    "desc": "Se hur mycket skatt du betalar på din nästa löneökning. Med jobbskatteavdrag och 2026 års regler.",
     "kw": "marginalskatt skatt löneökning statlig inkomstskatt kommunalskatt jobbskatteavdrag grundavdrag skiktgräns effektiv skattesats"
   },
   {
@@ -247,7 +247,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/milersattningskalkylator",
     "title": "Milersättningskalkylator",
     "icon": "🗺️",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Räkna ut skattefri milersättning för tjänstekörning och reseavdrag för pendling 2026.",
     "kw": "milersättning tjänstekörning reseavdrag pendling bil km skatteverket schablonbelopp körjournal"
   },
@@ -281,7 +281,7 @@ window.SITE_SEARCH_INDEX = [
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/rot-rut",
-    "title": "ROT &amp; RUT-avdrag",
+    "title": "ROT & RUT-avdrag",
     "icon": "🔧",
     "category": "Privatekonomi",
     "desc": "Beräkna ditt ROT- eller RUT-avdrag och se hur mycket du faktiskt betalar.",
@@ -292,8 +292,8 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/reseavdragskalkylator",
     "title": "Reseavdragskalkylator",
     "icon": "🚉",
-    "category": "Jobb &amp; Familj",
-    "desc": "Räkna ut ditt reseavdrag för pendling 2026. Bil: 2,50 kr/km. Se exakt hur mycket skattebesparning du får vid deklarationen.",
+    "category": "Jobb & Familj",
+    "desc": "Räkna ut ditt reseavdrag 2026 för pendling med bil eller kollektivtrafik – kostnader över 15 000 kr.",
     "kw": "reseavdrag pendlingsavdrag pendling deklaration skatteverket kollektivtrafik bil avdrag skattebesparning"
   },
   {
@@ -310,7 +310,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/semesterersattning",
     "title": "Semesterersättning",
     "icon": "✈️",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Beräkna semesterersättning vid avslut av anställning eller ej uttagen semester.",
     "kw": "semesterersättning intjänad semester utbetalning avsluta anställning"
   },
@@ -319,7 +319,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/semesterlonekalkylator",
     "title": "Semesterlönekalkylator",
     "icon": "🌴",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Räkna ut din semesterlön enligt sammalöneregeln och procentregeln.",
     "kw": "semesterlön semester semesterdagar sammalöneregeln semesterlagen"
   },
@@ -328,7 +328,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/sjukpenningkalkylator",
     "title": "Sjukpenningkalkylator",
     "icon": "🏥",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Beräkna karensavdrag, sjuklön och Försäkringskassans ersättning vid sjukskrivning 2026.",
     "kw": "sjukpenning sjukskrivning karensavdrag sjuklön sgi försäkringskassan ersättning sjuk"
   },
@@ -346,7 +346,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/solcellskalkylator",
     "title": "Solcellskalkylator",
     "icon": "☀️",
-    "category": "Fordon &amp; Energi",
+    "category": "Fordon & Energi",
     "desc": "Beräkna besparing, återbetalningstid och lönsamhet för solceller på taket.",
     "kw": "solceller solpanel solenergi besparing återbetalningstid investering"
   },
@@ -365,7 +365,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Tjänstepensionskalkylator",
     "icon": "💼",
     "category": "Sparande",
-    "desc": "Beräkna hur din tjänstepension växer med ITP 1, SAF-LO, KAP-KL eller eget avtal.",
+    "desc": "Se hur din tjänstepension växer med ITP 1, SAF-LO, AKAP-KR, PA 16 eller eget avtal.",
     "kw": "tjänstepension itp saf-lo kap-kl pensionskalkylator arbetsgivare avsättning pension"
   },
   {
@@ -373,16 +373,16 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/traktamentekalkylator",
     "title": "Traktamentekalkylator",
     "icon": "✈️",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Beräkna skattefritt traktamente vid tjänsteresor 2026. Inrikes: 300 kr/dag. Se vad du har rätt till vid övernattning och utlandsresor.",
     "kw": "traktamente traktamentekalkylator resetraktamente skattefritt traktamente resa övernattning utland inrikes skatteverket 2026 affärsresa"
   },
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/underhallsstod-kalkylator",
-    "title": "Underhållsstöd &amp; Underhållsbidrag",
+    "title": "Underhållsstöd & Underhållsbidrag",
     "icon": "👨‍👧",
-    "category": "Jobb &amp; Familj",
+    "category": "Jobb & Familj",
     "desc": "Beräkna underhållsstöd från Försäkringskassan och privat underhållsbidrag baserat på inkomst och umgångstid.",
     "kw": "underhållsstöd underhållsbidrag försäkringskassan normbelopp återkrav barn separerade föräldrar bidrag"
   },
@@ -391,7 +391,7 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/uthyrningskalkylator",
     "title": "Uthyrningskalkylator",
     "icon": "🏘️",
-    "category": "Boende &amp; Lån",
+    "category": "Boende & Lån",
     "desc": "Beräkna skatten på hyresintäkter 2026. Se schablonavdrag, beskattningsbar inkomst och nettoinkomst vid uthyrning av villa eller bostadsrätt.",
     "kw": "uthyrning hyra ut bostad skatt hyresintäkt schablonavdrag andrahand villa bostadsrätt airbnb kapitalinkomst"
   },
@@ -401,8 +401,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Deklaration 2027 – datum och nyheter",
     "icon": "🧾",
     "category": "Guide",
-    "desc": "Sista dag 3 maj, reseavdrag från 15 000 kr, ROT 30 % och slopad solcellsreduktion.",
-    "kw": "deklaration 2027 deklarera datum sista dag avdrag nyheter inkomstår 2026 skatteverket"
+    "desc": "Deklarationen 2027 gäller inkomståret 2026. Sista dag 3 maj, reseavdrag från 15 000 kr, ROT 30 % och slopad solcellsreduktion.",
+    "kw": "deklaration 2027 – datum och nyheter deklarationen 2027 gäller inkomståret 2026. sista dag 3 maj, reseavdrag från 15 000 kr, rot 30 % och slopad solcellsreduktion."
   },
   {
     "type": "guide",
@@ -410,8 +410,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "När kommer skatteåterbäringen 2027?",
     "icon": "💸",
     "category": "Guide",
-    "desc": "April om du godkänner senast 31 mars, annars juni. Alla utbetalningar och villkor.",
-    "kw": "skatteåterbäring 2027 när kommer pengarna utbetalning datum april juni skatt tillbaka"
+    "desc": "Skatteåterbäringen 2027 betalas ut i april, juni, augusti och december beroende på när du deklarerar.",
+    "kw": "när kommer skatteåterbäringen 2027? skatteåterbäringen 2027 betalas ut i april, juni, augusti och december beroende på när du deklarerar."
   },
   {
     "type": "guide",
@@ -419,8 +419,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Reseavdrag 2027 – så räknar du",
     "icon": "🚗",
     "category": "Guide",
-    "desc": "Gräns 15 000 kr, 25 kr/mil och 2 timmars tidsvinst. Räkneexempel för bil och kollektivt.",
-    "kw": "reseavdrag 2027 gränsbelopp 15000 25 kr mil pendling bil kollektivtrafik deklaration"
+    "desc": "Reseavdrag i deklarationen 2027: du drar av kostnader över 15 000 kr, bil ger 25 kr/mil om du sparar 2 timmar.",
+    "kw": "reseavdrag 2027 – så räknar du reseavdrag i deklarationen 2027: du drar av kostnader över 15 000 kr, bil ger 25 kr/mil om du sparar 2 timmar."
   },
   {
     "type": "guide",
@@ -428,8 +428,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "A-kassa 2026 – belopp och regler",
     "icon": "🤝",
     "category": "Guide",
-    "desc": "80 % dag 1–100, 70 % dag 101–200, 65 % dag 201–300. Tak 34 000 kr/mån — så mycket får du.",
-    "kw": "a-kassa 2026 belopp regler ersättning dagpenning tak 34 000 arbetslös inkomstvillkor alfakassan"
+    "desc": "A-kassa 2026: 80 % av lönen dag 1–100, 70 % dag 101–200 och 65 % dag 201–300.",
+    "kw": "a-kassa 2026 – belopp och regler a-kassa 2026: 80 % av lönen dag 1–100, 70 % dag 101–200 och 65 % dag 201–300."
   },
   {
     "type": "guide",
@@ -437,8 +437,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Elkostnad 2026 – så räknar du",
     "icon": "⚡",
     "category": "Guide",
-    "desc": "Elpris, elnätsavgift, energiskatt 36 öre/kWh och moms. Normal förbrukning och räkneexempel.",
-    "kw": "elkostnad 2026 elpris energiskatt elnät kwh förbrukning villa lägenhet elområde timpris effekttariff"
+    "desc": "Räkna ut din elkostnad 2026: elpris, elnätsavgift, energiskatt 36 öre/kWh och moms.",
+    "kw": "elkostnad 2026 – så räknar du räkna ut din elkostnad 2026: elpris, elnätsavgift, energiskatt 36 öre/kwh och moms."
   },
   {
     "type": "guide",
@@ -446,8 +446,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Privatleasing eller köpa bil 2026?",
     "icon": "🚗",
     "category": "Guide",
-    "desc": "Leasing mot billån och kontantköp — räkneexempel, restvärde, milgräns och dolda kostnader.",
-    "kw": "privatleasing köpa bil leasa eller köpa billån restvärde övermil leasing kalkyl 2026 elbil"
+    "desc": "Leasa eller köpa bil 2026? Vi jämför privatleasing mot billån och kontantköp med räkneexempel: månadskostnad, värdeminskning, restvärde, milbegränsning och dolda kostnader.",
+    "kw": "privatleasing eller köpa bil 2026? leasa eller köpa bil 2026? vi jämför privatleasing mot billån och kontantköp med räkneexempel: månadskostnad, värdeminskning, restvärde, milbegränsning och dolda kostnader."
   },
   {
     "type": "guide",
@@ -455,8 +455,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "CSN 2026 – belopp och regler",
     "icon": "🎓",
     "category": "Guide",
-    "desc": "Studiemedel, bidrag, lån och fribelopp 252 800 kr. Plus återbetalning med Sveriges billigaste låneränta.",
-    "kw": "csn 2026 – belopp och regler studiemedel, bidrag, lån och fribelopp 252 800 kr. plus återbetalning med sveriges billigaste låneränta."
+    "desc": "CSN 2026 — så mycket får du i studiemedel som student. Bidrag, lån, fribelopp och återbetalning.",
+    "kw": "csn 2026 – belopp och regler csn 2026 — så mycket får du i studiemedel som student. bidrag, lån, fribelopp och återbetalning."
   },
   {
     "type": "guide",
@@ -464,8 +464,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Hur beräknas pension?",
     "icon": "👴",
     "category": "Guide",
-    "desc": "Allmän pension, tjänstepension och eget sparande — pusslet förklarat.",
-    "kw": "hur beräknas pension? allmän pension, tjänstepension och eget sparande — pusslet förklarat."
+    "desc": "Lär dig hur pension beräknas i Sverige 2026. Vi förklarar allmän pension, tjänstepension och eget sparande — och hur mycket du kan förvänta dig att få.",
+    "kw": "hur beräknas pension? lär dig hur pension beräknas i sverige 2026. vi förklarar allmän pension, tjänstepension och eget sparande — och hur mycket du kan förvänta dig att få."
   },
   {
     "type": "guide",
@@ -473,8 +473,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Hur får man tillbaka skatten?",
     "icon": "💸",
     "category": "Guide",
-    "desc": "Så fungerar skatteåterbäring — utbetalning, avdrag och vanliga frågor.",
-    "kw": "hur får man tillbaka skatten? så fungerar skatteåterbäring — utbetalning, avdrag och vanliga frågor."
+    "desc": "Lär dig hur skatteåterbäring fungerar 2026. Vi förklarar varför du kan få tillbaka skatt, hur du deklarerar rätt och vilka avdrag som ökar din återbäring mest.",
+    "kw": "hur får man tillbaka skatten? lär dig hur skatteåterbäring fungerar 2026. vi förklarar varför du kan få tillbaka skatt, hur du deklarerar rätt och vilka avdrag som ökar din återbäring mest."
   },
   {
     "type": "guide",
@@ -482,8 +482,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Hur mycket får jag låna 2026?",
     "icon": "🏦",
     "category": "Guide",
-    "desc": "Bolånetaket 90 %, bankernas skuldkvot och KALP — så räknar banken ut ditt max-belopp.",
-    "kw": "hur mycket får jag låna 2026? bolånetaket 90 %, skuldkvot och kalp — så räknar banken ut ditt max-belopp."
+    "desc": "Så räknar banken ut hur mycket du får låna 2026: bolånetaket 90 %, bankens skuldkvot (ofta max ca 5,5 × inkomsten) och KALP med kalkylränta.",
+    "kw": "hur mycket får jag låna 2026? så räknar banken ut hur mycket du får låna 2026: bolånetaket 90 %, bankens skuldkvot (ofta max ca 5,5 × inkomsten) och kalp med kalkylränta."
   },
   {
     "type": "guide",
@@ -491,8 +491,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Amorteringskrav 2026",
     "icon": "📉",
     "category": "Guide",
-    "desc": "1 % vid 50–70 % belåning, 2 % vid >70 %. Plus tilläggsregeln vid skuldkvot >4,5x. Räkneexempel inkluderat.",
-    "kw": "amorteringskrav 2026 bolån amortering belåningsgrad skuldkvot tilläggsregeln 1 % 2 % skärpt amorteringskrav räkna ut amortering"
+    "desc": "Amorteringskrav 2026: 1 % vid 50–70 % belåning, 2 % över 70 %.",
+    "kw": "amorteringskrav 2026 amorteringskrav 2026: 1 % vid 50–70 % belåning, 2 % över 70 %."
   },
   {
     "type": "guide",
@@ -500,8 +500,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Räkna ut sjuklön 2026",
     "icon": "🤒",
     "category": "Guide",
-    "desc": "Sjuklön = 80 % av lönen i 14 dagar minus karensavdrag. Formel, exempel för månadslön och timlön, plus kalkylator.",
-    "kw": "räkna ut sjuklön kalkylator sjuklön 2026 80% sjuklön karensavdrag sjuklöneperiod sjuklönelagen arbetsgivare dag 1-14 sjukpenning skillnad sjuklön sjukpenning"
+    "desc": "Räkna ut sjuklön 2026: 80 % av lönen i 14 dagar minus karensavdrag.",
+    "kw": "räkna ut sjuklön 2026 räkna ut sjuklön 2026: 80 % av lönen i 14 dagar minus karensavdrag."
   },
   {
     "type": "guide",
@@ -509,8 +509,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Månadssparande – räkna ut",
     "icon": "🐷",
     "category": "Guide",
-    "desc": "500, 1 000 eller 3 000 kr/mån i 10–30 år? Tabell, ISK-skatt och varför ränta på ränta gör det enorma.",
-    "kw": "månadssparande – räkna ut 500, 1 000 eller 3 000 kr/mån i 10–30 år? tabell, isk-skatt och varför ränta på ränta gör det enorma."
+    "desc": "Räkna ut ditt månadssparande — vad blir 500, 1 000 eller 3 000 kr/månad på 10, 20 eller 30 år?",
+    "kw": "månadssparande – räkna ut räkna ut ditt månadssparande — vad blir 500, 1 000 eller 3 000 kr/månad på 10, 20 eller 30 år?"
   },
   {
     "type": "guide",
@@ -518,8 +518,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Räkna ut föräldrapenning 2026",
     "icon": "👶",
     "category": "Guide",
-    "desc": "SGI-taket 588 000 kr, 80-procentsregeln, lägstanivå och föräldralön — så mycket får du per dag.",
-    "kw": "räkna ut föräldrapenning 2026 sgi-taket 588 000 kr, 80-procentsregeln, lägstanivå och föräldralön — så mycket får du per dag."
+    "desc": "Föräldrapenning 2026 — så räknar du ut din ersättning per dag.",
+    "kw": "räkna ut föräldrapenning 2026 föräldrapenning 2026 — så räknar du ut din ersättning per dag."
   },
   {
     "type": "guide",
@@ -527,8 +527,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Räkna ut nettolön 2026",
     "icon": "💰",
     "category": "Guide",
-    "desc": "Brutto till netto — kommunalskatt, jobbskatteavdrag och statlig skatt. Exempel för 30 000, 45 000 och 70 000 kr.",
-    "kw": "räkna ut nettolön 2026 brutto till netto — kommunalskatt, jobbskatteavdrag och statlig skatt. exempel för 30 000, 45 000 och 70 000 kr."
+    "desc": "Så räknar du ut nettolön 2026 — kommunalskatt, jobbskatteavdrag och statlig skatt steg för steg.",
+    "kw": "räkna ut nettolön 2026 så räknar du ut nettolön 2026 — kommunalskatt, jobbskatteavdrag och statlig skatt steg för steg."
   },
   {
     "type": "guide",
@@ -536,8 +536,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Skattefri uthyrning 2026",
     "icon": "🏘️",
     "category": "Guide",
-    "desc": "Schablonavdrag 40 000 kr + 20 % av hyran. Så mycket får du tjäna utan att skatta — villa, bostadsrätt, hyresrätt.",
-    "kw": "skattefri uthyrning 2026 schablonavdrag 40 000 kr + 20 % av hyran. så mycket får du tjäna utan att skatta — villa, bostadsrätt, hyresrätt."
+    "desc": "Hur mycket får man tjäna på uthyrning utan att skatta 2026? Schablonavdrag 40 000 kr + 20 % av hyran.",
+    "kw": "skattefri uthyrning 2026 hur mycket får man tjäna på uthyrning utan att skatta 2026? schablonavdrag 40 000 kr + 20 % av hyran."
   },
   {
     "type": "guide",
@@ -545,8 +545,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Barnbidrag 2026 – hur mycket får du?",
     "icon": "👨‍👩‍👧‍👦",
     "category": "Guide",
-    "desc": "1 250 kr per barn och månad plus flerbarnstillägg. Total utbetalning per familj, utbetalningsdatum och regler.",
-    "kw": "barnbidrag 2026 flerbarnstillägg hur mycket är barnbidraget belopp utbetalning försäkringskassan barn familj"
+    "desc": "Hur mycket är barnbidraget 2026? 1 250 kr per barn och månad plus flerbarnstillägg.",
+    "kw": "barnbidrag 2026 – hur mycket får du? hur mycket är barnbidraget 2026? 1 250 kr per barn och månad plus flerbarnstillägg."
   },
   {
     "type": "guide",
@@ -554,8 +554,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är F-skatt?",
     "icon": "🧾",
     "category": "Guide",
-    "desc": "Så funkar F-skatt för egenföretagare, frilansare och enskild firma.",
-    "kw": "vad är f-skatt? så funkar f-skatt för egenföretagare, frilansare och enskild firma."
+    "desc": "Lär dig vad F-skatt är i Sverige 2026. Vi förklarar skillnaden mellan F-, A- och FA-skatt, hur du ansöker och vad det innebär som egenföretagare.",
+    "kw": "vad är f-skatt? lär dig vad f-skatt är i sverige 2026. vi förklarar skillnaden mellan f-, a- och fa-skatt, hur du ansöker och vad det innebär som egenföretagare."
   },
   {
     "type": "guide",
@@ -563,17 +563,17 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är ISK?",
     "icon": "📊",
     "category": "Guide",
-    "desc": "Investeringssparkonto förklarat — schablonskatt, fördelar och när det lönar sig.",
-    "kw": "vad är isk? investeringssparkonto förklarat — schablonskatt, fördelar och när det lönar sig."
+    "desc": "Lär dig hur ett ISK (investeringssparkonto) fungerar 2026. Vi förklarar schablonbeskattning, hur skatten beräknas och jämför ISK mot vanligt depåkonto.",
+    "kw": "vad är isk? lär dig hur ett isk (investeringssparkonto) fungerar 2026. vi förklarar schablonbeskattning, hur skatten beräknas och jämför isk mot vanligt depåkonto."
   },
   {
     "type": "guide",
     "url": "/artiklar/vad-ar-rot-rut-avdrag",
-    "title": "Vad är ROT &amp; RUT-avdrag?",
+    "title": "Vad är ROT & RUT-avdrag?",
     "icon": "🔨",
     "category": "Guide",
-    "desc": "Skatteavdrag för hushållsnära tjänster och renovering — takbelopp och regler 2026.",
-    "kw": "vad är rot &amp; rut-avdrag? skatteavdrag för hushållsnära tjänster och renovering — takbelopp och regler 2026."
+    "desc": "Lär dig hur ROT- och RUT-avdrag fungerar 2026. Vi förklarar vad som räknas som ROT-arbete, hur stor skattereduktionen är och hur du ansöker om avdraget.",
+    "kw": "vad är rot & rut-avdrag? lär dig hur rot- och rut-avdrag fungerar 2026. vi förklarar vad som räknas som rot-arbete, hur stor skattereduktionen är och hur du ansöker om avdraget."
   },
   {
     "type": "guide",
@@ -581,8 +581,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är effektiv ränta?",
     "icon": "💳",
     "category": "Guide",
-    "desc": "Den enda räntan du ska jämföra — inklusive alla avgifter. Varför nominell ränta är vilseledande.",
-    "kw": "vad är effektiv ränta? den enda räntan du ska jämföra — inklusive alla avgifter. varför nominell ränta är vilseledande."
+    "desc": "Effektiv ränta visar lånets verkliga kostnad per år — inklusive avgifter och uppläggningskostnader.",
+    "kw": "vad är effektiv ränta? effektiv ränta visar lånets verkliga kostnad per år — inklusive avgifter och uppläggningskostnader."
   },
   {
     "type": "guide",
@@ -590,8 +590,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är ett bolån?",
     "icon": "🏠",
     "category": "Guide",
-    "desc": "Så fungerar amortering, ränta, bindningstid och kontantinsats.",
-    "kw": "vad är ett bolån? så fungerar amortering, ränta, bindningstid och kontantinsats."
+    "desc": "Lär dig hur bolånereglerna fungerar 2026. Vi förklarar bolånetaket (90 % sedan april 2026), amorteringskravet och hur du räknar ut hur mycket du kan låna till bostad.",
+    "kw": "vad är ett bolån? lär dig hur bolånereglerna fungerar 2026. vi förklarar bolånetaket (90 % sedan april 2026), amorteringskravet och hur du räknar ut hur mycket du kan låna till bostad."
   },
   {
     "type": "guide",
@@ -599,8 +599,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är inflation?",
     "icon": "📉",
     "category": "Guide",
-    "desc": "KPI, KPIF och Riksbankens 2 %-mål. Vad är 1 000 kr värt om 10, 20, 30 år — och hur du skyddar dig.",
-    "kw": "vad är inflation? kpi, kpif och riksbankens 2 %-mål. vad är 1 000 kr värt om 10, 20, 30 år — och hur du skyddar dig."
+    "desc": "Inflation 2026 — hur mäts den, vad är KPI och hur mycket har pengarna förlorat i värde?",
+    "kw": "vad är inflation? inflation 2026 — hur mäts den, vad är kpi och hur mycket har pengarna förlorat i värde?"
   },
   {
     "type": "guide",
@@ -608,8 +608,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är kapitalvinstskatt?",
     "icon": "📈",
     "category": "Guide",
-    "desc": "Skatt på aktier, fonder och bostadsförsäljning — satser och regler förklarade.",
-    "kw": "vad är kapitalvinstskatt? skatt på aktier, fonder och bostadsförsäljning — satser och regler förklarade."
+    "desc": "Lär dig hur kapitalvinstskatt fungerar i Sverige 2026. Skattesatser för aktier, fonder och bostäder, hur förluster kvittas och jämförelse med ISK.",
+    "kw": "vad är kapitalvinstskatt? lär dig hur kapitalvinstskatt fungerar i sverige 2026. skattesatser för aktier, fonder och bostäder, hur förluster kvittas och jämförelse med isk."
   },
   {
     "type": "guide",
@@ -617,8 +617,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är marginalskatt?",
     "icon": "📊",
     "category": "Guide",
-    "desc": "Skatten på din sista intjänade krona — 32–52 % beroende på lönenivå. Brytpunkten 53 350 kr/mån.",
-    "kw": "vad är marginalskatt? skatten på din sista intjänade krona — 32–52 % beroende på lönenivå. brytpunkten 53 350 kr/mån."
+    "desc": "Marginalskatt 2026 är skatten på din sista intjänade krona — i Sverige 32–55 % beroende på lön.",
+    "kw": "vad är marginalskatt? marginalskatt 2026 är skatten på din sista intjänade krona — i sverige 32–55 % beroende på lön."
   },
   {
     "type": "guide",
@@ -626,8 +626,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är moms 2026?",
     "icon": "🧾",
     "category": "Guide",
-    "desc": "25 %, 12 % eller 6 % — så räknar du moms fram och baklänges. Plus 120 000-gränsen för småföretagare.",
-    "kw": "vad är moms 2026? 25 %, 12 % eller 6 % — så räknar du moms fram och baklänges. plus 120 000-gränsen för småföretagare."
+    "desc": "Moms 2026 i Sverige är 25 %, 12 % eller 6 % beroende på vara/tjänst.",
+    "kw": "vad är moms 2026? moms 2026 i sverige är 25 %, 12 % eller 6 % beroende på vara/tjänst."
   },
   {
     "type": "guide",
@@ -635,8 +635,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är ränta på ränta?",
     "icon": "📈",
     "category": "Guide",
-    "desc": "Världens 8:e underverk — så växer sparandet exponentiellt. Formeln, regel om 72 och varför tid slår timing.",
-    "kw": "vad är ränta på ränta? världens 8:e underverk — så växer sparandet exponentiellt. formeln, regel om 72 och varför tid slår timing."
+    "desc": "Ränta på ränta gör att ditt sparande växer exponentiellt över tid.",
+    "kw": "vad är ränta på ränta? ränta på ränta gör att ditt sparande växer exponentiellt över tid."
   },
   {
     "type": "guide",
@@ -644,8 +644,17 @@ window.SITE_SEARCH_INDEX = [
     "title": "Vad är semesterlön?",
     "icon": "🏖️",
     "category": "Guide",
-    "desc": "Semesterlön vs semesterersättning — så räknar du ut och så fungerar lagen.",
-    "kw": "vad är semesterlön? semesterlön vs semesterersättning — så räknar du ut och så fungerar lagen."
+    "desc": "Lär dig hur semesterlön beräknas 2026. Vi förklarar sammalöneregeln, procentregeln och hur många semesterdagar du har rätt till och vad som räknas in.",
+    "kw": "vad är semesterlön? lär dig hur semesterlön beräknas 2026. vi förklarar sammalöneregeln, procentregeln och hur många semesterdagar du har rätt till och vad som räknas in."
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/traktamente-2026",
+    "title": "Traktamente 2026 – belopp, regler & måltidsavdrag",
+    "icon": "🧳",
+    "category": "Guide",
+    "desc": "Traktamente 2026: 300 kr/heldag, 150 kr/halvdag, 150 kr nattraktamente.",
+    "kw": "traktamente 2026 – belopp, regler & måltidsavdrag traktamente 2026: 300 kr/heldag, 150 kr/halvdag, 150 kr nattraktamente. traktamente utlandstraktamente inrikes 2026 skattefritt"
   },
   {
     "type": "kalkylator",

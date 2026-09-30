@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,40 +34,25 @@
     <meta name="twitter:title" content="Leasingkalkylator Bil 2026">
     <meta name="twitter:description" content="Beräkna månadskostnad för billeasing och jämför med att köpa — gratis kalkylator.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -226,9 +212,7 @@
             margin-top: 4px;
         }
         .result-box.savings .value { color: var(--primary); }
-        @media (prefers-color-scheme: dark) {
-            .result-box.savings .value { color: #34d399; }
-        }
+        
 
         .comparison-label {
             font-size: 0.9rem;
@@ -290,9 +274,7 @@
             font-variant-numeric: tabular-nums;
         }
         .data-table td:first-child { text-align: left; }
-        @media (prefers-color-scheme: dark) {
-            .data-table th { color: #34d399; }
-        }
+        
 
         /* Affiliate CTA */
         .affiliate-section {
@@ -362,7 +344,7 @@
             margin-bottom: 16px;
         }
         .formula-box {
-            background: #f8f9fa;
+            background: #F6F5F1;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px;
@@ -371,12 +353,7 @@
             margin: 16px 0;
             overflow-x: auto;
         }
-        @media (prefers-color-scheme: dark) {
-            .formula-box {
-                background: rgba(52, 211, 153, 0.08);
-                border-color: var(--border);
-            }
-        }
+        
 
         /* FAQ */
         .faq-item {
@@ -458,11 +435,11 @@
             .affiliate-btn { text-align: center; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
@@ -500,7 +477,7 @@
                 "name": "Hur beräknas leasingkostnaden per månad?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är den procentandel av nypriset som betalas vid leasingperiodens slut."
+                    "text": "Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är bilens beräknade värde vid avtalets slut i procent av nypriset, alltså den del av nypriset du inte betalar av under avtalet."
                 }
             },
             {
@@ -508,7 +485,7 @@
                 "name": "Vad är restvärde på en leasingbil?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Typiska restvärden för 36 månaders leasing ligger mellan 40–60% beroende på bilmodell."
+                    "text": "Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Restvärdet sätts av leasingbolaget och skiljer sig mellan bilmodeller, så fråga alltid efter det i offerten."
                 }
             },
             {
@@ -516,7 +493,7 @@
                 "name": "Är det billigare att leasa eller köpa bil?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Det totala beloppet du betalar är vanligtvis lägre vid köp (lån) än vid leasing, eftersom leasingavgifterna inkluderar finansbolagets marginaler. Däremot är månadsbeloppet ofta lägre vid leasing om bilen har högt restvärde. Leasing passar bäst om du vill byta bil regelbundet, medan köp passar om du planerar att behålla bilen länge."
+                    "text": "Jämför nettokostnaden, inte bara vad du betalar. Vid köp äger du bilen när perioden är slut, så dess värde ska räknas av. Kalkylatorn räknar köpets nettokostnad som kontantinsats + lånebetalningar + övriga kostnader − bilens värde vid periodens slut (samma som restvärdet). Vid samma ränta blir köp med lån ofta något billigare i kalkylen, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Månadsbeloppet är däremot ofta lägre vid leasing, och med leasing slipper du risken att bilen är värd mindre än beräknat. Leasing passar om du vill byta bil regelbundet, köp om du planerar att behålla bilen länge."
                 }
             },
             {
@@ -524,7 +501,7 @@
                 "name": "Vad är handpenning vid billeasing?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Handpenningen (även kallad startbelopp eller förhöjd förstaförhöjd) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna."
+                    "text": "Handpenningen (även kallad startbelopp eller förhöjd första hyra) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna."
                 }
             },
             {
@@ -532,7 +509,7 @@
                 "name": "Vad händer när leasingperioden tar slut?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "När leasingperioden tar slut kan du antingen: (1) lämna tillbaka bilen och teckna nytt leasingavtal, (2) köpa loss bilen till det avtalade restvärdet, eller (3) avsluta utan vidare åtaganden. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normal slitage."
+                    "text": "Vid privatleasing lämnar du normalt tillbaka bilen och kan sedan teckna ett nytt avtal eller avsluta. Det finns oftast ingen rätt att köpa loss bilen till restvärdet, även om vissa bolag erbjuder ett utköpspris. Vid företagsleasing gäller andra villkor, så läs avtalet. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normalt slitage."
                 }
             },
             {
@@ -540,7 +517,7 @@
                 "name": "Vad är en typisk finansieringsränta vid billeasing?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge. År 2026 ligger typiska räntor för privatleasing mellan 4–9% per år. Nya elbilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val."
+                    "text": "Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge, och skiljer sig mellan bolag. Nya bilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val."
                 }
             },
             {
@@ -548,42 +525,60 @@
                 "name": "Kan man göra avdrag för leasingkostnader?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad (momsavdrag 50–100% beroende på användning). För privatpersoner finns inget direkt avdrag för leasingavgifter, men elektrifierade bilar kan ge subventioner via Klimatbonus eller förmånsbilavdrag beroende på din situation."
+                    "text": "Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad. Momsen på leasingavgiften för en personbil får företaget normalt dra av till 50 procent, om bilen används mer än 100 mil per år i momspliktig verksamhet. Hela momsen får dras av bara i vissa verksamheter, till exempel uthyrning, taxi och körkortsutbildning. För privatpersoner finns inget avdrag för leasingavgiften, och klimatbonusen för nya miljöbilar upphörde den 8 november 2022."
                 }
             }
         ]
     }
     </script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-<header>
-    <div class="container">
-        <div class="header-inner">
-            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a>
-                <a href="/kalkylatorer/lanekalkylator">Lånekalkylator</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-            </nav>
-        </div>
-    </div>
-</header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<main>
+
+
+<main id="innehall">
     <div class="container">
         <div class="page-header">
             <nav class="breadcrumb" aria-label="Brödsmulor">
                 <a href="/">GratisKalkyl.se</a> › Leasingkalkylator Bil
             </nav>
             <h1>Leasingkalkylator Bil 2026</h1>
-            <p>Beräkna din månadskostnad för billeasing och jämför mot att köpa med lån. Ange nypris, handpenning, löptid, restvärde och ränta.</p>
+            <p>Beräkna din månadskostnad för billeasing och jämför mot att köpa med lån. Ange nypris, handpenning, löptid, restvärde och ränta. Vid köp räknas bilens värde när perioden är slut av, så att jämförelsen blir rättvis.</p>
         </div>
 
         <div class="calc-wrapper">
@@ -642,7 +637,17 @@
                     <input type="number" id="rantaloan" value="7.5" min="0" max="30" step="0.1"
                            aria-label="Låneränta vid köp i procent" oninput="syncRangeDec('rantaloan','rantaloan-range','rantaloan-val','%')">
                 </div>
+                <div class="input-group">
+                    <label for="ovrigt">Övriga kostnader vid köp (kr/mån)</label>
+                    <span class="sublabel" id="ovrigt-val">0 kr/mån</span>
+                    <input type="range" id="ovrigt-range" min="0" max="3000" step="50" value="0"
+                           aria-label="Övriga kostnader vid köp slider" oninput="syncInput('ovrigt','ovrigt-range','ovrigt-val','kr/mån',0)">
+                    <div class="range-labels"><span>0 kr</span><span>3 000 kr</span></div>
+                    <input type="number" id="ovrigt" value="0" min="0" max="20000" step="50"
+                           aria-label="Övriga kostnader vid köp i kronor per månad" oninput="syncRange('ovrigt','ovrigt-range','ovrigt-val','kr/mån',0)">
+                </div>
             </div>
+            <p style="font-size:0.85rem;color:var(--text-light,#56625B);margin:0 0 16px;">Övriga kostnader: t.ex. service eller vinterdäck som ingår i leasingavgiften men som du själv betalar vid köp. Bilens värde vid periodens slut antas vara lika med restvärdet.</p>
 
             <!-- Leasing results -->
             <p class="comparison-label">🚘 Leasing</p>
@@ -673,14 +678,14 @@
                     <div class="sub">annuitetslån</div>
                 </div>
                 <div class="result-box neutral">
-                    <div class="label">Total lånekostnad</div>
+                    <div class="label">Nettokostnad köp</div>
                     <div class="value" id="res-total-lan">—</div>
-                    <div class="sub">inkl. handpenning</div>
+                    <div class="sub" id="res-total-lan-sub">betalt − bilens värde</div>
                 </div>
                 <div class="result-box savings">
-                    <div class="label">Totalt köpa sparar</div>
+                    <div class="label">Skillnad i nettokostnad</div>
                     <div class="value" id="res-skillnad">—</div>
-                    <div class="sub" id="res-skillnad-sub">vs. leasing</div>
+                    <div class="sub" id="res-skillnad-sub">köp jämfört med leasing</div>
                 </div>
             </div>
 
@@ -696,30 +701,23 @@
                 <thead>
                     <tr>
                         <th>År</th>
-                        <th>Inlöst värde (kr)</th>
+                        <th>Avskrivning (kr)</th>
                         <th>Räntekostnad (kr)</th>
                         <th>Leasingavgift (kr)</th>
-                        <th>Återstående restvärde (kr)</th>
+                        <th>Kvarvarande kapital inkl. restvärde (kr)</th>
                     </tr>
                 </thead>
                 <tbody id="leasingTableBody"></tbody>
             </table>
 
             <!-- Affiliate -->
-            <div class="affiliate-section">
-                <h3>🔎 Jämför billån och bilförsäkring</h3>
-                <p>Planerar du att köpa bilen istället för att leasa? Jämför räntor och villkor för billån hos flera banker via en ansökan.</p>
-                <div class="affiliate-buttons">
-                    <a href="https://www.zmarta.se/lan/billaan" class="affiliate-btn primary" rel="sponsored noopener" target="_blank">Jämför billån — Zmarta</a>
-                    <a href="https://www.sambla.se" class="affiliate-btn secondary" rel="sponsored noopener" target="_blank">Jämför billån — Sambla</a>
-                </div>
-            </div>
+            
         </div>
 
         <!-- SEO text -->
         <div class="info-section">
             <h2>Hur fungerar billeasing?</h2>
-            <p>Billeasing innebär att du hyr en bil under en bestämd period — vanligtvis 24, 36 eller 48 månader — mot en fast månadskostnad. Du betalar för bilens värdeminskning under perioden, plus en finansieringsränta på det återstående kapitalet. Till skillnad från ett billån äger du aldrig bilen; vid avtalets slut lämnar du tillbaka den eller köper loss den till det förutbestämda restvärdet.</p>
+            <p>Billeasing innebär att du hyr en bil under en bestämd period — vanligtvis 24, 36 eller 48 månader — mot en fast månadskostnad. Du betalar för bilens värdeminskning under perioden, plus en finansieringsränta på det återstående kapitalet. Till skillnad från ett billån äger du aldrig bilen. Vid privatleasing lämnar du normalt tillbaka den när avtalet är slut – det finns oftast ingen rätt att köpa loss bilen till restvärdet.</p>
 
             <h3>Leasing-formeln förklarad</h3>
             <p>Månadskostnaden beräknas i två delar: avskrivningsdelen och räntedelen.</p>
@@ -733,13 +731,18 @@ Finansierat belopp = Nypris − Handpenning
             <p>Restvärdet räknas som andel av nypriset och representerar bilens förväntade marknadsvärde vid avtalets slut. Ju högre restvärde, desto lägre avskrivning betalar du varje månad.</p>
 
             <h3>Leasing vs. köpa — vad är billigast?</h3>
-            <p>Den totala kostnaden för att köpa bilen med lån är normalt lägre än den totala leasingkostnaden, eftersom du efter löptiden äger ett bil värd restvärdet. Med leasing betalar du å andra sidan inte för restvärdesrisken — om bilen rasat i värde är det leasingbolaget som tar förlusten. Leasing passar bäst om du vill byta bil med jämna intervall och föredrar fast månadsbudget.</p>
+            <p>För en rättvis jämförelse räknar kalkylatorn köpets <strong>nettokostnad</strong>: kontantinsats + alla lånebetalningar + övriga kostnader − bilens värde när perioden är slut. Bilens värde antas vara detsamma som restvärdet i leasingavtalet. Leasingens kostnad är handpenningen plus alla leasingavgifter, eftersom du inte äger något efteråt.</p>
+            <div class="formula-box">
+Nettokostnad köp = Kontantinsats + Månadskostnad lån × Löptid + Övriga kostnader − Bilens värde vid slutet<br><br>
+Kostnad leasing = Handpenning + Månadskostnad leasing × Löptid
+            </div>
+            <p>Lånet i kalkylatorn betalas av under samma tid som leasingavtalet, så det finns ingen restskuld kvar. Vid samma ränta blir köp ofta något billigare, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Kalkylatorn räknar däremot inte med att du vid köp betalar mer under perioden (pengar som annars kunde ha gett avkastning) eller att bilen kan vara värd mindre än restvärdet när du säljer. Med leasing är det leasingbolaget som bär den risken. Leasing passar bäst om du vill byta bil med jämna intervall och föredrar en fast månadsbudget.</p>
 
             <h3>Restvärde — nyckeln till låg månadskostnad</h3>
-            <p>Restvärdet är en av de viktigaste parametrarna i leasing. Premiumbilar och elbilar med hög begäransgrad håller ofta 50–60% av nypriset efter 36 månader, vilket ger låg månadskostnad. Bilar med sämre andrahandsvärde kan ha restvärden på 35–45%, vilket höjer kostnaden. Fråga alltid efter restvärdet i leasingofferter och jämför det med liknande bilars andrahandspriser.</p>
+            <p>Restvärdet är en av de viktigaste parametrarna i leasing. Bilar som håller värdet väl får ett högre restvärde och därmed lägre månadskostnad, medan bilar med sämre andrahandsvärde får ett lägre restvärde och högre kostnad. Restvärdet skiljer sig mycket mellan bilmodeller. Fråga alltid efter restvärdet i leasingofferter och jämför det med vad liknande begagnade bilar säljs för.</p>
 
             <h3>Dolda kostnader vid leasing</h3>
-            <p>Utöver leasingavgiften tillkommer ofta: milkostnad om du kör mer än avtalat antal mil per år (vanligen 1–3 kr/km), dokumentavgift vid avtalstecknande, eventuell återlämnningsavgift om bilen har skador. Se till att avtalad milgräns stämmer med ditt faktiska körande — en typisk privatperson kör 1 500–2 000 mil per år.</p>
+            <p>Utöver leasingavgiften tillkommer ofta: en avgift per mil om du kör mer än avtalat antal mil (beloppet står i avtalet), dokumentavgift vid avtalstecknande och eventuell kostnad vid återlämning om bilen har skador. Se till att avtalad milgräns stämmer med ditt faktiska körande. Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025, men elbilar och laddhybrider körde längre, ungefär 1 700 mil.</p>
 
             <h2>Vanliga frågor om billeasing</h2>
 
@@ -749,7 +752,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är den procentandel av nypriset som betalas vid leasingperiodens slut.
+                    Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är bilens beräknade värde vid avtalets slut i procent av nypriset, alltså den del av nypriset du inte betalar av under avtalet.
                 </div>
             </div>
             <div class="faq-item">
@@ -758,7 +761,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Typiska restvärden för 36 månaders leasing ligger mellan 40–60% beroende på bilmodell.
+                    Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Restvärdet sätts av leasingbolaget och skiljer sig mellan bilmodeller, så fråga alltid efter det i offerten.
                 </div>
             </div>
             <div class="faq-item">
@@ -767,7 +770,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Det totala beloppet du betalar är vanligtvis lägre vid köp (lån) än vid leasing, eftersom leasingavgifterna inkluderar finansbolagets marginaler. Däremot är månadsbeloppet ofta lägre vid leasing om bilen har högt restvärde. Leasing passar bäst om du vill byta bil regelbundet, medan köp passar om du planerar att behålla bilen länge.
+                    Jämför nettokostnaden, inte bara vad du betalar. Vid köp äger du bilen när perioden är slut, så dess värde ska räknas av. Kalkylatorn räknar köpets nettokostnad som kontantinsats + lånebetalningar + övriga kostnader − bilens värde vid periodens slut (samma som restvärdet). Vid samma ränta blir köp med lån ofta något billigare i kalkylen, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Månadsbeloppet är däremot ofta lägre vid leasing, och med leasing slipper du risken att bilen är värd mindre än beräknat. Leasing passar om du vill byta bil regelbundet, köp om du planerar att behålla bilen länge.
                 </div>
             </div>
             <div class="faq-item">
@@ -776,7 +779,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Handpenningen (även kallad startbelopp eller förhöjd förstaförhöjd) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna.
+                    Handpenningen (även kallad startbelopp eller förhöjd första hyra) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna.
                 </div>
             </div>
             <div class="faq-item">
@@ -785,7 +788,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    När leasingperioden tar slut kan du antingen: (1) lämna tillbaka bilen och teckna nytt leasingavtal, (2) köpa loss bilen till det avtalade restvärdet, eller (3) avsluta utan vidare åtaganden. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normal slitage.
+                    Vid privatleasing lämnar du normalt tillbaka bilen och kan sedan teckna ett nytt avtal eller avsluta. Det finns oftast ingen rätt att köpa loss bilen till restvärdet, även om vissa bolag erbjuder ett utköpspris. Vid företagsleasing gäller andra villkor, så läs avtalet. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normalt slitage.
                 </div>
             </div>
             <div class="faq-item">
@@ -794,7 +797,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge. År 2026 ligger typiska räntor för privatleasing mellan 4–9% per år. Nya elbilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val.
+                    Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge, och skiljer sig mellan bolag. Nya bilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val.
                 </div>
             </div>
             <div class="faq-item">
@@ -803,7 +806,7 @@ Finansierat belopp = Nypris − Handpenning
                     <span class="arrow">▾</span>
                 </button>
                 <div class="faq-a">
-                    Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad (momsavdrag 50–100% beroende på användning). För privatpersoner finns inget direkt avdrag för leasingavgifter, men elektrifierade bilar kan ge subventioner via Klimatbonus eller förmånsbilavdrag beroende på din situation.
+                    Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad. Momsen på leasingavgiften för en personbil får företaget normalt dra av till 50 procent, om bilen används mer än 100 mil per år i momspliktig verksamhet. Hela momsen får dras av bara i vissa verksamheter, till exempel uthyrning, taxi och körkortsutbildning. För privatpersoner finns inget avdrag för leasingavgiften, och klimatbonusen för nya miljöbilar upphörde den 8 november 2022.
                 </div>
             </div>
 
@@ -822,13 +825,22 @@ Finansierat belopp = Nypris − Handpenning
     </div>
 </main>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>© 2026 GratisKalkyl.se — <a href="/">Alla kalkylatorer</a></p>
-        <p style="margin-top:8px; font-size:0.8rem;">Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn tar inte hänsyn till eventuella avgifter, skatter eller individuella villkor. Rådfråga en finansiell rådgivare för personlig vägledning.</p>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
     // ── Sync helpers ──────────────────────────────────────────────────
@@ -889,9 +901,12 @@ Finansierat belopp = Nypris − Handpenning
         } else {
             manadLan = loanBelopp * mRantaLan / (1 - Math.pow(1 + mRantaLan, -loptid));
         }
-        const totalLan    = manadLan * loptid + handpenning;
+        const ovrigtMan   = parseFloat(document.getElementById('ovrigt').value) || 0;
+        const totalLan    = manadLan * loptid + handpenning;          // allt du betalar för bilen (kontantinsats + lån)
+        const ovrigtTot   = ovrigtMan * loptid;                       // t.ex. service som ingår i leasingen
+        const nettoKop    = totalLan + ovrigtTot - restKr;            // minus bilens värde vid periodens slut (= restvärdet)
 
-        const skillnad    = totalLeasing - totalLan; // positive = leasing more expensive
+        const skillnad    = Math.round(totalLeasing) - Math.round(nettoKop); // positivt = leasing dyrare än köp (räknat på de avrundade beloppen som visas)
 
         // Display
         function kr(v) { return Math.round(v).toLocaleString('sv-SE') + ' kr'; }
@@ -899,17 +914,22 @@ Finansierat belopp = Nypris − Handpenning
         document.getElementById('res-total-leasing').textContent = kr(totalLeasing);
         document.getElementById('res-restvarde-kr').textContent  = kr(restKr);
         document.getElementById('res-manad-lan').textContent     = kr(manadLan);
-        document.getElementById('res-total-lan').textContent     = kr(totalLan);
+        document.getElementById('res-total-lan').textContent     = kr(nettoKop);
+        document.getElementById('res-total-lan-sub').textContent =
+            'betalt ' + kr(totalLan + ovrigtTot) + ' − bilens värde ' + kr(restKr);
 
-        if (skillnad > 0) {
+        if (Math.round(skillnad) === 0) {
+            document.getElementById('res-skillnad').textContent     = '0 kr';
+            document.getElementById('res-skillnad-sub').textContent = 'lika dyrt';
+        } else if (skillnad > 0) {
             document.getElementById('res-skillnad').textContent     = kr(skillnad);
-            document.getElementById('res-skillnad-sub').textContent = 'köpa är billigare';
+            document.getElementById('res-skillnad-sub').textContent = 'köp är billigare';
         } else {
             document.getElementById('res-skillnad').textContent     = kr(-skillnad);
             document.getElementById('res-skillnad-sub').textContent = 'leasing är billigare';
         }
 
-        drawChart(manadLeasing, manadLan, totalLeasing, totalLan, loptid);
+        drawChart(manadLeasing, manadLan, totalLeasing, nettoKop, loptid);
         buildTable(finBelopp, restKr, loptid, mRanta, manadLeasing);
     }
 
@@ -927,18 +947,19 @@ Finansierat belopp = Nypris − Handpenning
         ctx.scale(dpr, dpr);
         ctx.clearRect(0, 0, W, H);
 
-        const dark  = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const textC = dark ? '#d1d5db' : '#555555';
-        const gridC = dark ? '#374151' : '#e2e8f0';
-        const primC = dark ? '#34d399' : '#1a6b4a';
-        const neutC = dark ? '#6b7280' : '#9ca3af';
-        const bgC   = dark ? '#1f2937' : '#f8fafc';
+        const dark  = false;
+        const textC = dark ? '#d1d5db' : '#56625B';
+        const gridC = dark ? '#3A4640' : '#E2E0D8';
+        const primC = dark ? '#0D6A45' : '#0D6A45';
+        const neutC = dark ? '#56625B' : '#9ca3af';
+        const bgC   = dark ? '#15201A' : '#F6F5F1';
 
         const pad = { top: 32, right: 24, bottom: 56, left: 80 };
         const cW  = W - pad.left - pad.right;
         const cH  = H - pad.top  - pad.bottom;
 
-        const maxVal = Math.max(tLeasing, tLan) * 1.15;
+        const maxVal  = Math.max(tLeasing, tLan, 1) * 1.15;          // skala för totalkostnad (y-axeln)
+        const maxValM = Math.max(mLeasing, mLan, 1) * 1.15;          // egen skala för månadskostnad
 
         function toY(v) { return pad.top + cH * (1 - v / maxVal); }
 
@@ -965,8 +986,8 @@ Finansierat belopp = Nypris − Handpenning
         const group1X = pad.left + cW * 0.2;
         const group2X = pad.left + cW * 0.62;
 
-        function drawBar(x, val, color, label) {
-            const bH = cH * (val / maxVal);
+        function drawBar(x, val, color, label, scaleMax, valueText) {
+            const bH = cH * (Math.max(0, val) / scaleMax);
             const y  = pad.top + cH - bH;
             ctx.fillStyle = color;
             ctx.beginPath();
@@ -977,20 +998,19 @@ Finansierat belopp = Nypris − Handpenning
             ctx.fillStyle = textC;
             ctx.textAlign = 'center';
             ctx.font = '11px Inter, sans-serif';
-            ctx.fillText((Math.round(val / 1000)) + 'k kr', x + barW / 2, y - 6);
+            ctx.fillText(valueText, x + barW / 2, y - 6);
 
             // Bottom label
             ctx.fillText(label, x + barW / 2, H - 8);
         }
 
-        // Monthly comparison
-        const mScale = 200; // scale months up for visibility
-        drawBar(group1X,          mLeasing * mScale, primC, 'Leasing/mån');
-        drawBar(group1X + barW + gap, mLan * mScale, neutC, 'Lån/mån');
+        // Monthly comparison (egen skala)
+        drawBar(group1X,              mLeasing, primC, 'Leasing/mån', maxValM, Math.round(mLeasing).toLocaleString('sv-SE') + ' kr');
+        drawBar(group1X + barW + gap, mLan,     neutC, 'Lån/mån',     maxValM, Math.round(mLan).toLocaleString('sv-SE') + ' kr');
 
-        // Total comparison
-        drawBar(group2X,               tLeasing, primC, 'Total leasing');
-        drawBar(group2X + barW + gap,  tLan,     neutC, 'Total lån');
+        // Total comparison: leasing mot köpets nettokostnad
+        drawBar(group2X,               tLeasing, primC, 'Leasing',     maxVal, Math.round(tLeasing / 1000) + 'k kr');
+        drawBar(group2X + barW + gap,  tLan,     neutC, 'Köp (netto)', maxVal, Math.round(tLan / 1000) + 'k kr');
 
         // Group labels
         ctx.fillStyle = textC;
@@ -999,13 +1019,13 @@ Finansierat belopp = Nypris − Handpenning
         const g1cX = group1X + barW + gap / 2;
         const g2cX = group2X + barW + gap / 2;
         ctx.fillText('Månadskostnad', g1cX, H - 30);
-        ctx.fillText('Totalkostnad', g2cX, H - 30);
+        ctx.fillText('Totalt (netto)', g2cX, H - 30);
 
         // Note for monthly scale
         ctx.fillStyle = textC;
         ctx.font      = '10px Inter, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('(månadskostnad × ' + mScale + ' för jämförbarhet)', group1X + barW + gap / 2, pad.top + cH + 14);
+        ctx.fillText('(egen skala, y-axeln gäller totalkostnad)', group1X + barW + gap / 2, pad.top + cH + 14);
     }
 
     // ── Annual table ──────────────────────────────────────────────────
@@ -1033,7 +1053,7 @@ Finansierat belopp = Nypris − Handpenning
                 <td>${Math.round(yearAmort).toLocaleString('sv-SE')} kr</td>
                 <td>${Math.round(yearRanta).toLocaleString('sv-SE')} kr</td>
                 <td>${Math.round(yearAvgift).toLocaleString('sv-SE')} kr</td>
-                <td>${Math.round(Math.max(0, restLeft + restKr)).toLocaleString('sv-SE')} kr</td>
+                <td>${Math.round(restLeft).toLocaleString('sv-SE')} kr</td>
             `;
             tbody.appendChild(tr);
         }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,19 +34,16 @@
     <meta name="twitter:title" content="Semesterlönekalkylator 2026">
     <meta name="twitter:description" content="Räkna ut din semesterlön för 2026. Sammalöneregeln och procentregeln.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
         :root {
-            --primary: #1a6b4a; --primary-light: #e8f5ee; --primary-dark: #0d4a30;
-            --accent: #2563eb; --text: #1a1a2e; --text-light: #555;
-            --bg: #fafbfc; --white: #ffffff; --border: #e2e8f0;
+            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
+            --accent: #2563eb; --text: #15201A; --text-light: #56625B;
+            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root { --text: #f3f4f6; --text-light: #d1d5db; --bg: #111827; --white: #1f2937; --border: #374151; --primary-light: rgba(26,107,74,0.2); --primary: #34d399; --shadow: 0 2px 8px rgba(0,0,0,0.3); }
-            input[type="number"], select { background: #1f2937 !important; color: #f3f4f6 !important; }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 16px 20px; }
         header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
         header a:hover { color: white; }
@@ -67,14 +65,14 @@
         .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
         .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
         .result-box .value { font-size: 1.5rem; font-weight: 800; color: var(--primary-dark); }
-        @media(prefers-color-scheme:dark) { .result-box .value { color: var(--primary); } }
+        
         .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
         .compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
         .compare-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
         .compare-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
         .compare-table tr:nth-child(even) td { background: var(--primary-light); }
         .highlight-row td { font-weight: 700; color: var(--primary-dark); }
-        @media(prefers-color-scheme:dark) { .highlight-row td { color: var(--primary); } }
+        
         .info-section { margin-bottom: 48px; }
         .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
         .info-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; margin-top: 24px; }
@@ -93,25 +91,23 @@
         footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.85rem; margin-top: 48px; }
         footer a { color: rgba(255,255,255,0.9); }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"Hur beräknas semesterlön?","acceptedAnswer":{"@type":"Answer","text":"Semesterlön beräknas antingen med sammalöneregeln (månadslön + 0,43% per betald semesterdag) eller procentregeln (12% av årsförtjänsten). Arbetsgivaren ska alltid använda den metod som ger mest."}},
-        {"@type":"Question","name":"Hur många semesterdagar har jag rätt till?","acceptedAnswer":{"@type":"Answer","text":"Enligt semesterlagen har alla anställda rätt till minst 25 semesterdagar per år. Många kollektivavtal ger fler dagar, vanligtvis 28–32 dagar beroende på ålder och anställningstid."}},
-        {"@type":"Question","name":"Vad är semestertillägg?","acceptedAnswer":{"@type":"Answer","text":"Semestertillägg är det extra belopp du får utöver ordinarie lön under semesterdagar. Enligt sammalöneregeln är det 0,43% av månadslönen per dag. Det är ett sätt att kompensera för att du inte tjänar in provision eller rörliga tillägg under ledigheten."}}
+        {"@type":"Question","name":"Hur beräknas semesterlön?","acceptedAnswer":{"@type":"Answer","text":"Semesterlön beräknas antingen med sammalöneregeln (månadslön + semestertillägg på 0,43 % av månadslönen per betald semesterdag, plus 12 % av eventuella rörliga lönedelar) eller procentregeln (12 % av intjänandeårets lön). Vid månadslön är sammalöneregeln huvudregel, men arbetsgivaren får välja procentregeln. Procentregeln ska användas vid timlön, om rörliga lönedelar är minst 10 % av lönen eller om sysselsättningsgraden har ändrats."}},
+        {"@type":"Question","name":"Hur många semesterdagar har jag rätt till?","acceptedAnswer":{"@type":"Answer","text":"Enligt semesterlagen har alla anställda rätt till 25 semesterdagar per år. Många kollektivavtal ger fler dagar, ofta beroende på ålder. Kontrollera ditt kollektivavtal eller anställningsavtal."}},
+        {"@type":"Question","name":"Vad är semestertillägg?","acceptedAnswer":{"@type":"Answer","text":"Semestertillägg är det extra belopp du får utöver ordinarie lön för varje betald semesterdag. Enligt sammalöneregeln är det 0,43 % av månadslönen per dag. Rörliga lönedelar, som provision, ersätts separat med 12 %. Kollektivavtal kan ge ett högre tillägg."}}
     ]}</script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
 
   <script type="application/ld+json">
@@ -140,16 +136,46 @@
     ]
   }
   </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-<header>
-    <div class="container"><a href="/">← Alla kalkylatorer</a></div>
-</header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<main class="container">
+
+
+<main class="container" id="innehall">
     <h1>🏖️ Semesterlönekalkylator 2026</h1>
-    <p class="subtitle">Räkna ut din semesterlön med sammalöneregeln och procentregeln – och se vilken metod som ger mest.</p>
+    <p class="subtitle">Räkna ut din semesterlön med sammalöneregeln och procentregeln – och se vilken regel som gäller för dig.</p>
 
     <div class="card">
         <div class="input-grid">
@@ -171,18 +197,21 @@
             <div>
                 <label for="rorlig">Rörliga tillägg/år (kr)</label>
                 <input type="number" id="rorlig" value="0" min="0" max="500000" step="1000">
-                <div class="hint">OB, provision, övertid under intjänandeåret</div>
+                <div class="hint">Provision, OB, övertid m.m. under ett år</div>
             </div>
             <div>
-                <label for="anstallningsgrad">Anställningsgrad (%)</label>
-                <input type="number" id="anstallningsgrad" value="100" min="1" max="100" step="1">
-                <div class="hint">100% = heltid</div>
+                <label for="sysselsattning">Har din sysselsättningsgrad ändrats?</label>
+                <select id="sysselsattning">
+                    <option value="nej">Nej, samma under intjänandeåret och nu</option>
+                    <option value="ja">Ja, den har varierat eller ändrats</option>
+                </select>
+                <div class="hint">T.ex. bytt från deltid till heltid – då ska procentregeln användas</div>
             </div>
             <div>
                 <label for="kollektivavtal">Kollektivavtalstyp</label>
                 <select id="kollektivavtal">
-                    <option value="standard">Standard (sammalöne- / procentregel)</option>
-                    <option value="kollektiv">Kollektivavtal (0,8% + 0,5% rörliga)</option>
+                    <option value="standard">Semesterlagen (sammalöne- / procentregel)</option>
+                    <option value="kollektiv">Tjänstemannaavtal (0,8 % + 0,5 % av rörlig lön per dag)</option>
                 </select>
                 <div class="hint">Välj enligt ditt anställningsavtal</div>
             </div>
@@ -211,35 +240,30 @@
 (Månadslön / Arbetsdagar per månad) + (Månadslön × 0,43%)
 
 Semestertillägg totalt = Månadslön × 0,43% × Antal semesterdagar
++ 12% av rörliga lönedelar (t.ex. provision)
 
-Standard: 0,43% per dag
-Kollektivavtal (LO-avtal): vanligtvis 0,8% per dag</div>
+Semesterlagen: 0,43% per dag
+Många tjänstemannaavtal: 0,8% per dag + 0,5% av rörlig lön per dag</div>
 
         <h3>Procentregeln – för rörliga löner och timanställda</h3>
-        <p>Procentregeln används när lönen varierar – vid provision, OB-tillägg eller oregelbunden arbetstid. Semesterlönen beräknas som 12 % av den totala intjänade lönen under intjänandeåret (normalt 1 april–31 mars).</p>
+        <p>Procentregeln ska användas om du har timlön, om de rörliga lönedelarna (t.ex. provision) är minst 10 % av den sammanlagda lönen, om din sysselsättningsgrad har varierat eller ändrats, eller om du har haft viss frånvaro som inte är semesterlönegrundande. Semesterlönen beräknas som 12 % av den intjänade lönen under intjänandeåret (normalt 1 april–31 mars).</p>
         <div class="formula-box">Semesterlön totalt (procentregeln) =
 (Årsförtjänst inkl. rörliga tillägg) × 12%
 
 Per dag = Totalt / Antal intjänade semesterdagar</div>
 
         <h3>Vilken regel gäller för dig?</h3>
-        <p>Arbetsgivaren ska alltid beräkna med <strong>båda metoderna</strong> och använda den som ger mest. I praktiken: om du bara har fast lön är sammalöneregeln vanligtvis bäst. Om du har stor andel rörlig lön (provision, OB, övertid) kan procentregeln ge mer.</p>
+        <p>Har du fast månadslön gäller <strong>sammalöneregeln</strong> som huvudregel, men arbetsgivaren får välja att använda procentregeln i stället. Det finns ingen regel om att arbetsgivaren måste välja den metod som ger mest. Procentregeln är obligatorisk vid timlön, vid rörliga lönedelar på minst 10 % av lönen och vid ändrad sysselsättningsgrad. Kollektivavtal kan ha andra regler. Kalkylatorn visar båda beräkningarna och markerar vilken regel som normalt gäller.</p>
 
         <h3>Intjänandeår och semesterår</h3>
         <p>Du tjänar in semesterdagar under <strong>intjänandeåret</strong> (1 april–31 mars) och tar ut dem under <strong>semesteråret</strong> (1 april–31 mars påföljande år). Det innebär att ny anställd det första halvåret kan ha rätt till 0 betalda semesterdagar (eller ett förskott) om inga dagar hunnit tjänas in.</p>
         <p>Om du är nyanställd och inte hunnit tjäna in betald semester kan arbetsgivaren erbjuda <strong>förskottssemester</strong> (som räknas av mot framtida intjäning) eller du tar obetald ledighet.</p>
 
-        <h3>25 dagar – men kollektivavtal ger ofta mer</h3>
-        <p>Semesterlagen garanterar 25 semesterdagar per år för alla. Men de flesta kollektivavtal i Sverige ger mer:</p>
-        <ul>
-            <li>Industri (Teknikarbetsgivarna): 28 dagar till 40 år, 32 dagar från 40 år</li>
-            <li>Handel: 25–28 dagar beroende på ålder</li>
-            <li>Kommunal sektor: 28–35 dagar</li>
-            <li>Staten: 28–35 dagar baserat på ålder</li>
-        </ul>
+        <h3>25 dagar – men kollektivavtal kan ge mer</h3>
+        <p>Semesterlagen garanterar 25 semesterdagar per år för alla. Många kollektivavtal ger fler dagar, ofta beroende på ålder. Hur många dagar du har rätt till ser du i ditt kollektivavtal eller anställningsavtal.</p>
 
         <h3>Semesterersättning vid avslut</h3>
-        <p>När du slutar en anställning har du rätt till <strong>semesterersättning</strong> för all intjänad men ej uttagen semesterlön. Denna beräknas med procentregeln (12 % av årsförtjänsten) och betalas ut med sista lönen eller separat. Kontrollera alltid att du fått korrekt semesterersättning – det är en vanlig källa till tvister.</p>
+        <p>När du slutar en anställning har du rätt till <strong>semesterersättning</strong> för all intjänad men ej uttagen semesterlön. Den beräknas enligt samma regler som semesterlönen: med procentregeln blir den 12 % av den semesterlönegrundande lönen, med sammalöneregeln motsvarar den lön och semestertillägg för de dagar du inte tagit ut. Den betalas ut med sista lönen eller separat. Kontrollera alltid att du fått korrekt semesterersättning – det är en vanlig källa till tvister.</p>
     </div>
 
     <!-- FAQ -->
@@ -247,11 +271,11 @@ Per dag = Totalt / Antal intjänade semesterdagar</div>
         <h2>Vanliga frågor om semesterlön 2026</h2>
         <details class="faq-item">
             <summary>Vad är skillnaden mellan semesterlön och semestertillägg?</summary>
-            <p>Semesterlön är hela lönen du får under en semesterdag. Semestertillägg är det extra beloppet utöver ordinarie dagslön – enligt sammalöneregeln 0,43 % av månadslönen per dag. Semestertillägget kompenserar för att du inte tjänar in rörliga tillägg under ledigheten.</p>
+            <p>Semesterlön är hela lönen du får under en semesterdag. Semestertillägg är det extra beloppet utöver ordinarie dagslön – enligt sammalöneregeln 0,43 % av månadslönen per dag. Rörliga lönedelar, som provision, ersätts separat med 12 %.</p>
         </details>
         <details class="faq-item">
             <summary>Får jag ut semesterlön om jag slutar?</summary>
-            <p>Ja, när du slutar din anställning har du rätt till semesterersättning för alla intjänade men ej uttagna semesterdagar. Den beräknas med procentregeln (12 % av årsförtjänsten) och ska betalas senast en månad efter anställningens slut.</p>
+            <p>Ja, när du slutar din anställning har du rätt till semesterersättning för alla intjänade men ej uttagna betalda semesterdagar. Den beräknas enligt samma regler som semesterlönen – med procentregeln är det 12 % av den semesterlönegrundande lönen, med sammalöneregeln lön och semestertillägg per outtagen dag. Den ska betalas senast en månad efter anställningens slut.</p>
         </details>
         <details class="faq-item">
             <summary>Kan jag spara semesterdagar till nästa år?</summary>
@@ -263,11 +287,11 @@ Per dag = Totalt / Antal intjänade semesterdagar</div>
         </details>
         <details class="faq-item">
             <summary>Räknas föräldraledighet in i intjänandet?</summary>
-            <p>Ja, men begränsat. Under föräldraledighet tjänar du in semesterdagar för de första 180 dagarna (120 dagar med hel föräldrapenning). Efter det tjänar du inte in fler semesterdagar under föräldraledigheten.</p>
+            <p>Ja, men begränsat. Föräldraledighet är semesterlönegrundande i högst 120 dagar per intjänandeår (180 dagar om du är ensamstående förälder). Längre ledighet än så ger inte semesterlön för den överskjutande tiden.</p>
         </details>
         <details class="faq-item">
             <summary>Vad händer om arbetsgivaren inte betalar rätt semesterlön?</summary>
-            <p>Felaktig semesterlön är ett brott mot semesterlagen. Kontakta ditt fackförbund för hjälp. Om du inte är facklig kan Arbetsmiljöverket och eventuellt domstol bli aktuellt. Semesterfordran preskriberas normalt efter 2 år.</p>
+            <p>Felaktig semesterlön strider mot semesterlagen. Kontakta ditt fackförbund för hjälp. Är du inte med i facket kan du själv driva frågan i domstol (tingsrätten). Enligt semesterlagen (33 §) måste du väcka talan i domstol inom två år efter utgången av det semesterår då semesterlönen skulle ha betalats.</p>
         </details>
     </div>
 </main>
@@ -295,14 +319,22 @@ Per dag = Totalt / Antal intjänade semesterdagar</div>
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-        Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
-        <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">Beräkningarna är ungefärliga. Använd som vägledning, inte som underlag för ekonomiska beslut.</p>
-    </div>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
 function fmt(n) { return Math.round(n).toLocaleString('sv-SE'); }
@@ -313,38 +345,59 @@ function berakna() {
     const semesterdagar = parseInt(document.getElementById('semesterdagar').value) || 0;
     const totaldagar = parseInt(document.getElementById('totaldagar').value) || 25;
     const rorlig = parseFloat(document.getElementById('rorlig').value) || 0;
-    const anstallningsgrad = parseFloat(document.getElementById('anstallningsgrad').value) / 100 || 1;
+    const variabelSyss = document.getElementById('sysselsattning').value === 'ja';
     const kollektivavtal = document.getElementById('kollektivavtal').value;
 
     if (manadslon <= 0 || semesterdagar <= 0) return;
 
     const arslon = manadslon * 12;
     const arbdagarPerMan = 21.67; // genomsnitt
+    const andelDagar = semesterdagar / totaldagar;
 
-    // Sammalöneregeln
+    // Sammalöneregeln (SemL 16 a §): aktuell månadslön + semestertillägg per betald semesterdag.
+    // Lag: 0,43 % av månadslönen per dag + 12 % av rörliga lönedelar.
+    // Tjänstemannaavtal: ofta 0,8 % av månadslönen + 0,5 % av hela årets rörliga lön per dag.
     const tillaeggsProcent = kollektivavtal === 'kollektiv' ? 0.008 : 0.0043;
-    const rorligTillaeggsProcent = kollektivavtal === 'kollektiv' ? 0.005 : 0;
     const dagslonSamma = manadslon / arbdagarPerMan;
-    const semestertillaggPerDag = manadslon * tillaeggsProcent + (rorlig / totaldagar) * rorligTillaeggsProcent;
-    const semesterlonPerDagSamma = dagslonSamma + semestertillaggPerDag;
-    const totalSamma = semesterlonPerDagSamma * semesterdagar;
+    const fastTillaggPerDag = manadslon * tillaeggsProcent;
+    const rorligDel = kollektivavtal === 'kollektiv'
+        ? rorlig * 0.005 * semesterdagar
+        : rorlig * 0.12 * andelDagar;
+    const semestertillaggTotalt = fastTillaggPerDag * semesterdagar + rorligDel;
+    const totalSamma = dagslonSamma * semesterdagar + semestertillaggTotalt;
+    const semesterlonPerDagSamma = totalSamma / semesterdagar;
 
-    // Procentregeln
+    // Procentregeln (SemL 16 b §): 12 % av intjänandeårets lön
     const arsfortjanst = arslon + rorlig;
     const procentSats = 0.12;
-    const totalProcent = arsfortjanst * procentSats * (semesterdagar / totaldagar);
+    const totalProcent = arsfortjanst * procentSats * andelDagar;
     const semesterlonPerDagProcent = (arsfortjanst * procentSats) / totaldagar;
 
-    // Bästa metoden
-    const best = totalSamma >= totalProcent ? 'sammalon' : 'procent';
-    const bestTotal = Math.max(totalSamma, totalProcent);
+    // Vilken regel gäller? (SemL 16 §)
+    // Procentregeln ska användas om den rörliga delen är minst 10 % av den sammanlagda lönen
+    // eller om sysselsättningsgraden har varierat/ändrats. Annars gäller sammalöneregeln vid
+    // månadslön, men arbetsgivaren får välja procentregeln. Kollektivavtal kan ha egna regler.
+    const rorligAndel = arsfortjanst > 0 ? rorlig / arsfortjanst : 0;
+    let regel, motivering;
+    if (kollektivavtal === 'kollektiv') {
+        regel = 'sammalon';
+        motivering = 'enligt valt kollektivavtal';
+    } else if (variabelSyss || rorligAndel >= 0.10) {
+        regel = 'procent';
+        motivering = variabelSyss ? 'krävs vid ändrad/varierande sysselsättningsgrad' : 'krävs när rörlig lön är minst 10 %';
+    } else {
+        regel = 'sammalon';
+        motivering = 'huvudregel vid månadslön (arbetsgivaren får välja procentregeln)';
+    }
+    const regelTotal = regel === 'sammalon' ? totalSamma : totalProcent;
+    const regelNamn = regel === 'sammalon' ? 'Sammalöne-regeln' : 'Procent-regeln';
 
     const grid = document.getElementById('resultGrid');
     grid.innerHTML = `
-        <div class="result-box"><div class="label">Semesterlön (bästa metod)</div><div class="value">${fmt(bestTotal)} kr</div><div class="sub">${semesterdagar} dagar</div></div>
-        <div class="result-box"><div class="label">Per semesterdag</div><div class="value">${fmt(bestTotal / semesterdagar)} kr</div><div class="sub">brutto</div></div>
-        <div class="result-box"><div class="label">Semestertillägg totalt</div><div class="value">${fmt(semestertillaggPerDag * semesterdagar)} kr</div><div class="sub">utöver ordinarie lön</div></div>
-        <div class="result-box"><div class="label">Bästa beräkningsmetod</div><div class="value" style="font-size:1rem;">${best === 'sammalon' ? 'Sammalöne-regeln' : 'Procent-regeln'}</div><div class="sub">arbetsgivaren ska välja denna</div></div>
+        <div class="result-box"><div class="label">Semesterlön enligt ${regel === 'sammalon' ? 'sammalöneregeln' : 'procentregeln'}</div><div class="value">${fmt(regelTotal)} kr</div><div class="sub">${semesterdagar} dagar</div></div>
+        <div class="result-box"><div class="label">Per semesterdag</div><div class="value">${fmt(regelTotal / semesterdagar)} kr</div><div class="sub">brutto</div></div>
+        <div class="result-box"><div class="label">Semestertillägg totalt</div><div class="value">${fmt(semestertillaggTotalt)} kr</div><div class="sub">utöver ordinarie lön (sammalöneregeln)</div></div>
+        <div class="result-box"><div class="label">Regel som gäller</div><div class="value" style="font-size:1rem;">${regelNamn}</div><div class="sub">${motivering}</div></div>
     `;
 
     const table = document.getElementById('compareTable');
@@ -352,9 +405,10 @@ function berakna() {
         <thead><tr><th>Post</th><th>Sammalöneregeln</th><th>Procentregeln</th></tr></thead>
         <tbody>
             <tr><td>Semesterlön per dag</td><td>${fmt(semesterlonPerDagSamma)} kr</td><td>${fmt(semesterlonPerDagProcent)} kr</td></tr>
-            <tr><td>Semestertillägg/dag</td><td>${fmt(semestertillaggPerDag)} kr (${fmtDec(tillaeggsProcent * 100, 2)}%)</td><td>Ingår i 12%</td></tr>
+            <tr><td>Semestertillägg/dag (fast lön)</td><td>${fmt(fastTillaggPerDag)} kr (${fmtDec(tillaeggsProcent * 100, 2)}%)</td><td>Ingår i 12%</td></tr>
+            <tr><td>Tillägg för rörlig lön (${semesterdagar} dagar)</td><td>${fmt(rorligDel)} kr (${kollektivavtal === 'kollektiv' ? '0,5 % per dag' : '12 %'})</td><td>Ingår i 12%</td></tr>
             <tr><td>Total semesterlön (${semesterdagar} dagar)</td><td>${fmt(totalSamma)} kr</td><td>${fmt(totalProcent)} kr</td></tr>
-            <tr class="highlight-row"><td>Bästa metod</td><td>${best === 'sammalon' ? '✓ Väljs' : ''}</td><td>${best === 'procent' ? '✓ Väljs' : ''}</td></tr>
+            <tr class="highlight-row"><td>Regel som gäller</td><td>${regel === 'sammalon' ? '✓ Gäller' : ''}</td><td>${regel === 'procent' ? '✓ Gäller' : ''}</td></tr>
         </tbody>
     `;
 

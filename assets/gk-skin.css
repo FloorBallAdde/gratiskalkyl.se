@@ -1,0 +1,50 @@
+/* GratisKalkyl – anpassning av äldre sidor till den nya designen.
+   Laddas efter sidans egna stilar. Sidorna visas alltid i ljust läge tills de byggts om helt. */
+html { color-scheme: light; }
+:root {
+  --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236; --primary-bg: #E4F1EA;
+  --green: #0D6A45; --green-light: #E4F1EA; --green-bg: #E4F1EA; --green-dark: #0A5236; --green-border: #B9DCC8;
+  --text: #15201A; --text-light: #56625B; --text-muted: #56625B; --muted: #56625B;
+  --bg: #F6F5F1; --white: #FFFFFF; --card: #FFFFFF; --surface: #FFFFFF; --border: #E2E0D8;
+}
+body.gk-skin { font-family: var(--gk-font) !important; background: var(--gk-bg) !important; color: var(--gk-ink); }
+body.gk-skin h1, body.gk-skin h2 { font-family: var(--gk-head) !important; letter-spacing: -0.01em; }
+body.gk-skin h1 { font-weight: 700; }
+body.gk-skin h1, body.gk-skin h2, body.gk-skin h3 { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+body.gk-skin input, body.gk-skin select, body.gk-skin textarea, body.gk-skin button { font-family: inherit; }
+body.gk-skin table { max-width: 100%; }
+@media (max-width: 640px) {
+  body.gk-skin main table, body.gk-skin .container table, body.gk-skin article table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  body.gk-skin .results-grid { grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)) !important; }
+  body.gk-skin [class*="grid"] > * { min-width: 0; }
+  body.gk-skin [class*="result"] { overflow-wrap: anywhere; }
+  body.gk-skin [style*="minmax(220px"] { grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)) !important; }
+}
+
+/* Skalet (sidhuvud, meny, sidfot) ska inte påverkas av sidornas egna regler */
+.gk-skin .gk-hdr, .gk-skin .gk-menu, .gk-skin .gk-ftr { font-family: var(--gk-font); font-size: 17px; line-height: 1.6; color: var(--gk-ink); text-align: left; letter-spacing: normal; }
+.gk-skin .gk-hdr { position: sticky; top: 0; z-index: 50; margin: 0; padding: 0; background: var(--gk-surface); border-bottom: 1px solid var(--gk-border); box-shadow: none; }
+.gk-skin .gk-menu { margin: 0; }
+.gk-skin .gk-ftr { margin: 48px 0 0; padding: 28px 0 36px; background: var(--gk-surface); border-top: 1px solid var(--gk-border); font-size: 14px; }
+.gk-skin .gk-hdr a, .gk-skin .gk-menu a, .gk-skin .gk-ftr a { margin: 0; padding: 0; border: 0; background: none; box-shadow: none; }
+.gk-skin .gk-hdr a.gk-logo, .gk-skin .gk-ftr a.gk-logo { font-size: 19px; font-weight: 800; }
+.gk-skin .gk-ftr .gk-ftr-nav a { color: var(--gk-accent); font-weight: 600; }
+.gk-skin .gk-menu .gk-menu-min, .gk-skin .gk-menu .gk-mg li a { padding: 0 12px; }
+.gk-skin .gk-menu .gk-menu-links a { padding: 0; }
+.gk-skin .gk-hdr button, .gk-skin .gk-menu button { margin: 0; box-shadow: none; text-transform: none; letter-spacing: normal; min-width: 0; transform: none; }
+.gk-skin .gk-icon-btn { padding: 0; background: transparent; color: var(--gk-ink); }
+.gk-skin .gk-menu-btn { padding: 0; }
+.gk-skin .gk-mg-btn { padding: 0; background: none; color: var(--gk-ink); border: 0; border-radius: 0; }
+.gk-skin .gk-search input, .gk-skin .gk-search input:focus { margin: 0; padding: 0; width: auto; height: auto; border: 0; border-radius: 0; box-shadow: none; background: transparent; font-size: 16px; }
+.gk-skin .gk-menu ul, .gk-skin .gk-menu li { margin: 0; list-style: none; }
+.gk-skin .gk-menu ul { padding: 0; }
+.gk-skin .gk-ftr p { margin: 0; font-size: 14px; color: var(--gk-muted); }
+.gk-skin .gk-theme-btn { display: none; }
+.gk-skin .gk-skip { position: absolute; left: 8px; top: -60px; }
+.gk-skin .gk-skip:focus { top: 8px; }
+@media (min-width: 900px) {
+  .gk-skin .gk-hdr .gk-menu-btn { padding: 0 14px; }
+  .gk-skin .gk-menu .gk-mg li a { padding: 0 8px; }
+  .gk-skin .gk-hdr a.gk-logo { font-size: 22px; }
+}
+body.gk-skin { overflow-x: clip; }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -13,13 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dark mode: tillämpa tema innan render -->
-    <script>
-      (function(){
-        var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
-        var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
-        document.documentElement.setAttribute('data-theme',d?'dark':'light');
-      })();
-    </script>
+    
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -37,25 +32,18 @@
     <meta name="twitter:title" content="Hur beräknas pension? Guide 2026">
     <meta name="twitter:description" content="Allt om pensionsberäkning i Sverige — inkomstpension, premiepension, tjänstepension och eget sparande.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
         :root {
-            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
-            --text: #111827; --text-light: #6b7280;
-            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
+            --text: #15201A; --text-light: #56625B;
+            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
             --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6; --text-light: #9ca3af;
-                --bg: #0f172a; --white: #1e293b; --border: #334155;
-                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
-                --shadow: 0 1px 3px rgba(0,0,0,.3);
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
         .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.82); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border-bottom:1px solid rgba(229,231,235,0.7); padding: 16px 0; transition:box-shadow .2s, background .2s; }
-        html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+        
         .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
         .site-header a:hover { color: var(--primary); }
         .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
@@ -105,10 +93,7 @@
         .cta-card p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95rem; }
         .cta-btn { display: inline-block; background: white; color: var(--primary); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
         .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
-        @media (prefers-color-scheme: dark) {
-            .cta-card { background: #065f46; }
-            .cta-btn { color: #065f46; }
-        }
+        
 
         /* FAQ */
         .faq-section { padding: 0 0 40px; }
@@ -133,16 +118,11 @@
         }
     
         /* Dark mode overrides — controlled by data-theme attribute */
-        html[data-theme="dark"] {
-            --text: #f3f4f6; --text-light: #9ca3af;
-                --bg: #0f172a; --white: #1e293b; --border: #334155;
-                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
-                --shadow: 0 1px 3px rgba(0,0,0,.3);
-        }
+        
         html[data-theme="light"] {
-            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
-            --text: #111827; --text-light: #6b7280;
-            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
+            --text: #15201A; --text-light: #56625B;
+            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
             --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
         .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
@@ -182,7 +162,7 @@
                 "name": "Vad är pensionsgrundande inkomst (PGI)?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra inkomster upp till 8,07 inkomstbasbelopp (ca 578 000 kr för 2026). Inkomster över taket ger ingen ytterligare pensionsrätt i det allmänna systemet."
+                    "text": "PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra skattepliktiga ersättningar. Pensionsgrundande inkomst är normalt 93 % av inkomsten, eftersom 7 % allmän pensionsavgift dras av. Inkomst över 8,07 inkomstbasbelopp (673 038 kr för 2026, ca 56 100 kr/mån) är inte pensionsgrundande, och pensionsunderlaget kan som mest bli 7,5 inkomstbasbelopp (625 500 kr)."
                 }
             },
             {
@@ -190,7 +170,7 @@
                 "name": "Hur stor är tjänstepensionen?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Tjänstepensionens storlek beror på vilket kollektivavtal du omfattas av och din lön. Vanligtvis avsätter arbetsgivaren 4,5% av lönen under taket och 30% på den del av lönen som överstiger ca 44 000 kr/mån (7,5 inkomstbasbelopp)."
+                    "text": "Tjänstepensionens storlek beror på kollektivavtal och lön. Med ITP 1 och Avtalspension SAF-LO avsätter arbetsgivaren 4,5 % på lön upp till 7,5 inkomstbasbelopp (52 125 kr/mån 2026) och 30 % på den del som överstiger det beloppet. Inom kommun och region (AKAP-KR) är det 6 % respektive 31,5 %."
                 }
             },
             {
@@ -198,7 +178,7 @@
                 "name": "Kan jag påverka min pension?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ja — du kan placera dina premiepensionspengar (2,5% av PGI) i valfria fonder via Pensionsmyndigheten. Du kan också börja spara privat via IPS (individuellt pensionssparande) eller ISK. Att jobba längre har stor effekt: varje extra år du arbetar ökar din pension markant."
+                    "text": "Ja — du kan välja fonder för dina premiepensionspengar (2,5 % av PGI) via Pensionsmyndigheten. Du kan också spara i ISK eller kapitalförsäkring. Att arbeta längre har stor effekt: varje extra år höjer din pension märkbart."
                 }
             },
             {
@@ -206,7 +186,7 @@
                 "name": "Från vilken ålder kan jag ta ut pension?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Du kan ta ut allmän pension från 63 år (från och med 2026). Garantipension kan du ta ut från 66 år. Det finns ingen övre åldersgräns — ju längre du väntar med att ta ut pension, desto högre månadsbelopp får du."
+                    "text": "Du kan ta ut allmän pension tidigast från 64 år 2026 (tre år före riktåldern 67 för dig som är född 1960–1964). Garantipension och inkomstpensionstillägg kan tas ut från riktåldern, 67 år. Det finns ingen övre åldersgräns — ju längre du väntar, desto högre månadsbelopp."
                 }
             },
             {
@@ -255,7 +235,7 @@
     "description": "Lär dig hur pension beräknas i Sverige 2026. Vi förklarar allmän pension, tjänstepension och eget sparande — och hur mycket du kan förvänta dig att få.",
     "url": "https://gratiskalkyl.se/artiklar/hur-beraknas-pension",
     "datePublished": "2026-05-04",
-    "dateModified": "2026-05-15",
+    "dateModified": "2026-09-30",
     "image": "https://gratiskalkyl.se/favicon.svg",
     "author": {
         "@type": "Organization",
@@ -277,22 +257,47 @@
     "inLanguage": "sv-SE"
 }
     </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<link rel="stylesheet" href="/search-dropdown.css">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
-            <nav>
-                <a href="/">Kalkylatorer</a>
-                <a href="/artiklar/">📖 Guider</a>
-            </nav>
-            <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <nav class="breadcrumb" aria-label="Brödsmulor">
             <a href="/">Hem</a>
             <span aria-hidden="true">›</span>
@@ -304,7 +309,7 @@
         <div class="article-header">
             <span class="article-tag">Guide</span>
             <h1>Hur beräknas pension i Sverige? – Guide 2026</h1>
-            <p class="article-meta">Uppdaterad mars 2026 · 6 min läsning</p>
+            <p class="article-meta">Uppdaterad 30 september 2026 · 6 min läsning</p>
             <p class="article-intro">Det svenska pensionssystemet vilar på tre pelare: <strong>allmän pension</strong>, <strong>tjänstepension</strong> och <strong>privat pensionssparande</strong>. Hur stor din pension blir beror på hur länge du arbetat, hur hög din lön har varit och hur dina sparade pengar förvaltas. Här reder vi ut hur beräkningen fungerar.</p>
         </div>
 
@@ -338,18 +343,18 @@
                 <li><strong>2,5 %</strong> till premiepension — placeras i fonder du väljer via Pensionsmyndigheten</li>
             </ul>
             <div class="info-box">
-                <p><strong>Tak för PGI 2026:</strong> Pensionsavgiften beräknas bara på inkomst upp till <strong>8,07 inkomstbasbelopp</strong>, vilket motsvarar ca 578 000 kr per år (ca 48 000 kr/mån). Inkomster över taket genererar ingen ytterligare statlig pensionsrätt.</p>
+                <p><strong>Tak för PGI 2026:</strong> Pensionsgrundande inkomst är normalt 93 % av lönen, eftersom 7 % allmän pensionsavgift dras av. Pensionsrätt tjänas bara in på inkomst upp till <strong>8,07 inkomstbasbelopp</strong>, vilket 2026 motsvarar 673 038 kr per år (ca 56 100 kr/mån). Den pensionsgrundande inkomsten kan då som mest bli 7,5 inkomstbasbelopp, 625 500 kr. Inkomster över taket genererar ingen ytterligare allmän pensionsrätt.</p>
             </div>
 
             <h3>Hur räknas pensionen ut när det är dags?</h3>
             <p>När du börjar ta ut pension delas din totala behållning med ett <em>delningstal</em> som baseras på genomsnittlig återstående livslängd för ditt födelseår. Tar du ut pension tidigt delas behållningen på fler år — pengarna räcker längre men månadsbeloppet blir lägre.</p>
-            <p>Garantipension tillkommer för den som haft låga eller inga inkomster, och den kan tas ut från 66 år (höjs successivt).</p>
+            <p>Garantipension tillkommer för den som haft låga eller inga inkomster. Den kan, liksom inkomstpensionstillägget, tas ut från riktåldern – 67 år för dig som är född 1960–1964. Inkomst- och premiepension kan tas ut tidigast tre år före riktåldern, alltså från 64 år.</p>
 
             <h2>Tjänstepension — arbetsgivarens bidrag</h2>
             <p>Tjänstepensionen betalas av din arbetsgivare och styrs av kollektivavtal. De vanligaste avtalen i privat sektor (ITP, SAF-LO) innebär:</p>
             <ul>
-                <li>Lön <strong>under</strong> ca 44 000 kr/mån: arbetsgivaren avsätter 4,5 %</li>
-                <li>Lön <strong>över</strong> ca 44 000 kr/mån: arbetsgivaren avsätter 30 % på den överskjutande delen</li>
+                <li>Lön <strong>upp till</strong> 52 125 kr/mån (7,5 inkomstbasbelopp 2026): arbetsgivaren avsätter 4,5 %</li>
+                <li>Lön <strong>över</strong> 52 125 kr/mån: arbetsgivaren avsätter 30 % på den överskjutande delen</li>
             </ul>
             <p>Tjänstepensionen ger ofta ett viktigt komplement — särskilt för den som har lön över intjänandetaket för allmän pension.</p>
 
@@ -359,7 +364,7 @@
             <h2>Så höjer du din pension</h2>
             <ol>
                 <li><strong>Jobba längre</strong> — varje extra år höjer din pension markant tack vare högre behållning och lägre delningstal</li>
-                <li><strong>Välj rätt fonder</strong> i premiepensionen — byt till passande fondportfölj via minPension.se</li>
+                <li><strong>Välj rätt fonder</strong> i premiepensionen — fondbyten görs hos Pensionsmyndigheten. På minPension.se får du en samlad översikt över all din pension</li>
                 <li><strong>Spara i ISK</strong> — ränta-på-ränta-effekten gör stor skillnad över tid</li>
                 <li><strong>Kontrollera din tjänstepension</strong> — se att arbetsgivaren avsätter rätt belopp</li>
             </ol>
@@ -367,7 +372,7 @@
             <h2>Tumregel: hur mycket kan jag förvänta mig?</h2>
             <p>Som tumregel brukar pensionen motsvara ungefär <strong>50–70 % av din sista lön</strong> vid pension vid 65 år, förutsatt 40 år i arbetslivet och normal tjänstepension. Har du arbetat kortare tid eller haft luckor (studier, vård av barn) kan det bli lägre.</p>
             <div class="info-box">
-                <p><strong>Exempel:</strong> Månadslön 40 000 kr → trolig pension ca 20 000–28 000 kr/mån (brutto). Skatt på pension är lägre än på lön, men du bör räkna med lägre disponibel inkomst som pensionär.</p>
+                <p><strong>Exempel:</strong> Månadslön 40 000 kr → trolig pension ca 20 000–28 000 kr/mån (brutto). Pensionen beskattas som inkomst, så du bör räkna med lägre disponibel inkomst som pensionär.</p>
             </div>
         </article>
 
@@ -390,14 +395,14 @@
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Vad är pensionsgrundande inkomst (PGI)?</button>
                 <div class="faq-answer">
-                    <p>PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra inkomster upp till 8,07 inkomstbasbelopp (ca 578 000 kr för 2026). Inkomster över taket ger ingen ytterligare pensionsrätt i det allmänna systemet.</p>
+                    <p>PGI är den inkomst som ligger till grund för din allmänna pension. Den inkluderar lön, sjukpenning, föräldrapenning, a-kassa och andra skattepliktiga ersättningar. Pensionsgrundande inkomst är normalt 93 % av inkomsten, eftersom 7 % allmän pensionsavgift dras av. Inkomst över 8,07 inkomstbasbelopp (673 038 kr för 2026, ca 56 100 kr/mån) är inte pensionsgrundande, och pensionsunderlaget kan som mest bli 7,5 inkomstbasbelopp (625 500 kr).</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Hur stor är tjänstepensionen?</button>
                 <div class="faq-answer">
-                    <p>Tjänstepensionens storlek beror på kollektivavtal och lön. Vanligtvis avsätter arbetsgivaren 4,5 % på lön under ca 44 000 kr/mån och 30 % på den del som överstiger det beloppet.</p>
+                    <p>Tjänstepensionens storlek beror på kollektivavtal och lön. Med ITP 1 och Avtalspension SAF-LO avsätter arbetsgivaren 4,5 % på lön upp till 7,5 inkomstbasbelopp (52 125 kr/mån 2026) och 30 % på den del som överstiger det beloppet. Inom kommun och region (AKAP-KR) är det 6 % respektive 31,5 %.</p>
                 </div>
             </div>
 
@@ -411,7 +416,7 @@
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Från vilken ålder kan jag ta ut pension?</button>
                 <div class="faq-answer">
-                    <p>Du kan ta ut allmän pension från 63 år (från 2026). Garantipension kan tas ut från 66 år. Det finns ingen övre åldersgräns — ju längre du väntar, desto högre månadsbelopp.</p>
+                    <p>Du kan ta ut allmän pension tidigast från 64 år 2026 (tre år före riktåldern 67 för dig som är född 1960–1964). Garantipension och inkomstpensionstillägg kan tas ut från riktåldern, 67 år. Det finns ingen övre åldersgräns — ju längre du väntar, desto högre månadsbelopp.</p>
                 </div>
             </div>
 
@@ -424,45 +429,22 @@
         </section>
     </main>
 
-        <footer class="site-footer-rich">
-        <div class="container footer-cols">
-            <div class="footer-col">
-                <h3>🧮 Populära kalkylatorer</h3>
-                <ul>
-                    <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
-                    <li><a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a></li>
-                    <li><a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a></li>
-                    <li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li>
-                    <li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatteberäknare</a></li>
-                    <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>📖 Populära guider</h3>
-                <ul>
-                    <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
-                    <li><a href="/artiklar/hur-mycket-far-jag-lana-2026">Hur mycket får jag låna?</a></li>
-                    <li><a href="/artiklar/vad-ar-ranta-pa-ranta">Vad är ränta på ränta?</a></li>
-                    <li><a href="/artiklar/manadssparande-rakna-ut">Månadssparande — räkna ut</a></li>
-                    <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
-                    <li><a href="/artiklar/csn-2026-belopp-och-regler">CSN 2026 — belopp & regler</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Om sajten</h3>
-                <ul>
-                    <li><a href="/">Alla 44 kalkylatorer</a></li>
-                    <li><a href="/artiklar/">Alla 20 guider</a></li>
-                    <li><a href="/om-oss">Om oss</a></li>
-                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
-            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
-        </div>
-    </footer>
+        <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
         function toggleFaq(btn) {
@@ -505,28 +487,7 @@
     </div>
 
 
-    <script>
-    /* Theme toggle */
-    (function(){
-      var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-      var btn=document.getElementById('gk-theme-btn');
-      if(!btn)return;
-      function setIcon(){
-        var dark=document.documentElement.getAttribute('data-theme')==='dark';
-        btn.innerHTML=dark?SUN:MOON;
-        btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
-      }
-      setIcon();
-      btn.addEventListener('click',function(){
-        var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
-        var next=!nowDark;
-        document.documentElement.setAttribute('data-theme',next?'dark':'light');
-        try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
-        setIcon();
-      });
-    })();
-    </script>
+    
 
 </body>
 </html>

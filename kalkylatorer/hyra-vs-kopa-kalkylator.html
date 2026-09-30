@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -52,7 +53,7 @@
         "name": "Vad är stämpelskatt vid bostadsköp?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt — däremot kan föreningen ha pantbrev-avgifter. Stämpelskatten betalas normalt inom 3 månader från köpet."
+          "text": "Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt och det finns inga pantbrev — däremot kan föreningen ta ut en pantsättningsavgift och en överlåtelseavgift (båda har ett lagstadgat tak kopplat till prisbasbeloppet). Stämpelskatten betalas normalt inom 3 månader från köpet."
         }
       },
       {
@@ -68,7 +69,7 @@
         "name": "Vad ingår i boendekostnaden för en bostadsrätt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30% avdrag upp till 100 000 kr/år), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring."
+          "text": "Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30 % på räntekostnader upp till 100 000 kr/år per person, 21 % därutöver), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring."
         }
       },
       {
@@ -76,7 +77,7 @@
         "name": "Hur beräknas break-even vid hyra vs köp?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till faktiska kostnader minus uppbyggt kapital. Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare."
+          "text": "Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till alla utbetalningar minus den förmögenhet du har kvar vid periodens slut (bostadens värde minus kvarvarande lån, respektive sparkapitalet). Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare."
         }
       },
       {
@@ -84,7 +85,7 @@
         "name": "Ska man räkna med avkastning på sparade pengar vid jämförelsen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på sparat kapital (kontantinsatsen) för att ge en rättvisare bild av hyra-alternativet."
+          "text": "Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på startkapitalet (kontantinsatsen plus eventuell lagfart) för att ge en rättvisare bild av hyra-alternativet."
         }
       },
       {
@@ -92,7 +93,7 @@
         "name": "Hur mycket stiger bostadspriserna i Sverige historiskt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Historiskt har svenska bostadspriser ökat med i genomsnitt 4–6% per år nominellt, men med stora variationer mellan år och orter. Under 2022–2023 föll priserna med 10–15% i många delar av landet till följd av räntehöjningarna. Framtida prisuppgång är osäker — kalkylatorn låter dig testa olika scenarier från 0% till 8% per år."
+          "text": "Historiskt har svenska bostadspriser ökat med i genomsnitt 4–6% per år nominellt, men med stora variationer mellan år och orter. Under 2022–2023 föll priserna med 10–15% i många delar av landet till följd av räntehöjningarna. Framtida prisuppgång är osäker — kalkylatorn låter dig testa olika scenarier från -2% till 8% per år."
         }
       }
     ]
@@ -113,19 +114,19 @@
   </script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    500;600;700;800&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #34d399;
-      --primary-dark: #059669;
-      --primary-light: #d1fae5;
+      --primary: #0D6A45;
+      --primary-dark: #0D6A45;
+      --primary-light: #E4F1EA;
       --bg: #f3f4f6;
       --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #e5e7eb;
+      --text: #15201A;
+      --muted: #56625B;
+      --border: #E2E0D8;
       --radius: 12px;
       --sh: 0 1px 3px rgba(0,0,0,.07);
       --sh-md: 0 4px 16px rgba(0,0,0,.09);
@@ -135,23 +136,10 @@
       --orange-light: #fffbeb;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --card: #1e293b;
-        --text: #f1f5f9;
-        --muted: #94a3b8;
-        --border: #334155;
-        --primary-light: #064e3b;
-        --blue-light: #1e3a5f;
-        --orange-light: #451a03;
-        --sh: 0 1px 3px rgba(0,0,0,.3);
-        --sh-md: 0 4px 16px rgba(0,0,0,.4);
-      }
-    }
+    
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 17px;
       background: var(--bg);
       color: var(--text);
@@ -324,34 +312,57 @@
     footer { background: var(--card); border-top: 1px solid var(--border); text-align: center; padding: 1.25rem 1rem; font-size: .82rem; color: var(--muted); margin-top: 3rem; }
     footer a { color: var(--primary-dark); text-decoration: none; }
   
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
     </style>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-<header class="site-header">
-  <div class="hdr">
-    <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
-    <nav class="breadcrumb" aria-label="Brödsmulor">
-      <a href="/">Hem</a> &rsaquo; Hyra vs Köpa
-    </nav>
-  </div>
-</header>
 
-<main>
+
+
+<main id="innehall">
   <h1>Hyra vs Köpa-kalkylator 2026</h1>
   <p class="subtitle">Jämför total kostnad och kapitaluppbyggnad för att hyra eller köpa bostad — år för år, utan bankbias.</p>
 
@@ -386,21 +397,28 @@
       <div class="card-title"><span class="card-title-icon">🏠</span>Att köpa</div>
 
       <div class="field">
+        <label for="propType">Bostadstyp</label>
+        <select id="propType" style="width:100%;padding:.55rem .75rem;border:1.5px solid var(--border);border-radius:8px;font-size:.95rem;font-family:inherit;background:var(--bg);color:var(--text);">
+          <option value="brf" selected>Bostadsrätt (ingen lagfart)</option>
+          <option value="villa">Villa, radhus eller ägarlägenhet (lagfart 1,5 %)</option>
+        </select>
+      </div>
+      <div class="field">
         <label for="price">Köpeskilling (kr)</label>
         <input type="number" id="price" value="3000000" min="100000" max="20000000" step="50000">
       </div>
       <div class="field">
         <label for="downPct">Kontantinsats</label>
         <div class="input-row">
-          <input type="range" id="downPct" min="15" max="50" step="1" value="15">
+          <input type="range" id="downPct" min="10" max="50" step="1" value="15">
           <span class="range-val" id="downPctVal">15%</span>
         </div>
       </div>
       <div class="field">
         <label for="rate">Bolåneränta (rörlig)</label>
         <div class="input-row">
-          <input type="range" id="rate" min="1" max="10" step="0.25" value="4.5">
-          <span class="range-val" id="rateVal">4,50%</span>
+          <input type="range" id="rate" min="1" max="10" step="0.25" value="2.75">
+          <span class="range-val" id="rateVal">2,75%</span>
         </div>
       </div>
       <div class="field">
@@ -440,29 +458,29 @@
       <div class="stat-box blue">
         <div class="stat-label">Nettokostnad hyra</div>
         <div class="stat-val" id="rentNetCost">–</div>
-        <div class="stat-sub">totalt betalat i hyra</div>
+        <div class="stat-sub">hyra minus avkastning på startkapitalet</div>
       </div>
       <div class="stat-box green">
         <div class="stat-label">Nettokostnad köp</div>
         <div class="stat-val" id="buyNetCost">–</div>
-        <div class="stat-sub">kostnader minus eget kapital</div>
+        <div class="stat-sub">utbetalningar minus nettoförmögenhet i bostaden</div>
       </div>
       <div class="stat-box green">
-        <div class="stat-label">Eget kapital vid köp</div>
+        <div class="stat-label">Nettoförmögenhet vid köp</div>
         <div class="stat-val" id="buyEquity">–</div>
-        <div class="stat-sub">inkl. amortering & värdestegring</div>
+        <div class="stat-sub">bostadens värde minus kvarvarande lån</div>
       </div>
       <div class="stat-box blue">
         <div class="stat-label">Sparat kapital vid hyra</div>
         <div class="stat-val" id="rentSavings">–</div>
-        <div class="stat-sub">kontantinsats placerad med ränta</div>
+        <div class="stat-sub">startkapitalet placerat med avkastning</div>
       </div>
     </div>
 
     <!-- CHART -->
     <div class="chart-legend">
-      <span><span class="leg-dot" style="background:#3b82f6"></span>Hyra — kumulativ kostnad</span>
-      <span><span class="leg-dot" style="background:#34d399"></span>Köp — nettokostnad (kostn. minus kapital)</span>
+      <span><span class="leg-dot" style="background:#3b82f6"></span>Hyra — nettokostnad (hyra minus avkastning)</span>
+      <span><span class="leg-dot" style="background:#0D6A45"></span>Köp — nettokostnad (utbetalningar minus nettoförmögenhet)</span>
     </div>
     <canvas id="chart" aria-label="Graf som jämför total kostnad för hyra vs köp"></canvas>
 
@@ -477,17 +495,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Startkapital (kontantinsats)</td><td class="col-rent" id="tRentDown">–</td><td class="col-buy" id="tBuyDown">–</td></tr>
-          <tr><td>Stämpelskatt / transaktionskostn.</td><td class="col-rent">0 kr</td><td class="col-buy" id="tStamp">–</td></tr>
-          <tr><td>Total hyra / räntor betalda</td><td class="col-rent" id="tRentPaid">–</td><td class="col-buy" id="tInterestPaid">–</td></tr>
+          <tr><td>Startkapital (kontantinsats + ev. lagfart)</td><td class="col-rent" id="tRentDown">–</td><td class="col-buy" id="tBuyDown">–</td></tr>
+          <tr><td>Lagfart (stämpelskatt 1,5 %)</td><td class="col-rent">0 kr</td><td class="col-buy" id="tStamp">–</td></tr>
+          <tr><td>Total hyra / räntor (före avdrag)</td><td class="col-rent" id="tRentPaid">–</td><td class="col-buy" id="tInterestPaid">–</td></tr>
+          <tr><td>Ränteavdrag (30 % / 21 %)</td><td class="col-rent">0 kr</td><td class="col-buy" id="tTaxRelief">–</td></tr>
+          <tr><td>Amortering</td><td class="col-rent">0 kr</td><td class="col-buy" id="tAmort">–</td></tr>
           <tr><td>Avgifter / driftkostnad</td><td class="col-rent">0 kr</td><td class="col-buy" id="tFeePaid">–</td></tr>
-          <tr><td>Ränteavdrag (30%)</td><td class="col-rent">0 kr</td><td class="col-buy" id="tTaxRelief">–</td></tr>
-          <tr><td>Summa kostnader</td><td class="col-rent" id="tRentTotal">–</td><td class="col-buy" id="tBuyTotal">–</td></tr>
-          <tr><td>Eget kapital / sparkapital vid slut</td><td class="col-rent" id="tRentCapital">–</td><td class="col-buy" id="tBuyCapital">–</td></tr>
-          <tr class="total-row"><td>Nettokostnad (kostn. minus kapital)</td><td class="col-rent" id="tRentNet">–</td><td class="col-buy" id="tBuyNet">–</td></tr>
+          <tr><td>Summa utbetalningar</td><td class="col-rent" id="tRentTotal">–</td><td class="col-buy" id="tBuyTotal">–</td></tr>
+          <tr><td>Bostadens värde vid periodens slut</td><td class="col-rent">–</td><td class="col-buy" id="tPropValue">–</td></tr>
+          <tr><td>Kvarvarande bolån vid periodens slut</td><td class="col-rent">–</td><td class="col-buy" id="tLoanLeft">–</td></tr>
+          <tr><td>Nettoförmögenhet vid slut (sparkapital / värde minus lån)</td><td class="col-rent" id="tRentCapital">–</td><td class="col-buy" id="tBuyCapital">–</td></tr>
+          <tr class="total-row"><td>Nettokostnad (utbetalningar minus nettoförmögenhet)</td><td class="col-rent" id="tRentNet">–</td><td class="col-buy" id="tBuyNet">–</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:1rem;line-height:1.6;"><strong>Så räknar kalkylatorn:</strong> Båda alternativen utgår från samma startkapital (kontantinsats plus eventuell lagfart). Vid köp summeras alla utbetalningar under perioden – startkapital, räntor minus ränteavdrag (30 % av räntan upp till 100 000 kr per år, 21 % därutöver; gränsen gäller per person och kalkylatorn räknar med en låntagare), amortering enligt amorteringskravet (2 % av det ursprungliga lånet när belåningsgraden är över 70 %, 1 % när den är över 50 %) och avgifter. Från det dras nettoförmögenheten vid periodens slut: bostadens värde minus kvarvarande lån. Vid hyra summeras startkapitalet och all hyra, minus det placerade startkapitalets värde vid slutet. Förenklingar: skillnader i månadskostnad mellan alternativen placeras inte, och pantbrev, mäklararvode, underhåll, skatt på vinst vid försäljning (22 % av vinsten) och skatt på alternativplaceringen ingår inte.</p>
   </div>
 
   <!-- FAQ -->
@@ -499,7 +521,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Vad är stämpelskatt vid bostadsköp? <span class="faq-chevron">▼</span></div>
-      <div class="faq-a">Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt — däremot kan föreningen ha pantbrev-avgifter. Stämpelskatten betalas normalt inom 3 månader från köpet.</div>
+      <div class="faq-a">Stämpelskatt (lagfartskostnad) är en avgift du betalar till Lantmäteriet vid köp av fastighet. För privatpersoner är avgiften 1,5% av köpeskillingen eller taxeringsvärdet, det högre beloppet. Köper du en bostadsrätt betalar du ingen stämpelskatt och det finns inga pantbrev — däremot kan föreningen ta ut en pantsättningsavgift och en överlåtelseavgift (båda har ett lagstadgat tak kopplat till prisbasbeloppet). Stämpelskatten betalas normalt inom 3 månader från köpet.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Hur mycket ska kontantinsatsen vara vid husköp? <span class="faq-chevron">▼</span></div>
@@ -507,15 +529,15 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Vad ingår i boendekostnaden för en bostadsrätt? <span class="faq-chevron">▼</span></div>
-      <div class="faq-a">Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30% avdrag upp till 100 000 kr/år), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring.</div>
+      <div class="faq-a">Boendekostnaden för en bostadsrätt består av: (1) Månadsavgift till föreningen, (2) Räntekostnader på bolånet minus ränteavdrag (30 % på räntekostnader upp till 100 000 kr/år per person, 21 % därutöver), (3) Amortering enligt FI:s amorteringskrav, (4) El, bredband och övriga driftkostnader. Glöm inte att inkludera underhållskostnader och eventuell hemförsäkring.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Hur beräknas break-even vid hyra vs köp? <span class="faq-chevron">▼</span></div>
-      <div class="faq-a">Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till faktiska kostnader minus uppbyggt kapital. Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare.</div>
+      <div class="faq-a">Break-even är den tidpunkt då det totalt sett kostar lika mycket att ha hyrt som att ha köpt — sett till alla utbetalningar minus den förmögenhet du har kvar vid periodens slut (bostadens värde minus kvarvarande lån, respektive sparkapitalet). Vid köp har du höga initialkostnader (kontantinsats + stämpelskatt) men sänker successivt skulden och tillgodogör dig värdestegring. Om du räknar med att bostadspriserna ökar och hyrorna stiger lönar sig köp snabbare.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Ska man räkna med avkastning på sparade pengar vid jämförelsen? <span class="faq-chevron">▼</span></div>
-      <div class="faq-a">Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på sparat kapital (kontantinsatsen) för att ge en rättvisare bild av hyra-alternativet.</div>
+      <div class="faq-a">Ja, en rättvis jämförelse bör inkludera alternativkostnaden för kontantinsatsen. Om du istället för att köpa placerar kontantinsatsen i aktier (historisk avkastning ~7% per år) ökar den i värde. Kalkylatorn ovan inkluderar alternativavkastning på startkapitalet (kontantinsatsen plus eventuell lagfart) för att ge en rättvisare bild av hyra-alternativet.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Hur mycket stiger bostadspriserna i Sverige historiskt? <span class="faq-chevron">▼</span></div>
@@ -539,10 +561,22 @@
   <p class="disclaimer">Beräkningarna är ungefärliga och kan innehålla fel. Kalkylatorn är ett informationsverktyg och ersätter inte professionell ekonomisk rådgivning. Bostadsmarknad, räntor och skatteregler förändras — kontrollera alltid aktuell information hos Finansinspektionen och Skatteverket.</p>
 </main>
 
-<footer>
-  <p style="margin-bottom:8px;text-align:center;"><a href="/om-oss" style="color:var(--primary,#16a34a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#16a34a);text-decoration:none;">Integritetspolicy</a></p>
-  <p>&copy; 2026 <a href="/">GratisKalkyl.se</a> &mdash; Neutral privatekonomisk information. Inte finansiell rådgivning.</p>
-</footer>
+<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
 <script>
 (function () {
@@ -569,6 +603,12 @@
   bindRange('years', 'yearsVal', v => v + ' år');
 
   // ─── CALCULATE ───────────────────────────────────────────────────────────
+  // Ränteavdrag per kalenderår: 30 % av räntan upp till 100 000 kr, 21 % därutöver
+  function ranteavdrag(arsranta) {
+    if (arsranta <= 0) return 0;
+    return arsranta <= 100000 ? arsranta * 0.30 : 100000 * 0.30 + (arsranta - 100000) * 0.21;
+  }
+
   function calc() {
     const monthlyRent   = parseFloat($('rent').value)         || 12000;
     const rentIncrRate  = parseFloat($('rentIncrease').value) / 100;
@@ -579,86 +619,78 @@
     const monthlyFee    = parseFloat($('fee').value)          || 0;
     const appreciation  = parseFloat($('appreciation').value) / 100;
     const years         = parseInt($('years').value)          || 10;
+    const propType      = $('propType') ? $('propType').value : 'brf';
 
-    const months     = years * 12;
+    const months      = years * 12;
     const downPayment = price * downPct;
     const loan        = price - downPayment;
     const monthlyRate = annualRate / 12;
-    // Amortization: FI requires 2% of loan if LTV > 70%, 1% if 50–70%
-    const ltv = loan / price;
-    let amorPct = ltv > 0.70 ? 0.02 : ltv > 0.50 ? 0.01 : 0;
-    // Monthly amortization (simplified: constant % of original loan per year)
-    const monthlyAmortization = (loan * amorPct) / 12;
-    // Stamp duty: 1.5% of price (fastighet) — 0 for bostadsrätt but defaulting to 1.5%
-    const stampDuty = price * 0.015;
+    // Lagfart (stämpelskatt 1,5 %) bara för fastighet (villa, radhus, ägarlägenhet) – 0 kr för bostadsrätt
+    const stampDuty   = propType === 'villa' ? price * 0.015 : 0;
+    // Startkapital som båda alternativen utgår från
+    const startCapital = downPayment + stampDuty;
 
-    // ── RENT SCENARIO ──────────────────────────────────────────────────────
+    // ── HYRA ───────────────────────────────────────────────────────────────
+    // Nettokostnad hyra = startkapital + all hyra − startkapitalets värde vid slutet
     let totalRentPaid = 0;
     let currentRent   = monthlyRent;
-    const rentData    = []; // cumulative net cost per year
-
-    // Invested capital = downPayment + stampDuty (money NOT spent on buying)
-    let savedCapital = downPayment + stampDuty;
+    let savedCapital  = startCapital;
+    const rentData    = []; // nettokostnad vid varje års slut
 
     for (let m = 1; m <= months; m++) {
-      // Rent paid this month
       totalRentPaid += currentRent;
-      // Rent increases yearly
-      if (m % 12 === 0) currentRent *= (1 + rentIncrRate);
-      // Saved capital grows monthly
       savedCapital *= (1 + investYield / 12);
-
       if (m % 12 === 0) {
-        const cumulativeCost = totalRentPaid - (savedCapital - (downPayment + stampDuty));
-        rentData.push(totalRentPaid);
+        currentRent *= (1 + rentIncrRate);
+        rentData.push(startCapital + totalRentPaid - savedCapital);
       }
     }
     const rentFinalCapital = savedCapital;
-    const rentNetCostTotal = totalRentPaid - (rentFinalCapital - (downPayment + stampDuty));
+    const rentNetCostTotal = startCapital + totalRentPaid - rentFinalCapital;
 
-    // ── BUY SCENARIO ───────────────────────────────────────────────────────
-    let remainingLoan   = loan;
-    let totalInterest   = 0;
-    let totalAmortized  = 0;
-    let totalFeePaid    = 0;
-    const buyData       = []; // cumulative net cost per year
+    // ── KÖP ────────────────────────────────────────────────────────────────
+    // Amortering enligt FI:s krav: % av URSPRUNGLIGT lån, belåningsgrad mot värdet vid köpet.
+    // Nettokostnad köp = startkapital + räntor − ränteavdrag + amortering + avgifter
+    //                    − (bostadens värde − kvarvarande lån) vid periodens slut
+    let remainingLoan  = loan;
+    let totalInterestGross = 0;
+    let totalTaxRelief = 0;
+    let totalAmortized = 0;
+    let totalFeePaid   = 0;
+    const buyData      = []; // nettokostnad vid varje års slut
 
-    for (let m = 1; m <= months; m++) {
-      const interestThisMonth = remainingLoan * monthlyRate;
-      // Tax relief: 30% of interest up to 100 000 kr/year — simplified as monthly
-      const taxReliefMonth = interestThisMonth * 0.30;
-      const netInterest = interestThisMonth - taxReliefMonth;
-      totalInterest += netInterest;
-      // Amortize
-      const amort = Math.min(monthlyAmortization, remainingLoan);
-      remainingLoan -= amort;
-      totalAmortized += amort;
-      totalFeePaid += monthlyFee;
-
-      if (m % 12 === 0) {
-        // Property value this year
-        const yr = m / 12;
-        const propertyValue = price * Math.pow(1 + appreciation, yr);
-        const equity = propertyValue - remainingLoan;
-        // Net cost = all cash out - current equity value
-        const cashOut = downPayment + stampDuty + totalInterest + totalFeePaid;
-        const netCost = cashOut - equity + downPayment; // approx
-        buyData.push(cashOut + downPayment - equity);
+    for (let yr = 1; yr <= years; yr++) {
+      const ltv = price > 0 ? remainingLoan / price : 0;
+      const amorPct = ltv > 0.70 ? 0.02 : ltv > 0.50 ? 0.01 : 0;
+      const monthlyAmortization = (loan * amorPct) / 12;
+      let interestThisYear = 0;
+      for (let mm = 1; mm <= 12; mm++) {
+        interestThisYear += remainingLoan * monthlyRate;
+        const amort = Math.min(monthlyAmortization, remainingLoan);
+        remainingLoan -= amort;
+        totalAmortized += amort;
+        totalFeePaid += monthlyFee;
       }
+      totalInterestGross += interestThisYear;
+      totalTaxRelief += ranteavdrag(interestThisYear);
+
+      const propertyValue = price * Math.pow(1 + appreciation, yr);
+      const netWorth = propertyValue - remainingLoan;
+      const cashOut = startCapital + totalInterestGross - totalTaxRelief + totalAmortized + totalFeePaid;
+      buyData.push(cashOut - netWorth);
     }
 
     const propertyValueFinal = price * Math.pow(1 + appreciation, years);
-    const finalEquity        = propertyValueFinal - remainingLoan;
-    const taxReliefTotal     = (loan * annualRate * 0.30) * years; // simplified
-    const totalCashOutBuy    = downPayment + stampDuty + totalInterest + totalFeePaid;
-    const buyNetCostTotal    = totalCashOutBuy - finalEquity + downPayment;
+    const finalNetWorth      = propertyValueFinal - remainingLoan;
+    const totalCashOutBuy    = startCapital + totalInterestGross - totalTaxRelief + totalAmortized + totalFeePaid;
+    const buyNetCostTotal    = totalCashOutBuy - finalNetWorth;
 
     // ─── UPDATE DOM ────────────────────────────────────────────────────────
     $('resYears').textContent = years;
 
-    $('rentNetCost').textContent  = fmt(totalRentPaid);
-    $('buyNetCost').textContent   = fmt(Math.max(0, buyNetCostTotal));
-    $('buyEquity').textContent    = fmt(finalEquity);
+    $('rentNetCost').textContent  = fmt(rentNetCostTotal);
+    $('buyNetCost').textContent   = fmt(buyNetCostTotal);
+    $('buyEquity').textContent    = fmt(finalNetWorth);
     $('rentSavings').textContent  = fmt(rentFinalCapital);
 
     // Verdict
@@ -686,19 +718,22 @@
     }
 
     // Table
-    $('tRentDown').textContent     = fmt(downPayment + stampDuty);
+    $('tRentDown').textContent     = fmt(startCapital);
     $('tBuyDown').textContent      = fmt(downPayment);
     $('tStamp').textContent        = fmt(stampDuty);
     $('tRentPaid').textContent     = fmt(totalRentPaid);
-    $('tInterestPaid').textContent = fmt(totalInterest);
+    $('tInterestPaid').textContent = fmt(totalInterestGross);
+    $('tTaxRelief').textContent    = '−' + fmt(totalTaxRelief);
+    $('tAmort').textContent        = fmt(totalAmortized);
     $('tFeePaid').textContent      = fmt(totalFeePaid);
-    $('tTaxRelief').textContent    = '−' + fmt(taxReliefTotal);
-    $('tRentTotal').textContent    = fmt(totalRentPaid + downPayment + stampDuty);
+    $('tRentTotal').textContent    = fmt(startCapital + totalRentPaid);
     $('tBuyTotal').textContent     = fmt(totalCashOutBuy);
+    $('tPropValue').textContent    = fmt(propertyValueFinal);
+    $('tLoanLeft').textContent     = '−' + fmt(remainingLoan);
     $('tRentCapital').textContent  = fmt(rentFinalCapital);
-    $('tBuyCapital').textContent   = fmt(finalEquity);
-    $('tRentNet').textContent      = fmt(Math.max(0, rentNetCostTotal));
-    $('tBuyNet').textContent       = fmt(Math.max(0, buyNetCostTotal));
+    $('tBuyCapital').textContent   = fmt(finalNetWorth);
+    $('tRentNet').textContent      = fmt(rentNetCostTotal);
+    $('tBuyNet').textContent       = fmt(buyNetCostTotal);
 
     // Chart
     drawChart(rentData, buyData, years);
@@ -719,10 +754,10 @@
     ctx.scale(dpr, dpr);
 
     // Dark mode check
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const bg        = isDark ? '#1e293b' : '#f8fafc';
-    const gridColor = isDark ? '#334155' : '#e5e7eb';
-    const textColor = isDark ? '#94a3b8' : '#6b7280';
+    const isDark = false;
+    const bg        = isDark ? '#1e293b' : '#F6F5F1';
+    const gridColor = isDark ? '#334155' : '#E2E0D8';
+    const textColor = isDark ? '#94a3b8' : '#56625B';
 
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, w, h);
@@ -732,10 +767,10 @@
     const ch  = h - pad.top - pad.bottom;
 
     const allVals = [...rentData, ...buyData].filter(v => isFinite(v));
-    const maxVal  = Math.max(...allVals) * 1.05 || 1;
+    const maxVal  = Math.max(0, ...allVals) * 1.05 || 1;
     const minVal  = Math.min(0, ...allVals);
 
-    function xPos(i) { return pad.left + (i / (years - 1)) * cw; }
+    function xPos(i) { return pad.left + (i / Math.max(years - 1, 1)) * cw; }
     function yPos(v) { return pad.top + ch - ((v - minVal) / (maxVal - minVal)) * ch; }
 
     // Grid lines
@@ -791,7 +826,7 @@
     }
 
     drawLine(rentData, '#3b82f6');
-    drawLine(buyData,  '#34d399', []);
+    drawLine(buyData,  '#0D6A45', []);
 
     // Dots at end
     function dot(data, color) {
@@ -804,11 +839,11 @@
       ctx.fill();
     }
     dot(rentData, '#3b82f6');
-    dot(buyData,  '#34d399');
+    dot(buyData,  '#0D6A45');
   }
 
   // ─── EVENT LISTENERS ─────────────────────────────────────────────────────
-  const inputs = ['rent', 'rentIncrease', 'investYield', 'price', 'downPct',
+  const inputs = ['rent', 'rentIncrease', 'investYield', 'propType', 'price', 'downPct',
                   'rate', 'fee', 'appreciation', 'years'];
   inputs.forEach(id => {
     const el = $(id);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -33,40 +34,25 @@
     <meta name="twitter:title" content="ISK-skatteberäknare 2026 – Räkna ut skatten på ditt ISK">
     <meta name="twitter:description" content="Beräkna skatten på ditt ISK för 2026. Skattefritt upp till 300 000 kr.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
 
         :root {
-            --primary: #1a6b4a;
-            --primary-light: #e8f5ee;
-            --primary-dark: #0d4a30;
+            --primary: #0D6A45;
+            --primary-light: #E4F1EA;
+            --primary-dark: #0A5236;
             --accent: #2563eb;
-            --text: #1a1a2e;
-            --text-light: #555;
-            --bg: #fafbfc;
+            --text: #15201A;
+            --text-light: #56625B;
+            --bg: #F6F5F1;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --border: #E2E0D8;
             --shadow: 0 2px 8px rgba(0,0,0,0.08);
             --radius: 12px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6;
-                --text-light: #d1d5db;
-                --bg: #111827;
-                --white: #1f2937;
-                --border: #374151;
-                --primary-light: rgba(26, 107, 74, 0.2);
-                --primary: #34d399;
-                --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            }
-            input[type="number"], select {
-                background: #1f2937 !important;
-                color: #f3f4f6 !important;
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.6;
@@ -270,9 +256,7 @@
             text-align: right;
             font-weight: 500;
         }
-        @media (prefers-color-scheme: dark) {
-            .data-table th { color: var(--primary); }
-        }
+        
         .data-table th:first-child { text-align: left; }
         .data-table td {
             padding: 12px;
@@ -302,7 +286,7 @@
         .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
         .info-section li { margin-bottom: 8px; }
         .formula-box {
-            background: #f8f9fa;
+            background: #F6F5F1;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px;
@@ -311,9 +295,7 @@
             margin: 16px 0;
             overflow-x: auto;
         }
-        @media (prefers-color-scheme: dark) {
-            .formula-box { background: rgba(26, 107, 74, 0.1); border-color: var(--border); }
-        }
+        
 
         .faq { margin-bottom: 48px; }
         .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
@@ -384,11 +366,11 @@
             .tax-params { flex-direction: column; gap: 8px; }
         }
     
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#e2e8f0); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#16a34a); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
+        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
+        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
         .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#1a1a2e); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#6b7280); }
+        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
+        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
         @media (max-width: 760px) {
             .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
         }
@@ -434,7 +416,7 @@
                 "name": "Hur mycket är skattefritt på ISK 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Från och med 2026 är kapitalunderlag upp till 300 000 kr skattefritt per person och år. Det innebär att du inte behöver betala någon ISK-skatt alls om ditt genomsnittliga kontovärde under året understiger 300 000 kr. Beloppet höjdes från 150 000 kr som gällde 2025."
+                    "text": "Från och med 2026 är kapitalunderlag upp till 300 000 kr skattefritt per person och år. Den skattefria grundnivån gäller sammanlagt för ISK, kapitalförsäkring och PEPP-konto. Om ditt sammanlagda kapitalunderlag är högst 300 000 kr betalar du ingen schablonskatt alls. Beloppet höjdes från 150 000 kr som gällde 2025."
                 }
             },
             {
@@ -442,7 +424,7 @@
                 "name": "Vad är kapitalunderlaget och hur beräknas det?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Kapitalunderlaget är genomsnittet av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året. Formeln: (Värde Q1 + Q2 + Q3 + Q4) / 4 + Insättningar. Observera att insättningar som redan är medräknade i kvartalsvärden inte dubbelräknas."
+                    "text": "Kapitalunderlaget är summan av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året, delat med fyra. Formeln: (Värde 1 jan + 1 apr + 1 jul + 1 okt + Insättningar) / 4. En insättning räknas alltså med en fjärdedel direkt, och därefter i kontots värde vid varje kvartalsskifte som följer efter insättningen."
                 }
             },
             {
@@ -474,35 +456,53 @@
                 "name": "Hur fungerar ISK-skatten om jag gör insättningar under året?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Insättningar under året läggs till kapitalunderlaget. Om du till exempel sätter in 50 000 kr under året räknas hela beloppet med, oavsett när under året insättningen gjordes. Uttag påverkar däremot inte kapitalunderlaget direkt, men de sänker kvartalsvärdet vid nästa mätpunkt."
+                    "text": "Insättningar under året läggs till summan av kvartalsvärdena innan den delas med fyra, så varje insättning räknas med en fjärdedel. Pengarna ingår dessutom i kontots värde vid de kvartalsskiften som kommer efter insättningen. En insättning i januari påverkar därför underlaget nästan fullt ut, medan en insättning efter 1 oktober bara räknas med en fjärdedel. Uttag minskar inte underlaget direkt, men sänker kvartalsvärdet vid nästa mätpunkt."
                 }
             }
         ]
     }
     </script>
   <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  <script>
-    (function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark"||(s===null&&window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches);if(d)document.documentElement.setAttribute("data-theme","dark");})();
-  </script>
+  
     <link rel="stylesheet" href="/mobile.css">
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-<script src="/theme.js"></script>
-    <header>
-        <div class="container header-inner">
-            <a href="/" class="logo">Gratis<span>Kalkyl</span>.se</a>
-            <div class="calc-header-search"><input type="search" data-search-dropdown placeholder="Sök kalkylatorer & guider…" aria-label="Sök på hela sajten" autocomplete="off" spellcheck="false"></div>
-            <nav>
-                <a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a>
-                <a href="/kalkylatorer/loneraknare">Löneräknare</a>
-                <a href="/kalkylatorer/rot-rut">ROT/RUT</a>
-                <a href="/kalkylatorer/bolanekalkylator">Bolån</a>
-                <a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a>
-            </nav>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> → ISK-skatteberäknare 2026</div>
             <h1>ISK-skatteberäknare 2026</h1>
@@ -531,8 +531,8 @@
         <div class="calc-wrapper">
             <div class="input-grid">
                 <div class="input-group">
-                    <label for="iskValue">ISK-värde (kapitalunderlag)
-                        <div class="sublabel">Genomsnittligt värde under året</div>
+                    <label for="iskValue">ISK-värde (snitt av kvartalsvärdena)
+                        <div class="sublabel">Genomsnitt av värdet 1 jan, 1 apr, 1 jul och 1 okt</div>
                     </label>
                     <input type="number" id="iskValue" value="500000" min="0" max="100000000" step="10000" aria-label="ISK-värde i kronor">
                     <input type="range" id="iskSlider" min="0" max="5000000" step="10000" value="500000" aria-label="Justera ISK-värde">
@@ -540,7 +540,7 @@
                 </div>
                 <div class="input-group">
                     <label for="deposits">Insättningar under året
-                        <div class="sublabel">Tillskott utöver kvartalsvärden</div>
+                        <div class="sublabel">Räknas med en fjärdedel i kapitalunderlaget</div>
                     </label>
                     <input type="number" id="deposits" value="0" min="0" max="10000000" step="10000" aria-label="Insättningar under året">
                     <input type="range" id="depositsSlider" min="0" max="1000000" step="10000" value="0" aria-label="Justera insättningar">
@@ -596,17 +596,17 @@
 
         <div class="info-section">
             <h2>ISK-skatteberäknare 2026 – beräkna din schablonskatt</h2>
-            <p>Investeringssparkontot (ISK) är det populäraste sparformen för aktier och fonder bland svenska privatpersoner. Skatten beräknas inte på din faktiska vinst utan på en <strong>schablonskatt baserad på kontots värde</strong>. Med det nya skattefria grundavdraget på 300 000 kr som gäller från 2026 är ISK nu ännu mer fördelaktigt för de flesta sparare.</p>
+            <p>Investeringssparkontot (ISK) är den populäraste sparformen för aktier och fonder bland svenska privatpersoner. Skatten beräknas inte på din faktiska vinst utan på en <strong>schablonskatt baserad på kontots värde</strong>. Med det nya skattefria grundavdraget på 300 000 kr som gäller från 2026 är ISK nu ännu mer fördelaktigt för de flesta sparare.</p>
 
             <h3>Hur beräknas ISK-skatten 2026?</h3>
             <p>Skatten beräknas i tre steg:</p>
             <ol>
-                <li><strong>Kapitalunderlag</strong> = genomsnittet av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) + alla insättningar under året</li>
+                <li><strong>Kapitalunderlag</strong> = (kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) + alla insättningar under året) / 4</li>
                 <li><strong>Schablonintäkt</strong> = kapitalunderlag × schablonränta (3,55 % för 2026)</li>
-                <li><strong>Skatt</strong> = schablonintäkt × 30 % kapitalskatt (men de första 300 000 kr i kapitalunderlag är skattefria)</li>
+                <li><strong>Skatt</strong> = schablonintäkt × 30 % kapitalskatt (men de första 300 000 kr i kapitalunderlag är skattefria – sammanlagt för ISK, kapitalförsäkring och PEPP-konto)</li>
             </ol>
             <div class="formula-box">
-Kapitalunderlag = (Värde 1 jan + 1 apr + 1 jul + 1 okt) / 4 + Insättningar<br><br>
+Kapitalunderlag = (Värde 1 jan + 1 apr + 1 jul + 1 okt + Insättningar) / 4<br><br>
 Schablonintäkt = Kapitalunderlag × 3,55 %<br><br>
 Skattefri del = 300 000 × 3,55 % = 10 650 kr<br><br>
 Skatt = (Schablonintäkt − 10 650) × 30 %<br><br>
@@ -614,18 +614,18 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
             </div>
 
             <h3>Nytt 2026 – skattefritt grundavdrag höjs till 300 000 kr</h3>
-            <p>Från och med inkomstår 2026 är kapitalunderlag upp till <strong>300 000 kr per person skattefritt</strong>. Det innebär att om ditt genomsnittliga ISK-värde under året är under 300 000 kr betalar du ingen ISK-skatt alls. Beloppet höjdes från 150 000 kr (gällde 2025). För ett par med 300 000 kr vardera på ISK är alltså hela 600 000 kr skattefritt.</p>
-            <p>Räkneexempel: ISK-värde 500 000 kr. Kapitalunderlag = 500 000 kr. Skattefri del = 300 000 kr. Skattepliktig schablonintäkt = (500 000 − 300 000) × 3,55 % = 7 100 kr. Skatt = 7 100 × 30 % = <strong>2 130 kr/år</strong>.</p>
+            <p>Från och med inkomstår 2026 är kapitalunderlag upp till <strong>300 000 kr per person skattefritt</strong>. Grundnivån gäller sammanlagt för ISK, kapitalförsäkring och PEPP-konto. Det innebär att om ditt sammanlagda kapitalunderlag är högst 300 000 kr betalar du ingen schablonskatt alls. Beloppet höjdes från 150 000 kr (gällde 2025). För ett par med 300 000 kr vardera på ISK är alltså hela 600 000 kr skattefritt.</p>
+            <p>Räkneexempel: ISK-värde 500 000 kr (snitt av kvartalsvärdena), inga insättningar. Kapitalunderlag = 500 000 kr. Skattefri del = 300 000 kr. Skattepliktig schablonintäkt = (500 000 − 300 000) × 3,55 % = 7 100 kr. Skatt = 7 100 × 30 % = <strong>2 130 kr/år</strong>.</p>
 
             <h3>ISK vs vanligt aktiekonto – när lönar sig vad?</h3>
-            <p>Med ett <strong>vanligt aktiekonto (depå)</strong> betalar du 30 % kapitalvinstskatt när du säljer aktier med vinst. Du kan dock kvitta vinster mot förluster. Med <strong>ISK</strong> betalar du 1,065 % av kontovärdet per år oavsett om du köper, säljer, byter fonder eller håller kvar – och oavsett om portföljen gått upp eller ner.</p>
+            <p>Med ett <strong>vanligt aktiekonto (depå)</strong> betalar du 30 % kapitalvinstskatt när du säljer aktier med vinst. Du kan dock kvitta vinster mot förluster. Med <strong>ISK</strong> betalar du 1,065 % av kapitalunderlaget över 300 000 kr per år, oavsett om du köper, säljer, byter fonder eller håller kvar – och oavsett om portföljen gått upp eller ner.</p>
             <p>ISK lönar sig om din avkastning överstiger schablonräntan (3,55 % 2026). Med historisk börsutveckling på 7–10 % per år är ISK nästan alltid fördelaktigt för långsiktigt sparande. Vanlig depå kan vara bättre om: du har stora realiserade förluster att kvitta, eller om dina innehav inte förväntas stiga mer än 3,55 %/år.</p>
 
             <h3>Statslåneräntan styr ISK-skatten</h3>
-            <p>Schablonräntan för ISK beräknas som statslåneräntan den 30 november föregående år + 1 procentenhet. Statslåneräntan den 30 november 2025 var 2,55 %, vilket ger schablonräntan 3,55 % för inkomstår 2026. Om Riksbanken sänker räntan ytterligare kan ISK-skatten bli lägre 2027.</p>
+            <p>Schablonräntan för ISK beräknas som statslåneräntan den 30 november föregående år + 1 procentenhet. Statslåneräntan den 30 november 2025 var 2,55 %, vilket ger schablonräntan 3,55 % för inkomstår 2026. Schablonräntan för 2027 bestäms av statslåneräntan den 30 november 2026. Statslåneräntan följer marknadsräntan på statsobligationer och styrs inte direkt av Riksbankens styrränta.</p>
 
             <h3>ISK vs kapitalförsäkring (KF) 2026</h3>
-            <p>Både ISK och kapitalförsäkring beskattas med schablonskatt på liknande sätt. Den viktiga skillnaden 2026 är att det skattefria grundavdraget på 300 000 kr <strong>bara gäller ISK, inte KF</strong>. Det gör ISK mer fördelaktigt för sparare med under 500 000 kr i portföljvärde. Kapitalförsäkring kan ändå vara relevant vid arvsplanering eller om du vill ha förmånstagare utpekade.</p>
+            <p>Både ISK och kapitalförsäkring beskattas med schablonskatt på liknande sätt. Den skattefria grundnivån på 300 000 kr gäller <strong>sammanlagt för ISK, kapitalförsäkring och PEPP-konto</strong> – du får alltså inte 300 000 kr skattefritt på varje konto. Har du både ISK och KF delas grundnivån mellan dem. Kapitalförsäkring kan vara relevant vid arvsplanering eller om du vill ha förmånstagare utpekade.</p>
         </div>
 
         <div class="faq">
@@ -636,11 +636,11 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
             </details>
             <details class="faq-item">
                 <summary>Hur mycket är skattefritt på ISK 2026?</summary>
-                <p>Kapitalunderlag upp till 300 000 kr per person är skattefritt 2026. Det innebär att om ditt genomsnittliga ISK-värde är under 300 000 kr betalar du ingen schablonskatt alls. Beloppet höjdes från 150 000 kr (2025).</p>
+                <p>Kapitalunderlag upp till 300 000 kr per person är skattefritt 2026. Grundnivån gäller sammanlagt för ISK, kapitalförsäkring och PEPP-konto. Om ditt sammanlagda kapitalunderlag är högst 300 000 kr betalar du ingen schablonskatt alls. Beloppet höjdes från 150 000 kr (2025).</p>
             </details>
             <details class="faq-item">
                 <summary>Vad är kapitalunderlaget och hur räknas det?</summary>
-                <p>Kapitalunderlaget är genomsnittet av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året. Uttag minskar inte kapitalunderlaget direkt, men påverkar kvartalsvärdet vid nästa mätpunkt.</p>
+                <p>Kapitalunderlaget är summan av kontots marknadsvärde vid ingången av varje kvartal (1 jan, 1 apr, 1 jul, 1 okt) plus alla insättningar under året, delat med fyra. Uttag minskar inte kapitalunderlaget direkt, men påverkar kvartalsvärdet vid nästa mätpunkt.</p>
             </details>
             <details class="faq-item">
                 <summary>Betalar jag skatt på ISK även om portföljen gått ner?</summary>
@@ -652,11 +652,11 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
             </details>
             <details class="faq-item">
                 <summary>Hur påverkar insättningar mitt kapitalunderlag?</summary>
-                <p>Insättningar under året läggs till kapitalunderlaget i sin helhet. Om du sätter in 100 000 kr under året ökar ditt kapitalunderlag med hela beloppet, oavsett när under året insättningen gjordes.</p>
+                <p>Insättningar läggs till summan av kvartalsvärdena innan den delas med fyra, så en insättning räknas med en fjärdedel. Pengarna ingår också i kontots värde vid de kvartalsskiften som följer. Sätter du in 100 000 kr i februari räknas de med ungefär 100 000 kr (en fjärdedel direkt plus i värdena 1 apr, 1 jul och 1 okt), medan 100 000 kr insatta i november bara ökar underlaget med 25 000 kr. I kalkylatorn anger du snittet av kvartalsvärdena och insättningarna separat.</p>
             </details>
             <details class="faq-item">
                 <summary>Vad är skillnaden mellan ISK och kapitalförsäkring (KF)?</summary>
-                <p>Båda beskattas med schablonskatt, men det skattefria grundavdraget på 300 000 kr gäller bara ISK, inte KF. KF kan ha fördelar vid flytt mellan banker och vid arv, men ISK är generellt billigare för de flesta sparare 2026.</p>
+                <p>Båda beskattas med schablonskatt på i stort sett samma sätt, och den skattefria grundnivån på 300 000 kr gäller sammanlagt för ISK, kapitalförsäkring och PEPP-konto. KF kan ha fördelar vid arv eftersom du kan utse förmånstagare. I en kapitalförsäkring är det försäkringsbolaget som formellt äger värdepapperen.</p>
             </details>
         </div>
 
@@ -683,25 +683,33 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
         </div>
     
     <!-- Relaterade kalkylatorer -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #e2e8f0);border-radius:var(--radius, 12px);">
+    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
       <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
       <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/kalkylatorer/kapitalvinstskatt" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Kapitalvinstskattkalkylator</a>
-      <a href="/kalkylatorer/direktavkastningskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Direktavkastningskalkylator</a>
-      <a href="/kalkylatorer/sparkalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #e8f5ee);color:var(--primary, #16a34a);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Sparkalkylator</a>
+      <a href="/kalkylatorer/kapitalvinstskatt" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Kapitalvinstskattkalkylator</a>
+      <a href="/kalkylatorer/direktavkastningskalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Direktavkastningskalkylator</a>
+      <a href="/kalkylatorer/sparkalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Sparkalkylator</a>
       </div>
     </section>
 
 </main>
 
-    <footer>
-        <div class="container">
-            <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
-            <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Alla kalkylatorer</a></p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
-        </div>
-    </footer>
+    <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
     (function() {
@@ -745,7 +753,7 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
         function calculate() {
             const val = parseFloat(iskValue.value) || 0;
             const dep = parseFloat(deposits.value) || 0;
-            const base = val + dep;
+            const base = val + dep / 4; // (kvartalsvärden + insättningar) / 4
 
             const { schablon, tax, freeAmount } = calculateTax(base);
 
@@ -770,11 +778,11 @@ Effektiv skattesats = 1,065 % av kapitalunderlag över 300 000 kr
             const W = rect.width;
             const H = rect.height;
 
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const bgColor = isDark ? '#1f2937' : '#ffffff';
-            const textColor = isDark ? '#d1d5db' : '#555';
-            const gridColor = isDark ? '#374151' : '#e2e8f0';
-            const lineColor = isDark ? '#34d399' : '#1a6b4a';
+            const isDark = false;
+            const bgColor = isDark ? '#15201A' : '#ffffff';
+            const textColor = isDark ? '#d1d5db' : '#56625B';
+            const gridColor = isDark ? '#3A4640' : '#E2E0D8';
+            const lineColor = isDark ? '#0D6A45' : '#0D6A45';
             const fillColor = isDark ? 'rgba(52, 211, 153, 0.15)' : 'rgba(26, 107, 74, 0.1)';
             const markerColor = isDark ? '#f59e0b' : '#d97706';
 

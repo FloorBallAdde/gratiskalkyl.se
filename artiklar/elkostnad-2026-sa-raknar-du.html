@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+<script>document.documentElement.setAttribute("data-theme","light");</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
@@ -13,13 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dark mode: tillämpa tema innan render -->
-    <script>
-      (function(){
-        var s=null;try{s=localStorage.getItem('gk-theme');}catch(e){}
-        var d=s==='dark'||(s===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches);
-        document.documentElement.setAttribute('data-theme',d?'dark':'light');
-      })();
-    </script>
+    
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -37,25 +32,18 @@
     <meta name="twitter:title" content="Elkostnad 2026 – så räknar du ut vad elen kostar per månad">
     <meta name="twitter:description" content="Räkna ut din elkostnad 2026: elpris, elnätsavgift, energiskatt 36 öre/kWh och moms. Normal förbrukning för villa och lägenhet, räkneexempel och 6 sätt att sänka elräkningen.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        500;600;700;800&display=swap');
         :root {
-            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
-            --text: #111827; --text-light: #6b7280;
-            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
+            --text: #15201A; --text-light: #56625B;
+            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
             --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #f3f4f6; --text-light: #9ca3af;
-                --bg: #0f172a; --white: #1e293b; --border: #334155;
-                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
-                --shadow: 0 1px 3px rgba(0,0,0,.3);
-            }
-        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
         .site-header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.82); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border-bottom:1px solid rgba(229,231,235,0.7); padding: 16px 0; transition:box-shadow .2s, background .2s; }
-        html[data-theme="dark"] .site-header { background:rgba(15,23,42,0.85)!important; border-bottom-color:rgba(51,65,85,0.7)!important; }
+        
         .site-header a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
         .site-header a:hover { color: var(--primary); }
         .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
@@ -97,10 +85,7 @@
         .cta-card p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95rem; }
         .cta-btn { display: inline-block; background: white; color: var(--primary); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
         .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
-        @media (prefers-color-scheme: dark) {
-            .cta-card { background: #065f46; }
-            .cta-btn { color: #065f46; }
-        }
+        
 
         .faq-section { padding: 0 0 40px; }
         .faq-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; }
@@ -123,16 +108,11 @@
         }
     
         /* Dark mode overrides — controlled by data-theme attribute */
-        html[data-theme="dark"] {
-            --text: #f3f4f6; --text-light: #9ca3af;
-                --bg: #0f172a; --white: #1e293b; --border: #334155;
-                --primary-light: rgba(52,211,153,.15); --primary: #34d399;
-                --shadow: 0 1px 3px rgba(0,0,0,.3);
-        }
+        
         html[data-theme="light"] {
-            --primary: #16a34a; --primary-light: #dcfce7; --primary-dark: #15803d;
-            --text: #111827; --text-light: #6b7280;
-            --bg: #f8fafc; --white: #ffffff; --border: #e5e7eb;
+            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
+            --text: #15201A; --text-light: #56625B;
+            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
             --shadow: 0 1px 4px rgba(0,0,0,.06); --radius: 14px;
         }
         .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:6px 10px; cursor:pointer; color:var(--text); display:inline-flex; align-items:center; justify-content:center; margin-left:16px; transition:background .15s, border-color .15s; }
@@ -172,7 +152,7 @@
             "name": "Hur räknar man ut elkostnaden per månad?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Multiplicera din förbrukning i kWh med elpriset (inklusive påslag), lägg till elnätets fasta och rörliga avgift samt energiskatten 36 öre/kWh, och lägg sedan på 25 % moms på hela summan. En villa som förbrukar 1 500 kWh en vintermånad landar ofta på 3 000–3 500 kr."
+                "text": "Multiplicera din förbrukning i kWh med elpriset (inklusive elhandlarens påslag och fasta avgifter), lägg till elnätets fasta och rörliga avgift samt energiskatten 36 öre/kWh, och lägg sedan på 25 % moms på hela summan. Med SCB:s snittpris för nya rörliga avtal för villa med elvärme i SE3 i januari 2026 (122,5 öre/kWh) och en nätavgift på 350 kr + 30 öre/kWh kostade 1 500 kWh ca 3 970 kr, alltså 2,65 kr/kWh. Aktuella snittpriser för ditt elområde finns i elkostnadskalkylatorn."
             }
         },
         {
@@ -180,7 +160,7 @@
             "name": "Vad är en normal elförbrukning?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "En lägenhet förbrukar normalt 2 000–3 000 kWh per år, en villa utan elvärme 5 000–6 000 kWh, en villa med värmepump 10 000–15 000 kWh och en villa med direktverkande el 20 000–25 000 kWh per år."
+                "text": "En lägenhet utan elvärme använder ofta 2 000–3 500 kWh per år och en villa utan elvärme 4 000–7 000 kWh. En villa med värmepump ligger ofta på 8 000–15 000 kWh och en villa med direktverkande el på 18 000–28 000 kWh. Din exakta förbrukning står på elfakturan eller hos ditt elnätsföretag."
             }
         },
         {
@@ -193,10 +173,10 @@
         },
         {
             "@type": "Question",
-            "name": "Är timpris eller rörligt pris billigast?",
+            "name": "Är tim- eller kvartspris billigare än rörligt pris?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Timpris blir billigare än rörligt månadspris bara om du aktivt flyttar förbrukning till timmar med lågt pris, till exempel elbilsladdning och värmepump på natten. Kan du inte styra förbrukningen är rörligt månadspris det enklare valet."
+                "text": "Sedan 1 oktober 2025 sätts elbörsens pris per kvart (15 minuter). Ett tim- eller kvartsprisavtal blir främst billigare än rörligt månadspris om du flyttar förbrukning till tider med lågt pris, till exempel elbilsladdning och värmepump på natten. Kan du inte styra förbrukningen är rörligt månadspris det enklare valet."
             }
         },
         {
@@ -204,7 +184,7 @@
             "name": "Vad är effekttariff?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Effekttariff innebär att elnätsavgiften delvis baseras på din högsta timförbrukning under månaden i stället för bara antalet kWh. Senast 1 januari 2027 ska alla nätbolag tillämpa effekttariffer. Sprid ut stora förbrukare över dygnet för att hålla nere avgiften."
+                "text": "Effekttariff (effektavgift) innebär att en del av elnätsavgiften baseras på hur mycket el du använder samtidigt, till exempel din högsta timförbrukning under månaden, i stället för bara antalet kWh. Kravet på att alla nätbolag skulle ha effektavgifter senast 1 januari 2027 är slopat: i mars 2026 gav regeringen Energimarknadsinspektionen i uppdrag att upphäva föreskrifterna senast 30 juni 2026. Nätbolagen väljer nu själva om de vill ha effektavgift, så kolla din nätfaktura. Har du effektavgift lönar det sig att sprida ut stora förbrukare över dygnet."
             }
         },
         {
@@ -212,7 +192,7 @@
             "name": "Får man elstöd 2026?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nej. De elstöd som betalades ut 2023 för höga elpriser vintern 2022–2023 var tillfälliga. 2026 finns inget statligt elstöd till hushåll."
+                "text": "Ja, för förbrukningen i januari och februari 2026. Regeringen införde ett tillfälligt elstöd till hushåll: 14 öre/kWh i elområde 1 och 2, 26 öre/kWh i elområde 3 och 29 öre/kWh i elområde 4, för högst 10 000 kWh per bostad. Stödet gick till hushåll som hade ett elnätsavtal den 28 februari 2026. Man behövde inte ansöka, och Försäkringskassan började betala ut stödet i juni 2026."
             }
         }
     ]
@@ -274,22 +254,47 @@
     "inLanguage": "sv-SE"
 }
     </script>
+<!-- gk2-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/gk.css?v=20261001">
+<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<link rel="stylesheet" href="/search-dropdown.css">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
+<script defer src="/assets/gk.js?v=20261001"></script>
 </head>
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="/" class="logo">GratisKalkyl<span>.se</span></a>
-            <nav>
-                <a href="/">Kalkylatorer</a>
-                <a href="/artiklar/">📖 Guider</a>
-            </nav>
-            <button id="gk-theme-btn" class="theme-toggle-btn" type="button" aria-label="Växla mörkt läge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
-        </div>
-    </header>
+<body class="gk-skin">
+<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
+<div class="gk-hdr gk2" role="banner">
+<div class="gk-wrap gk-hdr-in">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<div class="gk-hdr-actions">
+<button class="gk-icon-btn gk-search-open-btn" type="button" data-gk-menu="search" aria-controls="gk-menu" aria-expanded="false" aria-label="Sök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
+</div>
+</div>
+</div>
+<div class="gk-menu gk2" id="gk-menu" hidden>
+<div class="gk-menu-in">
+<label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
+<span class="gk-menu-label">Ämnen</span>
+<div class="gk-menu-groups"><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Lön &amp; jobb<small>Lön, semester, egen firma</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/lon-och-jobb">Lön &amp; jobb<small>Lön, semester, egen firma</small></a><ul><li class="gk-mg-hubli"><a href="/lon-och-jobb"><strong>Allt om Lön &amp; jobb →</strong></a></li><li><a href="/kalkylatorer/loneraknare">Löneräknare – nettolön</a></li><li><a href="/kalkylatorer/loneforhandling">Löneförhandling – vad ska du begära?</a></li><li><a href="/kalkylatorer/yrkeslon/">Lön per yrke (105 yrken)</a></li><li><a href="/kalkylatorer/semesterlonekalkylator">Semesterlön</a></li><li><a href="/kalkylatorer/semesterersattning">Semesterersättning</a></li><li><a href="/kalkylatorer/frilanskalkylator">Frilans och eget företag</a></li><li><a href="/kalkylatorer/arbetsgivaravgift-kalkylator">Arbetsgivaravgift</a></li><li><a href="/kalkylatorer/traktamentekalkylator">Traktamente</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/skatt-och-deklaration">Skatt &amp; deklaration<small>Återbäring, avdrag, marginalskatt</small></a><ul><li class="gk-mg-hubli"><a href="/skatt-och-deklaration"><strong>Allt om Skatt &amp; deklaration →</strong></a></li><li><a href="/kalkylatorer/skatteaterbarings-kalkylator">Skatteåterbäring</a></li><li><a href="/kalkylatorer/reseavdragskalkylator">Reseavdrag</a></li><li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskatt</a></li><li><a href="/kalkylatorer/rot-rut">ROT- och RUT-avdrag</a></li><li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatt</a></li><li><a href="/kalkylatorer/kapitalvinstskatt">Kapitalvinstskatt</a></li><li><a href="/kalkylatorer/momsraknare">Moms</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Boende &amp; lån<small>Bolån, amortering, budget</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/boende-och-lan">Boende &amp; lån<small>Bolån, amortering, budget</small></a><ul><li class="gk-mg-hubli"><a href="/boende-och-lan"><strong>Allt om Boende &amp; lån →</strong></a></li><li><a href="/kalkylatorer/bolanekalkylator">Bolån – månadskostnad</a></li><li><a href="/kalkylatorer/amorteringskalkylator">Amorteringskrav</a></li><li><a href="/kalkylatorer/lanekalkylator">Lån och privatlån</a></li><li><a href="/kalkylatorer/hyra-vs-kopa-kalkylator">Hyra eller köpa?</a></li><li><a href="/kalkylatorer/uthyrningskalkylator">Uthyrning av bostad</a></li><li><a href="/kalkylatorer/hushallsbudget">Hushållsbudget</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Bil &amp; energi<small>El, bil, leasing, solceller</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/bil-och-energi">Bil &amp; energi<small>El, bil, leasing, solceller</small></a><ul><li class="gk-mg-hubli"><a href="/bil-och-energi"><strong>Allt om Bil &amp; energi →</strong></a></li><li><a href="/kalkylatorer/elkostnadskalkylator">Elkostnad och elavtal</a></li><li><a href="/kalkylatorer/bilkostnadsraknare">Bilkostnad</a></li><li><a href="/kalkylatorer/leasingkalkylator">Leasing</a></li><li><a href="/kalkylatorer/formansbilkalkylator">Förmånsbil</a></li><li><a href="/kalkylatorer/drivmedelskalkylator">Drivmedel</a></li><li><a href="/kalkylatorer/milersattningskalkylator">Milersättning</a></li><li><a href="/kalkylatorer/solcellskalkylator">Solceller</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/sparande-och-pension">Sparande &amp; pension<small>Ränta på ränta, pension, CSN</small></a><ul><li class="gk-mg-hubli"><a href="/sparande-och-pension"><strong>Allt om Sparande &amp; pension →</strong></a></li><li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li><li><a href="/kalkylatorer/sparkalkylator">Sparande</a></li><li><a href="/kalkylatorer/pensionskalkylator">Pension</a></li><li><a href="/kalkylatorer/tjanstepensionskalkylator">Tjänstepension</a></li><li><a href="/kalkylatorer/lonevaxling-kalkylator">Löneväxling</a></li><li><a href="/kalkylatorer/direktavkastningskalkylator">Direktavkastning</a></li><li><a href="/kalkylatorer/inflationskalkylator">Inflation</a></li><li><a href="/kalkylatorer/csn-kalkylator">CSN – studielån</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><a class="gk-mg-title" href="/familj-och-trygghet">Familj &amp; trygghet<small>Föräldrapenning, sjuk, a-kassa</small></a><ul><li class="gk-mg-hubli"><a href="/familj-och-trygghet"><strong>Allt om Familj &amp; trygghet →</strong></a></li><li><a href="/kalkylatorer/foraldrapenning">Föräldrapenning</a></li><li><a href="/kalkylatorer/barnbidragskalkylator">Barnbidrag</a></li><li><a href="/kalkylatorer/sjukpenningkalkylator">Sjukpenning</a></li><li><a href="/kalkylatorer/karensavdragskalkylator">Karensavdrag</a></li><li><a href="/kalkylatorer/akassa-kalkylator">A-kassa</a></li><li><a href="/kalkylatorer/underhallsstod-kalkylator">Underhållsstöd</a></li></ul></div><div class="gk-mg"><button class="gk-mg-btn" type="button" aria-expanded="false"><span>Övriga räknare<small>Procent, BMI, kalorier</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button><span class="gk-mg-title">Övriga räknare<small>Procent, BMI, kalorier</small></span><ul><li><a href="/kalkylatorer/procentraknare">Procent</a></li><li><a href="/kalkylatorer/bmi-kalkylator">BMI</a></li><li><a href="/kalkylatorer/kalorikalkylator">Kalorier</a></li></ul></div></div>
+<span class="gk-menu-label">Allt på ett ställe</span>
+<ul class="gk-menu-links">
+<li><a href="/#kalkylatorer">Alla kalkylatorer <span>44</span></a></li>
+<li><a href="/kalkylatorer/yrkeslon/">Lön per yrke <span>105</span></a></li>
+<li><a href="/artiklar/">Alla guider <span>29</span></a></li>
+</ul>
+<button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
+</div>
+</div>
 
-    <main class="container">
+    
+
+    <main class="container" id="innehall">
         <nav class="breadcrumb" aria-label="Brödsmulor">
             <a href="/">Hem</a>
             <span aria-hidden="true">›</span>
@@ -328,8 +333,8 @@
 
             <h2>Formeln: så räknar du ut elkostnaden</h2>
             <p>Din totala elkostnad per månad beräknas i tre steg:</p>
-            <div style="background:var(--bg,#f8fafc);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:monospace;font-size:0.9rem;margin:16px 0;line-height:1.7;">
-            Elhandel = förbrukning (kWh) × (spotpris + elbolagets påslag + elcertifikat)<br>
+            <div style="background:var(--bg,#F6F5F1);border:1px solid var(--border);border-radius:8px;padding:16px;font-family:monospace;font-size:0.9rem;margin:16px 0;line-height:1.7;">
+            Elhandel = förbrukning (kWh) × (spotpris + elbolagets påslag + elcertifikat) + elhandlarens fasta avgift<br>
             Elnät = fast månadsavgift + förbrukning (kWh) × rörlig överföringsavgift<br>
             Energiskatt = förbrukning (kWh) × 0,36 kr<br>
             <strong>Totalt = (Elhandel + Elnät + Energiskatt) × 1,25</strong>
@@ -337,57 +342,57 @@
             <p>Momsen på 25 % läggs alltså ovanpå <em>allt</em>, inklusive skatten. Det är därför en elkostnad på "1 kr/kWh" i annonsen ofta blir 2–2,50 kr/kWh när räkningen kommer.</p>
 
             <h2>Räkneexempel – villa med 1 500 kWh i januari</h2>
-            <p>En villa i elområde SE3 med elvärme förbrukar 1 500 kWh en vintermånad. Rörligt elpris 90 öre/kWh inkl. påslag, elnätsavgift 350 kr fast + 30 öre/kWh rörligt:</p>
+            <p>En villa med elvärme i elområde SE3 förbrukar 1 500 kWh i januari. Elpriset är SCB:s snittpris för nya rörliga avtal för villa med elvärme i SE3 i januari 2026: 122,5 öre/kWh inklusive elhandlarens påslag och fasta avgifter. Elnätsavgiften är ett exempel, 350 kr fast + 30 öre/kWh rörligt. Det ligger nära SCB:s snitt för villor med elvärme 2026 (55,9 öre/kWh inklusive fasta avgifter), men din egen nättariff står på fakturan från nätbolaget.</p>
             <ul>
-                <li><strong>Elhandel:</strong> 1 500 × 0,90 = 1 350 kr</li>
+                <li><strong>Elhandel:</strong> 1 500 × 1,225 = 1 838 kr</li>
                 <li><strong>Elnät:</strong> 350 + 1 500 × 0,30 = 800 kr</li>
                 <li><strong>Energiskatt:</strong> 1 500 × 0,36 = 540 kr</li>
-                <li><strong>Summa exkl. moms:</strong> 2 690 kr</li>
-                <li><strong>Moms 25 %:</strong> 673 kr</li>
-                <li><strong>Total elkostnad: ~3 360 kr</strong> — alltså 2,24 kr/kWh allt inräknat</li>
+                <li><strong>Summa exkl. moms:</strong> 3 178 kr</li>
+                <li><strong>Moms 25 %:</strong> 794 kr</li>
+                <li><strong>Total elkostnad: ~3 970 kr</strong> — alltså 2,65 kr/kWh allt inräknat</li>
             </ul>
-            <p>Lägg märke till att själva elen bara är 40 % av räkningen. Nätavgift, skatt och moms står för resten — och de påverkas inte av vilket elbolag du väljer.</p>
+            <p>Själva elen är knappt 60 % av räkningen (1 838 av 3 178 kr exkl. moms). Resten är nätavgift, energiskatt och moms, och nätavgiften och energiskatten påverkas inte av vilket elbolag du väljer. Januari 2026 var en dyr månad – i <a href="/kalkylatorer/elkostnadskalkylator">elkostnadskalkylatorn</a> ser du SCB:s senaste snittpriser för ditt elområde och kan räkna med din egen förbrukning.</p>
 
             <h2>Räkneexempel – lägenhet med 250 kWh</h2>
-            <p>En tvåa med fjärrvärme förbrukar 250 kWh hushållsel per månad. Samma elpris 90 öre, elnät 150 kr fast + 30 öre/kWh:</p>
+            <p>En tvåa med fjärrvärme förbrukar 250 kWh hushållsel per månad. Elpriset är SCB:s snittpris för nya rörliga avtal för lägenhet i SE3 september 2025–augusti 2026, 102,3 öre/kWh. Elnätet är ett exempel, 150 kr fast + 30 öre/kWh:</p>
             <ul>
-                <li>Elhandel: 225 kr · Elnät: 225 kr · Energiskatt: 90 kr</li>
-                <li>Exkl. moms: 540 kr · Moms: 135 kr</li>
-                <li><strong>Total elkostnad: ~675 kr/mån</strong> (2,70 kr/kWh — den fasta nätavgiften väger tungt vid låg förbrukning)</li>
+                <li>Elhandel: 256 kr · Elnät: 225 kr · Energiskatt: 90 kr</li>
+                <li>Exkl. moms: 571 kr · Moms: 143 kr</li>
+                <li><strong>Total elkostnad: ~713 kr/mån</strong> (2,85 kr/kWh — den fasta nätavgiften väger tungt vid låg förbrukning)</li>
             </ul>
 
             <h2>Vad är normal elförbrukning?</h2>
             <table>
                 <thead><tr><th>Bostadstyp</th><th>Förbrukning per år</th><th>Per månad (snitt)</th></tr></thead>
                 <tbody>
-                    <tr><td>Lägenhet, hushållsel</td><td>2 000–3 000 kWh</td><td>170–250 kWh</td></tr>
-                    <tr><td>Villa utan elvärme (fjärrvärme/pellets)</td><td>5 000–6 000 kWh</td><td>400–500 kWh</td></tr>
-                    <tr><td>Villa med värmepump</td><td>10 000–15 000 kWh</td><td>800–1 250 kWh</td></tr>
-                    <tr><td>Villa med direktverkande el</td><td>20 000–25 000 kWh</td><td>1 700–2 100 kWh</td></tr>
+                    <tr><td>Lägenhet, hushållsel</td><td>2 000–3 500 kWh</td><td>170–290 kWh</td></tr>
+                    <tr><td>Villa utan elvärme (fjärrvärme/pellets)</td><td>4 000–7 000 kWh</td><td>330–580 kWh</td></tr>
+                    <tr><td>Villa med värmepump</td><td>8 000–15 000 kWh</td><td>670–1 250 kWh</td></tr>
+                    <tr><td>Villa med direktverkande el</td><td>18 000–28 000 kWh</td><td>1 500–2 330 kWh</td></tr>
                 </tbody>
             </table>
-            <p>Vintermånaderna står ofta för 40–50 % av årsförbrukningen i en eluppvärmd villa. Räkna därför alltid på januari–februari när du budgeterar, inte på årssnittet.</p>
+            <p>I en eluppvärmd villa är förbrukningen mycket högre på vintern än på sommaren, och elpriset är ofta också högre då. Räkna därför på januari–februari när du budgeterar, inte bara på årssnittet.</p>
 
             <h2>Elområden SE1–SE4 – därför skiljer priset</h2>
-            <p>Sverige är indelat i fyra elområden. <strong>SE1 (Luleå)</strong> och <strong>SE2 (Sundsvall)</strong> i norr har ofta lägst spotpris tack vare mycket vattenkraft. <strong>SE3 (Stockholm)</strong> och särskilt <strong>SE4 (Malmö)</strong> har högre priser, framför allt vintertid när överföringskapaciteten söderut inte räcker. Skillnaden mellan SE1 och SE4 kan enskilda månader vara flera kronor per kWh.</p>
+            <p>Sverige är indelat i fyra elområden. <strong>SE1 (Luleå)</strong> och <strong>SE2 (Sundsvall)</strong> i norr har ofta lägst spotpris tack vare mycket vattenkraft. <strong>SE3 (Stockholm)</strong> och särskilt <strong>SE4 (Malmö)</strong> har högre priser, framför allt vintertid när överföringskapaciteten söderut inte räcker. I augusti 2026 var SCB:s snittpris för nya rörliga avtal för en villa med elvärme 52,3 öre/kWh i SE1 och 95,1 öre/kWh i SE4.</p>
             <p>Bor du i Norrbottens, Västerbottens eller Jämtlands län (samt vissa kommuner i angränsande län) får du dessutom ett <strong>avdrag på energiskatten med 9,6 öre/kWh</strong>.</p>
 
-            <h2>Rörligt, fast eller timpris?</h2>
+            <h2>Rörligt, fast eller tim-/kvartspris?</h2>
             <ul>
-                <li><strong>Rörligt pris (månadsmedel):</strong> Följer spotprisets månadsgenomsnitt. Historiskt billigast över tid, men räkningen svänger.</li>
-                <li><strong>Timpris:</strong> Du betalar spotpriset timme för timme. Lönsamt om du kan styra elbil, värmepump och tvätt till natten — annars samma som rörligt.</li>
+                <li><strong>Rörligt pris (månadsmedel):</strong> Följer spotprisets månadsgenomsnitt. Har ofta varit billigast över tid, men räkningen svänger.</li>
+                <li><strong>Tim- eller kvartspris:</strong> Sedan 1 oktober 2025 sätts spotpriset per kvart (15 minuter), och du betalar priset för den tid du använder elen. Kan löna sig om du kan styra elbil, värmepump och tvätt till billiga tider — annars blir det ungefär som rörligt.</li>
                 <li><strong>Fast pris:</strong> Samma pris i 1–3 år. Trygghet, men du betalar en riskpremie till elbolaget. Bind inte när priserna är höga.</li>
             </ul>
 
-            <h2>Effekttariffer – nätavgiften ändras till 2027</h2>
-            <p>Senast <strong>1 januari 2027</strong> ska alla elnätsbolag ha infört effekttariffer. Då betalar du inte bara per kWh utan också för hur mycket el du använder <em>samtidigt</em> — din högsta timförbrukning under månaden. Att ladda elbilen samtidigt som värmepumpen och ugnen går för fullt blir dyrt. Flera nätbolag har redan infört modellen, så kolla din faktura.</p>
+            <h2>Effekttariffer – kravet till 2027 är slopat</h2>
+            <p>Med en effekttariff (effektavgift) betalar du inte bara per kWh utan också för hur mycket el du använder <em>samtidigt</em>, till exempel din högsta timförbrukning under månaden. Energimarknadsinspektionen (Ei) hade krävt att alla elnätsbolag skulle ha infört effektavgifter senast 1 januari 2027. Det kravet är slopat: den 13 mars 2026 gav regeringen Ei i uppdrag att upphäva föreskrifterna senast 30 juni 2026 och ta fram förslag på en ny utformning. Under tiden väljer nätbolagen själva om de vill ha effektavgift. Flera har redan infört det, så kolla din faktura – har du effektavgift blir det dyrt att ladda elbilen samtidigt som värmepumpen och ugnen går för fullt.</p>
 
             <h2>6 sätt att sänka elkostnaden</h2>
             <ul>
-                <li><strong>Byt elavtal</strong> — jämför påslag och fasta avgifter, inte bara "elpriset". Skillnaden är ofta 500–1 500 kr/år för en villa.</li>
+                <li><strong>Byt elavtal</strong> — jämför påslag och fasta avgifter, inte bara "elpriset". Har du aldrig valt elavtal har du troligen ett anvisat avtal. För en villa med elvärme (20 000 kWh) i SE3 var ett anvisat avtal i snitt ca 4 200 kr dyrare per år än ett nytt rörligt avtal september 2025–augusti 2026, enligt SCB:s statistik.</li>
                 <li><strong>Sänk inomhustemperaturen 1 grad</strong> — sparar cirka 5 % av uppvärmningskostnaden.</li>
-                <li><strong>Flytta förbrukning till natten</strong> med timpris — elbil, tvätt, disk, varmvattenberedare.</li>
-                <li><strong>Värmepump i stället för direktverkande el</strong> — halverar ofta uppvärmningens elbehov. Räkna på återbetalningstiden med vår <a href="/kalkylatorer/solcellskalkylator">solcellskalkylator</a> om du också funderar på solceller.</li>
+                <li><strong>Flytta förbrukning till billiga tider</strong> med tim- eller kvartspris — elbil, tvätt, disk, varmvattenberedare.</li>
+                <li><strong>Värmepump i stället för direktverkande el</strong> — kan minska uppvärmningens elbehov kraftigt. Räkna på återbetalningstiden med vår <a href="/kalkylatorer/solcellskalkylator">solcellskalkylator</a> om du också funderar på solceller.</li>
                 <li><strong>Kolla den fasta nätavgiften</strong> — säkringsstorleken (16 A, 20 A, 25 A) styr avgiften. Många villor har större säkring än de behöver.</li>
                 <li><strong>Utnyttja skattereduktionen för grön teknik</strong> — 15 % på solceller och 50 % på batterilager och laddbox (arbete och material), max 50 000 kr per person och år. Dras direkt på fakturan.</li>
             </ul>
@@ -395,7 +400,7 @@
 
         <div class="cta-card">
             <h3>Räkna ut din elkostnad</h3>
-            <p>Välj elområde, avtalstyp och förbrukning — se månadskostnad inklusive elnät, energiskatt och moms.</p>
+            <p>Välj elområde, avtalstyp och förbrukning — se månadskostnad inklusive elnät, energiskatt och moms, med SCB:s senaste snittpriser.</p>
             <a href="/kalkylatorer/elkostnadskalkylator" class="cta-btn">Öppna elkostnadskalkylatorn →</a>
         </div>
 
@@ -412,14 +417,14 @@
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Hur räknar man ut elkostnaden per månad?</button>
                 <div class="faq-answer">
-                    <p>Multiplicera din förbrukning i kWh med elpriset (inklusive påslag), lägg till elnätets fasta och rörliga avgift samt energiskatten 36 öre/kWh, och lägg sedan på 25 % moms på hela summan. En villa som förbrukar 1 500 kWh en vintermånad landar ofta på 3 000–3 500 kr.</p>
+                    <p>Multiplicera din förbrukning i kWh med elpriset (inklusive elhandlarens påslag och fasta avgifter), lägg till elnätets fasta och rörliga avgift samt energiskatten 36 öre/kWh, och lägg sedan på 25 % moms på hela summan. Med SCB:s snittpris för nya rörliga avtal för villa med elvärme i SE3 i januari 2026 (122,5 öre/kWh) och en nätavgift på 350 kr + 30 öre/kWh kostade 1 500 kWh ca 3 970 kr, alltså 2,65 kr/kWh. Aktuella snittpriser för ditt elområde finns i <a href="/kalkylatorer/elkostnadskalkylator">elkostnadskalkylatorn</a>.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Vad är en normal elförbrukning?</button>
                 <div class="faq-answer">
-                    <p>En lägenhet förbrukar normalt 2 000–3 000 kWh per år, en villa utan elvärme 5 000–6 000 kWh, en villa med värmepump 10 000–15 000 kWh och en villa med direktverkande el 20 000–25 000 kWh per år.</p>
+                    <p>En lägenhet utan elvärme använder ofta 2 000–3 500 kWh per år och en villa utan elvärme 4 000–7 000 kWh. En villa med värmepump ligger ofta på 8 000–15 000 kWh och en villa med direktverkande el på 18 000–28 000 kWh. Din exakta förbrukning står på elfakturan eller hos ditt elnätsföretag.</p>
                 </div>
             </div>
 
@@ -431,68 +436,45 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Är timpris eller rörligt pris billigast?</button>
+                <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Är tim- eller kvartspris billigare än rörligt pris?</button>
                 <div class="faq-answer">
-                    <p>Timpris blir billigare än rörligt månadspris bara om du aktivt flyttar förbrukning till timmar med lågt pris, till exempel elbilsladdning och värmepump på natten. Kan du inte styra förbrukningen är rörligt månadspris det enklare valet.</p>
+                    <p>Sedan 1 oktober 2025 sätts elbörsens pris per kvart (15 minuter). Ett tim- eller kvartsprisavtal blir främst billigare än rörligt månadspris om du flyttar förbrukning till tider med lågt pris, till exempel elbilsladdning och värmepump på natten. Kan du inte styra förbrukningen är rörligt månadspris det enklare valet.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Vad är effekttariff?</button>
                 <div class="faq-answer">
-                    <p>Effekttariff innebär att elnätsavgiften delvis baseras på din högsta timförbrukning under månaden i stället för bara antalet kWh. Senast 1 januari 2027 ska alla nätbolag tillämpa effekttariffer. Sprid ut stora förbrukare över dygnet för att hålla nere avgiften.</p>
+                    <p>Effekttariff (effektavgift) innebär att en del av elnätsavgiften baseras på hur mycket el du använder samtidigt, till exempel din högsta timförbrukning under månaden, i stället för bara antalet kWh. Kravet på att alla nätbolag skulle ha effektavgifter senast 1 januari 2027 är slopat: i mars 2026 gav regeringen Energimarknadsinspektionen i uppdrag att upphäva föreskrifterna senast 30 juni 2026. Nätbolagen väljer nu själva om de vill ha effektavgift, så kolla din nätfaktura. Har du effektavgift lönar det sig att sprida ut stora förbrukare över dygnet.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Får man elstöd 2026?</button>
                 <div class="faq-answer">
-                    <p>Nej. De elstöd som betalades ut 2023 för höga elpriser vintern 2022–2023 var tillfälliga. 2026 finns inget statligt elstöd till hushåll.</p>
+                    <p>Ja, för förbrukningen i januari och februari 2026. Regeringen införde ett tillfälligt elstöd till hushåll: 14 öre/kWh i elområde 1 och 2, 26 öre/kWh i elområde 3 och 29 öre/kWh i elområde 4, för högst 10 000 kWh per bostad. Stödet gick till hushåll som hade ett elnätsavtal den 28 februari 2026. Man behövde inte ansöka, och Försäkringskassan började betala ut stödet i juni 2026.</p>
                 </div>
             </div>
 
         </section>
     </main>
 
-        <footer class="site-footer-rich">
-        <div class="container footer-cols">
-            <div class="footer-col">
-                <h3>🧮 Populära kalkylatorer</h3>
-                <ul>
-                    <li><a href="/kalkylatorer/loneraknare">Löneräknare 2026</a></li>
-                    <li><a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a></li>
-                    <li><a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a></li>
-                    <li><a href="/kalkylatorer/ranta-pa-ranta">Ränta på ränta</a></li>
-                    <li><a href="/kalkylatorer/isk-skatteberaknare">ISK-skatteberäknare</a></li>
-                    <li><a href="/kalkylatorer/marginalskattekalkylator">Marginalskattekalkylator</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>📖 Populära guider</h3>
-                <ul>
-                    <li><a href="/artiklar/rakna-ut-nettolon-2026">Räkna ut nettolön 2026</a></li>
-                    <li><a href="/artiklar/hur-mycket-far-jag-lana-2026">Hur mycket får jag låna?</a></li>
-                    <li><a href="/artiklar/vad-ar-ranta-pa-ranta">Vad är ränta på ränta?</a></li>
-                    <li><a href="/artiklar/manadssparande-rakna-ut">Månadssparande — räkna ut</a></li>
-                    <li><a href="/artiklar/vad-ar-marginalskatt">Vad är marginalskatt?</a></li>
-                    <li><a href="/artiklar/csn-2026-belopp-och-regler">CSN 2026 — belopp & regler</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Om sajten</h3>
-                <ul>
-                    <li><a href="/">Alla 44 kalkylatorer</a></li>
-                    <li><a href="/artiklar/">Alla 28 guider</a></li>
-                    <li><a href="/om-oss">Om oss</a></li>
-                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GratisKalkyl.se — <a href="/">Gratis kalkylatorer online</a></p>
-            <p class="disclaimer">Informationen är ungefärlig och kan innehålla fel. Vi ansvarar inte för eventuella felaktigheter. Kontrollera alltid mot Skatteverket vid osäkerhet.</p>
-        </div>
-    </footer>
+        <div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-wrap gk-ftr-in">
+<div style="display:flex;flex-direction:column;gap:10px">
+<a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
+<p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+</div>
+<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<a href="/#kalkylatorer">Alla kalkylatorer</a>
+<a href="/artiklar/">Guider</a>
+<a href="/om-oss">Om oss</a>
+<a href="/integritetspolicy">Integritet</a>
+</div>
+</div>
+</div>
+
 
     <script>
         function toggleFaq(btn) {
@@ -553,28 +535,7 @@
     </div>
 
 
-    <script>
-    /* Theme toggle */
-    (function(){
-      var MOON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      var SUN='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-      var btn=document.getElementById('gk-theme-btn');
-      if(!btn)return;
-      function setIcon(){
-        var dark=document.documentElement.getAttribute('data-theme')==='dark';
-        btn.innerHTML=dark?SUN:MOON;
-        btn.setAttribute('aria-label',dark?'Aktivera ljust läge':'Aktivera mörkt läge');
-      }
-      setIcon();
-      btn.addEventListener('click',function(){
-        var nowDark=document.documentElement.getAttribute('data-theme')==='dark';
-        var next=!nowDark;
-        document.documentElement.setAttribute('data-theme',next?'dark':'light');
-        try{localStorage.setItem('gk-theme',next?'dark':'light');}catch(e){}
-        setIcon();
-      });
-    })();
-    </script>
+    
 
 </body>
 </html>
