@@ -403,7 +403,7 @@
                 "name": "Vad ingår i min elkostnad?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Din totala elkostnad består av tre delar: elhandelskostnad (själva elen du köper), elnätsavgift (transport av el till ditt hem, fast och rörlig del), samt skatter (energiskatt på 42,8 öre/kWh 2026 plus 25% moms på allting). Elhandeln står för ungefär 30–40% av totalkostnaden."
+                    "text": "Din totala elkostnad består av tre delar: elhandelskostnad (själva elen du köper), elnätsavgift (transport av el till ditt hem, fast och rörlig del), samt skatter (energiskatt på 36,0 öre/kWh 2026 plus 25% moms på allting). Elhandeln står för ungefär 30–40% av totalkostnaden."
                 }
             },
             {
@@ -427,7 +427,7 @@
                 "name": "Vad är energiskatt på el 2026?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Energiskatten på el i Sverige 2026 är 42,8 öre per kWh. Utöver energiskatten tillkommer 25% moms på hela elkostnaden inklusive skatten. Vissa norrlandskommuner har reducerad energiskatt."
+                    "text": "Energiskatten på el i Sverige 2026 är 36,0 öre per kWh exklusive moms (45,0 öre inklusive moms) — sänkt från 43,9 öre 2025. Utöver energiskatten tillkommer 25% moms på hela elkostnaden inklusive skatten. Hushåll i vissa kommuner i norra Sverige (bland annat hela Norrbottens, Västerbottens och Jämtlands län) får ett avdrag på 9,6 öre/kWh."
                 }
             }
         ]
@@ -576,12 +576,12 @@
             <ul>
                 <li><strong>Elhandel</strong> – priset för själva elen du förbrukar, från din elhandlare. Kan vara rörligt (spotpris ± påslag), fast pris eller timprisavtal.</li>
                 <li><strong>Elnätsavgift</strong> – fast årsavgift + rörlig avgift per kWh. Betalas till ditt lokala elnätsbolag och kan inte väljas fritt.</li>
-                <li><strong>Energiskatt + moms</strong> – energiskatten är <strong>42,8 öre/kWh 2026</strong>. Utöver det betalar du 25 % moms på allt inklusive energiskatten.</li>
+                <li><strong>Energiskatt + moms</strong> – energiskatten är <strong>36,0 öre/kWh 2026</strong> exkl. moms (45,0 öre inkl. moms), sänkt från 43,9 öre 2025. Utöver det betalar du 25 % moms på allt inklusive energiskatten.</li>
             </ul>
             <div class="formula-box">
 Elkostnad = (Spotpris + Påslag) × kWh
 Elnätskostnad = Fast avgift + (Rörlig avgift × kWh)
-Energiskatt = 42,8 öre × kWh
+Energiskatt = 36,0 öre × kWh
 Moms = 25% × (Elkostnad + Elnät + Energiskatt)
 Totalt = Elkostnad + Elnät + Energiskatt + Moms
             </div>
@@ -631,7 +631,7 @@ Totalt = Elkostnad + Elnät + Energiskatt + Moms
             </details>
             <details class="faq-item">
                 <summary>Vad ingår i min elkostnad?</summary>
-                <p>Din totala elkostnad består av tre delar: elhandelskostnad (elen du köper), elnätsavgift (transport av el, fast och rörlig del), samt skatter (energiskatt på 42,8 öre/kWh plus 25% moms). Elhandeln står för ungefär 30–40% av totalkostnaden.</p>
+                <p>Din totala elkostnad består av tre delar: elhandelskostnad (elen du köper), elnätsavgift (transport av el, fast och rörlig del), samt skatter (energiskatt på 36,0 öre/kWh plus 25% moms). Elhandeln står för ungefär 30–40% av totalkostnaden.</p>
             </details>
             <details class="faq-item">
                 <summary>Hur kan jag sänka min elkostnad?</summary>
@@ -643,7 +643,7 @@ Totalt = Elkostnad + Elnät + Energiskatt + Moms
             </details>
             <details class="faq-item">
                 <summary>Vad är energiskatt på el 2026?</summary>
-                <p>Energiskatten på el i Sverige 2026 är 42,8 öre per kWh. Utöver energiskatten tillkommer 25% moms på hela elkostnaden inklusive skatten. Vissa norrlandskommuner har reducerad energiskatt.</p>
+                <p>Energiskatten på el i Sverige 2026 är 36,0 öre per kWh exklusive moms (45,0 öre inklusive moms) — sänkt från 43,9 öre 2025. Utöver energiskatten tillkommer 25% moms på hela elkostnaden inklusive skatten. Hushåll i vissa kommuner i norra Sverige (bland annat hela Norrbottens, Västerbottens och Jämtlands län) får ett avdrag på 9,6 öre/kWh.</p>
             </details>
         </div>
     </main>
@@ -715,7 +715,7 @@ Totalt = Elkostnad + Elnät + Energiskatt + Moms
             0.55, 0.60, 0.80, 1.00, 1.15, 1.30
         ];
 
-        const ENERGISKATT = 42.8; // öre/kWh 2026
+        const ENERGISKATT = 36.0; // öre/kWh 2026 exkl. moms (sänkt från 43,9 öre 2025)
         const MOMS = 0.25;
 
         // Sync sliders
@@ -987,6 +987,15 @@ Totalt = Elkostnad + Elnät + Energiskatt + Moms
         // Initial calculation
         calculate();
     </script>
+
+    <!-- Relaterad guide -->
+    <div class="container" style="padding-bottom:24px;">
+        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">📖 Fördjupa dig</h3>
+        <a href="/artiklar/elkostnad-2026-sa-raknar-du" style="display:block;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
+            <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;color:var(--text);">Elkostnad 2026 – så räknar du ut vad elen kostar per månad</div>
+            <div style="font-size:0.85rem;color:var(--text-light);">Energiskatt 36 öre/kWh, elnät, moms, normal förbrukning och 6 sätt att sänka räkningen.</div>
+        </a>
+    </div>
 
     <!-- Cross-linking -->
     <div class="container" style="padding-bottom:48px;">

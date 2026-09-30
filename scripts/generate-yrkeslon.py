@@ -86,16 +86,44 @@ def format_kr(amount):
     return f"{amount:,}".replace(",", " ") + " kr"
 
 
-def calc_netto(brutto_year):
-    """Rough net income approximation (Skatteverket schablon ~30 % municipal)."""
-    if brutto_year < 24000 * 12:
-        skatt_pct = 0.20
-    elif brutto_year < 49500 * 12:
-        skatt_pct = 0.32
-    else:
-        # Statlig skatt på lönedel över 49 500/mån (skiktgräns 2026 approx 614 000/år).
-        skatt_pct = 0.42
-    return int(brutto_year * (1 - skatt_pct))
+# Årskonstanter 2026 (Skatteverket "Belopp och procent 2026", regeringen.se)
+PBB = 59200
+SKIKTGRANS = 643000
+PS_AVGIFT_MAX = 1184
+BEGRAVNING = 0.00292
+KOMMUNALSKATT_MEDEL = 0.333  # SCB, medel av kommunernas totala skattesats 2026
+
+
+def grundavdrag(fi):
+    if fi <= 0.99 * PBB: ga = 0.423 * PBB
+    elif fi <= 2.72 * PBB: ga = 0.225 * PBB + 0.2 * fi
+    elif fi <= 3.11 * PBB: ga = 0.770 * PBB
+    elif fi <= 7.88 * PBB: ga = 1.081 * PBB - 0.1 * fi
+    else: ga = 0.293 * PBB
+    ga = -(-ga // 100) * 100
+    return min(ga, fi)
+
+
+def jobbskatteavdrag(ai, ga, s):
+    """IL 67 kap 7 § (under 66 år), förstärkt fr.o.m. 2026."""
+    if ai <= 0.91 * PBB: u = ai - ga
+    elif ai <= 3.24 * PBB: u = 0.91 * PBB + 0.3874 * (ai - 0.91 * PBB) - ga
+    elif ai <= 8.08 * PBB: u = 1.813 * PBB + 0.251 * (ai - 3.24 * PBB) - ga
+    else: u = 3.027 * PBB - ga
+    return max(0.0, u * s)
+
+
+def calc_netto(brutto_year, s=KOMMUNALSKATT_MEDEL):
+    """Nettolön per år med 2026 års regler (grundavdrag, jobbskatteavdrag,
+    kommunalskatt, statlig skatt, public service- och begravningsavgift)."""
+    ga = grundavdrag(brutto_year)
+    bi = max(0, (brutto_year - ga) // 100 * 100)
+    kommunal = bi * s
+    statlig = max(0, bi - SKIKTGRANS) * 0.20
+    jsa = min(jobbskatteavdrag(brutto_year, ga, s), kommunal + statlig)
+    avgifter = min(bi * 0.01, PS_AVGIFT_MAX) + bi * BEGRAVNING
+    skatt = max(0, kommunal + statlig - jsa + avgifter)
+    return int(brutto_year - skatt)
 
 
 TEMPLATE = '''<!DOCTYPE html>
@@ -131,7 +159,7 @@ TEMPLATE = '''<!DOCTYPE html>
     "@type": "FAQPage",
     "mainEntity": [
       {{"@type":"Question","name":"Vad tjänar en {namn_lower_q} 2026?","acceptedAnswer":{{"@type":"Answer","text":"En {namn_lower_q} tjänar i snitt {median_str}/månad 2026 enligt SCB:s lönestrukturstatistik. Lönespannet är {low_str}–{high_str}/månad beroende på erfarenhet, sektor och region."}}}},
-      {{"@type":"Question","name":"Vad blir nettolönen för en {namn_lower_q}?","acceptedAnswer":{{"@type":"Answer","text":"Med en snittlön på {median_str}/mån brutto blir nettolönen ca {netto_str}/mån efter kommunalskatt (cirka 32 %). Räkna ut din exakta nettolön på loneraknare.se baserat på din kommun."}}}},
+      {{"@type":"Question","name":"Vad blir nettolönen för en {namn_lower_q}?","acceptedAnswer":{{"@type":"Answer","text":"Med en snittlön på {median_str}/mån brutto blir nettolönen ca {netto_str}/mån efter skatt med 2026 års regler (kommunalskatt 33,3 %, Sveriges medel). Räkna ut din exakta nettolön i löneräknaren på GratisKalkyl.se baserat på din kommun."}}}},
       {{"@type":"Question","name":"Hur skiljer sig lönen mellan offentlig och privat sektor?","acceptedAnswer":{{"@type":"Answer","text":"Inom {sektor} kan löneskillnaden mellan offentlig och privat sektor variera 5–20 %. Offentlig sektor erbjuder normalt mer förmåner (pension, försäkringar, semester) medan privat sektor oftare har bonus- och resultatbaserad ersättning."}}}},
       {{"@type":"Question","name":"När höjs lönen?","acceptedAnswer":{{"@type":"Answer","text":"Lönerevision sker normalt en gång per år, oftast under våren efter att aktuellt löneavtal förhandlats fram. Centrala avtal sätter ett 'minimi-mervärde' (i procent) som hela sektorn ska över, men individuell lönesättning används i många avtal idag."}}}}
     ]
@@ -228,7 +256,7 @@ TEMPLATE = '''<!DOCTYPE html>
     </table>
 
     <div class="info-box">
-      <strong>Tips:</strong> Nettolönen ovan är beräknad med kommunalskatt ~32 % (Sveriges medel 2026). I kommuner med högre skatt (t.ex. Dorotea, Munkfors) blir nettot ca 600–900 kr lägre per månad. I lågskattekommuner (t.ex. Solna, Vellinge) blir nettot motsvarande högre.
+      <strong>Tips:</strong> Nettolönen ovan är beräknad med 2026 års regler (grundavdrag, förstärkt jobbskatteavdrag, public service- och begravningsavgift) och kommunalskatt 33,3 % (Sveriges medel 2026). I kommuner med högre skatt (t.ex. Dorotea, Vilhelmina) blir nettot ca 400–600 kr lägre per månad. I lågskattekommuner (t.ex. Österåker, Solna) blir nettot motsvarande högre.
     </div>
 
     <h2>Hur skiljer sig lönen i olika delar av Sverige?</h2>
@@ -238,7 +266,7 @@ TEMPLATE = '''<!DOCTYPE html>
     <p>Använd <a href="/kalkylatorer/loneraknare">löneräknaren på GratisKalkyl.se</a> — den tar hänsyn till:</p>
     <ul>
       <li>Din kommunalskatt (varierar mellan ca 29 och 35 %)</li>
-      <li>Statlig skatt om du tjänar över 49 500 kr/månad (skiktgränsen 2026)</li>
+      <li>Statlig skatt (20 %) om du tjänar över ca 55 000 kr/månad (brytpunkten 2026: 660 400 kr/år)</li>
       <li>Jobbskatteavdrag (gör att du betalar mindre skatt på arbetsinkomst)</li>
       <li>Grundavdrag och eventuella avgifter (begravningsavgift, kyrkoavgift)</li>
     </ul>
@@ -251,7 +279,7 @@ TEMPLATE = '''<!DOCTYPE html>
     <p>En {namn_lower_q} tjänar i snitt {median_str}/månad 2026 enligt SCB:s lönestrukturstatistik. Lönespannet är {low_str}–{high_str}/månad beroende på erfarenhet, sektor och region.</p>
 
     <h3>Vad blir nettolönen?</h3>
-    <p>Med en snittlön på {median_str}/mån brutto blir nettolönen ca {netto_str}/mån efter kommunalskatt (cirka 32 %). Räkna ut din exakta nettolön i <a href="/kalkylatorer/loneraknare">löneräknaren</a> baserat på din kommun.</p>
+    <p>Med en snittlön på {median_str}/mån brutto blir nettolönen ca {netto_str}/mån efter skatt med 2026 års regler (kommunalskatt 33,3 %, Sveriges medel). Räkna ut din exakta nettolön i <a href="/kalkylatorer/loneraknare">löneräknaren</a> baserat på din kommun.</p>
 
     <h3>När höjs lönen?</h3>
     <p>Lönerevision sker normalt en gång per år, oftast under våren efter att aktuellt löneavtal förhandlats fram. Centrala avtal sätter ett "minimi-mervärde" (i procent) som hela sektorn ska över, men individuell lönesättning används i många avtal idag.</p>
@@ -322,7 +350,7 @@ def main():
         sitemap_fragment.append(
             f'  <url>\n'
             f'    <loc>https://gratiskalkyl.se/kalkylatorer/yrkeslon/{y["slug"]}</loc>\n'
-            f'    <lastmod>2026-05-26</lastmod>\n'
+            f'    <lastmod>2026-09-30</lastmod>\n'
             f'    <changefreq>monthly</changefreq>\n'
             f'    <priority>0.7</priority>\n'
             f'  </url>'

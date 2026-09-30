@@ -51,7 +51,7 @@
           "name": "Hur hög är marginalskatten 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Marginalskatten varierar beroende på din inkomst och kommun. Under skiktgränsen (ca 625 800 kr/år, 52 150 kr/mån för 2026) betalar du bara kommunalskatt — i snitt ca 32,41 %. Över skiktgränsen tillkommer 20 % statlig inkomstskatt, vilket ger en marginalskatt på cirka 52 %. Jobbskatteavdraget gör att den effektiva marginalskatten kan vara lägre, särskilt vid lägre inkomster."
+            "text": "Marginalskatten varierar beroende på din inkomst och kommun. Under brytpunkten (660 400 kr/år, ca 55 000 kr/mån för 2026) betalar du bara kommunalskatt — i snitt ca 33,3 %. Över brytpunkten tillkommer 20 % statlig inkomstskatt, vilket ger en marginalskatt på cirka 53 %. Jobbskatteavdraget gör att den effektiva marginalskatten är lägre vid inkomster upp till ca 40 000 kr/mån."
           }
         },
         {
@@ -75,7 +75,7 @@
           "name": "När slår statlig inkomstskatt in 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Statlig inkomstskatt på 20 % tillkommer på den del av den beskattningsbara förvärvsinkomsten som överstiger skiktgränsen. För 2026 är skiktgränsen 625 800 kr per år, vilket motsvarar en månadslön på cirka 52 150 kr brutto. Skatten beräknas på inkomsten efter grundavdrag."
+            "text": "Statlig inkomstskatt på 20 % tillkommer på den del av den beskattningsbara förvärvsinkomsten som överstiger skiktgränsen. För 2026 är skiktgränsen 643 000 kr per år. Eftersom skatten beräknas på inkomsten efter grundavdrag motsvarar det en bruttolön på 660 400 kr per år (brytpunkten), cirka 55 000 kr per månad."
           }
         },
         {
@@ -91,7 +91,7 @@
           "name": "Hur beräknas grundavdraget?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Grundavdraget minskar din beskattningsbara inkomst och varierar med inkomstnivån. Vid låga inkomster (under ca 46 000 kr/år) är grundavdraget som högst — upp till 24 238 kr. Det minskar sedan stegvis och ligger på en fast nivå (42 492 kr) vid inkomster mellan ca 158 000–452 000 kr/år. Vid högre inkomster trappas det ned till ett minimum på 17 200 kr. Grundavdraget beräknas automatiskt vid deklarationen."
+            "text": "Grundavdraget minskar din beskattningsbara inkomst och varierar med inkomstnivån. För 2026 är grundavdraget lägst 25 100 kr och högst 45 600 kr. Det är som högst vid inkomster runt 161 000–184 000 kr/år och trappas sedan ned till 17 400 kr vid inkomster över ca 466 000 kr/år. Grundavdraget beräknas automatiskt vid deklarationen."
           }
         }
       ]
@@ -341,18 +341,307 @@
 
             <div class="two-col">
                 <div class="field">
-                    <label>Kommunalskattesats (%)</label>
-                    <input type="number" id="kommun-input" value="32.41" min="28" max="36" step="0.01">
-                    <div class="hint">Rikssnitt 32,41 %. Kolla din på skatteverket.se</div>
+                    <label>Kommun</label>
+                    <select id="kommun-select" onchange="document.getElementById('kommun-input').value=this.value">
+                        <option value="33.3">Rikssnitt (33,3 %)</option>
+                        <option value="32.8">Ale (32,8 %)</option>
+                        <option value="32.84">Alingsås (32,84 %)</option>
+                        <option value="33.42">Alvesta (33,42 %)</option>
+                        <option value="33.85">Aneby (33,85 %)</option>
+                        <option value="33.29">Arboga (33,29 %)</option>
+                        <option value="34.84">Arjeplog (34,84 %)</option>
+                        <option value="34.14">Arvidsjaur (34,14 %)</option>
+                        <option value="34.03">Arvika (34,03 %)</option>
+                        <option value="34.15">Askersund (34,15 %)</option>
+                        <option value="33.95">Avesta (33,95 %)</option>
+                        <option value="34.4">Bengtsfors (34,4 %)</option>
+                        <option value="34.22">Berg (34,22 %)</option>
+                        <option value="35.0">Bjurholm (35,0 %)</option>
+                        <option value="32.17">Bjuv (32,17 %)</option>
+                        <option value="33.94">Boden (33,94 %)</option>
+                        <option value="33.07">Bollebygd (33,07 %)</option>
+                        <option value="33.37">Bollnäs (33,37 %)</option>
+                        <option value="33.44">Borgholm (33,44 %)</option>
+                        <option value="34.4">Borlänge (34,4 %)</option>
+                        <option value="32.79">Borås (32,79 %)</option>
+                        <option value="32.23">Botkyrka (32,23 %)</option>
+                        <option value="33.37">Boxholm (33,37 %)</option>
+                        <option value="33.74">Bromölla (33,74 %)</option>
+                        <option value="35.09">Bräcke (35,09 %)</option>
+                        <option value="31.27">Burlöv (31,27 %)</option>
+                        <option value="31.41">Båstad (31,41 %)</option>
+                        <option value="34.69">Dals-Ed (34,69 %)</option>
+                        <option value="30.58">Danderyd (30,58 %)</option>
+                        <option value="35.3">Degerfors (35,3 %)</option>
+                        <option value="35.65">Dorotea (35,65 %)</option>
+                        <option value="34.55">Eda (34,55 %)</option>
+                        <option value="31.45">Ekerö (31,45 %)</option>
+                        <option value="34.02">Eksjö (34,02 %)</option>
+                        <option value="33.82">Emmaboda (33,82 %)</option>
+                        <option value="33.05">Enköping (33,05 %)</option>
+                        <option value="32.85">Eskilstuna (32,85 %)</option>
+                        <option value="31.72">Eslöv (31,72 %)</option>
+                        <option value="33.05">Essunga (33,05 %)</option>
+                        <option value="32.99">Fagersta (32,99 %)</option>
+                        <option value="32.5">Falkenberg (32,5 %)</option>
+                        <option value="33.43">Falköping (33,43 %)</option>
+                        <option value="34.05">Falun (34,05 %)</option>
+                        <option value="34.55">Filipstad (34,55 %)</option>
+                        <option value="33.7">Finspång (33,7 %)</option>
+                        <option value="33.1">Flen (33,1 %)</option>
+                        <option value="34.63">Forshaga (34,63 %)</option>
+                        <option value="34.39">Färgelanda (34,39 %)</option>
+                        <option value="34.27">Gagnef (34,27 %)</option>
+                        <option value="33.75">Gislaved (33,75 %)</option>
+                        <option value="32.95">Gnesta (32,95 %)</option>
+                        <option value="34.0">Gnosjö (34,0 %)</option>
+                        <option value="33.6">Gotland (33,6 %)</option>
+                        <option value="34.78">Grums (34,78 %)</option>
+                        <option value="33.47">Grästorp (33,47 %)</option>
+                        <option value="33.97">Gullspång (33,97 %)</option>
+                        <option value="33.89">Gällivare (33,89 %)</option>
+                        <option value="33.77">Gävle (33,77 %)</option>
+                        <option value="32.6">Göteborg (32,6 %)</option>
+                        <option value="33.6">Götene (33,6 %)</option>
+                        <option value="33.93">Habo (33,93 %)</option>
+                        <option value="34.3">Hagfors (34,3 %)</option>
+                        <option value="33.85">Hallsberg (33,85 %)</option>
+                        <option value="32.69">Hallstahammar (32,69 %)</option>
+                        <option value="32.38">Halmstad (32,38 %)</option>
+                        <option value="35.05">Hammarö (35,05 %)</option>
+                        <option value="31.28">Haninge (31,28 %)</option>
+                        <option value="33.84">Haparanda (33,84 %)</option>
+                        <option value="34.21">Heby (34,21 %)</option>
+                        <option value="34.15">Hedemora (34,15 %)</option>
+                        <option value="31.39">Helsingborg (31,39 %)</option>
+                        <option value="33.62">Herrljunga (33,62 %)</option>
+                        <option value="33.48">Hjo (33,48 %)</option>
+                        <option value="34.37">Hofors (34,37 %)</option>
+                        <option value="31.71">Huddinge (31,71 %)</option>
+                        <option value="33.12">Hudiksvall (33,12 %)</option>
+                        <option value="33.77">Hultsfred (33,77 %)</option>
+                        <option value="33.85">Hylte (33,85 %)</option>
+                        <option value="33.3">Håbo (33,3 %)</option>
+                        <option value="34.35">Hällefors (34,35 %)</option>
+                        <option value="34.17">Härjedalen (34,17 %)</option>
+                        <option value="34.63">Härnösand (34,63 %)</option>
+                        <option value="31.98">Härryda (31,98 %)</option>
+                        <option value="32.38">Hässleholm (32,38 %)</option>
+                        <option value="30.91">Höganäs (30,91 %)</option>
+                        <option value="34.07">Högsby (34,07 %)</option>
+                        <option value="32.26">Hörby (32,26 %)</option>
+                        <option value="32.63">Höör (32,63 %)</option>
+                        <option value="34.29">Jokkmokk (34,29 %)</option>
+                        <option value="31.52">Järfälla (31,52 %)</option>
+                        <option value="33.4">Jönköping (33,4 %)</option>
+                        <option value="33.89">Kalix (33,89 %)</option>
+                        <option value="33.67">Kalmar (33,67 %)</option>
+                        <option value="32.8">Karlsborg (32,8 %)</option>
+                        <option value="33.8">Karlshamn (33,8 %)</option>
+                        <option value="34.3">Karlskoga (34,3 %)</option>
+                        <option value="33.69">Karlskrona (33,69 %)</option>
+                        <option value="33.55">Karlstad (33,55 %)</option>
+                        <option value="32.95">Katrineholm (32,95 %)</option>
+                        <option value="34.63">Kil (34,63 %)</option>
+                        <option value="33.0">Kinda (33,0 %)</option>
+                        <option value="34.39">Kiruna (34,39 %)</option>
+                        <option value="31.93">Klippan (31,93 %)</option>
+                        <option value="32.62">Knivsta (32,62 %)</option>
+                        <option value="34.43">Kramfors (34,43 %)</option>
+                        <option value="32.64">Kristianstad (32,64 %)</option>
+                        <option value="34.25">Kristinehamn (34,25 %)</option>
+                        <option value="33.87">Krokom (33,87 %)</option>
+                        <option value="33.84">Kumla (33,84 %)</option>
+                        <option value="32.58">Kungsbacka (32,58 %)</option>
+                        <option value="32.91">Kungsör (32,91 %)</option>
+                        <option value="32.92">Kungälv (32,92 %)</option>
+                        <option value="29.59">Kävlinge (29,59 %)</option>
+                        <option value="33.04">Köping (33,04 %)</option>
+                        <option value="32.8">Laholm (32,8 %)</option>
+                        <option value="31.42">Landskrona (31,42 %)</option>
+                        <option value="35.0">Laxå (35,0 %)</option>
+                        <option value="33.73">Lekeberg (33,73 %)</option>
+                        <option value="33.8">Leksand (33,8 %)</option>
+                        <option value="32.03">Lerum (32,03 %)</option>
+                        <option value="33.81">Lessebo (33,81 %)</option>
+                        <option value="29.67">Lidingö (29,67 %)</option>
+                        <option value="32.74">Lidköping (32,74 %)</option>
+                        <option value="33.85">Lilla Edet (33,85 %)</option>
+                        <option value="34.6">Lindesberg (34,6 %)</option>
+                        <option value="31.75">Linköping (31,75 %)</option>
+                        <option value="33.07">Ljungby (33,07 %)</option>
+                        <option value="33.87">Ljusdal (33,87 %)</option>
+                        <option value="33.8">Ljusnarsberg (33,8 %)</option>
+                        <option value="30.72">Lomma (30,72 %)</option>
+                        <option value="34.05">Ludvika (34,05 %)</option>
+                        <option value="33.84">Luleå (33,84 %)</option>
+                        <option value="32.42">Lund (32,42 %)</option>
+                        <option value="34.9">Lycksele (34,9 %)</option>
+                        <option value="33.94">Lysekil (33,94 %)</option>
+                        <option value="32.42">Malmö (32,42 %)</option>
+                        <option value="34.45">Malung-Sälen (34,45 %)</option>
+                        <option value="35.2">Malå (35,2 %)</option>
+                        <option value="32.74">Mariestad (32,74 %)</option>
+                        <option value="32.99">Mark (32,99 %)</option>
+                        <option value="33.31">Markaryd (33,31 %)</option>
+                        <option value="34.08">Mellerud (34,08 %)</option>
+                        <option value="33.45">Mjölby (33,45 %)</option>
+                        <option value="34.32">Mora (34,32 %)</option>
+                        <option value="33.25">Motala (33,25 %)</option>
+                        <option value="34.1">Mullsjö (34,1 %)</option>
+                        <option value="34.86">Munkedal (34,86 %)</option>
+                        <option value="34.3">Munkfors (34,3 %)</option>
+                        <option value="31.99">Mölndal (31,99 %)</option>
+                        <option value="34.07">Mönsterås (34,07 %)</option>
+                        <option value="34.07">Mörbylånga (34,07 %)</option>
+                        <option value="30.11">Nacka (30,11 %)</option>
+                        <option value="34.55">Nora (34,55 %)</option>
+                        <option value="33.54">Norberg (33,54 %)</option>
+                        <option value="34.02">Nordanstig (34,02 %)</option>
+                        <option value="35.1">Nordmaling (35,1 %)</option>
+                        <option value="33.3">Norrköping (33,3 %)</option>
+                        <option value="32.05">Norrtälje (32,05 %)</option>
+                        <option value="35.2">Norsjö (35,2 %)</option>
+                        <option value="34.19">Nybro (34,19 %)</option>
+                        <option value="32.3">Nykvarn (32,3 %)</option>
+                        <option value="32.25">Nyköping (32,25 %)</option>
+                        <option value="32.18">Nynäshamn (32,18 %)</option>
+                        <option value="34.3">Nässjö (34,3 %)</option>
+                        <option value="34.27">Ockelbo (34,27 %)</option>
+                        <option value="33.75">Olofström (33,75 %)</option>
+                        <option value="34.3">Orsa (34,3 %)</option>
+                        <option value="33.69">Orust (33,69 %)</option>
+                        <option value="33.99">Osby (33,99 %)</option>
+                        <option value="34.21">Oskarshamn (34,21 %)</option>
+                        <option value="33.37">Ovanåker (33,37 %)</option>
+                        <option value="33.05">Oxelösund (33,05 %)</option>
+                        <option value="34.74">Pajala (34,74 %)</option>
+                        <option value="31.36">Partille (31,36 %)</option>
+                        <option value="31.99">Perstorp (31,99 %)</option>
+                        <option value="33.59">Piteå (33,59 %)</option>
+                        <option value="34.92">Ragunda (34,92 %)</option>
+                        <option value="35.0">Robertsfors (35,0 %)</option>
+                        <option value="33.68">Ronneby (33,68 %)</option>
+                        <option value="33.8">Rättvik (33,8 %)</option>
+                        <option value="33.19">Sala (33,19 %)</option>
+                        <option value="32.0">Salem (32,0 %)</option>
+                        <option value="33.12">Sandviken (33,12 %)</option>
+                        <option value="31.83">Sigtuna (31,83 %)</option>
+                        <option value="31.69">Simrishamn (31,69 %)</option>
+                        <option value="32.1">Sjöbo (32,1 %)</option>
+                        <option value="33.38">Skara (33,38 %)</option>
+                        <option value="34.45">Skellefteå (34,45 %)</option>
+                        <option value="33.34">Skinnskatteberg (33,34 %)</option>
+                        <option value="31.6">Skurup (31,6 %)</option>
+                        <option value="33.09">Skövde (33,09 %)</option>
+                        <option value="34.44">Smedjebacken (34,44 %)</option>
+                        <option value="34.68">Sollefteå (34,68 %)</option>
+                        <option value="30.45">Sollentuna (30,45 %)</option>
+                        <option value="29.7">Solna (29,7 %)</option>
+                        <option value="35.45">Sorsele (35,45 %)</option>
+                        <option value="33.47">Sotenäs (33,47 %)</option>
+                        <option value="30.12">Staffanstorp (30,12 %)</option>
+                        <option value="33.12">Stenungsund (33,12 %)</option>
+                        <option value="30.55" selected>Stockholm (30,55 %)</option>
+                        <option value="34.98">Storfors (34,98 %)</option>
+                        <option value="34.95">Storuman (34,95 %)</option>
+                        <option value="32.5">Strängnäs (32,5 %)</option>
+                        <option value="33.39">Strömstad (33,39 %)</option>
+                        <option value="34.92">Strömsund (34,92 %)</option>
+                        <option value="31.58">Sundbyberg (31,58 %)</option>
+                        <option value="33.88">Sundsvall (33,88 %)</option>
+                        <option value="33.75">Sunne (33,75 %)</option>
+                        <option value="33.19">Surahammar (33,19 %)</option>
+                        <option value="31.92">Svalöv (31,92 %)</option>
+                        <option value="31.42">Svedala (31,42 %)</option>
+                        <option value="33.53">Svenljunga (33,53 %)</option>
+                        <option value="33.8">Säffle (33,8 %)</option>
+                        <option value="34.3">Säter (34,3 %)</option>
+                        <option value="33.68">Sävsjö (33,68 %)</option>
+                        <option value="33.17">Söderhamn (33,17 %)</option>
+                        <option value="33.53">Söderköping (33,53 %)</option>
+                        <option value="32.38">Södertälje (32,38 %)</option>
+                        <option value="33.86">Sölvesborg (33,86 %)</option>
+                        <option value="33.04">Tanum (33,04 %)</option>
+                        <option value="33.19">Tibro (33,19 %)</option>
+                        <option value="33.55">Tidaholm (33,55 %)</option>
+                        <option value="33.0">Tierp (33,0 %)</option>
+                        <option value="34.38">Timrå (34,38 %)</option>
+                        <option value="34.0">Tingsryd (34,0 %)</option>
+                        <option value="33.19">Tjörn (33,19 %)</option>
+                        <option value="31.79">Tomelilla (31,79 %)</option>
+                        <option value="34.3">Torsby (34,3 %)</option>
+                        <option value="33.79">Torsås (33,79 %)</option>
+                        <option value="32.98">Tranemo (32,98 %)</option>
+                        <option value="33.77">Tranås (33,77 %)</option>
+                        <option value="31.58">Trelleborg (31,58 %)</option>
+                        <option value="33.84">Trollhättan (33,84 %)</option>
+                        <option value="32.03">Trosa (32,03 %)</option>
+                        <option value="31.83">Tyresö (31,83 %)</option>
+                        <option value="29.88">Täby (29,88 %)</option>
+                        <option value="33.2">Töreboda (33,2 %)</option>
+                        <option value="33.64">Uddevalla (33,64 %)</option>
+                        <option value="32.53">Ulricehamn (32,53 %)</option>
+                        <option value="34.65">Umeå (34,65 %)</option>
+                        <option value="31.75">Upplands Väsby (31,75 %)</option>
+                        <option value="31.73">Upplands-Bro (31,73 %)</option>
+                        <option value="32.85">Uppsala (32,85 %)</option>
+                        <option value="33.8">Uppvidinge (33,8 %)</option>
+                        <option value="34.35">Vadstena (34,35 %)</option>
+                        <option value="33.25">Vaggeryd (33,25 %)</option>
+                        <option value="34.03">Valdemarsvik (34,03 %)</option>
+                        <option value="31.23">Vallentuna (31,23 %)</option>
+                        <option value="34.28">Vansbro (34,28 %)</option>
+                        <option value="33.25">Vara (33,25 %)</option>
+                        <option value="31.73">Varberg (31,73 %)</option>
+                        <option value="31.63">Vaxholm (31,63 %)</option>
+                        <option value="29.68">Vellinge (29,68 %)</option>
+                        <option value="33.77">Vetlanda (33,77 %)</option>
+                        <option value="35.5">Vilhelmina (35,5 %)</option>
+                        <option value="34.22">Vimmerby (34,22 %)</option>
+                        <option value="35.2">Vindeln (35,2 %)</option>
+                        <option value="33.5">Vingåker (33,5 %)</option>
+                        <option value="33.09">Vårgårda (33,09 %)</option>
+                        <option value="33.69">Vänersborg (33,69 %)</option>
+                        <option value="35.2">Vännäs (35,2 %)</option>
+                        <option value="31.31">Värmdö (31,31 %)</option>
+                        <option value="33.28">Värnamo (33,28 %)</option>
+                        <option value="33.02">Västervik (33,02 %)</option>
+                        <option value="31.24">Västerås (31,24 %)</option>
+                        <option value="32.19">Växjö (32,19 %)</option>
+                        <option value="34.1">Ydre (34,1 %)</option>
+                        <option value="31.29">Ystad (31,29 %)</option>
+                        <option value="33.94">Åmål (33,94 %)</option>
+                        <option value="34.62">Ånge (34,62 %)</option>
+                        <option value="33.92">Åre (33,92 %)</option>
+                        <option value="34.25">Årjäng (34,25 %)</option>
+                        <option value="35.45">Åsele (35,45 %)</option>
+                        <option value="31.47">Åstorp (31,47 %)</option>
+                        <option value="33.94">Åtvidaberg (33,94 %)</option>
+                        <option value="33.86">Älmhult (33,86 %)</option>
+                        <option value="34.77">Älvdalen (34,77 %)</option>
+                        <option value="34.4">Älvkarleby (34,4 %)</option>
+                        <option value="33.79">Älvsbyn (33,79 %)</option>
+                        <option value="31.35">Ängelholm (31,35 %)</option>
+                        <option value="33.04">Öckerö (33,04 %)</option>
+                        <option value="33.95">Ödeshög (33,95 %)</option>
+                        <option value="33.65">Örebro (33,65 %)</option>
+                        <option value="30.24">Örkelljunga (30,24 %)</option>
+                        <option value="33.85">Örnsköldsvik (33,85 %)</option>
+                        <option value="33.72">Östersund (33,72 %)</option>
+                        <option value="28.93">Österåker (28,93 %)</option>
+                        <option value="33.3">Östhammar (33,3 %)</option>
+                        <option value="32.17">Östra Göinge (32,17 %)</option>
+                        <option value="34.14">Överkalix (34,14 %)</option>
+                        <option value="33.84">Övertorneå (33,84 %)</option>
+                    </select>
+                    <div class="hint">Alla 290 kommuner, skattesatser 2026 (SCB)</div>
                 </div>
 
                 <div class="field">
-                    <label>Ålder</label>
-                    <select id="alder-select">
-                        <option value="standard" selected>Under 66 år</option>
-                        <option value="senior">66 år eller äldre</option>
-                    </select>
-                    <div class="hint">Seniorer har förhöjt jobbskatteavdrag</div>
+                    <label>Kommunalskattesats (%)</label>
+                    <input type="number" id="kommun-input" value="30.55" min="28" max="36" step="0.01">
+                    <div class="hint">Fylls i automatiskt från kommunen — kan ändras manuellt. Gäller dig under 66 år.</div>
                 </div>
             </div>
 
@@ -430,11 +719,11 @@
                 <h2>Marginalskatt i Sverige 2026 — så fungerar det</h2>
                 <p><strong>Marginalskatten</strong> är den skatt du betalar på din sist intjänade krona. Till skillnad från din genomsnittliga skattesats, som beräknas på hela din inkomst, visar marginalskatten vad du faktiskt behåller av en löneökning, övertidsersättning eller en bonus. Det är alltså marginalskatten som avgör om det "lönar sig" att jobba mer.</p>
 
-                <p>I Sverige består inkomstskatten av <strong>kommunalskatt</strong> (i snitt 32,41 % år 2026) och <strong>statlig inkomstskatt</strong> (20 %) som slår in när den beskattningsbara inkomsten överstiger skiktgränsen på 625 800 kr per år — ungefär 52 150 kr i bruttolön per månad. Under skiktgränsen betalar du bara kommunalskatt, men den effektiva marginalskatten påverkas även av <strong>jobbskatteavdraget</strong> och <strong>grundavdraget</strong>.</p>
+                <p>I Sverige består inkomstskatten av <strong>kommunalskatt</strong> (i snitt 33,3 % år 2026) och <strong>statlig inkomstskatt</strong> (20 %) som slår in när den beskattningsbara inkomsten överstiger skiktgränsen på 643 000 kr per år — vilket motsvarar brytpunkten 660 400 kr i bruttolön, ungefär 55 000 kr per månad. Under skiktgränsen betalar du bara kommunalskatt, men den effektiva marginalskatten påverkas även av <strong>jobbskatteavdraget</strong> och <strong>grundavdraget</strong>.</p>
 
                 <p><strong>Jobbskatteavdraget</strong> är en skattereduktion som sänker skatten för alla som arbetar. Avdraget ökar med inkomsten upp till en viss nivå och trappas sedan av vid högre löner (från ca 48 000 kr/mån). I avtrappningszonen ökar den effektiva marginalskatten tillfälligt, eftersom du förlorar avdrag samtidigt som du betalar mer skatt på varje extra krona.</p>
 
-                <p><strong>Grundavdraget</strong> minskar din beskattningsbara inkomst. Det varierar beroende på inkomstnivå och är som mest generöst vid låga inkomster. Vid medelinkomster ligger grundavdraget på en relativt stabil nivå (42 492 kr/år för inkomster mellan ca 158 000–452 000 kr/år) innan det trappas ned vid högre inkomster.</p>
+                <p><strong>Grundavdraget</strong> minskar din beskattningsbara inkomst. Det varierar beroende på inkomstnivå och är som mest generöst vid låga inkomster. För 2026 är det lägst 25 100 kr och högst 45 600 kr per år, och trappas ned till 17 400 kr vid inkomster över ca 466 000 kr/år.</p>
 
                 <p>I praktiken innebär detta att en person med en månadslön på 35 000 kr har en marginalskatt på omkring 32 %, medan någon som tjänar 55 000 kr/mån kan ha en marginalskatt på över 52 %. Det innebär att av en löneökning på 5 000 kr behåller den förstnämnda ca 3 400 kr, medan den sistnämnda bara behåller ca 2 400 kr.</p>
 
@@ -447,12 +736,12 @@
             <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;">Vanliga frågor om marginalskatt</h2>
             <ul class="faq-list">
                 <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Vad är marginalskatt?</span><span class="faq-icon">+</span></button><div class="faq-body">Marginalskatt är den skatt du betalar på din sist intjänade krona. Det är alltså inte den genomsnittliga skatten på hela din inkomst, utan den extra skatt som tillkommer om du tjänar en krona mer. Marginalskatten avgör hur mycket du faktiskt behåller av en löneökning, övertid eller ett extraarbete.</div></li>
-                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Hur hög är marginalskatten 2026?</span><span class="faq-icon">+</span></button><div class="faq-body">Under skiktgränsen (ca 52 150 kr/mån) betalar du bara kommunalskatt — i snitt ca 32,41 %. Över skiktgränsen tillkommer 20 % statlig inkomstskatt, vilket ger en marginalskatt på cirka 52 %. Jobbskatteavdraget påverkar den effektiva marginalskatten, särskilt i avtrappningszonen.</div></li>
+                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Hur hög är marginalskatten 2026?</span><span class="faq-icon">+</span></button><div class="faq-body">Under brytpunkten (ca 55 000 kr/mån) betalar du bara kommunalskatt — i snitt ca 33,3 %. Över brytpunkten tillkommer 20 % statlig inkomstskatt, vilket ger en marginalskatt på cirka 53 %. Jobbskatteavdraget sänker den effektiva marginalskatten vid inkomster upp till ca 40 000 kr/mån.</div></li>
                 <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Vad är skillnaden mellan marginalskatt och genomsnittlig skatt?</span><span class="faq-icon">+</span></button><div class="faq-body">Genomsnittlig skatt (eller effektiv skattesats) är den totala skatten du betalar i relation till hela din inkomst. Marginalskatten gäller bara den sista kronan. Du kan ha 28 % genomsnittlig skatt men 52 % marginalskatt — varje extra krona beskattas alltså hårdare.</div></li>
-                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Vad är jobbskatteavdraget?</span><span class="faq-icon">+</span></button><div class="faq-body">Jobbskatteavdraget är en skattereduktion som sänker skatten för den som arbetar. Det beräknas utifrån din arbetsinkomst och kommunalskattesats. Avdraget ökar med inkomsten upp till en viss nivå och trappas sedan av — från ca 48 000 kr/mån börjar avdraget minska, vilket tillfälligt höjer den effektiva marginalskatten.</div></li>
-                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>När slår statlig inkomstskatt in?</span><span class="faq-icon">+</span></button><div class="faq-body">Statlig inkomstskatt på 20 % tillkommer på den del av den beskattningsbara förvärvsinkomsten som överstiger 625 800 kr/år (ca 52 150 kr/mån i bruttolön). Skatten beräknas på inkomsten efter grundavdrag.</div></li>
+                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Vad är jobbskatteavdraget?</span><span class="faq-icon">+</span></button><div class="faq-body">Jobbskatteavdraget är en skattereduktion som sänker skatten för den som arbetar. Det beräknas utifrån din arbetsinkomst och kommunalskattesats. Avdraget ökar med inkomsten upp till ca 40 000 kr/mån och ligger sedan kvar på maxnivån — sedan 2024 trappas det inte längre av vid höga inkomster. Från 2026 är avdraget förstärkt.</div></li>
+                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>När slår statlig inkomstskatt in?</span><span class="faq-icon">+</span></button><div class="faq-body">Statlig inkomstskatt på 20 % tillkommer på den del av den beskattningsbara förvärvsinkomsten som överstiger 643 000 kr/år. Räknat på bruttolön går gränsen (brytpunkten) vid 660 400 kr/år, ca 55 000 kr/mån. Skatten beräknas på inkomsten efter grundavdrag.</div></li>
                 <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Hur kan jag sänka min marginalskatt?</span><span class="faq-icon">+</span></button><div class="faq-body">Löneväxling till tjänstepension sänker den beskattningsbara inkomsten. ISK-sparande beskattas schablonmässigt. ROT/RUT-avdrag minskar den totala skattebelastningen. Att flytta till en kommun med lägre skattesats minskar kommunalskatten direkt.</div></li>
-                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Hur beräknas grundavdraget?</span><span class="faq-icon">+</span></button><div class="faq-body">Grundavdraget minskar din beskattningsbara inkomst och varierar med inkomstnivån. Vid låga inkomster är det som högst (upp till 24 238 kr). Det ligger stabilt kring 42 492 kr vid inkomster mellan ca 158 000–452 000 kr/år, och trappas ned till minimum 17 200 kr vid högre inkomster.</div></li>
+                <li class="faq-item"><button class="faq-btn" onclick="this.parentElement.classList.toggle('open')"><span>Hur beräknas grundavdraget?</span><span class="faq-icon">+</span></button><div class="faq-body">Grundavdraget minskar din beskattningsbara inkomst och varierar med inkomstnivån. För 2026 är det lägst 25 100 kr och högst 45 600 kr. Det är som högst vid inkomster runt 161 000–184 000 kr/år och trappas ned till 17 400 kr vid inkomster över ca 466 000 kr/år.</div></li>
             </ul>
         </div>
 
@@ -493,67 +782,44 @@
 </footer>
 
 <script>
-// ─── Constants 2026 ───
-const SKIKTGRANS = 625800; // kr/year — statlig inkomstskatt threshold
+// ─── Constants 2026 (Skatteverket "Belopp och procent 2026", regeringen.se) ───
+const SKIKTGRANS = 643000; // kr/år — statlig inkomstskatt 20 % på beskattningsbar inkomst över detta
 const STATLIG_SKATT = 0.20;
-const PBB = 58800; // prisbasbelopp 2026
-const IBB = 80600; // inkomstbasbelopp 2026
-const KYRKO_SATS = 0.0100; // ~1% average kyrkoavgift
+const PBB = 59200; // prisbasbelopp 2026
+const IBB = 83400; // inkomstbasbelopp 2026
+const KYRKO_SATS = 0.0100; // ~1 % genomsnittlig kyrkoavgift
+const BEGRAVNING_SATS = 0.00292; // begravningsavgift 2026 (enhetlig sats)
+const PS_AVGIFT_MAX = 1184; // public service-avgift 2026: 1 % av beskattningsbar inkomst, max 1 184 kr
 
-// ─── Grundavdrag 2026 (simplified approximation based on SKV) ───
+// ─── Grundavdrag 2026 (IL 63 kap 3 §, under 66 år). Avrundas uppåt till helt hundratal ───
 function grundavdrag(arslon) {
     if (arslon <= 0) return 0;
-    var gp = PBB; // 58 800
-    if (arslon <= 0.99 * gp) return 0.423 * gp; // ~24 869
-    if (arslon <= 2.72 * gp) {
-        // linearly from 0.423*gp to 0.77*gp
-        var t = (arslon - 0.99 * gp) / (2.72 * gp - 0.99 * gp);
-        return (0.423 + t * (0.77 - 0.423)) * gp;
-    }
-    if (arslon <= 3.11 * gp) return 0.77 * gp; // ~45 276
-    if (arslon <= 7.88 * gp) {
-        // linearly from 0.77*gp down to 0.293*gp
-        var t = (arslon - 3.11 * gp) / (7.88 * gp - 3.11 * gp);
-        return (0.77 - t * (0.77 - 0.293)) * gp;
-    }
-    return 0.293 * gp; // ~17 228 minimum
+    var gp = PBB, ga;
+    if (arslon <= 0.99 * gp) ga = 0.423 * gp;
+    else if (arslon <= 2.72 * gp) ga = 0.225 * gp + 0.2 * arslon;
+    else if (arslon <= 3.11 * gp) ga = 0.770 * gp;
+    else if (arslon <= 7.88 * gp) ga = 1.081 * gp - 0.1 * arslon;
+    else ga = 0.293 * gp;
+    ga = Math.ceil(ga / 100) * 100;
+    return Math.min(ga, arslon);
 }
 
-// ─── Jobbskatteavdrag 2026 (simplified approximation) ───
-function jobbskatteavdrag(arslon, kommunalskatt, isSenior) {
+// ─── Jobbskatteavdrag 2026 (IL 67 kap 7 §, under 66 år), förstärkt fr.o.m. 1 jan 2026 ───
+function jobbskatteavdrag(arslon, kommunalskatt) {
     if (arslon <= 0) return 0;
-    var ks = kommunalskatt;
-    var gp = PBB;
-
-    if (isSenior) {
-        // Förhöjt jobbskatteavdrag for 66+
-        if (arslon <= 1.11 * gp) return arslon * ks;
-        if (arslon <= 3.11 * gp) return 1.11 * gp * ks + (arslon - 1.11 * gp) * 0.3475;
-        if (arslon <= 7.88 * gp) return 1.11 * gp * ks + (3.11 * gp - 1.11 * gp) * 0.3475 + (arslon - 3.11 * gp) * 0.128;
-        return 1.11 * gp * ks + 2.0 * gp * 0.3475 + (7.88 * gp - 3.11 * gp) * 0.128; // cap
-    }
-
-    // Standard jobbskatteavdrag
-    if (arslon <= 0.91 * gp) return arslon * ks;
-    if (arslon <= 3.24 * gp) return 0.91 * gp * ks + (arslon - 0.91 * gp) * 0.3275;
-    if (arslon <= 8.08 * gp) return 0.91 * gp * ks + (3.24 * gp - 0.91 * gp) * 0.3275 + (arslon - 3.24 * gp) * 0.009;
-    if (arslon <= 13.54 * gp) {
-        var maxJsa = 0.91 * gp * ks + (3.24 * gp - 0.91 * gp) * 0.3275 + (8.08 * gp - 3.24 * gp) * 0.009;
-        // Phase-out: reduce by 3% of excess over 8.08*gp
-        var reduction = (arslon - 8.08 * gp) * 0.03;
-        return Math.max(0, maxJsa - reduction);
-    }
-    // Above 13.54*gp — fully phased out? No, there's a floor
-    var maxJsa = 0.91 * gp * ks + (3.24 * gp - 0.91 * gp) * 0.3275 + (8.08 * gp - 3.24 * gp) * 0.009;
-    var reduction = (arslon - 8.08 * gp) * 0.03;
-    return Math.max(0, maxJsa - reduction);
+    var ks = kommunalskatt, gp = PBB, ga = grundavdrag(arslon), u;
+    if (arslon <= 0.91 * gp) u = arslon - ga;
+    else if (arslon <= 3.24 * gp) u = 0.91 * gp + 0.3874 * (arslon - 0.91 * gp) - ga;
+    else if (arslon <= 8.08 * gp) u = 1.813 * gp + 0.251 * (arslon - 3.24 * gp) - ga;
+    else u = 3.027 * gp - ga;
+    return Math.max(0, u * ks);
 }
 
 // ─── Full tax calc ───
 function calcTax(manadslon, kommunalskatt, isSenior, isKyrko) {
     var arslon = manadslon * 12;
     var ga = grundavdrag(arslon);
-    var beskattningsbar = Math.max(0, arslon - ga);
+    var beskattningsbar = Math.max(0, Math.floor((arslon - ga) / 100) * 100);
 
     // Kommunalskatt
     var ks = kommunalskatt;
@@ -565,17 +831,17 @@ function calcTax(manadslon, kommunalskatt, isSenior, isKyrko) {
         statligSkatt = (beskattningsbar - SKIKTGRANS) * STATLIG_SKATT;
     }
 
-    // Kyrkoskatt
+    // Kyrkoavgift
     var kyrkoSkatt = isKyrko ? beskattningsbar * KYRKO_SATS : 0;
 
-    // Begravningsavgift (all pay, ~0.28%)
-    var begravningsavgift = beskattningsbar * 0.0028;
+    // Begravningsavgift (alla betalar)
+    var begravningsavgift = beskattningsbar * BEGRAVNING_SATS;
 
-    // Public service avgift (capped at 1% of taxable income, max ~1 347 kr)
-    var publicService = Math.min(beskattningsbar * 0.01, 1347);
+    // Public service-avgift
+    var publicService = Math.min(beskattningsbar * 0.01, PS_AVGIFT_MAX);
 
-    // Jobbskatteavdrag
-    var jsa = jobbskatteavdrag(arslon, ks, isSenior);
+    // Jobbskatteavdrag (kan inte överstiga kommunal + statlig skatt)
+    var jsa = Math.min(jobbskatteavdrag(arslon, ks), kommunalSkattBelopp + statligSkatt);
 
     // Total skatt = kommunal + statlig + kyrko + begravning + publicservice - jobbskatteavdrag
     var totalSkattAr = kommunalSkattBelopp + statligSkatt + kyrkoSkatt + begravningsavgift + publicService - jsa;
@@ -624,7 +890,7 @@ function berakna() {
     if (manadslon < 1000) return;
 
     var ks = parseFloat(document.getElementById('kommun-input').value) / 100 || 0.3241;
-    var isSenior = document.getElementById('alder-select').value === 'senior';
+    var isSenior = false; // kalkylatorn gäller personer under 66 år
     var isKyrko = document.getElementById('kyrko-select').value === '1';
 
     var tax = calcTax(manadslon, ks, isSenior, isKyrko);

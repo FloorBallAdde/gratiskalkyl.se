@@ -91,7 +91,7 @@
           "name": "Kan jag löneväxla hur mycket som helst?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Det finns ingen lagstadgad gräns, men de flesta arbetsgivare sätter ett tak — vanligen 5–10 % av lönen eller ett fast maxbelopp. Tänk också på att du inte bör löneväxla så mycket att din nettolön knappt täcker dina levnadsomkostnader. Är din inkomst nära 7,5 inkomstbasbelopp (~46 400 kr/mån 2026) bör du också fundera på om löneväxling minskar din allmänna pension."
+            "text": "Det finns ingen lagstadgad gräns, men de flesta arbetsgivare sätter ett tak — vanligen 5–10 % av lönen eller ett fast maxbelopp. Tänk också på att du inte bör löneväxla så mycket att din nettolön knappt täcker dina levnadsomkostnader. Är din inkomst nära 7,5 inkomstbasbelopp (~52 100 kr/mån 2026) bör du också fundera på om löneväxling minskar din allmänna pension."
           }
         },
         {
@@ -508,7 +508,7 @@
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">Kan jag löneväxla hur mycket som helst? <span class="faq-icon">+</span></div>
-    <div class="faq-a">Det finns ingen lagstadgad gräns, men de flesta arbetsgivare sätter ett tak — vanligen 5–10 % av lönen eller ett fast maxbelopp. Tänk också på att du inte bör löneväxla så mycket att din nettolön knappt täcker dina levnadsomkostnader. Är din inkomst nära 7,5 inkomstbasbelopp (~46 400 kr/mån 2026) bör du också fundera på om löneväxling minskar din allmänna pension.</div>
+    <div class="faq-a">Det finns ingen lagstadgad gräns, men de flesta arbetsgivare sätter ett tak — vanligen 5–10 % av lönen eller ett fast maxbelopp. Tänk också på att du inte bör löneväxla så mycket att din nettolön knappt täcker dina levnadsomkostnader. Är din inkomst nära 7,5 inkomstbasbelopp (~52 100 kr/mån 2026) bör du också fundera på om löneväxling minskar din allmänna pension.</div>
   </div>
 
   <div class="faq-item">
@@ -585,8 +585,8 @@
     const arKvarTillPension = Math.max(0, 65 - alder);
 
     // Marginalskatt
-    // State tax (statlig skatt 20%) applies above ~49 000 kr/month gross (approx 588 000 kr/year threshold 2026)
-    const statligSkattGrans = 49000;
+    // Statlig skatt 20 % ovanför brytpunkten 660 400 kr/år 2026 (ca 55 000 kr/mån brutto)
+    const statligSkattGrans = 55033;
     let marginalskatt;
     if (bruttolon > statligSkattGrans) {
       marginalskatt = kommunalskatt + 0.20;

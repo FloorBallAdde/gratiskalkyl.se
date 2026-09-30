@@ -59,7 +59,7 @@
           "name": "Vad är reseavdrag och hur beräknas det?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 11 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats."
+            "text": "Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats."
           }
         },
         {
@@ -540,7 +540,7 @@
                 <div class="result-box highlight">
                     <div class="val" id="res-avdrag">—</div>
                     <div class="lbl">Avdragsgillt belopp</div>
-                    <div class="sub">efter 11 000 kr självrisk</div>
+                    <div class="sub">efter 15 000 kr självrisk</div>
                 </div>
                 <div class="result-box highlight">
                     <div class="val" id="res-besparing">—</div>
@@ -563,7 +563,7 @@
                     <tr><td>Total km per år</td><td id="det-r-total">—</td></tr>
                     <tr><td>Total mil per år</td><td id="det-r-mil">—</td></tr>
                     <tr><td>Bruttokostnad (25 kr/mil)</td><td id="det-r-gross">—</td></tr>
-                    <tr><td>Avdrag självrisktröskeln</td><td>11 000 kr</td></tr>
+                    <tr><td>Avdrag självrisktröskeln</td><td>15 000 kr</td></tr>
                     <tr><td>Avdragsgillt belopp</td><td id="det-r-avdrag">—</td></tr>
                     <tr><td>Max avdrag (tak)</td><td>50 000 kr</td></tr>
                     <tr><td>Skattesats</td><td id="det-r-tax">—</td></tr>
@@ -633,8 +633,8 @@
         <p>För att ha rätt till milersättning måste du föra en körjournal. Den ska innehålla: datum, startpunkt, destination, ändamål med resan och antal kilometer. Körjournalen är ditt underlag gentemot arbetsgivaren och Skatteverket — spara den i minst 6 år.</p>
 
         <h3>Reseavdrag för pendling med bil</h3>
-        <p>Kör du din privata bil till jobbet och sparar minst 2 timmar per dag jämfört med kollektivtrafik kan du göra reseavdrag i deklarationen. Avdragsbeloppet är dina faktiska pendlingskostnader (beräknade till 25 kr/mil) minus en självrisktröskel på 11 000 kr per år. Det maximala avdraget är 50 000 kr per år (gäller sedan 2024).</p>
-        <p>En anställd som pendlar 30 km vardera väg, 220 dagar per år, har en bruttokostnad på 660 mil × 25 kr = 16 500 kr. Med 11 000 kr i självrisk kvarstår 5 500 kr i avdrag — vilket ger ca 1 760 kr tillbaka på skatten vid 32 % skattesats.</p>
+        <p>Kör du din privata bil till jobbet och sparar minst 2 timmar per dag jämfört med kollektivtrafik kan du göra reseavdrag i deklarationen. Avdragsbeloppet är dina faktiska pendlingskostnader (beräknade till 25 kr/mil) minus en självrisktröskel på 15 000 kr per år. Det maximala avdraget är 50 000 kr per år (gäller sedan 2024).</p>
+        <p>En anställd som pendlar 30 km vardera väg, 220 dagar per år, har en bruttokostnad på 660 mil × 25 kr = 16 500 kr. Med 15 000 kr i självrisk (höjt från 15 000 kr 2026) kvarstår 1 500 kr i avdrag — vilket ger ca 480 kr tillbaka på skatten vid 32 % skattesats.</p>
 
         <h3>Tjänstebil vs privat bil</h3>
         <p>Har du förmånsbil (tjänstebil) kan du i de flesta fall inte göra reseavdrag för pendlingen. Du beskattas i stället för förmånsvärdet av bilen. Om du kör tjänstebil privat gäller andra regler — använd vår <a href="/kalkylatorer/formansbilkalkylator" style="color:var(--primary)">förmånsbilkalkylator</a> för att beräkna förmånsvärdet.</p>
@@ -654,7 +654,7 @@
         </div>
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Vad är reseavdrag och hur beräknas det? <span class="arrow">+</span></button>
-            <div class="faq-a">Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 11 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats.</div>
+            <div class="faq-a">Reseavdrag är ett skatteavdrag för kostnaderna att ta sig till och från jobbet med bil, när bil sparar dig minst 2 timmar per dag jämfört med kollektivtrafik. Avdragsbeloppet är (antal mil × 25 kr/mil) minus en självriskdel på 15 000 kr per år. Det maximala reseavdraget är 50 000 kr per år. Skattebesparingen beräknas som avdragsbeloppet multiplicerat med din skattesats.</div>
         </div>
         <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">Vad krävs för att få reseavdrag? <span class="arrow">+</span></button>
@@ -744,7 +744,7 @@
         const kmOne = parseFloat(document.getElementById('resa-km').value) || 0;
         const days = parseFloat(document.getElementById('resa-days').value) || 220;
         const taxRate = parseFloat(document.getElementById('tax-input').value) / 100 || 0.32;
-        const THRESHOLD = 11000;
+        const THRESHOLD = 15000; // beloppsgräns reseavdrag 2026 (höjd från 15 000 kr)
         const MAX_AVDRAG = 50000;
 
         const kmPerDay = kmOne * 2;
@@ -875,7 +875,7 @@
         ctx.fillRect(0, 0, W, H);
 
         const vals = [grossCost, threshold, avdrag, besparing];
-        const labels = ['Bruttokostnad\n(25 kr/mil)', 'Självrisktröskeln\n11 000 kr', 'Avdragsgillt\nbelopp', 'Skattebesparing\nper år'];
+        const labels = ['Bruttokostnad\n(25 kr/mil)', 'Självrisktröskeln\n15 000 kr', 'Avdragsgillt\nbelopp', 'Skattebesparing\nper år'];
         const colors = [blue, orange, primary, isDark ? '#a78bfa' : '#7c3aed'];
         const maxVal = Math.max(...vals, 1) * 1.15;
 

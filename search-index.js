@@ -365,7 +365,7 @@ window.SITE_SEARCH_INDEX = [
     "title": "Traktamentekalkylator",
     "icon": "✈️",
     "category": "Jobb &amp; Familj",
-    "desc": "Beräkna skattefritt traktamente vid tjänsteresor 2026. Inrikes: 290 kr/dag. Se vad du har rätt till vid övernattning och utlandsresor.",
+    "desc": "Beräkna skattefritt traktamente vid tjänsteresor 2026. Inrikes: 300 kr/dag. Se vad du har rätt till vid övernattning och utlandsresor.",
     "kw": "traktamente traktamentekalkylator resetraktamente skattefritt traktamente resa övernattning utland inrikes skatteverket 2026 affärsresa"
   },
   {
@@ -385,6 +385,33 @@ window.SITE_SEARCH_INDEX = [
     "category": "Boende &amp; Lån",
     "desc": "Beräkna skatten på hyresintäkter 2026. Se schablonavdrag, beskattningsbar inkomst och nettoinkomst vid uthyrning av villa eller bostadsrätt.",
     "kw": "uthyrning hyra ut bostad skatt hyresintäkt schablonavdrag andrahand villa bostadsrätt airbnb kapitalinkomst"
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/a-kassa-2026-belopp-och-regler",
+    "title": "A-kassa 2026 – belopp och regler",
+    "icon": "🤝",
+    "category": "Guide",
+    "desc": "80 % dag 1–100, 70 % dag 101–200, 65 % dag 201–300. Tak 34 000 kr/mån — så mycket får du.",
+    "kw": "a-kassa 2026 belopp regler ersättning dagpenning tak 34 000 arbetslös inkomstvillkor alfakassan"
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/elkostnad-2026-sa-raknar-du",
+    "title": "Elkostnad 2026 – så räknar du",
+    "icon": "⚡",
+    "category": "Guide",
+    "desc": "Elpris, elnätsavgift, energiskatt 36 öre/kWh och moms. Normal förbrukning och räkneexempel.",
+    "kw": "elkostnad 2026 elpris energiskatt elnät kwh förbrukning villa lägenhet elområde timpris effekttariff"
+  },
+  {
+    "type": "guide",
+    "url": "/artiklar/privatleasing-eller-kopa-bil-2026",
+    "title": "Privatleasing eller köpa bil 2026?",
+    "icon": "🚗",
+    "category": "Guide",
+    "desc": "Leasing mot billån och kontantköp — räkneexempel, restvärde, milgräns och dolda kostnader.",
+    "kw": "privatleasing köpa bil leasa eller köpa billån restvärde övermil leasing kalkyl 2026 elbil"
   },
   {
     "type": "guide",

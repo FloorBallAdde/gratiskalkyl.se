@@ -545,7 +545,7 @@
         <div class="page-header">
             <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Löneräknare</div>
             <h1>Löneräknare 2026</h1>
-            <p>Beräkna din nettolön efter skatt. Ange din månadslön och kommun för att se exakt vad du får ut.</p>
+            <p>Beräkna din nettolön efter skatt med 2026 års regler. Välj din kommun (alla 290 finns med) och ange månadslön — se exakt vad du får ut.</p>
         </div>
 
         <div class="calc-wrapper">
@@ -559,29 +559,298 @@
                 <div class="input-group">
                     <label for="kommun">Kommun</label>
                     <select id="kommun">
-                        <option value="stockholm-20.89-11.51">Stockholm (20,89% + 11,51%)</option>
-                        <option value="goteborg-19.88-10.34">Göteborg (19,88% + 10,34%)</option>
-                        <option value="malmo-20.36-10.15">Malmö (20,36% + 10,15%)</option>
-                        <option value="uppsala-20.39-11.49">Uppsala (20,39% + 11,49%)</option>
-                        <option value="linkoping-20.29-11.64">Linköping (20,29% + 11,64%)</option>
-                        <option value="orebro-20.46-11.29">Örebro (20,46% + 11,29%)</option>
-                        <option value="vasteras-20.18-11.30">Västerås (20,18% + 11,30%)</option>
-                        <option value="norrkoping-20.24-11.43">Norrköping (20,24% + 11,43%)</option>
-                        <option value="helsingborg-20.60-10.19">Helsingborg (20,60% + 10,19%)</option>
-                        <option value="jonkoping-20.62-11.38">Jönköping (20,62% + 11,38%)</option>
-                        <option value="umea-20.11-12.40">Umeå (20,11% + 12,40%)</option>
-                        <option value="lund-20.36-10.05">Lund (20,36% + 10,05%)</option>
-                        <option value="boras-20.35-11.08">Borås (20,35% + 11,08%)</option>
-                        <option value="sundsvall-20.07-12.12">Sundsvall (20,07% + 12,12%)</option>
-                        <option value="gavle-20.39-11.46">Gävle (20,39% + 11,46%)</option>
-                        <option value="eskilstuna-20.32-11.56">Eskilstuna (20,32% + 11,56%)</option>
-                        <option value="karlstad-20.54-11.41">Karlstad (20,54% + 11,41%)</option>
-                        <option value="vaxjo-20.76-11.24">Växjö (20,76% + 11,24%)</option>
-                        <option value="halmstad-20.33-10.72">Halmstad (20,33% + 10,72%)</option>
-                        <option value="trollhattan-20.49-11.02">Trollhättan (20,49% + 11,02%)</option>
-                        <option value="sundbyberg-20.89-11.51">Sundbyberg (20,89% + 11,51%)</option>
-                        <option value="västerort-20.89-11.51">Västerort (20,89% + 11,51%)</option>
+                        <option value="ale">Ale (32,8 %)</option>
+                        <option value="alingsas">Alingsås (32,84 %)</option>
+                        <option value="alvesta">Alvesta (33,42 %)</option>
+                        <option value="aneby">Aneby (33,85 %)</option>
+                        <option value="arboga">Arboga (33,29 %)</option>
+                        <option value="arjeplog">Arjeplog (34,84 %)</option>
+                        <option value="arvidsjaur">Arvidsjaur (34,14 %)</option>
+                        <option value="arvika">Arvika (34,03 %)</option>
+                        <option value="askersund">Askersund (34,15 %)</option>
+                        <option value="avesta">Avesta (33,95 %)</option>
+                        <option value="bengtsfors">Bengtsfors (34,4 %)</option>
+                        <option value="berg">Berg (34,22 %)</option>
+                        <option value="bjurholm">Bjurholm (35,0 %)</option>
+                        <option value="bjuv">Bjuv (32,17 %)</option>
+                        <option value="boden">Boden (33,94 %)</option>
+                        <option value="bollebygd">Bollebygd (33,07 %)</option>
+                        <option value="bollnas">Bollnäs (33,37 %)</option>
+                        <option value="borgholm">Borgholm (33,44 %)</option>
+                        <option value="borlange">Borlänge (34,4 %)</option>
+                        <option value="boras">Borås (32,79 %)</option>
+                        <option value="botkyrka">Botkyrka (32,23 %)</option>
+                        <option value="boxholm">Boxholm (33,37 %)</option>
+                        <option value="bromolla">Bromölla (33,74 %)</option>
+                        <option value="bracke">Bräcke (35,09 %)</option>
+                        <option value="burlov">Burlöv (31,27 %)</option>
+                        <option value="bastad">Båstad (31,41 %)</option>
+                        <option value="dals-ed">Dals-Ed (34,69 %)</option>
+                        <option value="danderyd">Danderyd (30,58 %)</option>
+                        <option value="degerfors">Degerfors (35,3 %)</option>
+                        <option value="dorotea">Dorotea (35,65 %)</option>
+                        <option value="eda">Eda (34,55 %)</option>
+                        <option value="ekero">Ekerö (31,45 %)</option>
+                        <option value="eksjo">Eksjö (34,02 %)</option>
+                        <option value="emmaboda">Emmaboda (33,82 %)</option>
+                        <option value="enkoping">Enköping (33,05 %)</option>
+                        <option value="eskilstuna">Eskilstuna (32,85 %)</option>
+                        <option value="eslov">Eslöv (31,72 %)</option>
+                        <option value="essunga">Essunga (33,05 %)</option>
+                        <option value="fagersta">Fagersta (32,99 %)</option>
+                        <option value="falkenberg">Falkenberg (32,5 %)</option>
+                        <option value="falkoping">Falköping (33,43 %)</option>
+                        <option value="falun">Falun (34,05 %)</option>
+                        <option value="filipstad">Filipstad (34,55 %)</option>
+                        <option value="finspang">Finspång (33,7 %)</option>
+                        <option value="flen">Flen (33,1 %)</option>
+                        <option value="forshaga">Forshaga (34,63 %)</option>
+                        <option value="fargelanda">Färgelanda (34,39 %)</option>
+                        <option value="gagnef">Gagnef (34,27 %)</option>
+                        <option value="gislaved">Gislaved (33,75 %)</option>
+                        <option value="gnesta">Gnesta (32,95 %)</option>
+                        <option value="gnosjo">Gnosjö (34,0 %)</option>
+                        <option value="gotland">Gotland (33,6 %)</option>
+                        <option value="grums">Grums (34,78 %)</option>
+                        <option value="grastorp">Grästorp (33,47 %)</option>
+                        <option value="gullspang">Gullspång (33,97 %)</option>
+                        <option value="gallivare">Gällivare (33,89 %)</option>
+                        <option value="gavle">Gävle (33,77 %)</option>
+                        <option value="goteborg">Göteborg (32,6 %)</option>
+                        <option value="gotene">Götene (33,6 %)</option>
+                        <option value="habo">Habo (33,93 %)</option>
+                        <option value="hagfors">Hagfors (34,3 %)</option>
+                        <option value="hallsberg">Hallsberg (33,85 %)</option>
+                        <option value="hallstahammar">Hallstahammar (32,69 %)</option>
+                        <option value="halmstad">Halmstad (32,38 %)</option>
+                        <option value="hammaro">Hammarö (35,05 %)</option>
+                        <option value="haninge">Haninge (31,28 %)</option>
+                        <option value="haparanda">Haparanda (33,84 %)</option>
+                        <option value="heby">Heby (34,21 %)</option>
+                        <option value="hedemora">Hedemora (34,15 %)</option>
+                        <option value="helsingborg">Helsingborg (31,39 %)</option>
+                        <option value="herrljunga">Herrljunga (33,62 %)</option>
+                        <option value="hjo">Hjo (33,48 %)</option>
+                        <option value="hofors">Hofors (34,37 %)</option>
+                        <option value="huddinge">Huddinge (31,71 %)</option>
+                        <option value="hudiksvall">Hudiksvall (33,12 %)</option>
+                        <option value="hultsfred">Hultsfred (33,77 %)</option>
+                        <option value="hylte">Hylte (33,85 %)</option>
+                        <option value="haabo">Håbo (33,3 %)</option>
+                        <option value="hallefors">Hällefors (34,35 %)</option>
+                        <option value="harjedalen">Härjedalen (34,17 %)</option>
+                        <option value="harnosand">Härnösand (34,63 %)</option>
+                        <option value="harryda">Härryda (31,98 %)</option>
+                        <option value="hassleholm">Hässleholm (32,38 %)</option>
+                        <option value="hoganas">Höganäs (30,91 %)</option>
+                        <option value="hogsby">Högsby (34,07 %)</option>
+                        <option value="horby">Hörby (32,26 %)</option>
+                        <option value="hoor">Höör (32,63 %)</option>
+                        <option value="jokkmokk">Jokkmokk (34,29 %)</option>
+                        <option value="jarfalla">Järfälla (31,52 %)</option>
+                        <option value="jonkoping">Jönköping (33,4 %)</option>
+                        <option value="kalix">Kalix (33,89 %)</option>
+                        <option value="kalmar">Kalmar (33,67 %)</option>
+                        <option value="karlsborg">Karlsborg (32,8 %)</option>
+                        <option value="karlshamn">Karlshamn (33,8 %)</option>
+                        <option value="karlskoga">Karlskoga (34,3 %)</option>
+                        <option value="karlskrona">Karlskrona (33,69 %)</option>
+                        <option value="karlstad">Karlstad (33,55 %)</option>
+                        <option value="katrineholm">Katrineholm (32,95 %)</option>
+                        <option value="kil">Kil (34,63 %)</option>
+                        <option value="kinda">Kinda (33,0 %)</option>
+                        <option value="kiruna">Kiruna (34,39 %)</option>
+                        <option value="klippan">Klippan (31,93 %)</option>
+                        <option value="knivsta">Knivsta (32,62 %)</option>
+                        <option value="kramfors">Kramfors (34,43 %)</option>
+                        <option value="kristianstad">Kristianstad (32,64 %)</option>
+                        <option value="kristinehamn">Kristinehamn (34,25 %)</option>
+                        <option value="krokom">Krokom (33,87 %)</option>
+                        <option value="kumla">Kumla (33,84 %)</option>
+                        <option value="kungsbacka">Kungsbacka (32,58 %)</option>
+                        <option value="kungsor">Kungsör (32,91 %)</option>
+                        <option value="kungalv">Kungälv (32,92 %)</option>
+                        <option value="kavlinge">Kävlinge (29,59 %)</option>
+                        <option value="koping">Köping (33,04 %)</option>
+                        <option value="laholm">Laholm (32,8 %)</option>
+                        <option value="landskrona">Landskrona (31,42 %)</option>
+                        <option value="laxa">Laxå (35,0 %)</option>
+                        <option value="lekeberg">Lekeberg (33,73 %)</option>
+                        <option value="leksand">Leksand (33,8 %)</option>
+                        <option value="lerum">Lerum (32,03 %)</option>
+                        <option value="lessebo">Lessebo (33,81 %)</option>
+                        <option value="lidingo">Lidingö (29,67 %)</option>
+                        <option value="lidkoping">Lidköping (32,74 %)</option>
+                        <option value="lilla-edet">Lilla Edet (33,85 %)</option>
+                        <option value="lindesberg">Lindesberg (34,6 %)</option>
+                        <option value="linkoping">Linköping (31,75 %)</option>
+                        <option value="ljungby">Ljungby (33,07 %)</option>
+                        <option value="ljusdal">Ljusdal (33,87 %)</option>
+                        <option value="ljusnarsberg">Ljusnarsberg (33,8 %)</option>
+                        <option value="lomma">Lomma (30,72 %)</option>
+                        <option value="ludvika">Ludvika (34,05 %)</option>
+                        <option value="lulea">Luleå (33,84 %)</option>
+                        <option value="lund">Lund (32,42 %)</option>
+                        <option value="lycksele">Lycksele (34,9 %)</option>
+                        <option value="lysekil">Lysekil (33,94 %)</option>
+                        <option value="malmo">Malmö (32,42 %)</option>
+                        <option value="malung-salen">Malung-Sälen (34,45 %)</option>
+                        <option value="mala">Malå (35,2 %)</option>
+                        <option value="mariestad">Mariestad (32,74 %)</option>
+                        <option value="mark">Mark (32,99 %)</option>
+                        <option value="markaryd">Markaryd (33,31 %)</option>
+                        <option value="mellerud">Mellerud (34,08 %)</option>
+                        <option value="mjolby">Mjölby (33,45 %)</option>
+                        <option value="mora">Mora (34,32 %)</option>
+                        <option value="motala">Motala (33,25 %)</option>
+                        <option value="mullsjo">Mullsjö (34,1 %)</option>
+                        <option value="munkedal">Munkedal (34,86 %)</option>
+                        <option value="munkfors">Munkfors (34,3 %)</option>
+                        <option value="molndal">Mölndal (31,99 %)</option>
+                        <option value="monsteras">Mönsterås (34,07 %)</option>
+                        <option value="morbylanga">Mörbylånga (34,07 %)</option>
+                        <option value="nacka">Nacka (30,11 %)</option>
+                        <option value="nora">Nora (34,55 %)</option>
+                        <option value="norberg">Norberg (33,54 %)</option>
+                        <option value="nordanstig">Nordanstig (34,02 %)</option>
+                        <option value="nordmaling">Nordmaling (35,1 %)</option>
+                        <option value="norrkoping">Norrköping (33,3 %)</option>
+                        <option value="norrtalje">Norrtälje (32,05 %)</option>
+                        <option value="norsjo">Norsjö (35,2 %)</option>
+                        <option value="nybro">Nybro (34,19 %)</option>
+                        <option value="nykvarn">Nykvarn (32,3 %)</option>
+                        <option value="nykoping">Nyköping (32,25 %)</option>
+                        <option value="nynashamn">Nynäshamn (32,18 %)</option>
+                        <option value="nassjo">Nässjö (34,3 %)</option>
+                        <option value="ockelbo">Ockelbo (34,27 %)</option>
+                        <option value="olofstrom">Olofström (33,75 %)</option>
+                        <option value="orsa">Orsa (34,3 %)</option>
+                        <option value="orust">Orust (33,69 %)</option>
+                        <option value="osby">Osby (33,99 %)</option>
+                        <option value="oskarshamn">Oskarshamn (34,21 %)</option>
+                        <option value="ovanaker">Ovanåker (33,37 %)</option>
+                        <option value="oxelosund">Oxelösund (33,05 %)</option>
+                        <option value="pajala">Pajala (34,74 %)</option>
+                        <option value="partille">Partille (31,36 %)</option>
+                        <option value="perstorp">Perstorp (31,99 %)</option>
+                        <option value="pitea">Piteå (33,59 %)</option>
+                        <option value="ragunda">Ragunda (34,92 %)</option>
+                        <option value="robertsfors">Robertsfors (35,0 %)</option>
+                        <option value="ronneby">Ronneby (33,68 %)</option>
+                        <option value="rattvik">Rättvik (33,8 %)</option>
+                        <option value="sala">Sala (33,19 %)</option>
+                        <option value="salem">Salem (32,0 %)</option>
+                        <option value="sandviken">Sandviken (33,12 %)</option>
+                        <option value="sigtuna">Sigtuna (31,83 %)</option>
+                        <option value="simrishamn">Simrishamn (31,69 %)</option>
+                        <option value="sjobo">Sjöbo (32,1 %)</option>
+                        <option value="skara">Skara (33,38 %)</option>
+                        <option value="skelleftea">Skellefteå (34,45 %)</option>
+                        <option value="skinnskatteberg">Skinnskatteberg (33,34 %)</option>
+                        <option value="skurup">Skurup (31,6 %)</option>
+                        <option value="skovde">Skövde (33,09 %)</option>
+                        <option value="smedjebacken">Smedjebacken (34,44 %)</option>
+                        <option value="solleftea">Sollefteå (34,68 %)</option>
+                        <option value="sollentuna">Sollentuna (30,45 %)</option>
+                        <option value="solna">Solna (29,7 %)</option>
+                        <option value="sorsele">Sorsele (35,45 %)</option>
+                        <option value="sotenas">Sotenäs (33,47 %)</option>
+                        <option value="staffanstorp">Staffanstorp (30,12 %)</option>
+                        <option value="stenungsund">Stenungsund (33,12 %)</option>
+                        <option value="stockholm" selected>Stockholm (30,55 %)</option>
+                        <option value="storfors">Storfors (34,98 %)</option>
+                        <option value="storuman">Storuman (34,95 %)</option>
+                        <option value="strangnas">Strängnäs (32,5 %)</option>
+                        <option value="stromstad">Strömstad (33,39 %)</option>
+                        <option value="stromsund">Strömsund (34,92 %)</option>
+                        <option value="sundbyberg">Sundbyberg (31,58 %)</option>
+                        <option value="sundsvall">Sundsvall (33,88 %)</option>
+                        <option value="sunne">Sunne (33,75 %)</option>
+                        <option value="surahammar">Surahammar (33,19 %)</option>
+                        <option value="svalov">Svalöv (31,92 %)</option>
+                        <option value="svedala">Svedala (31,42 %)</option>
+                        <option value="svenljunga">Svenljunga (33,53 %)</option>
+                        <option value="saffle">Säffle (33,8 %)</option>
+                        <option value="sater">Säter (34,3 %)</option>
+                        <option value="savsjo">Sävsjö (33,68 %)</option>
+                        <option value="soderhamn">Söderhamn (33,17 %)</option>
+                        <option value="soderkoping">Söderköping (33,53 %)</option>
+                        <option value="sodertalje">Södertälje (32,38 %)</option>
+                        <option value="solvesborg">Sölvesborg (33,86 %)</option>
+                        <option value="tanum">Tanum (33,04 %)</option>
+                        <option value="tibro">Tibro (33,19 %)</option>
+                        <option value="tidaholm">Tidaholm (33,55 %)</option>
+                        <option value="tierp">Tierp (33,0 %)</option>
+                        <option value="timra">Timrå (34,38 %)</option>
+                        <option value="tingsryd">Tingsryd (34,0 %)</option>
+                        <option value="tjorn">Tjörn (33,19 %)</option>
+                        <option value="tomelilla">Tomelilla (31,79 %)</option>
+                        <option value="torsby">Torsby (34,3 %)</option>
+                        <option value="torsas">Torsås (33,79 %)</option>
+                        <option value="tranemo">Tranemo (32,98 %)</option>
+                        <option value="tranas">Tranås (33,77 %)</option>
+                        <option value="trelleborg">Trelleborg (31,58 %)</option>
+                        <option value="trollhattan">Trollhättan (33,84 %)</option>
+                        <option value="trosa">Trosa (32,03 %)</option>
+                        <option value="tyreso">Tyresö (31,83 %)</option>
+                        <option value="taby">Täby (29,88 %)</option>
+                        <option value="toreboda">Töreboda (33,2 %)</option>
+                        <option value="uddevalla">Uddevalla (33,64 %)</option>
+                        <option value="ulricehamn">Ulricehamn (32,53 %)</option>
+                        <option value="umea">Umeå (34,65 %)</option>
+                        <option value="upplands-vasby">Upplands Väsby (31,75 %)</option>
+                        <option value="upplands-bro">Upplands-Bro (31,73 %)</option>
+                        <option value="uppsala">Uppsala (32,85 %)</option>
+                        <option value="uppvidinge">Uppvidinge (33,8 %)</option>
+                        <option value="vadstena">Vadstena (34,35 %)</option>
+                        <option value="vaggeryd">Vaggeryd (33,25 %)</option>
+                        <option value="valdemarsvik">Valdemarsvik (34,03 %)</option>
+                        <option value="vallentuna">Vallentuna (31,23 %)</option>
+                        <option value="vansbro">Vansbro (34,28 %)</option>
+                        <option value="vara">Vara (33,25 %)</option>
+                        <option value="varberg">Varberg (31,73 %)</option>
+                        <option value="vaxholm">Vaxholm (31,63 %)</option>
+                        <option value="vellinge">Vellinge (29,68 %)</option>
+                        <option value="vetlanda">Vetlanda (33,77 %)</option>
+                        <option value="vilhelmina">Vilhelmina (35,5 %)</option>
+                        <option value="vimmerby">Vimmerby (34,22 %)</option>
+                        <option value="vindeln">Vindeln (35,2 %)</option>
+                        <option value="vingaker">Vingåker (33,5 %)</option>
+                        <option value="vargarda">Vårgårda (33,09 %)</option>
+                        <option value="vanersborg">Vänersborg (33,69 %)</option>
+                        <option value="vannas">Vännäs (35,2 %)</option>
+                        <option value="varmdo">Värmdö (31,31 %)</option>
+                        <option value="varnamo">Värnamo (33,28 %)</option>
+                        <option value="vastervik">Västervik (33,02 %)</option>
+                        <option value="vasteras">Västerås (31,24 %)</option>
+                        <option value="vaxjo">Växjö (32,19 %)</option>
+                        <option value="ydre">Ydre (34,1 %)</option>
+                        <option value="ystad">Ystad (31,29 %)</option>
+                        <option value="amal">Åmål (33,94 %)</option>
+                        <option value="ange">Ånge (34,62 %)</option>
+                        <option value="are">Åre (33,92 %)</option>
+                        <option value="arjang">Årjäng (34,25 %)</option>
+                        <option value="asele">Åsele (35,45 %)</option>
+                        <option value="astorp">Åstorp (31,47 %)</option>
+                        <option value="atvidaberg">Åtvidaberg (33,94 %)</option>
+                        <option value="almhult">Älmhult (33,86 %)</option>
+                        <option value="alvdalen">Älvdalen (34,77 %)</option>
+                        <option value="alvkarleby">Älvkarleby (34,4 %)</option>
+                        <option value="alvsbyn">Älvsbyn (33,79 %)</option>
+                        <option value="angelholm">Ängelholm (31,35 %)</option>
+                        <option value="ockero">Öckerö (33,04 %)</option>
+                        <option value="odeshog">Ödeshög (33,95 %)</option>
+                        <option value="orebro">Örebro (33,65 %)</option>
+                        <option value="orkelljunga">Örkelljunga (30,24 %)</option>
+                        <option value="ornskoldsvik">Örnsköldsvik (33,85 %)</option>
+                        <option value="ostersund">Östersund (33,72 %)</option>
+                        <option value="osteraker">Österåker (28,93 %)</option>
+                        <option value="osthammar">Östhammar (33,3 %)</option>
+                        <option value="ostra-goinge">Östra Göinge (32,17 %)</option>
+                        <option value="overkalix">Överkalix (34,14 %)</option>
+                        <option value="overtornea">Övertorneå (33,84 %)</option>
                     </select>
+                    <div class="range-labels"><span>Alla 290 kommuner · skattesatser 2026 (SCB)</span></div>
                 </div>
             </div>
 
@@ -641,25 +910,25 @@
 
         <div class="info-section">
             <h2>Löneräknare 2026 — räkna ut din nettolön efter skatt</h2>
-            <p>Din <strong>nettolön</strong> är det belopp du faktiskt får in på kontot efter att alla skatter dragits från din bruttolön. Skillnaden mellan brutto och netto är i Sverige typiskt 28–35 % beroende på inkomst och vilken kommun du bor i. Genomsnittslönen i Sverige 2026 är ca 41 000 kr i månaden — vilket ger en nettolön på ungefär 28 000–30 000 kr beroende på kommunalskatt.</p>
+            <p>Din <strong>nettolön</strong> är det belopp du faktiskt får in på kontot efter att alla skatter dragits från din bruttolön. Skillnaden mellan brutto och netto är i Sverige typiskt 28–35 % beroende på inkomst och vilken kommun du bor i. Genomsnittslönen i Sverige 2026 är ca 41 000 kr i månaden — vilket ger en nettolön på ungefär 31 000–33 000 kr beroende på kommunalskatt.</p>
 
             <h3>Så beräknas din skatt i Sverige</h3>
-            <p>Svenska inkomster beskattas på två nivåer. Den första nivån är <strong>kommunalskatten</strong>, som alla betalar oavsett inkomstnivå. Den andra är den <strong>statliga inkomstskatten</strong>, som enbart träffar inkomster över 615 700 kr per år (ca 51 308 kr/månad) med 20 % på överskjutande belopp. De allra flesta löntagare betalar alltså bara kommunalskatt och berörs aldrig av den statliga skatten.</p>
-            <p>Utöver skatten tillkommer <strong>jobbskatteavdraget</strong> — ett automatiskt skatteavdrag som sänker din faktiska skattebörda, särskilt vid lägre och medelinkomster. Det beräknas av Skatteverket och syns direkt på din skatteberäkning utan att du behöver ansöka om det.</p>
+            <p>Svenska inkomster beskattas på två nivåer. Den första nivån är <strong>kommunalskatten</strong>, som alla betalar oavsett inkomstnivå. Den andra är den <strong>statliga inkomstskatten</strong>, som enbart träffar beskattningsbar inkomst över skiktgränsen 643 000 kr per år (2026). Räknat på bruttolön motsvarar det brytpunkten 660 400 kr per år, ca 55 000 kr/månad, med 20 % på överskjutande belopp. De allra flesta löntagare betalar alltså bara kommunalskatt och berörs aldrig av den statliga skatten.</p>
+            <p>Utöver skatten tillkommer <strong>jobbskatteavdraget</strong> — ett automatiskt skatteavdrag som sänker din faktiska skattebörda. Från 1 januari 2026 är avdraget förstärkt och kan uppgå till drygt 4 300 kr per månad vid en lön runt 44 000 kr. Innan skatten beräknas dras också <strong>grundavdraget</strong> (25 100–45 600 kr per år 2026) från din inkomst. Kalkylatorn räknar även med public service-avgiften (max 1 184 kr/år) och begravningsavgiften (0,292 %, Stockholm 0,070 %, Tranås 0,285 %). Kyrkoavgift ingår inte.</p>
 
             <h3>Kommunalskatt 2026 — varierar kraftigt i Sverige</h3>
             <p>Kommunalskatten finansierar skola, äldreomsorg och infrastruktur i din hemkommun. Till kommunalskatten läggs <strong>regionalskatten</strong> som finansierar sjukvård och kollektivtrafik. Totalt varierar den kombinerade skatten kraftigt:</p>
             <ul>
-                <li><strong>Stockholm:</strong> 20,89 % (kommunalt) + 11,51 % (region) = 32,40 % totalt</li>
+                <li><strong>Stockholm:</strong> 18,22 % (kommunalt) + 12,33 % (region) = 30,55 % totalt</li>
                 <li><strong>Göteborg:</strong> 21,12 % + 11,48 % = 32,60 % totalt</li>
                 <li><strong>Malmö:</strong> 21,24 % + 11,18 % = 32,42 % totalt</li>
-                <li><strong>Lägsta skattekommun:</strong> ca 28,98 % (Vellinge)</li>
-                <li><strong>Högsta skattekommun:</strong> ca 35,15 % (Dorotea)</li>
+                <li><strong>Lägsta skattekommun:</strong> 28,93 % (Österåker)</li>
+                <li><strong>Högsta skattekommun:</strong> 35,65 % (Dorotea)</li>
             </ul>
-            <p>Det innebär att en person med 40 000 kr i bruttolön kan få ut nästan 1 500 kr mer i månaden beroende på om de bor i Sveriges lägst- eller högstskattekommun. Välj rätt kommunalskatt i kalkylatorn ovan för ett exakt resultat.</p>
+            <p>Det innebär att en person med 40 000 kr i bruttolön kan få ut drygt 2 000 kr mer i månaden beroende på om de bor i Sveriges lägst- eller högstskattekommun. Välj rätt kommunalskatt i kalkylatorn ovan för ett exakt resultat.</p>
 
             <h3>Statlig inkomstskatt — enbart för höginkomsttagare</h3>
-            <p>Den statliga inkomstskatten på 20 % aktiveras vid 615 700 kr per år (2026), vilket motsvarar ca 51 308 kr i månaden. Tjänar du 60 000 kr/månad betalar du 20 % extra skatt på de 8 692 kr som överstiger gränsen — alltså ca 1 738 kr extra per månad. Inkomster under gränsen, vilket gäller majoriteten av Sveriges löntagare, berörs inte alls.</p>
+            <p>Den statliga inkomstskatten på 20 % tas ut på beskattningsbar inkomst över skiktgränsen 643 000 kr (2026). Eftersom grundavdraget dras först motsvarar det en bruttolön på 660 400 kr per år — brytpunkten — alltså ca 55 000 kr i månaden. Tjänar du 60 000 kr/månad betalar du 20 % extra skatt på de ca 5 000 kr som överstiger brytpunkten — ungefär 1 000 kr extra per månad. Inkomster under gränsen, vilket gäller majoriteten av Sveriges löntagare, berörs inte alls.</p>
 
             <h3>Arbetsgivaravgifter och den totala lönekostnaden</h3>
             <p>Utöver din bruttolön betalar din arbetsgivare <strong>arbetsgivaravgifter på 31,42 %</strong> (2026). Det innebär att din faktiska lönekostnad för arbetsgivaren är nästan en tredjedel högre än din bruttolön. En anställd med 40 000 kr i bruttolön kostar alltså arbetsgivaren totalt ca 52 500 kr. Arbetsgivaravgifterna finansierar socialförsäkringssystemet — sjukpenning, föräldrapenning och allmän pension.</p>
@@ -673,17 +942,17 @@
 
             <details>
                 <summary>Hur mycket är kommunalskatten i min kommun?</summary>
-                <p>Kommunalskatten varierar mellan ca 18 och 23 % — men till detta ska du lägga regionalskatten (10–12 %), vilket ger en total skattesats på 28–35 %. Genomsnittet i Sverige ligger runt 32,4 %. Du hittar din exakta skattesats på Skatteverkets webbplats eller i din deklaration. I kalkylatorn ovan kan du ange valfri skattesats.</p>
+                <p>Kommunalskatten varierar mellan ca 18 och 23 % — men till detta ska du lägga regionalskatten (10–12 %), vilket ger en total skattesats på 28–35 %. Genomsnittet i Sverige ligger runt 33,3 % (2026). Alla 290 kommuners skattesatser finns i kalkylatorn ovan — välj din kommun i listan.</p>
             </details>
 
             <details>
                 <summary>När betalar jag statlig inkomstskatt?</summary>
-                <p>Statlig inkomstskatt på 20 % aktiveras på den del av din lön som överstiger 615 700 kr per år (ca 51 308 kr/månad) under 2026. De flesta löntagare i Sverige når aldrig denna gräns och betalar därför ingen statlig inkomstskatt. Gränsen räknas upp varje år.</p>
+                <p>Statlig inkomstskatt på 20 % tas ut på beskattningsbar inkomst över 643 000 kr (skiktgränsen 2026). Räknat på bruttolön går gränsen vid 660 400 kr per år, ca 55 000 kr/månad, för dig under 66 år. De flesta löntagare i Sverige når aldrig denna gräns och betalar därför ingen statlig inkomstskatt. Gränsen räknas upp varje år.</p>
             </details>
 
             <details>
                 <summary>Vad är jobbskatteavdraget och vad innebär det för min nettolön?</summary>
-                <p>Jobbskatteavdraget är ett automatiskt skatteavdrag för anställda som sänker den effektiva skattesatsen — framför allt för lägre och medelinkomster. Avdraget beräknas av Skatteverket och syns i din skatteberäkning. Det innebär att din faktiska skatt ofta är lägre än vad ren kommunalskatt antyder. Avdraget fasas gradvis ut vid inkomster över ca 40 000 kr/månaden.</p>
+                <p>Jobbskatteavdraget är ett automatiskt skatteavdrag för anställda som sänker den effektiva skattesatsen — framför allt för lägre och medelinkomster. Avdraget beräknas av Skatteverket och syns i din skatteberäkning. Det innebär att din faktiska skatt ofta är lägre än vad ren kommunalskatt antyder. Avdraget växer med inkomsten upp till ca 40 000 kr/månad och ligger därefter kvar på sin maxnivå — sedan 2024 trappas det inte längre av för höga inkomster. 2026 förstärktes avdraget med cirka 17 miljarder kronor.</p>
             </details>
 
             <details>
@@ -754,37 +1023,21 @@
         <div class="container">
             <p style="margin-bottom:8px;"><a href="/om-oss" style="color:var(--primary,#1a6b4a);text-decoration:none;">Om oss</a> &nbsp;|&nbsp; <a href="/integritetspolicy" style="color:var(--primary,#1a6b4a);text-decoration:none;">Integritetspolicy</a></p>
             <p>&copy; 2026 GratisKalkyl.se — Gratis kalkylatorer online<br>
-            Senast uppdaterad: mars 2026 | <a href="/">Om GratisKalkyl.se</a></p>
+            Senast uppdaterad: september 2026 | <a href="/">Om GratisKalkyl.se</a></p>
             <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Beräkningarna är ungefärliga och kan innehålla fel. Använd resultaten som vägledning, inte som underlag för ekonomiska beslut. Vi ansvarar inte för eventuella felaktigheter.</p>
         </div>
     </footer>
 
     <script>
-        // Tax data for 2026 (komunalskatt + landstingsskatt)
-        const taxData = {
-            'stockholm-20.89-11.51': { kommun: 'Stockholm', lokal: 32.40 },
-            'goteborg-19.88-10.34': { kommun: 'Göteborg', lokal: 30.22 },
-            'malmo-20.36-10.15': { kommun: 'Malmö', lokal: 30.51 },
-            'uppsala-20.39-11.49': { kommun: 'Uppsala', lokal: 31.88 },
-            'linkoping-20.29-11.64': { kommun: 'Linköping', lokal: 31.93 },
-            'orebro-20.46-11.29': { kommun: 'Örebro', lokal: 31.75 },
-            'vasteras-20.18-11.30': { kommun: 'Västerås', lokal: 31.48 },
-            'norrkoping-20.24-11.43': { kommun: 'Norrköping', lokal: 31.67 },
-            'helsingborg-20.60-10.19': { kommun: 'Helsingborg', lokal: 30.79 },
-            'jonkoping-20.62-11.38': { kommun: 'Jönköping', lokal: 32.00 },
-            'umea-20.11-12.40': { kommun: 'Umeå', lokal: 32.51 },
-            'lund-20.36-10.05': { kommun: 'Lund', lokal: 30.41 },
-            'boras-20.35-11.08': { kommun: 'Borås', lokal: 31.43 },
-            'sundsvall-20.07-12.12': { kommun: 'Sundsvall', lokal: 32.19 },
-            'gavle-20.39-11.46': { kommun: 'Gävle', lokal: 31.85 },
-            'eskilstuna-20.32-11.56': { kommun: 'Eskilstuna', lokal: 31.88 },
-            'karlstad-20.54-11.41': { kommun: 'Karlstad', lokal: 31.95 },
-            'vaxjo-20.76-11.24': { kommun: 'Växjö', lokal: 32.00 },
-            'halmstad-20.33-10.72': { kommun: 'Halmstad', lokal: 31.05 },
-            'trollhattan-20.49-11.02': { kommun: 'Trollhättan', lokal: 31.51 },
-            'sundbyberg-20.89-11.51': { kommun: 'Sundbyberg', lokal: 32.40 },
-            'västerort-20.89-11.51': { kommun: 'Västerort', lokal: 32.40 }
-        };
+        // Kommunal skattesats 2026 (kommun + region), källa: SCB, Kommunala skattesatser 2026
+        const KOMMUNER = {"ale":{kommun:"Ale",k:21.32,r:11.48,lokal:32.8},"alingsas":{kommun:"Alingsås",k:21.36,r:11.48,lokal:32.84},"alvesta":{kommun:"Alvesta",k:21.42,r:12.0,lokal:33.42},"aneby":{kommun:"Aneby",k:22.09,r:11.76,lokal:33.85},"arboga":{kommun:"Arboga",k:22.41,r:10.88,lokal:33.29},"arjeplog":{kommun:"Arjeplog",k:23.5,r:11.34,lokal:34.84},"arvidsjaur":{kommun:"Arvidsjaur",k:22.8,r:11.34,lokal:34.14},"arvika":{kommun:"Arvika",k:21.75,r:12.28,lokal:34.03},"askersund":{kommun:"Askersund",k:21.85,r:12.3,lokal:34.15},"avesta":{kommun:"Avesta",k:21.96,r:11.99,lokal:33.95},"bengtsfors":{kommun:"Bengtsfors",k:22.92,r:11.48,lokal:34.4},"berg":{kommun:"Berg",k:22.52,r:11.7,lokal:34.22},"bjurholm":{kommun:"Bjurholm",k:23.15,r:11.85,lokal:35.0},"bjuv":{kommun:"Bjuv",k:20.99,r:11.18,lokal:32.17},"boden":{kommun:"Boden",k:22.6,r:11.34,lokal:33.94},"bollebygd":{kommun:"Bollebygd",k:21.59,r:11.48,lokal:33.07},"bollnas":{kommun:"Bollnäs",k:21.86,r:11.51,lokal:33.37},"borgholm":{kommun:"Borgholm",k:21.58,r:11.86,lokal:33.44},"borlange":{kommun:"Borlänge",k:22.41,r:11.99,lokal:34.4},"boras":{kommun:"Borås",k:21.31,r:11.48,lokal:32.79},"botkyrka":{kommun:"Botkyrka",k:19.9,r:12.33,lokal:32.23},"boxholm":{kommun:"Boxholm",k:21.82,r:11.55,lokal:33.37},"bromolla":{kommun:"Bromölla",k:22.56,r:11.18,lokal:33.74},"bracke":{kommun:"Bräcke",k:23.39,r:11.7,lokal:35.09},"burlov":{kommun:"Burlöv",k:20.09,r:11.18,lokal:31.27},"bastad":{kommun:"Båstad",k:20.23,r:11.18,lokal:31.41},"dals-ed":{kommun:"Dals-Ed",k:23.21,r:11.48,lokal:34.69},"danderyd":{kommun:"Danderyd",k:18.25,r:12.33,lokal:30.58},"degerfors":{kommun:"Degerfors",k:23.0,r:12.3,lokal:35.3},"dorotea":{kommun:"Dorotea",k:23.8,r:11.85,lokal:35.65},"eda":{kommun:"Eda",k:22.27,r:12.28,lokal:34.55},"ekero":{kommun:"Ekerö",k:19.12,r:12.33,lokal:31.45},"eksjo":{kommun:"Eksjö",k:22.26,r:11.76,lokal:34.02},"emmaboda":{kommun:"Emmaboda",k:21.96,r:11.86,lokal:33.82},"enkoping":{kommun:"Enköping",k:21.34,r:11.71,lokal:33.05},"eskilstuna":{kommun:"Eskilstuna",k:22.02,r:10.83,lokal:32.85},"eslov":{kommun:"Eslöv",k:20.54,r:11.18,lokal:31.72},"essunga":{kommun:"Essunga",k:21.57,r:11.48,lokal:33.05},"fagersta":{kommun:"Fagersta",k:22.11,r:10.88,lokal:32.99},"falkenberg":{kommun:"Falkenberg",k:21.1,r:11.4,lokal:32.5},"falkoping":{kommun:"Falköping",k:21.95,r:11.48,lokal:33.43},"falun":{kommun:"Falun",k:22.06,r:11.99,lokal:34.05},"filipstad":{kommun:"Filipstad",k:22.27,r:12.28,lokal:34.55},"finspang":{kommun:"Finspång",k:22.15,r:11.55,lokal:33.7},"flen":{kommun:"Flen",k:22.27,r:10.83,lokal:33.1},"forshaga":{kommun:"Forshaga",k:22.35,r:12.28,lokal:34.63},"fargelanda":{kommun:"Färgelanda",k:22.91,r:11.48,lokal:34.39},"gagnef":{kommun:"Gagnef",k:22.28,r:11.99,lokal:34.27},"gislaved":{kommun:"Gislaved",k:21.99,r:11.76,lokal:33.75},"gnesta":{kommun:"Gnesta",k:22.12,r:10.83,lokal:32.95},"gnosjo":{kommun:"Gnosjö",k:22.24,r:11.76,lokal:34.0},"gotland":{kommun:"Gotland",k:33.6,r:0.0,lokal:33.6},"grums":{kommun:"Grums",k:22.5,r:12.28,lokal:34.78},"grastorp":{kommun:"Grästorp",k:21.99,r:11.48,lokal:33.47},"gullspang":{kommun:"Gullspång",k:22.49,r:11.48,lokal:33.97},"gallivare":{kommun:"Gällivare",k:22.55,r:11.34,lokal:33.89},"gavle":{kommun:"Gävle",k:22.26,r:11.51,lokal:33.77},"goteborg":{kommun:"Göteborg",k:21.12,r:11.48,lokal:32.6},"gotene":{kommun:"Götene",k:22.12,r:11.48,lokal:33.6},"habo":{kommun:"Habo",k:22.17,r:11.76,lokal:33.93},"hagfors":{kommun:"Hagfors",k:22.02,r:12.28,lokal:34.3},"hallsberg":{kommun:"Hallsberg",k:21.55,r:12.3,lokal:33.85},"hallstahammar":{kommun:"Hallstahammar",k:21.81,r:10.88,lokal:32.69},"halmstad":{kommun:"Halmstad",k:20.98,r:11.4,lokal:32.38},"hammaro":{kommun:"Hammarö",k:22.77,r:12.28,lokal:35.05},"haninge":{kommun:"Haninge",k:18.95,r:12.33,lokal:31.28},"haparanda":{kommun:"Haparanda",k:22.5,r:11.34,lokal:33.84},"heby":{kommun:"Heby",k:22.5,r:11.71,lokal:34.21},"hedemora":{kommun:"Hedemora",k:22.16,r:11.99,lokal:34.15},"helsingborg":{kommun:"Helsingborg",k:20.21,r:11.18,lokal:31.39},"herrljunga":{kommun:"Herrljunga",k:22.14,r:11.48,lokal:33.62},"hjo":{kommun:"Hjo",k:22.0,r:11.48,lokal:33.48},"hofors":{kommun:"Hofors",k:22.86,r:11.51,lokal:34.37},"huddinge":{kommun:"Huddinge",k:19.38,r:12.33,lokal:31.71},"hudiksvall":{kommun:"Hudiksvall",k:21.61,r:11.51,lokal:33.12},"hultsfred":{kommun:"Hultsfred",k:21.91,r:11.86,lokal:33.77},"hylte":{kommun:"Hylte",k:22.45,r:11.4,lokal:33.85},"haabo":{kommun:"Håbo",k:21.59,r:11.71,lokal:33.3},"hallefors":{kommun:"Hällefors",k:22.05,r:12.3,lokal:34.35},"harjedalen":{kommun:"Härjedalen",k:22.47,r:11.7,lokal:34.17},"harnosand":{kommun:"Härnösand",k:23.34,r:11.29,lokal:34.63},"harryda":{kommun:"Härryda",k:20.5,r:11.48,lokal:31.98},"hassleholm":{kommun:"Hässleholm",k:21.2,r:11.18,lokal:32.38},"hoganas":{kommun:"Höganäs",k:19.73,r:11.18,lokal:30.91},"hogsby":{kommun:"Högsby",k:22.21,r:11.86,lokal:34.07},"horby":{kommun:"Hörby",k:21.08,r:11.18,lokal:32.26},"hoor":{kommun:"Höör",k:21.45,r:11.18,lokal:32.63},"jokkmokk":{kommun:"Jokkmokk",k:22.95,r:11.34,lokal:34.29},"jarfalla":{kommun:"Järfälla",k:19.19,r:12.33,lokal:31.52},"jonkoping":{kommun:"Jönköping",k:21.64,r:11.76,lokal:33.4},"kalix":{kommun:"Kalix",k:22.55,r:11.34,lokal:33.89},"kalmar":{kommun:"Kalmar",k:21.81,r:11.86,lokal:33.67},"karlsborg":{kommun:"Karlsborg",k:21.32,r:11.48,lokal:32.8},"karlshamn":{kommun:"Karlshamn",k:21.76,r:12.04,lokal:33.8},"karlskoga":{kommun:"Karlskoga",k:22.0,r:12.3,lokal:34.3},"karlskrona":{kommun:"Karlskrona",k:21.65,r:12.04,lokal:33.69},"karlstad":{kommun:"Karlstad",k:21.27,r:12.28,lokal:33.55},"katrineholm":{kommun:"Katrineholm",k:22.12,r:10.83,lokal:32.95},"kil":{kommun:"Kil",k:22.35,r:12.28,lokal:34.63},"kinda":{kommun:"Kinda",k:21.45,r:11.55,lokal:33.0},"kiruna":{kommun:"Kiruna",k:23.05,r:11.34,lokal:34.39},"klippan":{kommun:"Klippan",k:20.75,r:11.18,lokal:31.93},"knivsta":{kommun:"Knivsta",k:20.91,r:11.71,lokal:32.62},"kramfors":{kommun:"Kramfors",k:23.14,r:11.29,lokal:34.43},"kristianstad":{kommun:"Kristianstad",k:21.46,r:11.18,lokal:32.64},"kristinehamn":{kommun:"Kristinehamn",k:21.97,r:12.28,lokal:34.25},"krokom":{kommun:"Krokom",k:22.17,r:11.7,lokal:33.87},"kumla":{kommun:"Kumla",k:21.54,r:12.3,lokal:33.84},"kungsbacka":{kommun:"Kungsbacka",k:21.18,r:11.4,lokal:32.58},"kungsor":{kommun:"Kungsör",k:22.03,r:10.88,lokal:32.91},"kungalv":{kommun:"Kungälv",k:21.44,r:11.48,lokal:32.92},"kavlinge":{kommun:"Kävlinge",k:18.41,r:11.18,lokal:29.59},"koping":{kommun:"Köping",k:22.16,r:10.88,lokal:33.04},"laholm":{kommun:"Laholm",k:21.4,r:11.4,lokal:32.8},"landskrona":{kommun:"Landskrona",k:20.24,r:11.18,lokal:31.42},"laxa":{kommun:"Laxå",k:22.7,r:12.3,lokal:35.0},"lekeberg":{kommun:"Lekeberg",k:21.43,r:12.3,lokal:33.73},"leksand":{kommun:"Leksand",k:21.81,r:11.99,lokal:33.8},"lerum":{kommun:"Lerum",k:20.55,r:11.48,lokal:32.03},"lessebo":{kommun:"Lessebo",k:21.81,r:12.0,lokal:33.81},"lidingo":{kommun:"Lidingö",k:17.34,r:12.33,lokal:29.67},"lidkoping":{kommun:"Lidköping",k:21.26,r:11.48,lokal:32.74},"lilla-edet":{kommun:"Lilla Edet",k:22.37,r:11.48,lokal:33.85},"lindesberg":{kommun:"Lindesberg",k:22.3,r:12.3,lokal:34.6},"linkoping":{kommun:"Linköping",k:20.2,r:11.55,lokal:31.75},"ljungby":{kommun:"Ljungby",k:21.07,r:12.0,lokal:33.07},"ljusdal":{kommun:"Ljusdal",k:22.36,r:11.51,lokal:33.87},"ljusnarsberg":{kommun:"Ljusnarsberg",k:21.5,r:12.3,lokal:33.8},"lomma":{kommun:"Lomma",k:19.54,r:11.18,lokal:30.72},"ludvika":{kommun:"Ludvika",k:22.06,r:11.99,lokal:34.05},"lulea":{kommun:"Luleå",k:22.5,r:11.34,lokal:33.84},"lund":{kommun:"Lund",k:21.24,r:11.18,lokal:32.42},"lycksele":{kommun:"Lycksele",k:23.05,r:11.85,lokal:34.9},"lysekil":{kommun:"Lysekil",k:22.46,r:11.48,lokal:33.94},"malmo":{kommun:"Malmö",k:21.24,r:11.18,lokal:32.42},"malung-salen":{kommun:"Malung-Sälen",k:22.46,r:11.99,lokal:34.45},"mala":{kommun:"Malå",k:23.35,r:11.85,lokal:35.2},"mariestad":{kommun:"Mariestad",k:21.26,r:11.48,lokal:32.74},"mark":{kommun:"Mark",k:21.51,r:11.48,lokal:32.99},"markaryd":{kommun:"Markaryd",k:21.31,r:12.0,lokal:33.31},"mellerud":{kommun:"Mellerud",k:22.6,r:11.48,lokal:34.08},"mjolby":{kommun:"Mjölby",k:21.9,r:11.55,lokal:33.45},"mora":{kommun:"Mora",k:22.33,r:11.99,lokal:34.32},"motala":{kommun:"Motala",k:21.7,r:11.55,lokal:33.25},"mullsjo":{kommun:"Mullsjö",k:22.34,r:11.76,lokal:34.1},"munkedal":{kommun:"Munkedal",k:23.38,r:11.48,lokal:34.86},"munkfors":{kommun:"Munkfors",k:22.02,r:12.28,lokal:34.3},"molndal":{kommun:"Mölndal",k:20.51,r:11.48,lokal:31.99},"monsteras":{kommun:"Mönsterås",k:22.21,r:11.86,lokal:34.07},"morbylanga":{kommun:"Mörbylånga",k:22.21,r:11.86,lokal:34.07},"nacka":{kommun:"Nacka",k:17.78,r:12.33,lokal:30.11},"nora":{kommun:"Nora",k:22.25,r:12.3,lokal:34.55},"norberg":{kommun:"Norberg",k:22.66,r:10.88,lokal:33.54},"nordanstig":{kommun:"Nordanstig",k:22.51,r:11.51,lokal:34.02},"nordmaling":{kommun:"Nordmaling",k:23.25,r:11.85,lokal:35.1},"norrkoping":{kommun:"Norrköping",k:21.75,r:11.55,lokal:33.3},"norrtalje":{kommun:"Norrtälje",k:19.72,r:12.33,lokal:32.05},"norsjo":{kommun:"Norsjö",k:23.35,r:11.85,lokal:35.2},"nybro":{kommun:"Nybro",k:22.33,r:11.86,lokal:34.19},"nykvarn":{kommun:"Nykvarn",k:19.97,r:12.33,lokal:32.3},"nykoping":{kommun:"Nyköping",k:21.42,r:10.83,lokal:32.25},"nynashamn":{kommun:"Nynäshamn",k:19.85,r:12.33,lokal:32.18},"nassjo":{kommun:"Nässjö",k:22.54,r:11.76,lokal:34.3},"ockelbo":{kommun:"Ockelbo",k:22.76,r:11.51,lokal:34.27},"olofstrom":{kommun:"Olofström",k:21.71,r:12.04,lokal:33.75},"orsa":{kommun:"Orsa",k:22.31,r:11.99,lokal:34.3},"orust":{kommun:"Orust",k:22.21,r:11.48,lokal:33.69},"osby":{kommun:"Osby",k:22.81,r:11.18,lokal:33.99},"oskarshamn":{kommun:"Oskarshamn",k:22.35,r:11.86,lokal:34.21},"ovanaker":{kommun:"Ovanåker",k:21.86,r:11.51,lokal:33.37},"oxelosund":{kommun:"Oxelösund",k:22.22,r:10.83,lokal:33.05},"pajala":{kommun:"Pajala",k:23.4,r:11.34,lokal:34.74},"partille":{kommun:"Partille",k:19.88,r:11.48,lokal:31.36},"perstorp":{kommun:"Perstorp",k:20.81,r:11.18,lokal:31.99},"pitea":{kommun:"Piteå",k:22.25,r:11.34,lokal:33.59},"ragunda":{kommun:"Ragunda",k:23.22,r:11.7,lokal:34.92},"robertsfors":{kommun:"Robertsfors",k:23.15,r:11.85,lokal:35.0},"ronneby":{kommun:"Ronneby",k:21.64,r:12.04,lokal:33.68},"rattvik":{kommun:"Rättvik",k:21.81,r:11.99,lokal:33.8},"sala":{kommun:"Sala",k:22.31,r:10.88,lokal:33.19},"salem":{kommun:"Salem",k:19.67,r:12.33,lokal:32.0},"sandviken":{kommun:"Sandviken",k:21.61,r:11.51,lokal:33.12},"sigtuna":{kommun:"Sigtuna",k:19.5,r:12.33,lokal:31.83},"simrishamn":{kommun:"Simrishamn",k:20.51,r:11.18,lokal:31.69},"sjobo":{kommun:"Sjöbo",k:20.92,r:11.18,lokal:32.1},"skara":{kommun:"Skara",k:21.9,r:11.48,lokal:33.38},"skelleftea":{kommun:"Skellefteå",k:22.6,r:11.85,lokal:34.45},"skinnskatteberg":{kommun:"Skinnskatteberg",k:22.46,r:10.88,lokal:33.34},"skurup":{kommun:"Skurup",k:20.42,r:11.18,lokal:31.6},"skovde":{kommun:"Skövde",k:21.61,r:11.48,lokal:33.09},"smedjebacken":{kommun:"Smedjebacken",k:22.45,r:11.99,lokal:34.44},"solleftea":{kommun:"Sollefteå",k:23.39,r:11.29,lokal:34.68},"sollentuna":{kommun:"Sollentuna",k:18.12,r:12.33,lokal:30.45},"solna":{kommun:"Solna",k:17.37,r:12.33,lokal:29.7},"sorsele":{kommun:"Sorsele",k:23.6,r:11.85,lokal:35.45},"sotenas":{kommun:"Sotenäs",k:21.99,r:11.48,lokal:33.47},"staffanstorp":{kommun:"Staffanstorp",k:18.94,r:11.18,lokal:30.12},"stenungsund":{kommun:"Stenungsund",k:21.64,r:11.48,lokal:33.12},"stockholm":{kommun:"Stockholm",k:18.22,r:12.33,lokal:30.55},"storfors":{kommun:"Storfors",k:22.7,r:12.28,lokal:34.98},"storuman":{kommun:"Storuman",k:23.1,r:11.85,lokal:34.95},"strangnas":{kommun:"Strängnäs",k:21.67,r:10.83,lokal:32.5},"stromstad":{kommun:"Strömstad",k:21.91,r:11.48,lokal:33.39},"stromsund":{kommun:"Strömsund",k:23.22,r:11.7,lokal:34.92},"sundbyberg":{kommun:"Sundbyberg",k:19.25,r:12.33,lokal:31.58},"sundsvall":{kommun:"Sundsvall",k:22.59,r:11.29,lokal:33.88},"sunne":{kommun:"Sunne",k:21.47,r:12.28,lokal:33.75},"surahammar":{kommun:"Surahammar",k:22.31,r:10.88,lokal:33.19},"svalov":{kommun:"Svalöv",k:20.74,r:11.18,lokal:31.92},"svedala":{kommun:"Svedala",k:20.24,r:11.18,lokal:31.42},"svenljunga":{kommun:"Svenljunga",k:22.05,r:11.48,lokal:33.53},"saffle":{kommun:"Säffle",k:21.52,r:12.28,lokal:33.8},"sater":{kommun:"Säter",k:22.31,r:11.99,lokal:34.3},"savsjo":{kommun:"Sävsjö",k:21.92,r:11.76,lokal:33.68},"soderhamn":{kommun:"Söderhamn",k:21.66,r:11.51,lokal:33.17},"soderkoping":{kommun:"Söderköping",k:21.98,r:11.55,lokal:33.53},"sodertalje":{kommun:"Södertälje",k:20.05,r:12.33,lokal:32.38},"solvesborg":{kommun:"Sölvesborg",k:21.82,r:12.04,lokal:33.86},"tanum":{kommun:"Tanum",k:21.56,r:11.48,lokal:33.04},"tibro":{kommun:"Tibro",k:21.71,r:11.48,lokal:33.19},"tidaholm":{kommun:"Tidaholm",k:22.07,r:11.48,lokal:33.55},"tierp":{kommun:"Tierp",k:21.29,r:11.71,lokal:33.0},"timra":{kommun:"Timrå",k:23.09,r:11.29,lokal:34.38},"tingsryd":{kommun:"Tingsryd",k:22.0,r:12.0,lokal:34.0},"tjorn":{kommun:"Tjörn",k:21.71,r:11.48,lokal:33.19},"tomelilla":{kommun:"Tomelilla",k:20.61,r:11.18,lokal:31.79},"torsby":{kommun:"Torsby",k:22.02,r:12.28,lokal:34.3},"torsas":{kommun:"Torsås",k:21.93,r:11.86,lokal:33.79},"tranemo":{kommun:"Tranemo",k:21.5,r:11.48,lokal:32.98},"tranas":{kommun:"Tranås",k:22.01,r:11.76,lokal:33.77},"trelleborg":{kommun:"Trelleborg",k:20.4,r:11.18,lokal:31.58},"trollhattan":{kommun:"Trollhättan",k:22.36,r:11.48,lokal:33.84},"trosa":{kommun:"Trosa",k:21.2,r:10.83,lokal:32.03},"tyreso":{kommun:"Tyresö",k:19.5,r:12.33,lokal:31.83},"taby":{kommun:"Täby",k:17.55,r:12.33,lokal:29.88},"toreboda":{kommun:"Töreboda",k:21.72,r:11.48,lokal:33.2},"uddevalla":{kommun:"Uddevalla",k:22.16,r:11.48,lokal:33.64},"ulricehamn":{kommun:"Ulricehamn",k:21.05,r:11.48,lokal:32.53},"umea":{kommun:"Umeå",k:22.8,r:11.85,lokal:34.65},"upplands-vasby":{kommun:"Upplands Väsby",k:19.42,r:12.33,lokal:31.75},"upplands-bro":{kommun:"Upplands-Bro",k:19.4,r:12.33,lokal:31.73},"uppsala":{kommun:"Uppsala",k:21.14,r:11.71,lokal:32.85},"uppvidinge":{kommun:"Uppvidinge",k:21.8,r:12.0,lokal:33.8},"vadstena":{kommun:"Vadstena",k:22.8,r:11.55,lokal:34.35},"vaggeryd":{kommun:"Vaggeryd",k:21.49,r:11.76,lokal:33.25},"valdemarsvik":{kommun:"Valdemarsvik",k:22.48,r:11.55,lokal:34.03},"vallentuna":{kommun:"Vallentuna",k:18.9,r:12.33,lokal:31.23},"vansbro":{kommun:"Vansbro",k:22.29,r:11.99,lokal:34.28},"vara":{kommun:"Vara",k:21.77,r:11.48,lokal:33.25},"varberg":{kommun:"Varberg",k:20.33,r:11.4,lokal:31.73},"vaxholm":{kommun:"Vaxholm",k:19.3,r:12.33,lokal:31.63},"vellinge":{kommun:"Vellinge",k:18.5,r:11.18,lokal:29.68},"vetlanda":{kommun:"Vetlanda",k:22.01,r:11.76,lokal:33.77},"vilhelmina":{kommun:"Vilhelmina",k:23.65,r:11.85,lokal:35.5},"vimmerby":{kommun:"Vimmerby",k:22.36,r:11.86,lokal:34.22},"vindeln":{kommun:"Vindeln",k:23.35,r:11.85,lokal:35.2},"vingaker":{kommun:"Vingåker",k:22.67,r:10.83,lokal:33.5},"vargarda":{kommun:"Vårgårda",k:21.61,r:11.48,lokal:33.09},"vanersborg":{kommun:"Vänersborg",k:22.21,r:11.48,lokal:33.69},"vannas":{kommun:"Vännäs",k:23.35,r:11.85,lokal:35.2},"varmdo":{kommun:"Värmdö",k:18.98,r:12.33,lokal:31.31},"varnamo":{kommun:"Värnamo",k:21.52,r:11.76,lokal:33.28},"vastervik":{kommun:"Västervik",k:21.16,r:11.86,lokal:33.02},"vasteras":{kommun:"Västerås",k:20.36,r:10.88,lokal:31.24},"vaxjo":{kommun:"Växjö",k:20.19,r:12.0,lokal:32.19},"ydre":{kommun:"Ydre",k:22.55,r:11.55,lokal:34.1},"ystad":{kommun:"Ystad",k:20.11,r:11.18,lokal:31.29},"amal":{kommun:"Åmål",k:22.46,r:11.48,lokal:33.94},"ange":{kommun:"Ånge",k:23.33,r:11.29,lokal:34.62},"are":{kommun:"Åre",k:22.22,r:11.7,lokal:33.92},"arjang":{kommun:"Årjäng",k:21.97,r:12.28,lokal:34.25},"asele":{kommun:"Åsele",k:23.6,r:11.85,lokal:35.45},"astorp":{kommun:"Åstorp",k:20.29,r:11.18,lokal:31.47},"atvidaberg":{kommun:"Åtvidaberg",k:22.39,r:11.55,lokal:33.94},"almhult":{kommun:"Älmhult",k:21.86,r:12.0,lokal:33.86},"alvdalen":{kommun:"Älvdalen",k:22.78,r:11.99,lokal:34.77},"alvkarleby":{kommun:"Älvkarleby",k:22.69,r:11.71,lokal:34.4},"alvsbyn":{kommun:"Älvsbyn",k:22.45,r:11.34,lokal:33.79},"angelholm":{kommun:"Ängelholm",k:20.17,r:11.18,lokal:31.35},"ockero":{kommun:"Öckerö",k:21.56,r:11.48,lokal:33.04},"odeshog":{kommun:"Ödeshög",k:22.4,r:11.55,lokal:33.95},"orebro":{kommun:"Örebro",k:21.35,r:12.3,lokal:33.65},"orkelljunga":{kommun:"Örkelljunga",k:19.06,r:11.18,lokal:30.24},"ornskoldsvik":{kommun:"Örnsköldsvik",k:22.56,r:11.29,lokal:33.85},"ostersund":{kommun:"Östersund",k:22.02,r:11.7,lokal:33.72},"osteraker":{kommun:"Österåker",k:16.6,r:12.33,lokal:28.93},"osthammar":{kommun:"Östhammar",k:21.59,r:11.71,lokal:33.3},"ostra-goinge":{kommun:"Östra Göinge",k:20.99,r:11.18,lokal:32.17},"overkalix":{kommun:"Överkalix",k:22.8,r:11.34,lokal:34.14},"overtornea":{kommun:"Övertorneå",k:22.5,r:11.34,lokal:33.84}};
+        const taxData = KOMMUNER;
+
+        // Årskonstanter 2026 (Skatteverket "Belopp och procent 2026", regeringen.se prisbasbelopp 2026)
+        const PBB = 59200;              // Prisbasbelopp 2026
+        const SKIKTGRANS = 643000;      // Statlig inkomstskatt 20 % på beskattningsbar inkomst över detta
+        const PS_AVGIFT_MAX = 1184;     // Public service-avgift 2026: 1 % av beskattningsbar inkomst, max 1 184 kr
+        const BEGRAVNING = { default: 0.292, stockholm: 0.070, tranas: 0.285 }; // Begravningsavgift 2026, % av beskattningsbar inkomst
 
         // Elements
         const inputs = {
@@ -831,27 +1084,29 @@
             requestAnimationFrame(tick);
         }
 
-        // Jobbskatteavdrag 2026 (IL 67 kap, under 66 år)
-        // Beräknas på förvärvsinkomst (W) och kommunal skattesats (S)
-        function calcJSA(W, S) {
-            if (W <= 0) return 0;
-            const PBB = 57300; // Prisbasbelopp 2026
-            let avdrag = 0;
-            if (W <= 0.91 * PBB) {
-                avdrag = 0;
-            } else if (W <= 2.72 * PBB) {
-                avdrag = (W - 0.91 * PBB) * 0.354 * S;
-            } else if (W <= 5.00 * PBB) {
-                avdrag = ((2.72 - 0.91) * PBB * 0.354 + (W - 2.72 * PBB) * (0.354 + 0.1)) * S;
-            } else if (W <= 7.04 * PBB) {
-                const jsa5 = ((2.72 - 0.91) * PBB * 0.354 + (5.00 - 2.72) * PBB * 0.454) * S;
-                avdrag = jsa5 - (W - 5.00 * PBB) * 0.030 * S;
-            } else {
-                const jsa5 = ((2.72 - 0.91) * PBB * 0.354 + (5.00 - 2.72) * PBB * 0.454) * S;
-                const jsa704 = jsa5 - (7.04 - 5.00) * PBB * 0.030 * S;
-                avdrag = Math.max(0, jsa704 - (W - 7.04 * PBB) * 0.03 * S);
-            }
-            return Math.max(0, avdrag);
+        // Grundavdrag 2026 (IL 63 kap 3 §, under 66 år). Avrundas uppåt till helt hundratal.
+        function calcGrundavdrag(FI) {
+            if (FI <= 0) return 0;
+            let ga;
+            if (FI <= 0.99 * PBB) ga = 0.423 * PBB;
+            else if (FI <= 2.72 * PBB) ga = 0.225 * PBB + 0.2 * FI;
+            else if (FI <= 3.11 * PBB) ga = 0.770 * PBB;
+            else if (FI <= 7.88 * PBB) ga = 1.081 * PBB - 0.1 * FI;
+            else ga = 0.293 * PBB;
+            ga = Math.ceil(ga / 100) * 100;
+            return Math.min(ga, FI);
+        }
+
+        // Jobbskatteavdrag 2026 (IL 67 kap 7 §, under 66 år) — förstärkt från 1 jan 2026
+        // AI = arbetsinkomst, GA = grundavdrag, S = kommunal skattesats (kommun + region)
+        function calcJSA(AI, GA, S) {
+            if (AI <= 0) return 0;
+            let underlag;
+            if (AI <= 0.91 * PBB) underlag = AI - GA;
+            else if (AI <= 3.24 * PBB) underlag = 0.91 * PBB + 0.3874 * (AI - 0.91 * PBB) - GA;
+            else if (AI <= 8.08 * PBB) underlag = 1.813 * PBB + 0.251 * (AI - 3.24 * PBB) - GA;
+            else underlag = 3.027 * PBB - GA;
+            return Math.max(0, underlag * S);
         }
 
         // Shared state for copy/share
@@ -864,24 +1119,32 @@
             const taxInfo = taxData[kommun];
             const lokalSkatt = taxInfo.lokal / 100;
 
-            // Årslön brutto
+            // Årslön brutto = förvärvsinkomst
             const arslonBrutto = manadslonBrutto * 12;
 
-            // Statlig skatt (20% på inkomst över 615 700 kr)
-            const statligGrans = 615700;
+            // Grundavdrag och beskattningsbar förvärvsinkomst (avrundas nedåt till helt hundratal)
+            const grundavdrag = calcGrundavdrag(arslonBrutto);
+            const beskattningsbar = Math.max(0, Math.floor((arslonBrutto - grundavdrag) / 100) * 100);
+
+            // Kommunalskatt (kommun + region) på beskattningsbar inkomst
+            const kommunalskat = beskattningsbar * lokalSkatt;
+
+            // Statlig inkomstskatt: 20 % på beskattningsbar inkomst över skiktgränsen
             let statligSkatt = 0;
-            if (arslonBrutto > statligGrans) {
-                statligSkatt = (arslonBrutto - statligGrans) * 0.20;
+            if (beskattningsbar > SKIKTGRANS) {
+                statligSkatt = (beskattningsbar - SKIKTGRANS) * 0.20;
             }
 
-            // Kommunalskatt (innan JSA)
-            const kommunalskat = arslonBrutto * lokalSkatt;
+            // Jobbskatteavdrag 2026 (kan inte överstiga kommunal + statlig skatt)
+            const jsa = Math.min(calcJSA(arslonBrutto, grundavdrag, lokalSkatt), kommunalskat + statligSkatt);
 
-            // Jobbskatteavdrag 2026
-            const jsa = calcJSA(arslonBrutto, lokalSkatt);
+            // Public service-avgift och begravningsavgift
+            const psAvgift = Math.min(beskattningsbar * 0.01, PS_AVGIFT_MAX);
+            const begrSats = (BEGRAVNING[kommun] !== undefined ? BEGRAVNING[kommun] : BEGRAVNING.default) / 100;
+            const begrAvgift = beskattningsbar * begrSats;
 
             // Total skatt (efter JSA)
-            const totalSkattAr = kommunalskat + statligSkatt - jsa;
+            const totalSkattAr = Math.max(0, kommunalskat + statligSkatt - jsa + psAvgift + begrAvgift);
             const totalSkattMånad = totalSkattAr / 12;
 
             // Netto
@@ -905,7 +1168,7 @@
             animateNum('nettoMånad', nettoMånad, v => fmt(v));
             document.getElementById('nettoÅr').textContent = fmt(nettoAr) + ' per år';
             animateNum('totalSkattMånad', totalSkattMånad, v => fmt(v));
-            document.getElementById('skattProcent').textContent = fmtPct(totalSkattAr / arslonBrutto * 100);
+            document.getElementById('skattProcent').textContent = arslonBrutto > 0 ? fmtPct(totalSkattAr / arslonBrutto * 100) : '';
             animateNum('kommunalskat', kommunalskat / 12, v => fmt(v));
             document.getElementById('effektivSkatt').textContent = fmtPct(effektivSkattesats);
 
@@ -970,8 +1233,10 @@
                 inputs.manadslonBrutto.num.value = lon;
                 inputs.manadslonBrutto.range.value = lon;
             }
-            if (params.get('k') && taxData[params.get('k')]) {
-                document.getElementById('kommun').value = params.get('k');
+            if (params.get('k')) {
+                let k = params.get('k');
+                if (!taxData[k]) k = k.split('-')[0]; // äldre delningslänkar: "stockholm-20.89-11.51"
+                if (taxData[k]) document.getElementById('kommun').value = k;
             }
         }
 

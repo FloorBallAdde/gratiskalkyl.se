@@ -815,15 +815,34 @@
     function fmt(n) { return Math.round(n).toLocaleString('sv-SE') + ' kr'; }
     function fmtH(n) { return Math.round(n) + ' kr/h'; }
 
-    // ─── Grundavdrag approximation 2026 ──────────────────────────────────────
-    function grundavdrag(inkomst) {
-        if (inkomst <= 0) return 0;
-        if (inkomst <= 20000) return inkomst;
-        if (inkomst <= 51700) return 13900;
-        if (inkomst <= 127400) return 13900 + (inkomst - 51700) * 0.2759;
-        if (inkomst <= 368900) return 34820;
-        if (inkomst <= 544100) return Math.max(23000, 34820 - (inkomst - 368900) * 0.065);
-        return 23000;
+    // ─── Årskonstanter 2026 (Skatteverket "Belopp och procent 2026") ────────
+    const PBB = 59200;            // prisbasbelopp 2026
+    const SKIKTGRANS = 643000;    // statlig skatt 20 % på beskattningsbar inkomst över detta
+    const PS_AVGIFT_MAX = 1184;   // public service-avgift: 1 % av beskattningsbar inkomst, max 1 184 kr
+    const EGENAVGIFT = 0.2897;    // egenavgifter 2026 (full nivå)
+
+    // ─── Grundavdrag 2026 (IL 63 kap 3 §, under 66 år) ────────────────────────
+    function grundavdrag(fi) {
+        if (fi <= 0) return 0;
+        let ga;
+        if (fi <= 0.99 * PBB) ga = 0.423 * PBB;
+        else if (fi <= 2.72 * PBB) ga = 0.225 * PBB + 0.2 * fi;
+        else if (fi <= 3.11 * PBB) ga = 0.770 * PBB;
+        else if (fi <= 7.88 * PBB) ga = 1.081 * PBB - 0.1 * fi;
+        else ga = 0.293 * PBB;
+        ga = Math.ceil(ga / 100) * 100;
+        return Math.min(ga, fi);
+    }
+
+    // ─── Jobbskatteavdrag 2026 (IL 67 kap 7 §) — gäller även aktiv näringsinkomst ─
+    function jobbskatteavdrag(ai, ga, s) {
+        if (ai <= 0) return 0;
+        let u;
+        if (ai <= 0.91 * PBB) u = ai - ga;
+        else if (ai <= 3.24 * PBB) u = 0.91 * PBB + 0.3874 * (ai - 0.91 * PBB) - ga;
+        else if (ai <= 8.08 * PBB) u = 1.813 * PBB + 0.251 * (ai - 3.24 * PBB) - ga;
+        else u = 3.027 * PBB - ga;
+        return Math.max(0, u * s);
     }
 
     // ─── Core calculation ─────────────────────────────────────────────────────
@@ -840,23 +859,21 @@
         const overheadAmt = billingYear * (overheadPct / 100);
         const vinst = billingYear - overheadAmt;
 
-        // Egenavgifter 2026: 28.97% on 97% of profit
-        const ea = vinst * 0.97 * 0.2897;
-        const ea_avdrag = ea * 0.5; // 50% of EA is tax-deductible
+        // Egenavgifter 2026: 28,97 % på avgiftsunderlaget. Avgifterna är avdragsgilla,
+        // så underlaget blir vinst − egenavgifter ⇒ ea = vinst × 0,2897 / 1,2897
+        const ea = vinst * EGENAVGIFT / (1 + EGENAVGIFT);
 
-        // Taxable income
-        let taxable = Math.max(0, vinst - ea - ea_avdrag);
-        const ga = grundavdrag(taxable);
-        taxable = Math.max(0, taxable - ga);
+        // Förvärvsinkomst, grundavdrag och beskattningsbar inkomst
+        const forvarvsinkomst = Math.max(0, vinst - ea);
+        const ga = grundavdrag(forvarvsinkomst);
+        const taxable = Math.max(0, Math.floor((forvarvsinkomst - ga) / 100) * 100);
 
-        // Income tax
-        const statligGrans = 615700;
-        let inkomstskatt = 0;
-        if (taxable > statligGrans) {
-            inkomstskatt = statligGrans * (taxPct / 100) + (taxable - statligGrans) * (taxPct / 100 + 0.20);
-        } else {
-            inkomstskatt = taxable * (taxPct / 100);
-        }
+        // Inkomstskatt: kommunal + statlig − jobbskatteavdrag + public service-avgift
+        const kommunal = taxable * (taxPct / 100);
+        const statlig = Math.max(0, taxable - SKIKTGRANS) * 0.20;
+        const jsa = Math.min(jobbskatteavdrag(forvarvsinkomst, ga, taxPct / 100), kommunal + statlig);
+        const psAvgift = Math.min(taxable * 0.01, PS_AVGIFT_MAX);
+        const inkomstskatt = Math.max(0, kommunal + statlig - jsa + psAvgift);
 
         const nettoYear = vinst - ea - inkomstskatt;
         const nettoMonth = nettoYear / 12;

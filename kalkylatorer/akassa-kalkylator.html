@@ -19,7 +19,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
     <title>A-kassekalkylator 2026 – Räkna ut din ersättning på 60 sek | Gratis</title>
-    <meta name="description" content="Räkna ut din a-kassa 2026: dagpenning (max 1 200 kr/dag), månadsersättning brutto och netto. Inkluderar 80%-regeln första 100 dagarna och nya taket. Skriv in din lön – svar direkt. Gratis kalkylator.">
+    <meta name="description" content="Räkna ut din a-kassa 2026: ersättning (max 27 200 kr/mån), dagpenning brutto och netto. Nya reglerna: 80 % dag 1–100, 70 % dag 101–200, 65 % dag 201–300, tak 34 000 kr/mån. Skriv in din lön – svar direkt. Gratis kalkylator.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/akassa-kalkylator">
     <meta property="og:title" content="A-kassekalkylator 2026 – Räkna ut din a-kassa-ersättning">
@@ -43,7 +43,7 @@
           "name": "Hur mycket är a-kassan 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Med inkomstbaserad a-kassa får du 80 % av din tidigare dagsinkomst de första 200 dagarna, och 70 % dag 201–300. Dagsinkomsten beräknas som månadslon delat med 22. Taket är 1 300 kr per dag (brutto), vilket motsvarar ca 28 600 kr/månad. Har du grundförsäkringen utan inkomstbaserat skydd är beloppet 510 kr/dag."
+            "text": "Enligt reglerna som gäller sedan 1 oktober 2025 får du med minst 12 månaders medlemskap 80 % av din tidigare månadsinkomst dag 1–100, 70 % dag 101–200 och 65 % dag 201–300. Inkomster över taket 34 000 kr/månad räknas inte, så max ersättning är 27 200 kr/månad (ca 1 236 kr per dag) de första 100 dagarna. Med 6–11 månaders medlemskap är nivån 60 % och under 6 månader 50 %."
           }
         },
         {
@@ -51,7 +51,7 @@
           "name": "Hur länge kan man få a-kassa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Du kan som mest få a-kassa i 300 ersättningsdagar (arbetsdagar, måndag–fredag). Det motsvarar ungefär 14 månader. De 300 dagarna delas upp i en normalperiod (200 dagar) och en förlängningsperiod (100 dagar) med något lägre ersättningsnivå. Barn under 18 år ger rätt till 150 extra dagar."
+            "text": "Antalet ersättningsdagar beror på hur många månader du haft inkomst de senaste 12 månaderna: 11–12 månader ger 300 dagar (ca 14 månader), 8–10 månader ger 200 dagar, 4–7 månader ger 100 dagar och den som precis uppfyller inkomstvillkoret får 66 dagar. Ersättningen trappas ned efter dag 100 och dag 200."
           }
         },
         {
@@ -59,7 +59,7 @@
           "name": "Vad krävs för att få inkomstbaserad a-kassa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "För inkomstbaserad a-kassa krävs att du: (1) har varit medlem i en a-kassa i minst 12 månader, (2) har arbetat minst 80 timmar per månad under minst 6 av de senaste 12 månaderna (arbetsvillkoret), och (3) är aktivt arbetssökande via Arbetsförmedlingen. Saknar du 12 månaders medlemskap kan du ändå få grundbelopp på 510 kr/dag."
+            "text": "Sedan 1 oktober 2025 gäller ett inkomstvillkor: du ska ha tjänat minst 120 000 kr de senaste 12 månaderna och minst 11 000 kr/månad under minst 4 av månaderna. För 80 % ersättning krävs dessutom minst 12 månaders medlemskap i en a-kassa (6–11 månader ger 60 %, kortare tid 50 %). Du måste vara inskriven som arbetssökande hos Arbetsförmedlingen och aktivt söka jobb."
           }
         },
         {
@@ -588,12 +588,6 @@
     </div>
 
     <div class="calc-card">
-        <!-- Type toggle -->
-        <div class="type-toggle" role="group" aria-label="Välj ersättningstyp">
-            <button class="type-btn active" id="btn-income" onclick="setType('income')">Inkomstbaserad</button>
-            <button class="type-btn" id="btn-basic" onclick="setType('basic')">Grundbelopp (510 kr/dag)</button>
-        </div>
-
         <!-- Inputs -->
         <div class="form-grid" id="income-inputs">
             <div class="field">
@@ -602,7 +596,25 @@
                     <input type="number" id="salary" value="38000" min="1000" max="200000" step="500" oninput="calculate()">
                     <span class="input-unit">kr</span>
                 </div>
-                <span class="field-hint">Genomsnittlig bruttolön de senaste 12 månaderna</span>
+                <span class="field-hint">Genomsnittlig bruttolön de senaste 12 månaderna (tak 34 000 kr)</span>
+            </div>
+            <div class="field">
+                <label for="medlem">Medlem i a-kassa sedan</label>
+                <select id="medlem" onchange="calculate()" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:1rem;background:var(--card-bg,#fff);color:inherit;">
+                    <option value="12" selected>Minst 12 månader (80 %)</option>
+                    <option value="6">6–11 månader (60 %)</option>
+                    <option value="0">Mindre än 6 månader (50 %)</option>
+                </select>
+                <span class="field-hint">Nivån beror på hur länge du varit medlem</span>
+            </div>
+            <div class="field">
+                <label for="manader">Månader med inkomst senaste året</label>
+                <select id="manader" onchange="calculate()" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:1rem;background:var(--card-bg,#fff);color:inherit;">
+                    <option value="300" selected>11–12 månader (300 dagar)</option>
+                    <option value="200">8–10 månader (200 dagar)</option>
+                    <option value="100">4–7 månader (100 dagar)</option>
+                </select>
+                <span class="field-hint">Avgör hur många ersättningsdagar du får</span>
             </div>
             <div class="field">
                 <label>Kommunalskattesats</label>
@@ -619,7 +631,7 @@
 
         <!-- Results period 1 -->
         <div id="income-results">
-            <p class="period-label">📅 Period 1 — Dag 1–200 (ca 9 månader)</p>
+            <p class="period-label">📅 Period 1 — Dag 1–100 (ca 4,5 månader)</p>
             <div class="results-grid">
                 <div class="result-box accent">
                     <div class="result-label">Dagpenning brutto</div>
@@ -638,7 +650,7 @@
                 </div>
             </div>
 
-            <p class="period-label" style="margin-top:8px">📅 Period 2 — Dag 201–300 (ca 4,5 månader)</p>
+            <p class="period-label" style="margin-top:8px">📅 Period 2 — Dag 101–200 (ca 4,5 månader)</p>
             <div class="period2-grid">
                 <div class="result-box">
                     <div class="result-label">Dagpenning brutto</div>
@@ -652,9 +664,24 @@
                 </div>
             </div>
 
+            <p class="period-label" style="margin-top:8px" id="period3-label">📅 Period 3 — Dag 201–300 (ca 4,5 månader)</p>
+            <div class="period2-grid" id="period3-grid">
+                <div class="result-box">
+                    <div class="result-label">Dagpenning brutto</div>
+                    <div class="result-value" id="res-daily3">—</div>
+                    <div class="result-sub">kr per arbetsdag</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">Månadsersättning netto</div>
+                    <div class="result-value" id="res-monthly3-net">—</div>
+                    <div class="result-sub">kr efter skatt</div>
+                </div>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-light);margin-top:8px" id="dagar-info"></p>
+
             <!-- Canvas chart -->
             <canvas id="myChart" aria-label="Jämförelse lön och a-kassa" role="img"></canvas>
-            <p class="chart-label">Nettoinkomst: tidigare lön vs a-kassa period 1 vs period 2</p>
+            <p class="chart-label">Nettoinkomst: tidigare lön vs a-kassa dag 1–100 vs dag 101–200</p>
 
             <!-- Detailj toggle -->
             <details>
@@ -662,12 +689,12 @@
                 <div class="details-content">
                     <table class="details-table">
                         <tr><td>Bruttolön/månad</td><td id="det-salary">—</td></tr>
-                        <tr><td>Dagsinkomst (lön / 22)</td><td id="det-daily-income">—</td></tr>
-                        <tr><td>Dagpenning period 1 (80 %)</td><td id="det-dp1">—</td></tr>
-                        <tr><td>Tak (max dagpenning)</td><td>1 300 kr/dag</td></tr>
-                        <tr><td>Tillämpat belopp period 1</td><td id="det-dp1-applied">—</td></tr>
-                        <tr><td>Dagpenning period 2 (70 %)</td><td id="det-dp2">—</td></tr>
-                        <tr><td>Tillämpat belopp period 2</td><td id="det-dp2-applied">—</td></tr>
+                        <tr><td>Inkomst som räknas (tak 34 000 kr)</td><td id="det-daily-income">—</td></tr>
+                        <tr><td>Ersättning dag 1–100</td><td id="det-dp1">—</td></tr>
+                        <tr><td>Tak (max ersättning/mån dag 1–100)</td><td>27 200 kr</td></tr>
+                        <tr><td>Månadsersättning dag 1–100</td><td id="det-dp1-applied">—</td></tr>
+                        <tr><td>Ersättning dag 101–200</td><td id="det-dp2">—</td></tr>
+                        <tr><td>Ersättning dag 201–300</td><td id="det-dp2-applied">—</td></tr>
                         <tr><td>Skatt (kommunal)</td><td id="det-tax">—</td></tr>
                         <tr><td>Ersättning i % av lön (period 1)</td><td id="det-pct">—</td></tr>
                     </table>
@@ -675,32 +702,11 @@
             </details>
         </div>
 
-        <!-- Basic results -->
-        <div id="basic-results" style="display:none">
-            <div class="results-grid">
-                <div class="result-box accent">
-                    <div class="result-label">Dagpenning (grundbelopp)</div>
-                    <div class="result-value">510 kr</div>
-                    <div class="result-sub">per arbetsdag</div>
-                </div>
-                <div class="result-box">
-                    <div class="result-label">Månadsersättning brutto</div>
-                    <div class="result-value">11 220 kr</div>
-                    <div class="result-sub">22 dagar × 510 kr</div>
-                </div>
-                <div class="result-box">
-                    <div class="result-label">Månadsersättning netto</div>
-                    <div class="result-value" id="basic-net">7 674 kr</div>
-                    <div class="result-sub">ca 32 % skatt</div>
-                </div>
-            </div>
-            <p style="font-size:0.88rem;color:var(--text-light);margin-top:8px">Grundbeloppet är 510 kr/dag och gäller alla som är medlemmar i en a-kassa men inte uppfyller arbetsvillkoret för inkomstbaserad ersättning. Ingen löneberäkning behövs.</p>
-        </div>
     </div>
 
     <!-- Affiliate -->
     <div class="affiliate-box">
-        <p><strong>Är du med i en a-kassa?</strong> Genomsnittlig månadsavgift är ca 130 kr. Utan a-kassa riskerar du att bara få grundbeloppet (510 kr/dag) eller ingenting alls. Alfa-kassan är öppen för alla.</p>
+        <p><strong>Är du med i en a-kassa?</strong> Genomsnittlig månadsavgift är ca 130 kr. Med mindre än 12 månaders medlemskap sänks din ersättning till 60 % eller 50 % av inkomsten. Alfa-kassan är öppen för alla.</p>
         <a href="https://www.alfa.se" target="_blank" rel="nofollow noopener" class="affiliate-btn">Gå med i Alfa-kassan →</a>
     </div>
 
@@ -713,7 +719,7 @@
                 Hur mycket är a-kassan 2026?
                 <span>+</span>
             </div>
-            <div class="faq-a">Med inkomstbaserad a-kassa får du 80 % av din dagsinkomst de första 200 dagarna och 70 % dag 201–300. Taket är 1 300 kr per dag brutto (ca 28 600 kr/månad). Grundbeloppet är 510 kr/dag och gäller dig som inte uppfyller arbetsvillkoret.</div>
+            <div class="faq-a">Sedan 1 oktober 2025 får du med minst 12 månaders medlemskap 80 % av din tidigare månadsinkomst dag 1–100, 70 % dag 101–200 och 65 % dag 201–300. Inkomst över taket 34 000 kr/månad räknas inte, så max ersättning är 27 200 kr/månad brutto (ca 1 236 kr/dag) de första 100 dagarna, därefter 23 800 kr respektive 22 100 kr/månad. Har du varit medlem 6–11 månader är nivån 60 %, under 6 månader 50 %.</div>
         </div>
 
         <div class="faq-item">
@@ -721,7 +727,7 @@
                 Hur länge kan man få a-kassa?
                 <span>+</span>
             </div>
-            <div class="faq-a">Du kan få a-kassa i maximalt 300 ersättningsdagar (arbetsdagar, måndag–fredag). Det delas upp i 200 dagar med 80 % och 100 dagar med 70 %. 300 dagar motsvarar ungefär 14 månader. Föräldrar med barn under 18 år kan få ytterligare 150 dagar.</div>
+            <div class="faq-a">Antalet ersättningsdagar (arbetsdagar, måndag–fredag) beror på hur många månader du haft inkomst de senaste 12 månaderna: 11–12 månader ger 300 dagar (ca 14 månader), 8–10 månader ger 200 dagar, 4–7 månader ger 100 dagar och den som precis uppfyller inkomstvillkoret får 66 dagar. Nivån trappas ned från 80 % till 70 % efter dag 100 och till 65 % efter dag 200.</div>
         </div>
 
         <div class="faq-item">
@@ -729,7 +735,7 @@
                 Vad krävs för att få inkomstbaserad a-kassa?
                 <span>+</span>
             </div>
-            <div class="faq-a">Du behöver ha varit medlem i en a-kassa i minst 12 månader och ha arbetat minst 80 timmar per månad under minst 6 av de senaste 12 månaderna (arbetsvillkoret). Du måste också vara aktivt arbetssökande via Arbetsförmedlingen.</div>
+            <div class="faq-a">Sedan 1 oktober 2025 gäller ett inkomstvillkor i stället för det gamla arbetsvillkoret: du ska ha tjänat minst 120 000 kr de senaste 12 månaderna och minst 11 000 kr/månad under minst 4 av månaderna. För den högsta nivån (80 %) krävs minst 12 månaders medlemskap i en a-kassa. Du måste också vara inskriven och aktivt arbetssökande hos Arbetsförmedlingen.</div>
         </div>
 
         <div class="faq-item">
@@ -772,7 +778,7 @@
         <p>Att förlora jobbet är en av de mest stressiga händelserna i livet. Med en bra a-kassa kan du fokusera på jobbsökandet utan att behöva oroa dig för ekonomin. Den här guiden förklarar hur a-kassan fungerar i Sverige 2026, vad du kan förvänta dig att få ut och vad som krävs för att kvalificera sig.</p>
 
         <h3>Hur beräknas a-kasseersättningen?</h3>
-        <p>Ersättningen baseras på din genomsnittliga bruttolön de senaste 12 månaderna. Dagsinkomsten räknas ut som månadslon delat med 22 arbetsdagar. De första 200 ersättningsdagarna (ca 9 månader) får du 80 % av dagsinkomsten, dock max 1 300 kr per dag. Från dag 201 sänks nivån till 70 %, med samma tak på 1 300 kr per dag.</p>
+        <p>Sedan 1 oktober 2025 är a-kassan helt inkomstbaserad. Ersättningen baseras på din genomsnittliga bruttoinkomst de senaste 12 månaderna, dock högst 34 000 kr/månad. De första 100 ersättningsdagarna (ca 4,5 månader) får du 80 % av inkomsten, dag 101–200 får du 70 % och dag 201–300 får du 65 %. Ersättningen betalas ut per arbetsdag (22 dagar per månad). Har du varit medlem kortare tid än 12 månader är nivåerna lägre: 60 % (6–11 månader) eller 50 % (under 6 månader).</p>
 
         <table>
             <thead>
@@ -784,14 +790,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Dag 1–200</td><td>80 %</td><td>1 300 kr</td><td>~9 mån</td></tr>
-                <tr><td>Dag 201–300</td><td>70 %</td><td>1 300 kr</td><td>~4,5 mån</td></tr>
-                <tr><td>Grundbelopp</td><td>—</td><td>510 kr</td><td>300 dagar</td></tr>
+                <tr><td>Dag 1–100</td><td>80 %</td><td>1 236 kr (27 200 kr/mån)</td><td>~4,5 mån</td></tr>
+                <tr><td>Dag 101–200</td><td>70 %</td><td>1 082 kr (23 800 kr/mån)</td><td>~4,5 mån</td></tr>
+                <tr><td>Dag 201–300</td><td>65 %</td><td>1 005 kr (22 100 kr/mån)</td><td>~4,5 mån</td></tr>
             </tbody>
         </table>
 
         <h3>Vad är taket (maxbeloppet)?</h3>
-        <p>Taket för dagpenning är 1 300 kr per dag brutto. Det innebär att om du tjänar mer än ungefär 35 750 kr i månaden (1 300 / 0,80 × 22) kapas ersättningen. Netto efter 32 % skatt är maxbeloppet ca 884 kr per dag, vilket ger ca 19 448 kr per månad — fortfarande en betydande del av normallönen.</p>
+        <p>Taket är en inkomst på 34 000 kr per månad. Tjänar du mer än så räknas ändå bara 34 000 kr, vilket ger max 27 200 kr/månad brutto (80 %) de första 100 dagarna. Netto efter 32 % skatt är maxbeloppet ca 18 500 kr per månad — fortfarande en betydande del av normallönen, men den som tjänar 45 000 kr/mån får bara ut cirka 60 % av sin tidigare lön.</p>
 
         <h3>Karenstid och aktivitetskrav</h3>
         <p>Sedan 2020 har a-kassan 1 karensdag, ned från tidigare 5 dagar. Det innebär att du inte får ersättning för den allra första dagen. För att fortsätta få a-kassa krävs att du är aktivt inskriven hos Arbetsförmedlingen, söker jobb aktivt och deltar i åtgärder som erbjuds. Missköter du dig kan du bli avstängd från ersättning i upp till 45 dagar.</p>
@@ -807,6 +813,7 @@
     <div class="cross-links">
         <h2>Relaterade kalkylatorer</h2>
         <div class="link-grid">
+            <a href="/artiklar/a-kassa-2026-belopp-och-regler" class="link-chip">📖 Guide: A-kassa 2026 – belopp och regler</a>
             <a href="/kalkylatorer/loneraknare" class="link-chip">💰 Löneräknare 2026</a>
             <a href="/kalkylatorer/sparkalkylator" class="link-chip">🏦 Sparkalkylator</a>
             <a href="/kalkylatorer/skatteaterbarings-kalkylator" class="link-chip">💸 Skatteåterbäring</a>
@@ -828,9 +835,10 @@
 </footer>
 
 <script>
-    // ─── State ───────────────────────────────────────────────
-    let calcType = 'income';
-    const MAX_DAG = 1300;
+    // ─── Konstanter (regler fr.o.m. 1 oktober 2025) ────────────
+    const TAK_MANAD = 34000;                 // Inkomst över taket räknas inte
+    const NIVAER = { '12': [0.80, 0.70, 0.65], '6': [0.60, 0.50, 0.45], '0': [0.50, 0.40, 0.35] };
+    const DAGAR_PER_MANAD = 22;
 
     // ─── Sync tax slider / input ──────────────────────────────
     function syncTax(v) {
@@ -845,18 +853,6 @@
         calculate();
     }
 
-    // ─── Toggle type ──────────────────────────────────────────
-    function setType(t) {
-        calcType = t;
-        document.getElementById('btn-income').classList.toggle('active', t === 'income');
-        document.getElementById('btn-basic').classList.toggle('active', t === 'basic');
-        document.getElementById('income-inputs').style.display = t === 'income' ? '' : 'none';
-        document.getElementById('income-results').style.display = t === 'income' ? '' : 'none';
-        document.getElementById('basic-results').style.display = t === 'basic' ? '' : 'none';
-        if (t === 'basic') updateBasicNet();
-        else calculate();
-    }
-
     // ─── Format helpers ───────────────────────────────────────
     function fmt(n) {
         return Math.round(n).toLocaleString('sv-SE') + ' kr';
@@ -869,48 +865,42 @@
     function calculate() {
         const salary = parseFloat(document.getElementById('salary').value) || 0;
         const taxRate = parseFloat(document.getElementById('tax-input').value) / 100 || 0.32;
+        const nivaer = NIVAER[document.getElementById('medlem').value] || NIVAER['12'];
+        const maxDagar = parseInt(document.getElementById('manader').value) || 300;
 
-        const dailyIncome = salary / 22;
-
-        // Period 1: 80%, max 1300
-        const dp1Raw = dailyIncome * 0.80;
-        const dp1 = Math.min(dp1Raw, MAX_DAG);
-
-        // Period 2: 70%, max 1300
-        const dp2Raw = dailyIncome * 0.70;
-        const dp2 = Math.min(dp2Raw, MAX_DAG);
-
-        const monthly1Gross = dp1 * 22;
-        const monthly1Net = monthly1Gross * (1 - taxRate);
-        const monthly2Net = dp2 * 22 * (1 - taxRate);
+        const underlag = Math.min(salary, TAK_MANAD);
+        const m = nivaer.map(n => underlag * n);          // månadsersättning brutto per period
+        const raw = nivaer.map(n => salary * n);          // utan tak
+        const d = m.map(x => x / DAGAR_PER_MANAD);         // dagpenning
+        const net = m.map(x => x * (1 - taxRate));
 
         const salaryNet = salary * (1 - taxRate);
-        const pct1 = salary > 0 ? (monthly1Net / salaryNet * 100) : 0;
+        const pct1 = salary > 0 ? (net[0] / salaryNet * 100) : 0;
 
-        // Results
-        document.getElementById('res-daily1').textContent = fmt(dp1);
-        document.getElementById('res-monthly1-gross').textContent = fmt(monthly1Gross);
-        document.getElementById('res-monthly1-net').textContent = fmt(monthly1Net);
-        document.getElementById('res-daily2').textContent = fmt(dp2);
-        document.getElementById('res-monthly2-net').textContent = fmt(monthly2Net);
+        document.getElementById('res-daily1').textContent = fmt(d[0]);
+        document.getElementById('res-monthly1-gross').textContent = fmt(m[0]);
+        document.getElementById('res-monthly1-net').textContent = fmt(net[0]);
+        document.getElementById('res-daily2').textContent = fmt(d[1]);
+        document.getElementById('res-monthly2-net').textContent = fmt(net[1]);
+        document.getElementById('res-daily3').textContent = fmt(d[2]);
+        document.getElementById('res-monthly3-net').textContent = fmt(net[2]);
 
-        // Details
+        const p3 = document.getElementById('period3-grid'), p3l = document.getElementById('period3-label');
+        p3.style.display = maxDagar >= 300 ? '' : 'none'; p3l.style.display = maxDagar >= 300 ? '' : 'none';
+        const p2 = document.querySelector('.period2-grid'), p2l = p2.previousElementSibling;
+        p2.style.display = maxDagar >= 200 ? '' : 'none'; p2l.style.display = maxDagar >= 200 ? '' : 'none';
+        document.getElementById('dagar-info').textContent = 'Du har rätt till ' + maxDagar + ' ersättningsdagar (ca ' + Math.round(maxDagar / 22 * 10) / 10 + ' månader). Ersättningsnivå: ' + Math.round(nivaer[0] * 100) + ' % / ' + Math.round(nivaer[1] * 100) + ' % / ' + Math.round(nivaer[2] * 100) + ' %.';
+
         document.getElementById('det-salary').textContent = fmt(salary);
-        document.getElementById('det-daily-income').textContent = fmt(dailyIncome);
-        document.getElementById('det-dp1').textContent = fmt(dp1Raw);
-        document.getElementById('det-dp1-applied').textContent = fmt(dp1) + (dp1 < dp1Raw ? ' (tak)' : '');
-        document.getElementById('det-dp2').textContent = fmt(dp2Raw);
-        document.getElementById('det-dp2-applied').textContent = fmt(dp2) + (dp2 < dp2Raw ? ' (tak)' : '');
+        document.getElementById('det-daily-income').textContent = fmt(underlag) + (underlag < salary ? ' (tak)' : '');
+        document.getElementById('det-dp1').textContent = Math.round(nivaer[0] * 100) + ' % av ' + fmt(underlag) + (raw[0] > m[0] ? ' — utan tak ' + fmt(raw[0]) : '');
+        document.getElementById('det-dp1-applied').textContent = fmt(m[0]) + ' brutto (' + fmt(d[0]) + '/dag)';
+        document.getElementById('det-dp2').textContent = fmt(m[1]) + ' brutto (' + fmt(d[1]) + '/dag)';
+        document.getElementById('det-dp2-applied').textContent = fmt(m[2]) + ' brutto (' + fmt(d[2]) + '/dag)';
         document.getElementById('det-tax').textContent = fmtPct(taxRate * 100);
         document.getElementById('det-pct').textContent = fmtPct(pct1);
 
-        drawChart(salaryNet, monthly1Net, monthly2Net);
-    }
-
-    function updateBasicNet() {
-        const taxRate = parseFloat(document.getElementById('tax-input').value) / 100 || 0.32;
-        const net = Math.round(510 * 22 * (1 - taxRate));
-        document.getElementById('basic-net').textContent = net.toLocaleString('sv-SE') + ' kr';
+        drawChart(salaryNet, net[0], net[1]);
     }
 
     // ─── Canvas chart ─────────────────────────────────────────
@@ -999,7 +989,7 @@
 
     // ─── Init ─────────────────────────────────────────────────
     calculate();
-    window.addEventListener('resize', () => { if (calcType === 'income') calculate(); });
+    window.addEventListener('resize', calculate);
 </script>
 </body>
 </html>
