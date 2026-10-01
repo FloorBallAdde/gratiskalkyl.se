@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""Lägger in annonsrutor (Adtraction-partner) på kalkylatorsidorna från data/partners.json.
+
+Varje ruta står mellan markörerna <!--GK-PARTNER:<kategori>:START--> och <!--GK-PARTNER:<kategori>:END-->.
+Saknas markörerna på en äldre sida läggs rutan in före första <div class="info-section">.
+Elkostnadssidan har markören i sin byggmall (scripts/build_elkostnad.py).
+
+    python3 scripts/update_partners.py
+"""
+import html
+import json
+import os
+import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import gk2_shell as S  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+e = html.escape
+
+
+def render(kat, d, variant):
+    links = "".join(
+        f'<a class="gk-linkcard" href="{e(p["tracking"] or p["url"])}" target="_blank" rel="sponsored noopener" '
+        f'data-gkp="{e(p["id"])}" data-gkp-kat="{kat}"><span>{e(p["namn"])}<small>{e(p["text"])}</small></span>{S.ICON_CHEV}</a>'
+        for p in d["partners"])
+    neutral = ""
+    if d.get("neutral"):
+        n = d["neutral"]
+        neutral = (f'<p class="gk-hint" style="margin:0">{e(n["text"])} '
+                   f'<a href="{e(n["url"])}" target="_blank" rel="noopener">{e(n["namn"])}</a>.</p>')
+    hid = f"gkp-{kat}"
+    tag = "h3" if variant == "inline" else "h2"
+    box = ('display:flex;flex-direction:column;gap:10px;margin:8px 0 0' if variant == "inline" else
+           'display:flex;flex-direction:column;gap:10px;margin:24px 0;padding:18px;border:1px solid var(--gk-border);'
+           'border-radius:16px;background:var(--gk-surface)')
+    return (f'<section class="gk-partner" aria-labelledby="{hid}" style="{box}">'
+            f'<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">'
+            f'<{tag} id="{hid}" style="font-size:{18 if variant == "inline" else 20}px;line-height:1.25;margin:0">{e(d["rubrik"])}</{tag}>'
+            f'<span class="gk-ad-label">ANNONS</span></div>'
+            f'<p class="gk-hint" style="margin:0">{e(d["intro"])}</p>'
+            f'<div style="display:flex;flex-direction:column;gap:8px">{links}</div>{neutral}'
+            '<script>(function(){if(window.__gkp)return;window.__gkp=1;document.addEventListener("click",function(ev){'
+            'var a=ev.target.closest&&ev.target.closest("[data-gkp]");if(a&&typeof gtag==="function")'
+            'gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});})();</script>'
+            '</section>')
+
+
+def main():
+    with open(os.path.join(ROOT, "data", "partners.json"), encoding="utf-8") as f:
+        data = json.load(f)
+    for kat, sida in data["_sidor"].items():
+        path = os.path.join(ROOT, sida["fil"])
+        with open(path, encoding="utf-8") as f:
+            s = f.read()
+        start, end = f"<!--GK-PARTNER:{kat}:START-->", f"<!--GK-PARTNER:{kat}:END-->"
+        block = render(kat, data[kat], sida["variant"])
+        if start in s:
+            s = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda m: start + block + end, s, count=1, flags=re.S)
+            how = "uppdaterad"
+        else:
+            i = s.find('<div class="info-section">')
+            if i < 0:
+                print("HITTAR INGEN PLATS:", sida["fil"]); continue
+            s = s[:i] + start + block + end + "\n        " + s[i:]
+            how = "inlagd"
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(s)
+        aktiva = sum(1 for p in data[kat]["partners"] if p["tracking"])
+        print(f"{kat}: {how} i {sida['fil']} ({len(data[kat]['partners'])} partner, {aktiva} med spårningslänk)")
+
+
+if __name__ == "__main__":
+    main()

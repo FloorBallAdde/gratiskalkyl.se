@@ -1,0 +1,35 @@
+{
+  "_info": "Annonspartner via Adtraction. 'tracking' fylls i med Adtractions spårningslänk när annonsören har godkänt ansökan – tills dess används 'url' (direktlänk). Kör sedan: python3 scripts/update_partners.py",
+  "el": {
+    "rubrik": "Byta elavtal?",
+    "intro": "Elhandlare vi samarbetar med, i bokstavsordning. Vi kan få ersättning om du tecknar avtal via länkarna. Det påverkar aldrig siffrorna i kalkylatorn.",
+    "neutral": null,
+    "partners": [
+      {"id": "fortum", "namn": "Fortum", "text": "Se priser och teckna elavtal", "url": "https://www.fortum.com/se/el/teckna-elavtal", "tracking": "", "status": "ansökt"},
+      {"id": "skelleftea-kraft", "namn": "Skellefteå Kraft", "text": "Se priser och teckna elavtal", "url": "https://www.skekraft.se/privat/elavtal/", "tracking": "", "status": "ansökt"},
+      {"id": "vattenfall", "namn": "Vattenfall", "text": "Se priser och teckna elavtal", "url": "https://www.vattenfall.se/elavtal/", "tracking": "", "status": "ansökt"}
+    ]
+  },
+  "bilforsakring": {
+    "rubrik": "Vad kostar bilförsäkringen?",
+    "intro": "Se priset för din bil hos försäkringsbolag vi samarbetar med, i bokstavsordning. Vi kan få ersättning om du tecknar via länkarna. Det påverkar aldrig siffrorna i kalkylatorn.",
+    "neutral": {"text": "Oberoende jämförelser av försäkringar finns hos", "namn": "Konsumenternas", "url": "https://www.konsumenternas.se/konsumentstod/jamforelser/"},
+    "partners": [
+      {"id": "dina", "namn": "Dina Försäkringar", "text": "Se pris på bilförsäkring", "url": "https://www.dina.se/forsakringar/bilforsakring.html", "tracking": "", "status": "ansökt"},
+      {"id": "ica-forsakring", "namn": "ICA Försäkring", "text": "Se pris på bilförsäkring", "url": "https://www.icaforsakring.se/bilforsakring/", "tracking": "", "status": "ansökt"}
+    ]
+  },
+  "isk": {
+    "rubrik": "Öppna ett ISK",
+    "intro": "Vi samarbetar med Nordnet och kan få ersättning om du öppnar konto via länken. Det påverkar aldrig siffrorna i kalkylatorn. Jämför gärna avgifterna hos flera banker och nätmäklare innan du väljer.",
+    "neutral": {"text": "Oberoende jämförelser av bank och sparande finns hos", "namn": "Konsumenternas", "url": "https://www.konsumenternas.se/konsumentstod/jamforelser/"},
+    "partners": [
+      {"id": "nordnet", "namn": "Nordnet", "text": "Investeringssparkonto (ISK)", "url": "https://www.nordnet.se/tjanster/konton/investeringssparkonto", "tracking": "", "status": "ansökt"}
+    ]
+  },
+  "_sidor": {
+    "el": {"fil": "kalkylatorer/elkostnadskalkylator.html", "variant": "inline"},
+    "bilforsakring": {"fil": "kalkylatorer/bilkostnadsraknare.html", "variant": "card"},
+    "isk": {"fil": "kalkylatorer/isk-skatteberaknare.html", "variant": "card"}
+  }
+}

@@ -329,8 +329,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Sjukpenningkalkylator",
     "icon": "🏥",
     "category": "Jobb & Familj",
-    "desc": "Beräkna karensavdrag, sjuklön och Försäkringskassans ersättning vid sjukskrivning 2026.",
-    "kw": "sjukpenning sjukskrivning karensavdrag sjuklön sgi försäkringskassan ersättning sjuk"
+    "desc": "Vad får du i sjukpenning efter skatt? Per dag och månad, sjuklön och karensavdrag dag 1–14 – Försäkringskassans regler 2026.",
+    "kw": "sjukpenning sjukskrivning efter skatt per månad deltid fortsättningsnivå karensavdrag sjuklön sgi försäkringskassan ersättning sjuk"
   },
   {
     "type": "kalkylator",

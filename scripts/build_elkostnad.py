@@ -186,6 +186,7 @@ def page(blocks):
 <section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
 <h2 id="nextH" style="font-size:22px">Nästa steg</h2>
 <a class="gk-linkcard" href="https://www.elpriskollen.se/" target="_blank" rel="noopener"><span>Jämför alla elavtal på Elpriskollen<small>Energimarknadsinspektionens jämförelsetjänst – alla elhandlare, utan annonser</small></span>{CHEV}</a>
+<!--GK-PARTNER:el:START--><!--GK-PARTNER:el:END-->
 <div style="display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:12px;background:var(--gk-soft);color:var(--gk-good-ink)">
 <strong style="font-size:15px">Spara i Min ekonomi</strong>
 <span style="font-size:14px;line-height:1.45">Då ser du direkt nästa gång om ditt avtal fortfarande är rimligt. Sparas bara i din webbläsare – vi ser inte dina siffror.</span>
