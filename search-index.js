@@ -5,8 +5,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "A-kassekalkylator",
     "icon": "🤝",
     "category": "Jobb & Familj",
-    "desc": "Räkna ut din a-kassa 2026 – ersättning per dag och månad, brutto och netto.",
-    "kw": "a-kassa akassa arbetslöshetskassa ersättning dagpenning arbetslös"
+    "desc": "Hur mycket får du i a-kassa 2026? Före och efter skatt, antal dagar och vad som gäller i Alfa-kassan.",
+    "kw": "a-kassa akassa a kassa kalkylator räkna ut a-kassa arbetslöshetskassa ersättning dagpenning arbetslös alfa-kassan alfakassan tak 34000 inkomstvillkor karensdagar"
   },
   {
     "type": "kalkylator",
