@@ -20,6 +20,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 e = html.escape
 
 
+def reklam_for(d):
+    n = [p["namn"] for p in d["partners"]]
+    return n[0] if len(n) == 1 else ", ".join(n[:-1]) + " och " + n[-1]
+
+
 def render(kat, d, variant):
     links = "".join(
         f'<a class="gk-linkcard" href="{e(p["tracking"] or p["url"])}" target="_blank" rel="sponsored noopener" '
@@ -30,6 +35,8 @@ def render(kat, d, variant):
         n = d["neutral"]
         neutral = (f'<p class="gk-hint" style="margin:0">{e(n["text"])} '
                    f'<a href="{e(n["url"])}" target="_blank" rel="noopener">{e(n["namn"])}</a>.</p>')
+    risk = (f'<p class="gk-hint" style="margin:0;padding:10px 12px;border-radius:10px;background:var(--gk-surface-2)">'
+            f'<strong>Risk:</strong> {e(d["risk"])}</p>') if d.get("risk") else ""
     hid = f"gkp-{kat}"
     tag = "h3" if variant == "inline" else "h2"
     box = ('display:flex;flex-direction:column;gap:10px;margin:8px 0 0' if variant == "inline" else
@@ -39,8 +46,8 @@ def render(kat, d, variant):
             f'<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">'
             f'<{tag} id="{hid}" style="font-size:{18 if variant == "inline" else 20}px;line-height:1.25;margin:0">{e(d["rubrik"])}</{tag}>'
             f'<span class="gk-ad-label">ANNONS</span></div>'
-            f'<p class="gk-hint" style="margin:0">{e(d["intro"])}</p>'
-            f'<div style="display:flex;flex-direction:column;gap:8px">{links}</div>{neutral}'
+            f'<p class="gk-hint" style="margin:0"><strong>Annons – reklam för {e(reklam_for(d))}.</strong> {e(d["intro"])}</p>'
+            f'<div style="display:flex;flex-direction:column;gap:8px">{links}</div>{risk}{neutral}'
             '<script>(function(){if(window.__gkp)return;window.__gkp=1;document.addEventListener("click",function(ev){'
             'var a=ev.target.closest&&ev.target.closest("[data-gkp]");if(a&&typeof gtag==="function")'
             'gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});})();</script>'
