@@ -36,8 +36,8 @@ FEATURED_GUIDES = ["/artiklar/deklaration-2027", "/artiklar/skatteaterbaring-202
 MIN_EMPTY = [
     ("lon", "Min lön", "Lägg till", "Se vad du borde tjäna i ditt yrke", "/kalkylatorer/loneforhandling", "Kom igång"),
     ("el", "Min el", "Lägg till", "Se om ditt elavtal är rimligt", "/kalkylatorer/elkostnadskalkylator", "Kom igång"),
+    ("csn", "Mitt CSN-lån", "Lägg till", "Se vad du betalar per månad och när du är klar", "/kalkylatorer/csn-kalkylator", "Kom igång"),
     ("bolan", "Mitt bolån", "Snart", "Jämför din ränta med bankernas snitt", "/kalkylatorer/bolanekalkylator", "Räkna på bolånet"),
-    ("bil", "Min bil", "Snart", "Vad kostar bilen per månad?", "/kalkylatorer/bilkostnadsraknare", "Räkna bilkostnad"),
 ]
 
 
@@ -109,7 +109,7 @@ def page():
 <div class="gk-wrap">
 <section class="gk-sec" id="min-ekonomi" aria-labelledby="h-min">
 <div class="gk-sec-head"><div><h2 id="h-min">Min ekonomi</h2></div><button class="gk-textbtn" type="button" id="minClear" hidden>Radera mina siffror</button></div>
-<p class="gk-hint" id="minSub">Spara dina siffror från elkollen och löneförhandlingen – så ser du här om du fortfarande ligger rätt. Sparas bara i din webbläsare, vi ser dem aldrig.</p>
+<p class="gk-hint" id="minSub">Spara dina siffror från elkollen, löneförhandlingen och CSN-kalkylatorn – så ser du här om du fortfarande ligger rätt. Sparas bara i din webbläsare, vi ser dem aldrig.</p>
 <div class="gk-grid2 gk-grid4">{min_cards}</div>
 </section>
 
@@ -191,6 +191,14 @@ document.addEventListener('DOMContentLoaded', function () {
       s: lon.under ? 'Under ' + (lon.refTyp === 'alder' ? 'snittet för din ålder' : 'medianen') + ' i yrket' : 'På eller över nivån i yrket' + (p ? ' (' + p + ':e percentilen)' : ''),
       cls: lon.under ? 'warn' : 'good', d: (lon.yrkesNamn || '') + ' · sparat ' + d(lon.sparad),
       a: 'Förhandla', href: '/kalkylatorer/loneforhandling' + (lon.yrke ? '?yrke=' + encodeURIComponent(lon.yrke) : '') });
+  }
+  var csn = all.csn;
+  if (csn && csn.skuld) {
+    n++;
+    var yNu = new Date().getFullYear();
+    card('min-csn', { l: 'Mitt CSN-lån', v: GK.fmt(Math.round(csn.manadKr / 10) * 10, 0) + ' kr/mån',
+      s: 'Klar ' + csn.klarAr + (csn.klarAr - yNu >= 0 ? ' – om ' + (csn.klarAr - yNu) + ' år' : ''), cls: 'good',
+      d: GK.fmt(csn.skuld, 0) + ' kr i skuld · sparat ' + d(csn.sparad), a: 'Uppdatera', href: '/kalkylatorer/csn-kalkylator' });
   }
   if (n) {
     document.getElementById('minSub').textContent = 'Dina sparade siffror – sparas bara i den här webbläsaren. Uppdatera när något ändras.';

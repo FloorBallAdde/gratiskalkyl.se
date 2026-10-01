@@ -80,8 +80,8 @@
 <div class="gk-wrap">
 <section class="gk-sec" id="min-ekonomi" aria-labelledby="h-min">
 <div class="gk-sec-head"><div><h2 id="h-min">Min ekonomi</h2></div><button class="gk-textbtn" type="button" id="minClear" hidden>Radera mina siffror</button></div>
-<p class="gk-hint" id="minSub">Spara dina siffror från elkollen och löneförhandlingen – så ser du här om du fortfarande ligger rätt. Sparas bara i din webbläsare, vi ser dem aldrig.</p>
-<div class="gk-grid2 gk-grid4"><a class="gk-mcard empty" id="min-lon" href="/kalkylatorer/loneforhandling"><span class="l">Min lön</span><span class="v">Lägg till</span><span class="s">Se vad du borde tjäna i ditt yrke</span><span class="d"></span><span class="a">Kom igång →</span></a><a class="gk-mcard empty" id="min-el" href="/kalkylatorer/elkostnadskalkylator"><span class="l">Min el</span><span class="v">Lägg till</span><span class="s">Se om ditt elavtal är rimligt</span><span class="d"></span><span class="a">Kom igång →</span></a><a class="gk-mcard empty" id="min-bolan" href="/kalkylatorer/bolanekalkylator"><span class="l">Mitt bolån</span><span class="v">Snart</span><span class="s">Jämför din ränta med bankernas snitt</span><span class="d"></span><span class="a">Räkna på bolånet →</span></a><a class="gk-mcard empty" id="min-bil" href="/kalkylatorer/bilkostnadsraknare"><span class="l">Min bil</span><span class="v">Snart</span><span class="s">Vad kostar bilen per månad?</span><span class="d"></span><span class="a">Räkna bilkostnad →</span></a></div>
+<p class="gk-hint" id="minSub">Spara dina siffror från elkollen, löneförhandlingen och CSN-kalkylatorn – så ser du här om du fortfarande ligger rätt. Sparas bara i din webbläsare, vi ser dem aldrig.</p>
+<div class="gk-grid2 gk-grid4"><a class="gk-mcard empty" id="min-lon" href="/kalkylatorer/loneforhandling"><span class="l">Min lön</span><span class="v">Lägg till</span><span class="s">Se vad du borde tjäna i ditt yrke</span><span class="d"></span><span class="a">Kom igång →</span></a><a class="gk-mcard empty" id="min-el" href="/kalkylatorer/elkostnadskalkylator"><span class="l">Min el</span><span class="v">Lägg till</span><span class="s">Se om ditt elavtal är rimligt</span><span class="d"></span><span class="a">Kom igång →</span></a><a class="gk-mcard empty" id="min-csn" href="/kalkylatorer/csn-kalkylator"><span class="l">Mitt CSN-lån</span><span class="v">Lägg till</span><span class="s">Se vad du betalar per månad och när du är klar</span><span class="d"></span><span class="a">Kom igång →</span></a><a class="gk-mcard empty" id="min-bolan" href="/kalkylatorer/bolanekalkylator"><span class="l">Mitt bolån</span><span class="v">Snart</span><span class="s">Jämför din ränta med bankernas snitt</span><span class="d"></span><span class="a">Räkna på bolånet →</span></a></div>
 </section>
 
 <section class="gk-sec" aria-labelledby="h-jamfor">
@@ -156,6 +156,14 @@ document.addEventListener('DOMContentLoaded', function () {
       s: lon.under ? 'Under ' + (lon.refTyp === 'alder' ? 'snittet för din ålder' : 'medianen') + ' i yrket' : 'På eller över nivån i yrket' + (p ? ' (' + p + ':e percentilen)' : ''),
       cls: lon.under ? 'warn' : 'good', d: (lon.yrkesNamn || '') + ' · sparat ' + d(lon.sparad),
       a: 'Förhandla', href: '/kalkylatorer/loneforhandling' + (lon.yrke ? '?yrke=' + encodeURIComponent(lon.yrke) : '') });
+  }
+  var csn = all.csn;
+  if (csn && csn.skuld) {
+    n++;
+    var yNu = new Date().getFullYear();
+    card('min-csn', { l: 'Mitt CSN-lån', v: GK.fmt(Math.round(csn.manadKr / 10) * 10, 0) + ' kr/mån',
+      s: 'Klar ' + csn.klarAr + (csn.klarAr - yNu >= 0 ? ' – om ' + (csn.klarAr - yNu) + ' år' : ''), cls: 'good',
+      d: GK.fmt(csn.skuld, 0) + ' kr i skuld · sparat ' + d(csn.sparad), a: 'Uppdatera', href: '/kalkylatorer/csn-kalkylator' });
   }
   if (n) {
     document.getElementById('minSub').textContent = 'Dina sparade siffror – sparas bara i den här webbläsaren. Uppdatera när något ändras.';

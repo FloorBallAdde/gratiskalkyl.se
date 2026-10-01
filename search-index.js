@@ -69,7 +69,7 @@ window.SITE_SEARCH_INDEX = [
     "icon": "🎓",
     "category": "Jobb & Familj",
     "desc": "Beräkna din CSN-återbetalning 2026 – månadsbelopp, total räntekostnad och hur länge du betalar.",
-    "kw": "csn lån studielån återbetalning student studier lånekalkylator csn-lån studiemedel"
+    "kw": "csn lån studielån återbetalning årsbelopp per månad csn-ränta betala mindre nedsättning student studier lånekalkylator csn-lån studiemedel"
   },
   {
     "type": "kalkylator",
