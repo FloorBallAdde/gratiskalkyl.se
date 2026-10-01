@@ -40,18 +40,18 @@ window.SITE_SEARCH_INDEX = [
     "url": "/kalkylatorer/barnbidragskalkylator",
     "title": "Barnbidragskalkylator",
     "icon": "👶",
-    "category": "Jobb & Familj",
-    "desc": "Räkna ut barnbidrag och flerbarnstillägg 2026. Se exakt hur mycket du får per månad och år — inkl. delad vårdnad.",
-    "kw": "barnbidrag flerbarnstillägg försäkringskassan barn grundbidrag belopp 2026 per barn månadsbelopp"
+    "category": "Familj & trygghet",
+    "desc": "Hur mycket är barnbidraget 2026? 1 250 kr per barn och månad plus flerbarnstillägg – räkna ut för 1–10 barn, delat eller till en förälder.",
+    "kw": "barnbidrag 2026 hur mycket är barnbidraget flerbarnstillägg räkna ut beräkna barnbidrag 3 barn 4 barn 5 barn 8 barn 10 barn 625 kr delas vårdnadshavare försäkringskassan"
   },
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/bilkostnadsraknare",
-    "title": "Bilkostnadsräknare",
+    "title": "Bilkostnadsräknare – bilkostnad per månad och värdeminskning",
     "icon": "🚗",
     "category": "Fordon & Energi",
-    "desc": "Räkna ut den totala kostnaden för din bil per månad och per mil.",
-    "kw": "bil bilkostnad drivmedel bensin diesel försäkring vägskatt per mil"
+    "desc": "Vad kostar bilen per månad och per mil? Räkna ut värdeminskning per år, drivmedel, försäkring, fordonsskatt och service.",
+    "kw": "bil bilkostnad per månad vad kostar en bil i månaden värdeminskning bil per år ny bil tappar i värde personbilskalkyl bilkalkyl drivmedel försäkring fordonsskatt elbil per mil"
   },
   {
     "type": "kalkylator",
@@ -59,8 +59,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Bolånekalkylator",
     "icon": "🏠",
     "category": "Boende & Lån",
-    "desc": "Beräkna månadsbetalning, total kostnad och boendekostnad för ditt bolån.",
-    "kw": "bolån bostad ränta månadsbetalning boendekostnad bostadslån"
+    "desc": "Vad kostar bolånet per månad? Räkna ut ränta, amortering, amorteringskrav och ränteavdrag.",
+    "kw": "bolån bolånekalkylator ränta bolåneränta amortering amorteringskrav månadskostnad ränteavdrag belåningsgrad kontantinsats bolånetak räkna ut amortering"
   },
   {
     "type": "kalkylator",
@@ -83,11 +83,11 @@ window.SITE_SEARCH_INDEX = [
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/drivmedelskalkylator",
-    "title": "Drivmedelskalkylator",
+    "title": "Drivmedelskalkylator – vad kostar bilresan?",
     "icon": "⛽",
     "category": "Fordon & Energi",
-    "desc": "Räkna ut din årliga bränslekostnad för bensin, diesel eller elbil. Jämför kostnad per mil.",
-    "kw": "drivmedel bränsle bensin diesel elbil bränslekostnad kostnad per mil laddhybrid drivmedelskalkylator"
+    "desc": "Räkna ut bränslekostnaden för resan – totalt, per mil och per person. Bensin, diesel eller el.",
+    "kw": "drivmedel bränsle bränslekostnad bensinkostnad dieselkostnad bensin diesel elbil kostnad per mil vad kostar bilresan dela på bensinen bränsleförbrukning liter per mil full tank drivmedelskalkylator"
   },
   {
     "type": "kalkylator",
@@ -122,8 +122,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Föräldrapenning",
     "icon": "👶",
     "category": "Jobb & Familj",
-    "desc": "Räkna ut din föräldrapenning 2026 – sjukpenningnivå (max 1 259 kr/dag), lägstanivå och grundnivå.",
-    "kw": "föräldrapenning föräldraledighet sgi försäkringskassan vab barn"
+    "desc": "Hur mycket får du i föräldrapenning? Max 1 259 kr/dag 2026 (SGI-tak 592 000 kr) – per dag och månad efter skatt.",
+    "kw": "föräldrapenning maxtak maxbelopp max sgi 2026 högsta föräldrapenning sjukpenningnivå lägstanivå föräldrapenningtillägg räkna ut sgi föräldraledighet försäkringskassan"
   },
   {
     "type": "kalkylator",
@@ -158,8 +158,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Inflationskalkylator",
     "icon": "📈",
     "category": "Privatekonomi",
-    "desc": "Räkna ut hur inflationen påverkar köpkraften 1980–2026 med SCB:s KPI.",
-    "kw": "inflation inflationskalkylator köpkraft kpi konsumentprisindex prisutveckling pengarnas värde riksbanken scb"
+    "desc": "Vad är pengarna värda i dag? Räkna om belopp 1980–2026 med SCB:s KPI – dagens penningvärde och inflation per år.",
+    "kw": "inflation inflationskalkylator inflationsräknare inflationsberäknare inflationsomräknare inflation sverige kalkylator räkna på inflation inflation per år köpkraft över tid kpi kalkylator konsumentprisindex penningvärde pengarnas värde scb prisomräknare riksbanken kpif"
   },
   {
     "type": "kalkylator",
@@ -209,11 +209,11 @@ window.SITE_SEARCH_INDEX = [
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/loneraknare",
-    "title": "Löneräknare",
+    "title": "Löneräknare – lön efter skatt",
     "icon": "💼",
     "category": "Privatekonomi",
-    "desc": "Räkna ut din lön efter skatt för 2026 — inkl. kommunalskatt och jobbskatteavdrag.",
-    "kw": "löneräknare lön skatt nettolön bruttolön kommunalskatt jobbskatteavdrag"
+    "desc": "Räkna ut lön efter skatt 2026 i alla 290 kommuner – nettolön, skatt, marginalskatt och bruttolön från nettolön.",
+    "kw": "löneräknare lönekalkylator lön efter skatt nettolön räkna ut nettolön beräkna lön efter skatt räkna ut skatt på lön räkna skatt bruttolön räkna ut bruttolön brutto netto löneberäkning kommunalskatt jobbskatteavdrag marginalskatt kyrkoavgift"
   },
   {
     "type": "kalkylator",
@@ -275,8 +275,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Procenträknare",
     "icon": "🔢",
     "category": "Privatekonomi",
-    "desc": "Räkna ut procent av ett tal, andel i procent, procentuell förändring eller lägg till/dra ifrån procent.",
-    "kw": "procenträknare räkna procent procent av tal andel procentuell förändring lägg till dra ifrån procent"
+    "desc": "Skriv 15 % av 350 och få svaret direkt. Procent av ett tal, hur många procent, ökning i procent och lägg till eller dra av procent.",
+    "kw": "procenträknare procent räknare räkna procent räkna ut procent procent av hur många procent är x av y ökning i procent procentuell förändring dra av procent lägg till procent procentenheter procentkalkylator"
   },
   {
     "type": "kalkylator",
@@ -452,11 +452,11 @@ window.SITE_SEARCH_INDEX = [
   {
     "type": "guide",
     "url": "/artiklar/csn-2026-belopp-och-regler",
-    "title": "CSN 2026 – belopp och regler",
+    "title": "CSN 2026 – studiebidrag och lån",
     "icon": "🎓",
     "category": "Guide",
-    "desc": "CSN 2026 — så mycket får du i studiemedel som student. Bidrag, lån, fribelopp och återbetalning.",
-    "kw": "csn 2026 – belopp och regler csn 2026 — så mycket får du i studiemedel som student. bidrag, lån, fribelopp och återbetalning."
+    "desc": "Fullt CSN 2026: 13 592 kr per 4 veckor (bidrag 4 120 + lån 9 472). Deltid, tilläggsbidrag för barn, fribelopp och beloppen 2027.",
+    "kw": "csn 2026 studiebidrag 2026 studiemedel 2026 csn bidrag hur mycket är studiebidraget fullt csn per månad tilläggsbidrag barn skattefritt fribelopp csn höjs 2027 13684 4120 9472 13592 deltid"
   },
   {
     "type": "guide",

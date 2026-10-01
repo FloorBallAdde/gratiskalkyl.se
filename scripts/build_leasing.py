@@ -117,9 +117,9 @@ def seg_btns(vals, pressed, fmt_fn, small=None):
 
 
 def page():
-    title = "Leasingkalkylator 2026 – beräkna leasingkostnad per månad | GratisKalkyl"
-    desc = ("Beräkna leasingkostnaden per månad för bilen: värdeminskning, ränta och restvärde. Jämför med att köpa "
-            "med lån och se om leasingerbjudandet du fått är rimligt.")
+    title = "Leasingkalkylator – beräkna leasingkostnad | GratisKalkyl"
+    desc = ("Beräkna leasingkostnaden per månad: värdeminskning, ränta och restvärde. Jämför med att köpa "
+            "med lån och se om erbjudandet är rimligt.")
     crumbs = [("Hem", "/"), ("Bil & energi", "/bil-och-energi"), ("Leasingkalkylator", None)]
     ld = [
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Leasingkalkylator 2026 – månadskostnad för billeasing",

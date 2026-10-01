@@ -89,9 +89,9 @@ def page():
     opts = '<option value="32.38">Rikssnitt – 32,38 %</option>' + "".join(
         f'<option value="{v}">{S.e(n)} – {str(v).replace(".", ",")} %</option>' for n, v in kommuner)
 
-    title = "Sjukpenningkalkylator 2026 – räkna ut sjukpenning efter skatt | GratisKalkyl"
-    desc = ("Hur mycket får du i sjukpenning? Räkna ut sjukpenning per dag och månad efter skatt, sjuklön och karensavdrag "
-            "dag 1–14 och vad du tappar jämfört med lönen. Försäkringskassans regler 2026.")
+    title = "Sjukpenning 2026: räkna ut vad du får | GratisKalkyl"
+    desc = ("Hur mycket får du i sjukpenning 2026? Räkna ut sjukpenning per dag och månad efter skatt, sjuklön dag 1–14 "
+            "och vad du tappar mot lönen.")
     crumbs = [("Hem", "/"), ("Familj & trygghet", "/familj-och-trygghet"), ("Sjukpenning", None)]
     ld = [
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Sjukpenningkalkylator 2026",

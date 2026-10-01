@@ -1,536 +1,41 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Löneräknare 2026 – Räkna ut nettolön efter skatt (alla kommuner)</title>
-    <meta name="description" content="Räkna ut nettolön 2026 på 5 sek. Skattetabell för alla 290 svenska kommuner, jobbskatteavdrag och statlig skatt. Skriv månadslön – se nettolön, skatt och jobbskatteavdrag ✓ Gratis.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/loneraknare">
-    <meta property="og:title" content="Löneräknare 2026 – Se din nettolön efter skatt på 5 sekunder">
-    <meta property="og:description" content="Välj kommun, skriv in månadslön – se din nettolön, skatt och avgifter. Gratis löneräknare för alla 290 svenska kommuner, uppdaterad för 2026.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/loneraknare">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Löneräknare 2026 – Nettolön efter skatt på 5 sekunder">
-    <meta name="twitter:description" content="Välj kommun, skriv in månadslön, se din nettolön. Gratis för alla 290 svenska kommuner.">
-    <style>
-        500;600;700;800&display=swap');
-
-        :root {
-            --primary: #0D6A45;
-            --primary-light: #E4F1EA;
-            --primary-dark: #0A5236;
-            --accent: #2563eb;
-            --text: #15201A;
-            --text-light: #56625B;
-            --bg: #F6F5F1;
-            --white: #ffffff;
-            --border: #E2E0D8;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--text); }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        /* Page */
-        .page-header { padding: 40px 0 24px; }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        .page-header p { color: var(--text-light); font-size: 1.05rem; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .breadcrumb a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        /* Calculator */
-        .calc-wrapper {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-bottom: 48px;
-            box-shadow: var(--shadow);
-        }
-        .input-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        .input-group { display: flex; flex-direction: column; }
-        .input-group label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .input-group .sublabel {
-            font-weight: 400;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-        .input-group input[type="number"],
-        .input-group input[type="range"],
-        .input-group select {
-            width: 100%;
-        }
-        .input-group input[type="number"] {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-        }
-        .input-group input[type="number"]:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group input[type="number"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .input-group select {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-            background: var(--white);
-        }
-        .input-group select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group select:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .input-group input[type="range"] {
-            margin-top: 8px;
-            accent-color: var(--primary);
-            height: 6px;
-            transition: box-shadow 0.2s ease;
-        }
-        .input-group input[type="range"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .range-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        /* Results */
-        .results {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .result-box {
-            background: var(--primary-light);
-            border-radius: 10px;
-            padding: 24px 20px;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .result-box.highlight {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-        .result-box .label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            opacity: 0.8;
-        }
-        .result-box .value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-        }
-        .result-box .sub {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-
-        /* Separator */
-        .chart-separator {
-            height: 1px;
-            background: var(--border);
-            margin: 24px 0;
-        }
-
-        /* Chart */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            margin-bottom: 16px;
-        }
-        canvas { width: 100% !important; height: 100% !important; }
-
-        /* Share/copy bar */
-        .share-bar {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-        }
-        .share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 9px 18px;
-            border-radius: 8px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            cursor: pointer;
-            border: 1.5px solid var(--border);
-            background: var(--white);
-            color: var(--text);
-            font-family: inherit;
-            transition: border-color 0.2s, color 0.2s, background 0.2s, box-shadow 0.2s;
-        }
-        .share-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            box-shadow: 0 2px 8px rgba(26,107,74,0.12);
-        }
-        .share-btn.copied {
-            background: var(--primary-light);
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        .share-btn:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        /* Table */
-        .table-toggle {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 12px 0;
-            margin-top: 16px;
-            transition: color 0.2s ease;
-        }
-        .table-toggle:hover { text-decoration: underline; }
-        .table-toggle:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            display: none;
-        }
-        .data-table.visible { display: table; }
-        .data-table th {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 12px;
-            text-align: right;
-            font-weight: 500;
-        }
-        .data-table th:first-child { text-align: left; }
-        .data-table td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
-        .data-table td:first-child { text-align: left; }
-
-        /* Info section */
-        .info-section {
-            margin-bottom: 48px;
-        }
-        .info-section h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 48px 0 16px;
-            letter-spacing: -0.01em;
-        }
-        .info-section h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 24px 0 12px;
-            letter-spacing: -0.01em;
-        }
-        .info-section p {
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-        .info-section ul {
-            color: var(--text-light);
-            margin-bottom: 16px;
-            margin-left: 24px;
-        }
-        .info-section li {
-            margin-bottom: 8px;
-        }
-        .formula-box {
-            background: #F6F5F1;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            margin: 16px 0;
-            overflow-x: auto;
-        }
-        
-        details {
-            margin-bottom: 16px;
-        }
-        summary {
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--primary);
-            padding: 12px 0;
-            transition: color 0.2s ease;
-        }
-        summary:hover {
-            text-decoration: underline;
-        }
-        summary:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        details p {
-            margin-left: 20px;
-            margin-top: 8px;
-            color: var(--text-light);
-        }
-
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        footer a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        @media (max-width: 900px) {
-            .results { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .input-grid { grid-template-columns: 1fr; gap: 16px; }
-            .results { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.5rem; }
-            .calc-wrapper { padding: 16px; }
-            nav { display: none; }
-            .result-box .value { font-size: 1.3rem; }
-            .input-group input[type="number"],
-            .input-group select {
-                min-height: 44px;
-                padding: 12px;
-            }
-            .table-toggle {
-                min-height: 44px;
-            }
-        }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Löneräknare 2026",
-        "url": "https://gratiskalkyl.se/kalkylatorer/loneraknare",
-        "description": "Gratis löneräknare för att beräkna din nettolön efter skatt 2026. Välj kommun och månadslön för att se vad du får ut.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
-        "inLanguage": "sv"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
-            { "@type": "ListItem", "position": 2, "name": "Löneräknare 2026", "item": "https://gratiskalkyl.se/kalkylatorer/loneraknare" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Vad är skillnaden mellan bruttolön och nettolön?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Bruttolön är din avtalade månadslön innan skatter och avgifter dras. Nettolön är det du faktiskt får in på kontot efter att kommunalskatt, regionskatt och eventuell statlig inkomstskatt dragits. För en löntagare under 66 år är skatten 2026 vanligtvis ca 18–23 % av bruttolönen vid löner mellan 25 000 och 50 000 kr i månaden, tack vare grundavdraget och jobbskatteavdraget."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur mycket är kommunalskatten i min kommun?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Den kommunala delen varierar mellan 16,60 och 23,80 % och regionskatten mellan 10,83 och 12,33 % (Gotland har ingen separat regionskatt). Totalt ger det 28,93–35,65 % år 2026. Genomsnittet i Sverige är 32,38 % (SCB). Alla 290 kommuners skattesatser finns i kalkylatorn ovan — välj din kommun i listan."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "När betalar jag statlig inkomstskatt?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Statlig inkomstskatt på 20 % tas ut på beskattningsbar inkomst över 643 000 kr (skiktgränsen 2026). Räknat på bruttolön går gränsen vid 660 400 kr per år, ca 55 000 kr/månad, för dig under 66 år. För den som fyllt 66 år är brytpunkten 760 500 kr. De flesta löntagare i Sverige når aldrig denna gräns och betalar därför ingen statlig inkomstskatt. Gränsen räknas upp varje år."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är jobbskatteavdraget och vad innebär det för min nettolön?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Jobbskatteavdraget är en skattereduktion för dig som har arbetsinkomst. Den sänker skatten automatiskt — framför allt för lägre och medelinkomster — och är redan inräknad i skatteavdraget på lönen. Avdraget växer med inkomsten upp till ca 40 000 kr/månad och ligger därefter kvar på sin maxnivå — sedan 2024 trappas det inte längre av för höga inkomster. 2026 förstärktes avdraget med cirka 17 miljarder kronor."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Kan min nettolön variera från månad till månad?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, om du har rörliga inkomstdelar som bonus, provision, övertid eller skiftestillägg varierar din bruttolön — och därmed nettolönen. Om du byter arbetsgivare mitt i ett inkomstår kan skattejämkning påverka skatteavdraget. Vid stora inkomstvariationer kan det löna sig att ansöka om jämkad preliminärskatt hos Skatteverket."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Räknar kalkylatorn med arbetsgivaravgifter?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nej, kalkylatorn visar din personliga nettolön. Arbetsgivaravgifter på 31,42 % är en kostnad för arbetsgivaren och syns inte i din lönespecifikation. Din bruttolön är det belopp ni avtalat — arbetsgivaravgiften är en extra kostnad som arbetsgivaren betalar ovanpå det."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur kan jag som anställd minska min skatt?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Som anställd är möjligheterna begränsade men finns: spara i ISK (investeringssparkonto) för lägre kapitalskatt, göra reseavdrag om du har minst 5 km till jobbet, sparar minst 2 timmar per dag med bil jämfört med kollektivtrafik och dina kostnader överstiger 15 000 kr per år (2026), och se till att din arbetsgivare erbjuder skattefria förmåner som friskvårdsbidrag (upp till 5 000 kr/år)."
-                }
-            }
-        ]
-    }
-    </script>
-  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  
-    <link rel="stylesheet" href="/mobile.css">
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Lön efter skatt 2026 – räkna ut din nettolön | GratisKalkyl</title>
+<meta name="description" content="Räkna ut lön efter skatt 2026 i alla 290 kommuner. 35 000 kr i månaden blir 28 038 kr netto i rikssnitt. Se skatt, jobbskatteavdrag och bruttolön.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/loneraknare">
+<meta property="og:title" content="Hur mycket får du ut efter skatt? Löneräknare 2026">
+<meta property="og:description" content="Räkna ut lön efter skatt 2026 i alla 290 kommuner. 35 000 kr i månaden blir 28 038 kr netto i rikssnitt. Se skatt, jobbskatteavdrag och bruttolön.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/loneraknare">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Löneräknare 2026 – lön efter skatt", "url": "https://gratiskalkyl.se/kalkylatorer/loneraknare", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Räkna ut lön efter skatt 2026 i alla 290 kommuner. 35 000 kr i månaden blir 28 038 kr netto i rikssnitt. Se skatt, jobbskatteavdrag och bruttolön.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Lön & jobb", "item": "https://gratiskalkyl.se/lon-och-jobb"}, {"@type": "ListItem", "position": 3, "name": "Löneräknare", "item": "https://gratiskalkyl.se/kalkylatorer/loneraknare"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hur räknar man ut lön efter skatt?", "acceptedAnswer": {"@type": "Answer", "text": "Ta årslönen och dra av grundavdraget. På resten räknas kommunalskatt och, över brytpunkten, statlig skatt. Sedan dras jobbskatteavdraget och skattereduktionen för förvärvsinkomst av, och public service-avgift och begravningsavgift läggs till. Dela med 12 så har du skatten per månad. Kalkylatorn ovan gör alla steg åt dig med 2026 års regler."}}, {"@type": "Question", "name": "Hur mycket är 30 000 kr efter skatt?", "acceptedAnswer": {"@type": "Answer", "text": "Med genomsnittlig kommunalskatt (32,38 %) blir 30 000 kr i månaden 24 267 kr efter skatt 2026, om du är under 66 år. I Österåker, som har lägst skatt (28,93 %), blir det 24 872 kr och i Dorotea, som har högst (35,65 %), 23 693 kr."}}, {"@type": "Question", "name": "Vad blir min nettolön på 40 000 kr?", "acceptedAnswer": {"@type": "Answer", "text": "Ungefär 31 797 kr i månaden med genomsnittlig kommunalskatt 2026. Skatten är 8 203 kr, eller 20,5 % av lönen. Får du en löneökning går 32,7 % av den till skatt."}}, {"@type": "Question", "name": "Hur räknar man ut bruttolön från nettolön?", "acceptedAnswer": {"@type": "Answer", "text": "Det finns ingen enkel formel, eftersom avdragen ändras med inkomsten. Kalkylatorn provar sig i stället fram till den bruttolön som ger din nettolön. För 25 000 kr netto i månaden behöver du ungefär 30 971 kr i bruttolön med genomsnittlig kommunalskatt, om du är under 66 år."}}, {"@type": "Question", "name": "När betalar man statlig skatt?", "acceptedAnswer": {"@type": "Answer", "text": "När lönen är över 660 400 kr om året, ungefär 55 000 kr i månaden. Det är brytpunkten 2026. På den del som är över betalar du 20 % statlig skatt utöver kommunalskatten. Har du fyllt 66 år vid årets början är brytpunkten 760 500 kr."}}, {"@type": "Question", "name": "Vad är jobbskatteavdraget?", "acceptedAnswer": {"@type": "Answer", "text": "En skattereduktion för dig som har inkomst av arbete. Den räknas av automatiskt i skatten på lönen. Avdraget växer med lönen och är som störst från ungefär 39 900 kr i månaden – med genomsnittlig kommunalskatt 4 366 kr i månaden 2026."}}, {"@type": "Question", "name": "Betalar man mindre skatt efter 66 år?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Har du fyllt 66 år vid årets början – 2026 gäller det dig som är född 1959 eller tidigare – får du ett högre grundavdrag. Med 35 000 kr i lön blir nettolönen 31 188 kr i stället för 28 038 kr, med genomsnittlig kommunalskatt."}}, {"@type": "Question", "name": "Varför stämmer inte nettolönen med mitt lönebesked?", "acceptedAnswer": {"@type": "Answer", "text": "Arbetsgivaren drar skatt enligt Skatteverkets skattetabell, som går i inkomststeg och räknar med hela procentsatser. Därför kan avdraget skilja sig något från den skatt vi räknar fram, och skillnaden jämnas ut i beslutet om slutlig skatt. Är du med i Svenska kyrkan betalar du också kyrkoavgift, i snitt 1,05 % – välj det under Ålder och kyrkoavgift."}}]}</script>
+
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -539,8 +44,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -555,923 +60,313 @@
 </div>
 </div>
 
-    
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li><a href="/lon-och-jobb">Lön &amp; jobb</a></li><li aria-current="page">Löneräknare</li></ol></nav>
+<div class="gk-eyebrow">Löneräknare 2026</div>
+<h1>Hur mycket får du ut efter skatt?</h1>
+<p class="gk-lead">Skriv in din bruttolön och välj kommun så ser du direkt din nettolön, med samma regler som Skatteverkets skattetabeller 2026.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Alla 290 kommuner · Källa: <a href="https://www.skatteverket.se/privat/skatter/beloppochprocent/2026" target="_blank" rel="noopener">Skatteverket</a></p>
+</div>
 
-    <main class="container" id="innehall">
-        <div class="page-header">
-            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Löneräknare</div>
-            <h1>Löneräknare 2026</h1>
-            <p>Beräkna din nettolön efter skatt med 2026 års regler. Välj din kommun (alla 290 finns med) och ange månadslön — se vad du får ut.</p>
-        </div>
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="lonform" novalidate onsubmit="return false">
+<div class="gk-field">
+<label for="lon">Bruttolön per månad</label>
+<div class="gk-input"><input id="lon" inputmode="numeric" autocomplete="off" value="35 000"><span class="unit">kr/mån</span></div>
+<div class="gk-seg" style="--n:3" id="lonq" role="group" aria-label="Vanliga löner">
+<button type="button" data-v="25000" aria-pressed="false">25 000</button>
+<button type="button" data-v="35000" aria-pressed="true">35 000</button>
+<button type="button" data-v="50000" aria-pressed="false">50 000</button>
+</div>
+<span class="gk-hint">Lönen före skatt, som det står i ditt anställningsavtal.</span>
+</div>
 
-        <a href="/kalkylatorer/loneforhandling" style="display:block;margin:0 0 20px;padding:14px 18px;border-radius:10px;background:var(--primary-light,#E4F1EA);border:1px solid var(--primary,#0D6A45);color:var(--text,#111);text-decoration:none;font-weight:600;">💰 Dags att löneförhandla? <span style="color:var(--primary,#0D6A45);">Se vad andra i ditt yrke tjänar och vad du ska begära →</span></a>
-        <div class="calc-wrapper">
-            <div class="input-grid">
-                <div class="input-group">
-                    <label for="manadslonBrutto">Månadslön brutto (kr)</label>
-                    <input type="number" id="manadslonBrutto" value="35000" min="0" step="100">
-                    <input type="range" id="manadslonRange" min="0" max="150000" step="1000" value="35000">
-                    <div class="range-labels"><span>0 kr</span><span>150 000 kr</span></div>
-                </div>
-                <div class="input-group">
-                    <label for="kommun">Kommun</label>
-                    <select id="kommun">
-                        <option value="ale">Ale (32,8 %)</option>
-                        <option value="alingsas">Alingsås (32,84 %)</option>
-                        <option value="alvesta">Alvesta (33,42 %)</option>
-                        <option value="aneby">Aneby (33,85 %)</option>
-                        <option value="arboga">Arboga (33,29 %)</option>
-                        <option value="arjeplog">Arjeplog (34,84 %)</option>
-                        <option value="arvidsjaur">Arvidsjaur (34,14 %)</option>
-                        <option value="arvika">Arvika (34,03 %)</option>
-                        <option value="askersund">Askersund (34,15 %)</option>
-                        <option value="avesta">Avesta (33,95 %)</option>
-                        <option value="bengtsfors">Bengtsfors (34,4 %)</option>
-                        <option value="berg">Berg (34,22 %)</option>
-                        <option value="bjurholm">Bjurholm (35,0 %)</option>
-                        <option value="bjuv">Bjuv (32,17 %)</option>
-                        <option value="boden">Boden (33,94 %)</option>
-                        <option value="bollebygd">Bollebygd (33,07 %)</option>
-                        <option value="bollnas">Bollnäs (33,37 %)</option>
-                        <option value="borgholm">Borgholm (33,44 %)</option>
-                        <option value="borlange">Borlänge (34,4 %)</option>
-                        <option value="boras">Borås (32,79 %)</option>
-                        <option value="botkyrka">Botkyrka (32,23 %)</option>
-                        <option value="boxholm">Boxholm (33,37 %)</option>
-                        <option value="bromolla">Bromölla (33,74 %)</option>
-                        <option value="bracke">Bräcke (35,09 %)</option>
-                        <option value="burlov">Burlöv (31,27 %)</option>
-                        <option value="bastad">Båstad (31,41 %)</option>
-                        <option value="dals-ed">Dals-Ed (34,69 %)</option>
-                        <option value="danderyd">Danderyd (30,58 %)</option>
-                        <option value="degerfors">Degerfors (35,3 %)</option>
-                        <option value="dorotea">Dorotea (35,65 %)</option>
-                        <option value="eda">Eda (34,55 %)</option>
-                        <option value="ekero">Ekerö (31,45 %)</option>
-                        <option value="eksjo">Eksjö (34,02 %)</option>
-                        <option value="emmaboda">Emmaboda (33,82 %)</option>
-                        <option value="enkoping">Enköping (33,05 %)</option>
-                        <option value="eskilstuna">Eskilstuna (32,85 %)</option>
-                        <option value="eslov">Eslöv (31,72 %)</option>
-                        <option value="essunga">Essunga (33,05 %)</option>
-                        <option value="fagersta">Fagersta (32,99 %)</option>
-                        <option value="falkenberg">Falkenberg (32,5 %)</option>
-                        <option value="falkoping">Falköping (33,43 %)</option>
-                        <option value="falun">Falun (34,05 %)</option>
-                        <option value="filipstad">Filipstad (34,55 %)</option>
-                        <option value="finspang">Finspång (33,7 %)</option>
-                        <option value="flen">Flen (33,1 %)</option>
-                        <option value="forshaga">Forshaga (34,63 %)</option>
-                        <option value="fargelanda">Färgelanda (34,39 %)</option>
-                        <option value="gagnef">Gagnef (34,27 %)</option>
-                        <option value="gislaved">Gislaved (33,75 %)</option>
-                        <option value="gnesta">Gnesta (32,95 %)</option>
-                        <option value="gnosjo">Gnosjö (34,0 %)</option>
-                        <option value="gotland">Gotland (33,6 %)</option>
-                        <option value="grums">Grums (34,78 %)</option>
-                        <option value="grastorp">Grästorp (33,47 %)</option>
-                        <option value="gullspang">Gullspång (33,97 %)</option>
-                        <option value="gallivare">Gällivare (33,89 %)</option>
-                        <option value="gavle">Gävle (33,77 %)</option>
-                        <option value="goteborg">Göteborg (32,6 %)</option>
-                        <option value="gotene">Götene (33,6 %)</option>
-                        <option value="habo">Habo (33,93 %)</option>
-                        <option value="hagfors">Hagfors (34,3 %)</option>
-                        <option value="hallsberg">Hallsberg (33,85 %)</option>
-                        <option value="hallstahammar">Hallstahammar (32,69 %)</option>
-                        <option value="halmstad">Halmstad (32,38 %)</option>
-                        <option value="hammaro">Hammarö (35,05 %)</option>
-                        <option value="haninge">Haninge (31,28 %)</option>
-                        <option value="haparanda">Haparanda (33,84 %)</option>
-                        <option value="heby">Heby (34,21 %)</option>
-                        <option value="hedemora">Hedemora (34,15 %)</option>
-                        <option value="helsingborg">Helsingborg (31,39 %)</option>
-                        <option value="herrljunga">Herrljunga (33,62 %)</option>
-                        <option value="hjo">Hjo (33,48 %)</option>
-                        <option value="hofors">Hofors (34,37 %)</option>
-                        <option value="huddinge">Huddinge (31,71 %)</option>
-                        <option value="hudiksvall">Hudiksvall (33,12 %)</option>
-                        <option value="hultsfred">Hultsfred (33,77 %)</option>
-                        <option value="hylte">Hylte (33,85 %)</option>
-                        <option value="haabo">Håbo (33,3 %)</option>
-                        <option value="hallefors">Hällefors (34,35 %)</option>
-                        <option value="harjedalen">Härjedalen (34,17 %)</option>
-                        <option value="harnosand">Härnösand (34,63 %)</option>
-                        <option value="harryda">Härryda (31,98 %)</option>
-                        <option value="hassleholm">Hässleholm (32,38 %)</option>
-                        <option value="hoganas">Höganäs (30,91 %)</option>
-                        <option value="hogsby">Högsby (34,07 %)</option>
-                        <option value="horby">Hörby (32,26 %)</option>
-                        <option value="hoor">Höör (32,63 %)</option>
-                        <option value="jokkmokk">Jokkmokk (34,29 %)</option>
-                        <option value="jarfalla">Järfälla (31,52 %)</option>
-                        <option value="jonkoping">Jönköping (33,4 %)</option>
-                        <option value="kalix">Kalix (33,89 %)</option>
-                        <option value="kalmar">Kalmar (33,67 %)</option>
-                        <option value="karlsborg">Karlsborg (32,8 %)</option>
-                        <option value="karlshamn">Karlshamn (33,8 %)</option>
-                        <option value="karlskoga">Karlskoga (34,3 %)</option>
-                        <option value="karlskrona">Karlskrona (33,69 %)</option>
-                        <option value="karlstad">Karlstad (33,55 %)</option>
-                        <option value="katrineholm">Katrineholm (32,95 %)</option>
-                        <option value="kil">Kil (34,63 %)</option>
-                        <option value="kinda">Kinda (33,0 %)</option>
-                        <option value="kiruna">Kiruna (34,39 %)</option>
-                        <option value="klippan">Klippan (31,93 %)</option>
-                        <option value="knivsta">Knivsta (32,62 %)</option>
-                        <option value="kramfors">Kramfors (34,43 %)</option>
-                        <option value="kristianstad">Kristianstad (32,64 %)</option>
-                        <option value="kristinehamn">Kristinehamn (34,25 %)</option>
-                        <option value="krokom">Krokom (33,87 %)</option>
-                        <option value="kumla">Kumla (33,84 %)</option>
-                        <option value="kungsbacka">Kungsbacka (32,58 %)</option>
-                        <option value="kungsor">Kungsör (32,91 %)</option>
-                        <option value="kungalv">Kungälv (32,92 %)</option>
-                        <option value="kavlinge">Kävlinge (29,59 %)</option>
-                        <option value="koping">Köping (33,04 %)</option>
-                        <option value="laholm">Laholm (32,8 %)</option>
-                        <option value="landskrona">Landskrona (31,42 %)</option>
-                        <option value="laxa">Laxå (35,0 %)</option>
-                        <option value="lekeberg">Lekeberg (33,73 %)</option>
-                        <option value="leksand">Leksand (33,8 %)</option>
-                        <option value="lerum">Lerum (32,03 %)</option>
-                        <option value="lessebo">Lessebo (33,81 %)</option>
-                        <option value="lidingo">Lidingö (29,67 %)</option>
-                        <option value="lidkoping">Lidköping (32,74 %)</option>
-                        <option value="lilla-edet">Lilla Edet (33,85 %)</option>
-                        <option value="lindesberg">Lindesberg (34,6 %)</option>
-                        <option value="linkoping">Linköping (31,75 %)</option>
-                        <option value="ljungby">Ljungby (33,07 %)</option>
-                        <option value="ljusdal">Ljusdal (33,87 %)</option>
-                        <option value="ljusnarsberg">Ljusnarsberg (33,8 %)</option>
-                        <option value="lomma">Lomma (30,72 %)</option>
-                        <option value="ludvika">Ludvika (34,05 %)</option>
-                        <option value="lulea">Luleå (33,84 %)</option>
-                        <option value="lund">Lund (32,42 %)</option>
-                        <option value="lycksele">Lycksele (34,9 %)</option>
-                        <option value="lysekil">Lysekil (33,94 %)</option>
-                        <option value="malmo">Malmö (32,42 %)</option>
-                        <option value="malung-salen">Malung-Sälen (34,45 %)</option>
-                        <option value="mala">Malå (35,2 %)</option>
-                        <option value="mariestad">Mariestad (32,74 %)</option>
-                        <option value="mark">Mark (32,99 %)</option>
-                        <option value="markaryd">Markaryd (33,31 %)</option>
-                        <option value="mellerud">Mellerud (34,08 %)</option>
-                        <option value="mjolby">Mjölby (33,45 %)</option>
-                        <option value="mora">Mora (34,32 %)</option>
-                        <option value="motala">Motala (33,25 %)</option>
-                        <option value="mullsjo">Mullsjö (34,1 %)</option>
-                        <option value="munkedal">Munkedal (34,86 %)</option>
-                        <option value="munkfors">Munkfors (34,3 %)</option>
-                        <option value="molndal">Mölndal (31,99 %)</option>
-                        <option value="monsteras">Mönsterås (34,07 %)</option>
-                        <option value="morbylanga">Mörbylånga (34,07 %)</option>
-                        <option value="nacka">Nacka (30,11 %)</option>
-                        <option value="nora">Nora (34,55 %)</option>
-                        <option value="norberg">Norberg (33,54 %)</option>
-                        <option value="nordanstig">Nordanstig (34,02 %)</option>
-                        <option value="nordmaling">Nordmaling (35,1 %)</option>
-                        <option value="norrkoping">Norrköping (33,3 %)</option>
-                        <option value="norrtalje">Norrtälje (32,05 %)</option>
-                        <option value="norsjo">Norsjö (35,2 %)</option>
-                        <option value="nybro">Nybro (34,19 %)</option>
-                        <option value="nykvarn">Nykvarn (32,3 %)</option>
-                        <option value="nykoping">Nyköping (32,25 %)</option>
-                        <option value="nynashamn">Nynäshamn (32,18 %)</option>
-                        <option value="nassjo">Nässjö (34,3 %)</option>
-                        <option value="ockelbo">Ockelbo (34,27 %)</option>
-                        <option value="olofstrom">Olofström (33,75 %)</option>
-                        <option value="orsa">Orsa (34,3 %)</option>
-                        <option value="orust">Orust (33,69 %)</option>
-                        <option value="osby">Osby (33,99 %)</option>
-                        <option value="oskarshamn">Oskarshamn (34,21 %)</option>
-                        <option value="ovanaker">Ovanåker (33,37 %)</option>
-                        <option value="oxelosund">Oxelösund (33,05 %)</option>
-                        <option value="pajala">Pajala (34,74 %)</option>
-                        <option value="partille">Partille (31,36 %)</option>
-                        <option value="perstorp">Perstorp (31,99 %)</option>
-                        <option value="pitea">Piteå (33,59 %)</option>
-                        <option value="ragunda">Ragunda (34,92 %)</option>
-                        <option value="robertsfors">Robertsfors (35,0 %)</option>
-                        <option value="ronneby">Ronneby (33,68 %)</option>
-                        <option value="rattvik">Rättvik (33,8 %)</option>
-                        <option value="sala">Sala (33,19 %)</option>
-                        <option value="salem">Salem (32,0 %)</option>
-                        <option value="sandviken">Sandviken (33,12 %)</option>
-                        <option value="sigtuna">Sigtuna (31,83 %)</option>
-                        <option value="simrishamn">Simrishamn (31,69 %)</option>
-                        <option value="sjobo">Sjöbo (32,1 %)</option>
-                        <option value="skara">Skara (33,38 %)</option>
-                        <option value="skelleftea">Skellefteå (34,45 %)</option>
-                        <option value="skinnskatteberg">Skinnskatteberg (33,34 %)</option>
-                        <option value="skurup">Skurup (31,6 %)</option>
-                        <option value="skovde">Skövde (33,09 %)</option>
-                        <option value="smedjebacken">Smedjebacken (34,44 %)</option>
-                        <option value="solleftea">Sollefteå (34,68 %)</option>
-                        <option value="sollentuna">Sollentuna (30,45 %)</option>
-                        <option value="solna">Solna (29,7 %)</option>
-                        <option value="sorsele">Sorsele (35,45 %)</option>
-                        <option value="sotenas">Sotenäs (33,47 %)</option>
-                        <option value="staffanstorp">Staffanstorp (30,12 %)</option>
-                        <option value="stenungsund">Stenungsund (33,12 %)</option>
-                        <option value="stockholm" selected>Stockholm (30,55 %)</option>
-                        <option value="storfors">Storfors (34,98 %)</option>
-                        <option value="storuman">Storuman (34,95 %)</option>
-                        <option value="strangnas">Strängnäs (32,5 %)</option>
-                        <option value="stromstad">Strömstad (33,39 %)</option>
-                        <option value="stromsund">Strömsund (34,92 %)</option>
-                        <option value="sundbyberg">Sundbyberg (31,58 %)</option>
-                        <option value="sundsvall">Sundsvall (33,88 %)</option>
-                        <option value="sunne">Sunne (33,75 %)</option>
-                        <option value="surahammar">Surahammar (33,19 %)</option>
-                        <option value="svalov">Svalöv (31,92 %)</option>
-                        <option value="svedala">Svedala (31,42 %)</option>
-                        <option value="svenljunga">Svenljunga (33,53 %)</option>
-                        <option value="saffle">Säffle (33,8 %)</option>
-                        <option value="sater">Säter (34,3 %)</option>
-                        <option value="savsjo">Sävsjö (33,68 %)</option>
-                        <option value="soderhamn">Söderhamn (33,17 %)</option>
-                        <option value="soderkoping">Söderköping (33,53 %)</option>
-                        <option value="sodertalje">Södertälje (32,38 %)</option>
-                        <option value="solvesborg">Sölvesborg (33,86 %)</option>
-                        <option value="tanum">Tanum (33,04 %)</option>
-                        <option value="tibro">Tibro (33,19 %)</option>
-                        <option value="tidaholm">Tidaholm (33,55 %)</option>
-                        <option value="tierp">Tierp (33,0 %)</option>
-                        <option value="timra">Timrå (34,38 %)</option>
-                        <option value="tingsryd">Tingsryd (34,0 %)</option>
-                        <option value="tjorn">Tjörn (33,19 %)</option>
-                        <option value="tomelilla">Tomelilla (31,79 %)</option>
-                        <option value="torsby">Torsby (34,3 %)</option>
-                        <option value="torsas">Torsås (33,79 %)</option>
-                        <option value="tranemo">Tranemo (32,98 %)</option>
-                        <option value="tranas">Tranås (33,77 %)</option>
-                        <option value="trelleborg">Trelleborg (31,58 %)</option>
-                        <option value="trollhattan">Trollhättan (33,84 %)</option>
-                        <option value="trosa">Trosa (32,03 %)</option>
-                        <option value="tyreso">Tyresö (31,83 %)</option>
-                        <option value="taby">Täby (29,88 %)</option>
-                        <option value="toreboda">Töreboda (33,2 %)</option>
-                        <option value="uddevalla">Uddevalla (33,64 %)</option>
-                        <option value="ulricehamn">Ulricehamn (32,53 %)</option>
-                        <option value="umea">Umeå (34,65 %)</option>
-                        <option value="upplands-vasby">Upplands Väsby (31,75 %)</option>
-                        <option value="upplands-bro">Upplands-Bro (31,73 %)</option>
-                        <option value="uppsala">Uppsala (32,85 %)</option>
-                        <option value="uppvidinge">Uppvidinge (33,8 %)</option>
-                        <option value="vadstena">Vadstena (34,35 %)</option>
-                        <option value="vaggeryd">Vaggeryd (33,25 %)</option>
-                        <option value="valdemarsvik">Valdemarsvik (34,03 %)</option>
-                        <option value="vallentuna">Vallentuna (31,23 %)</option>
-                        <option value="vansbro">Vansbro (34,28 %)</option>
-                        <option value="vara">Vara (33,25 %)</option>
-                        <option value="varberg">Varberg (31,73 %)</option>
-                        <option value="vaxholm">Vaxholm (31,63 %)</option>
-                        <option value="vellinge">Vellinge (29,68 %)</option>
-                        <option value="vetlanda">Vetlanda (33,77 %)</option>
-                        <option value="vilhelmina">Vilhelmina (35,5 %)</option>
-                        <option value="vimmerby">Vimmerby (34,22 %)</option>
-                        <option value="vindeln">Vindeln (35,2 %)</option>
-                        <option value="vingaker">Vingåker (33,5 %)</option>
-                        <option value="vargarda">Vårgårda (33,09 %)</option>
-                        <option value="vanersborg">Vänersborg (33,69 %)</option>
-                        <option value="vannas">Vännäs (35,2 %)</option>
-                        <option value="varmdo">Värmdö (31,31 %)</option>
-                        <option value="varnamo">Värnamo (33,28 %)</option>
-                        <option value="vastervik">Västervik (33,02 %)</option>
-                        <option value="vasteras">Västerås (31,24 %)</option>
-                        <option value="vaxjo">Växjö (32,19 %)</option>
-                        <option value="ydre">Ydre (34,1 %)</option>
-                        <option value="ystad">Ystad (31,29 %)</option>
-                        <option value="amal">Åmål (33,94 %)</option>
-                        <option value="ange">Ånge (34,62 %)</option>
-                        <option value="are">Åre (33,92 %)</option>
-                        <option value="arjang">Årjäng (34,25 %)</option>
-                        <option value="asele">Åsele (35,45 %)</option>
-                        <option value="astorp">Åstorp (31,47 %)</option>
-                        <option value="atvidaberg">Åtvidaberg (33,94 %)</option>
-                        <option value="almhult">Älmhult (33,86 %)</option>
-                        <option value="alvdalen">Älvdalen (34,77 %)</option>
-                        <option value="alvkarleby">Älvkarleby (34,4 %)</option>
-                        <option value="alvsbyn">Älvsbyn (33,79 %)</option>
-                        <option value="angelholm">Ängelholm (31,35 %)</option>
-                        <option value="ockero">Öckerö (33,04 %)</option>
-                        <option value="odeshog">Ödeshög (33,95 %)</option>
-                        <option value="orebro">Örebro (33,65 %)</option>
-                        <option value="orkelljunga">Örkelljunga (30,24 %)</option>
-                        <option value="ornskoldsvik">Örnsköldsvik (33,85 %)</option>
-                        <option value="ostersund">Östersund (33,72 %)</option>
-                        <option value="osteraker">Österåker (28,93 %)</option>
-                        <option value="osthammar">Östhammar (33,3 %)</option>
-                        <option value="ostra-goinge">Östra Göinge (32,17 %)</option>
-                        <option value="overkalix">Överkalix (34,14 %)</option>
-                        <option value="overtornea">Övertorneå (33,84 %)</option>
-                    </select>
-                    <div class="range-labels"><span>Alla 290 kommuner · skattesatser 2026 (SCB)</span></div>
-                    <label for="alder" style="margin-top:16px;">Ålder</label>
-                    <select id="alder">
-                        <option value="under66">Under 66 år (född 1960 eller senare)</option>
-                        <option value="66plus">66 år eller äldre (född 1959 eller tidigare)</option>
-                    </select>
-                </div>
-            </div>
+<div class="gk-field">
+<label for="kommun">Kommun du bor i</label>
+<div class="gk-input"><select id="kommun"><option value="" data-ks="32.38" data-slug="">Rikssnitt – 32,38 %</option><option value="Ale" data-ks="32.8" data-slug="ale">Ale – 32,80 %</option><option value="Alingsås" data-ks="32.84" data-slug="alingsas">Alingsås – 32,84 %</option><option value="Alvesta" data-ks="33.42" data-slug="alvesta">Alvesta – 33,42 %</option><option value="Aneby" data-ks="33.85" data-slug="aneby">Aneby – 33,85 %</option><option value="Arboga" data-ks="33.29" data-slug="arboga">Arboga – 33,29 %</option><option value="Arjeplog" data-ks="34.84" data-slug="arjeplog">Arjeplog – 34,84 %</option><option value="Arvidsjaur" data-ks="34.14" data-slug="arvidsjaur">Arvidsjaur – 34,14 %</option><option value="Arvika" data-ks="34.03" data-slug="arvika">Arvika – 34,03 %</option><option value="Askersund" data-ks="34.15" data-slug="askersund">Askersund – 34,15 %</option><option value="Avesta" data-ks="33.95" data-slug="avesta">Avesta – 33,95 %</option><option value="Bengtsfors" data-ks="34.4" data-slug="bengtsfors">Bengtsfors – 34,40 %</option><option value="Berg" data-ks="34.22" data-slug="berg">Berg – 34,22 %</option><option value="Bjurholm" data-ks="35.0" data-slug="bjurholm">Bjurholm – 35,00 %</option><option value="Bjuv" data-ks="32.17" data-slug="bjuv">Bjuv – 32,17 %</option><option value="Boden" data-ks="33.94" data-slug="boden">Boden – 33,94 %</option><option value="Bollebygd" data-ks="33.07" data-slug="bollebygd">Bollebygd – 33,07 %</option><option value="Bollnäs" data-ks="33.37" data-slug="bollnas">Bollnäs – 33,37 %</option><option value="Borgholm" data-ks="33.44" data-slug="borgholm">Borgholm – 33,44 %</option><option value="Borlänge" data-ks="34.4" data-slug="borlange">Borlänge – 34,40 %</option><option value="Borås" data-ks="32.79" data-slug="boras">Borås – 32,79 %</option><option value="Botkyrka" data-ks="32.23" data-slug="botkyrka">Botkyrka – 32,23 %</option><option value="Boxholm" data-ks="33.37" data-slug="boxholm">Boxholm – 33,37 %</option><option value="Bromölla" data-ks="33.74" data-slug="bromolla">Bromölla – 33,74 %</option><option value="Bräcke" data-ks="35.09" data-slug="bracke">Bräcke – 35,09 %</option><option value="Burlöv" data-ks="31.27" data-slug="burlov">Burlöv – 31,27 %</option><option value="Båstad" data-ks="31.41" data-slug="bastad">Båstad – 31,41 %</option><option value="Dals-Ed" data-ks="34.69" data-slug="dals-ed">Dals-Ed – 34,69 %</option><option value="Danderyd" data-ks="30.58" data-slug="danderyd">Danderyd – 30,58 %</option><option value="Degerfors" data-ks="35.3" data-slug="degerfors">Degerfors – 35,30 %</option><option value="Dorotea" data-ks="35.65" data-slug="dorotea">Dorotea – 35,65 %</option><option value="Eda" data-ks="34.55" data-slug="eda">Eda – 34,55 %</option><option value="Ekerö" data-ks="31.45" data-slug="ekero">Ekerö – 31,45 %</option><option value="Eksjö" data-ks="34.02" data-slug="eksjo">Eksjö – 34,02 %</option><option value="Emmaboda" data-ks="33.82" data-slug="emmaboda">Emmaboda – 33,82 %</option><option value="Enköping" data-ks="33.05" data-slug="enkoping">Enköping – 33,05 %</option><option value="Eskilstuna" data-ks="32.85" data-slug="eskilstuna">Eskilstuna – 32,85 %</option><option value="Eslöv" data-ks="31.72" data-slug="eslov">Eslöv – 31,72 %</option><option value="Essunga" data-ks="33.05" data-slug="essunga">Essunga – 33,05 %</option><option value="Fagersta" data-ks="32.99" data-slug="fagersta">Fagersta – 32,99 %</option><option value="Falkenberg" data-ks="32.5" data-slug="falkenberg">Falkenberg – 32,50 %</option><option value="Falköping" data-ks="33.43" data-slug="falkoping">Falköping – 33,43 %</option><option value="Falun" data-ks="34.05" data-slug="falun">Falun – 34,05 %</option><option value="Filipstad" data-ks="34.55" data-slug="filipstad">Filipstad – 34,55 %</option><option value="Finspång" data-ks="33.7" data-slug="finspang">Finspång – 33,70 %</option><option value="Flen" data-ks="33.1" data-slug="flen">Flen – 33,10 %</option><option value="Forshaga" data-ks="34.63" data-slug="forshaga">Forshaga – 34,63 %</option><option value="Färgelanda" data-ks="34.39" data-slug="fargelanda">Färgelanda – 34,39 %</option><option value="Gagnef" data-ks="34.27" data-slug="gagnef">Gagnef – 34,27 %</option><option value="Gislaved" data-ks="33.75" data-slug="gislaved">Gislaved – 33,75 %</option><option value="Gnesta" data-ks="32.95" data-slug="gnesta">Gnesta – 32,95 %</option><option value="Gnosjö" data-ks="34.0" data-slug="gnosjo">Gnosjö – 34,00 %</option><option value="Gotland" data-ks="33.6" data-slug="gotland">Gotland – 33,60 %</option><option value="Grums" data-ks="34.78" data-slug="grums">Grums – 34,78 %</option><option value="Grästorp" data-ks="33.47" data-slug="grastorp">Grästorp – 33,47 %</option><option value="Gullspång" data-ks="33.97" data-slug="gullspang">Gullspång – 33,97 %</option><option value="Gällivare" data-ks="33.89" data-slug="gallivare">Gällivare – 33,89 %</option><option value="Gävle" data-ks="33.77" data-slug="gavle">Gävle – 33,77 %</option><option value="Göteborg" data-ks="32.6" data-slug="goteborg">Göteborg – 32,60 %</option><option value="Götene" data-ks="33.6" data-slug="gotene">Götene – 33,60 %</option><option value="Habo" data-ks="33.93" data-slug="habo">Habo – 33,93 %</option><option value="Hagfors" data-ks="34.3" data-slug="hagfors">Hagfors – 34,30 %</option><option value="Hallsberg" data-ks="33.85" data-slug="hallsberg">Hallsberg – 33,85 %</option><option value="Hallstahammar" data-ks="32.69" data-slug="hallstahammar">Hallstahammar – 32,69 %</option><option value="Halmstad" data-ks="32.38" data-slug="halmstad">Halmstad – 32,38 %</option><option value="Hammarö" data-ks="35.05" data-slug="hammaro">Hammarö – 35,05 %</option><option value="Haninge" data-ks="31.28" data-slug="haninge">Haninge – 31,28 %</option><option value="Haparanda" data-ks="33.84" data-slug="haparanda">Haparanda – 33,84 %</option><option value="Heby" data-ks="34.21" data-slug="heby">Heby – 34,21 %</option><option value="Hedemora" data-ks="34.15" data-slug="hedemora">Hedemora – 34,15 %</option><option value="Helsingborg" data-ks="31.39" data-slug="helsingborg">Helsingborg – 31,39 %</option><option value="Herrljunga" data-ks="33.62" data-slug="herrljunga">Herrljunga – 33,62 %</option><option value="Hjo" data-ks="33.48" data-slug="hjo">Hjo – 33,48 %</option><option value="Hofors" data-ks="34.37" data-slug="hofors">Hofors – 34,37 %</option><option value="Huddinge" data-ks="31.71" data-slug="huddinge">Huddinge – 31,71 %</option><option value="Hudiksvall" data-ks="33.12" data-slug="hudiksvall">Hudiksvall – 33,12 %</option><option value="Hultsfred" data-ks="33.77" data-slug="hultsfred">Hultsfred – 33,77 %</option><option value="Hylte" data-ks="33.85" data-slug="hylte">Hylte – 33,85 %</option><option value="Hällefors" data-ks="34.35" data-slug="hallefors">Hällefors – 34,35 %</option><option value="Härjedalen" data-ks="34.17" data-slug="harjedalen">Härjedalen – 34,17 %</option><option value="Härnösand" data-ks="34.63" data-slug="harnosand">Härnösand – 34,63 %</option><option value="Härryda" data-ks="31.98" data-slug="harryda">Härryda – 31,98 %</option><option value="Hässleholm" data-ks="32.38" data-slug="hassleholm">Hässleholm – 32,38 %</option><option value="Håbo" data-ks="33.3" data-slug="haabo">Håbo – 33,30 %</option><option value="Höganäs" data-ks="30.91" data-slug="hoganas">Höganäs – 30,91 %</option><option value="Högsby" data-ks="34.07" data-slug="hogsby">Högsby – 34,07 %</option><option value="Hörby" data-ks="32.26" data-slug="horby">Hörby – 32,26 %</option><option value="Höör" data-ks="32.63" data-slug="hoor">Höör – 32,63 %</option><option value="Jokkmokk" data-ks="34.29" data-slug="jokkmokk">Jokkmokk – 34,29 %</option><option value="Järfälla" data-ks="31.52" data-slug="jarfalla">Järfälla – 31,52 %</option><option value="Jönköping" data-ks="33.4" data-slug="jonkoping">Jönköping – 33,40 %</option><option value="Kalix" data-ks="33.89" data-slug="kalix">Kalix – 33,89 %</option><option value="Kalmar" data-ks="33.67" data-slug="kalmar">Kalmar – 33,67 %</option><option value="Karlsborg" data-ks="32.8" data-slug="karlsborg">Karlsborg – 32,80 %</option><option value="Karlshamn" data-ks="33.8" data-slug="karlshamn">Karlshamn – 33,80 %</option><option value="Karlskoga" data-ks="34.3" data-slug="karlskoga">Karlskoga – 34,30 %</option><option value="Karlskrona" data-ks="33.69" data-slug="karlskrona">Karlskrona – 33,69 %</option><option value="Karlstad" data-ks="33.55" data-slug="karlstad">Karlstad – 33,55 %</option><option value="Katrineholm" data-ks="32.95" data-slug="katrineholm">Katrineholm – 32,95 %</option><option value="Kil" data-ks="34.63" data-slug="kil">Kil – 34,63 %</option><option value="Kinda" data-ks="33.0" data-slug="kinda">Kinda – 33,00 %</option><option value="Kiruna" data-ks="34.39" data-slug="kiruna">Kiruna – 34,39 %</option><option value="Klippan" data-ks="31.93" data-slug="klippan">Klippan – 31,93 %</option><option value="Knivsta" data-ks="32.62" data-slug="knivsta">Knivsta – 32,62 %</option><option value="Kramfors" data-ks="34.43" data-slug="kramfors">Kramfors – 34,43 %</option><option value="Kristianstad" data-ks="32.64" data-slug="kristianstad">Kristianstad – 32,64 %</option><option value="Kristinehamn" data-ks="34.25" data-slug="kristinehamn">Kristinehamn – 34,25 %</option><option value="Krokom" data-ks="33.87" data-slug="krokom">Krokom – 33,87 %</option><option value="Kumla" data-ks="33.84" data-slug="kumla">Kumla – 33,84 %</option><option value="Kungsbacka" data-ks="32.58" data-slug="kungsbacka">Kungsbacka – 32,58 %</option><option value="Kungsör" data-ks="32.91" data-slug="kungsor">Kungsör – 32,91 %</option><option value="Kungälv" data-ks="32.92" data-slug="kungalv">Kungälv – 32,92 %</option><option value="Kävlinge" data-ks="29.59" data-slug="kavlinge">Kävlinge – 29,59 %</option><option value="Köping" data-ks="33.04" data-slug="koping">Köping – 33,04 %</option><option value="Laholm" data-ks="32.8" data-slug="laholm">Laholm – 32,80 %</option><option value="Landskrona" data-ks="31.42" data-slug="landskrona">Landskrona – 31,42 %</option><option value="Laxå" data-ks="35.0" data-slug="laxa">Laxå – 35,00 %</option><option value="Lekeberg" data-ks="33.73" data-slug="lekeberg">Lekeberg – 33,73 %</option><option value="Leksand" data-ks="33.8" data-slug="leksand">Leksand – 33,80 %</option><option value="Lerum" data-ks="32.03" data-slug="lerum">Lerum – 32,03 %</option><option value="Lessebo" data-ks="33.81" data-slug="lessebo">Lessebo – 33,81 %</option><option value="Lidingö" data-ks="29.67" data-slug="lidingo">Lidingö – 29,67 %</option><option value="Lidköping" data-ks="32.74" data-slug="lidkoping">Lidköping – 32,74 %</option><option value="Lilla Edet" data-ks="33.85" data-slug="lilla-edet">Lilla Edet – 33,85 %</option><option value="Lindesberg" data-ks="34.6" data-slug="lindesberg">Lindesberg – 34,60 %</option><option value="Linköping" data-ks="31.75" data-slug="linkoping">Linköping – 31,75 %</option><option value="Ljungby" data-ks="33.07" data-slug="ljungby">Ljungby – 33,07 %</option><option value="Ljusdal" data-ks="33.87" data-slug="ljusdal">Ljusdal – 33,87 %</option><option value="Ljusnarsberg" data-ks="33.8" data-slug="ljusnarsberg">Ljusnarsberg – 33,80 %</option><option value="Lomma" data-ks="30.72" data-slug="lomma">Lomma – 30,72 %</option><option value="Ludvika" data-ks="34.05" data-slug="ludvika">Ludvika – 34,05 %</option><option value="Luleå" data-ks="33.84" data-slug="lulea">Luleå – 33,84 %</option><option value="Lund" data-ks="32.42" data-slug="lund">Lund – 32,42 %</option><option value="Lycksele" data-ks="34.9" data-slug="lycksele">Lycksele – 34,90 %</option><option value="Lysekil" data-ks="33.94" data-slug="lysekil">Lysekil – 33,94 %</option><option value="Malmö" data-ks="32.42" data-slug="malmo">Malmö – 32,42 %</option><option value="Malung-Sälen" data-ks="34.45" data-slug="malung-salen">Malung-Sälen – 34,45 %</option><option value="Malå" data-ks="35.2" data-slug="mala">Malå – 35,20 %</option><option value="Mariestad" data-ks="32.74" data-slug="mariestad">Mariestad – 32,74 %</option><option value="Mark" data-ks="32.99" data-slug="mark">Mark – 32,99 %</option><option value="Markaryd" data-ks="33.31" data-slug="markaryd">Markaryd – 33,31 %</option><option value="Mellerud" data-ks="34.08" data-slug="mellerud">Mellerud – 34,08 %</option><option value="Mjölby" data-ks="33.45" data-slug="mjolby">Mjölby – 33,45 %</option><option value="Mora" data-ks="34.32" data-slug="mora">Mora – 34,32 %</option><option value="Motala" data-ks="33.25" data-slug="motala">Motala – 33,25 %</option><option value="Mullsjö" data-ks="34.1" data-slug="mullsjo">Mullsjö – 34,10 %</option><option value="Munkedal" data-ks="34.86" data-slug="munkedal">Munkedal – 34,86 %</option><option value="Munkfors" data-ks="34.3" data-slug="munkfors">Munkfors – 34,30 %</option><option value="Mölndal" data-ks="31.99" data-slug="molndal">Mölndal – 31,99 %</option><option value="Mönsterås" data-ks="34.07" data-slug="monsteras">Mönsterås – 34,07 %</option><option value="Mörbylånga" data-ks="34.07" data-slug="morbylanga">Mörbylånga – 34,07 %</option><option value="Nacka" data-ks="30.11" data-slug="nacka">Nacka – 30,11 %</option><option value="Nora" data-ks="34.55" data-slug="nora">Nora – 34,55 %</option><option value="Norberg" data-ks="33.54" data-slug="norberg">Norberg – 33,54 %</option><option value="Nordanstig" data-ks="34.02" data-slug="nordanstig">Nordanstig – 34,02 %</option><option value="Nordmaling" data-ks="35.1" data-slug="nordmaling">Nordmaling – 35,10 %</option><option value="Norrköping" data-ks="33.3" data-slug="norrkoping">Norrköping – 33,30 %</option><option value="Norrtälje" data-ks="32.05" data-slug="norrtalje">Norrtälje – 32,05 %</option><option value="Norsjö" data-ks="35.2" data-slug="norsjo">Norsjö – 35,20 %</option><option value="Nybro" data-ks="34.19" data-slug="nybro">Nybro – 34,19 %</option><option value="Nykvarn" data-ks="32.3" data-slug="nykvarn">Nykvarn – 32,30 %</option><option value="Nyköping" data-ks="32.25" data-slug="nykoping">Nyköping – 32,25 %</option><option value="Nynäshamn" data-ks="32.18" data-slug="nynashamn">Nynäshamn – 32,18 %</option><option value="Nässjö" data-ks="34.3" data-slug="nassjo">Nässjö – 34,30 %</option><option value="Ockelbo" data-ks="34.27" data-slug="ockelbo">Ockelbo – 34,27 %</option><option value="Olofström" data-ks="33.75" data-slug="olofstrom">Olofström – 33,75 %</option><option value="Orsa" data-ks="34.3" data-slug="orsa">Orsa – 34,30 %</option><option value="Orust" data-ks="33.69" data-slug="orust">Orust – 33,69 %</option><option value="Osby" data-ks="33.99" data-slug="osby">Osby – 33,99 %</option><option value="Oskarshamn" data-ks="34.21" data-slug="oskarshamn">Oskarshamn – 34,21 %</option><option value="Ovanåker" data-ks="33.37" data-slug="ovanaker">Ovanåker – 33,37 %</option><option value="Oxelösund" data-ks="33.05" data-slug="oxelosund">Oxelösund – 33,05 %</option><option value="Pajala" data-ks="34.74" data-slug="pajala">Pajala – 34,74 %</option><option value="Partille" data-ks="31.36" data-slug="partille">Partille – 31,36 %</option><option value="Perstorp" data-ks="31.99" data-slug="perstorp">Perstorp – 31,99 %</option><option value="Piteå" data-ks="33.59" data-slug="pitea">Piteå – 33,59 %</option><option value="Ragunda" data-ks="34.92" data-slug="ragunda">Ragunda – 34,92 %</option><option value="Robertsfors" data-ks="35.0" data-slug="robertsfors">Robertsfors – 35,00 %</option><option value="Ronneby" data-ks="33.68" data-slug="ronneby">Ronneby – 33,68 %</option><option value="Rättvik" data-ks="33.8" data-slug="rattvik">Rättvik – 33,80 %</option><option value="Sala" data-ks="33.19" data-slug="sala">Sala – 33,19 %</option><option value="Salem" data-ks="32.0" data-slug="salem">Salem – 32,00 %</option><option value="Sandviken" data-ks="33.12" data-slug="sandviken">Sandviken – 33,12 %</option><option value="Sigtuna" data-ks="31.83" data-slug="sigtuna">Sigtuna – 31,83 %</option><option value="Simrishamn" data-ks="31.69" data-slug="simrishamn">Simrishamn – 31,69 %</option><option value="Sjöbo" data-ks="32.1" data-slug="sjobo">Sjöbo – 32,10 %</option><option value="Skara" data-ks="33.38" data-slug="skara">Skara – 33,38 %</option><option value="Skellefteå" data-ks="34.45" data-slug="skelleftea">Skellefteå – 34,45 %</option><option value="Skinnskatteberg" data-ks="33.34" data-slug="skinnskatteberg">Skinnskatteberg – 33,34 %</option><option value="Skurup" data-ks="31.6" data-slug="skurup">Skurup – 31,60 %</option><option value="Skövde" data-ks="33.09" data-slug="skovde">Skövde – 33,09 %</option><option value="Smedjebacken" data-ks="34.44" data-slug="smedjebacken">Smedjebacken – 34,44 %</option><option value="Sollefteå" data-ks="34.68" data-slug="solleftea">Sollefteå – 34,68 %</option><option value="Sollentuna" data-ks="30.45" data-slug="sollentuna">Sollentuna – 30,45 %</option><option value="Solna" data-ks="29.7" data-slug="solna">Solna – 29,70 %</option><option value="Sorsele" data-ks="35.45" data-slug="sorsele">Sorsele – 35,45 %</option><option value="Sotenäs" data-ks="33.47" data-slug="sotenas">Sotenäs – 33,47 %</option><option value="Staffanstorp" data-ks="30.12" data-slug="staffanstorp">Staffanstorp – 30,12 %</option><option value="Stenungsund" data-ks="33.12" data-slug="stenungsund">Stenungsund – 33,12 %</option><option value="Stockholm" data-ks="30.55" data-slug="stockholm">Stockholm – 30,55 %</option><option value="Storfors" data-ks="34.98" data-slug="storfors">Storfors – 34,98 %</option><option value="Storuman" data-ks="34.95" data-slug="storuman">Storuman – 34,95 %</option><option value="Strängnäs" data-ks="32.5" data-slug="strangnas">Strängnäs – 32,50 %</option><option value="Strömstad" data-ks="33.39" data-slug="stromstad">Strömstad – 33,39 %</option><option value="Strömsund" data-ks="34.92" data-slug="stromsund">Strömsund – 34,92 %</option><option value="Sundbyberg" data-ks="31.58" data-slug="sundbyberg">Sundbyberg – 31,58 %</option><option value="Sundsvall" data-ks="33.88" data-slug="sundsvall">Sundsvall – 33,88 %</option><option value="Sunne" data-ks="33.75" data-slug="sunne">Sunne – 33,75 %</option><option value="Surahammar" data-ks="33.19" data-slug="surahammar">Surahammar – 33,19 %</option><option value="Svalöv" data-ks="31.92" data-slug="svalov">Svalöv – 31,92 %</option><option value="Svedala" data-ks="31.42" data-slug="svedala">Svedala – 31,42 %</option><option value="Svenljunga" data-ks="33.53" data-slug="svenljunga">Svenljunga – 33,53 %</option><option value="Säffle" data-ks="33.8" data-slug="saffle">Säffle – 33,80 %</option><option value="Säter" data-ks="34.3" data-slug="sater">Säter – 34,30 %</option><option value="Sävsjö" data-ks="33.68" data-slug="savsjo">Sävsjö – 33,68 %</option><option value="Söderhamn" data-ks="33.17" data-slug="soderhamn">Söderhamn – 33,17 %</option><option value="Söderköping" data-ks="33.53" data-slug="soderkoping">Söderköping – 33,53 %</option><option value="Södertälje" data-ks="32.38" data-slug="sodertalje">Södertälje – 32,38 %</option><option value="Sölvesborg" data-ks="33.86" data-slug="solvesborg">Sölvesborg – 33,86 %</option><option value="Tanum" data-ks="33.04" data-slug="tanum">Tanum – 33,04 %</option><option value="Tibro" data-ks="33.19" data-slug="tibro">Tibro – 33,19 %</option><option value="Tidaholm" data-ks="33.55" data-slug="tidaholm">Tidaholm – 33,55 %</option><option value="Tierp" data-ks="33.0" data-slug="tierp">Tierp – 33,00 %</option><option value="Timrå" data-ks="34.38" data-slug="timra">Timrå – 34,38 %</option><option value="Tingsryd" data-ks="34.0" data-slug="tingsryd">Tingsryd – 34,00 %</option><option value="Tjörn" data-ks="33.19" data-slug="tjorn">Tjörn – 33,19 %</option><option value="Tomelilla" data-ks="31.79" data-slug="tomelilla">Tomelilla – 31,79 %</option><option value="Torsby" data-ks="34.3" data-slug="torsby">Torsby – 34,30 %</option><option value="Torsås" data-ks="33.79" data-slug="torsas">Torsås – 33,79 %</option><option value="Tranemo" data-ks="32.98" data-slug="tranemo">Tranemo – 32,98 %</option><option value="Tranås" data-ks="33.77" data-slug="tranas">Tranås – 33,77 %</option><option value="Trelleborg" data-ks="31.58" data-slug="trelleborg">Trelleborg – 31,58 %</option><option value="Trollhättan" data-ks="33.84" data-slug="trollhattan">Trollhättan – 33,84 %</option><option value="Trosa" data-ks="32.03" data-slug="trosa">Trosa – 32,03 %</option><option value="Tyresö" data-ks="31.83" data-slug="tyreso">Tyresö – 31,83 %</option><option value="Täby" data-ks="29.88" data-slug="taby">Täby – 29,88 %</option><option value="Töreboda" data-ks="33.2" data-slug="toreboda">Töreboda – 33,20 %</option><option value="Uddevalla" data-ks="33.64" data-slug="uddevalla">Uddevalla – 33,64 %</option><option value="Ulricehamn" data-ks="32.53" data-slug="ulricehamn">Ulricehamn – 32,53 %</option><option value="Umeå" data-ks="34.65" data-slug="umea">Umeå – 34,65 %</option><option value="Upplands Väsby" data-ks="31.75" data-slug="upplands-vasby">Upplands Väsby – 31,75 %</option><option value="Upplands-Bro" data-ks="31.73" data-slug="upplands-bro">Upplands-Bro – 31,73 %</option><option value="Uppsala" data-ks="32.85" data-slug="uppsala">Uppsala – 32,85 %</option><option value="Uppvidinge" data-ks="33.8" data-slug="uppvidinge">Uppvidinge – 33,80 %</option><option value="Vadstena" data-ks="34.35" data-slug="vadstena">Vadstena – 34,35 %</option><option value="Vaggeryd" data-ks="33.25" data-slug="vaggeryd">Vaggeryd – 33,25 %</option><option value="Valdemarsvik" data-ks="34.03" data-slug="valdemarsvik">Valdemarsvik – 34,03 %</option><option value="Vallentuna" data-ks="31.23" data-slug="vallentuna">Vallentuna – 31,23 %</option><option value="Vansbro" data-ks="34.28" data-slug="vansbro">Vansbro – 34,28 %</option><option value="Vara" data-ks="33.25" data-slug="vara">Vara – 33,25 %</option><option value="Varberg" data-ks="31.73" data-slug="varberg">Varberg – 31,73 %</option><option value="Vaxholm" data-ks="31.63" data-slug="vaxholm">Vaxholm – 31,63 %</option><option value="Vellinge" data-ks="29.68" data-slug="vellinge">Vellinge – 29,68 %</option><option value="Vetlanda" data-ks="33.77" data-slug="vetlanda">Vetlanda – 33,77 %</option><option value="Vilhelmina" data-ks="35.5" data-slug="vilhelmina">Vilhelmina – 35,50 %</option><option value="Vimmerby" data-ks="34.22" data-slug="vimmerby">Vimmerby – 34,22 %</option><option value="Vindeln" data-ks="35.2" data-slug="vindeln">Vindeln – 35,20 %</option><option value="Vingåker" data-ks="33.5" data-slug="vingaker">Vingåker – 33,50 %</option><option value="Vänersborg" data-ks="33.69" data-slug="vanersborg">Vänersborg – 33,69 %</option><option value="Vännäs" data-ks="35.2" data-slug="vannas">Vännäs – 35,20 %</option><option value="Värmdö" data-ks="31.31" data-slug="varmdo">Värmdö – 31,31 %</option><option value="Värnamo" data-ks="33.28" data-slug="varnamo">Värnamo – 33,28 %</option><option value="Västervik" data-ks="33.02" data-slug="vastervik">Västervik – 33,02 %</option><option value="Västerås" data-ks="31.24" data-slug="vasteras">Västerås – 31,24 %</option><option value="Växjö" data-ks="32.19" data-slug="vaxjo">Växjö – 32,19 %</option><option value="Vårgårda" data-ks="33.09" data-slug="vargarda">Vårgårda – 33,09 %</option><option value="Ydre" data-ks="34.1" data-slug="ydre">Ydre – 34,10 %</option><option value="Ystad" data-ks="31.29" data-slug="ystad">Ystad – 31,29 %</option><option value="Åmål" data-ks="33.94" data-slug="amal">Åmål – 33,94 %</option><option value="Ånge" data-ks="34.62" data-slug="ange">Ånge – 34,62 %</option><option value="Åre" data-ks="33.92" data-slug="are">Åre – 33,92 %</option><option value="Årjäng" data-ks="34.25" data-slug="arjang">Årjäng – 34,25 %</option><option value="Åsele" data-ks="35.45" data-slug="asele">Åsele – 35,45 %</option><option value="Åstorp" data-ks="31.47" data-slug="astorp">Åstorp – 31,47 %</option><option value="Åtvidaberg" data-ks="33.94" data-slug="atvidaberg">Åtvidaberg – 33,94 %</option><option value="Älmhult" data-ks="33.86" data-slug="almhult">Älmhult – 33,86 %</option><option value="Älvdalen" data-ks="34.77" data-slug="alvdalen">Älvdalen – 34,77 %</option><option value="Älvkarleby" data-ks="34.4" data-slug="alvkarleby">Älvkarleby – 34,40 %</option><option value="Älvsbyn" data-ks="33.79" data-slug="alvsbyn">Älvsbyn – 33,79 %</option><option value="Ängelholm" data-ks="31.35" data-slug="angelholm">Ängelholm – 31,35 %</option><option value="Öckerö" data-ks="33.04" data-slug="ockero">Öckerö – 33,04 %</option><option value="Ödeshög" data-ks="33.95" data-slug="odeshog">Ödeshög – 33,95 %</option><option value="Örebro" data-ks="33.65" data-slug="orebro">Örebro – 33,65 %</option><option value="Örkelljunga" data-ks="30.24" data-slug="orkelljunga">Örkelljunga – 30,24 %</option><option value="Örnsköldsvik" data-ks="33.85" data-slug="ornskoldsvik">Örnsköldsvik – 33,85 %</option><option value="Östersund" data-ks="33.72" data-slug="ostersund">Östersund – 33,72 %</option><option value="Österåker" data-ks="28.93" data-slug="osteraker">Österåker – 28,93 %</option><option value="Östhammar" data-ks="33.3" data-slug="osthammar">Östhammar – 33,30 %</option><option value="Östra Göinge" data-ks="32.17" data-slug="ostra-goinge">Östra Göinge – 32,17 %</option><option value="Överkalix" data-ks="34.14" data-slug="overkalix">Överkalix – 34,14 %</option><option value="Övertorneå" data-ks="33.84" data-slug="overtornea">Övertorneå – 33,84 %</option></select></div>
+<span class="gk-hint">Kommunal- och regionskatt 2026 enligt SCB.</span>
+</div>
 
-            <div class="results">
-                <div class="result-box highlight">
-                    <div class="label">Nettolön/mån</div>
-                    <div class="value" id="nettoMånad">—</div>
-                    <div class="sub" id="nettoÅr"></div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Total skatt/mån</div>
-                    <div class="value" id="totalSkattMånad">—</div>
-                    <div class="sub" id="skattProcent"></div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Kommunalskatt</div>
-                    <div class="value" id="kommunalskat">—</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Effektiv skattesats</div>
-                    <div class="value" id="effektivSkatt">—</div>
-                </div>
-            </div>
+<details class="gk-more" id="more">
+<summary>Ålder och kyrkoavgift</summary>
+<div class="gk-stack" style="gap:14px">
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Ålder vid årets början</legend>
+<div class="gk-seg" style="--n:2" id="alder" role="group" aria-label="Ålder">
+<button type="button" data-v="0" aria-pressed="true">Under 66 år<small>född 1960 eller senare</small></button>
+<button type="button" data-v="1" aria-pressed="false">66 år eller äldre<small>född 1959 eller tidigare</small></button>
+</div>
+</fieldset>
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Med i Svenska kyrkan?</legend>
+<div class="gk-seg" style="--n:2" id="kyrka" role="group" aria-label="Kyrkoavgift">
+<button type="button" data-v="0" aria-pressed="true">Nej</button>
+<button type="button" data-v="1" aria-pressed="false">Ja<small>betalar kyrkoavgift</small></button>
+</div>
+</fieldset>
+<div class="gk-field" id="kyrkaF" hidden>
+<label for="kyrkaS">Kyrkoavgift i din församling</label>
+<div class="gk-input"><input id="kyrkaS" inputmode="decimal" autocomplete="off" value="1,05"><span class="unit">%</span></div>
+<span class="gk-hint">1,05 % är riksgenomsnittet 2026 enligt Svenska kyrkan. Din församlings sats står i beslutet om slutlig skatt.</span>
+</div>
+</div>
+</details>
+</form>
 
-            <div class="share-bar">
-                <button class="share-btn" id="copyBtn" onclick="copyResults()">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    Kopiera resultat
-                </button>
-                <button class="share-btn" id="shareBtn" onclick="shareLink()">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                    Dela beräkning
-                </button>
-            </div>
+<section class="gk-card gk-stack gk-o3" style="gap:14px" aria-labelledby="nbH">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 id="nbH" style="font-size:22px">Från netto till brutto</h2>
+<p class="gk-hint">Vilken bruttolön behöver du för att få ut ett visst belopp? Räknas med kommun och val ovan.</p>
+</div>
+<div class="gk-field">
+<label for="netto">Nettolön du vill ha per månad</label>
+<div class="gk-input"><input id="netto" inputmode="numeric" autocomplete="off" value="30 000"><span class="unit">kr/mån</span></div>
+</div>
+<div id="nbRes" aria-live="polite"></div>
+</section>
+</div>
 
-            <div class="chart-container">
-                <canvas id="chart"></canvas>
-            </div>
-            <div class="chart-separator"></div>
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">Din nettolön per månad</div>
+<div class="gk-big"><strong id="resBig">–</strong><span>kr/mån efter skatt</span></div>
+<p class="gk-hint" id="resSub"></p>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<div class="gk-table-wrap" style="margin-top:14px"><table class="gk-table" id="split"></table></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
 
-            <button class="table-toggle" id="tableToggle">Visa månad/år jämförelse ▼</button>
-            <table class="data-table" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>Period</th>
-                        <th>Brutto</th>
-                        <th>Kommunalskatt</th>
-                        <th>Statlig skatt</th>
-                        <th>Jobbskatteavdrag</th>
-                        <th>Total skatt</th>
-                        <th>Netto</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-            </table>
-        </div>
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="/kalkylatorer/loneforhandling"><span>Dags för lönesamtal?<small>Löneförhandling – se vad du ska begära i ditt yrke</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/yrkeslon/"><span>Vad tjänar andra?<small>Lön per yrke – medianlön för 105 yrken</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/arbetsgivaravgift-kalkylator"><span>Vad kostar lönen arbetsgivaren?<small>Arbetsgivaravgift och total lönekostnad</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</section>
+</div>
+</div>
 
-        <div class="info-section">
-            <h2>Löneräknare 2026 — räkna ut din nettolön efter skatt</h2>
-            <p>Din <strong>nettolön</strong> är det belopp du faktiskt får in på kontot efter att alla skatter dragits från din bruttolön. För en löntagare under 66 år går 2026 ungefär 18–23 % av bruttolönen till skatt vid löner mellan 25 000 och 50 000 kr i månaden, och ca 30 % vid 70 000 kr — beroende på inkomst och vilken kommun du bor i. Genomsnittslönen i Sverige var 42 900 kr i månaden 2025 enligt SCB, vilket 2026 ger en nettolön på ungefär 33 700 kr vid genomsnittlig kommunalskatt (32,38 %).</p>
+<div class="gk-prose">
+<h2>Lön efter skatt för vanliga löner</h2>
+<p>Så mycket blir kvar av lönen 2026 med genomsnittlig kommunalskatt (32,38 %), om du är under 66 år och inte betalar kyrkoavgift.</p>
+<div class="gk-table-wrap"><table class="gk-table">
+<thead><tr><th scope="col">Bruttolön</th><th scope="col">Nettolön</th><th scope="col">Skatt</th><th scope="col">Skatt %</th></tr></thead>
+<tbody><tr><td>20 000</td><td><strong>16 699</strong></td><td>3 301</td><td>16,5</td></tr><tr><td>22 000</td><td><strong>18 224</strong></td><td>3 776</td><td>17,2</td></tr><tr><td>25 000</td><td><strong>20 495</strong></td><td>4 505</td><td>18,0</td></tr><tr><td>28 000</td><td><strong>22 758</strong></td><td>5 242</td><td>18,7</td></tr><tr><td>30 000</td><td><strong>24 267</strong></td><td>5 733</td><td>19,1</td></tr><tr><td>32 000</td><td><strong>25 775</strong></td><td>6 225</td><td>19,5</td></tr><tr><td>35 000</td><td><strong>28 038</strong></td><td>6 962</td><td>19,9</td></tr><tr><td>38 000</td><td><strong>30 301</strong></td><td>7 699</td><td>20,3</td></tr><tr><td>40 000</td><td><strong>31 797</strong></td><td>8 203</td><td>20,5</td></tr><tr><td>45 000</td><td><strong>35 164</strong></td><td>9 836</td><td>21,9</td></tr><tr><td>50 000</td><td><strong>38 530</strong></td><td>11 470</td><td>22,9</td></tr><tr><td>55 000</td><td><strong>41 896</strong></td><td>13 104</td><td>23,8</td></tr><tr><td>60 000</td><td><strong>44 269</strong></td><td>15 731</td><td>26,2</td></tr><tr><td>70 000</td><td><strong>49 002</strong></td><td>20 998</td><td>30,0</td></tr><tr><td>80 000</td><td><strong>53 735</strong></td><td>26 265</td><td>32,8</td></tr></tbody>
+<caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor per månad, slutlig skatt 2026 delad med 12. Välj din kommun i kalkylatorn för exakt belopp.</caption>
+</table></div>
 
-            <h3>Så beräknas din skatt i Sverige</h3>
-            <p>Svenska inkomster beskattas på två nivåer. Den första nivån är <strong>kommunalskatten</strong>, som alla betalar oavsett inkomstnivå. Den andra är den <strong>statliga inkomstskatten</strong>, som enbart träffar beskattningsbar inkomst över skiktgränsen 643 000 kr per år (2026). Räknat på bruttolön motsvarar det brytpunkten 660 400 kr per år, ca 55 000 kr/månad, med 20 % på överskjutande belopp. De allra flesta löntagare betalar alltså bara kommunalskatt och berörs aldrig av den statliga skatten.</p>
-            <p>Utöver skatten tillkommer <strong>jobbskatteavdraget</strong> — ett automatiskt skatteavdrag som sänker din faktiska skattebörda. Från 1 januari 2026 är avdraget förstärkt och kan uppgå till drygt 4 300 kr per månad vid genomsnittlig kommunalskatt. Maxbeloppet nås vid en lön på ca 40 000 kr i månaden. Innan skatten beräknas dras också <strong>grundavdraget</strong> (17 400–45 600 kr per år 2026, högre för dig som fyllt 66 år) från din inkomst. Kalkylatorn räknar även med skattereduktionen för förvärvsinkomst (högst 1 500 kr/år), public service-avgiften (max 1 184 kr/år) och begravningsavgiften (0,292 %, Stockholm 0,070 %, Tranås 0,285 %). Kyrkoavgift ingår inte. Resultatet är din slutliga skatt för året delad med 12. Skatteavdraget på lönen följer Skatteverkets skattetabell och kan skilja sig några tiotal kronor i månaden.</p>
+<h2>Så räknas skatten på lönen</h2>
+<p>Kalkylatorn räknar ut din skatt för hela året och delar den med 12:</p>
+<ol>
+<li><strong>Grundavdraget</strong> dras från årslönen – 17 400 kr till 45 600 kr beroende på inkomst, mer om du har fyllt 66 år.</li>
+<li>På resten betalar du <strong>kommunalskatt</strong>, 28,93–35,65 % beroende på kommun.</li>
+<li>Är årslönen över 660 400 kr (ungefär 55 000 kr i månaden) tillkommer <strong>statlig skatt</strong>, 20 % på det som är över.</li>
+<li><strong>Jobbskatteavdraget</strong> och skattereduktionen för förvärvsinkomst (högst 1 500 kr om året) sänker skatten.</li>
+<li>Public service-avgift (1 %, högst 1 184 kr om året) och begravningsavgift (0,292 %) läggs till, och kyrkoavgift om du är med i Svenska kyrkan.</li>
+</ol>
+<p>Den allmänna pensionsavgiften på 7 % räknas av krona för krona mot skatten, så för de flesta påverkar den inte nettolönen.</p>
 
-            <h3>Kommunalskatt 2026 — varierar kraftigt i Sverige</h3>
-            <p>Kommunalskatten finansierar skola, äldreomsorg och infrastruktur i din hemkommun. Till kommunalskatten läggs <strong>regionalskatten</strong> som finansierar sjukvård och kollektivtrafik. Totalt varierar den kombinerade skatten kraftigt:</p>
-            <ul>
-                <li><strong>Stockholm:</strong> 18,22 % (kommunalt) + 12,33 % (region) = 30,55 % totalt</li>
-                <li><strong>Göteborg:</strong> 21,12 % + 11,48 % = 32,60 % totalt</li>
-                <li><strong>Malmö:</strong> 21,24 % + 11,18 % = 32,42 % totalt</li>
-                <li><strong>Lägsta skattekommun:</strong> 28,93 % (Österåker)</li>
-                <li><strong>Högsta skattekommun:</strong> 35,65 % (Dorotea)</li>
-            </ul>
-            <p>Det innebär att en person med 40 000 kr i bruttolön kan få ut ca 1 700 kr mer i månaden beroende på om de bor i Sveriges lägst- eller högstskattekommun. Välj rätt kommunalskatt i kalkylatorn ovan för ett exakt resultat.</p>
+<h2>Räkna ut bruttolön från nettolön</h2>
+<p>Vet du vad du vill ha ut i handen? Skriv beloppet i rutan <em>Från netto till brutto</em>, så räknar kalkylatorn baklänges med samma regler. För 30 000 kr netto behöver du ungefär <strong>37 599 kr</strong> i bruttolön med genomsnittlig kommunalskatt.</p>
 
-            <h3>Statlig inkomstskatt — enbart för höginkomsttagare</h3>
-            <p>Den statliga inkomstskatten på 20 % tas ut på beskattningsbar inkomst över skiktgränsen 643 000 kr (2026). Eftersom grundavdraget dras först motsvarar det en bruttolön på 660 400 kr per år — brytpunkten — alltså ca 55 000 kr i månaden. Tjänar du 60 000 kr/månad betalar du 20 % extra skatt på de ca 5 000 kr som överstiger brytpunkten — ungefär 1 000 kr extra per månad. Inkomster under gränsen, vilket gäller majoriteten av Sveriges löntagare, berörs inte alls.</p>
+<h2>Därför skiljer sig lönebeskedet</h2>
+<p>Arbetsgivaren drar preliminär skatt enligt Skatteverkets skattetabell. Den går i steg om 200 kr (100 kr upp till 20 000 kr) och räknar med hela procentsatser, så avdraget blir sällan exakt samma som skatten här. Skillnaden jämnas ut när du får beslut om slutlig skatt – som skatteåterbäring eller <a href="https://www.skatteverket.se/kvarskatt" target="_blank" rel="noopener">kvarskatt</a>. Vi har stämt av modellen mot Skatteverkets tabeller 32 och 33 för 2026.</p>
 
-            <h3>Arbetsgivaravgifter och den totala lönekostnaden</h3>
-            <p>Utöver din bruttolön betalar din arbetsgivare <strong>arbetsgivaravgifter på 31,42 %</strong> (2026). Det innebär att din faktiska lönekostnad för arbetsgivaren är nästan en tredjedel högre än din bruttolön. En anställd med 40 000 kr i bruttolön kostar alltså arbetsgivaren totalt ca 52 500 kr. Arbetsgivaravgifterna finansierar socialförsäkringssystemet — sjukpenning, föräldrapenning och allmän pension.</p>
+<h2>Vanliga frågor om lön efter skatt</h2>
+<div class="gk-faq"><details><summary>Hur räknar man ut lön efter skatt?</summary><p>Ta årslönen och dra av grundavdraget. På resten räknas kommunalskatt och, över brytpunkten, statlig skatt. Sedan dras jobbskatteavdraget och skattereduktionen för förvärvsinkomst av, och public service-avgift och begravningsavgift läggs till. Dela med 12 så har du skatten per månad. Kalkylatorn ovan gör alla steg åt dig med 2026 års regler.</p></details><details><summary>Hur mycket är 30 000 kr efter skatt?</summary><p>Med genomsnittlig kommunalskatt (32,38 %) blir 30 000 kr i månaden 24 267 kr efter skatt 2026, om du är under 66 år. I Österåker, som har lägst skatt (28,93 %), blir det 24 872 kr och i Dorotea, som har högst (35,65 %), 23 693 kr.</p></details><details><summary>Vad blir min nettolön på 40 000 kr?</summary><p>Ungefär 31 797 kr i månaden med genomsnittlig kommunalskatt 2026. Skatten är 8 203 kr, eller 20,5 % av lönen. Får du en löneökning går 32,7 % av den till skatt.</p></details><details><summary>Hur räknar man ut bruttolön från nettolön?</summary><p>Det finns ingen enkel formel, eftersom avdragen ändras med inkomsten. Kalkylatorn provar sig i stället fram till den bruttolön som ger din nettolön. För 25 000 kr netto i månaden behöver du ungefär 30 971 kr i bruttolön med genomsnittlig kommunalskatt, om du är under 66 år.</p></details><details><summary>När betalar man statlig skatt?</summary><p>När lönen är över 660 400 kr om året, ungefär 55 000 kr i månaden. Det är brytpunkten 2026. På den del som är över betalar du 20 % statlig skatt utöver kommunalskatten. Har du fyllt 66 år vid årets början är brytpunkten 760 500 kr.</p></details><details><summary>Vad är jobbskatteavdraget?</summary><p>En skattereduktion för dig som har inkomst av arbete. Den räknas av automatiskt i skatten på lönen. Avdraget växer med lönen och är som störst från ungefär 39 900 kr i månaden – med genomsnittlig kommunalskatt 4 366 kr i månaden 2026.</p></details><details><summary>Betalar man mindre skatt efter 66 år?</summary><p>Ja. Har du fyllt 66 år vid årets början – 2026 gäller det dig som är född 1959 eller tidigare – får du ett högre grundavdrag. Med 35 000 kr i lön blir nettolönen 31 188 kr i stället för 28 038 kr, med genomsnittlig kommunalskatt.</p></details><details><summary>Varför stämmer inte nettolönen med mitt lönebesked?</summary><p>Arbetsgivaren drar skatt enligt Skatteverkets skattetabell, som går i inkomststeg och räknar med hela procentsatser. Därför kan avdraget skilja sig något från den skatt vi räknar fram, och skillnaden jämnas ut i beslutet om slutlig skatt. Är du med i Svenska kyrkan betalar du också kyrkoavgift, i snitt 1,05 % – välj det under Ålder och kyrkoavgift.</p></details></div>
 
-            <h2>Vanliga frågor om lön och skatt 2026</h2>
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.skatteverket.se/privat/skatter/beloppochprocent/2026" target="_blank" rel="noopener">Skatteverket – Belopp och procent, inkomstår 2026</a> – skiktgräns 643 000 kr, brytpunkt 660 400 kr (66+: 760 500 kr), grundavdrag 17 400–45 600 kr, public service-avgift högst 1 184 kr, allmän pensionsavgift 7 %, begravningsavgift 0,292 % (Stockholm 0,07 %, Tranås 0,285 %)</li>
+<li><a href="https://skatteverket.se/download/18.1522bf3f19aea8075ba55c/1765284655603/teknisk-beskrivning-skv-433-2026-utgava-36.pdf" target="_blank" rel="noopener">Skatteverket – Teknisk beskrivning för skattetabeller 2026 (SKV 433)</a> – jobbskatteavdrag, skattereduktion för förvärvsinkomst (0,75 %, högst 1 500 kr), public service-avgift 1 %, pensionsavgiften räknas av mot skatten, inkomststeg i tabellerna</li>
+<li>Skatteverket – månadstabell <a href="https://skatteverket.se/download/18.1522bf3f19aea8075ba61b/1765290451072/allmanna-tabeller-manad-tabell-32.pdf" target="_blank" rel="noopener">32</a> och <a href="https://www.skatteverket.se/download/18.1522bf3f19aea8075ba61c/1765290465443/allmanna-tabeller-manad-tabell-33.pdf" target="_blank" rel="noopener">33</a> för 2026 – kontroll av modellen</li>
+<li><a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/offentlig-ekonomi/finanser-for-den-kommunala-sektorn/kommunalskatterna/pong/statistiknyhet/kommunalskatterna-2026/" target="_blank" rel="noopener">SCB – Kommunalskatterna 2026</a> – rikssnitt 32,38 %, lägst Österåker 28,93 %, högst Dorotea 35,65 %</li>
+<li><a href="https://www.svenskakyrkan.se/medlem/kyrkoavgiften" target="_blank" rel="noopener">Svenska kyrkan – Kyrkoavgiften</a> – riksgenomsnitt 1,05 % 2026</li>
+<li><a href="https://www.skatteverket.se/kvarskatt" target="_blank" rel="noopener">Skatteverket – Kvarskatt</a> – slutlig skatt och skatteåterbäring</li>
+</ul>
 
-            <details>
-                <summary>Vad är skillnaden mellan bruttolön och nettolön?</summary>
-                <p>Bruttolön är din avtalade månadslön innan skatter och avgifter dras. Nettolön är det du faktiskt får in på kontot efter att kommunalskatt, regionskatt och eventuell statlig inkomstskatt dragits. För en löntagare under 66 år är skatten 2026 vanligtvis ca 18–23 % av bruttolönen vid löner mellan 25 000 och 50 000 kr i månaden, tack vare grundavdraget och jobbskatteavdraget.</p>
-            </details>
-
-            <details>
-                <summary>Hur mycket är kommunalskatten i min kommun?</summary>
-                <p>Den kommunala delen varierar mellan 16,60 och 23,80 % och regionskatten mellan 10,83 och 12,33 % (Gotland har ingen separat regionskatt). Totalt ger det 28,93–35,65 % år 2026. Genomsnittet i Sverige är 32,38 % (SCB). Alla 290 kommuners skattesatser finns i kalkylatorn ovan — välj din kommun i listan.</p>
-            </details>
-
-            <details>
-                <summary>När betalar jag statlig inkomstskatt?</summary>
-                <p>Statlig inkomstskatt på 20 % tas ut på beskattningsbar inkomst över 643 000 kr (skiktgränsen 2026). Räknat på bruttolön går gränsen vid 660 400 kr per år, ca 55 000 kr/månad, för dig under 66 år. För den som fyllt 66 år är brytpunkten 760 500 kr. De flesta löntagare i Sverige når aldrig denna gräns och betalar därför ingen statlig inkomstskatt. Gränsen räknas upp varje år.</p>
-            </details>
-
-            <details>
-                <summary>Vad är jobbskatteavdraget och vad innebär det för min nettolön?</summary>
-                <p>Jobbskatteavdraget är en skattereduktion för dig som har arbetsinkomst. Den sänker skatten automatiskt — framför allt för lägre och medelinkomster — och är redan inräknad i skatteavdraget på lönen. Det innebär att din faktiska skatt ofta är lägre än vad ren kommunalskatt antyder. Avdraget växer med inkomsten upp till ca 40 000 kr/månad och ligger därefter kvar på sin maxnivå — sedan 2024 trappas det inte längre av för höga inkomster. 2026 förstärktes avdraget med cirka 17 miljarder kronor.</p>
-            </details>
-
-            <details>
-                <summary>Kan min nettolön variera från månad till månad?</summary>
-                <p>Ja, om du har rörliga inkomstdelar som bonus, provision, övertid eller skiftestillägg varierar din bruttolön — och därmed nettolönen. Om du byter arbetsgivare mitt i ett inkomstår kan skattejämkning påverka skatteavdraget. Vid stora inkomstvariationer kan det löna sig att ansöka om jämkad preliminärskatt hos Skatteverket.</p>
-            </details>
-
-            <details>
-                <summary>Räknar kalkylatorn med arbetsgivaravgifter?</summary>
-                <p>Nej, kalkylatorn visar din personliga nettolön. Arbetsgivaravgifter på 31,42 % är en kostnad för arbetsgivaren och syns inte i din lönespecifikation. Din bruttolön är det belopp ni avtalat — arbetsgivaravgiften är en extra kostnad som arbetsgivaren betalar ovanpå det.</p>
-            </details>
-
-            <details>
-                <summary>Hur kan jag som anställd minska min skatt?</summary>
-                <p>Som anställd är möjligheterna begränsade men finns: spara i ISK (investeringssparkonto) för lägre kapitalskatt, göra reseavdrag om du har minst 5 km till jobbet, sparar minst 2 timmar per dag med bil jämfört med kollektivtrafik och dina kostnader överstiger 15 000 kr per år (2026), och se till att din arbetsgivare erbjuder skattefria förmåner som friskvårdsbidrag (upp till 5 000 kr/år).</p>
-            </details>
-        </div>
-    
-    <!-- Yrkeslön — programmatic SEO landing -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
-      <a href="/kalkylatorer/loneforhandling" style="display:block;margin:0 0 20px;padding:14px 18px;border-radius:10px;background:var(--primary-light,#E4F1EA);border:1px solid var(--primary,#0D6A45);color:var(--text,#111);text-decoration:none;font-weight:600;">💰 Dags att löneförhandla? <span style="color:var(--primary,#0D6A45);">Se vad andra i ditt yrke tjänar och vad du ska begära →</span></a>
-      <h2 style="font-size:1.15rem;margin-bottom:0.5rem;">💼 Lönefakta per yrke 2026</h2>
-      <p style="font-size:0.9rem;color:var(--text-light, #56625B);margin-bottom:1rem;">Vad tjänar olika yrken i Sverige? Medianlön, nettolön och lön efter ålder enligt SCB:s lönestrukturstatistik 2025:</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.5rem;">
-        <a href="/kalkylatorer/yrkeslon/sjukskoterska" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Sjuksköterska</a>
-        <a href="/kalkylatorer/yrkeslon/underskoterska" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Undersköterska</a>
-        <a href="/kalkylatorer/yrkeslon/larare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Grundskollärare</a>
-        <a href="/kalkylatorer/yrkeslon/systemutvecklare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Systemutvecklare</a>
-        <a href="/kalkylatorer/yrkeslon/forskollarare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Förskollärare</a>
-        <a href="/kalkylatorer/yrkeslon/polis" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Polis</a>
-        <a href="/kalkylatorer/yrkeslon/elektriker" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Elektriker</a>
-        <a href="/kalkylatorer/yrkeslon/snickare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Snickare</a>
-        <a href="/kalkylatorer/yrkeslon/civilingenjor" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Civilingenjör</a>
-        <a href="/kalkylatorer/yrkeslon/lakare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Specialistläkare</a>
-        <a href="/kalkylatorer/yrkeslon/saljare" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Företagssäljare</a>
-        <a href="/kalkylatorer/yrkeslon/ekonom" style="padding:0.5rem 0.9rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">Ekonom</a>
-      </div>
-      <p style="margin-top:1rem;"><a href="/kalkylatorer/yrkeslon/" style="color:var(--primary,#0D6A45);font-weight:700;text-decoration:none;">Se lönen för alla 105 yrken &rarr;</a></p>
-    </section>
-
-    <!-- Relaterade kalkylatorer -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade kalkylatorer</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/kalkylatorer/marginalskattekalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Marginalskattekalkylator</a>
-      <a href="/kalkylatorer/lonevaxling-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Löneväxlingskalkylator</a>
-      <a href="/kalkylatorer/arbetsgivaravgift-kalkylator" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">Arbetsgivaravgiftskalkylator</a>
-      </div>
-    </section>
-    <!-- Relaterade guider -->
-    <section style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:var(--radius, 12px);">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">Relaterade guider</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-      <a href="/artiklar/rakna-ut-nettolon-2026" style="display:inline-block;padding:0.5rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;">📖 Räkna ut nettolön 2026</a>
-      </div>
-    </section>
-
-
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/marginalskattekalkylator"><span>Marginalskatt<small>Hur mycket av en löneökning blir kvar?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/skatteaterbarings-kalkylator"><span>Skatteåterbäring<small>Får du tillbaka skatt eller blir det kvarskatt?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/rakna-ut-nettolon-2026"><span>Guide: Räkna ut nettolön 2026<small>Steg för steg med räkneexempel</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
 </main>
+<script id="gk-lon" type="application/json">{"SNITT_KS": 32.38, "BEGR": 0.292, "BEGR_SPEC": {"Stockholm": 0.07, "Tranås": 0.285}, "KYRKA": 1.05, "BRYT": 660400, "BRYT66": 760500, "GA_MIN": 17400, "GA_MAX": 45600, "MS_STEG": 1000, "MAX_LON": 1000000, "DEF_LON": 35000, "DEF_NETTO": 30000, "AR": 2026}</script>
+<script defer src="/assets/skatt2026.js?v=20261001"></script>
+<script>
 
-    <div class="gk-ftr gk2" role="contentinfo">
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var C = JSON.parse(document.getElementById('gk-lon').textContent);
+  var T = window.GKSkatt2026;
+  var $ = function (id) { return document.getElementById(id); };
+  var kr = function (v) { return GK.fmt(Math.round(v), 0) + '\u00a0kr'; };
+  var pc = function (x, d) { return GK.fmt(x, d === undefined ? 1 : d) + '\u00a0%'; };
+  var st = { aldre: false, kyrka: false };
+
+  function seg(id, cb) {
+    var el = $(id);
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      el.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cb(b.getAttribute('data-v')); calc();
+    });
+  }
+  function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-v')) === String(v) ? 'true' : 'false'); }); }
+  seg('lonq', function (v) { $('lon').value = GK.fmt(+v, 0); });
+  seg('alder', function (v) { st.aldre = v === '1'; });
+  seg('kyrka', function (v) { st.kyrka = v === '1'; $('kyrkaF').hidden = !st.kyrka; });
+  $('lon').addEventListener('input', function () { press('lonq', GK.parse($('lon').value)); calc(); });
+  $('kommun').addEventListener('change', calc);
+  ['kyrkaS', 'netto'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  ['lon', 'netto'].forEach(function (id) { GK.groupInput($(id)); });
+
+  function val(id) { var v = GK.parse($(id).value); return isFinite(v) && v >= 0 ? v : null; }
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '" style="margin-top:12px">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+  function tile(l, v, s) { return '<div class="gk-tile"><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+
+  /* Val i formuläret -> skatteparametrar */
+  function opts() {
+    var o = $('kommun').options[$('kommun').selectedIndex], namn = o.value;
+    var ky = 0;
+    if (st.kyrka) { ky = GK.parse($('kyrkaS').value); if (!isFinite(ky) || ky < 0 || ky > 5) ky = C.KYRKA; }
+    return { namn: namn, ks: +o.getAttribute('data-ks'), bg: C.BEGR_SPEC[namn] !== undefined ? C.BEGR_SPEC[namn] : C.BEGR, ky: ky, aldre: st.aldre };
+  }
+
+  /* Modell – samma som scripts/build_loneraknare.py */
+  function skatt(lon, o) { return T.skattAr(lon * 12, { kommunalskatt: o.ks, begravning: o.bg, kyrkoavgift: o.ky, aldre: o.aldre }); }
+  function berakna(lon, o) {
+    var r = skatt(lon, o), r2 = skatt(lon + C.MS_STEG, o);
+    return { r: r, netto: r.netto / 12, skatt: r.total / 12, andel: lon > 0 ? r.total / (lon * 12) : 0, ms: (r2.total - r.total) / (C.MS_STEG * 12) };
+  }
+  function bruttoForNetto(mal, o) {
+    var lo = 0, hi = C.MAX_LON;
+    if (skatt(hi, o).netto / 12 < mal) return null;
+    while (lo < hi) {
+      var mid = Math.floor((lo + hi) / 2);
+      if (skatt(mid, o).netto / 12 >= mal) hi = mid; else lo = mid + 1;
+    }
+    return lo;
+  }
+
+  function clear(msg) {
+    $('resBig').textContent = '–'; $('resSub').textContent = msg;
+    ['tiles', 'verdict', 'split', 'how'].forEach(function (id) { $(id).innerHTML = ''; });
+  }
+
+  function calc() {
+    var lon = val('lon'), o = opts();
+    nettoTillBrutto(o);
+    if (!lon || lon < 100) return clear('Fyll i din lön före skatt.');
+    var b = berakna(lon, o), r = b.r;
+    var plats = o.namn ? o.namn : 'rikssnitt';
+    $('resBig').textContent = GK.fmt(Math.round(b.netto), 0);
+    $('resSub').textContent = 'av ' + kr(lon) + ' före skatt i ' + plats + '. Du betalar ' + kr(b.skatt) + ' i skatt, ' + pc(b.andel * 100) + ' av lönen.';
+    $('tiles').innerHTML = tile('Skatt per månad', kr(b.skatt), pc(b.andel * 100) + ' av lönen') +
+      tile('Marginalskatt', pc(b.ms * 100), 'Så mycket av en löneökning går till skatt') +
+      tile('Nettolön per år', kr(r.netto), 'Bruttolön ' + kr(lon * 12)) +
+      tile('Jobbskatteavdrag', kr(r.jobbskatteavdrag / 12) + '/mån', 'Ingår redan i skatten');
+
+    var v = '';
+    var bryt = o.aldre ? C.BRYT66 : C.BRYT;
+    if (r.statligSkatt > 0) {
+      v += verdict('warn', 'Du betalar statlig skatt', 'Lönen är över brytpunkten ' + kr(bryt) + ' om året (' + kr(bryt / 12) + ' i månaden). På det som är över betalar du 20 % extra – ' + kr(r.statligSkatt / 12) + ' i månaden.');
+    }
+    if (o.namn) {
+      var s = berakna(lon, { ks: C.SNITT_KS, bg: C.BEGR, ky: o.ky, aldre: o.aldre }), d = Math.round(b.netto) - Math.round(s.netto);
+      if (d > 0) v += verdict('good', kr(d) + ' mer i månaden än i snittet', 'Kommunalskatten i ' + o.namn + ' är ' + pc(o.ks, 2) + ' mot rikssnittet ' + pc(C.SNITT_KS, 2) + '. Med snittskatt hade du fått ' + kr(s.netto) + '.');
+      else if (d < 0) v += verdict('info', kr(-d) + ' mindre i månaden än i snittet', 'Kommunalskatten i ' + o.namn + ' är ' + pc(o.ks, 2) + ' mot rikssnittet ' + pc(C.SNITT_KS, 2) + '. Med snittskatt hade du fått ' + kr(s.netto) + '.');
+      else v += verdict('good', 'Samma som i snittet', 'Kommunalskatten i ' + o.namn + ' är ' + pc(o.ks, 2) + ', samma som rikssnittet.');
+    } else {
+      var lag = null, hog = null;
+      Array.prototype.forEach.call($('kommun').options, function (x) {
+        if (!x.value) return; var k = +x.getAttribute('data-ks');
+        if (!lag || k < lag.k) lag = { n: x.value, k: k }; if (!hog || k > hog.k) hog = { n: x.value, k: k };
+      });
+      var nl = berakna(lon, { ks: lag.k, bg: C.BEGR_SPEC[lag.n] || C.BEGR, ky: o.ky, aldre: o.aldre }).netto;
+      var nh = berakna(lon, { ks: hog.k, bg: C.BEGR_SPEC[hog.n] || C.BEGR, ky: o.ky, aldre: o.aldre }).netto;
+      v += verdict('info', 'Välj din kommun för exakt belopp', 'Med din lön skiljer det ' + kr(Math.round(nl) - Math.round(nh)) + ' i månaden mellan ' + lag.n + ' (' + pc(lag.k, 2) + ') och ' + hog.n + ' (' + pc(hog.k, 2) + ').');
+    }
+    $('verdict').innerHTML = v;
+
+    var rad = function (l, x, sign) { return '<tr><td>' + l + '</td><td>' + (sign || '') + GK.fmt(Math.round(x / 12), 0) + '</td></tr>'; };
+    var apaNetto = r.pensionsavgift - Math.min(r.pensionsavgift, r.kommunalskatt + r.statligSkatt);
+    $('split').innerHTML = '<thead><tr><th scope="col">Så fördelas skatten</th><th scope="col">kr/mån</th></tr></thead><tbody>' +
+      rad('Kommunal- och regionskatt (' + pc(o.ks, 2) + ')', r.kommunalskatt, '') +
+      (r.statligSkatt > 0 ? rad('Statlig skatt (20 %)', r.statligSkatt, '') : '') +
+      (apaNetto > 0 ? rad('Allmän pensionsavgift (7 %)', apaNetto, '') : '') +
+      rad('Jobbskatteavdrag', r.jobbskatteavdrag, '−') +
+      (r.forvarvsreduktion > 0 ? rad('Skattereduktion förvärvsinkomst', r.forvarvsreduktion, '−') : '') +
+      rad('Public service-avgift', r.publicService, '') +
+      rad('Begravningsavgift (' + pc(o.bg, o.bg === 0.07 ? 2 : 3) + ')', r.begravning, '') +
+      (r.kyrkoavgift > 0 ? rad('Kyrkoavgift (' + pc(o.ky, 2) + ')', r.kyrkoavgift, '') : '') +
+      '<tr><td><strong>Skatt totalt</strong></td><td><strong>' + GK.fmt(Math.round(b.skatt), 0) + '</strong></td></tr></tbody>' +
+      '<caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Avrundat till hela kronor per månad.</caption>';
+
+    $('how').innerHTML =
+      '<p>Årslön: ' + kr(lon) + ' × 12 = ' + kr(lon * 12) + '. Grundavdrag ' + kr(r.grundavdrag) + (o.aldre ? ' (förhöjt för dig som fyllt 66 år)' : '') + ' ger en beskattningsbar inkomst på ' + kr(r.bfi) + '.</p>' +
+      '<p>Kommunal- och regionskatt ' + pc(o.ks, 2) + ' = ' + kr(r.kommunalskatt) + ' om året' + (r.statligSkatt > 0 ? ', statlig skatt 20 % på ' + kr(r.bfi - T.SKIKT) + ' över skiktgränsen = ' + kr(r.statligSkatt) : '') + '. Allmän pensionsavgift 7 % (' + kr(r.pensionsavgift) + ') räknas av mot skatten. Jobbskatteavdrag ' + kr(r.jobbskatteavdrag) + (r.forvarvsreduktion > 0 ? ' och skattereduktion för förvärvsinkomst ' + kr(r.forvarvsreduktion) : '') + ' dras av.</p>' +
+      '<p>Public service-avgift ' + kr(r.publicService) + ', begravningsavgift ' + kr(r.begravning) + (r.kyrkoavgift > 0 ? ' och kyrkoavgift ' + kr(r.kyrkoavgift) : '') + ' läggs till. Skatt för året: ' + kr(r.total) + ', det vill säga ' + kr(b.skatt) + ' i månaden.</p>' +
+      '<p>Det är den slutliga skatten för ett år med samma lön varje månad. Skatteavdraget på lönebeskedet följer Skatteverkets skattetabell och kan skilja sig något.</p>';
+  }
+
+  var nbLast = null;
+  function nettoTillBrutto(o) {
+    var mal = val('netto');
+    if (!mal || mal < 100) { $('nbRes').innerHTML = ''; nbLast = null; return; }
+    var b = bruttoForNetto(mal, o);
+    if (b === null) { $('nbRes').innerHTML = '<p class="gk-hint">Beloppet är för högt för kalkylatorn.</p>'; nbLast = null; return; }
+    var x = berakna(b, o);
+    nbLast = b;
+    $('nbRes').innerHTML = '<div class="gk-tiles">' + tile('Bruttolön som behövs', kr(b) + '/mån', 'Ger ' + kr(x.netto) + ' efter skatt') +
+      tile('Skatt', kr(x.skatt) + '/mån', pc(x.andel * 100) + ' av bruttolönen') + '</div>' +
+      '<button type="button" class="gk-btn" id="nbUse" style="margin-top:12px">Räkna med ' + GK.fmt(b, 0) + ' kr i lön</button>';
+  }
+  $('nbRes').addEventListener('click', function (e) {
+    if (!e.target.closest('#nbUse') || nbLast === null) return;
+    $('lon').value = GK.fmt(nbLast, 0); press('lonq', nbLast); calc();
+    var res = document.querySelector('.gk-result'); if (res && res.scrollIntoView) res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  /* Delningslänkar från gamla sidan: ?lon=35000&k=huddinge&a=66 */
+  try {
+    var q = new URLSearchParams(location.search);
+    var ql = parseInt(q.get('lon'), 10);
+    if (ql > 0 && ql < 10000000) { $('lon').value = GK.fmt(ql, 0); press('lonq', ql); }
+    var qk = q.get('k');
+    if (qk) Array.prototype.forEach.call($('kommun').options, function (x, i) { if (x.getAttribute('data-slug') === qk) $('kommun').selectedIndex = i; });
+    if (q.get('a') === '66') { st.aldre = true; press('alder', '1'); $('more').open = true; }
+  } catch (e) {}
+
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Nettolönen är en uppskattning av slutlig skatt – skatteavdraget på lönebeskedet följer Skatteverkets skattetabell.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-    <script>
-        // Kommunal skattesats 2026 (kommun + region), källa: SCB, Kommunala skattesatser 2026
-        const KOMMUNER = {"ale":{kommun:"Ale",k:21.32,r:11.48,lokal:32.8},"alingsas":{kommun:"Alingsås",k:21.36,r:11.48,lokal:32.84},"alvesta":{kommun:"Alvesta",k:21.42,r:12.0,lokal:33.42},"aneby":{kommun:"Aneby",k:22.09,r:11.76,lokal:33.85},"arboga":{kommun:"Arboga",k:22.41,r:10.88,lokal:33.29},"arjeplog":{kommun:"Arjeplog",k:23.5,r:11.34,lokal:34.84},"arvidsjaur":{kommun:"Arvidsjaur",k:22.8,r:11.34,lokal:34.14},"arvika":{kommun:"Arvika",k:21.75,r:12.28,lokal:34.03},"askersund":{kommun:"Askersund",k:21.85,r:12.3,lokal:34.15},"avesta":{kommun:"Avesta",k:21.96,r:11.99,lokal:33.95},"bengtsfors":{kommun:"Bengtsfors",k:22.92,r:11.48,lokal:34.4},"berg":{kommun:"Berg",k:22.52,r:11.7,lokal:34.22},"bjurholm":{kommun:"Bjurholm",k:23.15,r:11.85,lokal:35.0},"bjuv":{kommun:"Bjuv",k:20.99,r:11.18,lokal:32.17},"boden":{kommun:"Boden",k:22.6,r:11.34,lokal:33.94},"bollebygd":{kommun:"Bollebygd",k:21.59,r:11.48,lokal:33.07},"bollnas":{kommun:"Bollnäs",k:21.86,r:11.51,lokal:33.37},"borgholm":{kommun:"Borgholm",k:21.58,r:11.86,lokal:33.44},"borlange":{kommun:"Borlänge",k:22.41,r:11.99,lokal:34.4},"boras":{kommun:"Borås",k:21.31,r:11.48,lokal:32.79},"botkyrka":{kommun:"Botkyrka",k:19.9,r:12.33,lokal:32.23},"boxholm":{kommun:"Boxholm",k:21.82,r:11.55,lokal:33.37},"bromolla":{kommun:"Bromölla",k:22.56,r:11.18,lokal:33.74},"bracke":{kommun:"Bräcke",k:23.39,r:11.7,lokal:35.09},"burlov":{kommun:"Burlöv",k:20.09,r:11.18,lokal:31.27},"bastad":{kommun:"Båstad",k:20.23,r:11.18,lokal:31.41},"dals-ed":{kommun:"Dals-Ed",k:23.21,r:11.48,lokal:34.69},"danderyd":{kommun:"Danderyd",k:18.25,r:12.33,lokal:30.58},"degerfors":{kommun:"Degerfors",k:23.0,r:12.3,lokal:35.3},"dorotea":{kommun:"Dorotea",k:23.8,r:11.85,lokal:35.65},"eda":{kommun:"Eda",k:22.27,r:12.28,lokal:34.55},"ekero":{kommun:"Ekerö",k:19.12,r:12.33,lokal:31.45},"eksjo":{kommun:"Eksjö",k:22.26,r:11.76,lokal:34.02},"emmaboda":{kommun:"Emmaboda",k:21.96,r:11.86,lokal:33.82},"enkoping":{kommun:"Enköping",k:21.34,r:11.71,lokal:33.05},"eskilstuna":{kommun:"Eskilstuna",k:22.02,r:10.83,lokal:32.85},"eslov":{kommun:"Eslöv",k:20.54,r:11.18,lokal:31.72},"essunga":{kommun:"Essunga",k:21.57,r:11.48,lokal:33.05},"fagersta":{kommun:"Fagersta",k:22.11,r:10.88,lokal:32.99},"falkenberg":{kommun:"Falkenberg",k:21.1,r:11.4,lokal:32.5},"falkoping":{kommun:"Falköping",k:21.95,r:11.48,lokal:33.43},"falun":{kommun:"Falun",k:22.06,r:11.99,lokal:34.05},"filipstad":{kommun:"Filipstad",k:22.27,r:12.28,lokal:34.55},"finspang":{kommun:"Finspång",k:22.15,r:11.55,lokal:33.7},"flen":{kommun:"Flen",k:22.27,r:10.83,lokal:33.1},"forshaga":{kommun:"Forshaga",k:22.35,r:12.28,lokal:34.63},"fargelanda":{kommun:"Färgelanda",k:22.91,r:11.48,lokal:34.39},"gagnef":{kommun:"Gagnef",k:22.28,r:11.99,lokal:34.27},"gislaved":{kommun:"Gislaved",k:21.99,r:11.76,lokal:33.75},"gnesta":{kommun:"Gnesta",k:22.12,r:10.83,lokal:32.95},"gnosjo":{kommun:"Gnosjö",k:22.24,r:11.76,lokal:34.0},"gotland":{kommun:"Gotland",k:33.6,r:0.0,lokal:33.6},"grums":{kommun:"Grums",k:22.5,r:12.28,lokal:34.78},"grastorp":{kommun:"Grästorp",k:21.99,r:11.48,lokal:33.47},"gullspang":{kommun:"Gullspång",k:22.49,r:11.48,lokal:33.97},"gallivare":{kommun:"Gällivare",k:22.55,r:11.34,lokal:33.89},"gavle":{kommun:"Gävle",k:22.26,r:11.51,lokal:33.77},"goteborg":{kommun:"Göteborg",k:21.12,r:11.48,lokal:32.6},"gotene":{kommun:"Götene",k:22.12,r:11.48,lokal:33.6},"habo":{kommun:"Habo",k:22.17,r:11.76,lokal:33.93},"hagfors":{kommun:"Hagfors",k:22.02,r:12.28,lokal:34.3},"hallsberg":{kommun:"Hallsberg",k:21.55,r:12.3,lokal:33.85},"hallstahammar":{kommun:"Hallstahammar",k:21.81,r:10.88,lokal:32.69},"halmstad":{kommun:"Halmstad",k:20.98,r:11.4,lokal:32.38},"hammaro":{kommun:"Hammarö",k:22.77,r:12.28,lokal:35.05},"haninge":{kommun:"Haninge",k:18.95,r:12.33,lokal:31.28},"haparanda":{kommun:"Haparanda",k:22.5,r:11.34,lokal:33.84},"heby":{kommun:"Heby",k:22.5,r:11.71,lokal:34.21},"hedemora":{kommun:"Hedemora",k:22.16,r:11.99,lokal:34.15},"helsingborg":{kommun:"Helsingborg",k:20.21,r:11.18,lokal:31.39},"herrljunga":{kommun:"Herrljunga",k:22.14,r:11.48,lokal:33.62},"hjo":{kommun:"Hjo",k:22.0,r:11.48,lokal:33.48},"hofors":{kommun:"Hofors",k:22.86,r:11.51,lokal:34.37},"huddinge":{kommun:"Huddinge",k:19.38,r:12.33,lokal:31.71},"hudiksvall":{kommun:"Hudiksvall",k:21.61,r:11.51,lokal:33.12},"hultsfred":{kommun:"Hultsfred",k:21.91,r:11.86,lokal:33.77},"hylte":{kommun:"Hylte",k:22.45,r:11.4,lokal:33.85},"haabo":{kommun:"Håbo",k:21.59,r:11.71,lokal:33.3},"hallefors":{kommun:"Hällefors",k:22.05,r:12.3,lokal:34.35},"harjedalen":{kommun:"Härjedalen",k:22.47,r:11.7,lokal:34.17},"harnosand":{kommun:"Härnösand",k:23.34,r:11.29,lokal:34.63},"harryda":{kommun:"Härryda",k:20.5,r:11.48,lokal:31.98},"hassleholm":{kommun:"Hässleholm",k:21.2,r:11.18,lokal:32.38},"hoganas":{kommun:"Höganäs",k:19.73,r:11.18,lokal:30.91},"hogsby":{kommun:"Högsby",k:22.21,r:11.86,lokal:34.07},"horby":{kommun:"Hörby",k:21.08,r:11.18,lokal:32.26},"hoor":{kommun:"Höör",k:21.45,r:11.18,lokal:32.63},"jokkmokk":{kommun:"Jokkmokk",k:22.95,r:11.34,lokal:34.29},"jarfalla":{kommun:"Järfälla",k:19.19,r:12.33,lokal:31.52},"jonkoping":{kommun:"Jönköping",k:21.64,r:11.76,lokal:33.4},"kalix":{kommun:"Kalix",k:22.55,r:11.34,lokal:33.89},"kalmar":{kommun:"Kalmar",k:21.81,r:11.86,lokal:33.67},"karlsborg":{kommun:"Karlsborg",k:21.32,r:11.48,lokal:32.8},"karlshamn":{kommun:"Karlshamn",k:21.76,r:12.04,lokal:33.8},"karlskoga":{kommun:"Karlskoga",k:22.0,r:12.3,lokal:34.3},"karlskrona":{kommun:"Karlskrona",k:21.65,r:12.04,lokal:33.69},"karlstad":{kommun:"Karlstad",k:21.27,r:12.28,lokal:33.55},"katrineholm":{kommun:"Katrineholm",k:22.12,r:10.83,lokal:32.95},"kil":{kommun:"Kil",k:22.35,r:12.28,lokal:34.63},"kinda":{kommun:"Kinda",k:21.45,r:11.55,lokal:33.0},"kiruna":{kommun:"Kiruna",k:23.05,r:11.34,lokal:34.39},"klippan":{kommun:"Klippan",k:20.75,r:11.18,lokal:31.93},"knivsta":{kommun:"Knivsta",k:20.91,r:11.71,lokal:32.62},"kramfors":{kommun:"Kramfors",k:23.14,r:11.29,lokal:34.43},"kristianstad":{kommun:"Kristianstad",k:21.46,r:11.18,lokal:32.64},"kristinehamn":{kommun:"Kristinehamn",k:21.97,r:12.28,lokal:34.25},"krokom":{kommun:"Krokom",k:22.17,r:11.7,lokal:33.87},"kumla":{kommun:"Kumla",k:21.54,r:12.3,lokal:33.84},"kungsbacka":{kommun:"Kungsbacka",k:21.18,r:11.4,lokal:32.58},"kungsor":{kommun:"Kungsör",k:22.03,r:10.88,lokal:32.91},"kungalv":{kommun:"Kungälv",k:21.44,r:11.48,lokal:32.92},"kavlinge":{kommun:"Kävlinge",k:18.41,r:11.18,lokal:29.59},"koping":{kommun:"Köping",k:22.16,r:10.88,lokal:33.04},"laholm":{kommun:"Laholm",k:21.4,r:11.4,lokal:32.8},"landskrona":{kommun:"Landskrona",k:20.24,r:11.18,lokal:31.42},"laxa":{kommun:"Laxå",k:22.7,r:12.3,lokal:35.0},"lekeberg":{kommun:"Lekeberg",k:21.43,r:12.3,lokal:33.73},"leksand":{kommun:"Leksand",k:21.81,r:11.99,lokal:33.8},"lerum":{kommun:"Lerum",k:20.55,r:11.48,lokal:32.03},"lessebo":{kommun:"Lessebo",k:21.81,r:12.0,lokal:33.81},"lidingo":{kommun:"Lidingö",k:17.34,r:12.33,lokal:29.67},"lidkoping":{kommun:"Lidköping",k:21.26,r:11.48,lokal:32.74},"lilla-edet":{kommun:"Lilla Edet",k:22.37,r:11.48,lokal:33.85},"lindesberg":{kommun:"Lindesberg",k:22.3,r:12.3,lokal:34.6},"linkoping":{kommun:"Linköping",k:20.2,r:11.55,lokal:31.75},"ljungby":{kommun:"Ljungby",k:21.07,r:12.0,lokal:33.07},"ljusdal":{kommun:"Ljusdal",k:22.36,r:11.51,lokal:33.87},"ljusnarsberg":{kommun:"Ljusnarsberg",k:21.5,r:12.3,lokal:33.8},"lomma":{kommun:"Lomma",k:19.54,r:11.18,lokal:30.72},"ludvika":{kommun:"Ludvika",k:22.06,r:11.99,lokal:34.05},"lulea":{kommun:"Luleå",k:22.5,r:11.34,lokal:33.84},"lund":{kommun:"Lund",k:21.24,r:11.18,lokal:32.42},"lycksele":{kommun:"Lycksele",k:23.05,r:11.85,lokal:34.9},"lysekil":{kommun:"Lysekil",k:22.46,r:11.48,lokal:33.94},"malmo":{kommun:"Malmö",k:21.24,r:11.18,lokal:32.42},"malung-salen":{kommun:"Malung-Sälen",k:22.46,r:11.99,lokal:34.45},"mala":{kommun:"Malå",k:23.35,r:11.85,lokal:35.2},"mariestad":{kommun:"Mariestad",k:21.26,r:11.48,lokal:32.74},"mark":{kommun:"Mark",k:21.51,r:11.48,lokal:32.99},"markaryd":{kommun:"Markaryd",k:21.31,r:12.0,lokal:33.31},"mellerud":{kommun:"Mellerud",k:22.6,r:11.48,lokal:34.08},"mjolby":{kommun:"Mjölby",k:21.9,r:11.55,lokal:33.45},"mora":{kommun:"Mora",k:22.33,r:11.99,lokal:34.32},"motala":{kommun:"Motala",k:21.7,r:11.55,lokal:33.25},"mullsjo":{kommun:"Mullsjö",k:22.34,r:11.76,lokal:34.1},"munkedal":{kommun:"Munkedal",k:23.38,r:11.48,lokal:34.86},"munkfors":{kommun:"Munkfors",k:22.02,r:12.28,lokal:34.3},"molndal":{kommun:"Mölndal",k:20.51,r:11.48,lokal:31.99},"monsteras":{kommun:"Mönsterås",k:22.21,r:11.86,lokal:34.07},"morbylanga":{kommun:"Mörbylånga",k:22.21,r:11.86,lokal:34.07},"nacka":{kommun:"Nacka",k:17.78,r:12.33,lokal:30.11},"nora":{kommun:"Nora",k:22.25,r:12.3,lokal:34.55},"norberg":{kommun:"Norberg",k:22.66,r:10.88,lokal:33.54},"nordanstig":{kommun:"Nordanstig",k:22.51,r:11.51,lokal:34.02},"nordmaling":{kommun:"Nordmaling",k:23.25,r:11.85,lokal:35.1},"norrkoping":{kommun:"Norrköping",k:21.75,r:11.55,lokal:33.3},"norrtalje":{kommun:"Norrtälje",k:19.72,r:12.33,lokal:32.05},"norsjo":{kommun:"Norsjö",k:23.35,r:11.85,lokal:35.2},"nybro":{kommun:"Nybro",k:22.33,r:11.86,lokal:34.19},"nykvarn":{kommun:"Nykvarn",k:19.97,r:12.33,lokal:32.3},"nykoping":{kommun:"Nyköping",k:21.42,r:10.83,lokal:32.25},"nynashamn":{kommun:"Nynäshamn",k:19.85,r:12.33,lokal:32.18},"nassjo":{kommun:"Nässjö",k:22.54,r:11.76,lokal:34.3},"ockelbo":{kommun:"Ockelbo",k:22.76,r:11.51,lokal:34.27},"olofstrom":{kommun:"Olofström",k:21.71,r:12.04,lokal:33.75},"orsa":{kommun:"Orsa",k:22.31,r:11.99,lokal:34.3},"orust":{kommun:"Orust",k:22.21,r:11.48,lokal:33.69},"osby":{kommun:"Osby",k:22.81,r:11.18,lokal:33.99},"oskarshamn":{kommun:"Oskarshamn",k:22.35,r:11.86,lokal:34.21},"ovanaker":{kommun:"Ovanåker",k:21.86,r:11.51,lokal:33.37},"oxelosund":{kommun:"Oxelösund",k:22.22,r:10.83,lokal:33.05},"pajala":{kommun:"Pajala",k:23.4,r:11.34,lokal:34.74},"partille":{kommun:"Partille",k:19.88,r:11.48,lokal:31.36},"perstorp":{kommun:"Perstorp",k:20.81,r:11.18,lokal:31.99},"pitea":{kommun:"Piteå",k:22.25,r:11.34,lokal:33.59},"ragunda":{kommun:"Ragunda",k:23.22,r:11.7,lokal:34.92},"robertsfors":{kommun:"Robertsfors",k:23.15,r:11.85,lokal:35.0},"ronneby":{kommun:"Ronneby",k:21.64,r:12.04,lokal:33.68},"rattvik":{kommun:"Rättvik",k:21.81,r:11.99,lokal:33.8},"sala":{kommun:"Sala",k:22.31,r:10.88,lokal:33.19},"salem":{kommun:"Salem",k:19.67,r:12.33,lokal:32.0},"sandviken":{kommun:"Sandviken",k:21.61,r:11.51,lokal:33.12},"sigtuna":{kommun:"Sigtuna",k:19.5,r:12.33,lokal:31.83},"simrishamn":{kommun:"Simrishamn",k:20.51,r:11.18,lokal:31.69},"sjobo":{kommun:"Sjöbo",k:20.92,r:11.18,lokal:32.1},"skara":{kommun:"Skara",k:21.9,r:11.48,lokal:33.38},"skelleftea":{kommun:"Skellefteå",k:22.6,r:11.85,lokal:34.45},"skinnskatteberg":{kommun:"Skinnskatteberg",k:22.46,r:10.88,lokal:33.34},"skurup":{kommun:"Skurup",k:20.42,r:11.18,lokal:31.6},"skovde":{kommun:"Skövde",k:21.61,r:11.48,lokal:33.09},"smedjebacken":{kommun:"Smedjebacken",k:22.45,r:11.99,lokal:34.44},"solleftea":{kommun:"Sollefteå",k:23.39,r:11.29,lokal:34.68},"sollentuna":{kommun:"Sollentuna",k:18.12,r:12.33,lokal:30.45},"solna":{kommun:"Solna",k:17.37,r:12.33,lokal:29.7},"sorsele":{kommun:"Sorsele",k:23.6,r:11.85,lokal:35.45},"sotenas":{kommun:"Sotenäs",k:21.99,r:11.48,lokal:33.47},"staffanstorp":{kommun:"Staffanstorp",k:18.94,r:11.18,lokal:30.12},"stenungsund":{kommun:"Stenungsund",k:21.64,r:11.48,lokal:33.12},"stockholm":{kommun:"Stockholm",k:18.22,r:12.33,lokal:30.55},"storfors":{kommun:"Storfors",k:22.7,r:12.28,lokal:34.98},"storuman":{kommun:"Storuman",k:23.1,r:11.85,lokal:34.95},"strangnas":{kommun:"Strängnäs",k:21.67,r:10.83,lokal:32.5},"stromstad":{kommun:"Strömstad",k:21.91,r:11.48,lokal:33.39},"stromsund":{kommun:"Strömsund",k:23.22,r:11.7,lokal:34.92},"sundbyberg":{kommun:"Sundbyberg",k:19.25,r:12.33,lokal:31.58},"sundsvall":{kommun:"Sundsvall",k:22.59,r:11.29,lokal:33.88},"sunne":{kommun:"Sunne",k:21.47,r:12.28,lokal:33.75},"surahammar":{kommun:"Surahammar",k:22.31,r:10.88,lokal:33.19},"svalov":{kommun:"Svalöv",k:20.74,r:11.18,lokal:31.92},"svedala":{kommun:"Svedala",k:20.24,r:11.18,lokal:31.42},"svenljunga":{kommun:"Svenljunga",k:22.05,r:11.48,lokal:33.53},"saffle":{kommun:"Säffle",k:21.52,r:12.28,lokal:33.8},"sater":{kommun:"Säter",k:22.31,r:11.99,lokal:34.3},"savsjo":{kommun:"Sävsjö",k:21.92,r:11.76,lokal:33.68},"soderhamn":{kommun:"Söderhamn",k:21.66,r:11.51,lokal:33.17},"soderkoping":{kommun:"Söderköping",k:21.98,r:11.55,lokal:33.53},"sodertalje":{kommun:"Södertälje",k:20.05,r:12.33,lokal:32.38},"solvesborg":{kommun:"Sölvesborg",k:21.82,r:12.04,lokal:33.86},"tanum":{kommun:"Tanum",k:21.56,r:11.48,lokal:33.04},"tibro":{kommun:"Tibro",k:21.71,r:11.48,lokal:33.19},"tidaholm":{kommun:"Tidaholm",k:22.07,r:11.48,lokal:33.55},"tierp":{kommun:"Tierp",k:21.29,r:11.71,lokal:33.0},"timra":{kommun:"Timrå",k:23.09,r:11.29,lokal:34.38},"tingsryd":{kommun:"Tingsryd",k:22.0,r:12.0,lokal:34.0},"tjorn":{kommun:"Tjörn",k:21.71,r:11.48,lokal:33.19},"tomelilla":{kommun:"Tomelilla",k:20.61,r:11.18,lokal:31.79},"torsby":{kommun:"Torsby",k:22.02,r:12.28,lokal:34.3},"torsas":{kommun:"Torsås",k:21.93,r:11.86,lokal:33.79},"tranemo":{kommun:"Tranemo",k:21.5,r:11.48,lokal:32.98},"tranas":{kommun:"Tranås",k:22.01,r:11.76,lokal:33.77},"trelleborg":{kommun:"Trelleborg",k:20.4,r:11.18,lokal:31.58},"trollhattan":{kommun:"Trollhättan",k:22.36,r:11.48,lokal:33.84},"trosa":{kommun:"Trosa",k:21.2,r:10.83,lokal:32.03},"tyreso":{kommun:"Tyresö",k:19.5,r:12.33,lokal:31.83},"taby":{kommun:"Täby",k:17.55,r:12.33,lokal:29.88},"toreboda":{kommun:"Töreboda",k:21.72,r:11.48,lokal:33.2},"uddevalla":{kommun:"Uddevalla",k:22.16,r:11.48,lokal:33.64},"ulricehamn":{kommun:"Ulricehamn",k:21.05,r:11.48,lokal:32.53},"umea":{kommun:"Umeå",k:22.8,r:11.85,lokal:34.65},"upplands-vasby":{kommun:"Upplands Väsby",k:19.42,r:12.33,lokal:31.75},"upplands-bro":{kommun:"Upplands-Bro",k:19.4,r:12.33,lokal:31.73},"uppsala":{kommun:"Uppsala",k:21.14,r:11.71,lokal:32.85},"uppvidinge":{kommun:"Uppvidinge",k:21.8,r:12.0,lokal:33.8},"vadstena":{kommun:"Vadstena",k:22.8,r:11.55,lokal:34.35},"vaggeryd":{kommun:"Vaggeryd",k:21.49,r:11.76,lokal:33.25},"valdemarsvik":{kommun:"Valdemarsvik",k:22.48,r:11.55,lokal:34.03},"vallentuna":{kommun:"Vallentuna",k:18.9,r:12.33,lokal:31.23},"vansbro":{kommun:"Vansbro",k:22.29,r:11.99,lokal:34.28},"vara":{kommun:"Vara",k:21.77,r:11.48,lokal:33.25},"varberg":{kommun:"Varberg",k:20.33,r:11.4,lokal:31.73},"vaxholm":{kommun:"Vaxholm",k:19.3,r:12.33,lokal:31.63},"vellinge":{kommun:"Vellinge",k:18.5,r:11.18,lokal:29.68},"vetlanda":{kommun:"Vetlanda",k:22.01,r:11.76,lokal:33.77},"vilhelmina":{kommun:"Vilhelmina",k:23.65,r:11.85,lokal:35.5},"vimmerby":{kommun:"Vimmerby",k:22.36,r:11.86,lokal:34.22},"vindeln":{kommun:"Vindeln",k:23.35,r:11.85,lokal:35.2},"vingaker":{kommun:"Vingåker",k:22.67,r:10.83,lokal:33.5},"vargarda":{kommun:"Vårgårda",k:21.61,r:11.48,lokal:33.09},"vanersborg":{kommun:"Vänersborg",k:22.21,r:11.48,lokal:33.69},"vannas":{kommun:"Vännäs",k:23.35,r:11.85,lokal:35.2},"varmdo":{kommun:"Värmdö",k:18.98,r:12.33,lokal:31.31},"varnamo":{kommun:"Värnamo",k:21.52,r:11.76,lokal:33.28},"vastervik":{kommun:"Västervik",k:21.16,r:11.86,lokal:33.02},"vasteras":{kommun:"Västerås",k:20.36,r:10.88,lokal:31.24},"vaxjo":{kommun:"Växjö",k:20.19,r:12.0,lokal:32.19},"ydre":{kommun:"Ydre",k:22.55,r:11.55,lokal:34.1},"ystad":{kommun:"Ystad",k:20.11,r:11.18,lokal:31.29},"amal":{kommun:"Åmål",k:22.46,r:11.48,lokal:33.94},"ange":{kommun:"Ånge",k:23.33,r:11.29,lokal:34.62},"are":{kommun:"Åre",k:22.22,r:11.7,lokal:33.92},"arjang":{kommun:"Årjäng",k:21.97,r:12.28,lokal:34.25},"asele":{kommun:"Åsele",k:23.6,r:11.85,lokal:35.45},"astorp":{kommun:"Åstorp",k:20.29,r:11.18,lokal:31.47},"atvidaberg":{kommun:"Åtvidaberg",k:22.39,r:11.55,lokal:33.94},"almhult":{kommun:"Älmhult",k:21.86,r:12.0,lokal:33.86},"alvdalen":{kommun:"Älvdalen",k:22.78,r:11.99,lokal:34.77},"alvkarleby":{kommun:"Älvkarleby",k:22.69,r:11.71,lokal:34.4},"alvsbyn":{kommun:"Älvsbyn",k:22.45,r:11.34,lokal:33.79},"angelholm":{kommun:"Ängelholm",k:20.17,r:11.18,lokal:31.35},"ockero":{kommun:"Öckerö",k:21.56,r:11.48,lokal:33.04},"odeshog":{kommun:"Ödeshög",k:22.4,r:11.55,lokal:33.95},"orebro":{kommun:"Örebro",k:21.35,r:12.3,lokal:33.65},"orkelljunga":{kommun:"Örkelljunga",k:19.06,r:11.18,lokal:30.24},"ornskoldsvik":{kommun:"Örnsköldsvik",k:22.56,r:11.29,lokal:33.85},"ostersund":{kommun:"Östersund",k:22.02,r:11.7,lokal:33.72},"osteraker":{kommun:"Österåker",k:16.6,r:12.33,lokal:28.93},"osthammar":{kommun:"Östhammar",k:21.59,r:11.71,lokal:33.3},"ostra-goinge":{kommun:"Östra Göinge",k:20.99,r:11.18,lokal:32.17},"overkalix":{kommun:"Överkalix",k:22.8,r:11.34,lokal:34.14},"overtornea":{kommun:"Övertorneå",k:22.5,r:11.34,lokal:33.84}};
-        const taxData = KOMMUNER;
-
-        // Årskonstanter 2026 (Skatteverket "Belopp och procent 2026", regeringen.se prisbasbelopp 2026)
-        const PBB = 59200;              // Prisbasbelopp 2026
-        const SKIKTGRANS = 643000;      // Statlig inkomstskatt 20 % på beskattningsbar inkomst över detta
-        const BEGRAVNING = { default: 0.292, stockholm: 0.070, tranas: 0.285 }; // Begravningsavgift 2026, % av beskattningsbar inkomst
-
-        // Elements
-        const inputs = {
-            manadslonBrutto: { num: document.getElementById('manadslonBrutto'), range: document.getElementById('manadslonRange') },
-            kommun: document.getElementById('kommun'),
-            alder: document.getElementById('alder')
-        };
-
-        // Sync number <-> range
-        inputs.manadslonBrutto.num.addEventListener('input', () => {
-            inputs.manadslonBrutto.range.value = inputs.manadslonBrutto.num.value;
-            calculate();
-        });
-        inputs.manadslonBrutto.range.addEventListener('input', () => {
-            inputs.manadslonBrutto.num.value = inputs.manadslonBrutto.range.value;
-            calculate();
-        });
-        inputs.kommun.addEventListener('change', calculate);
-        inputs.alder.addEventListener('change', calculate);
-
-        // Format number Swedish style
-        function fmt(n) {
-            return Math.round(n).toLocaleString('sv-SE') + ' kr';
-        }
-
-        function fmtPct(n) {
-            return (Math.round(n * 100) / 100).toLocaleString('sv-SE') + '%';
-        }
-
-        // Animated counter for result elements
-        const _counters = {};
-        function animateNum(elId, toVal, formatter) {
-            const el = document.getElementById(elId);
-            if (!el) return;
-            const fromVal = _counters[elId] !== undefined ? _counters[elId] : toVal;
-            _counters[elId] = toVal;
-            const duration = 380;
-            const start = performance.now();
-            const tick = (now) => {
-                const t = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
-                el.textContent = formatter(fromVal + (toVal - fromVal) * eased);
-                if (t < 1) requestAnimationFrame(tick);
-                else el.textContent = formatter(toVal);
-            };
-            requestAnimationFrame(tick);
-        }
-
-        // Skattemodell 2026 – samma regler som Skatteverkets skattetabeller (SKV 433, 2026).
-        // Grundavdrag, jobbskatteavdrag, statlig skatt, skattereduktion för förvärvsinkomst,
-        // allmän pensionsavgift, public service-avgift och begravningsavgift. aldre = fyllt 66 år vid årets ingång.
-        var GKSkatt2026 = (function () {
-            var PBB = 59200, IBB = 83400, SKIKT = 643000, PS_MAX = 1184, APA_MAX = 47100;
-            function r6(x) { return Math.round(x * 1e6) / 1e6; }
-            function grundavdrag(fi, aldre) {
-                if (fi <= 0) return 0;
-                var P = PBB, g;
-                if (fi <= 0.99 * P) g = 0.423 * P;
-                else if (fi <= 2.72 * P) g = 0.423 * P + 0.2 * (fi - 0.99 * P);
-                else if (fi <= 3.11 * P) g = 0.77 * P;
-                else if (fi <= 7.88 * P) g = 0.77 * P - 0.1 * (fi - 3.11 * P);
-                else g = 0.293 * P;
-                if (aldre) {
-                    var t;
-                    if (fi <= 0.91 * P) t = 0.687 * P;
-                    else if (fi <= 1.11 * P) t = 0.885 * P - 0.2 * fi;
-                    else if (fi <= 1.965 * P) t = 0.6 * P + 0.057 * fi;
-                    else if (fi <= 2.72 * P) t = 0.333 * P + 0.1949 * fi;
-                    else if (fi <= 3.11 * P) t = 0.3949 * fi - 0.212 * P;
-                    else if (fi <= 3.24 * P) t = 0.4949 * fi - 0.523 * P;
-                    else if (fi <= 5 * P) t = 0.356 * fi - 0.073 * P;
-                    else if (fi <= 7.88 * P) t = 0.017 * P + 0.338 * fi;
-                    else if (fi <= 8.08 * P) t = 0.703 * P + 0.251 * fi;
-                    else if (fi <= 11.16 * P) t = 2.732 * P;
-                    else if (fi <= 12.84 * P) t = 9.651 * P - 0.62 * fi;
-                    else t = 1.691 * P;
-                    g += t;
-                }
-                return Math.min(Math.ceil(r6(g) / 100) * 100, fi);
-            }
-            function jobbskatteavdrag(ai, ga, ki, aldre) {
-                if (ai <= 0) return 0;
-                var P = PBB, u;
-                if (aldre) {
-                    if (ai <= 1.75 * P) u = 0.22 * ai;
-                    else if (ai <= 5.24 * P) u = 0.2635 * P + 0.07 * ai;
-                    else u = 0.6293 * P;
-                    return Math.floor(r6(u));
-                }
-                if (ai <= 0.91 * P) u = ai - ga;
-                else if (ai <= 3.24 * P) u = 0.91 * P + 0.3874 * (ai - 0.91 * P) - ga;
-                else if (ai <= 8.08 * P) u = 1.813 * P + 0.251 * (ai - 3.24 * P) - ga;
-                else u = 3.027 * P - ga;
-                return Math.max(0, Math.floor(r6(u * ki)));
-            }
-            function pensionsavgift(inkomst) {
-                if (inkomst < 0.423 * PBB) return 0;
-                var x = r6(0.07 * Math.min(inkomst, 8.07 * IBB)), h = Math.floor(x / 100);
-                return Math.min(x - h * 100 > 50 ? (h + 1) * 100 : h * 100, APA_MAX);
-            }
-            function forvarvsreduktion(bfi) {
-                if (bfi <= 40000) return 0;
-                return Math.floor(r6((Math.min(bfi, 240000) - 40000) * 0.0075));
-            }
-            // fi = årsinkomst (kr), o.kommunalskatt / o.begravning / o.kyrkoavgift i procent,
-            // o.arbetsinkomst = underlag för jobbskatteavdrag (standard = fi), o.aldre = 66+.
-            function skattAr(fi, o) {
-                o = o || {};
-                fi = Math.max(0, fi || 0);
-                var ai = o.arbetsinkomst !== undefined ? Math.max(0, o.arbetsinkomst) : fi;
-                var ks = o.kommunalskatt !== undefined ? o.kommunalskatt : 32.38;
-                var bg = o.begravning !== undefined ? o.begravning : 0.292;
-                var ky = o.kyrkoavgift || 0;
-                var aldre = !!o.aldre, ki = ks / 100;
-                var ga = grundavdrag(fi, aldre);
-                var bfi = Math.max(0, Math.floor(r6(fi - ga) / 100) * 100);
-                var kommunal = bfi * ki;
-                var statlig = Math.max(0, bfi - SKIKT) * 0.2;
-                var rum = kommunal + statlig;
-                var apa = pensionsavgift(ai);
-                var redApa = Math.min(apa, rum); rum -= redApa;
-                var jsa = Math.min(jobbskatteavdrag(ai, ga, ki, aldre), rum); rum -= jsa;
-                var redFi = Math.min(forvarvsreduktion(bfi), rum);
-                var ps = Math.min(Math.floor(bfi * 0.01), PS_MAX);
-                var begr = bfi * bg / 100, kyrka = bfi * ky / 100;
-                var total = kommunal + statlig + apa - redApa - jsa - redFi + ps + begr + kyrka;
-                return {
-                    grundavdrag: ga, bfi: bfi, kommunalskatt: kommunal, statligSkatt: statlig,
-                    pensionsavgift: apa, jobbskatteavdrag: jsa, forvarvsreduktion: redFi,
-                    publicService: ps, begravning: begr, kyrkoavgift: kyrka,
-                    total: total, netto: fi - total
-                };
-            }
-            return { PBB: PBB, IBB: IBB, SKIKT: SKIKT, grundavdrag: grundavdrag,
-                     jobbskatteavdrag: jobbskatteavdrag, pensionsavgift: pensionsavgift,
-                     forvarvsreduktion: forvarvsreduktion, skattAr: skattAr };
-        })();
-
-        // Shared state for copy/share
-        let _lastResult = {};
-
-        // Calculate
-        function calculate() {
-            const manadslonBrutto = parseFloat(inputs.manadslonBrutto.num.value) || 0;
-            const kommun = inputs.kommun.value;
-            const taxInfo = taxData[kommun];
-
-            // Årslön brutto = förvärvsinkomst
-            const arslonBrutto = manadslonBrutto * 12;
-            const aldre = inputs.alder.value === '66plus';
-            const begrSats = BEGRAVNING[kommun] !== undefined ? BEGRAVNING[kommun] : BEGRAVNING.default;
-
-            // Slutlig skatt 2026: grundavdrag, kommunal och statlig skatt, jobbskatteavdrag,
-            // skattereduktion för förvärvsinkomst, public service-avgift och begravningsavgift
-            const sk = GKSkatt2026.skattAr(arslonBrutto, { kommunalskatt: taxInfo.lokal, begravning: begrSats, aldre: aldre });
-            const kommunalskat = sk.kommunalskatt;
-            const statligSkatt = sk.statligSkatt;
-            const jsa = sk.jobbskatteavdrag;
-            const totalSkattAr = Math.max(0, sk.total);
-            const totalSkattMånad = totalSkattAr / 12;
-
-            // Netto
-            const nettoAr = arslonBrutto - totalSkattAr;
-            const nettoMånad = nettoAr / 12;
-
-            // Effektiv skattesats
-            const effektivSkattesats = manadslonBrutto > 0 ? (totalSkattAr / arslonBrutto) * 100 : 0;
-
-            // Spara för copy/share
-            _lastResult = {
-                brutto: manadslonBrutto,
-                netto: nettoMånad,
-                skatt: totalSkattMånad,
-                effektiv: effektivSkattesats,
-                kommunnamn: taxInfo.kommun,
-                jsaMånad: jsa / 12
-            };
-
-            // Update display med animation
-            animateNum('nettoMånad', nettoMånad, v => fmt(v));
-            document.getElementById('nettoÅr').textContent = fmt(nettoAr) + ' per år';
-            animateNum('totalSkattMånad', totalSkattMånad, v => fmt(v));
-            document.getElementById('skattProcent').textContent = arslonBrutto > 0 ? fmtPct(totalSkattAr / arslonBrutto * 100) : '';
-            animateNum('kommunalskat', kommunalskat / 12, v => fmt(v));
-            document.getElementById('effektivSkatt').textContent = fmtPct(effektivSkattesats);
-
-            drawChart(manadslonBrutto, totalSkattMånad, nettoMånad, kommunalskat / 12, statligSkatt / 12);
-            buildTable(manadslonBrutto, kommunalskat / 12, statligSkatt / 12, totalSkattMånad, nettoMånad, jsa / 12);
-        }
-
-        // Kopiera resultat till urklipp
-        function copyResults() {
-            const r = _lastResult;
-            if (!r.brutto) return;
-            const text = [
-                '📊 Löneräknare — GratisKalkyl.se',
-                `Bruttolön:        ${fmt(r.brutto)}/mån`,
-                `Nettolön:         ${fmt(r.netto)}/mån`,
-                `Total skatt:      ${fmt(r.skatt)}/mån`,
-                `Jobbskatteavdrag: ${fmt(r.jsaMånad)}/mån`,
-                `Effektiv skatt:   ${fmtPct(r.effektiv)}`,
-                `Kommun:           ${r.kommunnamn}`,
-                '',
-                'Beräknat på: gratiskalkyl.se/kalkylatorer/loneraknare'
-            ].join('\n');
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = document.getElementById('copyBtn');
-                btn.classList.add('copied');
-                btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kopierat!';
-                setTimeout(() => {
-                    btn.classList.remove('copied');
-                    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Kopiera resultat';
-                }, 2500);
-            });
-        }
-
-        // Dela beräkning via URL
-        function shareLink() {
-            const r = _lastResult;
-            const params = new URLSearchParams({
-                lon: Math.round(r.brutto),
-                k: document.getElementById('kommun').value
-            });
-            if (inputs.alder.value === '66plus') params.set('a', '66');
-            const url = `${location.origin}${location.pathname}?${params.toString()}`;
-            if (navigator.share) {
-                navigator.share({ title: 'Löneräknare – GratisKalkyl.se', text: `Nettolön ${fmt(r.netto)}/mån för ${fmt(r.brutto)} brutto i ${r.kommunnamn}`, url });
-            } else {
-                navigator.clipboard.writeText(url).then(() => {
-                    const btn = document.getElementById('shareBtn');
-                    btn.classList.add('copied');
-                    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Länk kopierad!';
-                    setTimeout(() => {
-                        btn.classList.remove('copied');
-                        btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Dela beräkning';
-                    }, 2500);
-                });
-            }
-        }
-
-        // Läs URL-parametrar vid sidinladdning
-        function loadFromURL() {
-            const params = new URLSearchParams(location.search);
-            if (params.get('lon')) {
-                const lon = parseInt(params.get('lon'));
-                inputs.manadslonBrutto.num.value = lon;
-                inputs.manadslonBrutto.range.value = lon;
-            }
-            if (params.get('k')) {
-                let k = params.get('k');
-                if (!taxData[k]) k = k.split('-')[0]; // äldre delningslänkar: "stockholm-20.89-11.51"
-                if (taxData[k]) document.getElementById('kommun').value = k;
-            }
-            if (params.get('a') === '66') inputs.alder.value = '66plus';
-        }
-
-        // Canvas chart
-        function drawChart(brutto, totalSkatt, netto, kommunalskatt, statligSkatt) {
-            const canvas = document.getElementById('chart');
-            const ctx = canvas.getContext('2d');
-            const dpr = window.devicePixelRatio || 1;
-            const rect = canvas.parentElement.getBoundingClientRect();
-
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
-            canvas.style.width = rect.width + 'px';
-            canvas.style.height = rect.height + 'px';
-            ctx.scale(dpr, dpr);
-
-            const W = rect.width;
-            const H = rect.height;
-            const pad = { top: 20, right: 20, bottom: 40, left: 70 };
-            const cW = W - pad.left - pad.right;
-            const cH = H - pad.top - pad.bottom;
-
-            ctx.clearRect(0, 0, W, H);
-
-            // Simple stacked bar: brutto split into kommunalskatt, statligskatt, netto
-            const colors = {
-                netto: '#0D6A45',
-                kommun: '#cbd5e1',
-                statlig: '#E2E0D8'
-            };
-
-            // Y-axis
-            ctx.fillStyle = '#888';
-            ctx.font = '11px -apple-system, sans-serif';
-            ctx.textAlign = 'right';
-            const maxVal = brutto * 1.1;
-            for (let i = 0; i <= 4; i++) {
-                const val = (maxVal / 4) * i;
-                const y = pad.top + cH - (val / maxVal) * cH;
-                ctx.fillText(Math.round(val).toLocaleString('sv-SE') + ' kr', pad.left - 8, y + 4);
-                ctx.strokeStyle = '#f0f0f0';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(pad.left, y);
-                ctx.lineTo(W - pad.right, y);
-                ctx.stroke();
-            }
-
-            // Stacked bar
-            const barW = Math.min(120, cW * 0.4);
-            const x = pad.left + cW / 2 - barW / 2;
-
-            // Netto (bottom, green)
-            const hNetto = (netto / maxVal) * cH;
-            ctx.fillStyle = colors.netto;
-            ctx.fillRect(x, pad.top + cH - hNetto, barW, hNetto);
-
-            // Kommunalskatt (on top of netto)
-            const hKommunal = (kommunalskatt / maxVal) * cH;
-            ctx.fillStyle = colors.kommun;
-            ctx.fillRect(x, pad.top + cH - hNetto - hKommunal, barW, hKommunal);
-
-            // Statlig skatt (on top of kommunalskatt)
-            const hStatlig = (statligSkatt / maxVal) * cH;
-            ctx.fillStyle = colors.statlig;
-            ctx.fillRect(x, pad.top + cH - hNetto - hKommunal - hStatlig, barW, hStatlig);
-
-            // Labels on bar
-            ctx.font = '12px bold -apple-system, sans-serif';
-            ctx.fillStyle = '#000';
-            ctx.textAlign = 'center';
-            ctx.fillText('Brutto', x + barW / 2, pad.top + cH + 20);
-            ctx.font = '10px -apple-system, sans-serif';
-            ctx.fillStyle = '#fff';
-            ctx.fillText('Netto', x + barW / 2, pad.top + cH - hNetto / 2);
-
-            // Legend
-            const legY = H - 8;
-            ctx.font = '11px -apple-system, sans-serif';
-            ctx.textAlign = 'left';
-            ctx.fillStyle = colors.netto;
-            ctx.fillRect(pad.left, legY - 8, 12, 12);
-            ctx.fillStyle = '#888';
-            ctx.fillText('Nettolön', pad.left + 16, legY + 2);
-
-            ctx.fillStyle = colors.kommun;
-            ctx.fillRect(pad.left + 140, legY - 8, 12, 12);
-            ctx.fillStyle = '#888';
-            ctx.fillText('Kommunalskatt', pad.left + 156, legY + 2);
-
-            ctx.fillStyle = colors.statlig;
-            ctx.fillRect(pad.left + 310, legY - 8, 12, 12);
-            ctx.fillStyle = '#888';
-            ctx.fillText('Statlig skatt', pad.left + 326, legY + 2);
-        }
-
-        // Table
-        function buildTable(brutto, kommunalskatt, statligSkatt, totalSkatt, netto, jsa) {
-            jsa = jsa || 0;
-            const tbody = document.getElementById('tableBody');
-            tbody.innerHTML = `
-                <tr>
-                    <td>Per månad</td>
-                    <td>${fmt(brutto)}</td>
-                    <td>${fmt(kommunalskatt)}</td>
-                    <td>${fmt(statligSkatt)}</td>
-                    <td style="color:var(--primary);font-weight:600;">−${fmt(jsa)}</td>
-                    <td>${fmt(totalSkatt)}</td>
-                    <td><strong>${fmt(netto)}</strong></td>
-                </tr>
-                <tr>
-                    <td>Per år (×12)</td>
-                    <td>${fmt(brutto * 12)}</td>
-                    <td>${fmt(kommunalskatt * 12)}</td>
-                    <td>${fmt(statligSkatt * 12)}</td>
-                    <td style="color:var(--primary);font-weight:600;">−${fmt(jsa * 12)}</td>
-                    <td>${fmt(totalSkatt * 12)}</td>
-                    <td><strong>${fmt(netto * 12)}</strong></td>
-                </tr>
-            `;
-        }
-
-        // Table toggle
-        document.getElementById('tableToggle').addEventListener('click', function() {
-            const table = document.getElementById('dataTable');
-            const visible = table.classList.toggle('visible');
-            this.textContent = visible ? 'Dölj månad/år jämförelse ▲' : 'Visa månad/år jämförelse ▼';
-        });
-
-        // Resize handler
-        window.addEventListener('resize', calculate);
-
-        // Init
-        loadFromURL();
-        calculate();
-    </script>
-
-    <!-- Cross-linking -->
-    <div class="container" style="padding-bottom:48px;">
-        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Fler kalkylatorer</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-            <a href="/kalkylatorer/ranta-pa-ranta" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
-                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta-kalkylator</div>
-            </a>
-            <a href="/kalkylatorer/rot-rut" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
-                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
-            </a>
-            <a href="/kalkylatorer/bolanekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
-                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
-            </a>
-            <a href="/kalkylatorer/isk-skatteberaknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
-                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
-            </a>
-        </div>
-    </div>
+</footer>
 </body>
 </html>

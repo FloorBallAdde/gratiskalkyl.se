@@ -1,279 +1,65 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Procenträknare – Räkna ut procent på 3 sekunder | GratisKalkyl</title>
-    <meta name="description" content="Räkna ut procent direkt – fyra kalkylatorer i en. Hur mycket är X % av ett tal? Vilken andel i procent? Procentuell ökning eller minskning? Skriv siffran – se svaret på sekunden.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/procentraknare">
-    <meta property="og:title" content="Procenträknare – Räkna ut procent på 3 sekunder">
-    <meta property="og:description" content="Fyra procentkalkylatorer i en: X % av tal, andel i %, procentuell förändring, +/- procent. Svar direkt, helt gratis.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/procentraknare">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Procenträknare – Svar på 3 sekunder">
-    <meta name="twitter:description" content="Fyra procentkalkylatorer i en – skriv siffran, se svaret direkt.">
-
-    <!-- Schema.org FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Hur räknar man ut procent av ett tal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "För att räkna ut X procent av ett tal Y, multiplicerar du Y med X och delar på 100. Formeln är: Procent = (X / 100) × Y. Exempel: 15% av 350 = (15 / 100) × 350 = 52,50. Vår procenträknare gör detta automatiskt — fyll i procentsatsen och talet, så visas svaret direkt."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Hur räknar man ut hur många procent ett tal är av ett annat?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "För att räkna ut hur stor andel (i procent) ett tal A är av ett tal B, delar du A med B och multiplicerar med 100. Formeln är: Andel = (A / B) × 100. Exempel: 52,50 är hur många procent av 350? Svar: (52,50 / 350) × 100 = 15%. Använd fliken 'Andel' i vår procenträknare."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Hur beräknar man procentuell förändring?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Procentuell förändring beräknas med formeln: Förändring = ((Nytt värde − Gammalt värde) / Gammalt värde) × 100. Exempel: om priset går från 200 kr till 250 kr är förändringen ((250 − 200) / 200) × 100 = 25%. En positiv siffra är en ökning, negativ är en minskning."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Hur lägger man till procent på ett tal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "För att lägga till X procent på ett tal Y, beräknar du ökningen och adderar den till originalet. Formeln är: Nytt värde = Y × (1 + X/100). Exempel: 500 + 25% = 500 × 1,25 = 625. För att dra ifrån procent: Nytt värde = Y × (1 − X/100). Exempel: 500 − 20% = 500 × 0,80 = 400."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Vad är skillnaden mellan procentandel och procentenhet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Procentandel är en relativ förändring. Om räntan går från 2% till 3% är det en ökning med 50% (relativt). Procentenhet är den absoluta skillnaden i procentpoäng — en förändring från 2% till 3% är 1 procentenhet. Det är viktigt att skilja på dessa begrepp, särskilt när det gäller räntor, inflation och statistik."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Hur räknar man baklänges från ett pris med moms?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "För att räkna ut priset exklusive moms från ett pris inklusive moms, dividerar du med (1 + momssatsen). Exempel med 25% moms: 125 kr inkl. moms ÷ 1,25 = 100 kr exkl. moms. Momsen i kronor blir 125 − 100 = 25 kr. Använd vår momsräknare för detaljerade momsberäkningar."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Hur används procent i vardagliga situationer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Procent används dagligen inom shopping (rabatter, REA-priser), ekonomi (räntor, avkastning, inflation), hälsa (BMI, kroppsfett), skatt (skattesatser, moms), statistik och löneförhandlingar. Att kunna räkna procent snabbt hjälper dig att fatta bättre beslut — t.ex. att jämföra rabatter, förstå sparräntor eller räkna ut din effektiva skattesats."
-          }
-        }
-      ]
-    }
-    </script>
-    <link rel="stylesheet" href="/mobile.css">
-
-    <style>
-        :root {
-            --green: #0D6A45;
-            --green-light: #0D6A45;
-            --bg: #F6F5F1;
-            --card: #ffffff;
-            --text: #15201A;
-            --muted: #56625B;
-            --border: #E2E0D8;
-            --radius: 12px;
-            --sh: 0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
-            --sh-md: 0 4px 12px rgba(0,0,0,.1),0 2px 4px rgba(0,0,0,.06);
-        }
-        
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; background: var(--bg); color: var(--text); line-height: 1.6; }
-
-        /* NAV */
-        .site-nav { background: var(--card); border-bottom: 1px solid var(--border); padding: .75rem 1rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: var(--sh); }
-        .nav-logo { font-weight: 700; font-size: 1.05rem; color: var(--green); text-decoration: none; letter-spacing: -.01em; }
-        .nav-logo span { color: var(--text); }
-        .nav-back { font-size: .85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: .35rem; }
-        .nav-back:hover { color: var(--green); }
-
-        .container { max-width: 760px; margin: 0 auto; padding: 2rem 1rem 4rem; }
-
-        /* BREADCRUMB */
-        .breadcrumb { font-size: .8rem; color: var(--muted); margin-bottom: 1.5rem; display: flex; gap: .4rem; flex-wrap: wrap; }
-        .breadcrumb a { color: var(--muted); text-decoration: none; }
-        .breadcrumb a:hover { color: var(--green); }
-        .breadcrumb span { color: var(--muted); }
-
-        /* HERO */
-        .page-title { font-size: 1.75rem; font-weight: 700; line-height: 1.25; margin-bottom: .5rem; }
-        .page-intro { color: var(--muted); font-size: .97rem; margin-bottom: 2rem; max-width: 620px; }
-
-        /* CARD */
-        .card { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--sh); margin-bottom: 1.25rem; }
-
-        /* TABS */
-        .tab-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem; margin-bottom: 1.5rem; }
-        @media (max-width: 500px) { .tab-row { grid-template-columns: repeat(2, 1fr); } }
-        .tab-btn { padding: .5rem .5rem; border: 1.5px solid var(--border); border-radius: 10px; font-size: .78rem; font-weight: 600; cursor: pointer; background: var(--bg); color: var(--muted); transition: all .15s; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center; line-height: 1.3; }
-        .tab-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
-        .tab-btn:hover:not(.active) { border-color: var(--green-light); color: var(--text); }
-
-        /* FORMULA DISPLAY */
-        .formula-box { background: var(--bg); border: 1.5px solid var(--border); border-radius: 10px; padding: .7rem 1rem; margin-bottom: 1.25rem; font-size: .82rem; color: var(--muted); font-family: monospace; letter-spacing: .01em; }
-        .formula-box strong { color: var(--green); font-family: 'Plus Jakarta Sans', sans-serif; }
-
-        /* INPUT GROUP */
-        .input-group { margin-bottom: 1.25rem; }
-        .input-group label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: .5rem; }
-        .input-row { display: flex; align-items: center; gap: .75rem; }
-        .input-row-simple { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-        .big-input { flex: 1; min-width: 120px; padding: .65rem .9rem; border: 1.5px solid var(--border); border-radius: 10px; font-size: 1.1rem; font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); text-align: right; font-weight: 600; transition: border-color .15s; }
-        .big-input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(22,163,74,.12); }
-        .input-label-inline { font-size: .88rem; color: var(--muted); white-space: nowrap; font-weight: 500; }
-        .input-hint { font-size: .78rem; color: var(--muted); margin-top: .3rem; }
-
-        /* OPERATOR SYMBOL */
-        .op-symbol { font-size: 1.4rem; font-weight: 700; color: var(--green-light); flex-shrink: 0; padding: 0 .1rem; }
-
-        /* RESULTS */
-        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-bottom: 1.25rem; }
-        @media (max-width: 560px) { .results-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 360px) { .results-grid { grid-template-columns: 1fr; } }
-
-        .result-box { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1rem .9rem; box-shadow: var(--sh); }
-        .result-box.highlight { border-color: var(--green-light); background: linear-gradient(135deg, rgba(52,211,153,.08) 0%, rgba(22,163,74,.05) 100%); }
-        .result-box.negative { border-color: #f87171; background: linear-gradient(135deg, rgba(248,113,113,.08) 0%, rgba(239,68,68,.04) 100%); }
-        .result-label { font-size: .73rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .35rem; }
-        .result-value { font-size: 1.5rem; font-weight: 700; color: var(--text); line-height: 1.2; }
-        .result-value.green { color: var(--green); }
-        .result-value.red { color: #ef4444; }
-        .result-sub { font-size: .75rem; color: var(--muted); margin-top: .2rem; }
-
-        /* GAUGE CANVAS */
-        .gauge-wrap { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--sh); margin-bottom: 1.25rem; display: flex; flex-direction: column; align-items: center; }
-        .gauge-title { font-size: .88rem; font-weight: 700; margin-bottom: .75rem; align-self: flex-start; }
-        canvas { display: block; }
-
-        /* RESULT SENTENCE */
-        .result-sentence { background: linear-gradient(135deg, rgba(52,211,153,.12) 0%, rgba(22,163,74,.06) 100%); border: 1.5px solid var(--green-light); border-radius: var(--radius); padding: 1rem 1.15rem; margin-bottom: 1.25rem; font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.5; }
-        .result-sentence .answer { font-size: 1.4rem; color: var(--green); font-weight: 700; }
-
-        /* TOGGLE ADD/SUB */
-        .toggle-row { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-        .toggle-btn { padding: .4rem .95rem; border: 1.5px solid var(--border); border-radius: 99px; font-size: .85rem; font-weight: 600; cursor: pointer; background: var(--bg); color: var(--muted); transition: all .15s; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .toggle-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
-        .toggle-btn.active-red { background: #ef4444; border-color: #ef4444; color: #fff; }
-
-        /* SEO TEXT */
-        .seo-section { margin-bottom: 1.5rem; }
-        .seo-section h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: .6rem; }
-        .seo-section h3 { font-size: 1rem; font-weight: 700; margin: 1rem 0 .4rem; }
-        .seo-section p { font-size: .9rem; color: var(--muted); margin-bottom: .6rem; line-height: 1.65; }
-        .seo-section ul { padding-left: 1.3rem; }
-        .seo-section li { font-size: .9rem; color: var(--muted); margin-bottom: .35rem; line-height: 1.55; }
-
-        /* FAQ */
-        .faq-item { border-bottom: 1px solid var(--border); }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-q { padding: .9rem 0; font-weight: 600; font-size: .92rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; user-select: none; }
-        .faq-q::after { content: '＋'; color: var(--green); flex-shrink: 0; font-size: 1rem; }
-        .faq-item.open .faq-q::after { content: '－'; }
-        .faq-a { display: none; font-size: .88rem; color: var(--muted); padding-bottom: .9rem; line-height: 1.65; }
-        .faq-item.open .faq-a { display: block; }
-
-        /* CROSS-LINKS */
-        .crosslink-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
-        @media (max-width: 480px) { .crosslink-grid { grid-template-columns: 1fr; } }
-        .crosslink-card { display: flex; align-items: center; gap: .6rem; padding: .7rem .85rem; background: var(--bg); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); font-size: .85rem; font-weight: 600; transition: border-color .15s, transform .12s; }
-        .crosslink-card:hover { border-color: var(--green); transform: translateY(-1px); }
-        .crosslink-card span { font-size: 1.2rem; }
-
-        /* FOOTER */
-        footer { background: var(--card); border-top: 1px solid var(--border); padding: 2rem 1rem; text-align: center; }
-        .footer-inner { max-width: 760px; margin: 0 auto; }
-        .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
-        .footer-links a { font-size: .82rem; color: var(--muted); text-decoration: none; }
-        .footer-links a:hover { color: var(--green); }
-        .footer-disclaimer { font-size: .78rem; color: var(--muted); max-width: 560px; margin: 0 auto; line-height: 1.5; }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <!-- Dark mode FOUC-prevention -->
-    
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "GratisKalkyl.se",
-        "item": "https://gratiskalkyl.se/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Kalkylatorer",
-        "item": "https://gratiskalkyl.se/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Procenträknare",
-        "item": "https://gratiskalkyl.se/kalkylatorer/procentraknare"
-      }
-    ]
-  }
-  </script>
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Procenträknare – räkna ut procent direkt | GratisKalkyl</title>
+<meta name="description" content="Skriv 15 % av 350 och få svaret direkt: 52,5. Räkna procent av en summa, hur många procent, ökning i procent och lägg till eller dra av procent.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/procentraknare">
+<meta property="og:title" content="Procenträknare – räkna ut procent direkt">
+<meta property="og:description" content="Skriv 15 % av 350 och få svaret direkt: 52,5. Räkna procent av en summa, hur många procent, ökning i procent och lägg till eller dra av procent.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/procentraknare">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Procenträknare", "url": "https://gratiskalkyl.se/kalkylatorer/procentraknare", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Skriv 15 % av 350 och få svaret direkt: 52,5. Räkna procent av en summa, hur många procent, ökning i procent och lägg till eller dra av procent.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Procenträknare", "item": "https://gratiskalkyl.se/kalkylatorer/procentraknare"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hur räknar man ut procent av en summa?", "acceptedAnswer": {"@type": "Answer", "text": "Multiplicera summan med procentsatsen och dela med 100. 30 % av 1 752 000 är 1 752 000 × 30 / 100 = 525 600. Du kan också multiplicera med procenten i decimalform: 1 752 000 × 0,3 ger samma svar."}}, {"@type": "Question", "name": "Hur många procent är 25 av 500?", "acceptedAnswer": {"@type": "Answer", "text": "5 %. Dela delen med det hela och multiplicera med 100: 25 / 500 × 100 = 5. Samma sätt fungerar för alla tal – 120 av 480 är till exempel 25 %."}}, {"@type": "Question", "name": "Hur räknar man ut ökning i procent?", "acceptedAnswer": {"@type": "Answer", "text": "Ta skillnaden mellan det nya och det gamla värdet, dela med det gamla värdet och multiplicera med 100. Går en lön från 30 000 till 31 500 kr är ökningen 1 500 / 30 000 × 100 = 5 %. Ett negativt svar betyder att värdet har minskat."}}, {"@type": "Question", "name": "Hur drar man av procent från ett pris?", "acceptedAnswer": {"@type": "Answer", "text": "Multiplicera priset med 1 minus procenten i decimalform. 20 % rabatt på 500 kr blir 500 × 0,8 = 400 kr, och rabatten är 100 kr."}}, {"@type": "Question", "name": "Vad är 500 × 1,25?", "acceptedAnswer": {"@type": "Answer", "text": "625. Att multiplicera med 1,25 är samma sak som att lägga till 25 %: 500 + 125 = 625. På samma sätt är × 1,1 en ökning med 10 % och × 0,9 en minskning med 10 %."}}, {"@type": "Question", "name": "Hur räknar man procent i huvudet?", "acceptedAnswer": {"@type": "Answer", "text": "Börja med 10 %, som du får genom att flytta decimalkommat ett steg åt vänster: 10 % av 350 är 35. 5 % är hälften av det, 17,5, och 15 % är summan, 52,5. 1 % får du genom att dela med 100, 25 % genom att dela med 4 och 50 % genom att halvera."}}, {"@type": "Question", "name": "Hur räknar man ut hela beloppet om man vet procenten?", "acceptedAnswer": {"@type": "Answer", "text": "Dela delen med procenten och multiplicera med 100. Om 52,5 är 15 % av ett belopp är beloppet 52,5 / 15 × 100 = 350. Skriv 52,5 är 15 % av i rutan överst så räknar sidan ut det."}}, {"@type": "Question", "name": "Vad är skillnaden mellan procent och procentenheter?", "acceptedAnswer": {"@type": "Answer", "text": "Procentenheter anger hur många steg två procentsatser skiljer sig åt, medan procent anger förändringen i förhållande till startvärdet. Ökar en andel från 4 % till 6 % har den ökat med 2 procentenheter, men med 50 procent."}}]}</script>
+<style>
+.pq{display:grid;gap:12px;margin-bottom:14px;grid-template-areas:"in" "res" "ex"}
+.pq-in{grid-area:in}.pq-res{grid-area:res}.pq-ex{grid-area:ex;align-items:center}
+.pq-in{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pq .gk-input{height:58px}
+.pq .gk-input input{font-size:20px}
+.pq-ex{display:flex;flex-wrap:wrap;gap:6px}
+.pq-ex .gk-chip{border:0;font:inherit;font-size:14px;cursor:pointer;min-height:36px}
+.pq-res{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:12px;background:var(--gk-soft);min-width:0}
+.pq-res .gk-result-label{color:var(--gk-good-ink)}
+.pq-how{font-size:15px;line-height:1.5;color:var(--gk-ink-2);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.gk-big strong,.gk-tile strong,.gk-tile span{overflow-wrap:anywhere;min-width:0}
+.gk-big strong.is-long{font-size:30px}
+.gk-big strong.is-xlong{font-size:24px}
+.pr-tab td,.pr-tab th{padding:9px 5px}
+.pr-tab tbody th{text-align:left;font-weight:700}
+.gk-prose .gk-table-wrap{margin:12px 0}
+@media (min-width:900px){
+.pq{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"in res" "ex res";grid-template-rows:auto 1fr;column-gap:24px;row-gap:14px;margin-bottom:24px}
+.pq-ex{align-content:flex-start}
+.pq-res{justify-content:center;padding:18px 22px}
+.gk-big strong.is-long{font-size:40px}
+.gk-big strong.is-xlong{font-size:30px}
+}
+</style>
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -282,8 +68,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -297,595 +83,450 @@
 <button class="gk-theme-btn" id="gk-theme-btn" type="button">Byt till mörkt läge</button>
 </div>
 </div>
-<div id="innehall"></div>
 
-
-
-
-<div class="container">
-    <nav class="breadcrumb" aria-label="Brödsmulor">
-        <a href="/">Hem</a>
-        <span>›</span>
-        <span>Procenträknare</span>
-    </nav>
-
-    <h1 class="page-title">🔢 Procenträknare</h1>
-    <p class="page-intro">Räkna ut procent snabbt och enkelt — beräkna X% av ett tal, ta reda på andelen i procent, se procentuell förändring eller lägg till/dra ifrån procent. Gratis och utan registrering.</p>
-
-    <!-- CALCULATOR CARD -->
-    <div class="card">
-        <div class="tab-row" role="tablist">
-            <button class="tab-btn active" onclick="switchTab('av')" id="tab-av" role="tab" aria-selected="true">X% av Y</button>
-            <button class="tab-btn" onclick="switchTab('andel')" id="tab-andel" role="tab" aria-selected="false">Andel %</button>
-            <button class="tab-btn" onclick="switchTab('forandring')" id="tab-forandring" role="tab" aria-selected="false">Förändring</button>
-            <button class="tab-btn" onclick="switchTab('lagg')" id="tab-lagg" role="tab" aria-selected="false">Lägg till/dra</button>
-        </div>
-
-        <!-- TAB 1: X% av Y -->
-        <div id="tab-content-av">
-            <div class="formula-box"><strong>Formel:</strong> Resultat = (Procent ÷ 100) × Tal</div>
-            <div class="input-group">
-                <label>Beräkna procent av ett tal</label>
-                <div class="input-row-simple">
-                    <input type="number" id="av_pct" class="big-input" value="15" min="0" step="0.01" oninput="calcAv()" aria-label="Procentsats">
-                    <span class="input-label-inline">%</span>
-                    <span class="op-symbol">av</span>
-                    <input type="number" id="av_tal" class="big-input" value="350" step="0.01" oninput="calcAv()" aria-label="Tal">
-                </div>
-                <p class="input-hint">Exempel: Vad är 15% av 350?</p>
-            </div>
-        </div>
-
-        <!-- TAB 2: Andel -->
-        <div id="tab-content-andel" style="display:none">
-            <div class="formula-box"><strong>Formel:</strong> Procent = (Del ÷ Totalt) × 100</div>
-            <div class="input-group">
-                <label>Hur många procent är X av Y?</label>
-                <div class="input-row-simple">
-                    <input type="number" id="andel_del" class="big-input" value="52.5" step="0.01" oninput="calcAndel()" aria-label="Del">
-                    <span class="op-symbol">÷</span>
-                    <input type="number" id="andel_tot" class="big-input" value="350" step="0.01" oninput="calcAndel()" aria-label="Totalt">
-                    <span class="input-label-inline">× 100</span>
-                </div>
-                <p class="input-hint">Exempel: 52,50 är hur många procent av 350?</p>
-            </div>
-        </div>
-
-        <!-- TAB 3: Förändring -->
-        <div id="tab-content-forandring" style="display:none">
-            <div class="formula-box"><strong>Formel:</strong> Förändring = ((Nytt − Gammalt) ÷ Gammalt) × 100</div>
-            <div class="input-group">
-                <label>Procentuell förändring</label>
-                <div class="input-row-simple">
-                    <div style="display:flex;flex-direction:column;align-items:center;gap:.25rem;flex:1;min-width:100px">
-                        <span class="input-label-inline" style="font-size:.75rem">Från (gammalt)</span>
-                        <input type="number" id="for_from" class="big-input" value="200" step="0.01" oninput="calcForandring()" aria-label="Gammalt värde">
-                    </div>
-                    <span class="op-symbol">→</span>
-                    <div style="display:flex;flex-direction:column;align-items:center;gap:.25rem;flex:1;min-width:100px">
-                        <span class="input-label-inline" style="font-size:.75rem">Till (nytt)</span>
-                        <input type="number" id="for_to" class="big-input" value="250" step="0.01" oninput="calcForandring()" aria-label="Nytt värde">
-                    </div>
-                </div>
-                <p class="input-hint">Exempel: Vad är förändringen från 200 kr till 250 kr?</p>
-            </div>
-        </div>
-
-        <!-- TAB 4: Lägg till/dra ifrån -->
-        <div id="tab-content-lagg" style="display:none">
-            <div class="formula-box" id="lagg-formula"><strong>Formel:</strong> Resultat = Tal × (1 + Procent ÷ 100)</div>
-            <div class="input-group">
-                <label>Lägg till eller dra ifrån procent</label>
-                <div class="toggle-row" style="margin-bottom:1rem">
-                    <button class="toggle-btn active" onclick="setLaggMode('add')" id="lagg-add">➕ Lägg till</button>
-                    <button class="toggle-btn" onclick="setLaggMode('sub')" id="lagg-sub">➖ Dra ifrån</button>
-                </div>
-                <div class="input-row-simple">
-                    <input type="number" id="lagg_tal" class="big-input" value="500" step="0.01" oninput="calcLagg()" aria-label="Tal">
-                    <span id="lagg-op-sign" class="op-symbol">+</span>
-                    <input type="number" id="lagg_pct" class="big-input" value="25" min="0" step="0.01" oninput="calcLagg()" aria-label="Procentsats">
-                    <span class="input-label-inline">%</span>
-                </div>
-                <p class="input-hint" id="lagg-hint">Exempel: 500 + 25% = 625</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- RESULTS -->
-    <div id="result-av">
-        <div class="result-sentence">
-            <span id="av-sentence">15% av 350 = <span class="answer" id="av-main">52,50</span></span>
-        </div>
-        <div class="results-grid">
-            <div class="result-box highlight">
-                <div class="result-label">Svar</div>
-                <div class="result-value green" id="av-res">52,50</div>
-                <div class="result-sub" id="av-res-sub">= 52,50</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Procentsats</div>
-                <div class="result-value" id="av-pct-box">15%</div>
-                <div class="result-sub">av totalen</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Resterande</div>
-                <div class="result-value" id="av-rest">297,50</div>
-                <div class="result-sub" id="av-rest-sub">85% av 350</div>
-            </div>
-        </div>
-        <div class="gauge-wrap">
-            <div class="gauge-title">Andel visualisering</div>
-            <canvas id="gauge-av" width="280" height="160"></canvas>
-        </div>
-    </div>
-
-    <div id="result-andel" style="display:none">
-        <div class="result-sentence">
-            <span id="andel-sentence">52,5 är <span class="answer" id="andel-main">15,00%</span> av 350</span>
-        </div>
-        <div class="results-grid">
-            <div class="result-box highlight">
-                <div class="result-label">Andel</div>
-                <div class="result-value green" id="andel-res">15,00%</div>
-                <div class="result-sub" id="andel-res-sub">av totalen</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Del</div>
-                <div class="result-value" id="andel-del-box">52,50</div>
-                <div class="result-sub">ingångsvärde</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Totalt</div>
-                <div class="result-value" id="andel-tot-box">350</div>
-                <div class="result-sub">= 100%</div>
-            </div>
-        </div>
-        <div class="gauge-wrap">
-            <div class="gauge-title">Andel visualisering</div>
-            <canvas id="gauge-andel" width="280" height="160"></canvas>
-        </div>
-    </div>
-
-    <div id="result-forandring" style="display:none">
-        <div class="result-sentence">
-            <span id="for-sentence">Förändringen är <span class="answer" id="for-main">+25,00%</span></span>
-        </div>
-        <div class="results-grid">
-            <div class="result-box highlight">
-                <div class="result-label">Förändring</div>
-                <div class="result-value" id="for-pct" style="color:var(--green)">+25,00%</div>
-                <div class="result-sub" id="for-pct-sub">ökning</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Skillnad</div>
-                <div class="result-value" id="for-diff">+50,00</div>
-                <div class="result-sub">i absoluta tal</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Faktor</div>
-                <div class="result-value" id="for-factor">× 1,25</div>
-                <div class="result-sub">multiplikator</div>
-            </div>
-        </div>
-        <div class="gauge-wrap">
-            <div class="gauge-title">Förändring visualisering</div>
-            <canvas id="canvas-forandring" width="560" height="120"></canvas>
-        </div>
-    </div>
-
-    <div id="result-lagg" style="display:none">
-        <div class="result-sentence">
-            <span id="lagg-sentence">500 + 25% = <span class="answer" id="lagg-main">625,00</span></span>
-        </div>
-        <div class="results-grid">
-            <div class="result-box highlight">
-                <div class="result-label">Nytt värde</div>
-                <div class="result-value green" id="lagg-res">625,00</div>
-                <div class="result-sub" id="lagg-res-sub">efter tillägg</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Förändring</div>
-                <div class="result-value" id="lagg-diff">+125,00</div>
-                <div class="result-sub" id="lagg-diff-sub">= 25%</div>
-            </div>
-            <div class="result-box">
-                <div class="result-label">Originalt</div>
-                <div class="result-value" id="lagg-orig">500,00</div>
-                <div class="result-sub">ingångsvärde</div>
-            </div>
-        </div>
-        <div class="gauge-wrap">
-            <div class="gauge-title">Förändring visualisering</div>
-            <canvas id="canvas-lagg" width="560" height="120"></canvas>
-        </div>
-    </div>
-
-    <!-- SEO SECTION -->
-    <div class="seo-section card">
-        <h2>Hur räknar man ut procent?</h2>
-        <p>Procent betyder "per hundra" och används för att uttrycka en del av ett helt. Att räkna procent är en grundläggande matematikfärdighet som används i vardagen — från REA-priser i butiken till räntor på sparkonton och löneökningar på jobbet.</p>
-
-        <h3>De vanligaste procentberäkningarna</h3>
-        <p>Det finns fyra vanliga typer av procentberäkningar som vår procenträknare hanterar:</p>
-        <ul>
-            <li><strong>X% av Y</strong> — Vad är 15% av 350? Svar: 52,50. Används vid rabatter, moms och ränteberäkningar.</li>
-            <li><strong>Andel i procent</strong> — 52,50 är hur många procent av 350? Svar: 15%. Används för att beräkna marknadsandelar, svarsfrekvenser och budgetandelar.</li>
-            <li><strong>Procentuell förändring</strong> — Hur mycket har priset ökat eller minskat? Används för att mäta tillväxt, inflation och kursrörelser.</li>
-            <li><strong>Lägg till/dra ifrån procent</strong> — 500 kr + 25% moms = 625 kr. Använd för att beräkna pris inklusive moms eller pris efter rabatt.</li>
-        </ul>
-
-        <h3>Formlerna du behöver</h3>
-        <p>Grundformeln för procent: <strong>Del = (Procent ÷ 100) × Totalt</strong>. Om du vill veta procentsatsen: <strong>Procent = (Del ÷ Totalt) × 100</strong>. Vid procentuell förändring: <strong>Förändring = ((Nytt − Gammalt) ÷ Gammalt) × 100</strong>.</p>
-
-        <h3>Procent i praktiken — vanliga exempel</h3>
-        <p>Moms i Sverige är 25% på de flesta varor. Om du handlar för 100 kr exklusive moms kostar det 125 kr inklusive moms. Arbetsgivaravgiften är 31,42% utöver bruttolönen. ROT-avdraget är 30% av arbetskostnaden, max 50 000 kr per person och år (ROT och RUT tillsammans max 75 000 kr). CSN-räntan är 2,135 % för 2026.</p>
-
-        <h3>Skillnaden mellan procent och procentenheter</h3>
-        <p>Det är viktigt att skilja på procent (relativ förändring) och procentenheter (absolut förändring). Om skatten höjs från 30% till 33% är det en ökning med 3 procentenheter — men en procentuell ökning på 10%. Dessa begrepp blandas ofta ihop i media och politiska debatter, så det lönar sig att ha koll på skillnaden.</p>
-    </div>
-
-    <!-- FAQ -->
-    <div class="card">
-        <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem">Vanliga frågor om procent</h2>
-        <div id="faq-list">
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur räknar man ut procent av ett tal?</div>
-                <div class="faq-a">För att räkna ut X procent av ett tal Y, multiplicerar du Y med X och delar på 100. Formeln är: Resultat = (X ÷ 100) × Y. Exempel: 15% av 350 = (15 ÷ 100) × 350 = 52,50. Vår procenträknare gör detta automatiskt — fyll i procentsatsen och talet, så visas svaret direkt.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur räknar man ut hur många procent ett tal är av ett annat?</div>
-                <div class="faq-a">För att räkna ut hur stor andel (i procent) ett tal A är av ett tal B, delar du A med B och multiplicerar med 100. Formeln är: Andel = (A ÷ B) × 100. Exempel: 52,50 är hur många procent av 350? Svar: (52,50 ÷ 350) × 100 = 15%. Använd fliken "Andel %" i vår procenträknare.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur beräknar man procentuell förändring?</div>
-                <div class="faq-a">Procentuell förändring beräknas med formeln: Förändring = ((Nytt värde − Gammalt värde) ÷ Gammalt värde) × 100. Exempel: om priset går från 200 kr till 250 kr är förändringen ((250 − 200) ÷ 200) × 100 = 25%. En positiv siffra är en ökning, negativ är en minskning. Vår kalkylator visar om det är en uppgång eller nedgång automatiskt.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur lägger man till procent på ett tal?</div>
-                <div class="faq-a">För att lägga till X procent på ett tal Y: Nytt värde = Y × (1 + X ÷ 100). Exempel: 500 + 25% = 500 × 1,25 = 625. För att dra ifrån procent: Nytt värde = Y × (1 − X ÷ 100). Exempel: 500 − 20% = 500 × 0,80 = 400. Observera att "+25% och sedan −25%" inte tar dig tillbaka till ursprunget: 500 → 625 → 468,75.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Vad är skillnaden mellan procentandel och procentenhet?</div>
-                <div class="faq-a">Procentandel är en relativ förändring. Om räntan går från 2% till 3% är det en ökning med 50% (relativt). Procentenhet är den absoluta skillnaden i procentpoäng — en förändring från 2% till 3% är 1 procentenhet. Det är viktigt att skilja på dessa begrepp, särskilt när det gäller räntor, inflation och statistik.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur räknar man baklänges från ett pris med moms?</div>
-                <div class="faq-a">För att räkna ut priset exklusive moms från ett pris inklusive moms, dividerar du med (1 + momssatsen). Exempel med 25% moms: 125 kr inkl. moms ÷ 1,25 = 100 kr exkl. moms. Momsen i kronor blir 125 − 100 = 25 kr. Använd vår momsräknare för detaljerade momsberäkningar med alla svenska momssatser.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">Hur används procent i vardagliga situationer?</div>
-                <div class="faq-a">Procent används dagligen inom shopping (rabatter, REA-priser), ekonomi (räntor, avkastning, inflation), hälsa (BMI, kroppsfett, kalorier), skatt (kommunalskatt, moms, arbetsgivaravgift), statistik och löneförhandlingar. Att förstå procent hjälper dig att jämföra erbjudanden, förstå räntor och fatta bättre ekonomiska beslut.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CROSS-LINKS -->
-    <div class="card">
-        <h2 style="font-size:1rem;font-weight:700;margin-bottom:.9rem">Relaterade kalkylatorer</h2>
-        <div class="crosslink-grid">
-            <a class="crosslink-card" href="/kalkylatorer/momsraknare"><span>🧾</span>Momsräknare</a>
-            <a class="crosslink-card" href="/kalkylatorer/rot-rut"><span>🔧</span>ROT &amp; RUT-avdrag</a>
-            <a class="crosslink-card" href="/kalkylatorer/sparkalkylator"><span>💰</span>Sparkalkylator</a>
-            <a class="crosslink-card" href="/kalkylatorer/ranta-pa-ranta"><span>📈</span>Ränta-på-ränta</a>
-            <a class="crosslink-card" href="/kalkylatorer/loneraknare"><span>💼</span>Löneräknare</a>
-            <a class="crosslink-card" href="/kalkylatorer/isk-skatteberaknare"><span>📊</span>ISK-skatteberäknare</a>
-        </div>
-    </div>
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li aria-current="page">Procenträknare</li></ol></nav>
+<div class="gk-eyebrow">Procentkalkylator</div>
+<h1>Procenträknare – räkna ut procent</h1>
+<p class="gk-lead">Skriv uträkningen som du skulle söka på den – till exempel 15 % av 350 – så får du svaret direkt.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Fritext eller fyra räknesätt · Formler: <a href="https://www.uhr.se/globalassets/_uhr.se/internationellt/jobba-vid-eu/tolkning-av-sifferuppgifter-2021.pdf" target="_blank" rel="noopener">UHR – tolkning av sifferuppgifter</a></p>
 </div>
 
-<div class="gk-ftr gk2" role="contentinfo">
+<section class="gk-card pq" aria-label="Snabbräkning">
+<form class="pq-in" id="qform" novalidate onsubmit="return false">
+<label for="q" class="gk-legend">Skriv din uträkning</label>
+<div class="gk-input"><input id="q" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" value="15 % av 350" aria-describedby="qHow"></div>
+</form>
+<div class="pq-res" aria-live="polite">
+<div class="gk-result-label" id="qLabel">15 % av 350 är</div>
+<div class="gk-big"><strong id="qBig">52,5</strong></div>
+<p class="pq-how" id="qHow">350 × 15 / 100 = 52,5.</p>
+</div>
+<div class="pq-ex" role="group" aria-labelledby="exL"><span class="gk-hint" id="exL">Prova:</span><button type="button" class="gk-chip" data-q="15 % av 350">15 % av 350</button><button type="button" class="gk-chip" data-q="vad är 30 % av 1 752 000">vad är 30 % av 1 752 000</button><button type="button" class="gk-chip" data-q="25 av 500">25 av 500</button><button type="button" class="gk-chip" data-q="500 * 1,25">500 * 1,25</button><button type="button" class="gk-chip" data-q="500 + 25 %">500 + 25 %</button><button type="button" class="gk-chip" data-q="500 − 20 %">500 − 20 %</button><button type="button" class="gk-chip" data-q="200 till 250">200 till 250</button><button type="button" class="gk-chip" data-q="52,5 är 15 % av">52,5 är 15 % av</button></div>
+</section>
+
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="pform" novalidate onsubmit="return false">
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Vad vill du räkna ut?</legend>
+<div class="gk-seg" style="--n:2" id="mode" role="group" aria-label="Typ av uträkning">
+<button type="button" data-v="av" aria-pressed="true">X % av ett tal<small>15 % av 350</small></button>
+<button type="button" data-v="andel" aria-pressed="false">Hur många procent?<small>25 av 500</small></button>
+<button type="button" data-v="for" aria-pressed="false">Ökning eller minskning<small>200 → 250</small></button>
+<button type="button" data-v="just" aria-pressed="false">Lägg till/dra av<small>500 + 25 %</small></button>
+</div>
+</fieldset>
+<fieldset class="gk-fieldset" id="dirWrap" style="display:none">
+<legend class="gk-legend">Lägga till eller dra av?</legend>
+<div class="gk-seg" style="--n:2" id="dir" role="group" aria-label="Lägga till eller dra av procent">
+<button type="button" data-v="upp" aria-pressed="true">Lägg till<small>t.ex. påslag</small></button>
+<button type="button" data-v="ned" aria-pressed="false">Dra av<small>t.ex. rabatt</small></button>
+</div>
+</fieldset>
+<div class="gk-field">
+<label for="f1" id="f1l">Procent</label>
+<div class="gk-input"><input id="f1" inputmode="decimal" autocomplete="off" value="15"><span class="unit" id="f1u">%</span></div>
+</div>
+<div class="gk-field">
+<label for="f2" id="f2l">Av talet</label>
+<div class="gk-input"><input id="f2" inputmode="decimal" autocomplete="off" value="350"><span class="unit" id="f2u" style="display:none">%</span></div>
+<span class="gk-hint" id="fHint">Decimaler skriver du med komma, till exempel 12,5.</span>
+</div>
+</form>
+</div>
+
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">15 % av 350 är</div>
+<div class="gk-big"><strong id="resBig">52,5</strong></div>
+<p class="gk-hint" id="resSub">350 × 15 / 100 = 52,5.</p>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
+
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="/kalkylatorer/momsraknare"><span>Räkna moms<small>Momsräknaren – lägg till eller dra av moms på ett pris</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/ranta-pa-ranta"><span>Ränta på ränta<small>Se hur pengar växer med några procent om året</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/inflationskalkylator"><span>Inflationskalkylator<small>Hur mycket har priserna ökat i procent?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</section>
+</div>
+</div>
+
+<div class="gk-prose">
+<h2>Vanliga uträkningar</h2>
+<div class="gk-table-wrap"><table class="gk-table pr-tab"><caption>Så mycket är X % av 50, 100, 350, 500 och 1 000. Exempel: 15 % av 350 = 52,5.</caption><thead><tr><th scope="col">Procent av</th><th scope="col">50</th><th scope="col">100</th><th scope="col">350</th><th scope="col">500</th><th scope="col">1 000</th></tr></thead><tbody><tr><th scope="row">1 %</th><td>0,5</td><td>1</td><td>3,5</td><td>5</td><td>10</td></tr><tr><th scope="row">5 %</th><td>2,5</td><td>5</td><td>17,5</td><td>25</td><td>50</td></tr><tr><th scope="row">10 %</th><td>5</td><td>10</td><td>35</td><td>50</td><td>100</td></tr><tr><th scope="row">15 %</th><td>7,5</td><td>15</td><td>52,5</td><td>75</td><td>150</td></tr><tr><th scope="row">20 %</th><td>10</td><td>20</td><td>70</td><td>100</td><td>200</td></tr><tr><th scope="row">25 %</th><td>12,5</td><td>25</td><td>87,5</td><td>125</td><td>250</td></tr><tr><th scope="row">30 %</th><td>15</td><td>30</td><td>105</td><td>150</td><td>300</td></tr><tr><th scope="row">50 %</th><td>25</td><td>50</td><td>175</td><td>250</td><td>500</td></tr></tbody></table></div>
+
+<h2>Hur räknar man ut procent?</h2>
+<p>Procent betyder hundradel, så 15 % är 15 / 100 = 0,15. De tre vanligaste uträkningarna:</p>
+<ul>
+<li><strong>X % av ett tal:</strong> talet × X / 100. 15 % av 350 = 350 × 15 / 100 = 52,5.</li>
+<li><strong>Hur många procent:</strong> delen / det hela × 100. 25 av 500 = 25 / 500 × 100 = 5 %.</li>
+<li><strong>Hela talet baklänges:</strong> delen / procenten × 100. Om 52,5 är 15 % är det hela 52,5 / 15 × 100 = 350.</li>
+</ul>
+
+<h2>Räkna ut ökning i procent</h2>
+<p>Förändringen i procent är <strong>(nytt − gammalt) / gammalt × 100</strong>. Går ett pris från 200 till 250 kr är ökningen 50 / 200 × 100 = 25 %. Blir svaret negativt är det en minskning.</p>
+<p>En ökning och en lika stor minskning tar inte ut varandra. Från 250 tillbaka till 200 är en minskning med 20 %, och 250 minus 25 % blir 187,5.</p>
+
+<h2>Lägga till och dra av procent</h2>
+<p>Multiplicera med förändringsfaktorn. Lägga till 25 % är att multiplicera med 1,25: 500 × 1,25 = 625. Dra av 20 % är att multiplicera med 0,8: 500 × 0,8 = 400. Ska du räkna moms finns en egen <a href="/kalkylatorer/momsraknare">momsräknare</a>.</p>
+
+<h2>Procent och procentenheter</h2>
+<p>Går räntan från 2 % till 3 % har den ökat med <strong>1 procentenhet</strong> men med <strong>50 procent</strong>. Procentenheter är skillnaden mellan två procentsatser. Procent visar hur stor förändringen är jämfört med där man började. Skriv 2 % till 3 % i rutan överst så får du båda.</p>
+
+<h2>Vanliga frågor om procent</h2>
+<div class="gk-faq"><details><summary>Hur räknar man ut procent av en summa?</summary><p>Multiplicera summan med procentsatsen och dela med 100. 30 % av 1 752 000 är 1 752 000 × 30 / 100 = 525 600. Du kan också multiplicera med procenten i decimalform: 1 752 000 × 0,3 ger samma svar.</p></details><details><summary>Hur många procent är 25 av 500?</summary><p>5 %. Dela delen med det hela och multiplicera med 100: 25 / 500 × 100 = 5. Samma sätt fungerar för alla tal – 120 av 480 är till exempel 25 %.</p></details><details><summary>Hur räknar man ut ökning i procent?</summary><p>Ta skillnaden mellan det nya och det gamla värdet, dela med det gamla värdet och multiplicera med 100. Går en lön från 30 000 till 31 500 kr är ökningen 1 500 / 30 000 × 100 = 5 %. Ett negativt svar betyder att värdet har minskat.</p></details><details><summary>Hur drar man av procent från ett pris?</summary><p>Multiplicera priset med 1 minus procenten i decimalform. 20 % rabatt på 500 kr blir 500 × 0,8 = 400 kr, och rabatten är 100 kr.</p></details><details><summary>Vad är 500 × 1,25?</summary><p>625. Att multiplicera med 1,25 är samma sak som att lägga till 25 %: 500 + 125 = 625. På samma sätt är × 1,1 en ökning med 10 % och × 0,9 en minskning med 10 %.</p></details><details><summary>Hur räknar man procent i huvudet?</summary><p>Börja med 10 %, som du får genom att flytta decimalkommat ett steg åt vänster: 10 % av 350 är 35. 5 % är hälften av det, 17,5, och 15 % är summan, 52,5. 1 % får du genom att dela med 100, 25 % genom att dela med 4 och 50 % genom att halvera.</p></details><details><summary>Hur räknar man ut hela beloppet om man vet procenten?</summary><p>Dela delen med procenten och multiplicera med 100. Om 52,5 är 15 % av ett belopp är beloppet 52,5 / 15 × 100 = 350. Skriv 52,5 är 15 % av i rutan överst så räknar sidan ut det.</p></details><details><summary>Vad är skillnaden mellan procent och procentenheter?</summary><p>Procentenheter anger hur många steg två procentsatser skiljer sig åt, medan procent anger förändringen i förhållande till startvärdet. Ökar en andel från 4 % till 6 % har den ökat med 2 procentenheter, men med 50 procent.</p></details></div>
+
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.uhr.se/globalassets/_uhr.se/internationellt/jobba-vid-eu/tolkning-av-sifferuppgifter-2021.pdf" target="_blank" rel="noopener">Universitets- och högskolerådet (UHR) – Tolkning av sifferuppgifter (2021)</a> – formlerna delen / hela = procenten, hela × procenten = delen och delen / procenten = hela, och skillnaden mellan procent och procentenheter (en andel som ökar från 4 % till 6 % ökar med 2 procentenheter, men med 50 %)</li>
+<li>Förändring i procent, påslag och avdrag räknas med vanlig aritmetik: (nytt − gammalt) / gammalt × 100 och talet × (100 ± procenten) / 100. Svaren avrundas till högst två decimaler.</li>
+</ul>
+
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/loneforhandling"><span>Löneförhandling<small>Vilket lönekrav ska du lägga?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/sparkalkylator"><span>Sparkalkylator<small>Hur mycket behöver du spara per månad?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/vad-ar-inflation"><span>Guide: Vad är inflation?<small>Så mäts prisökningar i procent</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
+</main>
+<script id="gk-pr" type="application/json">{"START": "15 % av 350", "EXEMPEL": ["15 % av 350", "vad är 30 % av 1 752 000", "25 av 500", "500 * 1,25", "500 + 25 %", "500 − 20 %", "200 till 250", "52,5 är 15 % av"], "LAGE": {"av": ["15", "350"], "andel": ["25", "500"], "for": ["200", "250"], "just": ["500", "25"]}, "TABELL_P": [1, 5, 10, 15, 20, 25, 30, 50], "TABELL_TAL": [50, 100, 350, 500, 1000]}</script>
+<script>
+
+(function () {
+  'use strict';
+  /* Modell – samma som scripts/build_procent.py */
+  var NB = ' ', MI = '−';
+  var NUM = '[0-9]{1,3}(?: [0-9]{3}(?![0-9]))+(?:[.,][0-9]+)?|[0-9]+(?:[.,][0-9]+)*';
+  var RE_NUM = new RegExp('^(?:' + NUM + ')'), RE_FALT = new RegExp('^-?(?:' + NUM + ')$'), RE_WORD = /^[a-zåäöéü]+/;
+  var HELP = 'Skriv till exempel 15 % av 350, 25 av 500, 500 + 25 % eller 200 till 250.';
+  var S_AV = ['av', 'utav', 'of'], S_TILL = ['till', '>'], S_AR = ['är', 'blir', 'utgör', 'motsvarar'],
+    S_SUB = ['rabatt', 'dra', 'drar', 'avdrag', 'minus', 'minska', 'sänk', 'sänka', 'sänkt', 'rea'],
+    S_ADD = ['lägg', 'lägga', 'plus', 'påslag', 'öka', 'höj', 'höja', 'höjd', 'addera'],
+    S_MUL = ['*', 'x', 'gånger', 'ggr'], S_DIV = ['/', 'delat', 'delad'], S_PLUS = ['+', 'plus'], S_MINUS = ['-', 'minus'],
+    S_CHG = ['ökning', 'minskning', 'förändring', 'ökat', 'minskat'];
+
+  function grp(ip) { var out = ''; while (ip.length > 3) { out = NB + ip.slice(-3) + out; ip = ip.slice(0, -3); } return ip + out; }
+  function F(x, dec) {
+    if (dec == null) dec = 2;
+    if (x == null || !isFinite(x) || Math.abs(x) >= 1e21) return '–';
+    if (Math.abs(x) >= 1e12) dec = 0;
+    var f = Math.pow(10, dec), r = Math.floor(x * f + 0.5) / f;
+    if (r === 0 && x !== 0 && dec < 6) return F(x, 6);
+    var s = Math.abs(r).toFixed(dec).split('.'), fp = (s[1] || '').replace(/0+$/, '');
+    return (r < 0 ? MI : '') + grp(s[0]) + (fp ? ',' + fp : '');
+  }
+  function T(x) { return F(x, 6); }
+  function P(x) { return F(x, 6) + NB + '%'; }
+  function sgn(s) { return (s.charAt(0) === MI || s === '0' || s === '–') ? s : '+' + s; }
+
+  function av(p, tal) { return p * tal / 100; }
+  function andel(d, h) { return h === 0 ? null : d / h * 100; }
+  function forandring(fr, ti) { return fr === 0 ? null : (ti - fr) / Math.abs(fr) * 100; }
+  function justera(tal, p, upp) { return upp ? tal * (100 + p) / 100 : tal * (100 - p) / 100; }
+  function hela(d, p) { return p === 0 ? null : d * 100 / p; }
+
+  function norm(s) {
+    s = String(s == null ? '' : s).toLowerCase();
+    s = s.replace(/[    \t\r\n]/g, ' ').replace(/[−–—]/g, '-');
+    s = s.replace(/×/g, '*').replace(/·/g, '*').replace(/÷/g, '/').replace(/→/g, '>').replace(/->/g, '>').replace(/=>/g, '>');
+    s = s.replace(/procent/g, '%').replace(/ +/g, ' ');
+    return s.trim();
+  }
+  function tonum(raw) {
+    var t = raw.replace(/ /g, ''), nd = t.split('.').length - 1, nc = t.split(',').length - 1;
+    if (nd && nc) t = t.lastIndexOf(',') > t.lastIndexOf('.') ? t.replace(/\./g, '').replace(',', '.') : t.replace(/,/g, '');
+    else if (nc) t = nc > 1 ? t.replace(/,/g, '') : t.replace(',', '.');
+    else if (nd > 1) t = t.replace(/\./g, '');
+    return parseFloat(t.match(/^[0-9]+(?:\.[0-9]+)?/)[0]);
+  }
+  function isd(c) { return c >= '0' && c <= '9'; }
+  function tokens(s) {
+    var out = [], i = 0, n = s.length;
+    while (i < n) {
+      var c = s.charAt(i);
+      if (c === ' ') { i++; continue; }
+      var j = i, neg = false;
+      if (c === '-' && i + 1 < n && isd(s.charAt(i + 1)) && !(out.length && out[out.length - 1].t === 'n')) { j = i + 1; neg = true; }
+      if (isd(s.charAt(j))) {
+        var raw = s.slice(j).match(RE_NUM)[0], v = tonum(raw);
+        out.push({ t: 'n', v: neg ? -v : v, p: false }); i = j + raw.length; continue;
+      }
+      if (c === '%') {
+        var last = out[out.length - 1];
+        if (last && last.t === 'n' && !last.p) last.p = true; else out.push({ t: 'w', w: '%' });
+        i++; continue;
+      }
+      if ('+-*/>'.indexOf(c) >= 0) { out.push({ t: 'w', w: c }); i++; continue; }
+      var m = s.slice(i).match(RE_WORD);
+      if (m) { out.push({ t: 'w', w: m[0] }); i += m[0].length; continue; }
+      i++;
+    }
+    return out;
+  }
+  function falt(s) {
+    var t = norm(s).replace(/%/g, '').trim();
+    if (!RE_FALT.test(t)) return null;
+    var v = tonum(t.replace(/^-/, ''));
+    return t.charAt(0) === '-' ? -v : v;
+  }
+  function has(ws, set) { for (var i = 0; i < ws.length; i++) if (set.indexOf(ws[i]) >= 0) return true; return false; }
+
+  function mk(typ, a, b, pp) {
+    var r = { typ: typ, a: a, b: b == null ? null : b, pp: !!pp, svar: null, fel: '' };
+    if (typ === 'av') r.svar = av(a, b);
+    else if (typ === 'andel') { r.svar = andel(a, b); if (r.svar === null) r.fel = 'Det hela kan inte vara 0 – då går det inte att räkna ut procenten.'; }
+    else if (typ === 'for') { r.svar = forandring(a, b); if (r.svar === null) r.fel = 'Från 0 går det inte att räkna förändringen i procent. Skillnaden är ' + F(b - a) + '.'; }
+    else if (typ === 'upp' || typ === 'ned') r.svar = justera(a, b, typ === 'upp');
+    else if (typ === 'hela') { r.svar = hela(a, b); if (r.svar === null) r.fel = 'Procenten kan inte vara 0.'; }
+    else if (typ === 'mul') r.svar = a * b;
+    else if (typ === 'div') { if (b === 0) r.fel = 'Det går inte att dela med 0.'; else r.svar = a / b; }
+    else if (typ === 'sum') r.svar = a + b;
+    else if (typ === 'diff') r.svar = a - b;
+    else if (typ === 'dec') r.svar = a / 100;
+    if (r.svar !== null && !(Math.abs(r.svar) < 1e15)) { r.svar = null; r.fel = 'Talet blir för stort för att visa.'; }
+    return r;
+  }
+
+  function tolka(text) {
+    var s = norm(text);
+    if (!s) return { typ: 'tom', svar: null, fel: HELP };
+    var tk = tokens(s), idx = [];
+    tk.forEach(function (t, i) { if (t.t === 'n') idx.push(i); });
+    function words(a, b) { return tk.slice(a, b).filter(function (t) { return t.t === 'w'; }).map(function (t) { return t.w; }); }
+    if (idx.length === 1) {
+      var t0 = tk[idx[0]];
+      if (t0.p) return mk('dec', t0.v);
+      return { typ: 'fel', svar: null, fel: 'Vad vill du räkna ut med ' + T(t0.v) + '? Skriv till exempel ' + T(t0.v) + ' % av 350.' };
+    }
+    if (idx.length !== 2) return { typ: 'fel', svar: null, fel: HELP };
+    var n1 = tk[idx[0]], n2 = tk[idx[1]], a = n1.v, b = n2.v;
+    var pre = words(0, idx[0]), mid = words(idx[0] + 1, idx[1]), post = words(idx[1] + 1, tk.length), all = pre.concat(mid, post);
+    if (n1.p && !n2.p) {
+      if (has(mid, S_AV) || has(mid, S_MUL)) return mk('av', a, b);
+      if (has(all, S_SUB)) return mk('ned', b, a);
+      if (has(all, S_ADD)) return mk('upp', b, a);
+      return mk('av', a, b);
+    }
+    if (!n1.p && n2.p) {
+      if (has(mid, S_PLUS)) return mk('upp', a, b);
+      if (has(mid, S_MINUS)) return mk('ned', a, b);
+      if (has(mid, S_MUL)) return mk('av', b, a);
+      if (has(mid, S_AR)) return mk('hela', a, b);
+      if (has(all, S_SUB)) return mk('ned', a, b);
+      if (has(all, S_ADD) || mid.indexOf('med') >= 0) return mk('upp', a, b);
+      return mk('av', b, a);
+    }
+    if (!n1.p && !n2.p) {
+      if (has(mid, S_AV)) return mk('andel', a, b);
+      if (has(pre, S_AV) && has(mid, S_AR)) return mk('andel', b, a);
+      if (has(mid, S_TILL)) return mk('for', a, b);
+      if (has(mid, S_MUL)) return mk('mul', a, b);
+      if (has(mid, S_DIV)) return all.indexOf('%') >= 0 ? mk('andel', a, b) : mk('div', a, b);
+      if (has(mid, S_PLUS)) return mk('sum', a, b);
+      if (has(mid, S_MINUS)) return mk('diff', a, b);
+      if (has(all, S_CHG)) return mk('for', a, b);
+      return { typ: 'fel', svar: null, fel: HELP };
+    }
+    if (has(mid, S_TILL) || has(all, S_CHG)) return mk('for', a, b, true);
+    if (has(mid, S_AV)) return mk('av', a, b, true);
+    return { typ: 'fel', svar: null, fel: HELP };
+  }
+
+  function big(r) {
+    if (r.fel || r.svar == null) return '–';
+    if (r.typ === 'dec') return F(r.svar, 6);
+    var s = F(r.svar);
+    if (r.typ === 'for') s = sgn(s);
+    if (r.typ === 'andel' || r.typ === 'for' || (r.typ === 'av' && r.pp)) s += NB + '%';
+    return s;
+  }
+  function label(r) {
+    var t = r.typ, a = r.a, b = r.b, X = r.pp ? P : T;
+    if (t === 'av') return P(a) + ' av ' + X(b) + ' är';
+    if (t === 'andel') return 'Så många procent är ' + T(a) + ' av ' + T(b) + ':';
+    if (t === 'for') return 'Förändring från ' + X(a) + ' till ' + X(b) + ':';
+    if (t === 'upp') return T(a) + ' + ' + P(b) + ' är';
+    if (t === 'ned') return T(a) + ' ' + MI + ' ' + P(b) + ' är';
+    if (t === 'hela') return T(a) + ' är ' + P(b) + ' av';
+    if (t === 'mul') return T(a) + ' × ' + T(b) + ' =';
+    if (t === 'div') return T(a) + ' / ' + T(b) + ' =';
+    if (t === 'sum') return T(a) + ' + ' + T(b) + ' =';
+    if (t === 'diff') return T(a) + ' ' + MI + ' ' + T(b) + ' =';
+    if (t === 'dec') return P(a) + ' som decimaltal är';
+    if (t === 'tom') return 'Skriv en uträkning';
+    return 'Det gick inte att tolka';
+  }
+  function how(r) {
+    if (r.fel || r.svar == null) return r.fel || HELP;
+    var t = r.typ, a = r.a, b = r.b, v = r.svar, B = big(r), s;
+    if (t === 'av') return T(b) + ' × ' + T(a) + ' / 100 = ' + B + '.';
+    if (t === 'andel') return T(a) + ' / ' + T(b) + ' × 100 = ' + B + '.';
+    if (t === 'for') {
+      s = '(' + T(b) + ' ' + MI + ' ' + T(a) + ') / ' + T(Math.abs(a)) + ' × 100 = ' + B;
+      s += v > 0 ? ' – en ökning' : (v < 0 ? ' – en minskning' : '');
+      if (r.pp) { var d = F(Math.abs(b - a)); s += '. Skillnaden är ' + d + ' procentenhet' + (d === '1' ? '' : 'er'); }
+      return s + '.';
+    }
+    if (t === 'upp') return T(a) + ' × ' + F((100 + b) / 100, 6) + ' = ' + B + '. Påslaget är ' + F(v - a) + '.';
+    if (t === 'ned') return T(a) + ' × ' + F((100 - b) / 100, 6) + ' = ' + B + '. Avdraget är ' + F(a - v) + '.';
+    if (t === 'hela') return T(a) + ' / ' + T(b) + ' × 100 = ' + B + '.';
+    if (t === 'mul') {
+      if (b > 0 && b < 1) return 'Samma sak som ' + P(b * 100) + ' av ' + T(a) + ', eller ' + T(a) + ' ' + MI + ' ' + F((1 - b) * 100) + NB + '%.';
+      if (b > 1 && b < 10) return 'Samma sak som ' + T(a) + ' + ' + F((b - 1) * 100) + NB + '%: ' + T(a) + ' + ' + F(a * (b - 1)) + ' = ' + B + '.';
+      return T(a) + ' × ' + T(b) + ' = ' + B + '.';
+    }
+    if (t === 'div') {
+      if (b > 1 && b < 10) return 'Samma sak som att ta bort ett påslag på ' + F((b - 1) * 100) + NB + '% från ' + T(a) + '.';
+      return T(a) + ' / ' + T(b) + ' = ' + B + '.';
+    }
+    if (t === 'sum') return 'Vill du lägga till procent? Skriv ' + T(a) + ' + ' + T(b) + ' %.';
+    if (t === 'diff') return 'Vill du dra av procent? Skriv ' + T(a) + ' ' + MI + ' ' + T(b) + ' %.';
+    if (t === 'dec') return T(a) + ' / 100 = ' + B + '. ' + P(a) + ' av ett tal är talet × ' + B + '.';
+    return HELP;
+  }
+  function quick(text) { var r = tolka(text); return { q: text, typ: r.typ, svar: r.svar, big: big(r), label: label(r), how: how(r) }; }
+
+  window.GKProcent = { tolka: tolka, quick: quick, mk: mk, big: big, label: label, how: how, F: F, falt: falt,
+    av: av, andel: andel, forandring: forandring, justera: justera, hela: hela, T: T, P: P, sgn: sgn, NB: NB, MI: MI };
+})();
+
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var C = JSON.parse(document.getElementById('gk-pr').textContent);
+  var G = window.GKProcent, F = G.F, T = G.T, P = G.P, NB = G.NB, MI = G.MI;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function setBig(el, txt) {
+    el.textContent = txt;
+    var n = txt.replace(/\s/g, '').length;
+    el.classList.toggle('is-long', n > 9 && n <= 13);
+    el.classList.toggle('is-xlong', n > 13);
+  }
+
+  /* ── Snabbfältet ── */
+  function runQuick() {
+    var r = G.quick($('q').value);
+    $('qLabel').textContent = r.label;
+    setBig($('qBig'), r.big);
+    $('qHow').textContent = r.how;
+  }
+  $('q').addEventListener('input', runQuick);
+  $('q').addEventListener('focus', function () { var el = this; setTimeout(function () { try { el.select(); } catch (e) {} }, 0); });
+  document.querySelectorAll('.pq-ex [data-q]').forEach(function (b) {
+    b.addEventListener('click', function () { $('q').value = b.getAttribute('data-q'); runQuick(); });
+  });
+
+  /* ── Fyra lägen ── */
+  var MODES = {
+    av: { l1: 'Procent', u1: true, l2: 'Av talet', u2: false },
+    andel: { l1: 'Delen', u1: false, l2: 'Av det hela', u2: false },
+    for: { l1: 'Från (gammalt värde)', u1: false, l2: 'Till (nytt värde)', u2: false },
+    just: { l1: 'Talet', u1: false, l2: 'Procent', u2: true }
+  };
+  var st = { mode: 'av', dir: 'upp', v: {} };
+  Object.keys(C.LAGE).forEach(function (k) { st.v[k] = C.LAGE[k].slice(); });
+
+  function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-v') === v ? 'true' : 'false'); }); }
+  function seg(id, cb) {
+    $(id).addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      press(id, b.getAttribute('data-v')); cb(b.getAttribute('data-v')); calc();
+    });
+  }
+  function setMode(m) {
+    st.v[st.mode] = [$('f1').value, $('f2').value];
+    st.mode = m;
+    var M = MODES[m];
+    $('f1l').textContent = M.l1; $('f2l').textContent = M.l2;
+    $('f1u').style.display = M.u1 ? '' : 'none'; $('f2u').style.display = M.u2 ? '' : 'none';
+    $('f1').value = st.v[m][0]; $('f2').value = st.v[m][1];
+    $('dirWrap').style.display = m === 'just' ? '' : 'none';
+  }
+  seg('mode', setMode);
+  seg('dir', function (v) { st.dir = v; });
+  ['f1', 'f2'].forEach(function (id) { $(id).addEventListener('input', calc); });
+
+  function tile(l, v, s) { return '<div class="gk-tile"><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+  function pct(x) { return G.sgn(F(x)) + NB + '%'; }
+
+  function calc() {
+    var m = st.mode, x = G.falt($('f1').value), y = G.falt($('f2').value);
+    if (x === null || y === null) {
+      $('resLabel').textContent = 'Svar'; setBig($('resBig'), '–');
+      $('resSub').textContent = 'Fyll i båda fälten med siffror.';
+      $('tiles').innerHTML = ''; $('verdict').innerHTML = ''; $('how').innerHTML = '';
+      return;
+    }
+    var r = G.mk(m === 'just' ? st.dir : m, x, y);
+    $('resLabel').textContent = G.label(r);
+    setBig($('resBig'), G.big(r));
+    $('resSub').textContent = G.how(r);
+    var t = '', v = '', h = '';
+    if (r.svar !== null && !r.fel) {
+      var s = r.svar;
+      if (m === 'av') {
+        t = tile('Resten, ' + P(100 - x), F(y - s)) + tile(T(y) + ' + ' + P(x), F(G.justera(y, x, true))) +
+          tile('Som decimaltal', F(x / 100, 6)) + tile('1 % av ' + T(y), F(y / 100));
+        v = verdict('info', 'Räkna i huvudet', '10 % av ' + T(y) + ' är ' + F(y / 10) + ' – flytta decimalkommat ett steg åt vänster.' + (x !== 10 && x > 0 ? ' ' + P(x) + ' är ' + F(x / 10, 6) + ' gånger så mycket.' : ''));
+        h = '<p>Formel: talet × procenten / 100. Eller talet × procenten i decimalform: ' + T(y) + ' × ' + F(x / 100, 6) + '.</p>';
+      } else if (m === 'andel') {
+        t = tile('Resten', F(100 - s) + NB + '%', F(y - x)) + tile('Som decimaltal', F(x / y, 6)) +
+          (x > 0 && y / x >= 2 ? tile('Ungefär', '1 av ' + F(y / x, 0)) : '');
+        v = verdict('info', 'Kontroll', F(s) + ' % av ' + T(y) + ' är ' + F(G.av(s, y)) + '.' + (x > y ? ' Delen är större än det hela, därför blir det mer än 100 %.' : ''));
+        h = '<p>Formel: delen / det hela × 100.</p>';
+      } else if (m === 'for') {
+        var back = G.forandring(y, x);
+        t = tile('Skillnad', G.sgn(F(y - x))) + (x > 0 ? tile('Förändringsfaktor', '× ' + F(y / x, 4)) : '') +
+          (back !== null ? tile('Tillbaka till ' + T(x), pct(back)) : '');
+        v = s === 0 ? verdict('info', 'Ingen förändring', 'Talen är lika stora.')
+          : verdict('info', 'Procent eller procentenheter?', 'Är ' + T(x) + ' och ' + T(y) + ' procentsatser, till exempel räntor, har de ändrats med ' + F(Math.abs(y - x)) + ' procentenhet' + (F(Math.abs(y - x)) === '1' ? '' : 'er') + ' – men med ' + F(Math.abs(s)) + ' %.');
+        h = '<p>Formel: (nytt ' + MI + ' gammalt) / gammalt × 100. Är det gamla värdet negativt delar vi med talet utan minustecken.</p>';
+      } else {
+        var up = st.dir === 'upp', b2 = G.forandring(s, x), round = G.justera(s, y, !up);
+        t = tile(up ? 'Påslag' : 'Avdrag', F(Math.abs(s - x))) + tile('Förändringsfaktor', '× ' + F((up ? 100 + y : 100 - y) / 100, 6)) +
+          (b2 !== null ? tile('Tillbaka till ' + T(x), pct(b2)) : '');
+        v = verdict('info', 'Det tar inte ut varandra', T(x) + (up ? ' + ' : ' ' + MI + ' ') + P(y) + (up ? ' ' + MI + ' ' : ' + ') + P(y) + ' blir ' + F(round) + ', inte ' + T(x) + '.');
+        h = '<p>Lägga till: talet × (100 + procenten) / 100. Dra av: talet × (100 ' + MI + ' procenten) / 100.</p><p>Ska du räkna moms finns en egen <a href="/kalkylatorer/momsraknare">momsräknare</a>.</p>';
+      }
+    }
+    $('tiles').innerHTML = t;
+    $('verdict').innerHTML = v;
+    $('how').innerHTML = h + '<p>' + G.how(r) + '</p><p>Svaren avrundas till högst två decimaler.</p>';
+  }
+
+  runQuick();
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Svaren avrundas till högst två decimaler.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-<script>
-// ─── STATE ─────────────────────────────────────────────────────────────────
-let activeTab = 'av';
-let laggMode = 'add'; // 'add' | 'sub'
-
-// ─── HELPERS ───────────────────────────────────────────────────────────────
-function fmt(n, dec = 2) {
-    if (!isFinite(n)) return '—';
-    return n.toLocaleString('sv-SE', { minimumFractionDigits: dec, maximumFractionDigits: dec });
-}
-function fmtPct(n, dec = 2) {
-    if (!isFinite(n)) return '—';
-    return fmt(n, dec) + '%';
-}
-
-// ─── TAB SWITCHING ─────────────────────────────────────────────────────────
-function switchTab(tab) {
-    const tabs = ['av', 'andel', 'forandring', 'lagg'];
-    tabs.forEach(t => {
-        document.getElementById('tab-content-' + t).style.display = t === tab ? 'block' : 'none';
-        document.getElementById('result-' + t).style.display = t === tab ? 'block' : 'none';
-        const btn = document.getElementById('tab-' + t);
-        btn.classList.toggle('active', t === tab);
-        btn.setAttribute('aria-selected', t === tab);
-    });
-    activeTab = tab;
-    // Trigger relevant calculation
-    if (tab === 'av') calcAv();
-    else if (tab === 'andel') calcAndel();
-    else if (tab === 'forandring') calcForandring();
-    else calcLagg();
-}
-
-// ─── TAB 1: X% av Y ────────────────────────────────────────────────────────
-function calcAv() {
-    const pct = parseFloat(document.getElementById('av_pct').value) || 0;
-    const tal = parseFloat(document.getElementById('av_tal').value) || 0;
-    const res = (pct / 100) * tal;
-    const rest = tal - res;
-    const restPct = 100 - pct;
-
-    document.getElementById('av-sentence').innerHTML =
-        fmt(pct, 2) + '% av ' + fmt(tal, 2) + ' = <span class="answer" id="av-main">' + fmt(res) + '</span>';
-    document.getElementById('av-res').textContent = fmt(res);
-    document.getElementById('av-res-sub').textContent = '= ' + fmt(res);
-    document.getElementById('av-pct-box').textContent = fmtPct(pct);
-    document.getElementById('av-rest').textContent = fmt(rest);
-    document.getElementById('av-rest-sub').textContent = fmt(restPct, 2) + '% av ' + fmt(tal, 0);
-
-    drawGaugePie('gauge-av', Math.min(Math.max(pct, 0), 100));
-}
-
-// ─── TAB 2: Andel ──────────────────────────────────────────────────────────
-function calcAndel() {
-    const del = parseFloat(document.getElementById('andel_del').value) || 0;
-    const tot = parseFloat(document.getElementById('andel_tot').value) || 0;
-    const pct = tot !== 0 ? (del / tot) * 100 : NaN; // division med 0 går inte att beräkna
-
-    document.getElementById('andel-sentence').innerHTML = isFinite(pct)
-        ? fmt(del, 2) + ' är <span class="answer" id="andel-main">' + fmtPct(pct) + '</span> av ' + fmt(tot, 2)
-        : 'Kan inte beräknas – totalen är <span class="answer" id="andel-main">0</span>';
-    document.getElementById('andel-res').textContent = fmtPct(pct);
-    document.getElementById('andel-res-sub').textContent = isFinite(pct) ? 'av totalen' : 'totalen får inte vara 0';
-    document.getElementById('andel-del-box').textContent = fmt(del);
-    document.getElementById('andel-tot-box').textContent = fmt(tot);
-
-    drawGaugePie('gauge-andel', Math.min(Math.max(pct, 0), 100));
-}
-
-// ─── TAB 3: Förändring ─────────────────────────────────────────────────────
-function calcForandring() {
-    const from = parseFloat(document.getElementById('for_from').value) || 0;
-    const to = parseFloat(document.getElementById('for_to').value) || 0;
-    const diff = to - from;
-    const pct = from !== 0 ? ((to - from) / Math.abs(from)) * 100 : NaN; // från 0 går inte att beräkna i procent
-    const factor = from !== 0 ? to / from : NaN;
-    const ok = isFinite(pct);
-    const up = ok ? pct >= 0 : diff >= 0;
-
-    const sign = up && ok ? '+' : '';
-    const color = !ok ? 'inherit' : (up ? 'var(--green)' : '#ef4444');
-
-    document.getElementById('for-sentence').innerHTML = ok
-        ? 'Förändringen är <span class="answer" id="for-main" style="color:' + color + '">' + sign + fmtPct(pct) + '</span>'
-        : 'Kan inte beräknas i procent – startvärdet är <span class="answer" id="for-main">0</span>';
-    const pctEl = document.getElementById('for-pct');
-    pctEl.textContent = ok ? sign + fmtPct(pct) : '—';
-    pctEl.style.color = color;
-    document.getElementById('for-pct-sub').textContent = !ok ? 'startvärdet är 0' : (pct === 0 ? 'ingen förändring' : (up ? 'ökning' : 'minskning'));
-    const diffSign = diff > 0 ? '+' : '';
-    document.getElementById('for-diff').textContent = diffSign + fmt(diff);
-    document.getElementById('for-diff').style.color = diff === 0 ? 'inherit' : (diff > 0 ? 'var(--green)' : '#ef4444');
-    document.getElementById('for-factor').textContent = isFinite(factor) ? '× ' + fmt(factor) : '—';
-
-    drawBarChart('canvas-forandring', from, to, up);
-}
-
-// ─── TAB 4: Lägg till / Dra ifrån ─────────────────────────────────────────
-function setLaggMode(mode) {
-    laggMode = mode;
-    document.getElementById('lagg-add').className = 'toggle-btn' + (mode === 'add' ? ' active' : '');
-    document.getElementById('lagg-sub').className = 'toggle-btn' + (mode === 'sub' ? ' active-red' : '');
-    document.getElementById('lagg-op-sign').textContent = mode === 'add' ? '+' : '−';
-    document.getElementById('lagg-formula').innerHTML = mode === 'add'
-        ? '<strong>Formel:</strong> Resultat = Tal × (1 + Procent ÷ 100)'
-        : '<strong>Formel:</strong> Resultat = Tal × (1 − Procent ÷ 100)';
-    calcLagg();
-}
-
-function calcLagg() {
-    const tal = parseFloat(document.getElementById('lagg_tal').value) || 0;
-    const pct = parseFloat(document.getElementById('lagg_pct').value) || 0;
-    let res, diff;
-    const add = laggMode === 'add';
-
-    if (add) {
-        res = tal * (1 + pct / 100);
-        diff = res - tal;
-    } else {
-        res = tal * (1 - pct / 100);
-        diff = res - tal;
-    }
-
-    const sign = add ? '+' : '';
-    document.getElementById('lagg-sentence').innerHTML =
-        fmt(tal, 2) + ' ' + (add ? '+' : '−') + ' ' + fmtPct(pct) + ' = <span class="answer">' + fmt(res) + '</span>';
-    document.getElementById('lagg-res').textContent = fmt(res);
-    document.getElementById('lagg-res-sub').textContent = add ? 'efter tillägg' : 'efter avdrag';
-    document.getElementById('lagg-diff').textContent = (add ? '+' : '') + fmt(diff);
-    document.getElementById('lagg-diff').style.color = add ? 'var(--green)' : '#ef4444';
-    document.getElementById('lagg-diff-sub').textContent = (add ? '+' : '−') + fmtPct(pct);
-    document.getElementById('lagg-orig').textContent = fmt(tal);
-    document.getElementById('lagg-hint').textContent = 'Exempel: ' + fmt(tal, 0) + ' ' + (add ? '+' : '−') + ' ' + fmtPct(pct, 0) + ' = ' + fmt(res);
-
-    drawBarChart('canvas-lagg', tal, res, add);
-}
-
-// ─── CANVAS: PIE / DONUT GAUGE ─────────────────────────────────────────────
-function drawGaugePie(canvasId, pct) {
-    const canvas = document.getElementById(canvasId);
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    const W = 280, H = 160;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
-    ctx.scale(dpr, dpr);
-
-    ctx.clearRect(0, 0, W, H);
-
-    const cx = W / 2, cy = H - 20;
-    const r = 120, rIn = 72;
-    const startAngle = Math.PI;
-    const endAngle = 2 * Math.PI;
-    const fillAngle = startAngle + (pct / 100) * Math.PI;
-
-    // Detect dark mode
-    const dark = document.documentElement.getAttribute('data-theme') === 'dark'
-        || (window.matchMedia && false
-            && !document.documentElement.getAttribute('data-theme'));
-
-    const trackColor = dark ? '#334155' : '#E2E0D8';
-
-    // Track arc
-    ctx.beginPath();
-    ctx.arc(cx, cy, r, startAngle, endAngle);
-    ctx.arc(cx, cy, rIn, endAngle, startAngle, true);
-    ctx.closePath();
-    ctx.fillStyle = trackColor;
-    ctx.fill();
-
-    // Fill arc
-    if (pct > 0) {
-        ctx.beginPath();
-        ctx.arc(cx, cy, r, startAngle, fillAngle);
-        ctx.arc(cx, cy, rIn, fillAngle, startAngle, true);
-        ctx.closePath();
-        ctx.fillStyle = '#0D6A45';
-        ctx.fill();
-    }
-
-    // Center text
-    ctx.fillStyle = dark ? '#f1f5f9' : '#15201A';
-    ctx.font = 'bold 26px Inter, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(isFinite(pct) ? fmt(pct, 1) + '%' : '—', cx, cy - 18);
-
-    ctx.fillStyle = dark ? '#94a3b8' : '#56625B';
-    ctx.font = '12px Inter, sans-serif';
-    ctx.fillText('av totalen', cx, cy + 10);
-}
-
-// ─── CANVAS: BAR CHART (förändring / lägg till) ───────────────────────────
-function drawBarChart(canvasId, valFrom, valTo, isPositive) {
-    const canvas = document.getElementById(canvasId);
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    const W = 560, H = 120;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    canvas.style.width = '100%';
-    canvas.style.maxWidth = W + 'px';
-    canvas.style.height = H + 'px';
-    ctx.scale(dpr, dpr);
-    ctx.clearRect(0, 0, W, H);
-
-    const dark = document.documentElement.getAttribute('data-theme') === 'dark'
-        || (window.matchMedia && false
-            && !document.documentElement.getAttribute('data-theme'));
-    const textColor = dark ? '#f1f5f9' : '#15201A';
-    const mutedColor = dark ? '#94a3b8' : '#56625B';
-
-    const maxVal = Math.max(Math.abs(valFrom), Math.abs(valTo)) * 1.15 || 1;
-    const barH = 38, y1 = 20, y2 = 72;
-    const maxBarW = W - 120;
-
-    // Labels
-    ctx.fillStyle = mutedColor;
-    ctx.font = '12px Inter, sans-serif';
-    ctx.textAlign = 'right';
-    ctx.textBaseline = 'middle';
-    ctx.fillText('Från:', 55, y1 + barH / 2);
-    ctx.fillText('Till:', 55, y2 + barH / 2);
-
-    // Bar from
-    const w1 = (Math.abs(valFrom) / maxVal) * maxBarW;
-    ctx.fillStyle = dark ? '#334155' : '#E2E0D8';
-    ctx.beginPath();
-    roundRect(ctx, 60, y1, maxBarW, barH, 6);
-    ctx.fill();
-    ctx.fillStyle = '#94a3b8';
-    if (w1 > 0) {
-        ctx.beginPath();
-        roundRect(ctx, 60, y1, w1, barH, 6);
-        ctx.fill();
-    }
-
-    // Bar to
-    const w2 = (Math.abs(valTo) / maxVal) * maxBarW;
-    ctx.fillStyle = dark ? '#334155' : '#E2E0D8';
-    ctx.beginPath();
-    roundRect(ctx, 60, y2, maxBarW, barH, 6);
-    ctx.fill();
-    ctx.fillStyle = isPositive ? '#0D6A45' : '#f87171';
-    if (w2 > 0) {
-        ctx.beginPath();
-        roundRect(ctx, 60, y2, w2, barH, 6);
-        ctx.fill();
-    }
-
-    // Value labels
-    ctx.fillStyle = textColor;
-    ctx.font = 'bold 14px Inter, sans-serif';
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(fmt(valFrom, 0), 60 + w1 + 8, y1 + barH / 2);
-    ctx.fillText(fmt(valTo, 0), 60 + w2 + 8, y2 + barH / 2);
-}
-
-function roundRect(ctx, x, y, w, h, r) {
-    if (w < 2 * r) r = w / 2;
-    if (h < 2 * r) r = h / 2;
-    ctx.moveTo(x + r, y);
-    ctx.lineTo(x + w - r, y);
-    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-    ctx.lineTo(x + w, y + h - r);
-    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-    ctx.lineTo(x + r, y + h);
-    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-    ctx.lineTo(x, y + r);
-    ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.closePath();
-}
-
-// ─── FAQ ───────────────────────────────────────────────────────────────────
-function toggleFaq(el) {
-    el.parentElement.classList.toggle('open');
-}
-
-// ─── INIT ──────────────────────────────────────────────────────────────────
-calcAv();
-calcAndel();
-calcForandring();
-calcLagg();
-
-// Re-draw canvases on theme change
-window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => {
-    if (activeTab === 'av') calcAv();
-    else if (activeTab === 'andel') calcAndel();
-    else if (activeTab === 'forandring') calcForandring();
-    else calcLagg();
-});
-</script>
+</footer>
 </body>
 </html>

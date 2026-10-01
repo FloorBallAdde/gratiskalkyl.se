@@ -1,152 +1,41 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Föräldrapenning 2026 – Räkna ut hur mycket du får per dag</title>
-    <meta name="description" content="Hur mycket får du i föräldrapenning 2026? Räkna ut SGI och ersättning på 10 sek – sjukpenningnivå (max 1 259 kr/dag), lägstanivå och grundnivå. Skriv in lönen – se beloppet direkt.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/foraldrapenning">
-    <meta property="og:title" content="Föräldrapenning 2026 – Räkna ut exakt vad du får i kronor">
-    <meta property="og:description" content="Skriv in din lön – se exakt vad du får i föräldrapenning 2026. Sjukpenningnivå, lägstanivå och grundnivå – dag för dag.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/foraldrapenning">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Föräldrapenning 2026 – Exakt vad du får i kronor">
-    <meta name="twitter:description" content="Skriv in din lön och se alla tre nivåer av föräldrapenning 2026 – dag för dag.">
-    <style>
-        500;600;700;800&display=swap');
-        :root {
-            --primary: #0D6A45; --primary-light: #E4F1EA; --primary-dark: #0A5236;
-            --accent: #2563eb; --text: #15201A; --text-light: #56625B;
-            --bg: #F6F5F1; --white: #ffffff; --border: #E2E0D8;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        header { background: var(--primary); color: white; padding: 16px 20px; }
-        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
-        header a:hover { color: white; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: clamp(1.6rem,4vw,2.2rem); font-weight: 800; margin: 32px 0 8px; }
-        .subtitle { color: var(--text-light); margin-bottom: 32px; font-size: 1.05rem; }
-        .card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); margin-bottom: 24px; border: 1px solid var(--border); }
-        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media(max-width:600px) { .input-grid { grid-template-columns: 1fr; } }
-        label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
-        .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
-        input[type="number"], select { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--text); transition: border-color 0.2s; }
-        input:focus, select:focus { outline: none; border-color: var(--primary); }
-        .btn { display: block; width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
-        .btn:hover { background: var(--primary-dark); }
-        .results { display: none; }
-        .results.visible { display: block; }
-        .result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-bottom: 20px; }
-        .result-box { background: var(--primary-light); border-radius: 10px; padding: 18px 16px; text-align: center; }
-        .result-box .label { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
-        .result-box .value { font-size: 1.45rem; font-weight: 800; color: var(--primary-dark); }
-        
-        .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
-        .levels-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-        .levels-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
-        .levels-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
-        .levels-table tr:nth-child(even) td { background: var(--primary-light); }
-        .levels-table .active-row td { font-weight: 700; border-left: 3px solid var(--primary); }
-        .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 0.9rem; }
-        .info-section { margin-bottom: 48px; }
-        .info-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; margin-top: 32px; }
-        .info-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; margin-top: 24px; }
-        .info-section p { color: var(--text-light); margin-bottom: 16px; }
-        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
-        .info-section li { margin-bottom: 8px; }
-        .formula-box { background: var(--primary-light); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; font-family: monospace; font-size: 0.9rem; margin: 16px 0; color: var(--text); white-space: pre-line; }
-        .faq { margin-bottom: 48px; }
-        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
-        .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
-        .faq-item summary { padding: 16px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); }
-        .faq-item[open] summary::after { content: '−'; }
-        .faq-item p { padding: 0 20px 16px; color: var(--text-light); }
-        footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.85rem; margin-top: 48px; }
-        footer a { color: rgba(255,255,255,0.9); }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"Hur beräknas föräldrapenning 2026?","acceptedAnswer":{"@type":"Answer","text":"Föräldrapenning på sjukpenningnivå är 77,6% av din SGI (sjukpenninggrundande inkomst) per dag, max 1 259 kr/dag 2026. SGI baseras på din förväntade inkomst under de närmaste 12 månaderna."}},
-        {"@type":"Question","name":"Vad är SGI?","acceptedAnswer":{"@type":"Answer","text":"SGI (sjukpenninggrundande inkomst) är den inkomst Försäkringskassan använder för att beräkna din föräldrapenning. Den baseras på din förväntade årsinkomst. Max SGI 2026 är 592 000 kr (10 prisbasbelopp), vilket ger max dagersättning på 1 259 kr."}},
-        {"@type":"Question","name":"Hur länge kan jag ta ut föräldrapenning?","acceptedAnswer":{"@type":"Answer","text":"Totalt har ett par 480 dagar att dela på per barn. 390 dagar är på sjukpenningnivå, 90 dagar på lägstanivå (180 kr/dag). 90 av dagarna är reserverade för respektive förälder (kan ej överlåtas)."}}
-    ]}</script>
-  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  
-    <link rel="stylesheet" href="/mobile.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "GratisKalkyl.se",
-        "item": "https://gratiskalkyl.se/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Kalkylatorer",
-        "item": "https://gratiskalkyl.se/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Föräldrapenningkalkylator 2026",
-        "item": "https://gratiskalkyl.se/kalkylatorer/foraldrapenning"
-      }
-    ]
-  }
-  </script>
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Föräldrapenning 2026: maxtak 1 259 kr/dag | GratisKalkyl</title>
+<meta name="description" content="Maxtaket för föräldrapenning 2026 är 1 259 kr/dag (max SGI 592 000 kr). Räkna ut din föräldrapenning per dag och månad efter skatt.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/foraldrapenning">
+<meta property="og:title" content="Hur mycket får du i föräldrapenning? Kalkylator 2026">
+<meta property="og:description" content="Maxtaket för föräldrapenning 2026 är 1 259 kr/dag (max SGI 592 000 kr). Räkna ut din föräldrapenning per dag och månad efter skatt.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/foraldrapenning">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Föräldrapenningkalkylator 2026", "url": "https://gratiskalkyl.se/kalkylatorer/foraldrapenning", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Maxtaket för föräldrapenning 2026 är 1 259 kr/dag (max SGI 592 000 kr). Räkna ut din föräldrapenning per dag och månad efter skatt.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Familj & trygghet", "item": "https://gratiskalkyl.se/familj-och-trygghet"}, {"@type": "ListItem", "position": 3, "name": "Föräldrapenningkalkylator", "item": "https://gratiskalkyl.se/kalkylatorer/foraldrapenning"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vad är maxtaket för föräldrapenning 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Högst 1 259 kr per dag före skatt. Taket kommer från att SGI räknas på högst 10 prisbasbelopp, 592 000 kr per år eller ca 49 333 kr i månaden. Tar du ut föräldrapenning alla sju dagar i veckan blir maxbeloppet ca 38 290 kr i månaden före skatt och ca 26 300 kr efter skatt med genomsnittlig kommunalskatt."}}, {"@type": "Question", "name": "Vad är max SGI 2026?", "acceptedAnswer": {"@type": "Answer", "text": "592 000 kr per år, alltså 10 prisbasbelopp à 59 200 kr. Det motsvarar en månadslön på ca 49 333 kr. Har du högre lön än så blir föräldrapenningen inte högre."}}, {"@type": "Question", "name": "Hur mycket föräldrapenning får jag?", "acceptedAnswer": {"@type": "Answer", "text": "På sjukpenningnivå får du knappt 80 procent av lönen: SGI × 0,97 × 80 % ÷ 365 per dag. Med 35 000 kr i månadslön blir det 893 kr per dag före skatt. Tar du ut sju dagar i veckan blir det ca 27 160 kr i månaden före skatt och ca 19 170 kr efter skatt."}}, {"@type": "Question", "name": "Hur räknar man ut SGI för föräldrapenning?", "acceptedAnswer": {"@type": "Answer", "text": "För de flesta anställda är SGI samma som årslönen, alltså månadslönen × 12, upp till taket på 592 000 kr. Är du föräldraledig med ett barn under 1 år är din SGI skyddad. Försäkringskassan fastställer din SGI."}}, {"@type": "Question", "name": "Vad är sjukpenningnivå?", "acceptedAnswer": {"@type": "Answer", "text": "Sjukpenningnivå betyder att föräldrapenningen räknas på din inkomst, som sjukpenningen. Av de 480 dagarna är 390 på sjukpenningnivå, mellan 250 och 1 259 kr per dag. De andra 90 dagarna är på lägstanivå, 180 kr per dag för alla."}}, {"@type": "Question", "name": "Hur mycket är föräldrapenningtillägget?", "acceptedAnswer": {"@type": "Answer", "text": "Det beror på ditt kollektivavtal. Föräldrapenningtillägg är ett tillägg till föräldrapenningen som du kan ha via kollektivavtalet på din arbetsplats, och hur mycket och hur många dagar det gäller står i avtalet. Fråga din arbetsgivare eller ditt fack. Kalkylatorn räknar inte med tillägget."}}, {"@type": "Question", "name": "Är föräldrapenning skattepliktig?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Föräldrapenning beskattas som inkomst men ger inget jobbskatteavdrag. Därför betalar du mer skatt på föräldrapenning än på lika mycket i lön. Kalkylatorn räknar med det."}}, {"@type": "Question", "name": "Hur många dagar föräldrapenning får man?", "acceptedAnswer": {"@type": "Answer", "text": "480 dagar per barn som föräldrarna delar på. 90 dagar på sjukpenningnivå per förälder är reserverade och kan inte föras över till den andra föräldern. Du kan också ta ut del av en dag, till exempel en halv eller en fjärdedels dag."}}]}</script>
+
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -155,8 +44,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -171,307 +60,216 @@
 </div>
 </div>
 
-
-
-<main class="container" id="innehall">
-    <h1>👶 Föräldrapenningkalkylator 2026</h1>
-    <p class="subtitle">Räkna ut din föräldrapenning baserat på din lön och SGI. Se alla tre ersättningsnivåer och hur mycket du tappar mot ordinarie lön.</p>
-
-    <div class="card">
-        <div class="input-grid">
-            <div>
-                <label for="manadslon">Månadslön (kr)</label>
-                <input type="number" id="manadslon" value="40000" min="0" max="500000" step="500">
-                <div class="hint">Din bruttomånadslön</div>
-            </div>
-            <div>
-                <label for="sgi">SGI (kr/år) — valfritt</label>
-                <input type="number" id="sgi" value="0" min="0" max="600000" step="1000">
-                <div class="hint">Lämna 0 om vi ska räkna ut från lönen</div>
-            </div>
-            <div>
-                <label for="dagar">Antal dagar att ta ut</label>
-                <input type="number" id="dagar" value="30" min="1" max="480" step="1">
-                <div class="hint">Antal kalenderdagar (inkl. helger)</div>
-            </div>
-            <div>
-                <label for="uttag">Uttag per vecka</label>
-                <select id="uttag">
-                    <option value="7">Heltid (7 dagar/vecka)</option>
-                    <option value="5" selected>5 dagar/vecka</option>
-                    <option value="4">4 dagar/vecka</option>
-                    <option value="3">3 dagar/vecka</option>
-                    <option value="2">2 dagar/vecka</option>
-                    <option value="1">1 dag/vecka</option>
-                </select>
-                <div class="hint">Hur många dagar per vecka du tar ut</div>
-            </div>
-            <div>
-                <label for="foralder">Förälderns andel av dagarna</label>
-                <select id="foralder">
-                    <option value="sjukpennning">Sjukpenningnivå (vanligast)</option>
-                    <option value="lagsta">Lägstanivå (180 kr/dag)</option>
-                    <option value="grund">Grundnivå (250 kr/dag)</option>
-                </select>
-            </div>
-            <div>
-                <label for="kommunalskatt">Kommunalskatt (%)</label>
-                <input type="number" id="kommunalskatt" value="32.0" min="28" max="36" step="0.1">
-                <div class="hint">Din kommunalskatt (snitt Sverige 32,38 %)</div>
-            </div>
-        </div>
-        <button class="btn" onclick="berakna()">Beräkna föräldrapenning</button>
-    </div>
-
-    <div class="results" id="results">
-        <div class="card">
-            <div class="info-box" id="sgiInfo"></div>
-            <div class="result-grid" id="resultGrid"></div>
-        </div>
-        <div class="card">
-            <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">Alla ersättningsnivåer</h2>
-            <table class="levels-table" id="levelsTable"></table>
-        </div>
-    </div>
-
-    <!-- Info Section -->
-    <div class="info-section">
-        <h2>Föräldrapenning 2026 – hur fungerar systemet?</h2>
-        <p>Sverige har ett av världens mest generösa föräldraledighetssystem. Föräldrapenning betalas ut av Försäkringskassan och ersätter en del av din inkomst när du är hemma med barn. Totalt har ett par <strong>480 dagar</strong> att dela på per barn – de flesta dagar på sjukpenningnivå.</p>
-
-        <h3>SGI – grunden för din ersättning</h3>
-        <p>SGI (sjukpenninggrundande inkomst) är den inkomst Försäkringskassan bedömer att du kommer ha under de närmaste 12 månaderna. Det är SGI:n som avgör hur hög din föräldrapenning blir – inte din faktiska senaste lön eller din anställningsform.</p>
-        <div class="formula-box">SGI = Förväntad årsinkomst (upp till taket)
-Max SGI 2026 = 592 000 kr/år (10 × prisbasbeloppet 59 200 kr)
-
-Föräldrapenning per dag (sjukpenningnivå):
-= SGI × 77,6% / 365
-
-Max dagersättning 2026:
-= 592 000 × 77,6% / 365 = 1 259 kr/dag (brutto)</div>
-
-        <h3>Tre nivåer av föräldrapenning</h3>
-        <p><strong>Sjukpenningnivå</strong> är den vanligaste och högsta nivån: 77,6 % av din SGI per dag, max 1 259 kr/dag (2026). Du har rätt till sjukpenningnivå om du haft SGI i minst 240 dagar i rad precis före barnets beräknade födelsedag.</p>
-        <p><strong>Lägstanivå</strong> ger 180 kr/dag (2026) och gäller för de 90 dagarna som inte är på sjukpenningnivå (av totalt 480 dagar).</p>
-        <p><strong>Grundnivå</strong> ger 250 kr/dag (2026) om du saknar SGI eller nyligen börjat jobba. Det är golvet för alla – även studenter och nyanlända.</p>
-
-        <h3>480 dagar – hur fördelas de?</h3>
-        <p>Per barn har föräldrarna totalt 480 dagar att dela:</p>
-        <ul>
-            <li><strong>390 dagar</strong> på sjukpenningnivå (77,6 % av SGI)</li>
-            <li><strong>90 dagar</strong> på lägstanivå (180 kr/dag)</li>
-            <li><strong>90 dagar är reserverade</strong> per förälder och kan inte överlåtas till den andre</li>
-            <li>Ensamstående förälder får alla 480 dagarna</li>
-        </ul>
-        <p>Föräldrapenning kan tas ut tills barnet fyller 12 år eller går ut årskurs 5. Efter barnets 4-årsdag får ni tillsammans spara högst 96 dagar (132 dagar för tvillingar) – dagar utöver det går förlorade vid 4-årsdagen.</p>
-
-        <h3>Föräldrapenning är skattepliktig</h3>
-        <p>Föräldrapenning beskattas som inkomst, men den ger inget jobbskatteavdrag. Du betalar kommunalskatt (ca 30–33 %) på beloppet efter grundavdrag. Det innebär att nettot av maxersättning (1 259 kr/dag brutto) är ca 850–880 kr/dag netto – det vill säga ca 25 500–26 400 kr netto per 30 dagar.</p>
-        <p>Observera att arbetsgivare inte betalar arbetsgivaravgifter på föräldrapenningen och att föräldraledighet med föräldrapenning bara är semesterlönegrundande i upp till 120 dagar per barn och intjänandeår (180 dagar för ensamstående förälder).</p>
-
-        <h3>Föräldrapenningtillägg från arbetsgivaren</h3>
-        <p>Många arbetsgivare och kollektivavtal ger ett <strong>föräldrapenningtillägg</strong> (FPT) under en del av föräldraledigheten – vanligtvis 90–180 dagar. Tillägget täcker skillnaden mellan föräldrapenningen och ordinarie lön, ofta upp till 90–100 % av lönen under den perioden. Kontrollera alltid ditt kollektivavtal eller anställningsavtal.</p>
-
-        <h3>Tips: Tjäna mer under föräldraledigheten</h3>
-        <p>Du kan jobba deltid och ta ut föräldrapenning på resterande del (1/8, 1/4, 1/2, 3/4 eller hel dag). Det maximerar din totala inkomst och gör att dagarna varar längre. Du kan också spara dagar och ta ut dem sporadiskt under barnets uppväxt – t.ex. för VAB-dagar.</p>
-    </div>
-
-    <!-- FAQ -->
-    <div class="faq">
-        <h2>Vanliga frågor om föräldrapenning 2026</h2>
-        <details class="faq-item">
-            <summary>Vad är maxersättning för föräldrapenning 2026?</summary>
-            <p>Max föräldrapenning 2026 är 1 259 kr/dag brutto på sjukpenningnivå. Det kräver en SGI på minst 592 000 kr/år (ca 49 300 kr/mån). Netto efter kommunalskatt ca 32 % blir det ungefär 856 kr/dag, eller ca 25 700 kr/mån (30 dagar).</p>
-        </details>
-        <details class="faq-item">
-            <summary>Kan jag jobba under föräldraledigheten?</summary>
-            <p>Ja, du kan jobba deltid och ta ut föräldrapenning på resterande tid. Om du arbetar 50 % tar du ut 50 % föräldrapenning – du förbrukar då en halv dag per kalenderdag. Du måste anmäla till Försäkringskassan om du återgår i arbete.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Vad händer med SGI om jag slutar jobba?</summary>
-            <p>Är du föräldraledig på hel- eller deltid med ett barn som är under 1 år är din SGI skyddad. SGI:n är också skyddad bland annat när du tar ut föräldrapenning, studerar med studiestöd från CSN eller är inskriven som arbetssökande hos Arbetsförmedlingen från första arbetslösa dagen. Slutar du jobba av andra skäl kan SGI:n sänkas – även inför ett kommande barn.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Hur anmäler jag föräldrapenning?</summary>
-            <p>Ansökan görs via Försäkringskassans app eller webbplats. Anmäl minst 2 månader i förväg om möjligt. Du kan justera uttag och ändra dagar löpande. Utbetalning sker normalt månadsvis i efterskott.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Räknas semesterlön in i SGI?</summary>
-            <p>Nej, semesterlön och semesterersättning räknas normalt inte in i SGI. SGI baseras på den ordinarie lönen. Bonus och provision som ingår i din regelbundna ersättning kan räknas in, men engångsbelopp gör det vanligtvis inte.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Vad gäller för egenföretagare?</summary>
-            <p>Egenföretagare har rätt till föräldrapenning baserat på SGI precis som anställda. SGI för egenföretagare baseras på inkomst av tjänst och inkomst av aktiv näringsverksamhet. Det kan vara mer komplext att fastställa – kontakta Försäkringskassan för en bedömning.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Kan vi dela dagarna fritt mellan oss?</summary>
-            <p>Ni kan dela 300 av de 480 dagarna fritt (överlåta till den andra föräldern). 90 dagar per förälder är reserverade och kan inte överlåtas. Ensamstående får alla 480 dagarna. Vid flerbarnsfödsel får ni fler dagar – för tvillingar totalt 660 dagar (480 på sjukpenningnivå och 180 på lägstanivå).</p>
-        </details>
-    </div>
-
-
-    <!-- Relaterade guider (auto-added 2026-05-15) -->
-    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:12px;">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #15201A);">📖 Läs djupare i guiden</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-        <a href="/artiklar/rakna-ut-foraldrapenning-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Räkna ut föräldrapenning 2026</a>
-      </div>
-    </div>
-
-</main>
-
-<!-- Cross-linking -->
-<div class="container" style="padding-bottom:48px;">
-    <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Relaterade kalkylatorer</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-        <a href="/kalkylatorer/loneraknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-            <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
-            <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
-        </a>
-        <a href="/kalkylatorer/semesterlonekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-            <div style="font-size:1.3rem;margin-bottom:4px;">🏖️</div>
-            <div style="font-weight:600;font-size:0.9rem;">Semesterlönekalkylator</div>
-        </a>
-        <a href="/kalkylatorer/sparkalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-            <div style="font-size:1.3rem;margin-bottom:4px;">🐖</div>
-            <div style="font-weight:600;font-size:0.9rem;">Sparkalkylator</div>
-        </a>
-        <a href="/kalkylatorer/lanekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-            <div style="font-size:1.3rem;margin-bottom:4px;">💳</div>
-            <div style="font-weight:600;font-size:0.9rem;">Lånekalkylator</div>
-        </a>
-    </div>
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li><a href="/familj-och-trygghet">Familj &amp; trygghet</a></li><li aria-current="page">Föräldrapenning</li></ol></nav>
+<div class="gk-eyebrow">Föräldrapenningkalkylator 2026</div>
+<h1>Hur mycket får du i föräldrapenning?</h1>
+<p class="gk-lead">Knappt 80 procent av lönen, högst 1 259 kr per dag 2026 – se vad du får per dag och månad efter skatt.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Max SGI 592 000 kr · Källa: <a href="https://www.forsakringskassan.se/privatperson/e-tjanster-blanketter-och-informationsmaterial/aktuella-belopp" target="_blank" rel="noopener">Försäkringskassan</a></p>
 </div>
 
-<div class="gk-ftr gk2" role="contentinfo">
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="fpform" novalidate onsubmit="return false">
+<div class="gk-field">
+<label for="lon">Din lön per månad före skatt</label>
+<div class="gk-input"><input id="lon" inputmode="numeric" autocomplete="off" value="35 000"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Exempel: 35 000 kr. Skriv in din egen lön.</span>
+</div>
+
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Hur många dagar i veckan tar du ut?</legend>
+<div class="gk-seg" style="--n:4" id="dv" role="group" aria-label="Dagar med föräldrapenning per vecka">
+<button type="button" data-v="7" aria-pressed="true">7<small>dagar</small></button>
+<button type="button" data-v="5" aria-pressed="false">5<small>mån–fre</small></button>
+<button type="button" data-v="4" aria-pressed="false">4<small>dagar</small></button>
+<button type="button" data-v="3" aria-pressed="false">3<small>dagar</small></button>
+</div>
+<span class="gk-hint" style="display:block;margin-top:6px">Vi räknar som att du är ledig på heltid utan lön. Färre dagar i veckan = lägre belopp, men dagarna räcker längre.</span>
+</fieldset>
+
+<div class="gk-field">
+<label for="kommun">Din kommun</label>
+<div class="gk-input"><select id="kommun"><option value="32.38">Rikssnitt – 32,38 %</option><option value="32.8">Ale – 32,8 %</option><option value="32.84">Alingsås – 32,84 %</option><option value="33.42">Alvesta – 33,42 %</option><option value="33.85">Aneby – 33,85 %</option><option value="33.29">Arboga – 33,29 %</option><option value="34.84">Arjeplog – 34,84 %</option><option value="34.14">Arvidsjaur – 34,14 %</option><option value="34.03">Arvika – 34,03 %</option><option value="34.15">Askersund – 34,15 %</option><option value="33.95">Avesta – 33,95 %</option><option value="34.4">Bengtsfors – 34,4 %</option><option value="34.22">Berg – 34,22 %</option><option value="35.0">Bjurholm – 35,0 %</option><option value="32.17">Bjuv – 32,17 %</option><option value="33.94">Boden – 33,94 %</option><option value="33.07">Bollebygd – 33,07 %</option><option value="33.37">Bollnäs – 33,37 %</option><option value="33.44">Borgholm – 33,44 %</option><option value="34.4">Borlänge – 34,4 %</option><option value="32.79">Borås – 32,79 %</option><option value="32.23">Botkyrka – 32,23 %</option><option value="33.37">Boxholm – 33,37 %</option><option value="33.74">Bromölla – 33,74 %</option><option value="35.09">Bräcke – 35,09 %</option><option value="31.27">Burlöv – 31,27 %</option><option value="31.41">Båstad – 31,41 %</option><option value="34.69">Dals-Ed – 34,69 %</option><option value="30.58">Danderyd – 30,58 %</option><option value="35.3">Degerfors – 35,3 %</option><option value="35.65">Dorotea – 35,65 %</option><option value="34.55">Eda – 34,55 %</option><option value="31.45">Ekerö – 31,45 %</option><option value="34.02">Eksjö – 34,02 %</option><option value="33.82">Emmaboda – 33,82 %</option><option value="33.05">Enköping – 33,05 %</option><option value="32.85">Eskilstuna – 32,85 %</option><option value="31.72">Eslöv – 31,72 %</option><option value="33.05">Essunga – 33,05 %</option><option value="32.99">Fagersta – 32,99 %</option><option value="32.5">Falkenberg – 32,5 %</option><option value="33.43">Falköping – 33,43 %</option><option value="34.05">Falun – 34,05 %</option><option value="34.55">Filipstad – 34,55 %</option><option value="33.7">Finspång – 33,7 %</option><option value="33.1">Flen – 33,1 %</option><option value="34.63">Forshaga – 34,63 %</option><option value="34.39">Färgelanda – 34,39 %</option><option value="34.27">Gagnef – 34,27 %</option><option value="33.75">Gislaved – 33,75 %</option><option value="32.95">Gnesta – 32,95 %</option><option value="34.0">Gnosjö – 34,0 %</option><option value="33.6">Gotland – 33,6 %</option><option value="34.78">Grums – 34,78 %</option><option value="33.47">Grästorp – 33,47 %</option><option value="33.97">Gullspång – 33,97 %</option><option value="33.89">Gällivare – 33,89 %</option><option value="33.77">Gävle – 33,77 %</option><option value="32.6">Göteborg – 32,6 %</option><option value="33.6">Götene – 33,6 %</option><option value="33.93">Habo – 33,93 %</option><option value="34.3">Hagfors – 34,3 %</option><option value="33.85">Hallsberg – 33,85 %</option><option value="32.69">Hallstahammar – 32,69 %</option><option value="32.38">Halmstad – 32,38 %</option><option value="35.05">Hammarö – 35,05 %</option><option value="31.28">Haninge – 31,28 %</option><option value="33.84">Haparanda – 33,84 %</option><option value="34.21">Heby – 34,21 %</option><option value="34.15">Hedemora – 34,15 %</option><option value="31.39">Helsingborg – 31,39 %</option><option value="33.62">Herrljunga – 33,62 %</option><option value="33.48">Hjo – 33,48 %</option><option value="34.37">Hofors – 34,37 %</option><option value="31.71">Huddinge – 31,71 %</option><option value="33.12">Hudiksvall – 33,12 %</option><option value="33.77">Hultsfred – 33,77 %</option><option value="33.85">Hylte – 33,85 %</option><option value="34.35">Hällefors – 34,35 %</option><option value="34.17">Härjedalen – 34,17 %</option><option value="34.63">Härnösand – 34,63 %</option><option value="31.98">Härryda – 31,98 %</option><option value="32.38">Hässleholm – 32,38 %</option><option value="33.3">Håbo – 33,3 %</option><option value="30.91">Höganäs – 30,91 %</option><option value="34.07">Högsby – 34,07 %</option><option value="32.26">Hörby – 32,26 %</option><option value="32.63">Höör – 32,63 %</option><option value="34.29">Jokkmokk – 34,29 %</option><option value="31.52">Järfälla – 31,52 %</option><option value="33.4">Jönköping – 33,4 %</option><option value="33.89">Kalix – 33,89 %</option><option value="33.67">Kalmar – 33,67 %</option><option value="32.8">Karlsborg – 32,8 %</option><option value="33.8">Karlshamn – 33,8 %</option><option value="34.3">Karlskoga – 34,3 %</option><option value="33.69">Karlskrona – 33,69 %</option><option value="33.55">Karlstad – 33,55 %</option><option value="32.95">Katrineholm – 32,95 %</option><option value="34.63">Kil – 34,63 %</option><option value="33.0">Kinda – 33,0 %</option><option value="34.39">Kiruna – 34,39 %</option><option value="31.93">Klippan – 31,93 %</option><option value="32.62">Knivsta – 32,62 %</option><option value="34.43">Kramfors – 34,43 %</option><option value="32.64">Kristianstad – 32,64 %</option><option value="34.25">Kristinehamn – 34,25 %</option><option value="33.87">Krokom – 33,87 %</option><option value="33.84">Kumla – 33,84 %</option><option value="32.58">Kungsbacka – 32,58 %</option><option value="32.91">Kungsör – 32,91 %</option><option value="32.92">Kungälv – 32,92 %</option><option value="29.59">Kävlinge – 29,59 %</option><option value="33.04">Köping – 33,04 %</option><option value="32.8">Laholm – 32,8 %</option><option value="31.42">Landskrona – 31,42 %</option><option value="35.0">Laxå – 35,0 %</option><option value="33.73">Lekeberg – 33,73 %</option><option value="33.8">Leksand – 33,8 %</option><option value="32.03">Lerum – 32,03 %</option><option value="33.81">Lessebo – 33,81 %</option><option value="29.67">Lidingö – 29,67 %</option><option value="32.74">Lidköping – 32,74 %</option><option value="33.85">Lilla Edet – 33,85 %</option><option value="34.6">Lindesberg – 34,6 %</option><option value="31.75">Linköping – 31,75 %</option><option value="33.07">Ljungby – 33,07 %</option><option value="33.87">Ljusdal – 33,87 %</option><option value="33.8">Ljusnarsberg – 33,8 %</option><option value="30.72">Lomma – 30,72 %</option><option value="34.05">Ludvika – 34,05 %</option><option value="33.84">Luleå – 33,84 %</option><option value="32.42">Lund – 32,42 %</option><option value="34.9">Lycksele – 34,9 %</option><option value="33.94">Lysekil – 33,94 %</option><option value="32.42">Malmö – 32,42 %</option><option value="34.45">Malung-Sälen – 34,45 %</option><option value="35.2">Malå – 35,2 %</option><option value="32.74">Mariestad – 32,74 %</option><option value="32.99">Mark – 32,99 %</option><option value="33.31">Markaryd – 33,31 %</option><option value="34.08">Mellerud – 34,08 %</option><option value="33.45">Mjölby – 33,45 %</option><option value="34.32">Mora – 34,32 %</option><option value="33.25">Motala – 33,25 %</option><option value="34.1">Mullsjö – 34,1 %</option><option value="34.86">Munkedal – 34,86 %</option><option value="34.3">Munkfors – 34,3 %</option><option value="31.99">Mölndal – 31,99 %</option><option value="34.07">Mönsterås – 34,07 %</option><option value="34.07">Mörbylånga – 34,07 %</option><option value="30.11">Nacka – 30,11 %</option><option value="34.55">Nora – 34,55 %</option><option value="33.54">Norberg – 33,54 %</option><option value="34.02">Nordanstig – 34,02 %</option><option value="35.1">Nordmaling – 35,1 %</option><option value="33.3">Norrköping – 33,3 %</option><option value="32.05">Norrtälje – 32,05 %</option><option value="35.2">Norsjö – 35,2 %</option><option value="34.19">Nybro – 34,19 %</option><option value="32.3">Nykvarn – 32,3 %</option><option value="32.25">Nyköping – 32,25 %</option><option value="32.18">Nynäshamn – 32,18 %</option><option value="34.3">Nässjö – 34,3 %</option><option value="34.27">Ockelbo – 34,27 %</option><option value="33.75">Olofström – 33,75 %</option><option value="34.3">Orsa – 34,3 %</option><option value="33.69">Orust – 33,69 %</option><option value="33.99">Osby – 33,99 %</option><option value="34.21">Oskarshamn – 34,21 %</option><option value="33.37">Ovanåker – 33,37 %</option><option value="33.05">Oxelösund – 33,05 %</option><option value="34.74">Pajala – 34,74 %</option><option value="31.36">Partille – 31,36 %</option><option value="31.99">Perstorp – 31,99 %</option><option value="33.59">Piteå – 33,59 %</option><option value="34.92">Ragunda – 34,92 %</option><option value="35.0">Robertsfors – 35,0 %</option><option value="33.68">Ronneby – 33,68 %</option><option value="33.8">Rättvik – 33,8 %</option><option value="33.19">Sala – 33,19 %</option><option value="32.0">Salem – 32,0 %</option><option value="33.12">Sandviken – 33,12 %</option><option value="31.83">Sigtuna – 31,83 %</option><option value="31.69">Simrishamn – 31,69 %</option><option value="32.1">Sjöbo – 32,1 %</option><option value="33.38">Skara – 33,38 %</option><option value="34.45">Skellefteå – 34,45 %</option><option value="33.34">Skinnskatteberg – 33,34 %</option><option value="31.6">Skurup – 31,6 %</option><option value="33.09">Skövde – 33,09 %</option><option value="34.44">Smedjebacken – 34,44 %</option><option value="34.68">Sollefteå – 34,68 %</option><option value="30.45">Sollentuna – 30,45 %</option><option value="29.7">Solna – 29,7 %</option><option value="35.45">Sorsele – 35,45 %</option><option value="33.47">Sotenäs – 33,47 %</option><option value="30.12">Staffanstorp – 30,12 %</option><option value="33.12">Stenungsund – 33,12 %</option><option value="30.55">Stockholm – 30,55 %</option><option value="34.98">Storfors – 34,98 %</option><option value="34.95">Storuman – 34,95 %</option><option value="32.5">Strängnäs – 32,5 %</option><option value="33.39">Strömstad – 33,39 %</option><option value="34.92">Strömsund – 34,92 %</option><option value="31.58">Sundbyberg – 31,58 %</option><option value="33.88">Sundsvall – 33,88 %</option><option value="33.75">Sunne – 33,75 %</option><option value="33.19">Surahammar – 33,19 %</option><option value="31.92">Svalöv – 31,92 %</option><option value="31.42">Svedala – 31,42 %</option><option value="33.53">Svenljunga – 33,53 %</option><option value="33.8">Säffle – 33,8 %</option><option value="34.3">Säter – 34,3 %</option><option value="33.68">Sävsjö – 33,68 %</option><option value="33.17">Söderhamn – 33,17 %</option><option value="33.53">Söderköping – 33,53 %</option><option value="32.38">Södertälje – 32,38 %</option><option value="33.86">Sölvesborg – 33,86 %</option><option value="33.04">Tanum – 33,04 %</option><option value="33.19">Tibro – 33,19 %</option><option value="33.55">Tidaholm – 33,55 %</option><option value="33.0">Tierp – 33,0 %</option><option value="34.38">Timrå – 34,38 %</option><option value="34.0">Tingsryd – 34,0 %</option><option value="33.19">Tjörn – 33,19 %</option><option value="31.79">Tomelilla – 31,79 %</option><option value="34.3">Torsby – 34,3 %</option><option value="33.79">Torsås – 33,79 %</option><option value="32.98">Tranemo – 32,98 %</option><option value="33.77">Tranås – 33,77 %</option><option value="31.58">Trelleborg – 31,58 %</option><option value="33.84">Trollhättan – 33,84 %</option><option value="32.03">Trosa – 32,03 %</option><option value="31.83">Tyresö – 31,83 %</option><option value="29.88">Täby – 29,88 %</option><option value="33.2">Töreboda – 33,2 %</option><option value="33.64">Uddevalla – 33,64 %</option><option value="32.53">Ulricehamn – 32,53 %</option><option value="34.65">Umeå – 34,65 %</option><option value="31.75">Upplands Väsby – 31,75 %</option><option value="31.73">Upplands-Bro – 31,73 %</option><option value="32.85">Uppsala – 32,85 %</option><option value="33.8">Uppvidinge – 33,8 %</option><option value="34.35">Vadstena – 34,35 %</option><option value="33.25">Vaggeryd – 33,25 %</option><option value="34.03">Valdemarsvik – 34,03 %</option><option value="31.23">Vallentuna – 31,23 %</option><option value="34.28">Vansbro – 34,28 %</option><option value="33.25">Vara – 33,25 %</option><option value="31.73">Varberg – 31,73 %</option><option value="31.63">Vaxholm – 31,63 %</option><option value="29.68">Vellinge – 29,68 %</option><option value="33.77">Vetlanda – 33,77 %</option><option value="35.5">Vilhelmina – 35,5 %</option><option value="34.22">Vimmerby – 34,22 %</option><option value="35.2">Vindeln – 35,2 %</option><option value="33.5">Vingåker – 33,5 %</option><option value="33.69">Vänersborg – 33,69 %</option><option value="35.2">Vännäs – 35,2 %</option><option value="31.31">Värmdö – 31,31 %</option><option value="33.28">Värnamo – 33,28 %</option><option value="33.02">Västervik – 33,02 %</option><option value="31.24">Västerås – 31,24 %</option><option value="32.19">Växjö – 32,19 %</option><option value="33.09">Vårgårda – 33,09 %</option><option value="34.1">Ydre – 34,1 %</option><option value="31.29">Ystad – 31,29 %</option><option value="33.94">Åmål – 33,94 %</option><option value="34.62">Ånge – 34,62 %</option><option value="33.92">Åre – 33,92 %</option><option value="34.25">Årjäng – 34,25 %</option><option value="35.45">Åsele – 35,45 %</option><option value="31.47">Åstorp – 31,47 %</option><option value="33.94">Åtvidaberg – 33,94 %</option><option value="33.86">Älmhult – 33,86 %</option><option value="34.77">Älvdalen – 34,77 %</option><option value="34.4">Älvkarleby – 34,4 %</option><option value="33.79">Älvsbyn – 33,79 %</option><option value="31.35">Ängelholm – 31,35 %</option><option value="33.04">Öckerö – 33,04 %</option><option value="33.95">Ödeshög – 33,95 %</option><option value="33.65">Örebro – 33,65 %</option><option value="30.24">Örkelljunga – 30,24 %</option><option value="33.85">Örnsköldsvik – 33,85 %</option><option value="33.72">Östersund – 33,72 %</option><option value="28.93">Österåker – 28,93 %</option><option value="33.3">Östhammar – 33,3 %</option><option value="32.17">Östra Göinge – 32,17 %</option><option value="34.14">Överkalix – 34,14 %</option><option value="33.84">Övertorneå – 33,84 %</option></select></div>
+<span class="gk-hint">Styr skatten. Kommunal- och regionskatt 2026.</span>
+</div>
+</form>
+
+<section class="gk-card gk-stack gk-o3" style="gap:12px" aria-labelledby="maxH">
+<h2 id="maxH" style="font-size:22px">Maxtak 2026: 1 259 kr per dag</h2>
+<p class="gk-hint">Föräldrapenningen räknas på högst 10 prisbasbelopp. Tjänar du mer blir den inte högre.</p>
+<div class="gk-tiles"><div class="gk-tile"><span>Högsta föräldrapenning</span><strong>1 259 kr</strong><small class="gk-hint" style="display:block;margin-top:2px">Per dag före skatt</small></div><div class="gk-tile"><span>Max SGI 2026</span><strong>592 000 kr</strong><small class="gk-hint" style="display:block;margin-top:2px">Per år = 10 × prisbasbeloppet 59 200 kr</small></div><div class="gk-tile"><span>Taket nås vid lön</span><strong>49 333 kr</strong><small class="gk-hint" style="display:block;margin-top:2px">Per månad. Mer lön ger inte mer föräldrapenning</small></div><div class="gk-tile"><span>Max per månad</span><strong>38 290 kr</strong><small class="gk-hint" style="display:block;margin-top:2px">Före skatt, 7 dagar/vecka. Ca 26 300 kr efter skatt</small></div></div>
+<p class="gk-hint">Lägst 250 kr per dag på sjukpenningnivå (grundnivå). Lägstanivå: 180 kr per dag. Efter skatt med genomsnittlig kommunalskatt.</p>
+</section>
+</div>
+
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">Föräldrapenning efter skatt</div>
+<div class="gk-big"><strong id="resBig">–</strong><span>kr/mån</span></div>
+<p class="gk-hint" id="resSub"></p>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
+
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrapenning" target="_blank" rel="noopener"><span>Ansök om föräldrapenning<small>Regler och ansökan hos Försäkringskassan</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/rakna-ut-foraldrapenning-2026"><span>Guide: Räkna ut föräldrapenning 2026<small>Steg för steg med exempel</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/barnbidragskalkylator"><span>Barnbidragskalkylator<small>Barnbidrag och flerbarnstillägg</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</section>
+</div>
+</div>
+
+<div class="gk-prose">
+<h2>Så räknas föräldrapenningen ut</h2>
+<p>Föräldrapenningen räknas på din <strong>sjukpenninggrundande inkomst (SGI)</strong>. För de flesta anställda är SGI månadslönen × 12.</p>
+<p><strong>Föräldrapenning per dag = SGI × 0,97 × 80 % ÷ 365</strong></p>
+<p>SGI kan som mest vara 592 000 kr per år 2026. Därför är föräldrapenningen högst <strong>1 259 kr per dag</strong>. Så här blir det för några löner, sju dagar i veckan och genomsnittlig kommunalskatt:</p>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight">
+<thead><tr><th scope="col">Lön/mån</th><th scope="col">Per dag</th><th scope="col">Före skatt/mån</th><th scope="col">Efter skatt/mån</th><th scope="col">Nettolön</th></tr></thead>
+<tbody><tr><td>25 000 kr</td><td>638 kr</td><td>19 410 kr</td><td>14 170 kr</td><td>20 500 kr</td></tr><tr><td>35 000 kr</td><td>893 kr</td><td>27 160 kr</td><td>19 170 kr</td><td>28 040 kr</td></tr><tr><td>45 000 kr</td><td>1 148 kr</td><td>34 920 kr</td><td>24 140 kr</td><td>35 160 kr</td></tr><tr><td>60 000 kr</td><td>1 259 kr</td><td>38 290 kr</td><td>26 300 kr</td><td>44 270 kr</td></tr></tbody></table></div>
+
+<h2>Sjukpenningnivå, grundnivå och lägstanivå</h2>
+<p>Ni får 480 dagar per barn. <strong>390 dagar är på sjukpenningnivå</strong>, mellan 250 och 1 259 kr per dag. <strong>90 dagar är på lägstanivå</strong>, 180 kr per dag. 90 dagar på sjukpenningnivå per förälder kan inte föras över.</p>
+<p>För att få sjukpenningnivå behöver du ha haft en SGI som motsvarar minst 7 083 kr i månaden i minst 240 dagar före barnets beräknade födelse. Annars får du grundnivån, 250 kr per dag.</p>
+
+<h2>Skatt på föräldrapenning</h2>
+<p>Föräldrapenning är skattepliktig men ger inget jobbskatteavdrag. Du betalar alltså mer skatt på föräldrapenningen än på samma belopp i lön.</p>
+
+<h2>Lön över taket och föräldrapenningtillägg</h2>
+<p>Tjänar du mer än ca 49 333 kr i månaden ersätter föräldrapenningen bara en del av lönen. Har din arbetsplats kollektivavtal kan du få <strong>föräldrapenningtillägg</strong> utöver föräldrapenningen. Hur mycket och hur länge beror på avtalet – fråga din arbetsgivare eller ditt fack.</p>
+
+<h2>Vanliga frågor om föräldrapenning</h2>
+<div class="gk-faq"><details><summary>Vad är maxtaket för föräldrapenning 2026?</summary><p>Högst 1 259 kr per dag före skatt. Taket kommer från att SGI räknas på högst 10 prisbasbelopp, 592 000 kr per år eller ca 49 333 kr i månaden. Tar du ut föräldrapenning alla sju dagar i veckan blir maxbeloppet ca 38 290 kr i månaden före skatt och ca 26 300 kr efter skatt med genomsnittlig kommunalskatt.</p></details><details><summary>Vad är max SGI 2026?</summary><p>592 000 kr per år, alltså 10 prisbasbelopp à 59 200 kr. Det motsvarar en månadslön på ca 49 333 kr. Har du högre lön än så blir föräldrapenningen inte högre.</p></details><details><summary>Hur mycket föräldrapenning får jag?</summary><p>På sjukpenningnivå får du knappt 80 procent av lönen: SGI × 0,97 × 80 % ÷ 365 per dag. Med 35 000 kr i månadslön blir det 893 kr per dag före skatt. Tar du ut sju dagar i veckan blir det ca 27 160 kr i månaden före skatt och ca 19 170 kr efter skatt.</p></details><details><summary>Hur räknar man ut SGI för föräldrapenning?</summary><p>För de flesta anställda är SGI samma som årslönen, alltså månadslönen × 12, upp till taket på 592 000 kr. Är du föräldraledig med ett barn under 1 år är din SGI skyddad. Försäkringskassan fastställer din SGI.</p></details><details><summary>Vad är sjukpenningnivå?</summary><p>Sjukpenningnivå betyder att föräldrapenningen räknas på din inkomst, som sjukpenningen. Av de 480 dagarna är 390 på sjukpenningnivå, mellan 250 och 1 259 kr per dag. De andra 90 dagarna är på lägstanivå, 180 kr per dag för alla.</p></details><details><summary>Hur mycket är föräldrapenningtillägget?</summary><p>Det beror på ditt kollektivavtal. Föräldrapenningtillägg är ett tillägg till föräldrapenningen som du kan ha via kollektivavtalet på din arbetsplats, och hur mycket och hur många dagar det gäller står i avtalet. Fråga din arbetsgivare eller ditt fack. Kalkylatorn räknar inte med tillägget.</p></details><details><summary>Är föräldrapenning skattepliktig?</summary><p>Ja. Föräldrapenning beskattas som inkomst men ger inget jobbskatteavdrag. Därför betalar du mer skatt på föräldrapenning än på lika mycket i lön. Kalkylatorn räknar med det.</p></details><details><summary>Hur många dagar föräldrapenning får man?</summary><p>480 dagar per barn som föräldrarna delar på. 90 dagar på sjukpenningnivå per förälder är reserverade och kan inte föras över till den andra föräldern. Du kan också ta ut del av en dag, till exempel en halv eller en fjärdedels dag.</p></details></div>
+
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.forsakringskassan.se/privatperson/e-tjanster-blanketter-och-informationsmaterial/aktuella-belopp" target="_blank" rel="noopener">Försäkringskassan – Aktuella belopp 2026</a> (högst 1 259 kr/dag, lägstanivå 180 kr, SGI högst 592 000 kr, prisbasbelopp 59 200 kr)</li>
+<li><a href="https://www.forsakringskassan.se/privatperson/familj-och-barn/foraldrapenning" target="_blank" rel="noopener">Försäkringskassan – Föräldrapenning</a> (480/390/90 dagar, 250–1 259 kr, 240 dagar och 7 083 kr, reserverade dagar)</li>
+<li><a href="https://www.forsakringskassan.se/privatperson/sjukpenninggrundande-inkomst-sgi" target="_blank" rel="noopener">Försäkringskassan – SGI</a> (månadslön × 12, skyddad SGI under barnets första år)</li>
+<li><a href="https://www.forsakringskassan.se/nyhetsarkiv/nyheter-press/2025-04-01-nya-regler-for-foraldrapenning-under-helger" target="_blank" rel="noopener">Försäkringskassan – Nya regler för föräldrapenning under helger</a> (från 1 april 2025)</li>
+<li><a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialforsakringsbalk-2010110_sfs-2010-110/" target="_blank" rel="noopener">Socialförsäkringsbalken 12 kap. 22–24 §§ och 28 kap. 7 §</a> (beräkning som sjukpenning, grundnivå 250 kr, lägstanivå 180 kr)</li>
+<li><a href="https://www.skatteverket.se/privat/skatter/arbeteochinkomst/skattereduktioner/jobbskatteavdrag.4.6fdde64a12cc4eee2308000107.html" target="_blank" rel="noopener">Skatteverket – Jobbskatteavdrag</a> (föräldrapenning ger inget jobbskatteavdrag)</li>
+<li><a href="https://www.afaforsakring.se/kundtjanst/fragor-och-svar/vad-aer-skillnaden-mellan-foeraeldrapenning-och-foeraeldrapenningtillaegg" target="_blank" rel="noopener">Afa Försäkring – Föräldrapenning och föräldrapenningtillägg</a> (tillägg via kollektivavtalet)</li>
+</ul>
+
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/sjukpenningkalkylator"><span>Sjukpenningkalkylator<small>Samma SGI och tak som föräldrapenningen</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/loneraknare"><span>Löneräknare<small>Se din vanliga nettolön i detalj</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/hushallsbudget"><span>Hushållsbudget<small>Går budgeten ihop under föräldraledigheten?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
+</main>
+<script id="gk-fp" type="application/json">{"AR": 2026, "PBB": 59200, "SGI_TAK": 592000, "FAKTOR": 0.97, "NIVA": 0.8, "MAX": 1259, "GRUND": 250, "LAGSTA": 180, "VILLKOR_MAN": 7083, "VILLKOR_DAGAR": 240, "DAGAR": 480, "DAGAR_SPN": 390, "DAGAR_LAG": 90, "RESERV": 90, "SNITT_KS": 32.38}</script>
+<script defer src="/assets/skatt2026.js?v=20261001"></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var C = JSON.parse(document.getElementById('gk-fp').textContent);
+  var T = window.GKSkatt2026;
+  var $ = function (id) { return document.getElementById(id); };
+  var r10 = function (v) { return Math.round(v / 10) * 10; };
+  var kr = function (v) { return GK.fmt(v, 0) + ' kr'; };
+  var st = { dv: 7 };
+
+  $('dv').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    $('dv').querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    st.dv = +b.getAttribute('data-v'); calc();
+  });
+  $('lon').addEventListener('input', calc);
+  $('kommun').addEventListener('change', calc);
+  GK.groupInput($('lon'));
+
+  function tile(l, v, s, id) { return '<div class="gk-tile"' + (id ? ' id="' + id + '"' : '') + '><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '" style="margin-top:12px">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+
+  /* Samma beräkning som fp() i scripts/build_foraldrapenning.py */
+  function fp(L, dv, ks) {
+    var sgi = Math.min(L * 12, C.SGI_TAK);
+    var raw = Math.round(sgi * C.FAKTOR * C.NIVA / 365);
+    var d = Math.max(C.GRUND, raw);
+    var dagarAr = dv * 365 / 7;
+    var bruttoAr = d * dagarAr;
+    var nettoAr = T.skattAr(bruttoAr, { arbetsinkomst: 0, kommunalskatt: ks }).netto;
+    var lonNetto = T.skattAr(L * 12, { kommunalskatt: ks }).netto / 12;
+    return { sgi: sgi, raw: raw, dag: d, dagNetto: Math.round(nettoAr / dagarAr), man: r10(bruttoAr / 12),
+             manNetto: r10(nettoAr / 12), lonNetto: r10(lonNetto), dagarMan: dagarAr / 12 };
+  }
+
+  function calc() {
+    var L = GK.parse($('lon').value), ks = +$('kommun').value, dv = st.dv;
+    if (!isFinite(L) || L < 1000) {
+      $('resBig').textContent = '–'; $('resSub').textContent = 'Fyll i din lön per månad före skatt.';
+      ['tiles', 'verdict', 'how'].forEach(function (id) { $(id).innerHTML = ''; });
+      return;
+    }
+    var r = fp(L, dv, ks);
+    var tapp = r.lonNetto - r.manNetto, pct = r.lonNetto > 0 ? r.manNetto / r.lonNetto * 100 : 0;
+
+    $('resBig').textContent = GK.fmt(r.manNetto, 0);
+    $('resSub').textContent = 'Med ' + dv + ' dagar i veckan (ca ' + GK.fmt(r.dagarMan, 0) + ' dagar i månaden). Din vanliga nettolön är ' + kr(r.lonNetto) +
+      ' – du får ' + GK.fmt(pct, 0) + ' % av den och tappar ca ' + kr(Math.max(0, tapp)) + ' i månaden.';
+    $('tiles').innerHTML =
+      tile('Per dag före skatt', kr(r.dag), 'Sjukpenningnivå', 'tDag') +
+      tile('Per dag efter skatt', kr(r.dagNetto), 'Inget jobbskatteavdrag', 'tDagNetto') +
+      tile('Per månad före skatt', kr(r.man), dv + ' dagar/vecka', 'tMan') +
+      tile('Vanlig nettolön', kr(r.lonNetto), 'Lön ' + GK.fmt(L, 0) + ' kr före skatt', 'tLon');
+
+    var v;
+    if (L * 12 > C.SGI_TAK) {
+      v = verdict('warn', 'Din lön är över taket', 'Föräldrapenningen räknas bara på ' + GK.fmt(C.SGI_TAK, 0) + ' kr per år (ca ' + GK.fmt(Math.round(C.SGI_TAK / 12), 0) +
+        ' kr i månaden), så du får maxbeloppet ' + kr(C.MAX) + ' per dag. För lönen över taket får du inget från Försäkringskassan – kolla om ditt kollektivavtal ger föräldrapenningtillägg.');
+    } else if (r.raw <= C.GRUND) {
+      v = verdict('info', 'Du får grundnivån, ' + C.GRUND + ' kr per dag', 'Med din lön blir föräldrapenningen inte högre än grundnivån. ' + C.GRUND +
+        ' kr per dag är det lägsta du får på sjukpenningnivå. Maxtaket är ' + kr(C.MAX) + ' per dag.');
+    } else if (r.dag >= C.MAX) {
+      v = verdict('good', 'Du får maxbeloppet, ' + kr(C.MAX) + ' per dag', 'Din lön ligger precis vid taket på ' + GK.fmt(C.SGI_TAK, 0) +
+        ' kr per år. Mer lön ger inte mer föräldrapenning. Har du kollektivavtal kan du dessutom få föräldrapenningtillägg, som inte är med här.');
+    } else {
+      v = verdict('good', 'Under taket – du får ' + GK.fmt(r.dag * 365 / 12 / L * 100, 1) + ' % av lönen före skatt', 'Maxtaket är ' + kr(C.MAX) + ' per dag – du ligger ' +
+        kr(C.MAX - r.dag) + ' under. Har du kollektivavtal kan du dessutom få föräldrapenningtillägg, som inte är med här.');
+    }
+    $('verdict').innerHTML = v;
+
+    $('how').innerHTML =
+      '<p>SGI = din lön × 12, högst ' + GK.fmt(C.SGI_TAK, 0) + ' kr: ' + GK.fmt(r.sgi, 0) + ' kr. Föräldrapenning per dag = ' + GK.fmt(r.sgi, 0) + ' × 0,97 × 80 % ÷ 365 = ' +
+        GK.fmt(r.raw, 0) + ' kr' + (r.raw < C.GRUND ? ', höjt till grundnivån ' + C.GRUND + ' kr' : '') + '.</p>' +
+      '<p>' + dv + ' dagar i veckan = ' + GK.fmt(r.dagarMan, 1) + ' dagar i månaden: ' + GK.fmt(r.dag, 0) + ' × ' + dv + ' × 365 ÷ 7 ÷ 12 = ' + kr(r.man) + ' före skatt.' +
+        (dv === 7 ? ' Jobbar du måndag–fredag måste du ta ut föräldrapenning dagen före eller efter helgen för att få det för lördag och söndag.' : '') + '</p>' +
+      '<p>Skatten räknas med samma regler som Skatteverkets skattetabeller 2026 och ' + GK.fmt(ks, 2) + ' % kommunalskatt. Föräldrapenning ger inget jobbskatteavdrag, lön gör det. Vi räknar som om du har samma inkomst hela året och ingen lön under ledigheten.</p>' +
+      '<p>Föräldrapenningtillägg från kollektivavtal är inte med. Försäkringskassan fastställer din SGI.</p>';
+  }
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Föräldrapenningen är en uppskattning – Försäkringskassan beslutar om din SGI och ersättning.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-<script>
-// 2026 constants
-const PBB = 59200; // prisbasbelopp 2026
-const MAX_SGI = 592000; // 10 × prisbasbelopp 59 200 kr (2026)
-const DAGERSATTNING_PROCENT = 0.776; // 80 % av SGI × 0,97
-const LAGSTA_NIVA = 180;
-const GRUND_NIVA = 250;
-const SKIKTGRANS = 643000;   // statlig inkomstskatt 2026
-const PS_AVGIFT_MAX = 1184;  // public service-avgift 2026
-const BEGRAVNING = 0.00292;  // genomsnittlig begravningsavgift 2026
-const DAGAR_PER_MAN = 365 / 12;
-
-function fmt(n) { return Math.round(n).toLocaleString('sv-SE'); }
-function fmtDec(n, d=1) { return n.toFixed(d).replace('.', ','); }
-
-// Grundavdrag 2026 (under 66 år), avrundas uppåt till helt hundratal
-function grundavdrag(FI) {
-    if (FI <= 0) return 0;
-    let ga;
-    if (FI <= 0.99 * PBB) ga = 0.423 * PBB;
-    else if (FI <= 2.72 * PBB) ga = 0.225 * PBB + 0.2 * FI;
-    else if (FI <= 3.11 * PBB) ga = 0.770 * PBB;
-    else if (FI <= 7.88 * PBB) ga = 1.081 * PBB - 0.1 * FI;
-    else ga = 0.293 * PBB;
-    return Math.min(Math.ceil(ga / 100) * 100, FI);
-}
-// Jobbskatteavdrag 2026 (under 66 år) – bara för arbetsinkomst, inte för föräldrapenning
-function jobbskatteavdrag(AI, GA, S) {
-    if (AI <= 0) return 0;
-    let u;
-    if (AI <= 0.91 * PBB) u = AI - GA;
-    else if (AI <= 3.24 * PBB) u = 0.91 * PBB + 0.3874 * (AI - 0.91 * PBB) - GA;
-    else if (AI <= 8.08 * PBB) u = 1.813 * PBB + 0.251 * (AI - 3.24 * PBB) - GA;
-    else u = 3.027 * PBB - GA;
-    return Math.max(0, u * S);
-}
-// Uppskattad skatt per år (grundavdrag, statlig skatt, JSA, skattereduktion för förvärvsinkomst, public service, begravningsavgift)
-function arsskatt(inkomst, S, arArbetsinkomst) {
-    const ga = grundavdrag(inkomst);
-    const bfi = Math.max(0, Math.floor((inkomst - ga) / 100) * 100);
-    let skatt = bfi * S + Math.max(0, bfi - SKIKTGRANS) * 0.20;
-    if (arArbetsinkomst) skatt -= Math.min(jobbskatteavdrag(inkomst, ga, S), skatt);
-    skatt -= Math.min(Math.min(Math.max(0, (bfi - 40000) * 0.0075), 1500), skatt);
-    return Math.max(0, skatt) + Math.min(bfi * 0.01, PS_AVGIFT_MAX) + bfi * BEGRAVNING;
-}
-
-function berakna() {
-    const manadslon = parseFloat(document.getElementById('manadslon').value) || 0;
-    let sgiInput = parseFloat(document.getElementById('sgi').value) || 0;
-    const dagar = parseInt(document.getElementById('dagar').value) || 30;
-    const uttag = parseFloat(document.getElementById('uttag').value);
-    const nivaVal = document.getElementById('foralder').value;
-    const kommunalskatt = parseFloat(document.getElementById('kommunalskatt').value) / 100 || 0.32;
-
-    // Calculate SGI (taket 592 000 kr gäller redan här)
-    const sgi = sgiInput > 0 ? Math.min(sgiInput, MAX_SGI) : Math.min(manadslon * 12, MAX_SGI);
-    const effektivSGI = Math.min(sgi, MAX_SGI);
-
-    // Dagersättning: 80 % × 0,97 av SGI / 365, avrundat till hela kronor (max 1 259 kr 2026)
-    const dagarSjukp = Math.round(effektivSGI * DAGERSATTNING_PROCENT / 365);
-    const dagersattningBrutto = nivaVal === 'sjukpennning'
-        ? dagarSjukp
-        : nivaVal === 'lagsta' ? LAGSTA_NIVA : GRUND_NIVA;
-
-    const kalDagarPerUttagsdag = 7 / uttag;
-    const kalDagarTotalt = dagar;
-    const uttagnaDagar = Math.ceil(kalDagarTotalt / kalDagarPerUttagsdag);
-
-    const totalBrutto = dagersattningBrutto * uttagnaDagar;
-
-    // Jämförelse med lönen: uppskattad nettolön (med jobbskatteavdrag) mot
-    // nettoföräldrapenning (utan jobbskatteavdrag), omräknat till helår och per månad.
-    // Förutsätter att föräldrapenningen är din enda inkomst under ledigheten.
-    const fpManBrutto = dagersattningBrutto * (uttag / 7) * DAGAR_PER_MAN;
-    const fpArs = fpManBrutto * 12;
-    const fpManNetto = (fpArs - arsskatt(fpArs, kommunalskatt, false)) / 12;
-    const skattesatsFp = fpArs > 0 ? 1 - fpManNetto / fpManBrutto : 0;
-    const manadsLonNetto = (manadslon * 12 - arsskatt(manadslon * 12, kommunalskatt, true)) / 12;
-    const inkomstTapp = manadsLonNetto - fpManNetto;
-    const dagNetto = dagersattningBrutto * (1 - skattesatsFp);
-
-    document.getElementById('sgiInfo').innerHTML =
-        `SGI: <strong>${fmt(effektivSGI)} kr/år</strong>${sgiInput > 0 ? ' (angiven)' : ` (beräknad från ${fmt(manadslon)} kr/mån)`}${effektivSGI < manadslon * 12 ? ` — <em>OBS: taket på ${fmt(MAX_SGI)} kr/år gäller</em>` : ''}`;
-
-    const grid = document.getElementById('resultGrid');
-    grid.innerHTML = `
-        <div class="result-box"><div class="label">Ersättning per dag</div><div class="value">${fmt(dagersattningBrutto)} kr</div><div class="sub">brutto</div></div>
-        <div class="result-box"><div class="label">Netto per dag</div><div class="value">${fmt(dagNetto)} kr</div><div class="sub">efter skatt (ca ${fmtDec(skattesatsFp*100)} %)</div></div>
-        <div class="result-box"><div class="label">Total ersättning</div><div class="value">${fmt(totalBrutto)} kr</div><div class="sub">${uttagnaDagar} uttagna dagar</div></div>
-        <div class="result-box"><div class="label">Inkomstskillnad/mån</div><div class="value">${fmt(Math.max(0,inkomstTapp))} kr</div><div class="sub">mindre netto än din nettolön (ca ${fmt(manadsLonNetto)} kr)</div></div>
-    `;
-
-    // Levels table
-    const table = document.getElementById('levelsTable');
-    const rows = [
-        { niva: 'Sjukpenningnivå (77,6%)', dag: dagarSjukp, info: `Kräver SGI i 240 dagar, max 1 259 kr/dag` },
-        { niva: 'Lägstanivå', dag: LAGSTA_NIVA, info: '90 av 480 dagar (fast belopp)' },
-        { niva: 'Grundnivå', dag: GRUND_NIVA, info: 'Om ingen SGI finns' },
-    ];
-    table.innerHTML = `<thead><tr><th>Nivå</th><th>Kr/dag (brutto)</th><th>Kr/mån (30 dgr)</th><th>Info</th></tr></thead>
-    <tbody>${rows.map((r, i) => `<tr ${nivaVal === ['sjukpennning','lagsta','grund'][i] ? 'class="active-row"' : ''}>
-        <td>${r.niva}${nivaVal === ['sjukpennning','lagsta','grund'][i] ? ' ✓' : ''}</td>
-        <td>${fmt(r.dag)} kr</td>
-        <td>${fmt(r.dag * 30)} kr</td>
-        <td style="color:var(--text-light);font-size:0.82rem;">${r.info}</td>
-    </tr>`).join('')}</tbody>`;
-
-    document.getElementById('results').classList.add('visible');
-}
-
-window.addEventListener('load', berakna);
-document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', berakna));
-</script>
+</footer>
 </body>
 </html>

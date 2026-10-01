@@ -1,417 +1,41 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Bilkostnadsräknare 2026 – Räkna bilkostnad | GratisKalkyl.se</title>
-    <meta name="description" content="Räkna ut din verkliga månadskostnad för bilen. Beräkna drivmedel, försäkring, skatt, service och värdeminskning med vår gratis bilkostnadsräknare.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare">
-    <meta property="og:title" content="Bilkostnadsräknare 2026 — Räkna ut din verkliga bilkostnad">
-    <meta property="og:description" content="Räkna ut din verkliga månadskostnad för bilen. Beräkna drivmedel, försäkring, skatt, service, värdeminskning och lånekostnader.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Bilkostnadsräknare 2026">
-    <meta name="twitter:description" content="Räkna ut din verkliga månadskostnad för bilen med denna gratis kalkylator.">
-    <style>
-        500;600;700;800&display=swap');
-
-        :root {
-            --primary: #0D6A45;
-            --primary-light: #E4F1EA;
-            --primary-dark: #0A5236;
-            --accent: #2563eb;
-            --text: #15201A;
-            --text-light: #56625B;
-            --bg: #F6F5F1;
-            --white: #ffffff;
-            --border: #E2E0D8;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--text); }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        /* Page */
-        .page-header { padding: 40px 0 24px; }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        .page-header p { color: var(--text-light); font-size: 1.05rem; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .breadcrumb a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        /* Calculator */
-        .calc-wrapper {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-bottom: 48px;
-            box-shadow: var(--shadow);
-        }
-        .input-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        .input-group { display: flex; flex-direction: column; }
-        .input-group label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .input-group .sublabel {
-            font-weight: 400;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-        .input-group input[type="number"],
-        .input-group input[type="range"] {
-            width: 100%;
-        }
-        .input-group input[type="number"] {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-        }
-        .input-group input[type="number"]:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group input[type="number"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .input-group input[type="range"] {
-            margin-top: 8px;
-            accent-color: var(--primary);
-            height: 6px;
-            transition: box-shadow 0.2s ease;
-        }
-        .input-group input[type="range"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .range-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        /* Results */
-        .results {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .result-box {
-            background: var(--primary-light);
-            border-radius: 10px;
-            padding: 24px 20px;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .result-box.highlight {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-        .result-box .label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            opacity: 0.8;
-        }
-        .result-box .value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-        }
-        .result-box .sub {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-
-        /* Separator */
-        .chart-separator {
-            height: 1px;
-            background: var(--border);
-            margin: 24px 0;
-        }
-
-        /* Chart */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            margin-bottom: 16px;
-        }
-        canvas { width: 100% !important; height: 100% !important; }
-
-        /* Table */
-        .table-toggle {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 12px 0;
-            margin-top: 16px;
-            transition: color 0.2s ease;
-        }
-        .table-toggle:hover { text-decoration: underline; }
-        .table-toggle:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            display: none;
-        }
-        .data-table.visible { display: table; }
-        .data-table th {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 12px;
-            text-align: right;
-            font-weight: 500;
-        }
-        .data-table th:first-child { text-align: left; }
-        .data-table td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
-        .data-table td:first-child { text-align: left; }
-
-        /* Info section */
-        .info-section {
-            margin-bottom: 48px;
-        }
-        .info-section h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 48px 0 16px;
-            letter-spacing: -0.01em;
-        }
-        .info-section h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 24px 0 12px;
-            letter-spacing: -0.01em;
-        }
-        .info-section p {
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-        .formula-box {
-            background: #F6F5F1;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            margin: 16px 0;
-            overflow-x: auto;
-        }
-        
-
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        footer a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        @media (max-width: 900px) {
-            .results { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .input-grid { grid-template-columns: 1fr; gap: 16px; }
-            .results { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.5rem; }
-            .calc-wrapper { padding: 16px; }
-            nav { display: none; }
-            .result-box .value { font-size: 1.3rem; }
-            .input-group input[type="number"] {
-                min-height: 44px;
-                padding: 12px;
-            }
-            .table-toggle {
-                min-height: 44px;
-            }
-        }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Bilkostnadsräknare",
-        "url": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare",
-        "description": "Gratis kalkylator för att räkna ut din verkliga bilkostnad. Beräkna månadskostnad, drivmedel, försäkring, skatt, service och värdeminskning.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
-        "inLanguage": "sv"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
-            { "@type": "ListItem", "position": 2, "name": "Bilkostnadsräknare", "item": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Vad ingår i en bils totala kostnad?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "En bils totala kostnad består av flera delar: drivmedel (bensin, diesel eller el), försäkring, fordonsskatt, service och underhåll, värdeminskning (depreciering), parkering, och eventuella lånekostnader. Många glömmer räkna in värdeminskningen, som ofta är den största kostnaden."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur beräknas värdeminskningen?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Värdeminskning beräknas här som en procent av inköpspriset per år. En ny bil tappar ofta 15–25 % i värde det första året och därefter omkring 10–15 % per år, så efter tre år är den ofta värd drygt hälften av nypriset. Kalkylatorn räknar med en genomsnittlig årlig procentsats som du själv anger."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Ska jag köpa eller leasa?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Det beror på dina behov. En köpt bil är bättre på sikt om du kör mycket, medan leasing kan vara bättre för kortare perioder. Med denna kalkylator kan du räkna ut din totala kostnad för en köpt bil, vilket gör det lättare att jämföra med leasingkostnader. Vill du jämföra leasing och köp direkt, använd leasingkalkylatorn, som räknar av bilens värde när perioden är slut."
-                }
-            }
-        ]
-    }
-    </script>
-  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  
-    <link rel="stylesheet" href="/mobile.css">
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Värdeminskning bil &amp; bilkostnad per månad | GratisKalkyl</title>
+<meta name="description" content="Vad kostar bilen per månad och per mil? Räkna ut värdeminskningen per år, drivmedel, försäkring, skatt och service. Elbilar betalar 360 kr i fordonsskatt.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare">
+<meta property="og:title" content="Vad kostar bilen per månad? Bilkostnad och värdeminskning">
+<meta property="og:description" content="Vad kostar bilen per månad och per mil? Räkna ut värdeminskningen per år, drivmedel, försäkring, skatt och service. Elbilar betalar 360 kr i fordonsskatt.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bilkostnadsräknare 2026 – bilkostnad per månad och värdeminskning", "url": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Vad kostar bilen per månad och per mil? Räkna ut värdeminskningen per år, drivmedel, försäkring, skatt och service. Elbilar betalar 360 kr i fordonsskatt.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Bil & energi", "item": "https://gratiskalkyl.se/bil-och-energi"}, {"@type": "ListItem", "position": 3, "name": "Bilkostnadsräknare", "item": "https://gratiskalkyl.se/kalkylatorer/bilkostnadsraknare"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hur mycket kostar en bil i månaden?", "acceptedAnswer": {"@type": "Answer", "text": "Lägg ihop allt bilen kostar under ett år – värdeminskning, drivmedel, försäkring, fordonsskatt, service och däck, parkering och ränta på billån – och dela med 12. Ett exempel: en bil för 300 000 kr som tappar 15 % i värde per år och behålls i 5 år, körs 1 155 mil om året och drar 0,7 liter bensin per mil à 18,59 kr, med 500 kr i månaden i försäkring, 558 kr i skatt och 6 000 kr om året för service och däck, kostar ungefär 5 080 kr i månaden. Fyll i dina egna belopp i kalkylatorn."}}, {"@type": "Question", "name": "Hur mycket tappar en ny bil i värde per år?", "acceptedAnswer": {"@type": "Answer", "text": "Det finns ingen officiell siffra – det beror på modell, körsträcka, skick och efterfrågan. Ta reda på det för din modell genom att jämföra annonspriser för samma modell i olika åldrar, och räkna om skillnaden till procent per år i kalkylatorn. Tappar bilen 15 % per år är den värd 85 % av priset efter ett år och 44 % efter fem år."}}, {"@type": "Question", "name": "Hur räknar man ut värdeminskning på en bil?", "acceptedAnswer": {"@type": "Answer", "text": "Värdet efter ett antal år är inköpspriset × (1 − procentsatsen) upphöjt till antalet år. Värdeminskningen är inköpspriset minus det värdet. En bil för 300 000 kr som tappar 15 % per år är värd 300 000 × 0,85⁵ = 133 110 kr efter fem år. Den har då tappat 166 890 kr, eller 33 380 kr per år i snitt."}}, {"@type": "Question", "name": "Hur mycket är en ny bil värd efter 3 år?", "acceptedAnswer": {"@type": "Answer", "text": "Det beror på hur snabbt just den modellen tappar i värde. Räknar du med 15 % per år är bilen värd 0,85³ = 61 % av nypriset efter tre år – en bil för 300 000 kr är då värd ungefär 184 240 kr. Med 10 % per år blir det 73 % och med 20 % per år 51 %."}}, {"@type": "Question", "name": "Hur räknar man på en ny bil?", "acceptedAnswer": {"@type": "Answer", "text": "Gör en bilkalkyl (personbilskalkyl) för hela tiden du tänker ha bilen: vad den kostar, vad den kan säljas för när du byter och alla kostnader under tiden. Skillnaden mellan köp- och säljpris delad med antalet år är värdeminskningen per år. Lägg till drivmedel, försäkring, skatt, service, däck och parkering, och ränta om du lånar. Amorteringen på lånet är ingen extra kostnad – den betalar av bilen, och det är redan räknat i värdeminskningen."}}, {"@type": "Question", "name": "Vad kostar det att köra bil per mil?", "acceptedAnswer": {"@type": "Answer", "text": "Dela bilens årskostnad med antalet mil du kör. Bara bränslet kostar förbrukningen gånger literpriset: 0,7 liter per mil med bensin för 18,59 kr/l blir 13,01 kr per mil. Med alla kostnader blir det mer. Som jämförelse är den skattefria milersättningen för egen bil 25 kr per mil 2026."}}, {"@type": "Question", "name": "Hur mycket är fordonsskatten för en elbil?", "acceptedAnswer": {"@type": "Answer", "text": "360 kr per år. Fordonsskatten är ett grundbelopp på 360 kr plus ett koldioxidbelopp, och en elbil släpper inte ut någon koldioxid. Därför betalar den bara grundbeloppet."}}, {"@type": "Question", "name": "Hur många mil kör en vanlig bil per år?", "acceptedAnswer": {"@type": "Answer", "text": "Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025 och alla personbilar 1 243 mil. Elbilar och laddhybrider körde längre, ungefär 1 700 mil."}}]}</script>
+
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -420,8 +44,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -436,419 +60,415 @@
 </div>
 </div>
 
-    
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li><a href="/bil-och-energi">Bil &amp; energi</a></li><li aria-current="page">Bilkostnadsräknare</li></ol></nav>
+<div class="gk-eyebrow">Bilkostnadsräknare 2026</div>
+<h1>Vad kostar bilen per månad?</h1>
+<p class="gk-lead">Räkna ut vad bilen kostar per månad och per mil – och hur mycket den tappar i värde varje år.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Bensinpris 1 oktober 2026 · Källa: <a href="https://www.trafa.se/globalassets/statistik/vagtrafik/korstrackor/2025/korstrackor-2025---2026-04-17.pdf" target="_blank" rel="noopener">Trafikanalys</a>, <a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/skatter-och-avgifter/fordonsskatt/skattens-storlek/" target="_blank" rel="noopener">Transportstyrelsen</a></p>
+</div>
 
-    <main class="container" id="innehall">
-        <div class="page-header">
-            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> / Bilkostnadsräknare</div>
-            <h1>Bilkostnadsräknare</h1>
-            <p>Räkna ut din verkliga månadskostnad för bilen. Inkluderar drivmedel, försäkring, skatt, service, värdeminskning och lånekostnader.</p>
-        </div>
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="bkform" novalidate onsubmit="return false">
+<div class="gk-field">
+<label for="pris">Bilens pris</label>
+<div class="gk-input"><input id="pris" inputmode="numeric" autocomplete="off" value="300 000"><span class="unit">kr</span></div>
+<span class="gk-hint">Vad du betalar för bilen. Förifyllt exempel.</span>
+</div>
 
-        <div class="calc-wrapper">
-            <div class="input-grid">
-                <div class="input-group">
-                    <label for="korstrack">Körsträcka (km/månad)</label>
-                    <input type="number" id="korstrack" value="1500" min="0" step="100">
-                </div>
-                <div class="input-group">
-                    <label for="bransleforbr">Bränsleförbrukning (l/100km)</label>
-                    <input type="number" id="bransleforbr" value="7" min="0.1" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label for="bralsepris">Bränslepris (kr/liter)</label>
-                    <input type="number" id="bralsepris" value="17.80" min="0" step="0.01">
-                </div>
-                <div class="input-group">
-                    <label for="forsäkring">Försäkring (kr/månad)</label>
-                    <input type="number" id="forsäkring" value="800" min="0" step="50">
-                </div>
-                <div class="input-group">
-                    <label for="fordonsskatt">Fordonsskatt (kr/år)</label>
-                    <input type="number" id="fordonsskatt" value="3600" min="0" step="100">
-                </div>
-                <div class="input-group">
-                    <label for="service">Service & underhåll (kr/år)</label>
-                    <input type="number" id="service" value="8000" min="0" step="500">
-                </div>
-                <div class="input-group">
-                    <label for="inkopspris">Inköpspris (kr)</label>
-                    <input type="number" id="inkopspris" value="250000" min="0" step="10000">
-                </div>
-                <div class="input-group">
-                    <label for="värdeminsk">Värdeminskning (%/år)</label>
-                    <input type="number" id="värdeminsk" value="15" min="0" max="100" step="1">
-                </div>
-                <div class="input-group">
-                    <label for="parkering">Parkering (kr/månad)</label>
-                    <input type="number" id="parkering" value="0" min="0" step="50">
-                </div>
-                <div class="input-group">
-                    <label for="lanekostnad">Lånekostnad/ränta (kr/månad)</label>
-                    <input type="number" id="lanekostnad" value="0" min="0" step="100">
-                </div>
-            </div>
+<div class="gk-field">
+<label for="proc">Värdeminskning per år</label>
+<div class="gk-input"><input id="proc" inputmode="decimal" autocomplete="off" value="15"><span class="unit">% per år</span></div>
+<span class="gk-hint">Exempel – ditt antagande. Räkna ut en procentsats för din modell från annonspriser i kortet <a href="#vH">Värdeminskning</a>.</span>
+</div>
 
-            <div class="results">
-                <div class="result-box highlight">
-                    <div class="label">Total månadskostnad</div>
-                    <div class="value" id="totalMonthly">—</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Kostnad per km</div>
-                    <div class="value" id="costPerKm">—</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Kostnad per år</div>
-                    <div class="value" id="costPerYear">—</div>
-                </div>
-            </div>
+<div class="gk-field">
+<label for="ar">Hur länge behåller du bilen?</label>
+<div class="gk-input"><input id="ar" inputmode="numeric" autocomplete="off" value="5"><span class="unit">år</span></div>
+<div class="gk-seg" style="--n:3" id="arq" role="group" aria-label="Antal år">
+<button type="button" data-v="3" aria-pressed="false">3 år</button><button type="button" data-v="5" aria-pressed="true">5 år</button><button type="button" data-v="8" aria-pressed="false">8 år</button>
+</div>
+</div>
 
-            <div class="chart-container">
-                <canvas id="pieChart"></canvas>
-            </div>
-            <div class="chart-separator"></div>
+<div class="gk-field">
+<label for="mil">Så långt kör du per år</label>
+<div class="gk-input"><input id="mil" inputmode="numeric" autocomplete="off" value="1 155"><span class="unit">mil/år</span></div>
+<div class="gk-seg" style="--n:3" id="milq" role="group" aria-label="Körsträcka">
+<button type="button" data-v="1155" aria-pressed="true">1 155<small>snittet</small></button><button type="button" data-v="1500" aria-pressed="false">1 500</button><button type="button" data-v="2000" aria-pressed="false">2 000</button>
+</div>
+<span class="gk-hint">Snittet för privatägda bilar 2025 enligt Trafikanalys. 1 mil = 10 km.</span>
+</div>
 
-            <button class="table-toggle" id="tableToggle">Visa kostnadssummering ▼</button>
-            <table class="data-table" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>Kostnadskategori</th>
-                        <th>Per månad</th>
-                        <th>Per år</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-            </table>
-        </div>
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Drivmedel</legend>
+<div class="gk-seg" style="--n:3" id="typ" role="group" aria-label="Drivmedel">
+<button type="button" data-v="bensin" aria-pressed="true">Bensin</button><button type="button" data-v="diesel" aria-pressed="false">Diesel</button><button type="button" data-v="el" aria-pressed="false">El</button>
+</div>
+</fieldset>
 
-        <!--GK-PARTNER:bilforsakring:START--><!--GK-PARTNER:bilforsakring:END-->
-        <div class="info-section">
-            <h2>Din verkliga bilkostnad – mer än bränsle och försäkring</h2>
-            <p>De flesta underskattar kraftigt vad bilen faktiskt kostar. En genomsnittlig Volvo V60 eller liknande mellanklassbil kan lätt kosta <strong>5 000–7 000 kr i månaden</strong> när alla poster räknas in. Ändå fokuserar många bara på bränslet. Vår bilkostnadsräknare synliggör hela bilden – så du kan fatta ett välgrundat beslut om att köpa, byta eller behålla din bil.</p>
+<div class="gk-grid2">
+<div class="gk-field">
+<label for="forbr">Förbrukning</label>
+<div class="gk-input"><input id="forbr" inputmode="decimal" autocomplete="off" value="0,7"><span class="unit" id="forbrUnit">l/mil</span></div>
+</div>
+<div class="gk-field">
+<label for="bpris" id="bprisLabel">Pris</label>
+<div class="gk-input"><input id="bpris" inputmode="decimal" autocomplete="off" value="18,59"><span class="unit" id="bprisUnit">kr/l</span></div>
+</div>
+</div>
+<span class="gk-hint" id="dmHint" style="margin-top:-8px"></span>
 
-            <h3>Fasta kostnader – betalar du oavsett hur mycket du kör</h3>
-            <p><strong>Fordonsskatt</strong> beror på bilens koldioxidutsläpp och drivmedel. Grundbeloppet är 360 kr/år. För nya bensin- och dieselbilar tillkommer de tre första åren ett förhöjt belopp (malus): 107 kr per gram CO₂/km mellan 75 och 125 g och 132 kr per gram över 125 g. En bensinbil som släpper ut 120 g CO₂/km betalar därför 5 175 kr/år de tre första åren (360 + 45 × 107 kr) och därefter 558 kr/år (360 + 22 kr för varje gram över 111 g). Dieselbilar betalar dessutom ett bränsletillägg som beror på koldioxidutsläppet och ett miljötillägg på 250 kr/år. En elbil betalar grundbeloppet, 360 kr/år. Den tidigare femåriga skattebefrielsen för miljöbilar gällde bara bilar som blev skattepliktiga före 1 juli 2018 och har därför löpt ut. Din bils exakta skatt ser du hos Transportstyrelsen.</p>
-            <p><strong>Försäkring</strong> är ofta en av de största fasta kostnaderna. Trafikförsäkring är obligatorisk. Halv- eller helförsäkring kostar mer, och priset beror på bilens värde, din ålder och var du bor. Premierna skiljer sig mellan bolagen, så jämför innan du tecknar.</p>
-            <p><strong>Parkeringskostnad</strong> glöms ofta bort men kan i Stockholm, Göteborg eller Malmö kosta 1 000–3 000 kr/månad om du hyr garage eller parkeringsplats.</p>
+<div class="gk-field">
+<label for="fors">Försäkring</label>
+<div class="gk-input"><input id="fors" inputmode="numeric" autocomplete="off" value="500"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Exempel – fyll i ditt pris. Försäkringen beror på bil, ålder och var du bor.</span>
+</div>
 
-            <h3>Värdeminskning – den dolda och största kostnaden</h3>
-            <p>Värdeminskning (depreciation) är för de flesta som köper ny bil den största enskilda kostnaden – och den som flest glömmer. En ny bil tappar ofta <strong>15–25 % av sitt värde det första året</strong> och därefter omkring 10–15 % per år. Det innebär att en bil köpt för 300 000 kr kan vara värd ca 230 000 kr efter ett år och ca 170 000 kr efter tre år.</p>
-            <p>Räkneexempel: En bil inköpt för 300 000 kr som säljs efter 5 år för 140 000 kr ger en total värdeminskning på 160 000 kr – det är 2 667 kr per månad bara i depreciation. Lägg till det alla övriga kostnader och det verkliga priset per kilometer börjar bli tydligt.</p>
-            <p>Hur snabbt en bil tappar i värde skiljer sig mellan modeller. Jämför gärna vad samma modell kostar som begagnad efter några år innan du köper.</p>
+<div class="gk-field">
+<label for="skatt">Fordonsskatt</label>
+<div class="gk-input"><input id="skatt" inputmode="numeric" autocomplete="off" value="558"><span class="unit">kr/år</span></div>
+<span class="gk-hint" id="skattHint"></span>
+</div>
 
-            <h3>Rörliga kostnader – beror på hur mycket du kör</h3>
-            <p><strong>Drivmedel</strong> är den mest synliga kostnaden. Förvalet i kalkylatorn, 17,80 kr/liter, är snittpriset för bensin 95 i Sverige enligt EU-kommissionens Weekly Oil Bulletin den 21 september 2026 (diesel: 23,56 kr/liter samma vecka). Byt till priset på din mack. Med 17,80 kr/liter och en bil som förbrukar 7 l/100 km betalar du ca 1,25 kr per km. Kör du 15 000 km/år kostar bränslet ca 18 690 kr, alltså ca 1 560 kr/månad. En laddhybrid som ofta körs på el kan sänka drivmedelskostnaden betydligt.</p>
-            <p><strong>Service och underhåll</strong> beror på bilens ålder, märke och serviceprogram. Räkna också med däck och eventuellt däckhotell. Kolla serviceintervall och pris hos din verkstad och lägg in beloppet per år i kalkylatorn.</p>
-            <p><strong>Lånekostnad</strong> tillkommer om du finansierat bilen. Med ett billån på 200 000 kr till 6 % ränta över 5 år betalar du ca 3 866 kr/månad i annuitet, varav räntan totalt uppgår till ca 32 000 kr under hela lånets löptid. Att betala kontant sparar denna kostnad men binder kapital.</p>
+<div class="gk-field">
+<label for="serv">Service och däck</label>
+<div class="gk-input"><input id="serv" inputmode="numeric" autocomplete="off" value="6 000"><span class="unit">kr/år</span></div>
+<span class="gk-hint">Exempel – fyll i vad service, däck och däckbyte kostar dig per år.</span>
+</div>
 
-            <h3>Elbil vs bensinbil – vad kostar det 2026?</h3>
-            <p>En elbil har lägre rörliga kostnader men oftast högre inköpspris. Jämförelse för 15 000 km/år: bränslekostnad för bensin (7 l/100 km, 17,80 kr/l) = ca 18 690 kr/år. Laddkostnad för elbil hemma (2,0 kWh/mil = 20 kWh/100 km, 2,20 kr/kWh) = 6 600 kr/år. Skillnaden på drivmedelskostnaden är alltså ca 12 090 kr/år till elbilens fördel. Elpriset 2,20 kr/kWh är den genomsnittliga totalkostnaden per kWh (elhandel, elnät, energiskatt och moms) för en villa med elvärme i elområde SE3 enligt SCB, september 2025–augusti 2026 – samma antagande som i vår <a href="/kalkylatorer/drivmedelskalkylator">drivmedelskalkylator</a>. Ditt eget pris kan vara lägre eller högre.</p>
-            <p>Service för elbilar är ofta billigare (inget olje- och filterbyte), men däckslitaget kan bli högre eftersom elbilar ofta är tunga. Kontrollera vad batterigarantin täcker och hur länge den gäller.</p>
+<details class="gk-more">
+<summary>Parkering, lån och övrigt</summary>
+<div class="gk-stack" style="gap:14px">
+<div class="gk-field">
+<label for="park">Parkering</label>
+<div class="gk-input"><input id="park" inputmode="numeric" autocomplete="off" placeholder="0"><span class="unit">kr/mån</span></div>
+</div>
+<div class="gk-field">
+<label for="ranta">Ränta på billån</label>
+<div class="gk-input"><input id="ranta" inputmode="numeric" autocomplete="off" placeholder="0"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Bara räntan. Amorteringen betalar av bilen och räknas redan i värdeminskningen.</span>
+</div>
+<div class="gk-field">
+<label for="ovr">Övrigt</label>
+<div class="gk-input"><input id="ovr" inputmode="numeric" autocomplete="off" placeholder="0"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Till exempel trängselskatt, vägtullar och biltvätt.</span>
+</div>
+</div>
+</details>
+</form>
 
-            <h3>Så tolkar du resultaten i kalkylatorn</h3>
-            <p>Vår kalkylator beräknar <strong>total månadskostnad</strong>, <strong>kostnad per kilometer</strong> och en uppdelning per kostnadspost. Kostnad per kilometer är det mest rättvisande nyckeltalet – det tar hänsyn till att fasta kostnader slås ut på din faktiska körsträcka. Kör du mycket (25 000 km/år) sjunker kostnaden per km. Kör du lite (8 000 km/år) stiger den.</p>
-            <p>En tumregel: om din bilkostnad överstiger 15–20 % av din nettoinkomst bör du fundera på om en billigare bil, bilpool eller kollektivtrafik kan frigöra pengar till annat.</p>
+<section class="gk-card gk-stack gk-o3" style="gap:14px" aria-labelledby="vH">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 id="vH" style="font-size:22px">Värdeminskning – hur mycket tappar bilen?</h2>
+<p class="gk-hint" id="vIntro"></p>
+</div>
+<div class="gk-field">
+<label for="alder">Bilens ålder när du köper den</label>
+<div class="gk-input"><input id="alder" inputmode="numeric" autocomplete="off" value="0"><span class="unit">år</span></div>
+<div class="gk-seg" style="--n:3" id="alderq" role="group" aria-label="Bilens ålder vid köp">
+<button type="button" data-v="0" aria-pressed="true">Ny</button><button type="button" data-v="3" aria-pressed="false">3 år</button><button type="button" data-v="6" aria-pressed="false">6 år</button>
+</div>
+</div>
+<div id="vRes" aria-live="polite"></div>
+<figure style="margin:0">
+<figcaption class="gk-hint" style="margin-bottom:8px" id="vCap"></figcaption>
+<div id="vChart"></div>
+</figure>
+<details class="gk-more">
+<summary>Visa år för år</summary>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight" id="vTable"></table></div>
+</details>
+<details class="gk-more" id="hBox">
+<summary>Räkna ut procentsatsen från annonspriser</summary>
+<div class="gk-stack" style="gap:14px">
+<p class="gk-hint">Leta upp samma modell i två åldrar, med ungefär lika långt körda bilar. Då ser du hur mycket modellen har tappat per år.</p>
+<div class="gk-field">
+<label for="hNy">Pris för den yngre bilen</label>
+<div class="gk-input"><input id="hNy" inputmode="numeric" autocomplete="off" placeholder="t.ex. 300 000"><span class="unit">kr</span></div>
+</div>
+<div class="gk-field">
+<label for="hGam">Pris för den äldre bilen</label>
+<div class="gk-input"><input id="hGam" inputmode="numeric" autocomplete="off" placeholder="t.ex. 180 000"><span class="unit">kr</span></div>
+</div>
+<div class="gk-field">
+<label for="hAr">Hur många år äldre?</label>
+<div class="gk-input"><input id="hAr" inputmode="numeric" autocomplete="off" placeholder="t.ex. 4"><span class="unit">år</span></div>
+</div>
+<div id="hRes" aria-live="polite"></div>
+</div>
+</details>
+</section>
+</div>
 
-            <h2>Vanliga frågor om bilkostnad</h2>
-            <h3>Vad ingår i en bils totala kostnad?</h3>
-            <p>En bils totala kostnad består av flera delar: drivmedel (bensin, diesel eller el), försäkring, fordonsskatt, service och underhåll, värdeminskning (depreciering), parkering, och eventuella lånekostnader. Många glömmer räkna in värdeminskningen, som ofta är den största kostnaden.</p>
-            <h3>Hur beräknas värdeminskningen?</h3>
-            <p>Värdeminskning beräknas här som en procent av inköpspriset per år. En ny bil tappar ofta 15–25 % i värde det första året och därefter omkring 10–15 % per år, så efter tre år är den ofta värd drygt hälften av nypriset. Kalkylatorn räknar med en genomsnittlig årlig procentsats som du själv anger.</p>
-            <h3>Ska jag köpa eller leasa?</h3>
-            <p>Det beror på dina behov. En köpt bil är bättre på sikt om du kör mycket, medan leasing kan vara bättre för kortare perioder. Med denna kalkylator kan du räkna ut din totala kostnad för en köpt bil, vilket gör det lättare att jämföra med leasingkostnader. Vill du jämföra leasing och köp direkt, använd <a href="/kalkylatorer/leasingkalkylator">leasingkalkylatorn</a>, som räknar av bilens värde när perioden är slut.</p>
-        </div>
-    </main>
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">Bilen kostar per månad</div>
+<div class="gk-big"><strong id="resBig">–</strong><span>kr/mån</span></div>
+<p class="gk-hint" id="resSub"></p>
+<div id="bar"></div>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
 
-    <div class="gk-ftr gk2" role="contentinfo">
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="/kalkylatorer/leasingkalkylator"><span>Leasa i stället?<small>Leasingkalkylator – månadsavgift och jämförelse med köp</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/formansbilkalkylator"><span>Bil via jobbet?<small>Förmånsbilkalkylator – vad kostar förmånsbilen netto?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/milersattningskalkylator"><span>Kör du i tjänsten?<small>Milersättning – 25 kr/mil skattefritt 2026</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<!--GK-PARTNER:bilforsakring:START--><!--GK-PARTNER:bilforsakring:END-->
+</section>
+</div>
+</div>
+
+<div class="gk-prose">
+<h2>Så räknar du ut bilkostnaden per månad</h2>
+<p>Lägg ihop allt bilen kostar under ett år och dela med 12. En bilkalkyl har två sorters kostnader:</p>
+<ul>
+<li><strong>Rörliga</strong> – drivmedel, service och däck. De ökar ju mer du kör.</li>
+<li><strong>Fasta</strong> – värdeminskning, försäkring, fordonsskatt, parkering och ränta på billån. Dem betalar du även när bilen står still.</li>
+</ul>
+<p>Delar du årskostnaden med antalet mil du kör får du kostnaden per mil. Privatägda personbilar körde i snitt <strong>1 155 mil</strong> 2025 enligt Trafikanalys. Som jämförelse är Skatteverkets skattefria milersättning för egen bil <strong>25 kr per mil</strong> 2026.</p>
+
+<h2>Hur mycket tappar en bil i värde per år?</h2>
+<p>Det finns ingen officiell siffra – det beror på modell, körsträcka, skick och efterfrågan. Kalkylatorn räknar därför med en procentsats som du väljer, och bilen tappar samma andel av sitt värde varje år. Jämför annonspriser för samma modell i olika åldrar och räkna om dem till procent per år i kortet <a href="#vH">Värdeminskning</a>.</p>
+<div class="gk-table-wrap"><table class="gk-table">
+<thead><tr><th scope="col">Tappar per år</th><th scope="col">Värd efter 1 år</th><th scope="col">3 år</th><th scope="col">5 år</th></tr></thead>
+<tbody><tr><td>10 %</td><td>90 %</td><td>73 %</td><td>59 %</td></tr><tr><td>15 %</td><td>85 %</td><td>61 %</td><td>44 %</td></tr><tr><td>20 %</td><td>80 %</td><td>51 %</td><td>33 %</td></tr><tr><td>25 %</td><td>75 %</td><td>42 %</td><td>24 %</td></tr></tbody>
+<caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Andel av inköpspriset. Räkneexempel – procentsatserna är antaganden, inte statistik.</caption>
+</table></div>
+
+<h2>Fordonsskatt: grundbelopp och koldioxidbelopp</h2>
+<p>Fordonsskatten för en personbil är ett <strong>grundbelopp på 360 kr</strong> per år plus ett <strong>koldioxidbelopp på 22 kr per gram</strong> koldioxid över 111 g/km. En bensinbil som släpper ut 120 g/km betalar alltså 360 + 9 × 22 = 558 kr per år. Bensin- och dieselbilar som blivit skattepliktiga från 1 juni 2022 betalar ett högre koldioxidbelopp de tre första åren: 107 kr per gram över 75 g och 132 kr per gram över 125 g – samma bil betalar då 5 175 kr per år. Dieselbilar betalar dessutom tillägg. <strong>En elbil betalar 360 kr per år</strong>, eftersom den inte släpper ut någon koldioxid. Din bils exakta skatt ser du i Transportstyrelsens e-tjänst <a href="https://www.transportstyrelsen.se/sv/vagtrafik/e-tjanster-och-blanketter/e-tjanster-inom-vagtrafik/fordon/fordonets-skulder/" target="_blank" rel="noopener">Fordonets skulder</a>.</p>
+
+<h2>Vanliga frågor om bilkostnad</h2>
+<div class="gk-faq"><details><summary>Hur mycket kostar en bil i månaden?</summary><p>Lägg ihop allt bilen kostar under ett år – värdeminskning, drivmedel, försäkring, fordonsskatt, service och däck, parkering och ränta på billån – och dela med 12. Ett exempel: en bil för 300 000 kr som tappar 15 % i värde per år och behålls i 5 år, körs 1 155 mil om året och drar 0,7 liter bensin per mil à 18,59 kr, med 500 kr i månaden i försäkring, 558 kr i skatt och 6 000 kr om året för service och däck, kostar ungefär 5 080 kr i månaden. Fyll i dina egna belopp i kalkylatorn.</p></details><details><summary>Hur mycket tappar en ny bil i värde per år?</summary><p>Det finns ingen officiell siffra – det beror på modell, körsträcka, skick och efterfrågan. Ta reda på det för din modell genom att jämföra annonspriser för samma modell i olika åldrar, och räkna om skillnaden till procent per år i kalkylatorn. Tappar bilen 15 % per år är den värd 85 % av priset efter ett år och 44 % efter fem år.</p></details><details><summary>Hur räknar man ut värdeminskning på en bil?</summary><p>Värdet efter ett antal år är inköpspriset × (1 − procentsatsen) upphöjt till antalet år. Värdeminskningen är inköpspriset minus det värdet. En bil för 300 000 kr som tappar 15 % per år är värd 300 000 × 0,85⁵ = 133 110 kr efter fem år. Den har då tappat 166 890 kr, eller 33 380 kr per år i snitt.</p></details><details><summary>Hur mycket är en ny bil värd efter 3 år?</summary><p>Det beror på hur snabbt just den modellen tappar i värde. Räknar du med 15 % per år är bilen värd 0,85³ = 61 % av nypriset efter tre år – en bil för 300 000 kr är då värd ungefär 184 240 kr. Med 10 % per år blir det 73 % och med 20 % per år 51 %.</p></details><details><summary>Hur räknar man på en ny bil?</summary><p>Gör en bilkalkyl (personbilskalkyl) för hela tiden du tänker ha bilen: vad den kostar, vad den kan säljas för när du byter och alla kostnader under tiden. Skillnaden mellan köp- och säljpris delad med antalet år är värdeminskningen per år. Lägg till drivmedel, försäkring, skatt, service, däck och parkering, och ränta om du lånar. Amorteringen på lånet är ingen extra kostnad – den betalar av bilen, och det är redan räknat i värdeminskningen.</p></details><details><summary>Vad kostar det att köra bil per mil?</summary><p>Dela bilens årskostnad med antalet mil du kör. Bara bränslet kostar förbrukningen gånger literpriset: 0,7 liter per mil med bensin för 18,59 kr/l blir 13,01 kr per mil. Med alla kostnader blir det mer. Som jämförelse är den skattefria milersättningen för egen bil 25 kr per mil 2026.</p></details><details><summary>Hur mycket är fordonsskatten för en elbil?</summary><p>360 kr per år. Fordonsskatten är ett grundbelopp på 360 kr plus ett koldioxidbelopp, och en elbil släpper inte ut någon koldioxid. Därför betalar den bara grundbeloppet.</p></details><details><summary>Hur många mil kör en vanlig bil per år?</summary><p>Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025 och alla personbilar 1 243 mil. Elbilar och laddhybrider körde längre, ungefär 1 700 mil.</p></details></div>
+
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.trafa.se/globalassets/statistik/vagtrafik/korstrackor/2025/korstrackor-2025---2026-04-17.pdf" target="_blank" rel="noopener">Trafikanalys – Körsträckor 2025</a> (17 april 2026) – privatägda personbilar 1 155 mil, alla personbilar 1 243 mil, elbilar och laddhybrider ungefär 1 700 mil</li>
+<li><a href="https://www.preem.se/foretag/kund-hos-preem/listpriser/" target="_blank" rel="noopener">Preem – Drivmedelspriser för företagskunder</a> – listpris bensin 95 18,59 kr/l och diesel 23,14 kr/l inkl. moms, gäller från 1 oktober 2026. Priset på din mack kan skilja.</li>
+<li><a href="https://www.skatteverket.se/privat/skatter/beloppochprocent/2026.4.1522bf3f19aea8075ba21.html" target="_blank" rel="noopener">Skatteverket – Belopp och procent 2026</a> – skattefri bilersättning för egen bil 25 kr per mil</li>
+<li><a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/_sfs-2006-227/" target="_blank" rel="noopener">Vägtrafikskattelag (2006:227)</a> – grundbelopp 360 kr (2 kap. 8 §), koldioxidbelopp 22 kr/g över 111 g (2 kap. 9 §), högre belopp de tre första åren (2 kap. 9 a §)</li>
+<li><a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/skatter-och-avgifter/fordonsskatt/skattens-storlek/" target="_blank" rel="noopener">Transportstyrelsen – Skattens storlek</a> och <a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/skatter-och-avgifter/fordonsskatt/" target="_blank" rel="noopener">Fordonsskatt</a> – hur skatten räknas och var du ser din bils skatt</li>
+<li>Värdeminskningen räknas med samma procentsats varje år. Procentsatsen och exemplen för försäkring, service och däck är antaganden som du ändrar.</li>
+</ul>
+
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/drivmedelskalkylator"><span>Drivmedelskalkylator<small>Vad kostar bilresan i bensin, diesel eller el?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/lanekalkylator"><span>Lånekalkylator<small>Månadskostnad och ränta för ett billån</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/privatleasing-eller-kopa-bil-2026"><span>Guide: privatleasing eller köpa bil<small>Det du ska ha koll på innan du bestämmer dig</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
+</main>
+<script id="gk-bil" type="application/json">{"K": {"PRIS": {"bensin": 18.59, "diesel": 23.14}, "PRIS_DATUM": "1 oktober 2026", "KOR_PRIVAT": 1155, "KOR_ALLA": 1243, "KOR_LADDBAR": 1700, "MILERS": 25, "GRUND": 360, "CO2_KR": 22, "CO2_GRANS": 111, "MALUS_KR1": 107, "MALUS_KR2": 132, "MALUS_G1": 75, "MALUS_G2": 125}, "D": {"PRIS": 300000, "PROC": 15, "AR": 5, "ALDER": 0, "FORBR": {"bensin": 0.7, "diesel": 0.7, "el": 2.0}, "FORS": 500, "SERV": 6000, "CO2_EX": 120}, "SKATT_EX": 558}</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var CFG = JSON.parse(document.getElementById('gk-bil').textContent), C = CFG.K, D = CFG.D;
+  var $ = function (id) { return document.getElementById(id); };
+  var kr10 = function (v) { return GK.fmt(Math.round(v / 10) * 10, 0) + ' kr'; };
+  var d2 = function (v) { return GK.fmt(v, 2); };
+  var pc = function (v) { return GK.fmt(v, 0) + ' %'; };
+  var st = { typ: 'bensin' };
+
+  /* Modell – samma som scripts/build_bilkostnad.py */
+  function varde(pris, proc, ar) {
+    var vals = [];
+    for (var k = 0; k <= ar; k++) vals.push(pris * Math.pow(1 - proc / 100, k));
+    var tapp = pris - vals[ar];
+    return { vals: vals, slut: vals[ar], tapp: tapp, perAr: tapp / ar, perMan: tapp / ar / 12, forsta: pris * proc / 100, andel: tapp / pris * 100 };
+  }
+  function kostnad(pris, proc, ar, mil, forbr, bpris, fors, skatt, serv, park, ranta, ovr) {
+    var v = varde(pris, proc, ar);
+    var p = { varde: v.perAr, drivmedel: mil * forbr * bpris, forsakring: fors * 12, skatt: skatt, service: serv,
+      parkering: (park || 0) * 12, ranta: (ranta || 0) * 12, ovrigt: (ovr || 0) * 12 };
+    var tot = 0; for (var k in p) tot += p[k];
+    return { poster: p, ar: tot, man: tot / 12, permil: mil > 0 ? tot / mil : null, v: v };
+  }
+  function procentFranPriser(yngre, aldre, ar) { return (1 - Math.pow(aldre / yngre, 1 / ar)) * 100; }
+  window.GKBil = { varde: varde, kostnad: kostnad, procentFranPriser: procentFranPriser };
+
+  function seg(id, cb) {
+    var el = $(id);
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      el.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cb(b.getAttribute('data-v')); calc();
+    });
+  }
+  function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-v') === String(v) ? 'true' : 'false'); }); }
+  function val(id) { var v = GK.parse($(id).value); return isFinite(v) && v >= 0 ? v : null; }
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '" style="margin-top:12px">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+  function tile(l, v, s) { return '<div class="gk-tile"><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+  function arTxt(n) { return n === 1 ? '1 år' : n + ' år'; }
+
+  /* Drivmedel: byt enheter, exempelvärden och fordonsskatt */
+  function setTyp(t) {
+    var prev = st.typ, el = t === 'el', f = GK.parse($('forbr').value), s = GK.parse($('skatt').value);
+    st.typ = t;
+    if ((prev === 'el') !== el || !isFinite(f) || f === D.FORBR[prev]) $('forbr').value = GK.fmt(D.FORBR[t], 1);
+    $('bpris').value = el ? '' : d2(C.PRIS[t]);
+    $('bpris').placeholder = el ? 'ditt elpris' : '';
+    $('forbrUnit').textContent = el ? 'kWh/mil' : 'l/mil';
+    $('bprisUnit').textContent = el ? 'kr/kWh' : 'kr/l';
+    var skattDefault = !isFinite(s) || s === CFG.SKATT_EX || s === C.GRUND;
+    if (skattDefault) $('skatt').value = el ? GK.fmt(C.GRUND, 0) : (t === 'bensin' ? GK.fmt(CFG.SKATT_EX, 0) : '');
+    $('skatt').placeholder = t === 'diesel' ? 'din bils skatt' : '';
+    $('dmHint').innerHTML = el
+      ? 'Förbrukningen är ett exempel – fyll i din bils värde. Elpris: ditt pris per kWh med elnät, skatt och moms (<a href="/kalkylatorer/elkostnadskalkylator">räkna ut det</a>).'
+      : 'Förbrukningen är ett exempel – fyll i din bils värde (7 l/100 km = 0,7 l/mil). Priset är Preems listpris för ' + (t === 'bensin' ? 'bensin 95' : 'diesel') + ' ' + C.PRIS_DATUM + '.';
+    $('skattHint').innerHTML = el ? 'En elbil betalar bara grundbeloppet, ' + C.GRUND + ' kr per år.'
+      : (t === 'bensin' ? 'Exempel: bensinbil som släpper ut ' + D.CO2_EX + ' g koldioxid per km och är äldre än tre år. '
+        : 'Dieselbilar betalar dessutom tillägg. ') + 'Din bils skatt ser du hos <a href="https://www.transportstyrelsen.se/sv/vagtrafik/fordon/skatter-och-avgifter/fordonsskatt/" target="_blank" rel="noopener">Transportstyrelsen</a>.';
+  }
+
+  seg('typ', setTyp);
+  seg('arq', function (v) { $('ar').value = v; });
+  seg('milq', function (v) { $('mil').value = GK.fmt(+v, 0); });
+  seg('alderq', function (v) { $('alder').value = v; });
+  ['pris', 'proc', 'ar', 'mil', 'forbr', 'bpris', 'fors', 'skatt', 'serv', 'park', 'ranta', 'ovr', 'alder'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  $('ar').addEventListener('input', function () { press('arq', GK.parse($('ar').value)); });
+  $('mil').addEventListener('input', function () { press('milq', GK.parse($('mil').value)); });
+  $('alder').addEventListener('input', function () { press('alderq', GK.parse($('alder').value)); });
+  ['hNy', 'hGam', 'hAr'].forEach(function (id) { $(id).addEventListener('input', helper); });
+  ['pris', 'mil', 'fors', 'skatt', 'serv', 'park', 'ranta', 'ovr', 'hNy', 'hGam'].forEach(function (id) { GK.groupInput($(id)); });
+
+  function clear(msg) {
+    $('resBig').textContent = '–'; $('resSub').textContent = msg;
+    ['tiles', 'verdict', 'how', 'bar'].forEach(function (id) { $(id).innerHTML = ''; });
+  }
+  function clearV(msg) {
+    $('vIntro').textContent = msg;
+    ['vRes', 'vChart', 'vCap', 'vTable'].forEach(function (id) { $(id).innerHTML = ''; });
+  }
+
+  function inputs() {
+    var ar = val('ar');
+    return { pris: val('pris'), proc: val('proc'), ar: ar ? Math.round(ar) : null, alder: Math.round(val('alder') || 0) };
+  }
+
+  function calc() {
+    var I = inputs();
+    var okV = I.pris && I.pris >= 1000 && I.proc != null && I.proc < 100 && I.ar && I.ar >= 1 && I.ar <= 30;
+    if (okV) vcard(I); else clearV(!I.pris || I.pris < 1000 ? 'Fyll i bilens pris i formuläret.' : (I.proc == null || I.proc >= 100 ? 'Fyll i värdeminskningen i procent per år, till exempel 15.' : 'Fyll i hur många år du behåller bilen (1–30).'));
+
+    var mil = val('mil'), f = val('forbr'), bp = val('bpris'), el = st.typ === 'el';
+    var fors = val('fors') || 0, skatt = val('skatt') || 0, serv = val('serv') || 0;
+    var park = val('park') || 0, ranta = val('ranta') || 0, ovr = val('ovr') || 0;
+    if (!I.pris || I.pris < 1000) return clear('Fyll i bilens pris.');
+    if (I.proc == null || I.proc >= 100) return clear('Fyll i värdeminskningen i procent per år.');
+    if (!okV) return clear('Fyll i hur många år du behåller bilen (1–30).');
+    if (mil == null) return clear('Fyll i hur många mil du kör per år.');
+    if (f == null) return clear('Fyll i bilens förbrukning per mil.');
+    if (!bp) return clear(el ? 'Fyll i ditt elpris per kWh.' : 'Fyll i priset per liter.');
+
+    var r = kostnad(I.pris, I.proc, I.ar, mil, f, bp, fors, skatt, serv, park, ranta, ovr), P = r.poster;
+    $('resBig').textContent = GK.fmt(Math.round(r.man / 10) * 10, 0);
+    $('resSub').textContent = (r.permil != null ? GK.fmt(r.permil, 0) + ' kr per mil · ' : '') + kr10(r.ar) + ' per år · ' + GK.fmt(mil, 0) + ' mil per år, bilen i ' + arTxt(I.ar) + '.';
+
+    var fast = P.forsakring + P.skatt, ovrigt = P.service + P.parkering + P.ranta + P.ovrigt;
+    $('tiles').innerHTML = tile('Värdeminskning', kr10(P.varde / 12) + '/mån', r.ar > 0 ? pc(P.varde / r.ar * 100) + ' av kostnaden' : '') +
+      tile('Drivmedel', kr10(P.drivmedel / 12) + '/mån', mil > 0 ? d2(f * bp) + ' kr per mil' : '') +
+      tile('Försäkring och skatt', kr10(fast / 12) + '/mån', GK.fmt(P.forsakring, 0) + ' + ' + GK.fmt(P.skatt, 0) + ' kr per år') +
+      tile('Service, däck och övrigt', kr10(ovrigt / 12) + '/mån', P.parkering + P.ranta + P.ovrigt > 0 ? 'Inkl. parkering, ränta och övrigt' : 'Service och däck');
+
+    var parts = [['Värdeminskning', P.varde, 'var(--gk-accent)'], ['Drivmedel', P.drivmedel, 'var(--gk-ink-2)'], ['Försäkring och skatt', fast, 'var(--gk-warn-ink)'], ['Service, däck och övrigt', ovrigt, 'var(--gk-muted)']];
+    $('bar').innerHTML = r.ar > 0 ? '<div role="img" aria-label="Fördelning: ' + parts.map(function (x) { return x[0] + ' ' + pc(x[1] / r.ar * 100); }).join(', ') + '" style="display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--gk-chip)">' +
+      parts.map(function (x) { return x[1] > 0 ? '<span style="width:' + (x[1] / r.ar * 100).toFixed(2) + '%;background:' + x[2] + '"></span>' : ''; }).join('') + '</div>' +
+      '<p class="gk-hint" style="margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px 12px">' + parts.map(function (x) { return '<span style="display:inline-flex;align-items:center;gap:5px"><i style="width:10px;height:10px;border-radius:3px;background:' + x[2] + ';display:inline-block"></i>' + x[0] + '</span>'; }).join('') + '</p>' : '';
+
+    var v = '';
+    if (r.permil != null) {
+      var diff = r.permil - C.MILERS;
+      v += verdict('info', 'Bilen kostar ' + GK.fmt(r.permil, 0) + ' kr per mil – ' + (diff >= 0 ? GK.fmt(diff, 0) + ' kr mer' : GK.fmt(-diff, 0) + ' kr mindre') + ' än milersättningen',
+        'Skatteverkets skattefria milersättning för egen bil är ' + C.MILERS + ' kr per mil 2026. Det är ett jämförelsevärde – får du milersättning i jobbet täcker den ' + (diff > 0 ? 'inte hela din kostnad per mil.' : 'hela din kostnad per mil.'));
+    }
+    if (st.typ === 'diesel' && !val('skatt')) {
+      v += verdict('warn', 'Fyll i fordonsskatten', 'Dieselbilar betalar koldioxidbelopp och tillägg. Din bils skatt ser du hos Transportstyrelsen.');
+    }
+    $('verdict').innerHTML = v;
+
+    $('how').innerHTML =
+      '<p><strong>Värdeminskning:</strong> ' + kr10(I.pris) + ' × (1 − ' + GK.fmt(I.proc, 1).replace(/,0$/, '') + ' %)<sup>' + I.ar + '</sup> = ' + kr10(r.v.slut) + ' efter ' + arTxt(I.ar) + '. Bilen tappar ' + kr10(r.v.tapp) + ', delat på ' + arTxt(I.ar) + ' = ' + kr10(P.varde) + ' per år.</p>' +
+      '<p><strong>Drivmedel:</strong> ' + GK.fmt(mil, 0) + ' mil × ' + d2(f) + (el ? ' kWh/mil × ' + d2(bp) + ' kr/kWh' : ' l/mil × ' + d2(bp) + ' kr/l') + ' = ' + kr10(P.drivmedel) + ' per år.</p>' +
+      '<p><strong>Övrigt per år:</strong> försäkring ' + kr10(P.forsakring) + ', fordonsskatt ' + kr10(P.skatt) + ', service och däck ' + kr10(P.service) +
+      (P.parkering ? ', parkering ' + kr10(P.parkering) : '') + (P.ranta ? ', ränta ' + kr10(P.ranta) : '') + (P.ovrigt ? ', övrigt ' + kr10(P.ovrigt) : '') + '.</p>' +
+      '<p>Summa ' + kr10(r.ar) + ' per år / 12 = ' + kr10(r.man) + ' per månad' + (r.permil != null ? ', och / ' + GK.fmt(mil, 0) + ' mil = ' + GK.fmt(r.permil, 1) + ' kr per mil' : '') + '. Amorteringen på ett billån räknas inte – den betalar av bilen, som redan finns med som värdeminskning.</p>';
+  }
+
+  function vcard(I) {
+    var v = varde(I.pris, I.proc, I.ar), slutAlder = I.alder + I.ar;
+    $('vIntro').textContent = 'Räknat på priset ' + kr10(I.pris) + ', ' + GK.fmt(I.proc, 1).replace(/,0$/, '') + ' % per år och ' + arTxt(I.ar) + ' från formuläret.';
+    $('vRes').innerHTML = '<p style="margin:0;font-size:16px;line-height:1.5"><strong>Efter ' + arTxt(I.ar) + ' är bilen värd ca ' + kr10(v.slut) + '</strong> – den har tappat ' + kr10(v.tapp) + ', ' + pc(v.andel) + ' av priset.</p>' +
+      '<div class="gk-tiles" style="margin-top:10px">' + tile('Första året', kr10(v.forsta), GK.fmt(I.proc, 1).replace(/,0$/, '') + ' % av priset') +
+      tile('Snitt per år', kr10(v.perAr), kr10(v.perMan) + ' per månad') +
+      tile('Tappar totalt', kr10(v.tapp), 'På ' + arTxt(I.ar)) +
+      tile('Värd när du säljer', kr10(v.slut), 'Bilen är då ' + arTxt(slutAlder)) + '</div>';
+
+    var W = Math.max(280, Math.min(560, $('vChart').clientWidth || 480)), H = 170, L = 6, R = 6, T = 22, B = 24;
+    var n = I.ar + 1, gap = n > 12 ? 2 : 6, bw = (W - L - R - gap * (n - 1)) / n, y = function (x) { return T + (1 - x / I.pris) * (H - T - B); };
+    var s = '';
+    v.vals.forEach(function (x, k) {
+      var x0 = L + k * (bw + gap);
+      s += '<rect x="' + x0.toFixed(1) + '" y="' + y(x).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + (H - B - y(x)).toFixed(1) + '" rx="3" fill="' + (k === 0 ? 'var(--gk-ink-2)' : 'var(--gk-accent)') + '"/>';
+      if (n <= 12 || k % 2 === 0 || k === n - 1) s += '<text x="' + (x0 + bw / 2).toFixed(1) + '" y="' + (H - 7) + '" text-anchor="middle" font-size="11" fill="var(--gk-muted)">' + (k === 0 ? 'Köp' : k) + '</text>';
+      if (k === 0 || k === n - 1) s += '<text x="' + (k === 0 ? x0 : x0 + bw).toFixed(1) + '" y="' + (y(x) - 6).toFixed(1) + '" text-anchor="' + (k === 0 ? 'start' : 'end') + '" font-size="11" font-weight="700" fill="var(--gk-ink)">' + GK.fmt(Math.round(x / 1000), 0) + ' tkr</text>';
+    });
+    $('vCap').textContent = 'Bilens värde vid köpet och efter varje år du äger den.';
+    $('vChart').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" aria-label="Bilens värde: ' + kr10(I.pris) + ' vid köp, ' + kr10(v.slut) + ' efter ' + arTxt(I.ar) + '" style="display:block;font-family:inherit">' + s + '</svg>';
+
+    var rows = '';
+    for (var k = 1; k <= I.ar; k++) {
+      rows += '<tr><td>' + k + '<small class="gk-hint" style="display:block">bilen ' + (I.alder + k) + ' år</small></td><td>' + GK.fmt(Math.round(v.vals[k] / 10) * 10, 0) + '</td><td>' + GK.fmt(Math.round((v.vals[k - 1] - v.vals[k]) / 10) * 10, 0) + '</td><td>' + GK.fmt((1 - v.vals[k] / I.pris) * 100, 0) + ' %</td></tr>';
+    }
+    $('vTable').innerHTML = '<thead><tr><th scope="col">År</th><th scope="col">Värde</th><th scope="col">Tappar</th><th scope="col">Totalt</th></tr></thead><tbody>' + rows +
+      '</tbody><caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor. Tappar = värdeminskningen det året. Totalt = andel av priset som bilen har tappat.</caption>';
+  }
+
+  function helper() {
+    var a = val('hNy'), b = val('hGam'), n = val('hAr');
+    if (!a || !b || !n || n <= 0) { $('hRes').innerHTML = ''; return; }
+    if (b >= a) { $('hRes').innerHTML = verdict('info', 'Den äldre bilen är inte billigare', 'Fyll i priset för den yngre bilen i första rutan och den äldre i andra.'); return; }
+    var p = procentFranPriser(a, b, n), pr = Math.round(p * 10) / 10;
+    $('hRes').innerHTML = '<div class="gk-tiles">' + tile('Tappar per år', GK.fmt(p, 1) + ' %', 'Samma andel varje år') + tile('Tappat totalt', kr10(a - b), 'På ' + GK.fmt(n, 0) + ' år') + '</div>' +
+      '<button type="button" class="gk-btn" id="hUse" style="margin-top:12px">Använd ' + GK.fmt(pr, 1) + ' % i kalkylatorn</button>';
+    $('hUse').addEventListener('click', function () {
+      $('proc').value = GK.fmt(pr, 1); calc();
+      var res = document.querySelector('.gk-result'); if (res && res.scrollIntoView) res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  setTyp('bensin');
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Bilkostnaden är en uppskattning som bygger på de belopp du fyller i.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-    <!-- Cross-linking -->
-    <div class="container" style="padding-bottom:48px;">
-        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Relaterade kalkylatorer</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-            <a href="/kalkylatorer/loneraknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
-                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
-            </a>
-            <a href="/kalkylatorer/ranta-pa-ranta" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
-                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta-kalkylator</div>
-            </a>
-            <a href="/kalkylatorer/rot-rut" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
-                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
-            </a>
-            <a href="/kalkylatorer/bolanekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏦</div>
-                <div style="font-weight:600;font-size:0.9rem;">Bolånekalkylator</div>
-            </a>
-            <a href="/kalkylatorer/isk-skatteberaknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
-                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
-            </a>
-        </div>
-    </div>
-
-    <script>
-        // Elements
-        const inputs = {
-            korstrack: document.getElementById('korstrack'),
-            bransleforbr: document.getElementById('bransleforbr'),
-            bralsepris: document.getElementById('bralsepris'),
-            forsäkring: document.getElementById('forsäkring'),
-            fordonsskatt: document.getElementById('fordonsskatt'),
-            service: document.getElementById('service'),
-            inkopspris: document.getElementById('inkopspris'),
-            värdeminsk: document.getElementById('värdeminsk'),
-            parkering: document.getElementById('parkering'),
-            lanekostnad: document.getElementById('lanekostnad')
-        };
-
-        // Sync input changes
-        Object.keys(inputs).forEach(key => {
-            inputs[key].addEventListener('input', calculate);
-        });
-
-        // Format number
-        function fmt(n) {
-            return Math.round(n).toLocaleString('sv-SE') + ' kr';
-        }
-
-        // Format decimal
-        function fmtDecimal(n, decimals = 2) {
-            return n.toFixed(decimals).replace('.', ',');
-        }
-
-        // Calculate
-        function calculate() {
-            const korstrack = parseFloat(inputs.korstrack.value) || 0;
-            const bransleforbr = parseFloat(inputs.bransleforbr.value) || 0;
-            const bralsepris = parseFloat(inputs.bralsepris.value) || 0;
-            const forsäkring = parseFloat(inputs.forsäkring.value) || 0;
-            const fordonsskatt = parseFloat(inputs.fordonsskatt.value) || 0;
-            const service = parseFloat(inputs.service.value) || 0;
-            const inkopspris = parseFloat(inputs.inkopspris.value) || 0;
-            const värdeminsk = parseFloat(inputs.värdeminsk.value) || 0;
-            const parkering = parseFloat(inputs.parkering.value) || 0;
-            const lanekostnad = parseFloat(inputs.lanekostnad.value) || 0;
-
-            // Monthly costs
-            const monthlyDrivmedel = (korstrack * bransleforbr / 100) * bralsepris;
-            const monthlyFörsäkring = forsäkring;
-            const monthlyFordonsskatt = fordonsskatt / 12;
-            const monthlyService = service / 12;
-            const monthlyVärdeminsk = (inkopspris * värdeminsk / 100) / 12;
-            const monthlyParkering = parkering;
-            const monthlyLanekostnad = lanekostnad;
-
-            const totalMonthly = monthlyDrivmedel + monthlyFörsäkring + monthlyFordonsskatt + monthlyService + monthlyVärdeminsk + monthlyParkering + monthlyLanekostnad;
-            const costPerKm = korstrack > 0 ? totalMonthly / korstrack : 0;
-            const costPerYear = totalMonthly * 12;
-
-            // Update results
-            document.getElementById('totalMonthly').textContent = fmt(totalMonthly);
-            document.getElementById('costPerKm').textContent = korstrack > 0 ? fmtDecimal(costPerKm) + ' kr' : '—';
-            document.getElementById('costPerYear').textContent = fmt(costPerYear);
-
-            // Draw pie chart
-            drawPieChart({
-                drivmedel: monthlyDrivmedel,
-                försäkring: monthlyFörsäkring,
-                skatt: monthlyFordonsskatt,
-                service: monthlyService,
-                värdeminsk: monthlyVärdeminsk,
-                parkering: monthlyParkering,
-                lån: monthlyLanekostnad
-            });
-
-            // Build table
-            buildTable({
-                drivmedel: monthlyDrivmedel,
-                försäkring: monthlyFörsäkring,
-                skatt: monthlyFordonsskatt,
-                service: monthlyService,
-                värdeminsk: monthlyVärdeminsk,
-                parkering: monthlyParkering,
-                lån: monthlyLanekostnad
-            });
-        }
-
-        // Draw pie chart
-        function drawPieChart(data) {
-            const canvas = document.getElementById('pieChart');
-            const ctx = canvas.getContext('2d');
-            const dpr = window.devicePixelRatio || 1;
-            const rect = canvas.parentElement.getBoundingClientRect();
-
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
-            canvas.style.width = rect.width + 'px';
-            canvas.style.height = rect.height + 'px';
-            ctx.scale(dpr, dpr);
-
-            const W = rect.width;
-            const H = rect.height;
-            const centerX = W / 2;
-            const centerY = H / 2;
-            const radius = Math.min(W, H) / 2 - 60;
-
-            ctx.clearRect(0, 0, W, H);
-
-            // Colors (adapted for dark mode)
-            const isDarkMode = window.matchMedia && false;
-            const colors = {
-                drivmedel: isDarkMode ? '#f59e0b' : '#f59e0b',
-                försäkring: isDarkMode ? '#3b82f6' : '#3b82f6',
-                skatt: isDarkMode ? '#ef4444' : '#ef4444',
-                service: isDarkMode ? '#1F8A5B' : '#1F8A5B',
-                värdeminsk: isDarkMode ? '#8b5cf6' : '#8b5cf6',
-                parkering: isDarkMode ? '#ec4899' : '#ec4899',
-                lån: isDarkMode ? '#f97316' : '#f97316'
-            };
-
-            const labels = {
-                drivmedel: 'Drivmedel',
-                försäkring: 'Försäkring',
-                skatt: 'Fordonsskatt',
-                service: 'Service',
-                värdeminsk: 'Värdeminskning',
-                parkering: 'Parkering',
-                lån: 'Lånekostnad'
-            };
-
-            const values = Object.values(data);
-            const total = values.reduce((a, b) => a + b, 0);
-
-            if (total === 0) return;
-
-            let currentAngle = -Math.PI / 2;
-
-            // Draw pie slices
-            const keys = Object.keys(data);
-            keys.forEach((key, idx) => {
-                const value = data[key];
-                if (value === 0) return;
-
-                const sliceAngle = (value / total) * 2 * Math.PI;
-                const nextAngle = currentAngle + sliceAngle;
-
-                // Draw slice
-                ctx.fillStyle = colors[key];
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.arc(centerX, centerY, radius, currentAngle, nextAngle);
-                ctx.closePath();
-                ctx.fill();
-
-                // Draw label (only if slice is significant)
-                const percent = (value / total) * 100;
-                if (percent > 5) {
-                    const labelAngle = currentAngle + sliceAngle / 2;
-                    const labelX = centerX + Math.cos(labelAngle) * (radius * 0.65);
-                    const labelY = centerY + Math.sin(labelAngle) * (radius * 0.65);
-
-                    ctx.fillStyle = isDarkMode ? '#f3f4f6' : '#15201A';
-                    ctx.font = 'bold 12px -apple-system, sans-serif';
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-                    ctx.fillText(Math.round(percent) + '%', labelX, labelY);
-                }
-
-                currentAngle = nextAngle;
-            });
-
-            // Draw legend
-            const legendX = 20;
-            let legendY = H - 120;
-            const legendItemHeight = 20;
-
-            ctx.font = '12px -apple-system, sans-serif';
-            ctx.textAlign = 'left';
-
-            keys.forEach((key, idx) => {
-                const value = data[key];
-                const percent = total > 0 ? (value / total) * 100 : 0;
-
-                // Color box
-                ctx.fillStyle = colors[key];
-                ctx.fillRect(legendX, legendY - 8, 12, 12);
-
-                // Label
-                ctx.fillStyle = isDarkMode ? '#d1d5db' : '#56625B';
-                ctx.fillText(labels[key] + ' (' + Math.round(percent) + '%)', legendX + 20, legendY);
-
-                legendY += legendItemHeight;
-            });
-        }
-
-        // Build table
-        function buildTable(data) {
-            const tbody = document.getElementById('tableBody');
-            const keys = Object.keys(data);
-            const labels = {
-                drivmedel: 'Drivmedel',
-                försäkring: 'Försäkring',
-                skatt: 'Fordonsskatt',
-                service: 'Service & underhåll',
-                värdeminsk: 'Värdeminskning',
-                parkering: 'Parkering',
-                lån: 'Lånekostnad'
-            };
-
-            let total = 0;
-            const rows = keys.map(key => {
-                const monthlyValue = data[key];
-                const yearlyValue = monthlyValue * 12;
-                total += monthlyValue;
-
-                return `
-                    <tr>
-                        <td>${labels[key]}</td>
-                        <td>${fmt(monthlyValue)}</td>
-                        <td>${fmt(yearlyValue)}</td>
-                    </tr>
-                `;
-            });
-
-            rows.push(`
-                <tr style="border-top: 2px solid var(--border); font-weight: 700;">
-                    <td>Totalt</td>
-                    <td>${fmt(total)}</td>
-                    <td>${fmt(total * 12)}</td>
-                </tr>
-            `);
-
-            tbody.innerHTML = rows.join('');
-        }
-
-        // Table toggle
-        document.getElementById('tableToggle').addEventListener('click', function() {
-            const table = document.getElementById('dataTable');
-            const visible = table.classList.toggle('visible');
-            this.textContent = visible ? 'Dölj kostnadssummering ▲' : 'Visa kostnadssummering ▼';
-        });
-
-        // Resize handler
-        window.addEventListener('resize', calculate);
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', calculate);
-
-        // Init
-        calculate();
-    </script>
+</footer>
 </body>
 </html>

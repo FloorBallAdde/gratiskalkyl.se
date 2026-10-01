@@ -7,7 +7,7 @@ html { color-scheme: light; }
   --text: #15201A; --text-light: #56625B; --text-muted: #56625B; --muted: #56625B;
   --bg: #F6F5F1; --white: #FFFFFF; --card: #FFFFFF; --surface: #FFFFFF; --border: #E2E0D8;
 }
-body.gk-skin { font-family: var(--gk-font) !important; background: var(--gk-bg) !important; color: var(--gk-ink); }
+body.gk-skin { font-family: var(--gk-font) !important; background: var(--gk-bg) !important; color: var(--gk-ink); letter-spacing: 0.012em; word-spacing: 0.04em; }
 body.gk-skin h1, body.gk-skin h2 { font-family: var(--gk-head) !important; letter-spacing: -0.01em; }
 body.gk-skin h1 { font-weight: 700; }
 body.gk-skin h1, body.gk-skin h2, body.gk-skin h3 { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }

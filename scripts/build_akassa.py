@@ -125,9 +125,9 @@ def page():
         f'<option value="{m}"{" selected" if m == 12 else ""}>{m} månader{" – alla" if m == 12 else ""}</option>'
         for m in range(12, -1, -1))
 
-    title = "A-kassekalkylator 2026 – räkna ut hur mycket a-kassa du får | GratisKalkyl"
-    desc = ("Hur mycket får du i a-kassa? Räkna ut ersättningen före och efter skatt med reglerna 2026: 80, 70 och 65 % av "
-            "lönen upp till taket 34 000 kr, hur många dagar du får och vad som gäller i Alfa-kassan.")
+    title = "A-kassa 2026 – räkna ut hur mycket du får | GratisKalkyl"
+    desc = ("Räkna ut din a-kassa 2026 före och efter skatt: 80, 70 och 65 % av lönen upp till 34 000 kr, "
+            "antal dagar och vad Alfa-kassan ger.")
     crumbs = [("Hem", "/"), ("Familj & trygghet", "/familj-och-trygghet"), ("A-kassekalkylator", None)]
     ld = [
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "A-kassekalkylator 2026",
@@ -156,7 +156,7 @@ def page():
 <div class="gk-tool-head">
 {S.breadcrumbs(crumbs)}
 <div class="gk-eyebrow">A-kassekalkylator 2026</div>
-<h1>Hur mycket får du i a-kassa?</h1>
+<h1>Hur mycket får du i a&#8209;kassa?</h1>
 <p class="gk-lead">Räkna ut din ersättning före och efter skatt, hur länge du får den och hur mycket du tappar jämfört med lönen.</p>
 <p class="gk-meta">Uppdaterad {UPDATED} · Regler från 1 oktober 2025 · Källa: <a href="{SRC['lag']}" target="_blank" rel="noopener">lagen om arbetslöshetsförsäkring</a></p>
 </div>

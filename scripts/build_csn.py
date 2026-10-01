@@ -99,7 +99,7 @@ CHEV = S.ICON_CHEV
 
 
 def page():
-    title = "CSN-kalkylator 2026 – räkna ut återbetalning per månad | GratisKalkyl"
+    title = "CSN-kalkylator: räkna ut återbetalning | GratisKalkyl"
     desc = ("Hur mycket betalar du tillbaka på CSN-lånet? Räkna ut månadsbelopp, årsbelopp, när du är klar och total ränta "
             "med CSN:s regler 2026. Se om du kan betala mindre.")
     crumbs = [("Hem", "/"), ("Sparande & pension", "/sparande-och-pension"), ("CSN-kalkylator", None)]

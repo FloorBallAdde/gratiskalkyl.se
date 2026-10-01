@@ -1,435 +1,40 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Bolånekalkylator 2026 – Räkna ut bolån | GratisKalkyl.se</title>
-    <meta name="description" content="Beräkna din månadskostnad för bolån med vår kostnadsfria bolånekalkylator. Se ränta, amortering och ränteavdrag direkt. Gratis och uppdaterad för 2026.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator">
-    <meta property="og:title" content="Bolånekalkylator 2026 – Räkna ut din bolånekostnad">
-    <meta property="og:description" content="Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag. Uppdaterad för 2026.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Bolånekalkylator 2026 – Räkna ut din bolånekostnad">
-    <meta name="twitter:description" content="Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag. Uppdaterad för 2026.">
-    <style>
-        500;600;700;800&display=swap');
-
-        :root {
-            --primary: #0D6A45;
-            --primary-light: #E4F1EA;
-            --primary-dark: #0A5236;
-            --accent: #2563eb;
-            --text: #15201A;
-            --text-light: #56625B;
-            --bg: #F6F5F1;
-            --white: #ffffff;
-            --border: #E2E0D8;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--text); }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
-
-        .page-header { padding: 40px 0 24px; }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        .page-header p { color: var(--text-light); font-size: 1.05rem; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .breadcrumb a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
-
-        .calc-wrapper {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-bottom: 48px;
-            box-shadow: var(--shadow);
-        }
-        .input-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        .input-group { display: flex; flex-direction: column; }
-        .input-group label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .input-group .sublabel {
-            font-weight: 400;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-        .input-group input[type="number"],
-        .input-group input[type="range"],
-        .input-group select {
-            width: 100%;
-        }
-        .input-group input[type="number"] {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-        }
-        .input-group input[type="number"]:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group input[type="number"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .input-group select {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-            background: var(--white);
-        }
-        .input-group select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
-        .input-group input[type="range"] {
-            margin-top: 8px;
-            accent-color: var(--primary);
-            height: 6px;
-            transition: box-shadow 0.2s ease;
-        }
-        .input-group input[type="range"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .range-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        .results {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .result-box {
-            background: var(--primary-light);
-            border-radius: 10px;
-            padding: 24px 20px;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .result-box.highlight {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-        .result-box .label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            opacity: 0.8;
-        }
-        .result-box .value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-        }
-        .result-box .sub {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-
-        .chart-separator { height: 1px; background: var(--border); margin: 24px 0; }
-
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            margin-bottom: 16px;
-        }
-        canvas { width: 100% !important; height: 100% !important; }
-
-        .table-toggle {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 12px 0;
-            margin-top: 16px;
-            transition: color 0.2s ease;
-        }
-        .table-toggle:hover { text-decoration: underline; }
-        .table-toggle:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            display: none;
-        }
-        .data-table.visible { display: table; }
-        .data-table th {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 12px;
-            text-align: right;
-            font-weight: 500;
-        }
-        
-        .data-table th:first-child { text-align: left; }
-        .data-table td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
-        .data-table td:first-child { text-align: left; }
-
-        .info-section { margin-bottom: 48px; }
-        .info-section h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 48px 0 16px;
-            letter-spacing: -0.01em;
-        }
-        .info-section h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 24px 0 12px;
-        }
-        .info-section p { color: var(--text-light); margin-bottom: 16px; }
-        .info-section ul { color: var(--text-light); margin-bottom: 16px; margin-left: 24px; }
-        .info-section li { margin-bottom: 8px; }
-        .formula-box {
-            background: #F6F5F1;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            margin: 16px 0;
-            overflow-x: auto;
-        }
-        
-
-        .faq { margin-bottom: 48px; }
-        .faq h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
-        .faq-item { margin-bottom: 8px; }
-        .faq-item summary {
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--primary);
-            padding: 12px 0;
-            transition: color 0.2s ease;
-        }
-        .faq-item summary:hover { text-decoration: underline; }
-        .faq-item summary:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
-        .faq-item p { margin-left: 20px; margin-top: 8px; color: var(--text-light); }
-
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a { color: var(--primary); text-decoration: none; }
-        footer a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
-
-        @media (max-width: 900px) { .results { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .input-grid { grid-template-columns: 1fr; gap: 16px; }
-            .results { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.5rem; }
-            .calc-wrapper { padding: 16px; }
-            nav { display: none; }
-            .result-box .value { font-size: 1.3rem; }
-            .input-group input[type="number"],
-            .input-group select { min-height: 44px; padding: 12px; }
-            .table-toggle { min-height: 44px; }
-        }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Bolånekalkylator 2026",
-        "url": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator",
-        "description": "Gratis bolånekalkylator för att beräkna din månadskostnad. Se ränta, amortering och ränteavdrag för 2026.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
-        "inLanguage": "sv"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
-            { "@type": "ListItem", "position": 2, "name": "Bolånekalkylator 2026", "item": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Hur mycket behöver jag amortera på mitt bolån?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Amorteringskravet i Sverige innebär att du måste amortera minst 1% av det ursprungliga lånebeloppet per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Det skärpta kravet på ytterligare 1% vid skuld över 4,5 gånger bruttoinkomsten slopades 1 april 2026. Lån tagna före 1 juni 2016 omfattas inte av kravet."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är ränteavdrag och hur mycket får jag tillbaka?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Du får dra av 30% av räntekostnader upp till 100 000 kr per år i din deklaration. På räntekostnader över 100 000 kr är avdraget 21%. Detta innebär att din faktiska räntekostnad blir lägre än den nominella räntan."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är skillnaden mellan rörlig och bunden ränta?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Rörlig ränta (3 månader) följer marknadsräntan och kan ändras kvartalsvis. Bunden ränta är fast under en vald period (1–10 år). Historiskt har rörlig ränta ofta varit billigare totalt sett, men bunden ger trygghet."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur mycket kan jag låna för att köpa bostad?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sedan 1 april 2026 är bolånetaket 90% av bostadens marknadsvärde. Du behöver alltså minst 10% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta ca 6–7%, varierar mellan bankerna)."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad innebär kalkylräntan?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kalkylräntan är den ränta banken använder för att bedöma om du klarar av lånet även vid högre räntor. Den ligger ofta på ca 6–7% (varierar mellan bankerna), alltså högre än den faktiska räntan. Syftet är att säkerställa att du har marginal."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur påverkar amortering min totala kostnad?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Amortering minskar din skuld och därmed din räntekostnad över tid. Ju mer du amorterar, desto mindre betalar du i ränta totalt. Amortering är i praktiken ett sparande — du bygger upp eget kapital i din bostad."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Kan jag få amorteringsfrihet?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja, under särskilda omständigheter kan banken bevilja tillfällig amorteringsfrihet, exempelvis vid sjukdom, arbetslöshet eller kraftigt höjda räntor. Det är dock bankens beslut och inget du har automatisk rätt till."
-                }
-            }
-        ]
-    }
-    </script>
-  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  
-    <link rel="stylesheet" href="/mobile.css">
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Bolånekalkylator: räkna ut ränta &amp; amortering | GratisKalkyl</title>
+<meta name="description" content="Räkna ut ränta, amortering och ränteavdrag på ditt bolån med reglerna 2026. Exempel: 2,7 miljoner till 3 % kostar 11 250 kr/mån före ränteavdrag.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator">
+<meta property="og:title" content="Vad kostar bolånet per månad? Bolånekalkylator 2026">
+<meta property="og:description" content="Räkna ut ränta, amortering och ränteavdrag på ditt bolån med reglerna 2026. Exempel: 2,7 miljoner till 3 % kostar 11 250 kr/mån före ränteavdrag.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/bolanekalkylator">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bolånekalkylator 2026", "url": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Räkna ut ränta, amortering och ränteavdrag på ditt bolån med reglerna 2026. Exempel: 2,7 miljoner till 3 % kostar 11 250 kr/mån före ränteavdrag.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Boende & lån", "item": "https://gratiskalkyl.se/boende-och-lan"}, {"@type": "ListItem", "position": 3, "name": "Bolånekalkylator", "item": "https://gratiskalkyl.se/kalkylatorer/bolanekalkylator"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hur räknar man ut månadskostnaden för ett bolån?", "acceptedAnswer": {"@type": "Answer", "text": "Lägg ihop räntan och amorteringen. Räntan per månad är lånet gånger räntan delat med 12, och amorteringen är lånet gånger amorteringskravet delat med 12. Ett lån på 3 000 000 kr med 3 % ränta och 2 % amortering kostar 7 500 + 5 000 = 12 500 kr i månaden. Ränteavdraget sänker kostnaden med 2 250 kr i månaden. Avgift till föreningen, drift och försäkring tillkommer."}}, {"@type": "Question", "name": "Hur räknar man ut amortering på bolån?", "acceptedAnswer": {"@type": "Answer", "text": "Amorteringen är en procent av lånet per år: 2 % om lånet är mer än 70 % av bostadens värde och 1 % om det är mer än 50 %. Lånar du 2 000 000 kr till en bostad värd 2 500 000 kr är belåningsgraden 80 %. Då ska du amortera minst 40 000 kr om året, alltså 3 333 kr i månaden. Under 50 % finns inget krav."}}, {"@type": "Question", "name": "Hur räknar man ut räntan på ett bolån?", "acceptedAnswer": {"@type": "Answer", "text": "Multiplicera lånet med räntan och dela med 12. Med 2 000 000 kr i lån och snitträntan för nya bolån, 2,78 %, blir räntan 55 600 kr om året eller 4 633 kr i månaden. Efter ränteavdraget på 30 % blir det 3 243 kr. Räntan sjunker i takt med att du amorterar."}}, {"@type": "Question", "name": "Vad är amorteringskravet 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Sedan 1 april 2026 står amorteringskravet i lagen om begränsning av bostadskrediter. Är belåningsgraden över 70 % ska du amortera minst 2 % av lånet per år, och över 50 % minst 1 %. Procenten räknas på det högsta lånebeloppet efter den senaste värderingen och belåningsgraden på bostadens värde när du köpte den. Banken får värdera om bostaden tidigast efter fem år. Banken kan medge uppehåll om det finns särskilda skäl, och för en nyproducerad bostad i högst fem år. Lån som togs före 1 juni 2016 omfattas inte."}}, {"@type": "Question", "name": "Finns det skärpta amorteringskravet kvar?", "acceptedAnswer": {"@type": "Answer", "text": "Inte för nya lån. Tidigare fick den som lånade mer än 4,5 gånger hushållets årsinkomst före skatt amortera upp till 3 % per år. Kravet togs bort 1 april 2026, men på lån som redan omfattades av det upphör det inte automatiskt – du behöver be banken ändra villkoren. Under Fler val i kalkylatorn ser du hur mycket det sänker amorteringen."}}, {"@type": "Question", "name": "Hur mycket är ränteavdraget på bolån?", "acceptedAnswer": {"@type": "Answer", "text": "Du får en skattereduktion på 30 % av räntan upp till 100 000 kr om året och 21 % på det som är över. Gränsen gäller per person. Betalar du 150 000 kr i ränta och står ensam på lånet blir avdraget 40 500 kr. Är ni två som delar lika får ni 45 000 kr tillsammans. Avdraget kan inte bli större än den skatt du betalar."}}, {"@type": "Question", "name": "Vad är bolåneräntan just nu?", "acceptedAnswer": {"@type": "Answer", "text": "Enligt SCB:s finansmarknadsstatistik var snitträntan för hushållens nya bolån 2,78 % i augusti 2026. Rörlig ränta var i snitt 2,73 %, bunden 1–5 år 3,18 % och bunden över 5 år 3,34 %. Din ränta beror bland annat på bank och bindningstid."}}, {"@type": "Question", "name": "Hur mycket kontantinsats behöver man?", "acceptedAnswer": {"@type": "Answer", "text": "Minst 10 % av bostadens pris, eftersom du får låna högst 90 % sedan 1 april 2026 (tidigare 85 %). Köper du en bostad för 3 000 000 kr behöver du alltså minst 300 000 kr. Utökar du ett lån senare får det bli högst 80 % av bostadens värde."}}]}</script>
+
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -438,8 +43,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -454,524 +59,324 @@
 </div>
 </div>
 
-    
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li><a href="/boende-och-lan">Boende &amp; lån</a></li><li aria-current="page">Bolånekalkylator</li></ol></nav>
+<div class="gk-eyebrow">Bolånekalkylator 2026</div>
+<h1>Vad kostar bolånet per månad?</h1>
+<p class="gk-lead">Räkna ut ränta, amortering och ränteavdrag – och vilket amorteringskrav som gäller för ditt lån.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Regler från 1 april 2026 · Källa: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2026226-om-begransning-av-bostadskrediter_sfs-2026-226/" target="_blank" rel="noopener">lag (2026:226) om begränsning av bostadskrediter</a></p>
+</div>
 
-    <main class="container" id="innehall">
-        <div class="page-header">
-            <div class="breadcrumb"><a href="/">GratisKalkyl.se</a> → Bolånekalkylator</div>
-            <h1>Bolånekalkylator 2026</h1>
-            <p>Beräkna din månadskostnad för bolån. Se ränta, amortering och ränteavdrag — och följ hur skulden minskar år för år.</p>
-        </div>
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="bform" novalidate onsubmit="return false">
+<div class="gk-field">
+<label for="pris">Bostadens pris eller värde</label>
+<div class="gk-input"><input id="pris" inputmode="numeric" autocomplete="off" value="3 000 000"><span class="unit">kr</span></div>
+</div>
 
-        <div class="calc-wrapper">
-            <div class="input-grid">
-                <div class="input-group">
-                    <label for="bostadenVarde">Bostadens värde (kr)</label>
-                    <input type="number" id="bostadenVarde" value="3500000" min="100000" max="20000000" step="50000">
-                    <input type="range" id="bostadenVardeSlider" min="100000" max="20000000" step="50000" value="3500000">
-                    <div class="range-labels"><span>100 000</span><span>20 000 000</span></div>
-                </div>
-                <div class="input-group">
-                    <label for="kontantinsats">Kontantinsats (%)</label>
-                    <input type="number" id="kontantinsats" value="10" min="0" max="90" step="1">
-                    <input type="range" id="kontantinsatsSlider" min="0" max="90" step="1" value="10">
-                    <div class="range-labels"><span>0%</span><span>90%</span></div>
-                </div>
-                <div class="input-group">
-                    <label for="ranta">Årsränta (%)</label>
-                    <input type="number" id="ranta" value="3.5" min="0" max="15" step="0.1">
-                    <input type="range" id="rantaSlider" min="0" max="15" step="0.1" value="3.5">
-                    <div class="range-labels"><span>0%</span><span>15%</span></div>
-                </div>
-                <div class="input-group">
-                    <label for="amortering">Amortering (% av ursprungligt lån/år)</label>
-                    <input type="number" id="amortering" value="2" min="0" max="10" step="0.5">
-                    <input type="range" id="amorteringSlider" min="0" max="10" step="0.5" value="2">
-                    <div class="range-labels"><span>0%</span><span>10%</span></div>
-                </div>
-                <div class="input-group">
-                    <label for="lopttid">Visningsperiod (år)</label>
-                    <select id="lopttid">
-                        <option value="10">10 år</option>
-                        <option value="20">20 år</option>
-                        <option value="30" selected>30 år</option>
-                        <option value="40">40 år</option>
-                        <option value="50">50 år</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="bruttoinkomst">Hushållets bruttoinkomst (kr/mån)</label>
-                    <div class="sublabel">Används för att visa din skuldkvot</div>
-                    <input type="number" id="bruttoinkomst" value="50000" min="0" max="500000" step="1000">
-                </div>
-            </div>
+<div class="gk-field">
+<label for="lan">Lånebelopp</label>
+<div class="gk-input"><input id="lan" inputmode="numeric" autocomplete="off" value="2 700 000"><span class="unit">kr</span></div>
+<div class="gk-seg" style="--n:3" id="kq" role="group" aria-label="Kontantinsats">
+<button type="button" data-v="10" aria-pressed="true">10 %<small>kontantinsats</small></button><button type="button" data-v="30" aria-pressed="false">30 %<small>kontantinsats</small></button><button type="button" data-v="50" aria-pressed="false">50 %<small>kontantinsats</small></button>
+</div>
+<span class="gk-hint" id="kHint"></span>
+</div>
 
-            <div class="results">
-                <div class="result-box highlight">
-                    <div class="label">Månadskostnad</div>
-                    <div class="value" id="resManad">—</div>
-                    <div class="sub">Ränta + amortering</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Efter ränteavdrag</div>
-                    <div class="value" id="resEfterAvdrag">—</div>
-                    <div class="sub">Din faktiska kostnad</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Lånebelopp</div>
-                    <div class="value" id="resLan">—</div>
-                    <div class="sub" id="resSkuldkvot"></div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Belåningsgrad</div>
-                    <div class="value" id="resBelaning">—</div>
-                </div>
-            </div>
-            <div id="bolanVarning" style="display:none;margin-top:12px;padding:12px 16px;border-radius:8px;background:#fff7ed;border:1px solid #fed7aa;color:#92400e;font-size:0.9rem;"></div>
+<div class="gk-field">
+<label for="ranta">Ränta</label>
+<div class="gk-input"><input id="ranta" inputmode="decimal" autocomplete="off" value="3"><span class="unit">% per år</span></div>
+<div class="gk-seg" style="--n:3" id="rq" role="group" aria-label="Snitträntor för nya bolån augusti 2026">
+<button type="button" data-v="2.73" aria-pressed="false">2,73 %<small>rörlig</small></button><button type="button" data-v="3.18" aria-pressed="false">3,18 %<small>1–5 år</small></button><button type="button" data-v="3.34" aria-pressed="false">3,34 %<small>över 5 år</small></button>
+</div>
+<span class="gk-hint">3 % är ett exempel – skriv din ränta. Knapparna är snitträntor för nya bolån i augusti 2026 (<a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/finansmarknad/finansmarknadsstatistik/finansmarknadsstatistik/pong/statistiknyhet/finansmarknadsstatistik-augusti-2026/" target="_blank" rel="noopener">SCB</a>).</span>
+</div>
 
-            <div class="chart-separator"></div>
+<details class="gk-more">
+<summary>Fler val: två låntagare, äldre lån</summary>
+<div>
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Hur många står på lånet?</legend>
+<div class="gk-seg" style="--n:2" id="pq" role="group" aria-label="Antal låntagare">
+<button type="button" data-v="1" aria-pressed="true">En<small>står på lånet</small></button><button type="button" data-v="2" aria-pressed="false">Två<small>delar lika</small></button>
+</div>
+<span class="gk-hint">Gränsen 100 000 kr för ränteavdraget på 30 % gäller per person.</span>
+</fieldset>
+<div class="gk-field">
+<label for="egen">Egen amortering</label>
+<div class="gk-input"><input id="egen" inputmode="decimal" autocomplete="off" placeholder="kravet"><span class="unit">% per år</span></div>
+<span class="gk-hint">Lämna tomt så räknar vi med amorteringskravet. Fyll i om du vill amortera mer.</span>
+</div>
+<label class="gk-check"><input type="checkbox" id="skarpt"> <span>Mitt lån har kvar det skärpta amorteringskravet (lån över 4,5 gånger hushållets årsinkomst, taget före 1 april 2026)</span></label>
+<div class="gk-field">
+<label for="ink">Hushållets årsinkomst före skatt</label>
+<div class="gk-input"><input id="ink" inputmode="numeric" autocomplete="off" placeholder="t.ex. 600 000"><span class="unit">kr/år</span></div>
+<span class="gk-hint">Behövs bara för det skärpta kravet. Nya lån har inget sådant krav sedan 1 april 2026.</span>
+</div>
+</div>
+</details>
+</form>
 
-            <div class="chart-container">
-                <canvas id="chart" height="320"></canvas>
-            </div>
+<section class="gk-card gk-stack gk-o3" style="gap:12px" aria-labelledby="sensH">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 id="sensH" style="font-size:22px">Om räntan ändras</h2>
+<p class="gk-hint">Samma lån och amortering, första månaden.</p>
+</div>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight" id="sensTable"></table></div>
+</section>
+</div>
 
-            <button class="table-toggle" id="tableToggle">Visa amorteringsplan ▼</button>
-            <table class="data-table" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>År</th>
-                        <th>Skuld</th>
-                        <th>Ränta/mån</th>
-                        <th>Amort./mån</th>
-                        <th>Kostnad/mån</th>
-                        <th>Efter avdrag</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-            </table>
-        </div>
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">Ditt bolån kostar</div>
+<div class="gk-big"><strong id="resBig">–</strong><span>kr/mån</span></div>
+<p class="gk-hint" id="resSub"></p>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
 
-        <!-- Info section -->
-        <div class="info-section">
-            <h2>Bolånekalkylator 2026 – räkna ut vad din bostad kostar per månad</h2>
-            <p>Att köpa bostad är de flesta svenskars största ekonomiska beslut. Med vår bolånekalkylator kan du direkt se hur mycket ett bolån kostar per månad, inklusive ränteavdrag, amortering och total lånekostnad. Kalkylatorn är uppdaterad för 2026 och tar hänsyn till gällande amorteringskrav och ränteavdragsregler.</p>
+<section class="gk-card gk-stack gk-o4" style="gap:12px" aria-labelledby="planH">
+<h2 id="planH" style="font-size:22px">Så minskar skulden</h2>
+<p class="gk-hint" id="planSum"></p>
+<details class="gk-more">
+<summary>Visa år för år</summary>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight" id="planTable"></table></div>
+</details>
+</section>
 
-            <h3>Så fungerar bolånekalkylatorn</h3>
-            <p>Kalkylatorn beräknar din månadskostnad baserat på bostadens pris, din kontantinsats, aktuell bolåneränta och vald amorteringstakt. Amorteringen räknas som en fast procent av det ursprungliga lånebeloppet varje år – så som amorteringskravet är utformat – medan räntan räknas på kvarvarande skuld. Ränteavdraget (30 % på de första 100 000 kr/år i räntekostnader, 21 % därutöver) räknas in automatiskt i det visade nettopriset. Skuldkvoten visar bolånet delat med hushållets bruttoårsinkomst (andra lån ingår inte).</p>
-            <div class="formula-box">
-Månadskostnad = (Kvarvarande skuld × Ränta / 12) + (Ursprungligt lån × Amortering / 12)
-Ränteavdrag = Räntekostnad × 30% (upp till 100 000 kr/år), 21% därutöver
-Belåningsgrad = Lån / Bostadens värde × 100
-Skuldkvot = Lån / (Bruttoinkomst/mån × 12)
-            </div>
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="/artiklar/hur-mycket-far-jag-lana-2026"><span>Hur mycket får du låna?<small>Så räknar banken med inkomst, kalkylränta och bolånetak</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/amorteringskalkylator"><span>Har du redan ett lån?<small>Amorteringskalkylator – räkna på det ursprungliga lånet</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/hushallsbudget"><span>Går budgeten ihop?<small>Hushållsbudget med boendekostnaden inräknad</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</section>
+</div>
+</div>
 
-            <h3>Bolåneräntan 2026 – vad kan du förvänta dig?</h3>
-            <p>Riksbanken sänkte styrräntan flera gånger under 2024–2025. Enligt SCB var hushållens genomsnittliga ränta på nya bolån <strong>2,78 %</strong> i augusti 2026, och den genomsnittliga rörliga räntan (3 månader) för nya avtal var <strong>2,73 %</strong>. Din egen ränta beror på bank, bindningstid och belåningsgrad – lägre belåningsgrad ger ofta en något lägre ränta.</p>
-            <p>Att jämföra bolåneräntor via Lendo, Hypoteket eller Compricer går snabbt, och även en liten räntesänkning gör stor skillnad på ett stort lån. Banker förhandlar – be alltid om ett bättre erbjudande innan du skriver avtal.</p>
+<div class="gk-prose">
+<h2>Så räknar du ut ränta och amortering</h2>
+<p>Månadskostnaden för ett bolån är ränta plus amortering. <strong>Ränta per månad</strong> = lånet × räntan / 12. <strong>Amortering per månad</strong> = lånet × amorteringskravet / 12. Ett lån på 2 700 000 kr med 3 % ränta och 2 % amortering kostar 6 750 + 4 500 = <strong>11 250 kr i månaden</strong>, eller ungefär 9 230 kr efter ränteavdraget.</p>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight">
+<thead><tr><th scope="col">Lån</th><th scope="col">Ränta</th><th scope="col">Amortering</th><th scope="col">Totalt</th></tr></thead>
+<tbody><tr><td>2 000 000</td><td>5 000</td><td>3 330</td><td><strong>8 330</strong></td></tr><tr><td>3 000 000</td><td>7 500</td><td>5 000</td><td><strong>12 500</strong></td></tr><tr><td>4 000 000</td><td>10 000</td><td>6 670</td><td><strong>16 670</strong></td></tr><tr><td>5 000 000</td><td>12 500</td><td>8 330</td><td><strong>20 830</strong></td></tr></tbody>
+<caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor per månad, första månaden, före ränteavdrag. 3 % ränta (exempel) och 10 % kontantinsats, alltså 2 % amortering.</caption>
+</table></div>
 
-            <h3>Amorteringskrav i Sverige 2026</h3>
-            <p>Amorteringskraven för nya bolån 2026 (efter ändringen 1 april 2026):</p>
-            <ul>
-                <li><strong>Belåningsgrad över 70 %:</strong> minst 2 % amortering per år</li>
-                <li><strong>Belåningsgrad 50–70 %:</strong> minst 1 % amortering per år</li>
-                <li><strong>Belåningsgrad under 50 %:</strong> inget krav, men frivillig amortering rekommenderas</li>
-                <li><strong>Skärpt krav vid skuldkvot över 4,5:</strong> borttaget sedan 1 april 2026 — har du ett äldre lån med skärpt krav, be banken om nya villkor</li>
-            </ul>
-            <p>Amorteringskravet räknas i procent av det ursprungliga lånebeloppet, och belåningsgraden räknas mot bostadens värde när lånet togs (eller vid en senare omvärdering). Kravet gäller från den dag du tecknar lånet. Bolån som tagits före 1 juni 2016 omfattas inte av amorteringskravet. Byter du bank kan det amorteringsunderlag du hade i den gamla banken följa med.</p>
+<h2>Amorteringskrav 2026</h2>
+<ul>
+<li>Lånet är mer än <strong>70 %</strong> av bostadens värde: amortera minst <strong>2 %</strong> av lånet per år.</li>
+<li>Mer än <strong>50 %</strong>: minst <strong>1 %</strong>.</li>
+<li>50 % eller mindre: inget krav.</li>
+</ul>
+<p>Procenten räknas på det högsta lånebeloppet och belåningsgraden på bostadens värde när du köpte den. När skulden har minskat sjunker kravet – med 10 % kontantinsats efter 12 år till 1 % och efter 33 år till noll, om värdet är oförändrat. Banken får värdera om bostaden tidigast efter fem år. Det <strong>skärpta kravet</strong> för lån över 4,5 gånger hushållets årsinkomst togs bort 1 april 2026. På äldre lån försvinner det inte automatiskt – be banken ändra villkoren.</p>
 
-            <h3>Ränteavdraget – skattelättnaden du alltid bör räkna in</h3>
-            <p>Svenska bolånetagare har rätt att dra av 30 % av sina räntekostnader i deklarationen, upp till 100 000 kr i ränta per år. Om räntekostnaderna överstiger 100 000 kr/år är avdraget 21 % på överskjutande belopp. Avdraget är ett skatteavdrag (inte ett bidrag), vilket innebär att du minskar din skatteräkning med 30 % av räntekostnaden – pengarna betalas ut i samband med skatteåterbäring i juni.</p>
-            <p>Exempel: Bolån 3 000 000 kr till 3,5 % ger 105 000 kr/år i räntekostnad. Ränteavdraget: (100 000 × 30 %) + (5 000 × 21 %) = 30 000 + 1 050 = <strong>31 050 kr tillbaka</strong> i deklarationen, alltså 2 588 kr/månad lägre nettokostnad.</p>
+<h2>Bolånetaket: minst 10 % kontantinsats</h2>
+<p>Sedan 1 april 2026 får du låna högst <strong>90 %</strong> av bostadens värde när du köper, mot 85 % tidigare. Utökar du lånet senare får belåningsgraden bli högst 80 %.</p>
 
-            <h3>Bolånetaket och kontantinsatsen</h3>
-            <p>Finansinspektionen reglerar hur mycket du får låna till bostad. Sedan 1 april 2026 gäller ett <strong>bolånetak på 90 %</strong> av bostadens marknadsvärde (tidigare 85 %). Du måste ha minst 10 % i kontantinsats (eget kapital). Köper du en bostad för 4 000 000 kr måste du ha minst 400 000 kr kontant. Vid utökning av ett befintligt lån är taket 80 %.</p>
-            <p>Banken gör också en kreditprövning med en <strong>kalkylränta på ofta ca 6–7 %</strong> (högre än verklig ränta, varierar mellan bankerna) för att säkerställa att du klarar lånekostnaden även vid räntehöjningar. Det är kalkylräntan, inte aktuell ränta, som oftast begränsar hur mycket du kan låna.</p>
+<h2>Ränteavdrag på bolånet</h2>
+<p>Du får en skattereduktion på <strong>30 %</strong> av räntan upp till 100 000 kr per år och 21 % på det som är över. Gränsen gäller per person, och avdraget kan inte bli större än den skatt du betalar.</p>
 
-            <h3>Rörlig eller bunden ränta – vad ska du välja?</h3>
-            <p>Historiskt sett har rörlig ränta (3 månader) i genomsnitt varit billigare än bunden ränta på 5–10 år. Men under perioder med kraftigt stigande räntor (som 2022–2023) steg rörlig ränta snabbt. Bunden ränta ger förutsägbarhet i budgeten men du betalar en premie för den tryggheten. Många ekonomirådgivare rekommenderar att ha en blandad räntestrategi – t.ex. 50 % rörlig och 50 % bunden på 3 år – för att balansera risk och kostnad.</p>
-        </div>
+<h2>Bolåneräntan just nu</h2>
+<p>Snitträntan för nya bolån var <strong>2,78 %</strong> i augusti 2026 enligt SCB. Rörlig ränta låg på 2,73 % och bunden ränta på 3,18 % (1–5 år) och 3,34 % (över 5 år). Räntan i kalkylatorn är ett exempel – byt till din egen.</p>
 
-        <!-- FAQ -->
-        <div class="faq">
-            <h2>Vanliga frågor om bolån 2026</h2>
-            <details class="faq-item">
-                <summary>Hur mycket behöver jag amortera på mitt bolån?</summary>
-                <p>Amorteringskravet i Sverige innebär att du måste amortera minst 1% av det ursprungliga lånebeloppet per år om belåningsgraden är 50–70%, och minst 2% per år om den överstiger 70%. Det skärpta kravet på ytterligare 1% vid skuld över 4,5 gånger bruttoinkomsten slopades 1 april 2026. Lån tagna före 1 juni 2016 omfattas inte av kravet.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Vad är ränteavdrag och hur mycket får jag tillbaka?</summary>
-                <p>Du får dra av 30% av räntekostnader upp till 100 000 kr per år i din deklaration. På räntekostnader över 100 000 kr är avdraget 21%. Detta innebär att din faktiska räntekostnad blir lägre än den nominella räntan.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Vad är skillnaden mellan rörlig och bunden ränta?</summary>
-                <p>Rörlig ränta (3 månader) följer marknadsräntan och kan ändras kvartalsvis. Bunden ränta är fast under en vald period (1–10 år). Historiskt har rörlig ränta ofta varit billigare totalt sett, men bunden ger trygghet.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Hur mycket kan jag låna för att köpa bostad?</summary>
-                <p>Sedan 1 april 2026 är bolånetaket 90% av bostadens marknadsvärde. Du behöver alltså minst 10% i kontantinsats. Hur mycket du kan låna beror på din inkomst, övriga lån, och bankens kalkylränta (ofta ca 6–7%, varierar mellan bankerna).</p>
-            </details>
-            <details class="faq-item">
-                <summary>Vad innebär kalkylräntan?</summary>
-                <p>Kalkylräntan är den ränta banken använder för att bedöma om du klarar av lånet även vid högre räntor. Den ligger ofta på ca 6–7% (varierar mellan bankerna), alltså högre än den faktiska räntan. Syftet är att säkerställa att du har marginal.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Hur påverkar amortering min totala kostnad?</summary>
-                <p>Amortering minskar din skuld och därmed din räntekostnad över tid. Ju mer du amorterar, desto mindre betalar du i ränta totalt. Amortering är i praktiken ett sparande — du bygger upp eget kapital i din bostad.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Kan jag få amorteringsfrihet?</summary>
-                <p>Ja, under särskilda omständigheter kan banken bevilja tillfällig amorteringsfrihet, exempelvis vid sjukdom, arbetslöshet eller kraftigt höjda räntor. Det är dock bankens beslut och inget du har automatisk rätt till.</p>
-            </details>
-        </div>
-    
+<h2>Vanliga frågor om bolån</h2>
+<div class="gk-faq"><details><summary>Hur räknar man ut månadskostnaden för ett bolån?</summary><p>Lägg ihop räntan och amorteringen. Räntan per månad är lånet gånger räntan delat med 12, och amorteringen är lånet gånger amorteringskravet delat med 12. Ett lån på 3 000 000 kr med 3 % ränta och 2 % amortering kostar 7 500 + 5 000 = 12 500 kr i månaden. Ränteavdraget sänker kostnaden med 2 250 kr i månaden. Avgift till föreningen, drift och försäkring tillkommer.</p></details><details><summary>Hur räknar man ut amortering på bolån?</summary><p>Amorteringen är en procent av lånet per år: 2 % om lånet är mer än 70 % av bostadens värde och 1 % om det är mer än 50 %. Lånar du 2 000 000 kr till en bostad värd 2 500 000 kr är belåningsgraden 80 %. Då ska du amortera minst 40 000 kr om året, alltså 3 333 kr i månaden. Under 50 % finns inget krav.</p></details><details><summary>Hur räknar man ut räntan på ett bolån?</summary><p>Multiplicera lånet med räntan och dela med 12. Med 2 000 000 kr i lån och snitträntan för nya bolån, 2,78 %, blir räntan 55 600 kr om året eller 4 633 kr i månaden. Efter ränteavdraget på 30 % blir det 3 243 kr. Räntan sjunker i takt med att du amorterar.</p></details><details><summary>Vad är amorteringskravet 2026?</summary><p>Sedan 1 april 2026 står amorteringskravet i lagen om begränsning av bostadskrediter. Är belåningsgraden över 70 % ska du amortera minst 2 % av lånet per år, och över 50 % minst 1 %. Procenten räknas på det högsta lånebeloppet efter den senaste värderingen och belåningsgraden på bostadens värde när du köpte den. Banken får värdera om bostaden tidigast efter fem år. Banken kan medge uppehåll om det finns särskilda skäl, och för en nyproducerad bostad i högst fem år. Lån som togs före 1 juni 2016 omfattas inte.</p></details><details><summary>Finns det skärpta amorteringskravet kvar?</summary><p>Inte för nya lån. Tidigare fick den som lånade mer än 4,5 gånger hushållets årsinkomst före skatt amortera upp till 3 % per år. Kravet togs bort 1 april 2026, men på lån som redan omfattades av det upphör det inte automatiskt – du behöver be banken ändra villkoren. Under Fler val i kalkylatorn ser du hur mycket det sänker amorteringen.</p></details><details><summary>Hur mycket är ränteavdraget på bolån?</summary><p>Du får en skattereduktion på 30 % av räntan upp till 100 000 kr om året och 21 % på det som är över. Gränsen gäller per person. Betalar du 150 000 kr i ränta och står ensam på lånet blir avdraget 40 500 kr. Är ni två som delar lika får ni 45 000 kr tillsammans. Avdraget kan inte bli större än den skatt du betalar.</p></details><details><summary>Vad är bolåneräntan just nu?</summary><p>Enligt SCB:s finansmarknadsstatistik var snitträntan för hushållens nya bolån 2,78 % i augusti 2026. Rörlig ränta var i snitt 2,73 %, bunden 1–5 år 3,18 % och bunden över 5 år 3,34 %. Din ränta beror bland annat på bank och bindningstid.</p></details><details><summary>Hur mycket kontantinsats behöver man?</summary><p>Minst 10 % av bostadens pris, eftersom du får låna högst 90 % sedan 1 april 2026 (tidigare 85 %). Köper du en bostad för 3 000 000 kr behöver du alltså minst 300 000 kr. Utökar du ett lån senare får det bli högst 80 % av bostadens värde.</p></details></div>
 
-    <!-- Relaterade guider (auto-added 2026-05-15) -->
-    <div class="container" style="max-width:720px;margin:2rem auto;padding:1.5rem;background:var(--white, #fff);border:1px solid var(--border, #E2E0D8);border-radius:12px;">
-      <h2 style="font-size:1.15rem;margin-bottom:0.75rem;color:var(--text, #15201A);">📖 Läs djupare i guiden</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
-        <a href="/artiklar/hur-mycket-far-jag-lana-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Hur mycket får jag låna 2026?</a>
-        <a href="/artiklar/skattefri-uthyrning-2026" style="display:inline-block;padding:0.6rem 1rem;background:var(--primary-light, #E4F1EA);color:var(--primary, #0D6A45);border-radius:8px;text-decoration:none;font-weight:500;margin:0.25rem;font-size:0.95rem;border:1px solid var(--border, #E2E0D8);">📖 Skattefri uthyrning 2026 — hyr ut och täck boendekostnaden</a>
-      </div>
-    </div>
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2026226-om-begransning-av-bostadskrediter_sfs-2026-226/" target="_blank" rel="noopener">Lag (2026:226) om begränsning av bostadskrediter</a> – bolånetak 90&nbsp;% (4&nbsp;§), 80&nbsp;% vid utökning (5&nbsp;§), amortering 2&nbsp;% och 1&nbsp;% av det högsta kreditbeloppet (7&nbsp;§), belåningsgrad (2&nbsp;§), uppehåll vid särskilda skäl och nyproduktion (9–10&nbsp;§§), värdering och omvärdering efter fem år (13&nbsp;§), lån före 1 juni 2016 (övergångsbestämmelser)</li>
+<li><a href="https://regeringen.se/pressmeddelanden/2026/03/nya-lagandringar-ska-ge-fler-mojlighet-att-aga-sin-bostad/" target="_blank" rel="noopener">Regeringen, 5 mars 2026 – Nya lagändringar ska ge fler möjlighet att äga sin bostad</a> – bolånetaket höjs från 85 till 90 %, det skärpta amorteringskravet tas bort men upphör inte automatiskt för befintliga lån</li>
+<li><a href="https://fi.se/globalassets/media/dokument/fffs-bilagor/2026/beslutspm-fs2601-03.pdf" target="_blank" rel="noopener">Finansinspektionen – beslut att upphäva föreskrifterna om amortering och bolånetak</a> från 31 mars 2026</li>
+<li><a href="https://www.skatteverket.se/privat/deklaration/avdragforprivatpersoner/avdragforranteutgifter.106.1b39a64a1919eabb488b87.html" target="_blank" rel="noopener">Skatteverket – Avdrag för ränteutgifter</a> – skattereduktion 30 % upp till 100 000 kr och 21 % över, begränsad av din skatt</li>
+<li><a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/finansmarknad/finansmarknadsstatistik/finansmarknadsstatistik/pong/statistiknyhet/finansmarknadsstatistik-augusti-2026/" target="_blank" rel="noopener">SCB, Finansmarknadsstatistik augusti 2026</a> (publicerad 25 september 2026, statistikansvarig Riksbanken) – snitträntor för hushållens nya bolån</li>
+</ul>
 
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/hyra-vs-kopa-kalkylator"><span>Hyra eller köpa?<small>Jämför boendekostnaden över tid</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/amorteringskrav-2026"><span>Guide: Amorteringskrav 2026<small>De nya reglerna och räkneexempel</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/uthyrningskalkylator"><span>Uthyrningskalkylator<small>Hyr ut en del av bostaden</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
 </main>
+<script id="gk-bolan" type="application/json">{"TAK": 90, "TAK_UTOK": 80, "GR_HOG": 70, "GR_LAG": 50, "AM_HOG": 2, "AM_LAG": 1, "SKARPT_KVOT": 4.5, "SKARPT_EXTRA": 1, "AVDRAG_LAG": 30, "AVDRAG_HOG": 21, "AVDRAG_GRANS": 100000, "OMV_AR": 5, "SNITT": 2.78, "SNITT_RORLIG": 2.73, "SNITT_1_5": 3.18, "SNITT_5": 3.34, "SNITT_MAN": "augusti 2026", "SNITT_PUBL": "25 september 2026"}</script>
+<script>
 
-    <!-- Cross-linking -->
-    <div class="container" style="padding:48px 20px;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-            <a href="/kalkylatorer/loneraknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
-                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
-            </a>
-            <a href="/kalkylatorer/ranta-pa-ranta" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📈</div>
-                <div style="font-weight:600;font-size:0.9rem;">Ränta på ränta</div>
-            </a>
-            <a href="/kalkylatorer/rot-rut" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
-                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT 2026</div>
-            </a>
-            <a href="/kalkylatorer/isk-skatteberaknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
-                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
-            </a>
-            <a href="/kalkylatorer/uthyrningskalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🔑</div>
-                <div style="font-weight:600;font-size:0.9rem;">Uthyrningskalkylator</div>
-            </a>
-        </div>
-    </div>
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var C = JSON.parse(document.getElementById('gk-bolan').textContent);
+  var $ = function (id) { return document.getElementById(id); };
+  var kr = function (v) { return GK.fmt(Math.round(v / 10) * 10, 0) + ' kr'; };
+  var rp = function (v) { return GK.fmt(v, 2).replace(/,?0+$/, ''); };
+  var lp = function (v) { return GK.fmt(v, 1).replace(/,0$/, ''); };
+  var st = { kpct: 10, pers: 1 };
 
-    <div class="gk-ftr gk2" role="contentinfo">
+  function seg(id, cb) {
+    var el = $(id);
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      el.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cb(b.getAttribute('data-v')); calc();
+    });
+  }
+  function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', v != null && Math.abs(+x.getAttribute('data-v') - v) < 1e-9 ? 'true' : 'false'); }); }
+  function val(id) { var v = GK.parse($(id).value); return isFinite(v) && v >= 0 ? v : null; }
+  function setLan() { var V = val('pris'); if (V && st.kpct != null) $('lan').value = GK.fmt(Math.round(V * (1 - st.kpct / 100)), 0); }
+
+  seg('kq', function (v) { st.kpct = +v; setLan(); });
+  seg('rq', function (v) { $('ranta').value = GK.fmt(+v, 2); });
+  seg('pq', function (v) { st.pers = +v; });
+  $('pris').addEventListener('input', function () { setLan(); calc(); });
+  $('lan').addEventListener('input', function () {
+    var V = val('pris'), L = val('lan');
+    st.kpct = null;
+    press('kq', V && L != null ? Math.round((1 - L / V) * 1000) / 10 : null);
+    calc();
+  });
+  $('ranta').addEventListener('input', function () { press('rq', val('ranta')); calc(); });
+  ['egen', 'ink'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  $('skarpt').addEventListener('change', calc);
+  ['pris', 'lan', 'ink'].forEach(function (id) { GK.groupInput($(id)); });
+
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '" style="margin-top:12px">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+  function tile(l, v, s) { return '<div class="gk-tile"><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+
+  /* Modell – samma som scripts/build_bolan.py */
+  function krav(ltv) { return ltv > C.GR_HOG ? C.AM_HOG : (ltv > C.GR_LAG ? C.AM_LAG : 0); }
+  function avdrag(rantaAr, pers) {
+    var p = rantaAr / pers;
+    return pers * (C.AVDRAG_LAG / 100 * Math.min(p, C.AVDRAG_GRANS) + C.AVDRAG_HOG / 100 * Math.max(0, p - C.AVDRAG_GRANS));
+  }
+  function bolan(V, L, r, egen, pers, skarpt, ink) {
+    var ltv = L / V * 100;
+    var extra = (skarpt && ink > 0 && L > C.SKARPT_KVOT * ink) ? C.SKARPT_EXTRA : 0;
+    var k0 = krav(ltv), apct = egen != null ? egen : k0 + extra;
+    var ranta = L * r / 100 / 12, amort = Math.min(L, L * apct / 100) / 12, av = avdrag(ranta * 12, pers) / 12;
+    var rows = [], s = L, y = 0;
+    while (s > 0.5 && y < 60) {
+      y += 1;
+      var k = krav(s / V * 100), ex = (skarpt && ink > 0 && s > C.SKARPT_KVOT * ink) ? C.SKARPT_EXTRA : 0;
+      var p = egen != null ? egen : k + ex, a = Math.min(s, L * p / 100);
+      rows.push({ ar: y, skuld: s, ranta: s * r / 100 / 12, amort: a / 12, p: p });
+      if (a <= 0) break;
+      s -= a;
+    }
+    return { ltv: ltv, krav: k0, extra: extra, apct: apct, ranta: ranta, amort: amort, manad: ranta + amort, avdrag: av, efter: ranta + amort - av, rows: rows, rest: s };
+  }
+  function faser(rows) {
+    var out = [];
+    rows.forEach(function (x) { if (out.length && out[out.length - 1][2] === x.p) out[out.length - 1][1] = x.ar; else out.push([x.ar, x.ar, x.p]); });
+    return out;
+  }
+  function clear(msg) {
+    $('resBig').textContent = '–'; $('resSub').textContent = msg;
+    ['tiles', 'verdict', 'how', 'sensTable', 'planTable', 'planSum'].forEach(function (id) { $(id).innerHTML = ''; });
+  }
+
+  function calc() {
+    var V = val('pris'), L = val('lan'), r = val('ranta'), ink = val('ink') || 0, sk = $('skarpt').checked;
+    var egen = $('egen').value.trim() === '' ? null : val('egen');
+    if (V && L != null && L <= V) $('kHint').textContent = 'Kontantinsats ' + kr(V - L) + ' (' + lp((V - L) / V * 100) + ' % av priset). Har du redan lån: skriv skulden i dag.';
+    else $('kHint').textContent = 'Har du redan lån: skriv skulden i dag.';
+    if (!V || V < 100000) return clear('Fyll i bostadens pris eller värde.');
+    if (L == null || L < 10000) return clear('Fyll i hur mycket du lånar.');
+    if (L > V) return clear('Lånet kan inte vara större än bostadens värde.');
+    if (r == null || r > 20) return clear('Fyll i räntan, till exempel 3.');
+    if (egen != null && egen > 50) egen = null;
+    var b = bolan(V, L, r, egen, st.pers, sk, ink);
+
+    $('resBig').textContent = GK.fmt(Math.round(b.manad / 10) * 10, 0);
+    $('resSub').textContent = 'Ränta + amortering första månaden. Efter ränteavdraget ungefär ' + kr(b.efter) + ' i månaden.';
+    var amSub = egen != null ? 'Eget val ' + rp(egen) + ' % · kravet ' + (b.krav + b.extra) + ' %'
+      : b.extra ? 'Krav ' + b.krav + ' % + ' + b.extra + ' % skärpt krav'
+      : b.krav === C.AM_HOG ? 'Krav ' + b.krav + ' % – lånet är över ' + C.GR_HOG + ' %'
+      : b.krav === C.AM_LAG ? 'Krav ' + b.krav + ' % – lånet är över ' + C.GR_LAG + ' %'
+      : 'Inget krav – högst ' + C.GR_LAG + ' % belåning';
+    $('tiles').innerHTML = tile('Ränta', kr(b.ranta) + '/mån', rp(r) + ' % på ' + kr(L)) +
+      tile('Ränta efter avdrag', kr(b.ranta - b.avdrag) + '/mån', 'Ränteavdrag ' + kr(b.avdrag) + '/mån') +
+      tile('Amortering', kr(b.amort) + '/mån', amSub) +
+      tile('Belåningsgrad', lp(b.ltv) + ' %', 'Kontantinsats ' + kr(V - L));
+
+    var v = '';
+    if (b.ltv > C.TAK) {
+      v += verdict('warn', 'Över bolånetaket på ' + C.TAK + ' %', 'När du köper får du låna högst ' + C.TAK + ' % av bostadens värde, alltså ' + kr(V * C.TAK / 100) + '. Du behöver minst ' + kr(V * (100 - C.TAK) / 100) + ' i kontantinsats – ' + kr(L - V * C.TAK / 100) + ' mer än du har räknat med.');
+    }
+    if (b.extra) {
+      var utan = bolan(V, L, r, null, st.pers, false, 0);
+      v += verdict('warn', 'Det skärpta kravet kostar ' + kr(b.amort - utan.amort) + ' i månaden', 'Nya lån har inte det skärpta kravet sedan 1 april 2026, men på äldre lån försvinner det inte automatiskt. Ber du banken ändra villkoren blir amorteringen ' + kr(utan.amort) + ' i månaden.');
+    } else if (sk && ink > 0) {
+      v += verdict('info', 'Det skärpta kravet påverkar inte ditt lån', 'Lånet är ' + GK.fmt(L / ink, 1) + ' gånger hushållets årsinkomst – det skärpta kravet gällde bara över ' + GK.fmt(C.SKARPT_KVOT, 1) + ' gånger.');
+    }
+    if (egen != null && egen < b.krav + b.extra) {
+      v += verdict('warn', 'Lägre än amorteringskravet', 'Kravet för ditt lån är ' + (b.krav + b.extra) + ' % per år, ' + kr(L * (b.krav + b.extra) / 100 / 12) + ' i månaden. Banken får bara medge mindre om det finns särskilda skäl eller om bostaden är nyproducerad.');
+    } else if (egen == null && b.krav === 0 && !b.extra) {
+      v += verdict('good', 'Inget amorteringskrav', 'Lånet är högst ' + C.GR_LAG + ' % av bostadens värde. Du väljer själv om du vill amortera – fyll i egen amortering under Fler val.');
+    }
+    var d = r - C.SNITT, tiondel = L * 0.1 / 100 / 12;
+    var ref = 'Snitträntan för nya bolån var ' + rp(C.SNITT) + ' % i ' + C.SNITT_MAN + ' (rörlig ' + rp(C.SNITT_RORLIG) + ' %). En tiondels procentenhet på ditt lån är ' + kr(tiondel) + ' i månaden före ränteavdrag.';
+    if (Math.abs(d) < 0.005) v += verdict('good', 'Samma som snitträntan', ref);
+    else if (d < 0) v += verdict('good', 'Din ränta är ' + rp(-d) + ' procentenheter under snittet', ref);
+    else v += verdict('info', 'Din ränta är ' + rp(d) + ' procentenheter över snittet', ref);
+    $('verdict').innerHTML = v;
+
+    var ra = b.ranta * 12;
+    $('how').innerHTML =
+      '<p><strong>Belåningsgrad:</strong> ' + kr(L) + ' / ' + kr(V) + ' = ' + lp(b.ltv) + ' %.</p>' +
+      '<p><strong>Ränta:</strong> ' + kr(L) + ' × ' + rp(r) + ' % / 12 = ' + kr(b.ranta) + ' i månaden. Räntan sjunker när skulden minskar.</p>' +
+      '<p><strong>Amortering:</strong> ' + (egen != null ? 'ditt val, ' + rp(egen) + ' %' : b.apct + ' %') + ' av ' + kr(L) + ' per år = ' + kr(b.amort * 12) + ' om året, ' + kr(b.amort) + ' i månaden. Kravet är 2 % när lånet är över 70 % av bostadens värde och 1 % över 50 %. Procenten räknas på det högsta lånebeloppet. Har du redan lån och skriver dagens skuld kan banken räkna på ett högre belopp.</p>' +
+      '<p><strong>Ränteavdrag:</strong> ' + kr(ra) + ' i ränta om året' + (st.pers === 2 ? ', delat på två' : '') + '. 30 % upp till 100 000 kr per person och 21 % över ger ' + kr(b.avdrag * 12) + ' om året, ' + kr(b.avdrag) + ' i månaden – om du betalar minst så mycket i skatt.</p>' +
+      '<p>Vi räknar inte med månadsavgift, driftkostnader eller försäkring.</p>';
+
+    var sens = [-1, 0, 1, 2].map(function (dd) { return r + dd; }).filter(function (x) { return x >= 0; });
+    $('sensTable').innerHTML = '<thead><tr><th scope="col">Ränta</th><th scope="col">Per månad</th><th scope="col">Efter avdrag</th></tr></thead><tbody>' +
+      sens.map(function (rr) {
+        var x = bolan(V, L, rr, egen, st.pers, sk, ink), me = Math.abs(rr - r) < 1e-9;
+        var c = function (t) { return me ? '<strong>' + t + '</strong>' : t; };
+        return '<tr><td>' + c(rp(rr) + ' %') + '</td><td>' + c(GK.fmt(Math.round(x.manad / 10) * 10, 0)) + '<small class="gk-hint" style="display:block">varav ränta ' + GK.fmt(Math.round(x.ranta / 10) * 10, 0) + '</small></td><td>' + c(GK.fmt(Math.round(x.efter / 10) * 10, 0)) + '</td></tr>';
+      }).join('') + '</tbody><caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor per månad. Amortering ' + kr(b.amort) + ' i alla rader.</caption>';
+
+    var f = faser(b.rows), last = b.rows[b.rows.length - 1], sum = [];
+    f.forEach(function (x) {
+      var tid = x[0] === x[1] ? 'År ' + x[0] : 'År ' + x[0] + '–' + x[1];
+      if (x[2] > 0) sum.push(tid + ': ' + rp(x[2]) + ' % (' + kr(L * x[2] / 100 / 12) + '/mån)');
+      else if (x[0] === 1) sum.push((egen != null ? 'Ingen amortering' : 'Inget amorteringskrav') + ' – skulden ligger kvar på ' + kr(last.skuld));
+      else sum.push('Från år ' + x[0] + ': ' + (egen != null ? 'ingen amortering' : 'inget krav') + ' – skulden är då ' + kr(last.skuld));
+    });
+    if (last.p > 0) sum.push(b.rest <= 0.5 ? 'Lånet är betalt efter ' + last.ar + ' år' : 'Efter ' + last.ar + ' år är skulden ' + kr(b.rest));
+    $('planSum').textContent = sum.join('. ') + '.' + (egen == null ? ' Bostadens värde antas vara oförändrat.' : '');
+    $('planTable').innerHTML = '<thead><tr><th scope="col">År</th><th scope="col">Skuld</th><th scope="col">Ränta/mån</th><th scope="col">Amort./mån</th></tr></thead><tbody>' +
+      b.rows.map(function (x) { return '<tr><td>' + x.ar + '</td><td>' + GK.fmt(Math.round(x.skuld / 1000) * 1000, 0) + '</td><td>' + GK.fmt(Math.round(x.ranta / 10) * 10, 0) + '</td><td>' + GK.fmt(Math.round(x.amort / 10) * 10, 0) + '</td></tr>'; }).join('') +
+      '</tbody><caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor. Skulden vid årets början, ränta med samma ränta hela tiden.</caption>';
+  }
+
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Bolåneberäkningen är en uppskattning – din bank beslutar om ränta och amortering.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-    <script>
-        function fmt(n) {
-            return Math.round(n).toLocaleString('sv-SE') + ' kr';
-        }
-        function fmtPct(n) {
-            return n.toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
-        }
-
-        // Sync sliders
-        function syncInputs(sliderId, inputId) {
-            const slider = document.getElementById(sliderId);
-            const input = document.getElementById(inputId);
-            slider.addEventListener('input', () => { input.value = slider.value; calculate(); });
-            input.addEventListener('input', () => { slider.value = input.value; calculate(); });
-        }
-        syncInputs('bostadenVardeSlider', 'bostadenVarde');
-        syncInputs('kontantinsatsSlider', 'kontantinsats');
-        syncInputs('rantaSlider', 'ranta');
-        syncInputs('amorteringSlider', 'amortering');
-
-        document.getElementById('lopttid').addEventListener('change', calculate);
-        document.getElementById('bruttoinkomst').addEventListener('input', calculate);
-
-        // Table toggle
-        document.getElementById('tableToggle').addEventListener('click', () => {
-            const t = document.getElementById('dataTable');
-            const btn = document.getElementById('tableToggle');
-            t.classList.toggle('visible');
-            btn.textContent = t.classList.contains('visible') ? 'Dölj amorteringsplan ▲' : 'Visa amorteringsplan ▼';
-        });
-
-        function calculateRanteavdrag(arligRanta) {
-            // 30% on first 100k, 21% on rest
-            if (arligRanta <= 100000) {
-                return arligRanta * 0.30;
-            }
-            return 100000 * 0.30 + (arligRanta - 100000) * 0.21;
-        }
-
-        function calculate() {
-            const bostadVarde = Math.max(0, parseFloat(document.getElementById('bostadenVarde').value) || 0);
-            const kontantPct = Math.max(0, Math.min(90, parseFloat(document.getElementById('kontantinsats').value) || 0));
-            const rantaPct = Math.max(0, parseFloat(document.getElementById('ranta').value) || 0);
-            const amortPct = Math.max(0, parseFloat(document.getElementById('amortering').value) || 0);
-            const ar = parseInt(document.getElementById('lopttid').value) || 30;
-            const brutto = Math.max(0, parseFloat(document.getElementById('bruttoinkomst').value) || 0);
-
-            const kontantinsats = bostadVarde * kontantPct / 100;
-            const lan = bostadVarde - kontantinsats;
-            const belaningsgrad = bostadVarde > 0 ? (lan / bostadVarde) * 100 : 0;
-
-            // Calculate first year costs
-            const manadRanta = lan * (rantaPct / 100) / 12;
-            const manadAmort = lan * (amortPct / 100) / 12;
-            const manadKostnad = manadRanta + manadAmort;
-
-            const arligRanta = manadRanta * 12;
-            const ranteavdrag = calculateRanteavdrag(arligRanta);
-            const manadEfterAvdrag = manadKostnad - (ranteavdrag / 12);
-
-            // Update result boxes
-            document.getElementById('resManad').textContent = fmt(manadKostnad);
-            document.getElementById('resEfterAvdrag').textContent = fmt(manadEfterAvdrag);
-            document.getElementById('resLan').textContent = fmt(lan);
-            document.getElementById('resBelaning').textContent = fmtPct(belaningsgrad);
-
-            // Skuldkvot (bolånet / bruttoårsinkomst)
-            const arsinkomst = brutto * 12;
-            document.getElementById('resSkuldkvot').textContent = arsinkomst > 0
-                ? 'Skuldkvot ' + (lan / arsinkomst).toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' × årsinkomsten'
-                : '';
-
-            // Varningar: bolånetak och amorteringskrav (FI)
-            const fiKrav = belaningsgrad > 70 ? 2 : (belaningsgrad > 50 ? 1 : 0);
-            const varningar = [];
-            if (belaningsgrad > 90) {
-                varningar.push('⚠️ Belåningsgraden är över bolånetaket på 90 %. Du behöver minst 10 % i kontantinsats.');
-            }
-            if (lan > 0 && amortPct < fiKrav) {
-                varningar.push('⚠️ Vald amortering (' + fmtPct(amortPct) + ') är lägre än amorteringskravet för ett nytt bolån med ' + fmtPct(belaningsgrad) + ' belåningsgrad: minst ' + fiKrav + ' % av lånebeloppet per år.');
-            }
-            const varnEl = document.getElementById('bolanVarning');
-            varnEl.innerHTML = varningar.join('<br>');
-            varnEl.style.display = varningar.length ? 'block' : 'none';
-
-            // Generate amortization schedule
-            // Amorteringen är en fast procent av det ursprungliga lånebeloppet (som amorteringskravet)
-            const schedule = [];
-            let skuld = lan;
-            const amortPerAr = lan * (amortPct / 100);
-            for (let y = 1; y <= ar; y++) {
-                if (skuld <= 0) break;
-                const rantaAr = skuld * (rantaPct / 100);
-                const amortAr = Math.min(skuld, amortPerAr);
-                const avdrag = calculateRanteavdrag(rantaAr);
-                const kostnadMån = (rantaAr + amortAr) / 12;
-                const efterAvdragMån = kostnadMån - (avdrag / 12);
-
-                schedule.push({
-                    year: y,
-                    skuld: skuld,
-                    rantaMån: rantaAr / 12,
-                    amortMån: amortAr / 12,
-                    kostnadMån: kostnadMån,
-                    efterAvdragMån: efterAvdragMån
-                });
-
-                skuld = Math.max(0, skuld - amortAr);
-            }
-
-            drawChart(schedule, lan);
-            buildTable(schedule);
-        }
-
-        function drawChart(schedule, originalLan) {
-            const canvas = document.getElementById('chart');
-            const dpr = window.devicePixelRatio || 1;
-            const rect = canvas.parentElement.getBoundingClientRect();
-            const W = rect.width;
-            const H = 320;
-            canvas.width = W * dpr;
-            canvas.height = H * dpr;
-            canvas.style.width = W + 'px';
-            canvas.style.height = H + 'px';
-            const ctx = canvas.getContext('2d');
-            ctx.scale(dpr, dpr);
-
-            const isDark = false;
-            ctx.fillStyle = isDark ? '#15201A' : '#ffffff';
-            ctx.fillRect(0, 0, W, H);
-
-            if (schedule.length === 0) return;
-
-            const pad = { top: 30, bottom: 50, left: 70, right: 30 };
-            const cW = W - pad.left - pad.right;
-            const cH = H - pad.top - pad.bottom;
-
-            const maxSkuld = originalLan || 1;
-            const n = schedule.length;
-
-            // Grid lines
-            ctx.strokeStyle = isDark ? '#3A4640' : '#E2E0D8';
-            ctx.lineWidth = 1;
-            for (let i = 0; i <= 4; i++) {
-                const y = pad.top + (cH / 4) * i;
-                ctx.beginPath();
-                ctx.moveTo(pad.left, y);
-                ctx.lineTo(W - pad.right, y);
-                ctx.stroke();
-
-                // Y-axis labels
-                const val = maxSkuld - (maxSkuld / 4) * i;
-                ctx.fillStyle = isDark ? '#9ca3af' : '#56625B';
-                ctx.font = '500 11px Inter, sans-serif';
-                ctx.textAlign = 'right';
-                ctx.fillText((val / 1000000).toFixed(1) + ' mkr', pad.left - 10, y + 4);
-            }
-
-            // Area fill — remaining debt
-            const getX = (i) => pad.left + (i / Math.max(n - 1, 1)) * cW;
-            const getY = (skuld) => pad.top + cH - (skuld / maxSkuld) * cH;
-
-            ctx.beginPath();
-            ctx.moveTo(getX(0), getY(schedule[0].skuld));
-            for (let i = 1; i < n; i++) {
-                ctx.lineTo(getX(i), getY(schedule[i].skuld));
-            }
-            ctx.lineTo(getX(n - 1), pad.top + cH);
-            ctx.lineTo(getX(0), pad.top + cH);
-            ctx.closePath();
-            const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + cH);
-            if (isDark) {
-                grad.addColorStop(0, 'rgba(52, 211, 153, 0.3)');
-                grad.addColorStop(1, 'rgba(52, 211, 153, 0.02)');
-            } else {
-                grad.addColorStop(0, 'rgba(26, 107, 74, 0.2)');
-                grad.addColorStop(1, 'rgba(26, 107, 74, 0.02)');
-            }
-            ctx.fillStyle = grad;
-            ctx.fill();
-
-            // Line — debt curve
-            ctx.beginPath();
-            ctx.moveTo(getX(0), getY(schedule[0].skuld));
-            for (let i = 1; i < n; i++) {
-                ctx.lineTo(getX(i), getY(schedule[i].skuld));
-            }
-            ctx.strokeStyle = isDark ? '#0D6A45' : '#0D6A45';
-            ctx.lineWidth = 3;
-            ctx.lineJoin = 'round';
-            ctx.stroke();
-
-            // Line — monthly cost after deduction
-            const maxCost = Math.max(...schedule.map(s => s.kostnadMån), 1);
-            const getYCost = (c) => pad.top + cH - (c / maxCost) * cH * 0.4; // Scale to 40% of chart height
-
-            ctx.beginPath();
-            ctx.moveTo(getX(0), getYCost(schedule[0].efterAvdragMån));
-            for (let i = 1; i < n; i++) {
-                ctx.lineTo(getX(i), getYCost(schedule[i].efterAvdragMån));
-            }
-            ctx.strokeStyle = isDark ? '#f59e0b' : '#d97706';
-            ctx.lineWidth = 2;
-            ctx.setLineDash([5, 5]);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            // X-axis labels
-            ctx.fillStyle = isDark ? '#9ca3af' : '#56625B';
-            ctx.font = '500 11px Inter, sans-serif';
-            ctx.textAlign = 'center';
-            const stepX = Math.max(1, Math.floor(n / 6));
-            for (let i = 0; i < n; i += stepX) {
-                ctx.fillText('År ' + schedule[i].year, getX(i), H - pad.bottom + 20);
-            }
-            if (n > 1) {
-                ctx.fillText('År ' + schedule[n - 1].year, getX(n - 1), H - pad.bottom + 20);
-            }
-
-            // Legend
-            const legY = 14;
-            ctx.font = '600 12px Inter, sans-serif';
-            ctx.textAlign = 'left';
-
-            // Debt legend
-            ctx.fillStyle = isDark ? '#0D6A45' : '#0D6A45';
-            ctx.fillRect(pad.left, legY - 8, 16, 3);
-            ctx.fillText('Kvarvarande skuld', pad.left + 22, legY);
-
-            // Cost legend
-            const costLegX = pad.left + 170;
-            ctx.fillStyle = isDark ? '#f59e0b' : '#d97706';
-            ctx.setLineDash([5, 5]);
-            ctx.beginPath();
-            ctx.moveTo(costLegX, legY - 6);
-            ctx.lineTo(costLegX + 16, legY - 6);
-            ctx.strokeStyle = isDark ? '#f59e0b' : '#d97706';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            ctx.setLineDash([]);
-            ctx.fillText('Månadskostnad (efter avdrag)', costLegX + 22, legY);
-        }
-
-        function buildTable(schedule) {
-            const tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-            for (const row of schedule) {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${row.year}</td>
-                    <td>${fmt(row.skuld)}</td>
-                    <td>${fmt(row.rantaMån)}</td>
-                    <td>${fmt(row.amortMån)}</td>
-                    <td>${fmt(row.kostnadMån)}</td>
-                    <td>${fmt(row.efterAvdragMån)}</td>
-                `;
-                tbody.appendChild(tr);
-            }
-        }
-
-        // Resize handler
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(calculate, 100);
-        });
-
-        // Initial calculation
-        calculate();
-    </script>
-
-    <!-- Cross-linking -->
-    <div class="container" style="padding-bottom:48px;">
-        <h3 style="margin-bottom:16px;color:var(--text);font-size:1.2rem;">Relaterade kalkylatorer</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-            <a href="/kalkylatorer/rot-rut" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">🏠</div>
-                <div style="font-weight:600;font-size:0.9rem;">ROT & RUT-kalkylator</div>
-            </a>
-            <a href="/kalkylatorer/lanekalkylator" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">💳</div>
-                <div style="font-weight:600;font-size:0.9rem;">Lånekalkylator 2026</div>
-            </a>
-            <a href="/kalkylatorer/isk-skatteberaknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">📊</div>
-                <div style="font-weight:600;font-size:0.9rem;">ISK-skatteberäknare</div>
-            </a>
-            <a href="/kalkylatorer/loneraknare" style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow 0.3s ease,transform 0.2s ease;">
-                <div style="font-size:1.3rem;margin-bottom:4px;">💰</div>
-                <div style="font-weight:600;font-size:0.9rem;">Löneräknare 2026</div>
-            </a>
-        </div>
-    </div>
-
+</footer>
 </body>
 </html>
