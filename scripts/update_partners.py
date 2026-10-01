@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Lägger in annonsrutor (Adtraction-partner) på kalkylatorsidorna från data/partners.json.
 
+En annonsör visas först när den har en spårningslänk (`tracking`), dvs. är godkänd i Adtraction.
+Rutan döljs helt så länge ingen i kategorin är godkänd, eller om kategorin har "aktiv": false
+(t.ex. Nordnet, där texten också måste godkännas av annonsören).
+
 Varje ruta står mellan markörerna <!--GK-PARTNER:<kategori>:START--> och <!--GK-PARTNER:<kategori>:END-->.
 Saknas markörerna på en äldre sida läggs rutan in före första <div class="info-section">.
 Elkostnads- och leasingsidan har markörerna i sina byggmallar (build_elkostnad.py, build_leasing.py).
@@ -27,8 +31,9 @@ def reklam_for(d):
 
 
 def render(kat, d, variant):
+    d = dict(d, partners=[p for p in d["partners"] if p["tracking"]])  # bara godkända annonsörer
     links = "".join(
-        f'<a class="gk-linkcard" href="{e(p["tracking"] or p["url"])}" target="_blank" rel="sponsored noopener" '
+        f'<a class="gk-linkcard" href="{e(p["tracking"])}" target="_blank" rel="sponsored noopener" '
         f'data-gkp="{e(p["id"])}" data-gkp-kat="{kat}"><span>{e(p["namn"])}<small>{e(p["text"])}</small></span>{S.ICON_CHEV}</a>'
         for p in d["partners"])
     neutral = ""
@@ -66,7 +71,8 @@ def main():
             s = f.read()
         start, end = f"<!--GK-PARTNER:{kat}:START-->", f"<!--GK-PARTNER:{kat}:END-->"
         aktiv = data[kat].get("aktiv", True)
-        block = render(kat, data[kat], sida["variant"]) if aktiv else ""
+        godkanda = [p for p in data[kat]["partners"] if p["tracking"]]
+        block = render(kat, data[kat], sida["variant"]) if aktiv and godkanda else ""
         if start in s:
             s = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda m: start + block + end, s, count=1, flags=re.S)
             how = "uppdaterad"
@@ -78,8 +84,8 @@ def main():
             how = "inlagd"
         with open(path, "w", encoding="utf-8") as f:
             f.write(s)
-        aktiva = sum(1 for p in data[kat]["partners"] if p["tracking"])
-        print(f"{kat}: {how} i {sida['fil']} ({len(data[kat]['partners'])} partner, {aktiva} med spårningslänk)" + ("" if aktiv else " – DOLD"))
+        print(f"{kat}: {how} i {sida['fil']} ({len(data[kat]['partners'])} partner, {len(godkanda)} godkända)"
+              + ("" if block else " – DOLD (" + ("aktiv: false" if not aktiv else "ingen godkänd ännu") + ")"))
 
 
 if __name__ == "__main__":
