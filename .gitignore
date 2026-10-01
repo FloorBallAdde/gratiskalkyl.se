@@ -1,3 +1,6 @@
 .DS_Store
 
 __pycache__/
+
+# Privata anteckningar och handbok (pushas aldrig, publiceras aldrig)
+docs-privat/
