@@ -77,6 +77,10 @@ FAQ = [
      f"En bil för {fmt(D['PRIS'])} kr med {D['RV']} % restvärde efter {D['MAN']} månader och {str(D['RL']).replace('.', ',')} % ränta kostar då ungefär "
      f"{fmt(round(EX['man'], -1))} kr i månaden: {fmt(round(EX['dep'], -1))} kr värdeminskning och {fmt(round(EX['ranta'], -1))} kr ränta. "
      "Leasingbolagets pris kan skilja, till exempel om service ingår eller om restvärdet är ett annat."),
+    ("Hur beräknar man restvärdet vid leasing?",
+     "Restvärdet i kronor är bilens pris gånger restvärdet i procent – 50 % av 350 000 kr är 175 000 kr. Procentsatsen sätts av "
+     "leasingbolaget utifrån vad de tror att bilen är värd när avtalet är slut, och den står ofta i offerten. Vill du bedöma om "
+     "den är rimlig: jämför med vad likadana bilar som är lika gamla säljs för begagnade."),
     ("Vad är restvärde vid leasing?",
      "Restvärdet är det värde leasingbolaget räknar med att bilen har när avtalet är slut, i procent av priset. Det är den del av "
      "bilens pris som du inte betalar av under avtalet. Ju högre restvärde, desto lägre månadsavgift. Restvärdet skiljer sig mellan "
@@ -113,9 +117,9 @@ def seg_btns(vals, pressed, fmt_fn, small=None):
 
 
 def page():
-    title = "Leasingkalkylator 2026 – räkna ut månadskostnaden för leasing | GratisKalkyl"
-    desc = ("Vad kostar bilen att leasa? Räkna ut leasingavgiften per månad, jämför med att köpa med lån och se om "
-            "leasingerbjudandet du fått är rimligt. Med koll på milgränsen.")
+    title = "Leasingkalkylator 2026 – beräkna leasingkostnad per månad | GratisKalkyl"
+    desc = ("Beräkna leasingkostnaden per månad för bilen: värdeminskning, ränta och restvärde. Jämför med att köpa "
+            "med lån och se om leasingerbjudandet du fått är rimligt.")
     crumbs = [("Hem", "/"), ("Bil & energi", "/bil-och-energi"), ("Leasingkalkylator", None)]
     ld = [
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Leasingkalkylator 2026 – månadskostnad för billeasing",
