@@ -62,7 +62,8 @@ def main():
         with open(path, encoding="utf-8") as f:
             s = f.read()
         start, end = f"<!--GK-PARTNER:{kat}:START-->", f"<!--GK-PARTNER:{kat}:END-->"
-        block = render(kat, data[kat], sida["variant"])
+        aktiv = data[kat].get("aktiv", True)
+        block = render(kat, data[kat], sida["variant"]) if aktiv else ""
         if start in s:
             s = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda m: start + block + end, s, count=1, flags=re.S)
             how = "uppdaterad"
@@ -75,7 +76,7 @@ def main():
         with open(path, "w", encoding="utf-8") as f:
             f.write(s)
         aktiva = sum(1 for p in data[kat]["partners"] if p["tracking"])
-        print(f"{kat}: {how} i {sida['fil']} ({len(data[kat]['partners'])} partner, {aktiva} med spårningslänk)")
+        print(f"{kat}: {how} i {sida['fil']} ({len(data[kat]['partners'])} partner, {aktiva} med spårningslänk)" + ("" if aktiv else " – DOLD"))
 
 
 if __name__ == "__main__":
