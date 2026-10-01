@@ -1,550 +1,41 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<script>document.documentElement.setAttribute("data-theme","light");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XGTX1PYYFJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site-wide search dropdown -->
-    <link rel="stylesheet" href="/search-dropdown.css">
-    <script defer src="/search-index.js"></script>
-    <script defer src="/search-dropdown.js"></script>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.svg">
-    <title>Leasingkalkylator 2026 | Bil & kostnad | GratisKalkyl.se</title>
-    <meta name="description" content="Jämför leasing mot köp med vår leasingkalkylator. Beräkna månadskostnad, restvärde och total ägandekostnad. Se vilken finansiering som passar dig bäst. Gratis 2026.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/leasingkalkylator">
-    <meta property="og:title" content="Leasingkalkylator Bil 2026 — Räkna ut din leasingkostnad">
-    <meta property="og:description" content="Beräkna din månadskostnad för billeasingen. Jämför leasing mot att köpa med lån med vår gratis kalkylator.">
-    <meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/leasingkalkylator">
-    <meta property="og:type" content="website">
-  <meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
-    <meta property="og:locale" content="sv_SE">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Leasingkalkylator Bil 2026">
-    <meta name="twitter:description" content="Beräkna månadskostnad för billeasing och jämför med att köpa — gratis kalkylator.">
-    <style>
-        500;600;700;800&display=swap');
-
-        :root {
-            --primary: #0D6A45;
-            --primary-light: #E4F1EA;
-            --primary-dark: #0A5236;
-            --accent: #2563eb;
-            --text: #15201A;
-            --text-light: #56625B;
-            --bg: #F6F5F1;
-            --white: #ffffff;
-            --border: #E2E0D8;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-            --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--text); }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        .page-header { padding: 40px 0 24px; }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        .page-header p { color: var(--text-light); font-size: 1.05rem; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .breadcrumb a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        .calc-wrapper {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-bottom: 48px;
-            box-shadow: var(--shadow);
-        }
-        .input-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        .input-group { display: flex; flex-direction: column; }
-        .input-group label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .input-group .sublabel {
-            font-weight: 400;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 4px;
-        }
-        .input-group input[type="number"],
-        .input-group input[type="range"] {
-            width: 100%;
-        }
-        .input-group input[type="number"] {
-            padding: 12px 14px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.3s ease;
-        }
-        .input-group input[type="number"]:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 74, 0.15);
-        }
-        .input-group input[type="number"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .input-group input[type="range"] {
-            margin-top: 8px;
-            accent-color: var(--primary);
-            height: 6px;
-            transition: box-shadow 0.2s ease;
-        }
-        .input-group input[type="range"]:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .range-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-
-        .results {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        .results-row2 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .result-box {
-            background: var(--primary-light);
-            border-radius: 10px;
-            padding: 24px 20px;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .result-box.highlight {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-        .result-box.neutral {
-            background: var(--bg);
-            border: 1px solid var(--border);
-        }
-        .result-box .label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            opacity: 0.8;
-        }
-        .result-box .value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-        }
-        .result-box .sub {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-        .result-box.savings .value { color: var(--primary); }
-        
-
-        .comparison-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 8px;
-        }
-
-        .chart-separator {
-            height: 1px;
-            background: var(--border);
-            margin: 24px 0;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            margin-bottom: 16px;
-        }
-        canvas { width: 100% !important; height: 100% !important; }
-
-        .table-toggle {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 12px 0;
-            margin-top: 16px;
-            transition: color 0.2s ease;
-        }
-        .table-toggle:hover { text-decoration: underline; }
-        .table-toggle:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            display: none;
-        }
-        .data-table.visible { display: table; }
-        .data-table th {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 12px;
-            text-align: right;
-            font-weight: 500;
-        }
-        .data-table th:first-child { text-align: left; }
-        .data-table td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
-        .data-table td:first-child { text-align: left; }
-        
-
-        /* Affiliate CTA */
-        .affiliate-section {
-            margin: 32px 0;
-            padding: 24px;
-            background: var(--primary-light);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-        .affiliate-section h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .affiliate-section p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-        .affiliate-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .affiliate-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-            cursor: pointer;
-        }
-        .affiliate-btn:hover { opacity: 0.85; }
-        .affiliate-btn:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 8px;
-        }
-        .affiliate-btn.primary {
-            background: var(--primary);
-            color: white;
-        }
-        .affiliate-btn.secondary {
-            background: var(--white);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        /* Info section */
-        .info-section { margin-bottom: 48px; }
-        .info-section h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 48px 0 16px;
-            letter-spacing: -0.01em;
-        }
-        .info-section h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 24px 0 12px;
-            letter-spacing: -0.01em;
-        }
-        .info-section p {
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-        .formula-box {
-            background: #F6F5F1;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            margin: 16px 0;
-            overflow-x: auto;
-        }
-        
-
-        /* FAQ */
-        .faq-item {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-        .faq-q {
-            width: 100%;
-            background: var(--white);
-            border: none;
-            padding: 16px 20px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: left;
-            cursor: pointer;
-            color: var(--text);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s ease;
-        }
-        .faq-q:hover { background: var(--primary-light); }
-        .faq-q:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-        .faq-q .arrow {
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-            color: var(--primary);
-        }
-        .faq-q.open .arrow { transform: rotate(180deg); }
-        .faq-a {
-            display: none;
-            padding: 16px 20px;
-            color: var(--text-light);
-            border-top: 1px solid var(--border);
-            line-height: 1.7;
-        }
-        .faq-a.open { display: block; }
-
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        footer a:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        @media (max-width: 900px) {
-            .results, .results-row2 { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .input-grid { grid-template-columns: 1fr; gap: 16px; }
-            .results, .results-row2 { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.5rem; }
-            .calc-wrapper { padding: 16px; }
-            nav { display: none; }
-            .result-box .value { font-size: 1.3rem; }
-            .input-group input[type="number"] {
-                min-height: 44px;
-                padding: 12px;
-            }
-            .table-toggle { min-height: 44px; }
-            .affiliate-buttons { flex-direction: column; }
-            .affiliate-btn { text-align: center; }
-        }
-    
-        .calc-header-search { position:relative; flex:1; max-width:360px; margin:0 16px; display:flex; align-items:center; background:var(--white,#fff); border:1.5px solid var(--border,#E2E0D8); border-radius:10px; padding:2px 10px 2px 36px; transition:border-color .15s, box-shadow .15s; }
-        .calc-header-search:focus-within { border-color:var(--primary,#0D6A45); box-shadow:0 0 0 3px rgba(34,197,94,.15); }
-        .calc-header-search::before { content:""; position:absolute; left:12px; top:50%; width:14px; height:14px; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; pointer-events:none; }
-        .calc-header-search input { flex:1; border:none; outline:none; padding:8px 0; font-size:0.9rem; background:transparent; color:var(--text,#15201A); font-family:inherit; min-width:0; }
-        .calc-header-search input::placeholder { color:var(--text-light,#56625B); }
-        @media (max-width: 760px) {
-            .calc-header-search { display: none; } /* hide on small screens — users can go to / to search */
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Leasingkalkylator Bil 2026",
-        "url": "https://gratiskalkyl.se/kalkylatorer/leasingkalkylator",
-        "description": "Gratis kalkylator för att beräkna månadskostnad för billeasingen. Jämför leasing mot att köpa bil med lån.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
-        "inLanguage": "sv"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/" },
-            { "@type": "ListItem", "position": 2, "name": "Leasingkalkylator Bil", "item": "https://gratiskalkyl.se/kalkylatorer/leasingkalkylator" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Hur beräknas leasingkostnaden per månad?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är bilens beräknade värde vid avtalets slut i procent av nypriset, alltså den del av nypriset du inte betalar av under avtalet."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är restvärde på en leasingbil?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Restvärdet sätts av leasingbolaget och skiljer sig mellan bilmodeller, så fråga alltid efter det i offerten."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Är det billigare att leasa eller köpa bil?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Jämför nettokostnaden, inte bara vad du betalar. Vid köp äger du bilen när perioden är slut, så dess värde ska räknas av. Kalkylatorn räknar köpets nettokostnad som kontantinsats + lånebetalningar + övriga kostnader − bilens värde vid periodens slut (samma som restvärdet). Vid samma ränta blir köp med lån ofta något billigare i kalkylen, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Månadsbeloppet är däremot ofta lägre vid leasing, och med leasing slipper du risken att bilen är värd mindre än beräknat. Leasing passar om du vill byta bil regelbundet, köp om du planerar att behålla bilen länge."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är handpenning vid billeasing?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Handpenningen (även kallad startbelopp eller förhöjd första hyra) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad händer när leasingperioden tar slut?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Vid privatleasing lämnar du normalt tillbaka bilen och kan sedan teckna ett nytt avtal eller avsluta. Det finns oftast ingen rätt att köpa loss bilen till restvärdet, även om vissa bolag erbjuder ett utköpspris. Vid företagsleasing gäller andra villkor, så läs avtalet. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normalt slitage."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vad är en typisk finansieringsränta vid billeasing?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge, och skiljer sig mellan bolag. Nya bilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Kan man göra avdrag för leasingkostnader?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad. Momsen på leasingavgiften för en personbil får företaget normalt dra av till 50 procent, om bilen används mer än 100 mil per år i momspliktig verksamhet. Hela momsen får dras av bara i vissa verksamheter, till exempel uthyrning, taxi och körkortsutbildning. För privatpersoner finns inget avdrag för leasingavgiften, och klimatbonusen för nya miljöbilar upphörde den 8 november 2022."
-                }
-            }
-        ]
-    }
-    </script>
-  <!-- Dark mode: tillämpa tema innan render (FOUC-prevention) -->
-  
-    <link rel="stylesheet" href="/mobile.css">
-<!-- gk2-skin -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var s=null;try{s=localStorage.getItem("gk-theme");}catch(e){}var d=s==="dark";document.documentElement.setAttribute("data-theme",d?"dark":"light");})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8657228803389245" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTX1PYYFJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XGTX1PYYFJ');</script>
+<title>Leasingkalkylator 2026 – räkna ut månadskostnaden för leasing | GratisKalkyl</title>
+<meta name="description" content="Vad kostar bilen att leasa? Räkna ut leasingavgiften per månad, jämför med att köpa med lån och se om leasingerbjudandet du fått är rimligt. Med koll på milgränsen.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gratiskalkyl.se/kalkylatorer/leasingkalkylator">
+<meta property="og:title" content="Leasingkalkylator 2026 – vad kostar bilen att leasa?">
+<meta property="og:description" content="Vad kostar bilen att leasa? Räkna ut leasingavgiften per månad, jämför med att köpa med lån och se om leasingerbjudandet du fått är rimligt. Med koll på milgränsen.">
+<meta property="og:url" content="https://gratiskalkyl.se/kalkylatorer/leasingkalkylator">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gratiskalkyl.se/favicon.svg">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/search-dropdown.css">
 <link rel="stylesheet" href="/assets/gk.css?v=20261001">
-<link rel="stylesheet" href="/assets/gk-skin.css?v=20261001">
+<script defer src="/search-index.js"></script>
+<script defer src="/search-dropdown.js"></script>
 <script defer src="/assets/gk.js?v=20261001"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Leasingkalkylator 2026 – månadskostnad för billeasing", "url": "https://gratiskalkyl.se/kalkylatorer/leasingkalkylator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": "Vad kostar bilen att leasa? Räkna ut leasingavgiften per månad, jämför med att köpa med lån och se om leasingerbjudandet du fått är rimligt. Med koll på milgränsen.", "dateModified": "2026-10-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": "https://gratiskalkyl.se/"}, {"@type": "ListItem", "position": 2, "name": "Bil & energi", "item": "https://gratiskalkyl.se/bil-och-energi"}, {"@type": "ListItem", "position": 3, "name": "Leasingkalkylator", "item": "https://gratiskalkyl.se/kalkylatorer/leasingkalkylator"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hur räknar man ut leasingkostnaden per månad?", "acceptedAnswer": {"@type": "Answer", "text": "Leasingavgiften består av två delar. Den första är bilens värdeminskning: det finansierade beloppet (priset minus handpenning) minus restvärdet, delat med antalet månader. Den andra är ränta på det genomsnittliga kapitalet under avtalet, alltså (finansierat belopp + restvärde) / 2 × årsräntan / 12. En bil för 350 000 kr med 50 % restvärde efter 36 månader och 6,5 % ränta kostar då ungefär 6 280 kr i månaden: 4 860 kr värdeminskning och 1 420 kr ränta. Leasingbolagets pris kan skilja, till exempel om service ingår eller om restvärdet är ett annat."}}, {"@type": "Question", "name": "Vad är restvärde vid leasing?", "acceptedAnswer": {"@type": "Answer", "text": "Restvärdet är det värde leasingbolaget räknar med att bilen har när avtalet är slut, i procent av priset. Det är den del av bilens pris som du inte betalar av under avtalet. Ju högre restvärde, desto lägre månadsavgift. Restvärdet skiljer sig mellan modeller, så fråga efter det och jämför med vad liknande begagnade bilar säljs för."}}, {"@type": "Question", "name": "Är det billigare att leasa eller köpa bil?", "acceptedAnswer": {"@type": "Answer", "text": "Jämför vad bilen kostar netto, inte månadsbeloppet. Vid köp äger du bilen och får tillbaka det den är värd när du säljer. Kalkylatorn räknar köpets nettokostnad som handpenning + lånebetalningar + restskuld − bilens värde vid försäljningen. Med samma ränta blir köp ofta billigare om bilen går att sälja för restvärdet, men du bär själv risken att den är värd mindre. Kalkylatorn visar också vad bilen minst måste säljas för för att köpet ska löna sig."}}, {"@type": "Question", "name": "Vad händer om jag kör fler mil än leasingavtalet?", "acceptedAnswer": {"@type": "Answer", "text": "Då betalar du en avgift för varje mil över gränsen, oftast när bilen lämnas tillbaka. Priset per mil står i avtalet. Milgränsen går ofta inte att ändra under avtalstiden, så välj en gräns som räcker från början. Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025."}}, {"@type": "Question", "name": "Hur många mil kör en vanlig bil per år?", "acceptedAnswer": {"@type": "Answer", "text": "Enligt Trafikanalys körde personbilar i snitt 1 243 mil under 2025, och privatägda bilar 1 155 mil. Elbilar och laddhybrider körde längre, ungefär 1 700 mil. Det är snitt – räkna på hur mycket just du kör."}}, {"@type": "Question", "name": "Kan man avsluta ett privatleasingavtal i förtid?", "acceptedAnswer": {"@type": "Answer", "text": "Oftast inte utan kostnad. Ett leasingavtal löper normalt hela avtalstiden, och går leasingbolaget med på att avsluta det i förtid får du ofta betala en lösensumma. Läs vad avtalet säger om förtida avslut, skador vid återlämning och vad som räknas som normalt slitage."}}, {"@type": "Question", "name": "Vad är handpenning vid leasing?", "acceptedAnswer": {"@type": "Answer", "text": "Handpenning, ibland kallad förhöjd första hyra, är ett belopp du betalar när avtalet börjar. Den sänker månadsavgiften men du får inte tillbaka den – du äger ingen del av bilen. Jämför därför alltid totalkostnaden, handpenningen inräknad."}}]}</script>
+
 </head>
-<body class="gk-skin">
-<a class="gk-skip gk2" href="#innehall">Hoppa till innehållet</a>
-<div class="gk-hdr gk2" role="banner">
+<body class="gk2">
+<a class="gk-skip" href="#innehall">Hoppa till innehållet</a>
+<header class="gk-hdr">
 <div class="gk-wrap gk-hdr-in">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <label class="gk-search gk-hdr-search"><span class="gk-sr">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
@@ -553,8 +44,8 @@
 <button class="gk-icon-btn gk-menu-btn" type="button" data-gk-menu="menu" aria-controls="gk-menu" aria-expanded="false"><svg class="gk-ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="gk-ico-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="gk-menu-btn-label">Alla verktyg</span><span class="gk-sr"> – meny</span></button>
 </div>
 </div>
-</div>
-<div class="gk-menu gk2" id="gk-menu" hidden>
+</header>
+<div class="gk-menu" id="gk-menu" hidden>
 <div class="gk-menu-in">
 <label class="gk-search"><span class="gk-sr gk-menu-search-label">Sök</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-search-dropdown="auto" placeholder="Sök kalkylator eller yrke" autocomplete="off" spellcheck="false"></label>
 <span class="gk-menu-label">Ämnen</span>
@@ -569,514 +60,379 @@
 </div>
 </div>
 
+<main id="innehall" class="gk-wrap">
+<div class="gk-tool-head">
+<nav class="gk-crumbs" aria-label="Brödsmulor"><ol><li><a href="/">Hem</a></li><li><a href="/bil-och-energi">Bil &amp; energi</a></li><li aria-current="page">Leasingkalkylator</li></ol></nav>
+<div class="gk-eyebrow">Leasingkalkylator 2026</div>
+<h1>Vad kostar bilen att leasa?</h1>
+<p class="gk-lead">Räkna ut månadsavgiften, jämför med att köpa bilen med lån och se om erbjudandet du fått är rimligt.</p>
+<p class="gk-meta">Uppdaterad 1 oktober 2026 · Snittkörsträcka: <a href="https://www.trafa.se/globalassets/statistik/vagtrafik/korstrackor/2025/korstrackor-2025---2026-04-17.pdf" target="_blank" rel="noopener">Trafikanalys</a></p>
+</div>
 
+<div class="gk-tool">
+<div class="gk-tool-col">
+<form class="gk-card gk-stack gk-o1" id="lform" novalidate onsubmit="return false">
+<div class="gk-field">
+<label for="pris">Bilens pris</label>
+<div class="gk-input"><input id="pris" inputmode="numeric" autocomplete="off" value="350 000"><span class="unit">kr</span></div>
+<div class="gk-seg" style="--n:3" id="prisq" role="group" aria-label="Vanliga priser">
+<button type="button" data-v="250000" aria-pressed="false">250 000</button><button type="button" data-v="350000" aria-pressed="true">350 000</button><button type="button" data-v="500000" aria-pressed="false">500 000</button>
+</div>
+</div>
 
-<main id="innehall">
-    <div class="container">
-        <div class="page-header">
-            <nav class="breadcrumb" aria-label="Brödsmulor">
-                <a href="/">GratisKalkyl.se</a> › Leasingkalkylator Bil
-            </nav>
-            <h1>Leasingkalkylator Bil 2026</h1>
-            <p>Beräkna din månadskostnad för billeasing och jämför mot att köpa med lån. Ange nypris, handpenning, löptid, restvärde och ränta. Vid köp räknas bilens värde när perioden är slut av, så att jämförelsen blir rättvis.</p>
-        </div>
+<fieldset class="gk-fieldset">
+<legend class="gk-legend">Avtalstid</legend>
+<div class="gk-seg" style="--n:4" id="manq" role="group" aria-label="Avtalstid i månader">
+<button type="button" data-v="24" aria-pressed="false">24<small>mån</small></button><button type="button" data-v="36" aria-pressed="true">36<small>mån</small></button><button type="button" data-v="48" aria-pressed="false">48<small>mån</small></button><button type="button" data-v="60" aria-pressed="false">60<small>mån</small></button>
+</div>
+</fieldset>
 
-        <div class="calc-wrapper">
-            <div class="input-grid">
-                <div class="input-group">
-                    <label for="nypris">Bilens nypris (kr)</label>
-                    <span class="sublabel" id="nypris-val">350 000 kr</span>
-                    <input type="range" id="nypris-range" min="50000" max="1000000" step="5000" value="350000"
-                           aria-label="Nypris slider" oninput="syncInput('nypris','nypris-range','nypris-val','kr',0)">
-                    <div class="range-labels"><span>50 000 kr</span><span>1 000 000 kr</span></div>
-                    <input type="number" id="nypris" value="350000" min="10000" max="2000000" step="1000"
-                           aria-label="Nypris i kronor" oninput="syncRange('nypris','nypris-range','nypris-val','kr',0)">
-                </div>
-                <div class="input-group">
-                    <label for="handpenning">Handpenning (kr)</label>
-                    <span class="sublabel" id="handpenning-val">50 000 kr</span>
-                    <input type="range" id="handpenning-range" min="0" max="200000" step="5000" value="50000"
-                           aria-label="Handpenning slider" oninput="syncInput('handpenning','handpenning-range','handpenning-val','kr',0)">
-                    <div class="range-labels"><span>0 kr</span><span>200 000 kr</span></div>
-                    <input type="number" id="handpenning" value="50000" min="0" max="500000" step="1000"
-                           aria-label="Handpenning i kronor" oninput="syncRange('handpenning','handpenning-range','handpenning-val','kr',0)">
-                </div>
-                <div class="input-group">
-                    <label for="restvarde">Restvärde (%)</label>
-                    <span class="sublabel" id="restvarde-val">50%</span>
-                    <input type="range" id="restvarde-range" min="10" max="70" step="1" value="50"
-                           aria-label="Restvärde slider" oninput="syncInput('restvarde','restvarde-range','restvarde-val','%',0)">
-                    <div class="range-labels"><span>10%</span><span>70%</span></div>
-                    <input type="number" id="restvarde" value="50" min="0" max="80" step="1"
-                           aria-label="Restvärde i procent" oninput="syncRange('restvarde','restvarde-range','restvarde-val','%',0)">
-                </div>
-                <div class="input-group">
-                    <label for="loptid">Löptid (månader)</label>
-                    <span class="sublabel" id="loptid-val">36 månader</span>
-                    <input type="range" id="loptid-range" min="12" max="60" step="12" value="36"
-                           aria-label="Löptid slider" oninput="syncInput('loptid','loptid-range','loptid-val','månader',0)">
-                    <div class="range-labels"><span>12 mån</span><span>60 mån</span></div>
-                    <input type="number" id="loptid" value="36" min="12" max="84" step="1"
-                           aria-label="Löptid i månader" oninput="syncRange('loptid','loptid-range','loptid-val','månader',0)">
-                </div>
-                <div class="input-group">
-                    <label for="ranta">Finansieringsränta (% per år)</label>
-                    <span class="sublabel" id="ranta-val">6,5%</span>
-                    <input type="range" id="ranta-range" min="1" max="20" step="0.1" value="6.5"
-                           aria-label="Finansieringsränta slider" oninput="syncInputDec('ranta','ranta-range','ranta-val','%')">
-                    <div class="range-labels"><span>1%</span><span>20%</span></div>
-                    <input type="number" id="ranta" value="6.5" min="0" max="30" step="0.1"
-                           aria-label="Finansieringsränta i procent" oninput="syncRangeDec('ranta','ranta-range','ranta-val','%')">
-                </div>
-                <div class="input-group">
-                    <label for="rantaloan">Låneränta vid köp (% per år)</label>
-                    <span class="sublabel" id="rantaloan-val">7,5%</span>
-                    <input type="range" id="rantaloan-range" min="1" max="20" step="0.1" value="7.5"
-                           aria-label="Låneränta slider" oninput="syncInputDec('rantaloan','rantaloan-range','rantaloan-val','%')">
-                    <div class="range-labels"><span>1%</span><span>20%</span></div>
-                    <input type="number" id="rantaloan" value="7.5" min="0" max="30" step="0.1"
-                           aria-label="Låneränta vid köp i procent" oninput="syncRangeDec('rantaloan','rantaloan-range','rantaloan-val','%')">
-                </div>
-                <div class="input-group">
-                    <label for="ovrigt">Övriga kostnader vid köp (kr/mån)</label>
-                    <span class="sublabel" id="ovrigt-val">0 kr/mån</span>
-                    <input type="range" id="ovrigt-range" min="0" max="3000" step="50" value="0"
-                           aria-label="Övriga kostnader vid köp slider" oninput="syncInput('ovrigt','ovrigt-range','ovrigt-val','kr/mån',0)">
-                    <div class="range-labels"><span>0 kr</span><span>3 000 kr</span></div>
-                    <input type="number" id="ovrigt" value="0" min="0" max="20000" step="50"
-                           aria-label="Övriga kostnader vid köp i kronor per månad" oninput="syncRange('ovrigt','ovrigt-range','ovrigt-val','kr/mån',0)">
-                </div>
-            </div>
-            <p style="font-size:0.85rem;color:var(--text-light,#56625B);margin:0 0 16px;">Övriga kostnader: t.ex. service eller vinterdäck som ingår i leasingavgiften men som du själv betalar vid köp. Bilens värde vid periodens slut antas vara lika med restvärdet.</p>
+<div class="gk-field">
+<label for="rv">Restvärde efter avtalet</label>
+<div class="gk-input"><input id="rv" inputmode="decimal" autocomplete="off" value="50"><span class="unit">% av priset</span></div>
+<div class="gk-seg" style="--n:3" id="rvq" role="group" aria-label="Restvärde">
+<button type="button" data-v="40" aria-pressed="false">40 %</button><button type="button" data-v="50" aria-pressed="true">50 %</button><button type="button" data-v="60" aria-pressed="false">60 %</button>
+</div>
+<span class="gk-hint">Det leasingbolaget räknar med att bilen är värd när du lämnar tillbaka den. Fråga efter det i offerten.</span>
+</div>
 
-            <!-- Leasing results -->
-            <p class="comparison-label">🚘 Leasing</p>
-            <div class="results">
-                <div class="result-box highlight">
-                    <div class="label">Månadskostnad leasing</div>
-                    <div class="value" id="res-manad-leasing">—</div>
-                    <div class="sub">per månad</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Total leasingkostnad</div>
-                    <div class="value" id="res-total-leasing">—</div>
-                    <div class="sub">inkl. handpenning</div>
-                </div>
-                <div class="result-box">
-                    <div class="label">Restvärde (kr)</div>
-                    <div class="value" id="res-restvarde-kr">—</div>
-                    <div class="sub">vid avtalets slut</div>
-                </div>
-            </div>
+<div class="gk-field">
+<label for="hp">Handpenning</label>
+<div class="gk-input"><input id="hp" inputmode="numeric" autocomplete="off" value="0"><span class="unit">kr</span></div>
+<span class="gk-hint">Kallas ibland förhöjd första hyra. Du får inte tillbaka den.</span>
+</div>
 
-            <!-- Loan results -->
-            <p class="comparison-label" style="margin-top:8px;">🏦 Köpa med lån</p>
-            <div class="results-row2">
-                <div class="result-box neutral">
-                    <div class="label">Månadskostnad lån</div>
-                    <div class="value" id="res-manad-lan">—</div>
-                    <div class="sub">annuitetslån</div>
-                </div>
-                <div class="result-box neutral">
-                    <div class="label">Nettokostnad köp</div>
-                    <div class="value" id="res-total-lan">—</div>
-                    <div class="sub" id="res-total-lan-sub">betalt − bilens värde</div>
-                </div>
-                <div class="result-box savings">
-                    <div class="label">Skillnad i nettokostnad</div>
-                    <div class="value" id="res-skillnad">—</div>
-                    <div class="sub" id="res-skillnad-sub">köp jämfört med leasing</div>
-                </div>
-            </div>
+<details class="gk-more">
+<summary>Ändra räntor och lån</summary>
+<div class="gk-stack" style="gap:14px">
+<div class="gk-field">
+<label for="rl">Ränta i leasingen</label>
+<div class="gk-input"><input id="rl" inputmode="decimal" autocomplete="off" value="6,5"><span class="unit">% per år</span></div>
+</div>
+<div class="gk-field">
+<label for="rk">Ränta på billånet</label>
+<div class="gk-input"><input id="rk" inputmode="decimal" autocomplete="off" value="7,5"><span class="unit">% per år</span></div>
+</div>
+<div class="gk-field">
+<label for="lt">Lånets löptid</label>
+<div class="gk-input"><input id="lt" inputmode="numeric" autocomplete="off" value="60"><span class="unit">mån</span></div>
+<span class="gk-hint">Säljer du bilen innan lånet är betalt löses resten med pengarna från försäljningen.</span>
+</div>
+<div class="gk-field">
+<label for="ovr">Ingår service eller däck i leasingen?</label>
+<div class="gk-input"><input id="ovr" inputmode="numeric" autocomplete="off" placeholder="0"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Fyll i vad det skulle kosta dig per månad om du köper bilen. Läggs på köpet i jämförelsen.</span>
+</div>
+<span class="gk-hint">Räntorna är exempel. Byt till räntorna i dina offerter.</span>
+</div>
+</details>
+</form>
 
-            <div class="chart-separator"></div>
-            <div class="chart-container">
-                <canvas id="leasingChart" aria-label="Jämförelse leasing vs köpa — stapeldiagram"></canvas>
-            </div>
+<section class="gk-card gk-stack gk-o3" style="gap:14px" aria-labelledby="offH">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 id="offH" style="font-size:22px">Har du fått ett erbjudande?</h2>
+<p class="gk-hint">Fyll i månadsavgiften i offerten så ser du om den är i nivå med uträkningen.</p>
+</div>
+<div class="gk-field">
+<label for="off">Månadsavgift i erbjudandet</label>
+<div class="gk-input"><input id="off" inputmode="numeric" autocomplete="off" placeholder="t.ex. 5 990"><span class="unit">kr/mån</span></div>
+<span class="gk-hint">Samma pris, avtalstid och handpenning som ovan.</span>
+</div>
+<div id="offRes" aria-live="polite"></div>
+</section>
 
-            <button class="table-toggle" onclick="toggleTable()" id="tableBtn" aria-expanded="false">
-                ▼ Visa leasingplan per år
-            </button>
-            <table class="data-table" id="leasingTable" role="table" aria-label="Leasingplan per år">
-                <thead>
-                    <tr>
-                        <th>År</th>
-                        <th>Avskrivning (kr)</th>
-                        <th>Räntekostnad (kr)</th>
-                        <th>Leasingavgift (kr)</th>
-                        <th>Kvarvarande kapital inkl. restvärde (kr)</th>
-                    </tr>
-                </thead>
-                <tbody id="leasingTableBody"></tbody>
-            </table>
+<section class="gk-card gk-stack gk-o4" style="gap:14px" aria-labelledby="milH">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 id="milH" style="font-size:22px">Räcker milen?</h2>
+<p class="gk-hint">Kör du mer än avtalet betalar du för varje mil över gränsen.</p>
+</div>
+<div class="gk-field">
+<label for="kor">Så långt kör du per år</label>
+<div class="gk-input"><input id="kor" inputmode="numeric" autocomplete="off" value="1 155"><span class="unit">mil/år</span></div>
+<div class="gk-seg" style="--n:3" id="korq" role="group" aria-label="Körsträcka">
+<button type="button" data-v="1155" aria-pressed="true">1 155<small>snittet</small></button><button type="button" data-v="1500" aria-pressed="false">1 500</button><button type="button" data-v="1700" aria-pressed="false">1 700<small>snitt elbil</small></button>
+</div>
+<span class="gk-hint">Snitt för privatägda bilar och för elbilar 2025 enligt Trafikanalys.</span>
+</div>
+<div class="gk-field">
+<label for="avt">Mil per år i avtalet</label>
+<div class="gk-input"><input id="avt" inputmode="numeric" autocomplete="off" value="1 500"><span class="unit">mil/år</span></div>
+</div>
+<div class="gk-field">
+<label for="omp">Pris per mil över gränsen</label>
+<div class="gk-input"><input id="omp" inputmode="decimal" autocomplete="off" placeholder="står i avtalet"><span class="unit">kr/mil</span></div>
+</div>
+<div id="milRes" aria-live="polite"></div>
+</section>
+</div>
 
-            <!-- Affiliate -->
-            
-        </div>
+<div class="gk-tool-col">
+<section class="gk-card gk-result gk-o2" aria-live="polite" aria-labelledby="resLabel">
+<div class="gk-result-label" id="resLabel">Din leasingavgift</div>
+<div class="gk-big"><strong id="resBig">–</strong><span>kr/mån</span></div>
+<p class="gk-hint" id="resSub"></p>
+<div class="gk-tiles" id="tiles"></div>
+<div id="verdict"></div>
+<details class="gk-how">
+<summary>Så räknade vi</summary>
+<div id="how"></div>
+</details>
+</section>
 
-        <!-- SEO text -->
-        <div class="info-section">
-            <h2>Hur fungerar billeasing?</h2>
-            <p>Billeasing innebär att du hyr en bil under en bestämd period — vanligtvis 24, 36 eller 48 månader — mot en fast månadskostnad. Du betalar för bilens värdeminskning under perioden, plus en finansieringsränta på det återstående kapitalet. Till skillnad från ett billån äger du aldrig bilen. Vid privatleasing lämnar du normalt tillbaka den när avtalet är slut – det finns oftast ingen rätt att köpa loss bilen till restvärdet.</p>
+<section class="gk-card gk-stack gk-o5" style="gap:12px" aria-labelledby="cmpH">
+<h2 id="cmpH" style="font-size:22px">Leasa eller köpa – vad kostar bilen?</h2>
+<figure style="margin:0">
+<figcaption class="gk-hint" style="margin-bottom:8px" id="chartCap"></figcaption>
+<div id="chart"></div>
+</figure>
+<details class="gk-more">
+<summary>Visa år för år</summary>
+<div class="gk-table-wrap"><table class="gk-table gk-table-tight" id="planTable"></table></div>
+</details>
+</section>
 
-            <h3>Leasing-formeln förklarad</h3>
-            <p>Månadskostnaden beräknas i två delar: avskrivningsdelen och räntedelen.</p>
-            <div class="formula-box">
-Avskrivning/mån = (Finansierat belopp − Restvärde) ÷ Löptid
+<section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
+<h2 id="nextH" style="font-size:22px">Nästa steg</h2>
+<a class="gk-linkcard" href="/kalkylatorer/bilkostnadsraknare"><span>Vad kostar bilen totalt?<small>Lägg till försäkring, skatt, drivmedel och service</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/formansbilkalkylator"><span>Förmånsbil i stället?<small>Räkna ut förmånsvärdet och vad det kostar dig netto</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/artiklar/privatleasing-eller-kopa-bil-2026"><span>Guide: privatleasing eller köpa bil<small>Det du ska ha koll på innan du skriver på</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<!--GK-PARTNER:bilforsakring:START--><!--GK-PARTNER:bilforsakring:END-->
+</section>
+</div>
+</div>
 
-Räntedel/mån    = (Finansierat belopp + Restvärde) × (Årsränta ÷ 12) ÷ 2
+<div class="gk-prose">
+<h2>Så räknas leasingavgiften</h2>
+<p>När du leasar betalar du för den del av bilens värde som försvinner under avtalet, plus ränta. Leasingbolaget räknar med att bilen är värd ett visst <strong>restvärde</strong> när du lämnar tillbaka den, och resten av priset fördelas på avtalets månader.</p>
+<ul>
+<li><strong>Värdeminskning per månad</strong> = (pris − handpenning − restvärde) / antal månader</li>
+<li><strong>Ränta per månad</strong> = (pris − handpenning + restvärde) / 2 × årsräntan / 12</li>
+</ul>
+<p>Räntan räknas på det genomsnittliga beloppet under avtalet, eftersom du i början lånar hela priset och i slutet bara restvärdet. Med 350 000 kr, 50 % restvärde, 36 månader och 6,5 % ränta blir avgiften ungefär <strong>6 280 kr i månaden</strong>.</p>
+<p>Ett leasingbolags pris kan skilja från uträkningen. Ofta ingår service och ibland vinterdäck eller försäkring, och bolaget kan ha ett annat restvärde än det du räknar med.</p>
 
-Finansierat belopp = Nypris − Handpenning
-            </div>
-            <p>Restvärdet räknas som andel av nypriset och representerar bilens förväntade marknadsvärde vid avtalets slut. Ju högre restvärde, desto lägre avskrivning betalar du varje månad.</p>
+<h2>Leasa eller köpa?</h2>
+<p>Jämför vad bilen kostar dig netto, inte vad du betalar per månad. Med leasing äger du inget när avtalet är slut. Köper du bilen med lån får du tillbaka det den är värd när du säljer den.</p>
+<ul>
+<li><strong>Leasing</strong> = handpenning + alla månadsavgifter.</li>
+<li><strong>Köp med lån</strong> = handpenning + lånebetalningar + restskulden på lånet − det du får för bilen. Kalkylatorn räknar med att du säljer bilen för restvärdet när avtalstiden är slut.</li>
+</ul>
+<p>Vid samma ränta blir köp ofta något billigare, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Men vid köp bär du själv risken att bilen är värd mindre än du trott, och du betalar oftast mer per månad. Kalkylatorn visar därför också vad bilen minst måste säljas för för att köpet ska löna sig.</p>
+<p>Leasing passar dig som vill byta bil med jämna mellanrum och ha en fast kostnad. Planerar du att behålla bilen länge blir köp oftast billigare, eftersom en bil tappar mest i värde de första åren.</p>
 
-            <h3>Leasing vs. köpa — vad är billigast?</h3>
-            <p>För en rättvis jämförelse räknar kalkylatorn köpets <strong>nettokostnad</strong>: kontantinsats + alla lånebetalningar + övriga kostnader − bilens värde när perioden är slut. Bilens värde antas vara detsamma som restvärdet i leasingavtalet. Leasingens kostnad är handpenningen plus alla leasingavgifter, eftersom du inte äger något efteråt.</p>
-            <div class="formula-box">
-Nettokostnad köp = Kontantinsats + Månadskostnad lån × Löptid + Övriga kostnader − Bilens värde vid slutet<br><br>
-Kostnad leasing = Handpenning + Månadskostnad leasing × Löptid
-            </div>
-            <p>Lånet i kalkylatorn betalas av under samma tid som leasingavtalet, så det finns ingen restskuld kvar. Vid samma ränta blir köp ofta något billigare, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Kalkylatorn räknar däremot inte med att du vid köp betalar mer under perioden (pengar som annars kunde ha gett avkastning) eller att bilen kan vara värd mindre än restvärdet när du säljer. Med leasing är det leasingbolaget som bär den risken. Leasing passar bäst om du vill byta bil med jämna intervall och föredrar en fast månadsbudget.</p>
+<h2>Restvärdet avgör månadsavgiften</h2>
+<p>Ju högre restvärde, desto mindre av bilens pris betalar du under avtalet. Därför kan en dyrare bil som håller värdet bra kosta lika mycket att leasa som en billigare bil som tappar snabbt. Fråga alltid efter restvärdet i offerten och jämför med vad liknande begagnade bilar säljs för.</p>
 
-            <h3>Restvärde — nyckeln till låg månadskostnad</h3>
-            <p>Restvärdet är en av de viktigaste parametrarna i leasing. Bilar som håller värdet väl får ett högre restvärde och därmed lägre månadskostnad, medan bilar med sämre andrahandsvärde får ett lägre restvärde och högre kostnad. Restvärdet skiljer sig mycket mellan bilmodeller. Fråga alltid efter restvärdet i leasingofferter och jämför det med vad liknande begagnade bilar säljs för.</p>
+<h2>Mil och övermil</h2>
+<p>Leasingavtal har en milgräns per år. Kör du längre betalar du en avgift per mil över gränsen, och gränsen går ofta inte att ändra under avtalstiden. Enligt Trafikanalys körde personbilar i snitt <strong>1 243 mil</strong> under 2025 och privatägda bilar <strong>1 155 mil</strong>. Elbilar och laddhybrider körde längre, ungefär 1 700 mil.</p>
 
-            <h3>Dolda kostnader vid leasing</h3>
-            <p>Utöver leasingavgiften tillkommer ofta: en avgift per mil om du kör mer än avtalat antal mil (beloppet står i avtalet), dokumentavgift vid avtalstecknande och eventuell kostnad vid återlämning om bilen har skador. Se till att avtalad milgräns stämmer med ditt faktiska körande. Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025, men elbilar och laddhybrider körde längre, ungefär 1 700 mil.</p>
+<h2>Innan du skriver på</h2>
+<ul>
+<li>Jämför <strong>totalkostnaden</strong> för hela avtalet, med handpenning och avgifter – inte bara månadsavgiften.</li>
+<li>Kolla vad som <strong>ingår</strong>: service, vinterdäck, försäkring. Det som inte ingår betalar du själv.</li>
+<li>Välj en <strong>milgräns</strong> som räcker. Räkna på hur långt du faktiskt kör.</li>
+<li>Läs vad avtalet säger om <strong>skador och slitage</strong> när bilen lämnas tillbaka.</li>
+<li>Kontrollera vad det kostar att <strong>avsluta avtalet i förtid</strong>, till exempel om du flyttar eller behöver en annan bil.</li>
+</ul>
 
-            <h2>Vanliga frågor om billeasing</h2>
+<h2>Vanliga frågor om leasing</h2>
+<div class="gk-faq"><details><summary>Hur räknar man ut leasingkostnaden per månad?</summary><p>Leasingavgiften består av två delar. Den första är bilens värdeminskning: det finansierade beloppet (priset minus handpenning) minus restvärdet, delat med antalet månader. Den andra är ränta på det genomsnittliga kapitalet under avtalet, alltså (finansierat belopp + restvärde) / 2 × årsräntan / 12. En bil för 350 000 kr med 50 % restvärde efter 36 månader och 6,5 % ränta kostar då ungefär 6 280 kr i månaden: 4 860 kr värdeminskning och 1 420 kr ränta. Leasingbolagets pris kan skilja, till exempel om service ingår eller om restvärdet är ett annat.</p></details><details><summary>Vad är restvärde vid leasing?</summary><p>Restvärdet är det värde leasingbolaget räknar med att bilen har när avtalet är slut, i procent av priset. Det är den del av bilens pris som du inte betalar av under avtalet. Ju högre restvärde, desto lägre månadsavgift. Restvärdet skiljer sig mellan modeller, så fråga efter det och jämför med vad liknande begagnade bilar säljs för.</p></details><details><summary>Är det billigare att leasa eller köpa bil?</summary><p>Jämför vad bilen kostar netto, inte månadsbeloppet. Vid köp äger du bilen och får tillbaka det den är värd när du säljer. Kalkylatorn räknar köpets nettokostnad som handpenning + lånebetalningar + restskuld − bilens värde vid försäljningen. Med samma ränta blir köp ofta billigare om bilen går att sälja för restvärdet, men du bär själv risken att den är värd mindre. Kalkylatorn visar också vad bilen minst måste säljas för för att köpet ska löna sig.</p></details><details><summary>Vad händer om jag kör fler mil än leasingavtalet?</summary><p>Då betalar du en avgift för varje mil över gränsen, oftast när bilen lämnas tillbaka. Priset per mil står i avtalet. Milgränsen går ofta inte att ändra under avtalstiden, så välj en gräns som räcker från början. Enligt Trafikanalys körde privatägda personbilar i snitt 1 155 mil under 2025.</p></details><details><summary>Hur många mil kör en vanlig bil per år?</summary><p>Enligt Trafikanalys körde personbilar i snitt 1 243 mil under 2025, och privatägda bilar 1 155 mil. Elbilar och laddhybrider körde längre, ungefär 1 700 mil. Det är snitt – räkna på hur mycket just du kör.</p></details><details><summary>Kan man avsluta ett privatleasingavtal i förtid?</summary><p>Oftast inte utan kostnad. Ett leasingavtal löper normalt hela avtalstiden, och går leasingbolaget med på att avsluta det i förtid får du ofta betala en lösensumma. Läs vad avtalet säger om förtida avslut, skador vid återlämning och vad som räknas som normalt slitage.</p></details><details><summary>Vad är handpenning vid leasing?</summary><p>Handpenning, ibland kallad förhöjd första hyra, är ett belopp du betalar när avtalet börjar. Den sänker månadsavgiften men du får inte tillbaka den – du äger ingen del av bilen. Jämför därför alltid totalkostnaden, handpenningen inräknad.</p></details></div>
 
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Hur beräknas leasingkostnaden per månad?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Leasingkostnaden per månad beräknas med formeln: Månadskostnad = ((Nypris − Handpenning − Restvärde) ÷ Löptid) + ((Nypris − Handpenning + Restvärde) × Månadsränta ÷ 2). Månadsräntan är årsräntan dividerat med 12. Restvärdet är bilens beräknade värde vid avtalets slut i procent av nypriset, alltså den del av nypriset du inte betalar av under avtalet.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Vad är restvärde på en leasingbil?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Restvärdet är det värde som bilen förväntas ha vid leasingperiodens slut, uttryckt som procent av nypriset. Ju högre restvärde, desto lägre månadskostnad eftersom du bara betalar för bilens värdeminskning under leasingperioden. Restvärdet sätts av leasingbolaget och skiljer sig mellan bilmodeller, så fråga alltid efter det i offerten.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Är det billigare att leasa eller köpa bil?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Jämför nettokostnaden, inte bara vad du betalar. Vid köp äger du bilen när perioden är slut, så dess värde ska räknas av. Kalkylatorn räknar köpets nettokostnad som kontantinsats + lånebetalningar + övriga kostnader − bilens värde vid periodens slut (samma som restvärdet). Vid samma ränta blir köp med lån ofta något billigare i kalkylen, eftersom leasingräntan betalas på ett belopp som inkluderar restvärdet under hela avtalet. Månadsbeloppet är däremot ofta lägre vid leasing, och med leasing slipper du risken att bilen är värd mindre än beräknat. Leasing passar om du vill byta bil regelbundet, köp om du planerar att behålla bilen länge.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Vad är handpenning vid billeasing?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Handpenningen (även kallad startbelopp eller förhöjd första hyra) är ett engångsbelopp du betalar vid leasingstart. En högre handpenning minskar det finansierade beloppet och sänker därmed månadskostnaden. Handpenning är dock inte detsamma som att äga del av bilen — du har inte rätt att sälja den eller hämta ut pengarna.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Vad händer när leasingperioden tar slut?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Vid privatleasing lämnar du normalt tillbaka bilen och kan sedan teckna ett nytt avtal eller avsluta. Det finns oftast ingen rätt att köpa loss bilen till restvärdet, även om vissa bolag erbjuder ett utköpspris. Vid företagsleasing gäller andra villkor, så läs avtalet. Observera att du kan debiteras extra om du kört mer mil än avtalat eller om bilen har skador utöver normalt slitage.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Vad är en typisk finansieringsränta vid billeasing?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Finansieringsräntan vid billeasing varierar beroende på fordonstyp, kreditvärdighet och marknadsränteläge, och skiljer sig mellan bolag. Nya bilar erbjuds ibland med lägre räntor som en kampanj. Jämför alltid det effektiva ränteläget (inklusive alla avgifter) för att göra rätt val.
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                    Kan man göra avdrag för leasingkostnader?
-                    <span class="arrow">▾</span>
-                </button>
-                <div class="faq-a">
-                    Om du leasar bilen i företagets namn kan leasingavgiften vara avdragsgill som driftkostnad. Momsen på leasingavgiften för en personbil får företaget normalt dra av till 50 procent, om bilen används mer än 100 mil per år i momspliktig verksamhet. Hela momsen får dras av bara i vissa verksamheter, till exempel uthyrning, taxi och körkortsutbildning. För privatpersoner finns inget avdrag för leasingavgiften, och klimatbonusen för nya miljöbilar upphörde den 8 november 2022.
-                </div>
-            </div>
+<h2>Källor</h2>
+<ul>
+<li><a href="https://www.trafa.se/globalassets/statistik/vagtrafik/korstrackor/2025/korstrackor-2025---2026-04-17.pdf" target="_blank" rel="noopener">Trafikanalys – Körsträckor 2025</a> (snittkörsträcka 1 243 mil, privatägda 1 155 mil, elbil och laddhybrid ca 1 700 mil)</li>
+<li>Leasingavgiften räknas med rak värdeminskning till restvärdet och ränta på genomsnittligt kapital. Billånet räknas som ett annuitetslån. Räntorna är exempel som du kan ändra.</li>
+</ul>
 
-            <h2>Relaterad guide</h2>
-            <p>📖 <a href="/artiklar/privatleasing-eller-kopa-bil-2026"><strong>Privatleasing eller köpa bil 2026?</strong></a> — komplett jämförelse med räkneexempel, restvärde, milgräns och dolda kostnader.</p>
-
-            <h2>Relaterade kalkylatorer</h2>
-            <p>
-                Se även:
-                <a href="/kalkylatorer/bilkostnadsraknare">Bilkostnadsräknare</a> (driftkostnad) ·
-                <a href="/kalkylatorer/lanekalkylator">Lånekalkylator</a> ·
-                <a href="/kalkylatorer/bolanekalkylator">Bolånekalkylator</a> ·
-                <a href="/kalkylatorer/sparkalkylator">Sparkalkylator</a>
-            </p>
-        </div>
-    </div>
+<h2>Räkna vidare</h2>
+<div class="gk-list-links">
+<a class="gk-linkcard" href="/kalkylatorer/bilkostnadsraknare"><span>Bilkostnadsräknare<small>Vad kostar bilen per månad och per mil?</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/drivmedelskalkylator"><span>Drivmedelskalkylator<small>Bensin, diesel eller el</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<a class="gk-linkcard" href="/kalkylatorer/lanekalkylator"><span>Lånekalkylator<small>Månadskostnad och ränta för ett billån</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+</div>
+</div>
 </main>
+<script id="gk-leasing" type="application/json">{"lt":60,"rl":6.5,"rk":7.5,"privat":1155}</script>
+<script>
 
-<div class="gk-ftr gk2" role="contentinfo">
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var C = JSON.parse(document.getElementById('gk-leasing').textContent);
+  var $ = function (id) { return document.getElementById(id); };
+  var kr = function (v) { return GK.fmt(Math.round(v / 10) * 10, 0) + ' kr'; };
+  var st = { man: 36 };
+
+  function seg(id, cb) {
+    var el = $(id);
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      el.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cb(b.getAttribute('data-v')); calc();
+    });
+  }
+  function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', +x.getAttribute('data-v') === v ? 'true' : 'false'); }); }
+  seg('prisq', function (v) { $('pris').value = GK.fmt(+v, 0); });
+  seg('manq', function (v) { st.man = +v; });
+  seg('rvq', function (v) { $('rv').value = v; });
+  seg('korq', function (v) { $('kor').value = GK.fmt(+v, 0); });
+  ['pris', 'rv', 'hp', 'rl', 'rk', 'lt', 'ovr', 'off', 'kor', 'avt', 'omp'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  $('pris').addEventListener('input', function () { press('prisq', GK.parse($('pris').value)); });
+  $('rv').addEventListener('input', function () { press('rvq', GK.parse($('rv').value)); });
+  $('kor').addEventListener('input', function () { press('korq', GK.parse($('kor').value)); });
+  ['pris', 'hp', 'ovr', 'off', 'kor', 'avt'].forEach(function (id) { GK.groupInput($(id)); });
+
+  function val(id) { var v = GK.parse($(id).value); return isFinite(v) && v >= 0 ? v : null; }
+  function verdict(kind, title, text) {
+    var ico = kind === 'good' ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>';
+    return '<div class="gk-verdict ' + kind + '" style="margin-top:12px">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
+  }
+  function tile(l, v, s) { return '<div class="gk-tile"><span>' + l + '</span><strong>' + v + '</strong>' + (s ? '<small class="gk-hint" style="display:block;margin-top:2px">' + s + '</small>' : '') + '</div>'; }
+  function pct(v, d) { return GK.fmt(v, d == null ? 1 : d) + ' %'; }
+  function rp(v) { return GK.fmt(v, 2).replace(/,?0+$/, ''); }
+
+  /* Modell – samma som scripts/build_leasing.py */
+  function leasing(P, H, n, rvp, rl) {
+    var F = P - H, RV = P * rvp / 100, dep = (F - RV) / n, ranta = (F + RV) / 2 * rl / 100 / 12;
+    return { F: F, RV: RV, dep: dep, ranta: ranta, man: dep + ranta, tot: H + (dep + ranta) * n };
+  }
+  function annuitet(L, rk, lt) { var i = rk / 100 / 12; return i === 0 ? L / lt : L * i / (1 - Math.pow(1 + i, -lt)); }
+  function restskuld(L, rk, lt, n) {
+    if (n >= lt) return 0;
+    var i = rk / 100 / 12, m = annuitet(L, rk, lt);
+    return i === 0 ? L - m * n : L * Math.pow(1 + i, n) - m * (Math.pow(1 + i, n) - 1) / i;
+  }
+  function kop(P, H, n, rvp, rk, lt, ovr) {
+    var L = P - H, m = annuitet(L, rk, lt), k = Math.min(n, lt), B = restskuld(L, rk, lt, n);
+    var brutto = H + m * k + B + ovr * n;
+    return { L: L, man: m, betalt: H + m * k, rest: B, brutto: brutto, netto: brutto - P * rvp / 100 };
+  }
+  function clear(msg) {
+    $('resBig').textContent = '–'; $('resSub').textContent = msg;
+    ['tiles', 'verdict', 'how', 'chart', 'chartCap', 'planTable', 'offRes', 'milRes'].forEach(function (id) { $(id).innerHTML = ''; });
+  }
+
+  function calc() {
+    var P = val('pris'), H = val('hp') || 0, rvp = val('rv'), n = st.man;
+    var rl = val('rl'), rk = val('rk'), lt = val('lt'), ovr = val('ovr') || 0;
+    if (rl == null || rl > 30) rl = C.rl;
+    if (rk == null || rk > 30) rk = C.rk;
+    if (!lt || lt < 12 || lt > 120) lt = C.lt;
+    lt = Math.round(lt);
+    if (!P || P < 10000) return clear('Fyll i bilens pris.');
+    if (rvp == null || rvp >= 100) return clear('Fyll i restvärdet i procent, till exempel 50.');
+    if (H >= P) return clear('Handpenningen kan inte vara lika stor som priset.');
+    var l = leasing(P, H, n, rvp, rl);
+    if (l.F <= l.RV) return clear('Handpenning och restvärde blir tillsammans mer än bilens pris. Sänk handpenningen eller restvärdet.');
+    var k = kop(P, H, n, rvp, rk, lt, ovr);
+
+    $('resBig').textContent = GK.fmt(Math.round(l.man / 10) * 10, 0);
+    $('resSub').textContent = 'Totalt ' + kr(l.tot) + ' på ' + n + ' månader' + (H > 0 ? ', handpenningen inräknad' : '') + '. Du lämnar tillbaka bilen och äger inget efteråt.';
+    $('tiles').innerHTML = tile('Värdeminskning', kr(l.dep) + '/mån', 'Pris ner till restvärdet ' + kr(l.RV)) +
+      tile('Ränta', kr(l.ranta) + '/mån', rp(rl) + ' % på snittkapitalet') +
+      tile('Köpa med lån', kr(k.man) + '/mån', 'Lån ' + kr(k.L) + ' på ' + lt + ' mån, ' + rp(rk) + ' %') +
+      tile('Bilens värde efter ' + n + ' mån', kr(l.RV), GK.fmt(rvp, 1).replace(/,0$/, '') + ' % av priset');
+
+    var diff = l.tot - k.netto;                     /* > 0: köp billigare */
+    var grans = k.brutto - l.tot;                   /* sälj minst för detta för att köp ska löna sig */
+    var v = '';
+    if (Math.abs(diff) < Math.max(1000, l.tot * 0.01)) {
+      v = verdict('info', 'Leasing och köp kostar ungefär lika mycket', 'Över ' + n + ' månader kostar båda ca ' + kr(l.tot) + ' netto – om bilen kan säljas för ' + kr(l.RV) + '.');
+    } else if (diff > 0) {
+      v = verdict('good', 'Köpa med lån blir ca ' + kr(diff) + ' billigare', 'Över ' + n + ' månader, om du kan sälja bilen för ' + kr(l.RV) + '. Köpet lönar sig så länge bilen går att sälja för mer än ' + kr(Math.max(0, grans)) + ' (' + pct(Math.max(0, grans) / P * 100, 0) + ' av priset). Säljer du för mindre är leasing billigare.');
+    } else {
+      v = verdict('good', 'Leasing blir ca ' + kr(-diff) + ' billigare', 'Över ' + n + ' månader jämfört med att köpa med lån och sälja för ' + kr(l.RV) + '. Köp lönar sig först om bilen går att sälja för mer än ' + kr(grans) + ' (' + pct(grans / P * 100, 0) + ' av priset).');
+    }
+    if (k.man > l.man * 1.05) v += verdict('info', 'Köp kostar mer per månad', 'Lånet kostar ' + kr(k.man) + ' i månaden mot ' + kr(l.man) + ' för leasing – ' + kr(k.man - l.man) + ' mer varje månad, pengar som du annars kunde spara.');
+    $('verdict').innerHTML = v;
+
+    $('how').innerHTML =
+      '<p><strong>Leasing:</strong> värdeminskning (' + kr(l.F) + ' − ' + kr(l.RV) + ') / ' + n + ' = ' + kr(l.dep) + ' per månad. Ränta (' + kr(l.F) + ' + ' + kr(l.RV) + ') / 2 × ' + rp(rl) + ' % / 12 = ' + kr(l.ranta) + ' per månad. Finansierat belopp = pris − handpenning.</p>' +
+      '<p><strong>Köp:</strong> annuitetslån på ' + kr(k.L) + ' över ' + lt + ' månader med ' + rp(rk) + ' % ränta = ' + kr(k.man) + ' per månad. Efter ' + n + ' månader har du betalat ' + kr(k.betalt) + (k.rest > 0 ? ' och har ' + kr(k.rest) + ' kvar på lånet, som du löser när du säljer' : '') + '. Du säljer bilen för ' + kr(l.RV) + ' (restvärdet). Nettokostnad: ' + kr(k.netto) + (ovr > 0 ? ', inklusive ' + kr(ovr * n) + ' för det som ingår i leasingen' : '') + '.</p>' +
+      '<p>Vi räknar inte med uppläggnings- och aviavgifter, försäkring, skatt eller drivmedel – de tillkommer i båda fallen. Leasingbolagets pris kan skilja från uträkningen, till exempel om service ingår.</p>';
+
+    offer(l, P, H, n, rvp, rl);
+    mil(l, n);
+    chart(l, k, n);
+
+    var rows = [], m;
+    for (m = 12; m < n; m += 12) rows.push(m);
+    rows.push(n);
+    $('planTable').innerHTML = '<thead><tr><th scope="col">Efter</th><th scope="col">Leasing betalt</th><th scope="col">Köp: betalt</th><th scope="col">Kvar på lånet</th></tr></thead><tbody>' +
+      rows.map(function (mm) {
+        return '<tr><td>' + mm + ' mån</td><td>' + GK.fmt(Math.round(H + l.man * mm), 0) + '</td><td>' + GK.fmt(Math.round(H + k.man * Math.min(mm, lt)), 0) + '</td><td>' + GK.fmt(Math.round(restskuld(k.L, rk, lt, mm)), 0) + '</td></tr>';
+      }).join('') + '</tbody><caption class="gk-hint" style="caption-side:bottom;text-align:left;padding-top:8px">Kronor, handpenning inräknad. Vid köp får du tillbaka det bilen säljs för.</caption>';
+  }
+
+  function offer(l, P, H, n, rvp, rl) {
+    var O = val('off');
+    if (!O || O < 100) { $('offRes').innerHTML = ''; return; }
+    var d = O - l.man, imp = (O - l.dep) * 24 / (l.F + l.RV) * 100;
+    var h = '<div class="gk-tiles">' + tile('Totalt för erbjudandet', kr(H + O * n), n + ' mån' + (H > 0 ? ', handpenning inräknad' : '')) +
+      tile('Motsvarar en ränta på', imp > 0 ? pct(imp) : 'under 0 %', 'Om restvärdet är ' + GK.fmt(rvp, 1).replace(/,0$/, '') + ' %') + '</div>';
+    if (Math.abs(d) <= l.man * 0.03) {
+      h += verdict('good', 'I nivå med uträkningen', 'Erbjudandet ligger nära ' + kr(l.man) + ' i månaden, som vi räknar fram med ' + rp(rl) + ' % ränta och ' + GK.fmt(rvp, 1).replace(/,0$/, '') + ' % restvärde.');
+    } else if (d > 0) {
+      h += verdict('warn', 'Erbjudandet är ' + kr(d) + ' dyrare per månad', 'Det blir ' + kr(d * n) + ' mer på ' + n + ' månader än uträkningen. Det kan bero på att service, däck eller försäkring ingår – då kan det vara rimligt – eller på högre ränta eller lägre restvärde. Fråga vilket restvärde och vilken ränta erbjudandet bygger på.');
+    } else {
+      h += verdict('good', 'Erbjudandet är ' + kr(-d) + ' billigare per månad', 'Det blir ' + kr(-d * n) + ' mindre på ' + n + ' månader än uträkningen. Leasingbolaget räknar troligen med ett högre restvärde eller har en kampanjränta. Kolla milgränsen och vad som händer vid återlämning.');
+    }
+    $('offRes').innerHTML = h;
+  }
+
+  function mil(l, n) {
+    var K = val('kor'), A = val('avt'), p = val('omp');
+    if (!K || K < 50 || !A || A < 50) { $('milRes').innerHTML = ''; return; }
+    var ar = n / 12, over = Math.max(0, K - A) * ar, kost = p ? over * p : 0;
+    var h = '<div class="gk-tiles">' + tile('Kostnad per mil', GK.fmt((l.tot + kost) / (K * ar), 1) + ' kr', 'Leasing' + (kost ? ' och övermil' : '') + ' delat på ' + GK.fmt(Math.round(K * ar), 0) + ' mil') +
+      tile('Snittet', GK.fmt(C.privat, 0) + ' mil/år', 'Privatägda bilar 2025, Trafikanalys') + '</div>';
+    if (K > A) {
+      h += verdict('warn', 'Du kör ca ' + GK.fmt(Math.round(over), 0) + ' mil för mycket', 'Det är ' + GK.fmt(Math.round(K - A), 0) + ' mil per år över avtalets gräns' +
+        (p ? ', och kostar ca ' + kr(kost) + ' på ' + n + ' månader (' + kr(kost / n) + '/mån). Jämför med vad en högre milgräns kostar i avtalet.' : '. Fyll i priset per mil så räknar vi ut vad det kostar – eller välj en högre milgräns i avtalet.'));
+    } else {
+      h += verdict('good', 'Milgränsen räcker', 'Du har ' + GK.fmt(Math.round(A - K), 0) + ' mil per år i marginal. Har du mycket marginal kan en lägre milgräns ge en lägre avgift.');
+    }
+    $('milRes').innerHTML = h;
+  }
+
+  function chart(l, k, n) {
+    var W = Math.max(300, Math.min(760, $('chart').clientWidth || 600)), Lw = W < 480 ? 92 : 120, R = 16, bh = 30, gap = 34, T = 6;
+    var hi = Math.max(l.tot, k.brutto), sx = function (v) { return (W - Lw - R) * Math.max(0, v) / hi; };
+    var H = T + 2 * bh + gap + 4;
+    var y1 = T, y2 = T + bh + gap;
+    var lab = function (y, t, s) { return '<text x="0" y="' + (y + 13) + '" font-size="13" font-weight="700" fill="var(--gk-ink)">' + t + '</text><text x="0" y="' + (y + 28) + '" font-size="11" fill="var(--gk-muted)">' + s + '</text>'; };
+    var vt = function (x, y, t, anchorEnd) { return '<text x="' + x + '" y="' + (y + bh / 2 + 5) + '" font-size="13" font-weight="700" text-anchor="' + (anchorEnd ? 'end' : 'start') + '" fill="' + (anchorEnd ? 'var(--gk-surface)' : 'var(--gk-ink)') + '">' + t + '</text>'; };
+    var s = lab(y1, 'Leasing', 'betalt') + lab(y2, 'Köpa', 'netto');
+    var wl = sx(l.tot), wn = sx(Math.max(0, k.netto)), wb = sx(k.brutto);
+    s += '<rect x="' + Lw + '" y="' + y1 + '" width="' + wl + '" height="' + bh + '" rx="6" fill="var(--gk-accent)"/>';
+    s += wl > 110 ? vt(Lw + wl - 8, y1, kr(l.tot), true) : vt(Lw + wl + 6, y1, kr(l.tot));
+    s += '<rect x="' + Lw + '" y="' + y2 + '" width="' + wb + '" height="' + bh + '" rx="6" fill="var(--gk-surface-2)" stroke="var(--gk-border-strong)" stroke-dasharray="4 3"/>';
+    s += '<rect x="' + Lw + '" y="' + y2 + '" width="' + wn + '" height="' + bh + '" rx="6" fill="var(--gk-ink-2)"/>';
+    s += wn > 110 ? vt(Lw + wn - 8, y2, kr(k.netto), true) : vt(Lw + wn + 6, y2, kr(k.netto));
+
+    $('chartCap').textContent = 'Vad bilen kostar dig på ' + n + ' månader. Köp: det du betalar minus det du får när du säljer bilen.';
+    $('chart').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" aria-label="Leasing kostar ' + kr(l.tot) + ', att köpa med lån kostar netto ' + kr(k.netto) + ' på ' + n + ' månader" style="display:block;font-family:inherit">' + s + '</svg>' +
+      '<p class="gk-hint" style="margin:8px 0 0;display:flex;align-items:flex-start;gap:8px"><svg width="22" height="12" aria-hidden="true" style="flex:none;margin-top:3px"><rect x="1" y="1" width="20" height="10" rx="3" fill="var(--gk-surface-2)" stroke="var(--gk-border-strong)" stroke-dasharray="4 3"/></svg><span>Vid köp betalar du ' + kr(k.brutto) + ' men får tillbaka ' + kr(l.RV) + ' när du säljer bilen.</span></p>';
+  }
+
+  calc();
+});
+
+</script>
+<footer class="gk-ftr">
 <div class="gk-wrap gk-ftr-in">
 <div style="display:flex;flex-direction:column;gap:10px">
 <a class="gk-logo" href="/">Gratis<span>Kalkyl</span></a>
 <p>Oberoende kalkylatorer med öppen källredovisning. Vi finansieras av annonser. Eventuella samarbetslänkar märks alltid med Annons och påverkar aldrig uträkningarna.</p>
-<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning.</p>
+<p>Beräkningarna är uppskattningar och kan innehålla fel. Använd dem som vägledning. Leasingberäkningen är en uppskattning – leasingbolagets offert gäller.</p>
 </div>
-<div class="gk-ftr-nav" aria-label="Sidfot" role="navigation">
+<nav class="gk-ftr-nav" aria-label="Sidfot">
 <a href="/#kalkylatorer">Alla kalkylatorer</a>
 <a href="/artiklar/">Guider</a>
 <a href="/om-oss">Om oss</a>
 <a href="/integritetspolicy">Integritet</a>
+</nav>
 </div>
-</div>
-</div>
-
-
-<script>
-    // ── Sync helpers ──────────────────────────────────────────────────
-    function fmt(v, decimals) {
-        if (decimals > 0) return Number(v).toLocaleString('sv-SE', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
-        return Math.round(v).toLocaleString('sv-SE');
-    }
-    function syncInput(id, rangeId, labelId, suffix, dec) {
-        const v = parseFloat(document.getElementById(rangeId).value);
-        document.getElementById(id).value = v;
-        document.getElementById(labelId).textContent = fmt(v, dec) + ' ' + suffix;
-        calculate();
-    }
-    function syncRange(id, rangeId, labelId, suffix, dec) {
-        const v = parseFloat(document.getElementById(id).value) || 0;
-        document.getElementById(rangeId).value = v;
-        document.getElementById(labelId).textContent = fmt(v, dec) + ' ' + suffix;
-        calculate();
-    }
-    function syncInputDec(id, rangeId, labelId, suffix) {
-        const v = parseFloat(document.getElementById(rangeId).value);
-        document.getElementById(id).value = v;
-        document.getElementById(labelId).textContent = v.toFixed(1).replace('.', ',') + suffix;
-        calculate();
-    }
-    function syncRangeDec(id, rangeId, labelId, suffix) {
-        const v = parseFloat(document.getElementById(id).value) || 0;
-        document.getElementById(rangeId).value = v;
-        document.getElementById(labelId).textContent = v.toFixed(1).replace('.', ',') + suffix;
-        calculate();
-    }
-
-    // ── Core calculation ──────────────────────────────────────────────
-    function calculate() {
-        const nypris      = parseFloat(document.getElementById('nypris').value) || 0;
-        const handpenning = parseFloat(document.getElementById('handpenning').value) || 0;
-        const restPct     = parseFloat(document.getElementById('restvarde').value) || 0;
-        const loptid      = parseFloat(document.getElementById('loptid').value) || 36;
-        const aRanta      = parseFloat(document.getElementById('ranta').value) || 0;
-        const aRantaLan   = parseFloat(document.getElementById('rantaloan').value) || 0;
-
-        const finBelopp   = nypris - handpenning;
-        const restKr      = nypris * (restPct / 100);
-        const mRanta      = aRanta / 100 / 12;
-
-        // Leasing monthly
-        const avskriv     = (finBelopp - restKr) / loptid;
-        const rantedel    = (finBelopp + restKr) * mRanta / 2;
-        const manadLeasing = avskriv + rantedel;
-        const totalLeasing = manadLeasing * loptid + handpenning;
-
-        // Loan (annuity) monthly — buy the whole car
-        const loanBelopp  = nypris - handpenning;
-        const mRantaLan   = aRantaLan / 100 / 12;
-        let manadLan;
-        if (mRantaLan === 0) {
-            manadLan = loanBelopp / loptid;
-        } else {
-            manadLan = loanBelopp * mRantaLan / (1 - Math.pow(1 + mRantaLan, -loptid));
-        }
-        const ovrigtMan   = parseFloat(document.getElementById('ovrigt').value) || 0;
-        const totalLan    = manadLan * loptid + handpenning;          // allt du betalar för bilen (kontantinsats + lån)
-        const ovrigtTot   = ovrigtMan * loptid;                       // t.ex. service som ingår i leasingen
-        const nettoKop    = totalLan + ovrigtTot - restKr;            // minus bilens värde vid periodens slut (= restvärdet)
-
-        const skillnad    = Math.round(totalLeasing) - Math.round(nettoKop); // positivt = leasing dyrare än köp (räknat på de avrundade beloppen som visas)
-
-        // Display
-        function kr(v) { return Math.round(v).toLocaleString('sv-SE') + ' kr'; }
-        document.getElementById('res-manad-leasing').textContent = kr(manadLeasing);
-        document.getElementById('res-total-leasing').textContent = kr(totalLeasing);
-        document.getElementById('res-restvarde-kr').textContent  = kr(restKr);
-        document.getElementById('res-manad-lan').textContent     = kr(manadLan);
-        document.getElementById('res-total-lan').textContent     = kr(nettoKop);
-        document.getElementById('res-total-lan-sub').textContent =
-            'betalt ' + kr(totalLan + ovrigtTot) + ' − bilens värde ' + kr(restKr);
-
-        if (Math.round(skillnad) === 0) {
-            document.getElementById('res-skillnad').textContent     = '0 kr';
-            document.getElementById('res-skillnad-sub').textContent = 'lika dyrt';
-        } else if (skillnad > 0) {
-            document.getElementById('res-skillnad').textContent     = kr(skillnad);
-            document.getElementById('res-skillnad-sub').textContent = 'köp är billigare';
-        } else {
-            document.getElementById('res-skillnad').textContent     = kr(-skillnad);
-            document.getElementById('res-skillnad-sub').textContent = 'leasing är billigare';
-        }
-
-        drawChart(manadLeasing, manadLan, totalLeasing, nettoKop, loptid);
-        buildTable(finBelopp, restKr, loptid, mRanta, manadLeasing);
-    }
-
-    // ── Canvas chart ──────────────────────────────────────────────────
-    function drawChart(mLeasing, mLan, tLeasing, tLan, loptid) {
-        const canvas = document.getElementById('leasingChart');
-        const ctx    = canvas.getContext('2d');
-        const dpr    = window.devicePixelRatio || 1;
-        const W = canvas.parentElement.clientWidth;
-        const H = 300;
-        canvas.width  = W * dpr;
-        canvas.height = H * dpr;
-        canvas.style.width  = W + 'px';
-        canvas.style.height = H + 'px';
-        ctx.scale(dpr, dpr);
-        ctx.clearRect(0, 0, W, H);
-
-        const dark  = false;
-        const textC = dark ? '#d1d5db' : '#56625B';
-        const gridC = dark ? '#3A4640' : '#E2E0D8';
-        const primC = dark ? '#0D6A45' : '#0D6A45';
-        const neutC = dark ? '#56625B' : '#9ca3af';
-        const bgC   = dark ? '#15201A' : '#F6F5F1';
-
-        const pad = { top: 32, right: 24, bottom: 56, left: 80 };
-        const cW  = W - pad.left - pad.right;
-        const cH  = H - pad.top  - pad.bottom;
-
-        const maxVal  = Math.max(tLeasing, tLan, 1) * 1.15;          // skala för totalkostnad (y-axeln)
-        const maxValM = Math.max(mLeasing, mLan, 1) * 1.15;          // egen skala för månadskostnad
-
-        function toY(v) { return pad.top + cH * (1 - v / maxVal); }
-
-        // Grid lines
-        const steps = 4;
-        ctx.strokeStyle = gridC;
-        ctx.lineWidth   = 1;
-        ctx.fillStyle   = textC;
-        ctx.font        = '12px Inter, sans-serif';
-        ctx.textAlign   = 'right';
-        for (let i = 0; i <= steps; i++) {
-            const v = maxVal * i / steps;
-            const y = toY(v);
-            ctx.beginPath();
-            ctx.moveTo(pad.left, y);
-            ctx.lineTo(W - pad.right, y);
-            ctx.stroke();
-            ctx.fillText((Math.round(v / 1000)) + 'k', pad.left - 8, y + 4);
-        }
-
-        // Bars — 2 groups: monthly and total
-        const barW   = cW * 0.18;
-        const gap    = cW * 0.06;
-        const group1X = pad.left + cW * 0.2;
-        const group2X = pad.left + cW * 0.62;
-
-        function drawBar(x, val, color, label, scaleMax, valueText) {
-            const bH = cH * (Math.max(0, val) / scaleMax);
-            const y  = pad.top + cH - bH;
-            ctx.fillStyle = color;
-            ctx.beginPath();
-            ctx.roundRect(x, y, barW, bH, [6, 6, 0, 0]);
-            ctx.fill();
-
-            // Value label
-            ctx.fillStyle = textC;
-            ctx.textAlign = 'center';
-            ctx.font = '11px Inter, sans-serif';
-            ctx.fillText(valueText, x + barW / 2, y - 6);
-
-            // Bottom label
-            ctx.fillText(label, x + barW / 2, H - 8);
-        }
-
-        // Monthly comparison (egen skala)
-        drawBar(group1X,              mLeasing, primC, 'Leasing/mån', maxValM, Math.round(mLeasing).toLocaleString('sv-SE') + ' kr');
-        drawBar(group1X + barW + gap, mLan,     neutC, 'Lån/mån',     maxValM, Math.round(mLan).toLocaleString('sv-SE') + ' kr');
-
-        // Total comparison: leasing mot köpets nettokostnad
-        drawBar(group2X,               tLeasing, primC, 'Leasing',     maxVal, Math.round(tLeasing / 1000) + 'k kr');
-        drawBar(group2X + barW + gap,  tLan,     neutC, 'Köp (netto)', maxVal, Math.round(tLan / 1000) + 'k kr');
-
-        // Group labels
-        ctx.fillStyle = textC;
-        ctx.textAlign = 'center';
-        ctx.font = 'bold 12px Inter, sans-serif';
-        const g1cX = group1X + barW + gap / 2;
-        const g2cX = group2X + barW + gap / 2;
-        ctx.fillText('Månadskostnad', g1cX, H - 30);
-        ctx.fillText('Totalt (netto)', g2cX, H - 30);
-
-        // Note for monthly scale
-        ctx.fillStyle = textC;
-        ctx.font      = '10px Inter, sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('(egen skala, y-axeln gäller totalkostnad)', group1X + barW + gap / 2, pad.top + cH + 14);
-    }
-
-    // ── Annual table ──────────────────────────────────────────────────
-    function buildTable(finBelopp, restKr, loptid, mRanta, manad) {
-        const tbody = document.getElementById('leasingTableBody');
-        tbody.innerHTML = '';
-        const years = Math.ceil(loptid / 12);
-        let restBal = finBelopp;
-        const monthlyAmort = (finBelopp - restKr) / loptid;
-
-        for (let y = 1; y <= years; y++) {
-            const monthsInYear = Math.min(12, loptid - (y - 1) * 12);
-            let yearRanta = 0;
-            for (let m = 0; m < monthsInYear; m++) {
-                yearRanta += restBal * mRanta;
-                restBal   -= monthlyAmort;
-            }
-            const yearAmort  = monthlyAmort * monthsInYear;
-            const yearAvgift = manad * monthsInYear;
-            const restLeft   = Math.max(0, restBal);
-
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>År ${y}</td>
-                <td>${Math.round(yearAmort).toLocaleString('sv-SE')} kr</td>
-                <td>${Math.round(yearRanta).toLocaleString('sv-SE')} kr</td>
-                <td>${Math.round(yearAvgift).toLocaleString('sv-SE')} kr</td>
-                <td>${Math.round(restLeft).toLocaleString('sv-SE')} kr</td>
-            `;
-            tbody.appendChild(tr);
-        }
-    }
-
-    function toggleTable() {
-        const t   = document.getElementById('leasingTable');
-        const btn = document.getElementById('tableBtn');
-        const open = t.classList.toggle('visible');
-        btn.setAttribute('aria-expanded', open);
-        btn.textContent = open ? '▲ Dölj leasingplan' : '▼ Visa leasingplan per år';
-    }
-
-    function toggleFaq(btn) {
-        const ans  = btn.nextElementSibling;
-        const open = ans.classList.toggle('open');
-        btn.classList.toggle('open', open);
-        btn.setAttribute('aria-expanded', open);
-    }
-
-    // ── Init ──────────────────────────────────────────────────────────
-    window.addEventListener('load', calculate);
-    window.addEventListener('resize', calculate);
-</script>
+</footer>
 </body>
 </html>

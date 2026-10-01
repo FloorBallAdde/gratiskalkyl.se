@@ -85,10 +85,16 @@
       "fil": "kalkylatorer/elkostnadskalkylator.html",
       "variant": "inline"
     },
-    "bilforsakring": {
-      "fil": "kalkylatorer/bilkostnadsraknare.html",
-      "variant": "card"
-    },
+    "bilforsakring": [
+      {
+        "fil": "kalkylatorer/bilkostnadsraknare.html",
+        "variant": "card"
+      },
+      {
+        "fil": "kalkylatorer/leasingkalkylator.html",
+        "variant": "inline"
+      }
+    ],
     "isk": {
       "fil": "kalkylatorer/isk-skatteberaknare.html",
       "variant": "card"

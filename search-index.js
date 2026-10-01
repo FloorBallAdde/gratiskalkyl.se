@@ -194,8 +194,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Leasingkalkylator",
     "icon": "📝",
     "category": "Boende & Lån",
-    "desc": "Jämför privatleasing mot köp – månadskostnad, restvärde och total kostnad för bilen.",
-    "kw": "leasing leasingkostnad privatlease månadsavgift restvärde"
+    "desc": "Vad kostar bilen att leasa? Månadsavgift, leasa eller köpa, kolla ett erbjudande och milgränsen.",
+    "kw": "leasing leasingkalkylator leasingkostnad privatleasing privatlease billeasing leasa bil månadsavgift restvärde leasa eller köpa övermil milgräns handpenning"
   },
   {
     "type": "kalkylator",

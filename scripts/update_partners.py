@@ -3,7 +3,8 @@
 
 Varje ruta står mellan markörerna <!--GK-PARTNER:<kategori>:START--> och <!--GK-PARTNER:<kategori>:END-->.
 Saknas markörerna på en äldre sida läggs rutan in före första <div class="info-section">.
-Elkostnadssidan har markören i sin byggmall (scripts/build_elkostnad.py).
+Elkostnads- och leasingsidan har markörerna i sina byggmallar (build_elkostnad.py, build_leasing.py).
+En kategori kan visas på flera sidor: "_sidor": {"kat": [{"fil": ..., "variant": ...}, ...]}.
 
     python3 scripts/update_partners.py
 """
@@ -57,7 +58,9 @@ def render(kat, d, variant):
 def main():
     with open(os.path.join(ROOT, "data", "partners.json"), encoding="utf-8") as f:
         data = json.load(f)
-    for kat, sida in data["_sidor"].items():
+    jobb = [(kat, sida) for kat, sidor in data["_sidor"].items()
+            for sida in (sidor if isinstance(sidor, list) else [sidor])]
+    for kat, sida in jobb:
         path = os.path.join(ROOT, sida["fil"])
         with open(path, encoding="utf-8") as f:
             s = f.read()
