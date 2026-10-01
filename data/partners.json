@@ -56,7 +56,8 @@
         "tracking": "",
         "status": "ansökt"
       }
-    ]
+    ],
+    "aktiv": false
   },
   "isk": {
     "rubrik": "Öppna ett ISK",
