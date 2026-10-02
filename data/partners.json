@@ -2,7 +2,7 @@
   "_info": "Annonspartner via Adtraction. 'tracking' fylls i med Adtractions spårningslänk när annonsören har godkänt ansökan – tills dess används 'url' (direktlänk). Kör sedan: python3 scripts/update_partners.py Sätt \"aktiv\": false på en kategori för att dölja rutan (t.ex. i väntan på annonsörens godkännande).",
   "el": {
     "rubrik": "Byta elavtal?",
-    "intro": "Vi kan få ersättning om du tecknar avtal via länkarna. Det påverkar aldrig siffrorna i kalkylatorn. Elhandlarna står i bokstavsordning.",
+    "intro": "Vi kan få ersättning om du tecknar avtal via en länk här. Det påverkar aldrig siffrorna i kalkylatorn.",
     "neutral": null,
     "partners": [
       {
@@ -10,8 +10,8 @@
         "namn": "Fortum",
         "text": "Se priser och teckna elavtal",
         "url": "https://www.fortum.com/se/el/teckna-elavtal",
-        "tracking": "",
-        "status": "ansökt"
+        "tracking": "https://ion.fortum.com/t/t?a=1312475339&as=2076220946&t=2&tk=1",
+        "status": "godkänd 2 okt 2026 (Fortum, 800 kr/elavtal). OBS: \"Fortum SE – lead platform\" är fel program och används inte"
       },
       {
         "id": "skelleftea-kraft",
@@ -29,7 +29,8 @@
         "tracking": "",
         "status": "ansökt"
       }
-    ]
+    ],
+    "intro_flera": "Elhandlarna står i bokstavsordning."
   },
   "bilforsakring": {
     "rubrik": "Vad kostar bilförsäkringen?",
