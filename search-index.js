@@ -95,8 +95,8 @@ window.SITE_SEARCH_INDEX = [
     "title": "Elkostnadskalkylator",
     "icon": "⚡",
     "category": "Fordon & Energi",
-    "desc": "Vad borde elen kosta? Jämför ditt elpris med SCB:s snitt för nya avtal i ditt elområde.",
-    "kw": "el elkostnad förbrukning kwh elpris elräkning energi elavtal rörligt fast anvisat byta elavtal snittpris"
+    "desc": "Elpriset idag per kvart i SE1–SE4 och vad elen borde kosta – jämför med SCB:s snitt för nya avtal.",
+    "kw": "el elkostnad förbrukning kwh elpris elräkning energi elavtal rörligt fast anvisat byta elavtal snittpris elpris idag elpris just nu dagens elpris spotpris timpris kvartspris se1 se2 se3 se4"
   },
   {
     "type": "kalkylator",
