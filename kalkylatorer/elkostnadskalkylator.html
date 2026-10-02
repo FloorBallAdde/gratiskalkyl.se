@@ -133,6 +133,7 @@
 </div>
 </div>
 <div id="verdict" aria-live="polite"></div>
+<!--GK-PARTNER:el:START--><section class="gk-partner" aria-labelledby="gkp-el" data-gkp-sec="el" style="display:flex;flex-direction:column;gap:10px;margin:4px 0 0;padding-top:14px;border-top:1px solid var(--gk-border)"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h3 id="gkp-el" style="font-size:18px;line-height:1.25;margin:0">Byta elavtal?</h3><span class="gk-ad-label">ANNONS</span></div><p class="gk-hint" style="margin:0"><strong>Annons – reklam för Fortum.</strong> Vi kan få ersättning om du tecknar avtal via en länk här. Det påverkar aldrig siffrorna i kalkylatorn.</p><div style="display:flex;flex-direction:column;gap:8px"><a class="gk-linkcard" href="https://ion.fortum.com/t/t?a=1312475339&amp;as=2076220946&amp;t=2&amp;tk=1" target="_blank" rel="sponsored noopener" data-gkp="fortum" data-gkp-kat="el"><span><img src="/assets/partners/fortum.png" alt="Fortum" width="94" height="22" style="display:block;height:22px;width:auto;margin:2px 0 4px" loading="lazy"><small>Se priser och teckna elavtal</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div><p class="gk-hint" style="margin:0">Oberoende jämförelse av alla elavtal finns hos <a href="https://www.elpriskollen.se/" target="_blank" rel="noopener">Elpriskollen</a>.</p><script>(function(){if(window.__gkp)return;window.__gkp=1;document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("[data-gkp]");if(a&&typeof gtag==="function")gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){io.unobserve(en.target);if(typeof gtag==="function")gtag("event","partner_visning",{kategori:en.target.getAttribute("data-gkp-sec")});}});},{threshold:0.5});document.querySelectorAll(".gk-partner[data-gkp-sec]").forEach(function(s){io.observe(s);});}})();</script></section><!--GK-PARTNER:el:END-->
 </section>
 </div>
 
@@ -203,7 +204,6 @@
 <section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
 <h2 id="nextH" style="font-size:22px">Nästa steg</h2>
 <a class="gk-linkcard" href="https://www.elpriskollen.se/" target="_blank" rel="noopener"><span>Jämför alla elavtal på Elpriskollen<small>Energimarknadsinspektionens jämförelsetjänst – alla elhandlare, utan annonser</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
-<!--GK-PARTNER:el:START--><section class="gk-partner" aria-labelledby="gkp-el" style="display:flex;flex-direction:column;gap:10px;margin:8px 0 0"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h3 id="gkp-el" style="font-size:18px;line-height:1.25;margin:0">Byta elavtal?</h3><span class="gk-ad-label">ANNONS</span></div><p class="gk-hint" style="margin:0"><strong>Annons – reklam för Fortum.</strong> Vi kan få ersättning om du tecknar avtal via en länk här. Det påverkar aldrig siffrorna i kalkylatorn.</p><div style="display:flex;flex-direction:column;gap:8px"><a class="gk-linkcard" href="https://ion.fortum.com/t/t?a=1312475339&amp;as=2076220946&amp;t=2&amp;tk=1" target="_blank" rel="sponsored noopener" data-gkp="fortum" data-gkp-kat="el"><span>Fortum<small>Se priser och teckna elavtal</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div><script>(function(){if(window.__gkp)return;window.__gkp=1;document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("[data-gkp]");if(a&&typeof gtag==="function")gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});})();</script></section><!--GK-PARTNER:el:END-->
 <div style="display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:12px;background:var(--gk-soft);color:var(--gk-good-ink)">
 <strong style="font-size:15px">Spara i Min ekonomi</strong>
 <span style="font-size:14px;line-height:1.45">Då ser du direkt nästa gång om ditt avtal fortfarande är rimligt. Sparas bara i din webbläsare – vi ser inte dina siffror.</span>
@@ -317,6 +317,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var ms = $('manad');
   for (var i = LAST; i >= 0; i--) { var o = document.createElement('option'); o.value = i; o.textContent = mtext(i).charAt(0).toUpperCase() + mtext(i).slice(1); ms.appendChild(o); }
   ['kwh','pris','avgift','nat'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  $('pris').addEventListener('change', function () {
+    if (typeof gtag === 'function' && lastKind) gtag('event', 'el_jamfort', { utfall: lastKind === 'warn' ? 'over_snitt' : (lastKind === 'good' ? 'bra_pris' : 'kontrollera') });
+  });
   ['avtal','manad','norr'].forEach(function (id) { $(id).addEventListener('change', calc); });
   $('kwh').addEventListener('input', function () { var K = GK.parse($('kwh').value); press('kwhq', K); });
   GK.groupInput($('kwh'));
@@ -329,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return '<div class="gk-verdict ' + kind + '">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
   }
 
-  var last = null;
+  var last = null, lastKind = '';
   function calc() {
     var K = val('kwh'); if (!K || K < 100) K = null;
     var o = st.omr, av = $('avtal').value;
@@ -381,6 +384,10 @@ document.addEventListener('DOMContentLoaded', function () {
       vh = '';
     }
     $('verdict').innerHTML = vh;
+    /* Annonsrutan (Byta elavtal?) visas inte när besökaren redan har ett bra pris */
+    lastKind = vh.indexOf('gk-verdict good') >= 0 ? 'good' : (vh.indexOf('gk-verdict warn') >= 0 ? 'warn' : (vh ? 'info' : ''));
+    var pb = document.getElementById('gkp-el'); pb = pb && pb.closest('.gk-partner');
+    if (pb) pb.style.display = lastKind === 'good' ? 'none' : '';
 
     var costYear = (you != null ? you : (isFast ? b : avg12(a, o, K))) / 100 * K * MOMS;
     $('tiles').innerHTML =

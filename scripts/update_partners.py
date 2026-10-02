@@ -32,9 +32,14 @@ def reklam_for(d):
 
 def render(kat, d, variant):
     d = dict(d, partners=[p for p in d["partners"] if p["tracking"]])  # bara godkända annonsörer
+    def namn(p):  # liten logga (lagrad på sajten, t.ex. assets/partners/fortum.png) eller bara namnet
+        if p.get("logo"):
+            return (f'<img src="{e(p["logo"])}" alt="{e(p["namn"])}" width="{p.get("logo_w", 94)}" height="22" '
+                    'style="display:block;height:22px;width:auto;margin:2px 0 4px" loading="lazy">')
+        return e(p["namn"])
     links = "".join(
         f'<a class="gk-linkcard" href="{e(p["tracking"])}" target="_blank" rel="sponsored noopener" '
-        f'data-gkp="{e(p["id"])}" data-gkp-kat="{kat}"><span>{e(p["namn"])}<small>{e(p["text"])}</small></span>{S.ICON_CHEV}</a>'
+        f'data-gkp="{e(p["id"])}" data-gkp-kat="{kat}"><span>{namn(p)}<small>{e(p["text"])}</small></span>{S.ICON_CHEV}</a>'
         for p in d["partners"])
     neutral = ""
     if d.get("neutral"):
@@ -45,10 +50,10 @@ def render(kat, d, variant):
             f'<strong>Risk:</strong> {e(d["risk"])}</p>') if d.get("risk") else ""
     hid = f"gkp-{kat}"
     tag = "h3" if variant == "inline" else "h2"
-    box = ('display:flex;flex-direction:column;gap:10px;margin:8px 0 0' if variant == "inline" else
+    box = ('display:flex;flex-direction:column;gap:10px;margin:4px 0 0;padding-top:14px;border-top:1px solid var(--gk-border)' if variant == "inline" else
            'display:flex;flex-direction:column;gap:10px;margin:24px 0;padding:18px;border:1px solid var(--gk-border);'
            'border-radius:16px;background:var(--gk-surface)')
-    return (f'<section class="gk-partner" aria-labelledby="{hid}" style="{box}">'
+    return (f'<section class="gk-partner" aria-labelledby="{hid}" data-gkp-sec="{kat}" style="{box}">'
             f'<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">'
             f'<{tag} id="{hid}" style="font-size:{18 if variant == "inline" else 20}px;line-height:1.25;margin:0">{e(d["rubrik"])}</{tag}>'
             f'<span class="gk-ad-label">ANNONS</span></div>'
@@ -57,7 +62,11 @@ def render(kat, d, variant):
             f'<div style="display:flex;flex-direction:column;gap:8px">{links}</div>{risk}{neutral}'
             '<script>(function(){if(window.__gkp)return;window.__gkp=1;document.addEventListener("click",function(ev){'
             'var a=ev.target.closest&&ev.target.closest("[data-gkp]");if(a&&typeof gtag==="function")'
-            'gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});})();</script>'
+            'gtag("event","partner_klick",{partner:a.getAttribute("data-gkp"),kategori:a.getAttribute("data-gkp-kat")});});'
+            'if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){'
+            'if(en.isIntersecting){io.unobserve(en.target);if(typeof gtag==="function")gtag("event","partner_visning",'
+            '{kategori:en.target.getAttribute("data-gkp-sec")});}});},{threshold:0.5});'
+            'document.querySelectorAll(".gk-partner[data-gkp-sec]").forEach(function(s){io.observe(s);});}})();</script>'
             '</section>')
 
 

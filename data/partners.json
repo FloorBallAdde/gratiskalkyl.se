@@ -3,7 +3,11 @@
   "el": {
     "rubrik": "Byta elavtal?",
     "intro": "Vi kan få ersättning om du tecknar avtal via en länk här. Det påverkar aldrig siffrorna i kalkylatorn.",
-    "neutral": null,
+    "neutral": {
+      "text": "Oberoende jämförelse av alla elavtal finns hos",
+      "namn": "Elpriskollen",
+      "url": "https://www.elpriskollen.se/"
+    },
     "partners": [
       {
         "id": "fortum",
@@ -11,7 +15,9 @@
         "text": "Se priser och teckna elavtal",
         "url": "https://www.fortum.com/se/el/teckna-elavtal",
         "tracking": "https://ion.fortum.com/t/t?a=1312475339&as=2076220946&t=2&tk=1",
-        "status": "godkänd 2 okt 2026 (Fortum, 800 kr/elavtal). OBS: \"Fortum SE – lead platform\" är fel program och används inte"
+        "status": "godkänd 2 okt 2026 (Fortum, 800 kr/elavtal). OBS: \"Fortum SE – lead platform\" är fel program och används inte",
+        "logo": "/assets/partners/fortum.png",
+        "logo_w": 94
       },
       {
         "id": "skelleftea-kraft",
@@ -55,7 +61,7 @@
         "text": "Se pris på bilförsäkring",
         "url": "https://www.icaforsakring.se/bilforsakring/",
         "tracking": "",
-        "status": "ansökt"
+        "status": "nekad 2 okt 2026 – programmet tillfälligt stängt för nya partner (inte p.g.a. sajten). Ansök igen när det öppnar"
       }
     ],
     "aktiv": false

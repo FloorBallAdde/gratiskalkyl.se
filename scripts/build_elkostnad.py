@@ -184,6 +184,7 @@ def page(blocks):
 </div>
 </div>
 <div id="verdict" aria-live="polite"></div>
+<!--GK-PARTNER:el:START--><!--GK-PARTNER:el:END-->
 </section>
 </div>
 
@@ -254,7 +255,6 @@ def page(blocks):
 <section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
 <h2 id="nextH" style="font-size:22px">Nästa steg</h2>
 <a class="gk-linkcard" href="https://www.elpriskollen.se/" target="_blank" rel="noopener"><span>Jämför alla elavtal på Elpriskollen<small>Energimarknadsinspektionens jämförelsetjänst – alla elhandlare, utan annonser</small></span>{CHEV}</a>
-<!--GK-PARTNER:el:START--><!--GK-PARTNER:el:END-->
 <div style="display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:12px;background:var(--gk-soft);color:var(--gk-good-ink)">
 <strong style="font-size:15px">Spara i Min ekonomi</strong>
 <span style="font-size:14px;line-height:1.45">Då ser du direkt nästa gång om ditt avtal fortfarande är rimligt. Sparas bara i din webbläsare – vi ser inte dina siffror.</span>
@@ -371,6 +371,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var ms = $('manad');
   for (var i = LAST; i >= 0; i--) { var o = document.createElement('option'); o.value = i; o.textContent = mtext(i).charAt(0).toUpperCase() + mtext(i).slice(1); ms.appendChild(o); }
   ['kwh','pris','avgift','nat'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  $('pris').addEventListener('change', function () {
+    if (typeof gtag === 'function' && lastKind) gtag('event', 'el_jamfort', { utfall: lastKind === 'warn' ? 'over_snitt' : (lastKind === 'good' ? 'bra_pris' : 'kontrollera') });
+  });
   ['avtal','manad','norr'].forEach(function (id) { $(id).addEventListener('change', calc); });
   $('kwh').addEventListener('input', function () { var K = GK.parse($('kwh').value); press('kwhq', K); });
   GK.groupInput($('kwh'));
@@ -383,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return '<div class="gk-verdict ' + kind + '">' + ico + '<div><strong>' + title + '</strong><span>' + text + '</span></div></div>';
   }
 
-  var last = null;
+  var last = null, lastKind = '';
   function calc() {
     var K = val('kwh'); if (!K || K < 100) K = null;
     var o = st.omr, av = $('avtal').value;
@@ -435,6 +438,10 @@ document.addEventListener('DOMContentLoaded', function () {
       vh = '';
     }
     $('verdict').innerHTML = vh;
+    /* Annonsrutan (Byta elavtal?) visas inte när besökaren redan har ett bra pris */
+    lastKind = vh.indexOf('gk-verdict good') >= 0 ? 'good' : (vh.indexOf('gk-verdict warn') >= 0 ? 'warn' : (vh ? 'info' : ''));
+    var pb = document.getElementById('gkp-el'); pb = pb && pb.closest('.gk-partner');
+    if (pb) pb.style.display = lastKind === 'good' ? 'none' : '';
 
     var costYear = (you != null ? you : (isFast ? b : avg12(a, o, K))) / 100 * K * MOMS;
     $('tiles').innerHTML =
