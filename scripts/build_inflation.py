@@ -255,7 +255,6 @@ def page():
 
 <section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
 <h2 id="nextH" style="font-size:22px">Nästa steg</h2>
-<a class="gk-linkcard" href="/kalkylatorer/ranta-pa-ranta"><span>Får dina pengar växa mer än inflationen?<small>Ränta på ränta – se vad sparandet blir värt</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/sparkalkylator"><span>Räkna på ditt sparande<small>Sparkalkylator – månadssparande och mål</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/artiklar/vad-ar-inflation"><span>Guide: Vad är inflation?<small>Hur den mäts och vad den betyder för dig</small></span>{CHEV}</a>
 </section>
@@ -297,7 +296,6 @@ def page():
 
 <h2>Räkna vidare</h2>
 <div class="gk-list-links">
-<a class="gk-linkcard" href="/kalkylatorer/ranta-pa-ranta"><span>Ränta på ränta<small>Hur sparandet växer över tid</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/sparkalkylator"><span>Sparkalkylator<small>Hur mycket behöver du spara varje månad?</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/loneraknare"><span>Löneräknare<small>Har lönen hängt med? Se vad du får efter skatt</small></span>{CHEV}</a>
 </div>

@@ -582,7 +582,7 @@ def page():
 <section class="gk-card gk-stack gk-no-print gk-o6" style="gap:10px" aria-labelledby="nextH">
 <h2 id="nextH" style="font-size:22px">Nästa steg</h2>
 <a class="gk-linkcard" href="/kalkylatorer/momsraknare"><span>Räkna moms<small>Momsräknaren – lägg till eller dra av moms på ett pris</small></span>{CHEV}</a>
-<a class="gk-linkcard" href="/kalkylatorer/ranta-pa-ranta"><span>Ränta på ränta<small>Se hur pengar växer med några procent om året</small></span>{CHEV}</a>
+<a class="gk-linkcard" href="/kalkylatorer/sparkalkylator?lage=vaxt"><span>Ränta på ränta<small>Se hur pengar växer med några procent om året</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/inflationskalkylator"><span>Inflationskalkylator<small>Hur mycket har priserna ökat i procent?</small></span>{CHEV}</a>
 </section>
 </div>

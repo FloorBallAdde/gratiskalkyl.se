@@ -236,7 +236,7 @@ def page():
 <div class="gk-list-links">
 <a class="gk-linkcard" href="/kalkylatorer/foraldrapenning"><span>Föräldrapenning<small>Hur mycket får du när du är föräldraledig?</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/underhallsstod-kalkylator"><span>Underhållsstöd<small>Om ni inte bor tillsammans</small></span>{CHEV}</a>
-<a class="gk-linkcard" href="/kalkylatorer/ranta-pa-ranta"><span>Ränta på ränta<small>Så kan ett sparande växa över tid</small></span>{CHEV}</a>
+<a class="gk-linkcard" href="/kalkylatorer/sparkalkylator?lage=vaxt"><span>Ränta på ränta<small>Så kan ett sparande växa över tid</small></span>{CHEV}</a>
 </div>
 </div>
 </main>

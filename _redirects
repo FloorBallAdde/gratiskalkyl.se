@@ -22,13 +22,13 @@
 /kalkylatorer/rot-rut.html /kalkylatorer/rot-rut 301
 /kalkylatorer/bolanekalkylator.html /kalkylatorer/bolanekalkylator 301
 /kalkylatorer/direktavkastningskalkylator.html /kalkylatorer/direktavkastningskalkylator 301
-/kalkylatorer/ranta-pa-ranta.html /kalkylatorer/ranta-pa-ranta 301
+/kalkylatorer/ranta-pa-ranta.html /kalkylatorer/sparkalkylator?lage=vaxt 301
 /kalkylatorer/sparkalkylator.html /kalkylatorer/sparkalkylator 301
 /artiklar/vad-ar-kapitalvinstskatt.html /artiklar/vad-ar-kapitalvinstskatt 301
 
 # Pretty-URL redirects för artiklar (Google har crawlat .html-versioner)
 /artiklar/vad-ar-bolan.html /artiklar/vad-ar-bolan 301
-/artiklar/vad-ar-isk.html /artiklar/vad-ar-isk 301
+/artiklar/vad-ar-isk.html /kalkylatorer/isk-skatteberaknare 301
 /artiklar/vad-ar-rot-rut-avdrag.html /artiklar/vad-ar-rot-rut-avdrag 301
 /artiklar/vad-ar-f-skatt.html /artiklar/vad-ar-f-skatt 301
 /artiklar/vad-ar-semesterlon.html /artiklar/vad-ar-semesterlon 301
@@ -51,3 +51,9 @@
 # Missing från tidigare — lade till 2026-05-14 efter GSC-genomgång
 /kalkylatorer/bmi-kalkylator.html /kalkylatorer/bmi-kalkylator 301
 /kalkylatorer/solcellskalkylator.html /kalkylatorer/solcellskalkylator 301
+
+# Rensning 3 okt 2026 (Andreas godkände): sammanslagna och borttagna sidor
+/kalkylatorer/ranta-pa-ranta /kalkylatorer/sparkalkylator?lage=vaxt 301
+/artiklar/vad-ar-isk /kalkylatorer/isk-skatteberaknare 301
+/artiklar/rakna-ut-nettolon-2026 /kalkylatorer/loneraknare 301
+/artiklar/rakna-ut-nettolon-2026.html /kalkylatorer/loneraknare 301

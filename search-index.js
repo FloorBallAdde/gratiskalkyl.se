@@ -28,15 +28,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "kalkylator",
-    "url": "/kalkylatorer/bmi-kalkylator",
-    "title": "BMI-kalkylator",
-    "icon": "⚖️",
-    "category": "Hälsa",
-    "desc": "Beräkna ditt BMI och se vad resultatet innebär för din hälsa.",
-    "kw": "bmi body mass index vikt längd hälsa övervikt normalvikt"
-  },
-  {
-    "type": "kalkylator",
     "url": "/kalkylatorer/barnbidragskalkylator",
     "title": "Barnbidragskalkylator",
     "icon": "👶",
@@ -160,15 +151,6 @@ window.SITE_SEARCH_INDEX = [
     "category": "Privatekonomi",
     "desc": "Vad är pengarna värda i dag? Räkna om belopp 1980–2026 med SCB:s KPI – dagens penningvärde och inflation per år.",
     "kw": "inflation inflationskalkylator inflationsräknare inflationsberäknare inflationsomräknare inflation sverige kalkylator räkna på inflation inflation per år köpkraft över tid kpi kalkylator konsumentprisindex penningvärde pengarnas värde scb prisomräknare riksbanken kpif"
-  },
-  {
-    "type": "kalkylator",
-    "url": "/kalkylatorer/kalorikalkylator",
-    "title": "Kalorikalkylator",
-    "icon": "🥗",
-    "category": "Hälsa",
-    "desc": "Beräkna ditt dagliga kaloribehov baserat på ålder, vikt, längd och aktivitet.",
-    "kw": "kalorier kaloribehov tdee bmr energibehov kcal mat vikt"
   },
   {
     "type": "kalkylator",
@@ -298,15 +280,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "kalkylator",
-    "url": "/kalkylatorer/ranta-pa-ranta",
-    "title": "Ränta på ränta",
-    "icon": "📈",
-    "category": "Sparande",
-    "desc": "Se hur ditt kapital växer år för år med ränta på ränta-effekten.",
-    "kw": "ränta på ränta sparande compound interest kapital tillväxt"
-  },
-  {
-    "type": "kalkylator",
     "url": "/kalkylatorer/semesterersattning",
     "title": "Semesterersättning",
     "icon": "✈️",
@@ -353,11 +326,11 @@ window.SITE_SEARCH_INDEX = [
   {
     "type": "kalkylator",
     "url": "/kalkylatorer/sparkalkylator",
-    "title": "Sparkalkylator",
+    "title": "Sparkalkylator – sparmål och ränta på ränta",
     "icon": "🐷",
     "category": "Sparande",
-    "desc": "Beräkna hur ditt sparande växer med månatliga insättningar och ränta.",
-    "kw": "sparkalkylator spara månadsbelopp ränta slutvärde"
+    "desc": "Räkna ut vad du behöver spara per månad för att nå ett sparmål, eller hur sparandet växer med ränta på ränta.",
+    "kw": "sparkalkylator spara sparmål månadsbelopp ränta på ränta kalkylator compound interest slutvärde kapital tillväxt"
   },
   {
     "type": "kalkylator",
@@ -523,15 +496,6 @@ window.SITE_SEARCH_INDEX = [
   },
   {
     "type": "guide",
-    "url": "/artiklar/rakna-ut-nettolon-2026",
-    "title": "Räkna ut nettolön 2026",
-    "icon": "💰",
-    "category": "Guide",
-    "desc": "Så räknar du ut nettolön 2026 — kommunalskatt, jobbskatteavdrag och statlig skatt steg för steg.",
-    "kw": "räkna ut nettolön 2026 så räknar du ut nettolön 2026 — kommunalskatt, jobbskatteavdrag och statlig skatt steg för steg."
-  },
-  {
-    "type": "guide",
     "url": "/artiklar/skattefri-uthyrning-2026",
     "title": "Skattefri uthyrning 2026",
     "icon": "🏘️",
@@ -556,15 +520,6 @@ window.SITE_SEARCH_INDEX = [
     "category": "Guide",
     "desc": "Lär dig vad F-skatt är i Sverige 2026. Vi förklarar skillnaden mellan F-, A- och FA-skatt, hur du ansöker och vad det innebär som egenföretagare.",
     "kw": "vad är f-skatt? lär dig vad f-skatt är i sverige 2026. vi förklarar skillnaden mellan f-, a- och fa-skatt, hur du ansöker och vad det innebär som egenföretagare."
-  },
-  {
-    "type": "guide",
-    "url": "/artiklar/vad-ar-isk",
-    "title": "Vad är ISK?",
-    "icon": "📊",
-    "category": "Guide",
-    "desc": "Lär dig hur ett ISK (investeringssparkonto) fungerar 2026. Vi förklarar schablonbeskattning, hur skatten beräknas och jämför ISK mot vanligt depåkonto.",
-    "kw": "vad är isk? lär dig hur ett isk (investeringssparkonto) fungerar 2026. vi förklarar schablonbeskattning, hur skatten beräknas och jämför isk mot vanligt depåkonto."
   },
   {
     "type": "guide",

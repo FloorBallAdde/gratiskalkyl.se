@@ -337,7 +337,6 @@ def page():
 <div class="gk-list-links">
 <a class="gk-linkcard" href="/kalkylatorer/marginalskattekalkylator"><span>Marginalskatt<small>Hur mycket av en löneökning blir kvar?</small></span>{CHEV}</a>
 <a class="gk-linkcard" href="/kalkylatorer/skatteaterbarings-kalkylator"><span>Skatteåterbäring<small>Får du tillbaka skatt eller blir det kvarskatt?</small></span>{CHEV}</a>
-<a class="gk-linkcard" href="/artiklar/rakna-ut-nettolon-2026"><span>Guide: Räkna ut nettolön 2026<small>Steg för steg med räkneexempel</small></span>{CHEV}</a>
 </div>
 </div>
 </main>

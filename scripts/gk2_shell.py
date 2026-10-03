@@ -47,8 +47,7 @@ TOPICS = [
         ("Solceller", "/kalkylatorer/solcellskalkylator"),
     ]),
     ("Sparande & pension", "Ränta på ränta, pension, CSN", "/sparande-och-pension", [
-        ("Ränta på ränta", "/kalkylatorer/ranta-pa-ranta"),
-        ("Sparande", "/kalkylatorer/sparkalkylator"),
+        ("Sparande och ränta på ränta", "/kalkylatorer/sparkalkylator"),
         ("Pension", "/kalkylatorer/pensionskalkylator"),
         ("Tjänstepension", "/kalkylatorer/tjanstepensionskalkylator"),
         ("Löneväxling", "/kalkylatorer/lonevaxling-kalkylator"),
@@ -64,15 +63,13 @@ TOPICS = [
         ("A-kassa", "/kalkylatorer/akassa-kalkylator"),
         ("Underhållsstöd", "/kalkylatorer/underhallsstod-kalkylator"),
     ]),
-    ("Övriga räknare", "Procent, BMI, kalorier", None, [
+    ("Övriga räknare", "Procent", None, [
         ("Procent", "/kalkylatorer/procentraknare"),
-        ("BMI", "/kalkylatorer/bmi-kalkylator"),
-        ("Kalorier", "/kalkylatorer/kalorikalkylator"),
     ]),
 ]
 
-N_CALC = 44
-N_GUIDES = 29
+N_CALC = 41
+N_GUIDES = 27
 GA_ID = "G-XGTX1PYYFJ"
 ADSENSE = "ca-pub-8657228803389245"
 
