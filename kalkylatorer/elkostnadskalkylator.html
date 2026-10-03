@@ -110,13 +110,29 @@
 <section class="gk-card gk-stack gk-o3" style="gap:14px" aria-labelledby="youH">
 <div style="display:flex;flex-direction:column;gap:4px">
 <h2 id="youH" style="font-size:22px">Betalar du för mycket?</h2>
-<p class="gk-hint" id="youSub">Fyll i priset från din elfaktura så jämför vi med snittet.</p>
+<p class="gk-hint" id="youSub">Fyll i beloppet och förbrukningen från din elfaktura så jämför vi med snittet.</p>
 </div>
 <div class="gk-stack" id="minpris" style="gap:14px">
+<div class="gk-seg" style="--n:2" id="satt" role="group" aria-label="Vad vill du fylla i?">
+<button type="button" data-v="faktura" aria-pressed="true">Fakturans belopp</button>
+<button type="button" data-v="ore" aria-pressed="false">Mitt öre/kWh</button>
+</div>
 <div class="gk-field" id="manadWrap">
 <label for="manad">Fakturan gäller</label>
 <div class="gk-input"><select id="manad"></select></div>
 </div>
+<div class="gk-stack" id="fakturaFalt" style="gap:14px">
+<div class="gk-field">
+<label for="fbelopp">Att betala till elhandlaren</label>
+<div class="gk-input"><input id="fbelopp" inputmode="decimal" autocomplete="off" placeholder="t.ex. 650"><span class="unit">kr</span></div>
+<span class="gk-hint">Summan på fakturan från elhandlaren, inkl. moms. Bara elhandeln – inte elnätet. Har du en gemensam faktura för el och elnät: ta bara delen för elhandel.</span>
+</div>
+<div class="gk-field">
+<label for="fkwh">Förbrukning på samma faktura</label>
+<div class="gk-input"><input id="fkwh" inputmode="decimal" autocomplete="off" placeholder="t.ex. 600"><span class="unit">kWh</span></div>
+</div>
+</div>
+<div class="gk-stack" id="oreFalt" style="gap:14px;display:none">
 <div class="gk-field">
 <label for="pris">Ditt elpris</label>
 <div class="gk-input"><input id="pris" inputmode="decimal" autocomplete="off" placeholder="t.ex. 85,5"><span class="unit">öre/kWh</span></div>
@@ -130,6 +146,7 @@
 <label for="avgift">Fast avgift till elhandlaren</label>
 <div class="gk-input"><input id="avgift" inputmode="decimal" autocomplete="off" placeholder="t.ex. 39"><span class="unit">kr/mån</span></div>
 <span class="gk-hint">Kallas ofta månadsavgift eller fast påslag. Ange 0 om du inte har någon.</span>
+</div>
 </div>
 </div>
 <div id="verdict" aria-live="polite"></div>
@@ -300,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ── Tillstånd och formulär ── */
-  var st = { omr: 'SE3', moms: 'exkl' };
+  var st = { omr: 'SE3', moms: 'exkl', satt: 'faktura' };
   function seg(id, key, cb) {
     var el = $(id);
     el.addEventListener('click', function (e) {
@@ -313,13 +330,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   function press(id, v) { $(id).querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-v') === String(v) ? 'true' : 'false'); }); }
   seg('omr', 'omr'); seg('moms', 'moms');
+  function visaSatt() { $('fakturaFalt').style.display = st.satt === 'faktura' ? '' : 'none'; $('oreFalt').style.display = st.satt === 'ore' ? '' : 'none'; }
+  seg('satt', 'satt', visaSatt);
   seg('kwhq', null, function (v) { $('kwh').value = GK.fmt(+v, 0); });
   var ms = $('manad');
   for (var i = LAST; i >= 0; i--) { var o = document.createElement('option'); o.value = i; o.textContent = mtext(i).charAt(0).toUpperCase() + mtext(i).slice(1); ms.appendChild(o); }
-  ['kwh','pris','avgift','nat'].forEach(function (id) { $(id).addEventListener('input', calc); });
-  $('pris').addEventListener('change', function () {
-    if (typeof gtag === 'function' && lastKind) gtag('event', 'el_jamfort', { utfall: lastKind === 'warn' ? 'over_snitt' : (lastKind === 'good' ? 'bra_pris' : 'kontrollera') });
-  });
+  ['kwh','pris','avgift','nat','fbelopp','fkwh'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  ['pris','fbelopp','fkwh'].forEach(function (id) { $(id).addEventListener('change', function () {
+    if (typeof gtag === 'function' && lastKind && !window.__elj) { window.__elj = 1; gtag('event', 'el_jamfort', { utfall: lastKind === 'warn' ? 'over_snitt' : (lastKind === 'good' ? 'bra_pris' : 'kontrollera'), satt: st.satt }); }
+  }); });
+  GK.groupInput($('fbelopp')); GK.groupInput($('fkwh'));
   ['avtal','manad','norr'].forEach(function (id) { $(id).addEventListener('change', calc); });
   $('kwh').addEventListener('input', function () { var K = GK.parse($('kwh').value); press('kwhq', K); });
   GK.groupInput($('kwh'));
@@ -355,24 +375,31 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Användarens pris */
     var p = val('pris'), fee = val('avgift');
     var inkl = st.moms === 'inkl';
-    var you = null;
+    var you = null, viaFaktura = false;
     var vh = '';
-    if (av !== 'anvisat' && p != null && p > 0) {
+    if (av !== 'anvisat' && st.satt === 'faktura') {
+      /* Fakturans belopp (kr inkl. moms) / förbrukning (kWh) = pris inkl. alla avgifter hos elhandlaren */
+      var fb = val('fbelopp'), fk = val('fkwh');
+      if (fb != null && fb > 0 && fk != null && fk > 0) { you = fb / MOMS / fk * 100; viaFaktura = true; }
+    } else if (av !== 'anvisat' && p != null && p > 0) {
       var pEx = inkl ? p / MOMS : p;
       var feeEx = fee != null ? (inkl ? fee / MOMS : fee) : 0;
       you = pEx + feeEx * 12 * 100 / K;
+    }
+    if (you != null) {
       var d = you - b, dk = d / 100 * K * MOMS;
       var basis = (isFast ? 'vad ett nytt ' + AVTAL_NAMN[a] + ' kostar i ' + mtext(mi) : 'snittet för nya avtal i ' + mtext(mi));
       if (you > b * 2.5 || you < b * 0.35) {
-        vh = verdictHtml('info', 'Kontrollera priset', 'Ditt pris (' + f1(you) + ' öre/kWh exkl. moms inkl. avgift) skiljer sig mycket från ' + basis + ' (' + f1(b) + ' öre). Har du råkat ta med elnät eller energiskatt, eller valt fel moms?');
+        vh = verdictHtml('info', 'Kontrollera priset', 'Ditt pris (' + f1(you) + ' öre/kWh exkl. moms inkl. avgift) skiljer sig mycket från ' + basis + ' (' + f1(b) + ' öre). ' + (viaFaktura ? 'Har du råkat ta med elnätet, eller skrivit fel antal kWh?' : 'Har du råkat ta med elnät eller energiskatt, eller valt fel moms?'));
       } else if (d >= 2) {
-        vh = verdictHtml('warn', 'Du betalar mer än snittet', 'Ditt elpris är ' + f1(d) + ' öre/kWh högre än ' + basis + '. Det motsvarar ungefär ' + kr(dk) + ' mer per år inkl. moms.');
+        vh = verdictHtml('warn', 'Du betalar mer än snittet', 'Ditt elpris är ' + f1(d) + ' öre/kWh högre än ' + basis + '. Det motsvarar ungefär ' + kr(dk) + ' mer per år inkl. moms (räknat på ' + f0(K) + ' kWh om året).');
       } else if (d <= -2) {
-        vh = verdictHtml('good', 'Du ligger bra till', 'Ditt elpris är ' + f1(-d) + ' öre/kWh lägre än ' + basis + '. Det motsvarar ungefär ' + kr(-dk) + ' mindre per år inkl. moms.');
+        vh = verdictHtml('good', 'Du ligger bra till', 'Ditt elpris är ' + f1(-d) + ' öre/kWh lägre än ' + basis + '. Det motsvarar ungefär ' + kr(-dk) + ' mindre per år inkl. moms (räknat på ' + f0(K) + ' kWh om året).');
       } else {
         vh = verdictHtml('good', 'Du ligger i nivå med snittet', 'Ditt elpris skiljer sig mindre än 2 öre/kWh från ' + basis + '.');
       }
-      if (fee == null) vh += '<p class="gk-hint" style="margin-top:8px">Du har inte angett någon fast avgift. Har du en blir ditt pris högre.</p>';
+      if (viaFaktura) vh += '<p class="gk-hint" style="margin-top:8px">Ditt pris enligt fakturan: ' + f1(you * MOMS) + ' öre/kWh inkl. moms och avgifter (' + f1(you) + ' öre exkl. moms).</p>';
+      else if (fee == null) vh += '<p class="gk-hint" style="margin-top:8px">Du har inte angett någon fast avgift. Har du en blir ditt pris högre.</p>';
       if (av === 'timpris') vh += '<p class="gk-hint" style="margin-top:8px">SCB publicerar inget snittpris för tim- och kvartsprisavtal, så vi jämför med rörligt månadspris samma månad.</p>';
     } else if (av === 'anvisat') {
       var r = bench('rorligt', o, LAST, K);
@@ -575,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function () {
     st.omr = saved.omr || 'SE3'; press('omr', st.omr);
     if (saved.kwh) { $('kwh').value = GK.fmt(saved.kwh, 0); press('kwhq', saved.kwh); }
     if (saved.avtal) $('avtal').value = saved.avtal;
-    if (saved.prisOre != null) { $('pris').value = GK.fmt(saved.prisOre, 1); $('avgift').value = '0'; st.moms = 'exkl'; press('moms', 'exkl'); }
+    if (saved.prisOre != null) { $('pris').value = GK.fmt(saved.prisOre, 1); $('avgift').value = '0'; st.moms = 'exkl'; press('moms', 'exkl'); st.satt = 'ore'; press('satt', 'ore'); visaSatt(); }
     $('saveMsg').textContent = 'Dina sparade siffror från ' + saved.sparad + ' är ifyllda.';
   }
   calc();
