@@ -48,15 +48,18 @@ COMPARE = {
     ],
 }
 
+# Rensning 3 okt 2026 (GSC 4 jul–2 okt): guider med under 50 visningar på 3 månader och som en kalkylator
+# redan svarar på länkas inte längre här: /artiklar/rakna-ut-nettolon-2026 (31 visningar, 0 klick – löneräknaren
+# finns i listan) och /artiklar/vad-ar-isk (22, 0 – ISK-skatteberäknaren finns). Sidorna finns kvar.
 GUIDES = {
-    "/lon-och-jobb": ["/artiklar/rakna-ut-nettolon-2026", "/artiklar/vad-ar-semesterlon", "/artiklar/traktamente-2026", "/artiklar/vad-ar-f-skatt"],
+    "/lon-och-jobb": ["/artiklar/vad-ar-semesterlon", "/artiklar/traktamente-2026", "/artiklar/vad-ar-f-skatt"],
     "/skatt-och-deklaration": ["/artiklar/deklaration-2027", "/artiklar/skatteaterbaring-2027", "/artiklar/reseavdrag-2027",
                                "/artiklar/hur-far-man-tillbaka-skatten", "/artiklar/vad-ar-marginalskatt",
                                "/artiklar/vad-ar-kapitalvinstskatt", "/artiklar/vad-ar-moms-2026", "/artiklar/vad-ar-rot-rut-avdrag"],
     "/boende-och-lan": ["/artiklar/vad-ar-bolan", "/artiklar/hur-mycket-far-jag-lana-2026", "/artiklar/amorteringskrav-2026",
                         "/artiklar/vad-ar-effektiv-ranta", "/artiklar/skattefri-uthyrning-2026"],
     "/bil-och-energi": ["/artiklar/elkostnad-2026-sa-raknar-du", "/artiklar/privatleasing-eller-kopa-bil-2026", "/artiklar/reseavdrag-2027"],
-    "/sparande-och-pension": ["/artiklar/vad-ar-ranta-pa-ranta", "/artiklar/manadssparande-rakna-ut", "/artiklar/vad-ar-isk",
+    "/sparande-och-pension": ["/artiklar/vad-ar-ranta-pa-ranta", "/artiklar/manadssparande-rakna-ut",
                               "/artiklar/hur-beraknas-pension", "/artiklar/vad-ar-inflation", "/artiklar/csn-2026-belopp-och-regler"],
     "/familj-och-trygghet": ["/artiklar/rakna-ut-foraldrapenning-2026", "/artiklar/barnbidrag-2026", "/artiklar/rakna-ut-sjuklon-2026",
                              "/artiklar/a-kassa-2026-belopp-och-regler"],

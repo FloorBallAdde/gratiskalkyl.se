@@ -9,7 +9,7 @@ Modell (samma i Python-referensen nedan och i sidans JS):
   förbrukning (extrakortet) = tankade liter / körda mil
 
 Priser: Preems publicerade listpriser (företagskort, inkl. moms) – hämtade 1 oktober 2026.
-Bensin 95 18,59 kr/l och diesel 23,14 kr/l, båda gäller från 1 oktober 2026.
+Bensin 95 18,89 kr/l (från 2 oktober 2026) och diesel 23,14 kr/l (från 1 oktober 2026). Kontrollerat 3 oktober 2026.
 Inget elpris förifylls (det beror på elavtal och nätbolag). Byt K vid ny prisuppdatering.
 
     python3 scripts/build_drivmedel.py
@@ -24,12 +24,12 @@ import gk2_shell as S  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = "/kalkylatorer/drivmedelskalkylator"
-UPDATED = "1 oktober 2026"
+UPDATED = "3 oktober 2026"
 
 # Konstanter – byt här när priser eller statistik uppdateras
 K = {
-    "PRIS": {"bensin": 18.59, "diesel": 23.14},  # Preem listpris företagskort, kr/l inkl. moms
-    "PRIS_DATUM": "1 oktober 2026",
+    "PRIS": {"bensin": 18.89, "diesel": 23.14},  # Preem listpris företagskort, kr/l inkl. moms
+    "PRIS_DATUM": "3 oktober 2026",
     "LADD_PREEM": 4.99,        # Preems riktpris för laddning, kr/kWh inkl. moms (gäller från 13 nov 2025)
     "KOR_PRIVAT": 1155,        # Trafikanalys, Körsträckor 2025: privatägda personbilar, mil/år
     "KOR_ALLA": 1243,          # alla personbilar
@@ -131,7 +131,7 @@ def page():
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Drivmedelskalkylator 2026 – räkna ut bränslekostnad",
          "url": S.SITE + PATH, "applicationCategory": "FinanceApplication", "operatingSystem": "Web",
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": desc,
-         "dateModified": "2026-10-01"},
+         "dateModified": "2026-10-03"},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": S.SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Bil & energi", "item": S.SITE + "/bil-och-energi"},
@@ -260,7 +260,7 @@ def page():
 
 <h2>Källor</h2>
 <ul>
-<li><a href="{SRC['preem']}" target="_blank" rel="noopener">Preem – Drivmedelspriser för företagskunder</a> – listpris bensin 95 {p2(PB)} kr/l och diesel {p2(PD)} kr/l (båda gäller från 1 oktober 2026), riktpris laddning {p2(K['LADD_PREEM'])} kr/kWh, alla inkl. moms. Hämtat {K['PRIS_DATUM']}.</li>
+<li><a href="{SRC['preem']}" target="_blank" rel="noopener">Preem – Drivmedelspriser för företagskunder</a> – listpris bensin 95 {p2(PB)} kr/l och diesel {p2(PD)} kr/l (bensin från 2 oktober, diesel från 1 oktober 2026), riktpris laddning {p2(K['LADD_PREEM'])} kr/kWh, alla inkl. moms. Hämtat {K['PRIS_DATUM']}.</li>
 <li><a href="{SRC['trafa']}" target="_blank" rel="noopener">Trafikanalys – Körsträckor 2025</a> (17 april 2026) – privatägda personbilar {fmt(K['KOR_PRIVAT'])} mil, alla personbilar {fmt(K['KOR_ALLA'])} mil, elbilar och laddhybrider ungefär {fmt(K['KOR_LADDBAR'])} mil</li>
 <li><a href="{SRC['skv']}" target="_blank" rel="noopener">Skatteverket – Belopp och procent 2026</a> – skattefri bilersättning för egen bil {K['MILERS']} kr per mil</li>
 </ul>

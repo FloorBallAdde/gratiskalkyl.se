@@ -13,7 +13,7 @@ Modell (samma i Python-referensen nedan och i sidans JS):
 
 Siffror med källa (verifierade 1 oktober 2026):
   - Snittkörsträcka: Trafikanalys, Körsträckor 2025 (publicerad 17 april 2026).
-  - Bensin- och dieselpris: Preems listpriser (företagskort, inkl. moms), gäller från 1 oktober 2026.
+  - Bensin- och dieselpris: Preems listpriser (företagskort, inkl. moms): bensin 95 från 2 oktober, diesel från 1 oktober 2026 (kontrollerat 3 oktober 2026).
   - Skattefri bilersättning egen bil 25 kr/mil: Skatteverket, Belopp och procent 2026.
   - Fordonsskatt: grundbelopp 360 kr, koldioxidbelopp 22 kr/g över 111 g/km, förhöjt belopp (malus)
     107 kr/g över 75 g och 132 kr/g över 125 g de tre första åren för bilar skattepliktiga från 1 juni
@@ -33,12 +33,12 @@ import gk2_shell as S  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = "/kalkylatorer/bilkostnadsraknare"
-UPDATED = "1 oktober 2026"
+UPDATED = "3 oktober 2026"
 
 # Konstanter med källa – byt här vid prisuppdatering eller årsskifte
 K = {
-    "PRIS": {"bensin": 18.59, "diesel": 23.14},  # Preem listpris företagskort, kr/l inkl. moms, från 1 okt 2026
-    "PRIS_DATUM": "1 oktober 2026",
+    "PRIS": {"bensin": 18.89, "diesel": 23.14},  # Preem listpris företagskort, kr/l inkl. moms (bensin från 2 okt, diesel från 1 okt 2026)
+    "PRIS_DATUM": "3 oktober 2026",
     "KOR_PRIVAT": 1155,        # Trafikanalys, Körsträckor 2025: privatägda personbilar, mil/år
     "KOR_ALLA": 1243,          # alla personbilar
     "KOR_LADDBAR": 1700,       # elbilar och laddhybrider, ungefär
@@ -187,7 +187,7 @@ def page():
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Bilkostnadsräknare 2026 – bilkostnad per månad och värdeminskning",
          "url": S.SITE + PATH, "applicationCategory": "FinanceApplication", "operatingSystem": "Web",
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SEK"}, "inLanguage": "sv", "description": desc,
-         "dateModified": "2026-10-01"},
+         "dateModified": "2026-10-03"},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "GratisKalkyl.se", "item": S.SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Bil & energi", "item": S.SITE + "/bil-och-energi"},
@@ -394,7 +394,7 @@ def page():
 <h2>Källor</h2>
 <ul>
 <li><a href="{SRC['trafa']}" target="_blank" rel="noopener">Trafikanalys – Körsträckor 2025</a> (17 april 2026) – privatägda personbilar {fmt(K['KOR_PRIVAT'])} mil, alla personbilar {fmt(K['KOR_ALLA'])} mil, elbilar och laddhybrider ungefär {fmt(K['KOR_LADDBAR'])} mil</li>
-<li><a href="{SRC['preem']}" target="_blank" rel="noopener">Preem – Drivmedelspriser för företagskunder</a> – listpris bensin 95 {p2(PB)} kr/l och diesel {p2(PD)} kr/l inkl. moms, gäller från {K['PRIS_DATUM']}. Priset på din mack kan skilja.</li>
+<li><a href="{SRC['preem']}" target="_blank" rel="noopener">Preem – Drivmedelspriser för företagskunder</a> – listpris bensin 95 {p2(PB)} kr/l och diesel {p2(PD)} kr/l inkl. moms (bensin från 2 oktober, diesel från 1 oktober 2026, kontrollerat {K['PRIS_DATUM']}). Priset på din mack kan skilja.</li>
 <li><a href="{SRC['skv']}" target="_blank" rel="noopener">Skatteverket – Belopp och procent 2026</a> – skattefri bilersättning för egen bil {K['MILERS']} kr per mil</li>
 <li><a href="{SRC['vsl']}" target="_blank" rel="noopener">Vägtrafikskattelag (2006:227)</a> – grundbelopp {K['GRUND']} kr (2 kap. 8 §), koldioxidbelopp {K['CO2_KR']} kr/g över {K['CO2_GRANS']} g (2 kap. 9 §), högre belopp de tre första åren (2 kap. 9 a §)</li>
 <li><a href="{SRC['ts_storlek']}" target="_blank" rel="noopener">Transportstyrelsen – Skattens storlek</a> och <a href="{SRC['ts_skatt']}" target="_blank" rel="noopener">Fordonsskatt</a> – hur skatten räknas och var du ser din bils skatt</li>

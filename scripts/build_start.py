@@ -16,7 +16,7 @@ QUICK = [("Nettolön", "/kalkylatorer/loneraknare"), ("Elavtal", "/kalkylatorer/
          ("Löneförhandling", "/kalkylatorer/loneforhandling"), ("Bolån", "/kalkylatorer/bolanekalkylator"),
          ("CSN", "/kalkylatorer/csn-kalkylator")]
 
-# Mest besökta enligt Google Search Console (sep 2026)
+# Mest besökta enligt Google Search Console (sep 2026; samma topp 5 i klick 4 jul–2 okt)
 POPULAR = [("CSN – återbetalning", "/kalkylatorer/csn-kalkylator"), ("Elkostnad", "/kalkylatorer/elkostnadskalkylator"),
            ("Sjukpenning", "/kalkylatorer/sjukpenningkalkylator"), ("Leasing", "/kalkylatorer/leasingkalkylator"),
            ("A-kassa", "/kalkylatorer/akassa-kalkylator")]
@@ -30,7 +30,9 @@ TOOLS = [
     ("hem", "Vad kostar det att bo här?", "Skatt och avgifter i din kommun", None),
 ]
 
-FEATURED_GUIDES = ["/artiklar/deklaration-2027", "/artiklar/skatteaterbaring-2027", "/artiklar/rakna-ut-nettolon-2026",
+# Rensning 3 okt 2026 (GSC 4 jul–2 okt): nettolönsguiden (31 visningar på 3 mån) ersatt av CSN-guiden
+# (42 947 visningar, sajtens mest visade sida). Deklarationsguiderna är från 30 sep – för nya för att bedömas.
+FEATURED_GUIDES = ["/artiklar/deklaration-2027", "/artiklar/skatteaterbaring-2027", "/artiklar/csn-2026-belopp-och-regler",
                    "/artiklar/elkostnad-2026-sa-raknar-du", "/artiklar/hur-mycket-far-jag-lana-2026", "/artiklar/vad-ar-ranta-pa-ranta"]
 
 MIN_EMPTY = [
